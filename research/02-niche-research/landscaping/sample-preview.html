@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Valley Landscaping | Dallas, TX</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green-dark: #2D5016;
+    --green-mid: #4A7C20;
+    --sage: #8B9E3A;
+    --cream: #F7F5F0;
+    --warm-gray: #6B6560;
+    --text: #1A1A1A;
+  }
+  body { font-family: 'Inter', sans-serif; color: var(--text); background: #fff; }
+
+  /* NAVBAR */
+  nav {
+    position: fixed; top: 0; width: 100%; background: #fff;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.08); z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px; height: 64px;
+  }
+  .logo { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--green-dark); font-weight: 700; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--warm-gray); font-size: 14px; font-weight: 500; }
+  .nav-cta { background: var(--green-dark); color: #fff; padding: 10px 22px; border-radius: 4px; font-size: 14px; font-weight: 600; text-decoration: none; }
+
+  /* HERO */
+  .hero {
+    margin-top: 64px;
+    background: linear-gradient(rgba(20,35,8,0.52), rgba(20,35,8,0.52)),
+      url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400') center/cover no-repeat;
+    min-height: 580px; display: flex; align-items: center; padding: 80px 40px;
+  }
+  .hero-content { max-width: 600px; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: 52px; color: #fff; line-height: 1.15; margin-bottom: 20px; }
+  .hero p { font-size: 18px; color: rgba(255,255,255,0.88); margin-bottom: 36px; line-height: 1.6; }
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary { background: var(--sage); color: #fff; padding: 14px 28px; border-radius: 4px; font-weight: 600; font-size: 15px; text-decoration: none; }
+  .btn-secondary { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.7); padding: 14px 28px; border-radius: 4px; font-weight: 600; font-size: 15px; text-decoration: none; }
+  .trust-bar { background: var(--green-dark); color: #fff; padding: 14px 40px; display: flex; gap: 40px; font-size: 13px; font-weight: 500; flex-wrap: wrap; }
+  .trust-bar span::before { content: "✓ "; color: var(--sage); }
+
+  /* SOCIAL PROOF */
+  .social-proof { background: var(--cream); padding: 60px 40px; text-align: center; }
+  .rating-headline { font-size: 20px; font-weight: 600; margin-bottom: 32px; color: var(--green-dark); }
+  .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 960px; margin: 0 auto; }
+  .review-card { background: #fff; padding: 24px; border-radius: 8px; text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .stars { color: #F59E0B; font-size: 14px; margin-bottom: 10px; }
+  .review-text { font-size: 14px; line-height: 1.65; color: var(--warm-gray); margin-bottom: 12px; }
+  .reviewer { font-size: 13px; font-weight: 600; color: var(--text); }
+
+  /* SERVICES SPLIT */
+  .services { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--sage); margin-bottom: 12px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 38px; color: var(--green-dark); margin-bottom: 16px; }
+  .section-sub { font-size: 16px; color: var(--warm-gray); max-width: 540px; margin-bottom: 48px; line-height: 1.6; }
+  .split-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .service-card { border: 2px solid #E8E4DC; border-radius: 10px; padding: 36px; }
+  .service-card h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--green-dark); margin-bottom: 12px; }
+  .service-card .price-anchor { font-size: 13px; color: var(--sage); font-weight: 600; margin-bottom: 16px; }
+  .service-card ul { list-style: none; margin-bottom: 28px; }
+  .service-card ul li { font-size: 14px; color: var(--warm-gray); padding: 6px 0; border-bottom: 1px solid #F0EDE8; }
+  .service-card ul li::before { content: "— "; color: var(--sage); }
+  .card-cta { display: inline-block; background: var(--green-dark); color: #fff; padding: 12px 24px; border-radius: 4px; font-size: 14px; font-weight: 600; text-decoration: none; }
+
+  /* GALLERY */
+  .gallery-section { background: var(--cream); padding: 80px 40px; }
+  .gallery-header { max-width: 1100px; margin: 0 auto 40px; }
+  .filter-tabs { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+  .tab { padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 500; cursor: pointer; border: 1px solid #D4CFC7; background: #fff; color: var(--warm-gray); }
+  .tab.active { background: var(--green-dark); color: #fff; border-color: var(--green-dark); }
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; }
+  .gallery-item { border-radius: 8px; overflow: hidden; position: relative; }
+  .gallery-img { width: 100%; height: 240px; object-fit: cover; display: block; background: #C5D4A8; }
+  .gallery-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 20px 16px 14px; color: #fff; }
+  .gallery-label .type { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--sage); }
+  .gallery-label .range { font-size: 13px; font-weight: 600; }
+  .gallery-placeholder { background: linear-gradient(135deg, #4A7C20 0%, #2D5016 100%); }
+  .gallery-placeholder2 { background: linear-gradient(135deg, #6B9E40 0%, #4A7C20 100%); }
+  .gallery-placeholder3 { background: linear-gradient(135deg, #8B9E3A 0%, #6B9E40 100%); }
+
+  /* DEPOSIT PROTECTION */
+  .deposit { background: #1A2E0A; color: #fff; padding: 64px 40px; text-align: center; }
+  .deposit h2 { font-family: 'Playfair Display', serif; font-size: 34px; margin-bottom: 20px; }
+  .deposit p { font-size: 16px; color: rgba(255,255,255,0.8); max-width: 620px; margin: 0 auto 32px; line-height: 1.7; }
+  .deposit-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(139,158,58,0.2); border: 1px solid var(--sage); padding: 14px 28px; border-radius: 6px; font-size: 15px; font-weight: 600; color: #C8D87A; }
+
+  /* TEAM */
+  .team { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
+  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; }
+  .team-card { text-align: center; }
+  .team-photo { width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #8B9E3A, #2D5016); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 32px; color: #fff; font-family: 'Playfair Display', serif; }
+  .team-name { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .team-role { font-size: 13px; color: var(--warm-gray); }
+
+  /* FAQ */
+  .faq { background: var(--cream); padding: 80px 40px; }
+  .faq-inner { max-width: 720px; margin: 0 auto; }
+  .faq-item { background: #fff; border-radius: 8px; padding: 24px 28px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+  .faq-q { font-weight: 600; font-size: 15px; color: var(--green-dark); margin-bottom: 10px; }
+  .faq-a { font-size: 14px; color: var(--warm-gray); line-height: 1.65; }
+
+  /* FINAL CTA */
+  .final-cta { padding: 80px 40px; text-align: center; background: #fff; }
+  .final-cta h2 { font-family: 'Playfair Display', serif; font-size: 40px; color: var(--green-dark); margin-bottom: 16px; }
+  .final-cta p { font-size: 16px; color: var(--warm-gray); margin-bottom: 40px; }
+  .cta-form { max-width: 520px; margin: 0 auto; display: grid; gap: 14px; }
+  .cta-form input, .cta-form textarea { width: 100%; padding: 14px 16px; border: 1px solid #D4CFC7; border-radius: 6px; font-size: 15px; font-family: inherit; }
+  .cta-form textarea { height: 100px; resize: none; }
+  .submit-btn { background: var(--green-dark); color: #fff; padding: 15px; border: none; border-radius: 6px; font-size: 16px; font-weight: 700; cursor: pointer; font-family: inherit; }
+  .form-note { font-size: 12px; color: var(--warm-gray); }
+
+  /* FOOTER */
+  footer { background: #111; color: rgba(255,255,255,0.6); padding: 40px; text-align: center; font-size: 13px; }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 10px; }
+
+  /* STICKY MOBILE BAR */
+  .sticky-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--green-dark); padding: 12px 20px; display: flex; gap: 12px; z-index: 200; }
+  .sticky-bar a { flex: 1; text-align: center; padding: 12px; border-radius: 4px; font-weight: 700; font-size: 14px; text-decoration: none; }
+  .sticky-call { background: #fff; color: var(--green-dark); }
+  .sticky-quote { background: var(--sage); color: #fff; }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 34px; }
+    .reviews-grid, .split-cards, .gallery-grid, .team-grid { grid-template-columns: 1fr; }
+    .sticky-bar { display: flex; }
+    body { padding-bottom: 64px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">Green Valley Landscaping</div>
+  <ul class="nav-links">
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Our Work</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <a href="#quote" class="nav-cta">Free Estimate</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Your Vision.<br>Our Work.<br>Dallas Done Right.</h1>
+    <p>From weekly lawn care to full backyard transformations. Every project documented, every deposit protected by contract.</p>
+    <div class="hero-btns">
+      <a href="#gallery" class="btn-primary">See Our Work</a>
+      <a href="#quote" class="btn-secondary">Get a Free Estimate</a>
+    </div>
+  </div>
+</section>
+<div class="trust-bar">
+  <span>12 Years Serving Dallas</span>
+  <span>340+ Projects Completed</span>
+  <span>Licensed and Insured</span>
+  <span>4.9 Stars on Google</span>
+</div>
+
+<!-- SOCIAL PROOF -->
+<section class="social-proof">
+  <div class="rating-headline">4.9 stars across 127 Google reviews</div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"They brought my backyard vision to life exactly as I described it. The crew was on time every day and cleaned up after themselves. Deposit was protected by a written contract just like they said."</p>
+      <div class="reviewer">Sarah M., Plano TX</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"I had a contractor ghost me after taking my deposit last year. Green Valley was completely different. Written contract, clear timeline, real photos of my yard before and after. Highly recommend."</p>
+      <div class="reviewer">James T., Richardson TX</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Professional crew, fair price, and they actually answered the phone when I called. My lawn has never looked better. Will be using them for maintenance going forward."</p>
+      <div class="reviewer">Linda K., Garland TX</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SPLIT -->
+<section class="services">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">Two Ways We Can Help</h2>
+  <p class="section-sub">Whether you need reliable weekly care or a full yard transformation, we have a straightforward process for both.</p>
+  <div class="split-cards">
+    <div class="service-card">
+      <h3>Weekly Lawn Care</h3>
+      <div class="price-anchor">Starting at $65 per visit</div>
+      <ul>
+        <li>Mowing, edging, and blowing</li>
+        <li>Fertilization program</li>
+        <li>Weed control</li>
+        <li>Seasonal cleanups</li>
+        <li>Flexible scheduling</li>
+      </ul>
+      <a href="#quote" class="card-cta">Get a Maintenance Quote</a>
+    </div>
+    <div class="service-card">
+      <h3>Landscape Design + Install</h3>
+      <div class="price-anchor">Projects from $4,500</div>
+      <ul>
+        <li>Patio and hardscape design</li>
+        <li>Planting beds and trees</li>
+        <li>Irrigation systems</li>
+        <li>Outdoor lighting</li>
+        <li>Full yard transformations</li>
+      </ul>
+      <a href="#quote" class="card-cta">Start a Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
+  <div class="gallery-header">
+    <div class="section-label">Our Work</div>
+    <h2 class="section-title" style="margin-bottom:8px">Recent Projects</h2>
+    <div class="filter-tabs">
+      <div class="tab active">All</div>
+      <div class="tab">Patios + Hardscape</div>
+      <div class="tab">Lawn Care</div>
+      <div class="tab">Planting + Beds</div>
+      <div class="tab">Before + After</div>
+    </div>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <div class="gallery-img gallery-placeholder" style="height:240px"></div>
+      <div class="gallery-label">
+        <div class="type">Patio + Hardscape</div>
+        <div class="range">$14,000 — $18,000 range</div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-img gallery-placeholder2" style="height:240px"></div>
+      <div class="gallery-label">
+        <div class="type">Full Transformation</div>
+        <div class="range">$22,000 — $28,000 range</div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-img gallery-placeholder3" style="height:240px"></div>
+      <div class="gallery-label">
+        <div class="type">Planting + Beds</div>
+        <div class="range">$4,500 — $7,000 range</div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-img gallery-placeholder2" style="height:240px"></div>
+      <div class="gallery-label">
+        <div class="type">Lawn Care Program</div>
+        <div class="range">$65/visit maintenance</div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-img gallery-placeholder" style="height:240px"></div>
+      <div class="gallery-label">
+        <div class="type">Patio + Lighting</div>
+        <div class="range">$11,000 — $15,000 range</div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-img gallery-placeholder3" style="height:240px"></div>
+      <div class="gallery-label">
+        <div class="type">Before + After</div>
+        <div class="range">Full yard — $19,000</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOSIT PROTECTION -->
+<section class="deposit">
+  <h2>Your Deposit Is Protected</h2>
+  <p>Every project starts with a written contract that specifies scope, timeline, payment schedule, and what happens if anything changes. You know exactly what you are paying for before any work begins.</p>
+  <div class="deposit-badge">
+    <span>✓</span>
+    Written contract on every project. No exceptions.
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+  <div class="section-label">The Team</div>
+  <h2 class="section-title">People Who Show Up</h2>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-photo">M</div>
+      <div class="team-name">Marcus Rivera</div>
+      <div class="team-role">Owner, 12 years in Dallas landscaping</div>
+    </div>
+    <div class="team-card">
+      <div class="team-photo">J</div>
+      <div class="team-name">James Ortiz</div>
+      <div class="team-role">Lead Installer, hardscape specialist</div>
+    </div>
+    <div class="team-card">
+      <div class="team-photo">T</div>
+      <div class="team-name">Tony Mendez</div>
+      <div class="team-role">Lawn Care Crew Lead</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="section-label" style="text-align:center">Common Questions</div>
+    <h2 class="section-title" style="text-align:center;margin-bottom:40px">What Homeowners Ask</h2>
+    <div class="faq-item">
+      <div class="faq-q">How much does a backyard transformation cost?</div>
+      <div class="faq-a">Most full backyard projects in the Dallas area run between $12,000 and $28,000 depending on size, materials, and whether you are adding hardscape, planting, irrigation, or lighting. We give you a fixed-price proposal before any work starts.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if I need to change the design after we start?</div>
+      <div class="faq-a">Changes happen. Our contract includes a clear change order process. Any scope change is documented in writing with the updated cost before we proceed. No surprises on the final invoice.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How long does a typical installation take?</div>
+      <div class="faq-a">A standard patio and planting project takes 3 to 5 days. Full yard transformations typically run 7 to 14 days. We give you a day-by-day schedule in your contract.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you offer financing?</div>
+      <div class="faq-a">Yes. We partner with GreenSky to offer 12-month same-as-cash financing on projects over $5,000. Ask us for details when you get your estimate.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="quote">
+  <h2>Ready to See What Your Yard Could Look Like?</h2>
+  <p>We respond within 4 hours. No spam, no pressure.</p>
+  <form class="cta-form" onsubmit="return false">
+    <input type="text" placeholder="Your name">
+    <input type="tel" placeholder="Phone number">
+    <input type="email" placeholder="Email address">
+    <textarea placeholder="Describe your project (optional)"></textarea>
+    <button type="submit" class="submit-btn">Get My Free Estimate</button>
+    <div class="form-note">We respond within 4 hours during business hours.</div>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p style="margin-bottom:12px">Green Valley Landscaping | Dallas, TX | License #TX-4482 | Fully Insured</p>
+  <p>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Gallery</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Privacy</a>
+  </p>
+  <p style="margin-top:12px">© 2026 Green Valley Landscaping. All rights reserved.</p>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+  <a href="tel:+1234567890" class="sticky-call">Call Now</a>
+  <a href="#quote" class="sticky-quote">Get a Quote</a>
+</div>
+
+</body>
+</html>
