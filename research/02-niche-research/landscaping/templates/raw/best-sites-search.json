@@ -1,0 +1,1575 @@
+[{
+  "#debug": {
+    "requestId": "OADNcbfE18Gj7xW",
+    "url": "http://www.google.com/search?q=top+rated+landscaping+company+website+examples",
+    "loadedUrl": "http://www.google.com/search?q=top+rated+landscaping+company+website+examples",
+    "method": "GET",
+    "retryCount": 0,
+    "errorMessages": [],
+    "statusCode": 200
+  },
+  "#error": false,
+  "searchQuery": {
+    "term": "top rated landscaping company website examples",
+    "url": "http://www.google.com/search?q=top+rated+landscaping+company+website+examples",
+    "device": "DESKTOP",
+    "page": 1,
+    "type": "SEARCH",
+    "domain": "google.com",
+    "countryCode": "US",
+    "languageCode": null,
+    "locationUule": null,
+    "resultsPerPage": 10
+  },
+  "url": "http://www.google.com/search?q=top+rated+landscaping+company+website+examples",
+  "hasNextPage": true,
+  "serpProviderCode": "N",
+  "resultsTotal": null,
+  "relatedQueries": [
+    {
+      "title": "Top rated landscaping company website examples reddit",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Top+rated+landscaping+company+website+examples+reddit&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAgrEAE"
+    },
+    {
+      "title": "Top rated landscaping company website examples free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Top+rated+landscaping+company+website+examples+free&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAg-EAE"
+    },
+    {
+      "title": "Landscaping website design free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+design+free&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAg8EAE"
+    },
+    {
+      "title": "Best landscape websites",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscape+websites&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAhBEAE"
+    },
+    {
+      "title": "Landscaping website templates",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+templates&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAg6EAE"
+    },
+    {
+      "title": "Website for landscaping business",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Website+for+landscaping+business&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAg1EAE"
+    },
+    {
+      "title": "Landscaping websites Design",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+websites+Design&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAgxEAE"
+    },
+    {
+      "title": "Gibbs Landscape Company",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Gibbs+Landscape+Company&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAgvEAE"
+    },
+    {
+      "title": "Top rated landscaping company website examples reddit",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Top+rated+landscaping+company+website+examples+reddit&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAgrEAE"
+    },
+    {
+      "title": "Top rated landscaping company website examples free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Top+rated+landscaping+company+website+examples+free&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAg-EAE"
+    },
+    {
+      "title": "Landscaping website design free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+design+free&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAg8EAE"
+    },
+    {
+      "title": "Best landscape websites",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscape+websites&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAhBEAE"
+    },
+    {
+      "title": "Landscaping website templates",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+templates&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAg6EAE"
+    },
+    {
+      "title": "Website for landscaping business",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Website+for+landscaping+business&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAg1EAE"
+    },
+    {
+      "title": "Landscaping websites Design",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+websites+Design&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAgxEAE"
+    },
+    {
+      "title": "Gibbs Landscape Company",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Gibbs+Landscape+Company&sa=X&ved=2ahUKEwjipaaLy-aUAxUAXKQEHcEFBfwQ1QJ6BAgvEAE"
+    }
+  ],
+  "paidResults": [],
+  "paidProducts": [],
+  "organicResults": [
+    {
+      "title": "41 Inspiring Landscaping Website Examples",
+      "websiteTitle": "Site Builder Report",
+      "url": "https://www.sitebuilderreport.com/inspiration/landscaping-websites",
+      "displayedUrl": "https://www.sitebuilderreport.com › inspiration › landsc...",
+      "description": "website. The best landscaping websites answer it by showing their work through finished work photos & videos, before/after pictures, etc.Read more",
+      "date": "2024-11-30T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "website",
+        "best landscaping websites"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 1
+    },
+    {
+      "title": "Cool Landscaping Website Design Examples? Need ...",
+      "websiteTitle": "Reddit · r/LandscapingPros",
+      "url": "https://www.reddit.com/r/LandscapingPros/comments/1he2gi8/cool_landscaping_website_design_examples_need/",
+      "displayedUrl": "Reddit › r/LandscapingPros",
+      "description": "Check out Houzz and Pinterest. They have tons of creative landscaping website designs. Look for clean layouts, high-quality images, and easy navigation.Read more",
+      "emphasizedKeywords": [
+        "They have tons of creative landscaping website designs"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "commentsAmount": "10+ comments",
+      "lastUpdated": "1 year ago",
+      "type": "organic",
+      "position": 2
+    },
+    {
+      "title": "Landscaping Website Design Examples for Inspiration",
+      "websiteTitle": "Muffin Group",
+      "url": "https://muffingroup.com/blog/landscaping-websites/",
+      "displayedUrl": "https://muffingroup.com › blog › landscaping-websites",
+      "description": "The best landscaping website design examples share common patterns: striking project galleries, clear service pages, and quote request forms ...Read more",
+      "date": "2025-07-02T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "striking project galleries, clear service pages, and quote request forms"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 3
+    },
+    {
+      "title": "Landscaping Website Examples: Key Features That Drive ...",
+      "websiteTitle": "DynaScape",
+      "url": "https://www.dynascape.com/blog/landscaping-website-examples-to-drive-sales/",
+      "displayedUrl": "https://www.dynascape.com › Design Articles",
+      "description": "You know that you need a website purpose-built to attract, engage, and convert your audience. Here are landscaping website examples that do it right.",
+      "emphasizedKeywords": [
+        "Here are landscaping website examples"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 4
+    },
+    {
+      "title": "10 Best Lawn Care Website Design Ideas | WorkWave",
+      "websiteTitle": "RealGreen by WorkWave",
+      "url": "https://www.realgreen.com/blog/best-lawn-care-websites",
+      "displayedUrl": "https://www.realgreen.com › Blog",
+      "description": "Discover the top 10 best lawn care and landscaping websites in the industry. See how to build a lawn care website and make it the best for your company.",
+      "emphasizedKeywords": [
+        "top 10 best lawn care and landscaping websites in the industry"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 5
+    },
+    {
+      "title": "Best Landscaping Web Design examples",
+      "websiteTitle": "dreamcodesign.com",
+      "url": "https://www.dreamcodesign.com/landscaping-web-design-examples-14-pn1.html",
+      "displayedUrl": "https://www.dreamcodesign.com › landscaping-web-des...",
+      "description": "Wonderful landscaping example with great mouse overs and services outlined right on the home page in a grid layout. Nice organization and beautiful photography.Read more",
+      "emphasizedKeywords": [
+        "Wonderful landscaping example"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 6
+    },
+    {
+      "title": "Best Landscaping Websites | Free Examples & Designs",
+      "websiteTitle": "Webflow",
+      "url": "https://webflow.com/made-in-webflow/landscaping",
+      "displayedUrl": "https://webflow.com › made-in-webflow › landscaping",
+      "description": "Discover the best landscaping websites created by professional designers. Get inspired and start planning your perfect landscaping web design today!",
+      "emphasizedKeywords": [
+        "best landscaping websites created by professional designers"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 7
+    },
+    {
+      "title": "20 Best Landscaping Websites of 2026",
+      "websiteTitle": "CyberOptik",
+      "url": "https://www.cyberoptik.net/blog/20-best-landscaping-websites/",
+      "displayedUrl": "https://www.cyberoptik.net › blog › 20-best-landscapin...",
+      "description": "Best Landscaping Website Examples · 1. Sweeney's Custom Landscaping · 2. Perfect Turf · 3. Greenwise Organic Lawn Care · 4. Huntergreen · 5. Mark Tessier Landscape ...Read more",
+      "emphasizedKeywords": [
+        "1. Sweeney's Custom Landscaping"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 8
+    },
+    {
+      "title": "21 Landscaping website ideas | web design inspiration ...",
+      "websiteTitle": "Pinterest",
+      "url": "https://www.pinterest.com/stephoceguera/landscaping-website/",
+      "displayedUrl": "https://www.pinterest.com › stephoceguera › landscapin...",
+      "description": "Modern Gardening Website Design · Lawn Care Website Design · Landscaping Company Website Design · Green-themed Gardening Website ; Landscape Website Design.Read more",
+      "emphasizedKeywords": [
+        "Modern Gardening Website Design"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 9
+    }
+  ],
+  "suggestedResults": [],
+  "peopleAlsoAsk": [],
+  "aiOverview": {
+    "type": "live",
+    "content": "",
+    "sources": [
+      {
+        "url": "https://gorilladesk.com/learn/best-lawn-care-websites/",
+        "title": "Lawn Care Websites: 10 website examples to inspire you - GorillaDesk",
+        "description": "Nov 19, 2024 — 9. Artscape Gardens. Artscape Gardens showcases real project photos to connect with customers' desire for a property as beautiful ..."
+      },
+      {
+        "url": "https://webflow.com/made-in-webflow/landscaping",
+        "title": "Best Landscaping Websites | Free Examples & Designs",
+        "description": "built by the Webflow communityBrowse, clone, and customize thousands of websites #MadeinWebflow. Looking for templates? Landscapin..."
+      },
+      {
+        "url": "https://www.growgroupinc.com/the-grow-group-blog/landscaping-website-ideas-that-turn-visitors-into-leads",
+        "title": "Landscaping Website Ideas That Turn Visitors Into Leads",
+        "description": "Mar 27, 2026 — Choose a Design That Supports the Work. The best landscaping website design gets out of the way and lets the photography lead. Cle..."
+      }
+    ]
+  },
+  "customData": null,
+  "htmlSnapshotUrl": "https://api.apify.com/v2/key-value-stores/MgAfvTGwbgdNADHe6/records/OADNcbfE18Gj7xW-0.html?signature=1kHo4rmXLyz1rDq6q8r00"
+},
+{
+  "#debug": {
+    "requestId": "ghrRkeFAmQtEeLe",
+    "url": "http://www.google.com/search?q=best+landscaping+contractor+websites+2025",
+    "loadedUrl": "http://www.google.com/search?q=best+landscaping+contractor+websites+2025",
+    "method": "GET",
+    "retryCount": 0,
+    "errorMessages": [],
+    "statusCode": 200
+  },
+  "#error": false,
+  "searchQuery": {
+    "term": "best landscaping contractor websites 2025",
+    "url": "http://www.google.com/search?q=best+landscaping+contractor+websites+2025",
+    "device": "DESKTOP",
+    "page": 1,
+    "type": "SEARCH",
+    "domain": "google.com",
+    "countryCode": "US",
+    "languageCode": null,
+    "locationUule": null,
+    "resultsPerPage": 10
+  },
+  "url": "http://www.google.com/search?q=best+landscaping+contractor+websites+2025",
+  "hasNextPage": true,
+  "serpProviderCode": "N",
+  "resultsTotal": null,
+  "relatedQueries": [
+    {
+      "title": "Best landscaping contractor websites 2025 usa",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+contractor+websites+2025+usa&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAgsEAE"
+    },
+    {
+      "title": "Best landscaping contractor websites 2025 free",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+contractor+websites+2025+free&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAg2EAE"
+    },
+    {
+      "title": "Best landscaping contractor websites 2025 california",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+contractor+websites+2025+california&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAg1EAE"
+    },
+    {
+      "title": "Best landscaping companies near me",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+companies+near+me&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAg4EAE"
+    },
+    {
+      "title": "Landscaping companies in USA",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+companies+in+USA&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAg0EAE"
+    },
+    {
+      "title": "Commercial landscaping companies near me",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Commercial+landscaping+companies+near+me&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAgvEAE"
+    },
+    {
+      "title": "Gibbs Landscape Company photos",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Gibbs+Landscape+Company+photos&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAguEAE"
+    },
+    {
+      "title": "Top Atlanta landscape companies",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Top+Atlanta+landscape+companies&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAgtEAE"
+    },
+    {
+      "title": "Best landscaping contractor websites 2025 usa",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+contractor+websites+2025+usa&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAgsEAE"
+    },
+    {
+      "title": "Best landscaping contractor websites 2025 free",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+contractor+websites+2025+free&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAg2EAE"
+    },
+    {
+      "title": "Best landscaping contractor websites 2025 california",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+contractor+websites+2025+california&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAg1EAE"
+    },
+    {
+      "title": "Best landscaping companies near me",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+companies+near+me&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAg4EAE"
+    },
+    {
+      "title": "Landscaping companies in USA",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+companies+in+USA&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAg0EAE"
+    },
+    {
+      "title": "Commercial landscaping companies near me",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Commercial+landscaping+companies+near+me&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAgvEAE"
+    },
+    {
+      "title": "Gibbs Landscape Company photos",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Gibbs+Landscape+Company+photos&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAguEAE"
+    },
+    {
+      "title": "Top Atlanta landscape companies",
+      "url": "https://www.google.com/search?newwindow=1&sca_esv=535308282edc524d&gl=US&hl=en&q=Top+Atlanta+landscape+companies&sa=X&ved=2ahUKEwjj7dONy-aUAxVXhq8BHSJ1OXUQ1QJ6BAgtEAE"
+    }
+  ],
+  "paidResults": [],
+  "paidProducts": [],
+  "organicResults": [
+    {
+      "title": "25 Amazing Landscaping Website Designs. Full Build ...",
+      "websiteTitle": "Leads4Build",
+      "url": "https://leads4build.com/insights/25-landscaping-websites-design",
+      "displayedUrl": "https://leads4build.com › insights › 25-landscaping-web...",
+      "description": "Get inspired by 25 amazing landscaping websites, then build your own with our step-by-step guide. Includes design principles, mobile ...",
+      "date": "2025-08-16T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "Get inspired by 25 amazing landscaping websites"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 1
+    },
+    {
+      "title": "10 best landscaping websites of 2026 | Freshy",
+      "websiteTitle": "FreshySites",
+      "url": "https://freshysites.com/web-design-development/best-landscaping-company-websites/",
+      "displayedUrl": "https://freshysites.com › Web Design & Development",
+      "description": "Highlands Landscaping · Anderson Landscape Maintenance · Brookscapes · Juniper Landscape Company · Gibbs Landscape Co. · Pearl Landscaping & Patio Co ...Read more",
+      "date": "2026-01-29T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "Highlands Landscaping"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 2
+    },
+    {
+      "title": "Website for Landscapers: What Actually Wins Jobs in 2025",
+      "websiteTitle": "ServiceScale",
+      "url": "https://www.servicescale.com.au/blog/top-10-landscaping-websites-in-2025",
+      "displayedUrl": "https://www.servicescale.com.au › Blog",
+      "description": "Build a landscaping website that ranks on Google and converts visitors into paying customers. Real examples, AUD pricing, checklists and a ...",
+      "date": "2026-05-27T17:40:49.660Z",
+      "emphasizedKeywords": [
+        "landscaping website that ranks on Google"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 3
+    },
+    {
+      "title": "Top Landscaping Website Designs 2025 for Business Growth",
+      "websiteTitle": "wppip.com",
+      "url": "https://wppip.com/blog/2025/09/12/top-cool-landscaping-websites-designs-of-2025-to-grow-your-online-business/",
+      "displayedUrl": "https://wppip.com › blog › 2025/09/12 › top-cool-land...",
+      "description": "This ultimate guide provides an in-depth look into the trends, technologies, and tactics that define the best landscaping websites of today and ...Read more",
+      "date": "2025-09-12T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "best landscaping websites"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 4
+    },
+    {
+      "title": "New Landscaper, what websites and online apps do you ...",
+      "websiteTitle": "Reddit · r/landscaping",
+      "url": "https://www.reddit.com/r/landscaping/comments/1nxg94x/new_landscaper_what_websites_and_online_apps_do/",
+      "displayedUrl": "Reddit › r/landscaping",
+      "description": "Title says it all, just looking for some apps and websites to keep everything going smooth, preferably free or not too expensive.",
+      "emphasizedKeywords": [],
+      "siteLinks": [],
+      "productInfo": {},
+      "commentsAmount": "10+ comments",
+      "lastUpdated": "8 months ago",
+      "type": "organic",
+      "position": 5
+    },
+    {
+      "title": "Inspiring Designs for 2025 - [Best Landscaping Websites]",
+      "websiteTitle": "NeeFox® - Best IT Solutions Company",
+      "url": "https://neefox.com/blog/best-landscaping-websites",
+      "displayedUrl": "https://neefox.com › Website Examples",
+      "description": "Discover the best landscaping websites of 2025, showcasing creative designs, user-friendly layouts, and features that inspire and engage.",
+      "emphasizedKeywords": [
+        "best landscaping websites of 2025"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 6
+    },
+    {
+      "title": "Best Landscaping Websites | 7 Sites Worth Modeling Now",
+      "websiteTitle": "Smart Service software",
+      "url": "https://www.smartservice.com/blog/best-landscaping-websites",
+      "displayedUrl": "https://www.smartservice.com › blog › best-landscaping...",
+      "description": "What You Need to Accomplish With Your Landscaping Website · Beary Landscaping · Designscapes Colorado · McHale Landscape Design · Don't be afraid to invest in web ...Read more",
+      "emphasizedKeywords": [
+        "Beary Landscaping"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "averageRating": 4.8,
+      "numberOfReviews": 250,
+      "type": "organic",
+      "position": 7
+    },
+    {
+      "title": "Best landscaping website builders to create professional ...",
+      "websiteTitle": "Wix.com",
+      "url": "https://www.wix.com/blog/landscaping-website-builder",
+      "displayedUrl": "https://www.wix.com › blog › landscaping-website-buil...",
+      "description": "Looking for the best landscaping website builder? Discover top tools for creating professional landscaping websites that attract clients ...",
+      "date": "2025-12-31T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "best landscaping website builder"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 8
+    },
+    {
+      "title": "11 Best Landscaping Websites for Inspiration in 2025 (And ...",
+      "websiteTitle": "Nesta Sites",
+      "url": "https://nestasites.com/blog/11-best-landscaping-websites/",
+      "displayedUrl": "https://nestasites.com › Blog",
+      "description": "11 Best Landscaping Websites for Inspiration in 2025 ; 2. Silverstone Landscaping. Website: silverstonelandscaping.ca ; 3. Earthworks Landscaping. Website: ...Read more",
+      "emphasizedKeywords": [
+        "11 Best Landscaping Websites for Inspiration in 2025"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 9
+    },
+    {
+      "title": "Landscaping Company Websites: 13 Best Stunning ...",
+      "websiteTitle": "AQ Marketing",
+      "url": "https://aqmarketing.com/landscaping-company-websites/",
+      "displayedUrl": "https://aqmarketing.com › landscaping-company-websites",
+      "description": "Discover top landscaping company websites that inspire trust, boost conversions, and showcase must-have features for digital growth.",
+      "date": "2025-05-02T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "top landscaping company websites"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 10
+    }
+  ],
+  "suggestedResults": [],
+  "peopleAlsoAsk": [
+    {
+      "answer": "Integrate Safety Features Making sure everyone can enjoy outdoor spaces continues to be a landscaping industry trend in 2025, and this trend is here to stay. Creating safe, ADA and building code compliant walkways will allow as many people as possible to take advantage of the outdoor space.",
+      "question": "What is the trend in the landscape industry in 2025?",
+      "title": null,
+      "url": null,
+      "date": null
+    },
+    {
+      "answer": null,
+      "question": "What is a realistic landscaping budget?",
+      "title": null,
+      "url": null,
+      "date": null
+    },
+    {
+      "answer": null,
+      "question": "What is the best website builder now?",
+      "title": null,
+      "url": null,
+      "date": null
+    },
+    {
+      "answer": null,
+      "question": "What is the highest paying job in landscaping?",
+      "title": null,
+      "url": null,
+      "date": null
+    }
+  ],
+  "aiOverview": {
+    "type": "live",
+    "content": "",
+    "sources": [
+      {
+        "url": "https://www.youtube.com/watch?v=emfmYPrZMTM&t=85",
+        "title": "How to Design Your Landscaping Website To Bring in ...",
+        "description": "May 24, 2021 — is the website's just not doing what it should be doing right this is a basic website. what we want to build is what we have is ou..."
+      },
+      {
+        "url": "https://www.servicescale.com.au/blog/top-10-landscaping-websites-in-2025",
+        "title": "Website for Landscapers: What Actually Wins Jobs in 2025",
+        "description": "May 27, 2026 — DIY builders like Squarespace or Wix will cost roughly $30–$50 per month and can produce a decent-looking result if you invest the..."
+      },
+      {
+        "url": "https://tradiedigital.co/landscaping-website-design/",
+        "title": "15 Best Landscaping Website Designs [Steal Their Features]",
+        "description": "Oct 28, 2025 — Top Landscaping Website Designs To Watch out For * #1 – Lawn Doctor. High-Converting Feature: 'Free Quote' Form Above The Fold. Yo..."
+      }
+    ]
+  },
+  "customData": null,
+  "htmlSnapshotUrl": "https://api.apify.com/v2/key-value-stores/MgAfvTGwbgdNADHe6/records/ghrRkeFAmQtEeLe-0.html?signature=1H1JZTRGhXtYP72aAyWpw"
+},
+{
+  "#debug": {
+    "requestId": "Hca2zTYs8rlbRMf",
+    "url": "http://www.google.com/search?q=top%20rated%20landscaping%20company%20website%20examples&start=10",
+    "loadedUrl": "http://www.google.com/search?q=top%20rated%20landscaping%20company%20website%20examples&start=10",
+    "method": "GET",
+    "retryCount": 0,
+    "errorMessages": [],
+    "statusCode": 200
+  },
+  "#error": false,
+  "searchQuery": {
+    "term": "top rated landscaping company website examples",
+    "url": "http://www.google.com/search?q=top%20rated%20landscaping%20company%20website%20examples&start=10",
+    "device": "DESKTOP",
+    "page": 2,
+    "type": "SEARCH",
+    "domain": "google.com",
+    "countryCode": "US",
+    "languageCode": null,
+    "locationUule": null,
+    "resultsPerPage": 10
+  },
+  "url": "http://www.google.com/search?q=top%20rated%20landscaping%20company%20website%20examples&start=10",
+  "hasNextPage": true,
+  "serpProviderCode": "N",
+  "resultsTotal": null,
+  "relatedQueries": [
+    {
+      "title": "Top rated landscaping company website examples reddit",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Top+rated+landscaping+company+website+examples+reddit&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECDEQAQ"
+    },
+    {
+      "title": "Top rated landscaping company website examples free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Top+rated+landscaping+company+website+examples+free&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECDQQAQ"
+    },
+    {
+      "title": "Landscaping website design free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+design+free&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECDMQAQ"
+    },
+    {
+      "title": "Best landscaping websites",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+websites&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECDIQAQ"
+    },
+    {
+      "title": "Landscaping website templates",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+templates&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECC8QAQ"
+    },
+    {
+      "title": "Website for landscaping business",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Website+for+landscaping+business&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECDAQAQ"
+    },
+    {
+      "title": "Landscape website Design",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscape+website+Design&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECC0QAQ"
+    },
+    {
+      "title": "Wix landscaping template",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Wix+landscaping+template&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECC4QAQ"
+    },
+    {
+      "title": "Top rated landscaping company website examples reddit",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Top+rated+landscaping+company+website+examples+reddit&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECDEQAQ"
+    },
+    {
+      "title": "Top rated landscaping company website examples free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Top+rated+landscaping+company+website+examples+free&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECDQQAQ"
+    },
+    {
+      "title": "Landscaping website design free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+design+free&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECDMQAQ"
+    },
+    {
+      "title": "Best landscaping websites",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+websites&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECDIQAQ"
+    },
+    {
+      "title": "Landscaping website templates",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+templates&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECC8QAQ"
+    },
+    {
+      "title": "Website for landscaping business",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Website+for+landscaping+business&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECDAQAQ"
+    },
+    {
+      "title": "Landscape website Design",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscape+website+Design&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECC0QAQ"
+    },
+    {
+      "title": "Wix landscaping template",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Wix+landscaping+template&sa=X&ved=2ahUKEwjvnIOPy-aUAxXwrVYBHaLnI_44ChDVAnoECC4QAQ"
+    }
+  ],
+  "paidResults": [],
+  "paidProducts": [],
+  "organicResults": [
+    {
+      "title": "25 Amazing Landscaping Website Designs. Full Build ...",
+      "websiteTitle": "Leads4Build",
+      "url": "https://leads4build.com/insights/25-landscaping-websites-design",
+      "displayedUrl": "https://leads4build.com › insights › 25-landscaping-web...",
+      "description": "Get inspired by 25 amazing landscaping websites, then build your own with our step-by-step guide. Includes design principles, mobile ...",
+      "date": "2025-08-16T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "Get inspired by 25 amazing landscaping websites"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 10
+    },
+    {
+      "title": "15 best landscaping website examples for inspiration",
+      "websiteTitle": "Wix.com",
+      "url": "https://www.wix.com/blog/landscaping-websites",
+      "displayedUrl": "https://www.wix.com › blog › landscaping-websites",
+      "description": "Full Circle Lawn Care catches your eye as one of the best landscaping websites out there, thanks to its modern design and a standout landscape ...Read more",
+      "date": "2026-04-30T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "Full Circle Lawn Care"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 11
+    },
+    {
+      "title": "20 Best Landscaping Websites of 2026",
+      "websiteTitle": "CyberOptik",
+      "url": "https://www.cyberoptik.net/blog/20-best-landscaping-websites/",
+      "displayedUrl": "https://www.cyberoptik.net › blog › 20-best-landscapin...",
+      "description": "Best Landscaping Website Examples · 1. Sweeney's Custom Landscaping · 2. Perfect Turf · 3. Greenwise Organic Lawn Care · 4. Huntergreen · 5. Mark Tessier Landscape ...Read more",
+      "emphasizedKeywords": [
+        "1. Sweeney's Custom Landscaping"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 12
+    },
+    {
+      "title": "Top 20 Landscaping Websites for Modern Design Inspiration",
+      "websiteTitle": "Comrade Digital Marketing Agency",
+      "url": "https://comradeweb.com/blog/best-landscaping-websites/",
+      "displayedUrl": "https://comradeweb.com › blog › best-landscaping-websi...",
+      "description": "The Most Stunning Landscaping Website Designs for 2026 · 1. GMC Landscapes · 2. Perfect Turf · 3. Highlands Landscaping · 4. Elite Landscape Pro · 5.Read more",
+      "date": "2026-05-05T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "1. GMC Landscapes"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 13
+    },
+    {
+      "title": "Lawn Care Websites: 10 website examples to inspire you",
+      "websiteTitle": "GorillaDesk",
+      "url": "https://gorilladesk.com/learn/best-lawn-care-websites/",
+      "displayedUrl": "https://gorilladesk.com › learn › best-lawn-care-websites",
+      "description": "10 inspiring lawn care website examples · 1. GrassPerson · 2. No Mow Worries · 3. Spruce Lawn Care · 4. Calvin Landscape · 5. Lawn Doctor · 6. Southern Cut Lawns · 7.Read more",
+      "emphasizedKeywords": [
+        "1. GrassPerson"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 14
+    },
+    {
+      "title": "20 Best Landscaping Websites for Inspiration",
+      "websiteTitle": "InvoiceOwl",
+      "url": "https://www.invoiceowl.com/blog/best-landscaping-websites/",
+      "displayedUrl": "https://www.invoiceowl.com › blog › best-landscaping-...",
+      "description": "In the below section, here are some landscaping websites' examples that you can take inspiration to build your new lawn care business website.Read more",
+      "date": "2025-01-02T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "here are some landscaping websites' examples"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 15
+    },
+    {
+      "title": "Landscaping Website designs, themes, templates and ...",
+      "websiteTitle": "Dribbble",
+      "url": "https://dribbble.com/tags/landscaping-website",
+      "displayedUrl": "https://dribbble.com › tags › landscaping-website",
+      "description": "Discover 50 Landscaping Website designs on Dribbble. Your resource to discover and connect with designers worldwide.",
+      "emphasizedKeywords": [
+        "Landscaping Website designs on Dribbble"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 16
+    },
+    {
+      "title": "Landscaping Website Ideas That Turn Visitors Into Leads",
+      "websiteTitle": "Marty Grunder",
+      "url": "https://www.growgroupinc.com/the-grow-group-blog/landscaping-website-ideas-that-turn-visitors-into-leads",
+      "displayedUrl": "https://www.growgroupinc.com › the-grow-group-blog",
+      "description": "Your landscaping website should generate leads, reach the right clients, and tell your story. Here's what makes it work. | The Grow Group.",
+      "date": "2026-03-27T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "landscaping website"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 17
+    },
+    {
+      "title": "Top Website Examples For Landscapers Needing Website ...",
+      "websiteTitle": "takechargemedia.com",
+      "url": "https://takechargemedia.com/website-examples-for-landscapers/",
+      "displayedUrl": "https://takechargemedia.com › website-examples-for-lan...",
+      "description": "Take Charge Media provides professional website designs for landscapers that are both visually appealing and optimized for SEO.Read more",
+      "date": "2025-02-03T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "professional website designs for landscapers"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 18
+    },
+    {
+      "title": "Landscaping Company Websites: 13 Best Stunning ...",
+      "websiteTitle": "AQ Marketing",
+      "url": "https://aqmarketing.com/landscaping-company-websites/",
+      "displayedUrl": "https://aqmarketing.com › landscaping-company-websites",
+      "description": "Discover top landscaping company websites that inspire trust, boost conversions, and showcase must-have features for digital growth.",
+      "date": "2025-05-02T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "top landscaping company websites"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 19
+    }
+  ],
+  "suggestedResults": [],
+  "peopleAlsoAsk": [],
+  "customData": null,
+  "htmlSnapshotUrl": "https://api.apify.com/v2/key-value-stores/MgAfvTGwbgdNADHe6/records/Hca2zTYs8rlbRMf-0.html?signature=1KUSX6FKpTXSXdy4MGph0"
+},
+{
+  "#debug": {
+    "requestId": "z8wxGQm0kIdO6lF",
+    "url": "http://www.google.com/search?q=best%20landscaping%20contractor%20websites%202025&start=10",
+    "loadedUrl": "http://www.google.com/search?q=best%20landscaping%20contractor%20websites%202025&start=10",
+    "method": "GET",
+    "retryCount": 0,
+    "errorMessages": [],
+    "statusCode": 200
+  },
+  "#error": false,
+  "searchQuery": {
+    "term": "best landscaping contractor websites 2025",
+    "url": "http://www.google.com/search?q=best%20landscaping%20contractor%20websites%202025&start=10",
+    "device": "DESKTOP",
+    "page": 2,
+    "type": "SEARCH",
+    "domain": "google.com",
+    "countryCode": "US",
+    "languageCode": null,
+    "locationUule": null,
+    "resultsPerPage": 10
+  },
+  "url": "http://www.google.com/search?q=best%20landscaping%20contractor%20websites%202025&start=10",
+  "hasNextPage": true,
+  "serpProviderCode": "N",
+  "resultsTotal": null,
+  "relatedQueries": [
+    {
+      "title": "Best landscaping contractor websites 2025 usa",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+contractor+websites+2025+usa&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDgQAQ"
+    },
+    {
+      "title": "Best landscaping contractor websites 2025 free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+contractor+websites+2025+free&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDwQAQ"
+    },
+    {
+      "title": "Best landscaping contractor websites 2025 california",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+contractor+websites+2025+california&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDsQAQ"
+    },
+    {
+      "title": "Best landscaping companies near me",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+companies+near+me&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDoQAQ"
+    },
+    {
+      "title": "Landscaping companies in USA",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+companies+in+USA&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDkQAQ"
+    },
+    {
+      "title": "Commercial landscaping companies near me",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Commercial+landscaping+companies+near+me&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDcQAQ"
+    },
+    {
+      "title": "Gibbs Landscape Company photos",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Gibbs+Landscape+Company+photos&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDUQAQ"
+    },
+    {
+      "title": "Top Atlanta landscape companies",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Top+Atlanta+landscape+companies&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDYQAQ"
+    },
+    {
+      "title": "Best landscaping contractor websites 2025 usa",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+contractor+websites+2025+usa&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDgQAQ"
+    },
+    {
+      "title": "Best landscaping contractor websites 2025 free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+contractor+websites+2025+free&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDwQAQ"
+    },
+    {
+      "title": "Best landscaping contractor websites 2025 california",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+contractor+websites+2025+california&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDsQAQ"
+    },
+    {
+      "title": "Best landscaping companies near me",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+landscaping+companies+near+me&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDoQAQ"
+    },
+    {
+      "title": "Landscaping companies in USA",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+companies+in+USA&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDkQAQ"
+    },
+    {
+      "title": "Commercial landscaping companies near me",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Commercial+landscaping+companies+near+me&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDcQAQ"
+    },
+    {
+      "title": "Gibbs Landscape Company photos",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Gibbs+Landscape+Company+photos&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDUQAQ"
+    },
+    {
+      "title": "Top Atlanta landscape companies",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Top+Atlanta+landscape+companies&sa=X&ved=2ahUKEwi44YqRy-aUAxWYp1YBHWUwEzc4ChDVAnoECDYQAQ"
+    }
+  ],
+  "paidResults": [],
+  "paidProducts": [],
+  "organicResults": [
+    {
+      "title": "20 Best Landscaping Websites for Inspiration",
+      "websiteTitle": "InvoiceOwl",
+      "url": "https://www.invoiceowl.com/blog/best-landscaping-websites/",
+      "displayedUrl": "https://www.invoiceowl.com › blog › best-landscaping-...",
+      "description": "Are you searching for inspiring ideas for your landscaping business website? Here are some of the best landscaping websites that appeal to ...",
+      "date": "2025-01-02T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "best landscaping websites"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 11
+    },
+    {
+      "title": "Landscaping Company Websites: 13 Best Stunning ...",
+      "websiteTitle": "AQ Marketing",
+      "url": "https://aqmarketing.com/landscaping-company-websites/",
+      "displayedUrl": "https://aqmarketing.com › landscaping-company-websites",
+      "description": "Discover top landscaping company websites that inspire trust, boost conversions, and showcase must-have features for digital growth.",
+      "date": "2025-05-02T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "top landscaping company websites"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 12
+    },
+    {
+      "title": "Best Landscaping Websites [10 Top Design Examples 2026]",
+      "websiteTitle": "Flamingo Agency",
+      "url": "https://www.flamingoagency.com/blog/best-landscaping-websites/",
+      "displayedUrl": "https://www.flamingoagency.com › blog › best-landsca...",
+      "description": "See the 10 best landscaping websites of 2026. Get inspired by stunning designs & must-have features for your own website.",
+      "date": "2025-02-23T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "10 best landscaping websites of 2026"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 13
+    },
+    {
+      "title": "12 Best Landscaping SEO Companies in 2026",
+      "websiteTitle": "Thrive Internet Marketing Agency",
+      "url": "https://thriveagency.com/news/best-landscaping-seo-companies/",
+      "displayedUrl": "https://thriveagency.com › news › best-landscaping-seo...",
+      "description": "If you're looking for the best landscaping SEO companies, this list is for you. We have everything from global agencies to boutique startups ...",
+      "date": "2025-10-29T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "best landscaping SEO companies"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 14
+    },
+    {
+      "title": "Landscaping Website Design Examples for Inspiration",
+      "websiteTitle": "Muffin Group",
+      "url": "https://muffingroup.com/blog/landscaping-websites/",
+      "displayedUrl": "https://muffingroup.com › blog › landscaping-websites",
+      "description": "The best landscaping website design examples share common patterns: striking project galleries, clear service pages, and quote request forms ...Read more",
+      "date": "2025-07-02T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "striking project galleries, clear service pages, and quote request forms"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 15
+    },
+    {
+      "title": "Best Landscaping Websites for Design Inspiration & Lead ...",
+      "websiteTitle": "Millionify",
+      "url": "https://millionify.com/best-landscaping-website-designs/",
+      "displayedUrl": "https://millionify.com › Web development",
+      "description": "Top 15 Best Landscaping Websites for Design Inspiration & Lead Generation · 1. Tilly Design · 2. Yardzen · 3. Scenic Landscaping · 4. McDugald ...Read more",
+      "date": "2025-07-23T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "1. Tilly Design"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 16
+    },
+    {
+      "title": "19 Best Landscaping Website Design Examples 2026",
+      "websiteTitle": "Colorlib",
+      "url": "https://colorlib.com/wp/landscaping-website-design/",
+      "displayedUrl": "https://colorlib.com › Home › Website Design",
+      "description": "Best Landscaping Website Designs · 1. De Leon Landscapes Co. · 2. Garden Builders · 3. Green By Nature · 4. Classic Landscape Ltd. · 5. Masterplan ...Read more",
+      "date": "2026-03-19T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "1. De Leon Landscapes Co"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 17
+    },
+    {
+      "title": "Patio Construction: 7 Best Expert Picks For Amazing Results ...",
+      "websiteTitle": "naturesownlandscapes.com",
+      "url": "https://www.naturesownlandscapes.com/build-it-rightthe-best-patio-construction-companies-for-your-business/",
+      "displayedUrl": "https://www.naturesownlandscapes.com › Patios",
+      "description": "Discover top patio construction companies, expert tips, and trends to boost your home's value and outdoor living today!",
+      "emphasizedKeywords": [
+        "top patio construction companies"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 18
+    },
+    {
+      "title": "Everything a Landscaping Website Needs",
+      "websiteTitle": "Avalanche Creative",
+      "url": "https://avalanchegr.com/blog/landscaping-websites-guide",
+      "displayedUrl": "https://avalanchegr.com › ... › Landscapers",
+      "description": "A list of everything you need to have on a landscaping website including examples of great landscaper websites, ideas, resources, ...",
+      "date": "2026-03-02T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "examples of great landscaper websites"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 19
+    },
+    {
+      "title": "18 Best Landscaping Website Designs for Inspiration and Ideas",
+      "websiteTitle": "operationtechnology.com",
+      "url": "https://www.operationtechnology.com/blog/best-landscaping-websites/",
+      "displayedUrl": "https://www.operationtechnology.com › Web Design",
+      "description": "18 Best Landscaping Websites to Use for Inspiration · 1. Mark Tessier · 2. Exotic Gardens Landscaping · 3. Hess Landscape · 4. Markham Landscape ...Read more",
+      "date": "2025-02-27T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "1. Mark Tessier"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 20
+    }
+  ],
+  "suggestedResults": [],
+  "peopleAlsoAsk": [],
+  "customData": null,
+  "htmlSnapshotUrl": "https://api.apify.com/v2/key-value-stores/MgAfvTGwbgdNADHe6/records/z8wxGQm0kIdO6lF-0.html?signature=bqXZSD5OCsA62vXkwAaq"
+},
+{
+  "#debug": {
+    "requestId": "AAa9GfPb732ABz1",
+    "url": "http://www.google.com/search?q=award+winning+landscaping+websites",
+    "loadedUrl": "http://www.google.com/search?q=award+winning+landscaping+websites",
+    "method": "GET",
+    "retryCount": 0,
+    "errorMessages": [],
+    "statusCode": 200
+  },
+  "#error": false,
+  "searchQuery": {
+    "term": "award winning landscaping websites",
+    "url": "http://www.google.com/search?q=award+winning+landscaping+websites",
+    "device": "DESKTOP",
+    "page": 1,
+    "type": "SEARCH",
+    "domain": "google.com",
+    "countryCode": "US",
+    "languageCode": null,
+    "locationUule": null,
+    "resultsPerPage": 10
+  },
+  "url": "http://www.google.com/search?q=award+winning+landscaping+websites",
+  "hasNextPage": true,
+  "serpProviderCode": "N",
+  "resultsTotal": null,
+  "relatedQueries": [
+    {
+      "title": "Award winning landscaping websites in usa",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Award+winning+landscaping+websites+in+usa&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg5EAE"
+    },
+    {
+      "title": "Award winning landscaping websites reddit",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Award+winning+landscaping+websites+reddit&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg_EAE"
+    },
+    {
+      "title": "Award winning landscaping websites free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Award+winning+landscaping+websites+free&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAhAEAE"
+    },
+    {
+      "title": "Landscaping website design free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+design+free&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg-EAE"
+    },
+    {
+      "title": "Landscaping websites in usa",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+websites+in+usa&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg9EAE"
+    },
+    {
+      "title": "Landscaping website templates",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+templates&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg8EAE"
+    },
+    {
+      "title": "Best online landscape design service",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+online+landscape+design+service&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg7EAE"
+    },
+    {
+      "title": "Websites for landscapers",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Websites+for+landscapers&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg6EAE"
+    },
+    {
+      "title": "Award winning landscaping websites in usa",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Award+winning+landscaping+websites+in+usa&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg5EAE"
+    },
+    {
+      "title": "Award winning landscaping websites reddit",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Award+winning+landscaping+websites+reddit&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg_EAE"
+    },
+    {
+      "title": "Award winning landscaping websites free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Award+winning+landscaping+websites+free&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAhAEAE"
+    },
+    {
+      "title": "Landscaping website design free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+design+free&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg-EAE"
+    },
+    {
+      "title": "Landscaping websites in usa",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+websites+in+usa&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg9EAE"
+    },
+    {
+      "title": "Landscaping website templates",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+templates&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg8EAE"
+    },
+    {
+      "title": "Best online landscape design service",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+online+landscape+design+service&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg7EAE"
+    },
+    {
+      "title": "Websites for landscapers",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Websites+for+landscapers&sa=X&ved=2ahUKEwiAnMmLy-aUAxVFpVYBHVUDMg8Q1QJ6BAg6EAE"
+    }
+  ],
+  "paidResults": [],
+  "paidProducts": [],
+  "organicResults": [
+    {
+      "title": "41 Inspiring Landscaping Website Examples",
+      "websiteTitle": "Site Builder Report",
+      "url": "https://www.sitebuilderreport.com/inspiration/landscaping-websites",
+      "displayedUrl": "https://www.sitebuilderreport.com › inspiration › landsc...",
+      "description": "The best landscaping websites answer it by showing their work through finished work photos & videos, before/after pictures, etc. Usually, these ...Read more",
+      "date": "2024-11-30T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "The",
+        "landscaping websites"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 1
+    },
+    {
+      "title": "23 Best Landscaping Website Designs for 2026",
+      "websiteTitle": "Contractor Gorilla",
+      "url": "https://contractorgorilla.com/blog/best-landscaping-websites/",
+      "displayedUrl": "https://contractorgorilla.com › blog › best-landscaping-w...",
+      "description": "Best Landscaping Website Designs in 2026 · Barefoot Lawn Care · BACQYARD · Lawn Doctor · Ruppert Landscape · Westmod Design · Great Oaks Landscape · Mike Pyle ...Read more",
+      "emphasizedKeywords": [
+        "Barefoot Lawn Care"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 2
+    },
+    {
+      "title": "Cool Landscaping Website Design Examples? Need ...",
+      "websiteTitle": "Reddit · r/LandscapingPros",
+      "url": "https://www.reddit.com/r/LandscapingPros/comments/1he2gi8/cool_landscaping_website_design_examples_need/",
+      "displayedUrl": "Reddit › r/LandscapingPros",
+      "description": "Check out Houzz and Pinterest. They have tons of creative landscaping website designs. Look for clean layouts, high-quality images, and easy navigation.Read more",
+      "emphasizedKeywords": [
+        "website designs"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "commentsAmount": "10+ comments",
+      "lastUpdated": "1 year ago",
+      "type": "organic",
+      "position": 3
+    },
+    {
+      "title": "Yardzen: The Leading Online Landscape Design & Build ...",
+      "websiteTitle": "Yardzen",
+      "url": "https://yardzen.com/?srsltid=AfmBOortwX8u4YxUhgonWMak0Jfghcf5YBfC5MERlvFcSy9Oig2ht4h1",
+      "displayedUrl": "https://yardzen.com",
+      "description": "The No. 1 landscape design and build platform that factors your style and your property's unique characteristics to create a just-for-you design, ...",
+      "emphasizedKeywords": [
+        "The No. 1 landscape design and build platform"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 4
+    },
+    {
+      "title": "Best Landscaping Websites | Free Examples & Designs",
+      "websiteTitle": "Webflow",
+      "url": "https://webflow.com/made-in-webflow/landscaping",
+      "displayedUrl": "https://webflow.com › made-in-webflow › landscaping",
+      "description": "Discover the best landscaping websites created by professional designers. Get inspired and start planning your perfect landscaping web design today!",
+      "emphasizedKeywords": [
+        "best landscaping websites created by professional designers"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 5
+    },
+    {
+      "title": "Landscaping Website Design Examples for Inspiration",
+      "websiteTitle": "Muffin Group",
+      "url": "https://muffingroup.com/blog/landscaping-websites/",
+      "displayedUrl": "https://muffingroup.com › blog › landscaping-websites",
+      "description": "Best Landscaping Website Design Examples. These landscape contractor websites demonstrate effective design patterns for outdoor service ...Read more",
+      "date": "2025-07-02T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "Best Landscaping Website Design Examples"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 6
+    },
+    {
+      "title": "Website for Landscapers: What Actually Wins Jobs in 2025",
+      "websiteTitle": "ServiceScale",
+      "url": "https://www.servicescale.com.au/blog/top-10-landscaping-websites-in-2025",
+      "displayedUrl": "https://www.servicescale.com.au › Blog",
+      "description": "Build a landscaping website that ranks on Google and converts visitors into paying customers. Real examples, AUD pricing, checklists and a ...",
+      "date": "2026-05-27T17:40:55.168Z",
+      "emphasizedKeywords": [
+        "landscaping website that ranks on Google"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 7
+    },
+    {
+      "title": "10 Best Lawn Care Website Design Ideas | WorkWave",
+      "websiteTitle": "RealGreen by WorkWave",
+      "url": "https://www.realgreen.com/blog/best-lawn-care-websites",
+      "displayedUrl": "https://www.realgreen.com › Blog",
+      "description": "Discover the top 10 best lawn care and landscaping websites in the industry. See how to build a lawn care website and make it the best for your company.",
+      "emphasizedKeywords": [
+        "best lawn care and landscaping websites in the industry"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 8
+    },
+    {
+      "title": "Garden Design: Garden & Landscape Design, Ideas and Tips",
+      "websiteTitle": "Garden Design",
+      "url": "https://www.gardendesign.com/",
+      "displayedUrl": "https://www.gardendesign.com",
+      "description": "Discover garden design ideas, beautiful photos and how-to projects. Learn how to create stylish landscapes, follow garden trends, and get tips to try in ...",
+      "emphasizedKeywords": [
+        "garden design ideas, beautiful photos and how-to projects"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 9
+    },
+    {
+      "title": "10 best landscaping websites of 2026 | Freshy",
+      "websiteTitle": "FreshySites",
+      "url": "https://freshysites.com/web-design-development/best-landscaping-company-websites/",
+      "displayedUrl": "https://freshysites.com › Web Design & Development",
+      "description": "Here are the eight best landscaping websites we've found for your inspiration… · Highlands Landscaping · Anderson Landscape Maintenance.Read more",
+      "date": "2026-01-29T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "Highlands Landscaping"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 10
+    }
+  ],
+  "suggestedResults": [],
+  "peopleAlsoAsk": [],
+  "aiOverview": {
+    "type": "live",
+    "content": "",
+    "sources": [
+      {
+        "url": "https://www.reddit.com/r/LandscapingPros/comments/1he2gi8/cool_landscaping_website_design_examples_need/",
+        "title": "Cool Landscaping Website Design Examples? Need Inspiration.",
+        "description": "Dec 14, 2024 — Check out Houzz and Pinterest. They have tons of creative landscaping website designs. Look for clean layouts, high-quality images..."
+      },
+      {
+        "url": "https://webflow.com/made-in-webflow/landscaping",
+        "title": "Best Landscaping Websites | Free Examples & Designs",
+        "description": "built by the Webflow communityBrowse, clone, and customize thousands of websites #MadeinWebflow. Looking for templates? Landscapin..."
+      },
+      {
+        "url": "https://www.realgreen.com/blog/best-lawn-care-websites",
+        "title": "10 Best Lawn Care Website Design Ideas - RealGreen",
+        "description": "Mar 9, 2026 — You don't have total control over your reviews, which is why many businesses don't put them directly on their homepage. However, g..."
+      }
+    ]
+  },
+  "customData": null,
+  "htmlSnapshotUrl": "https://api.apify.com/v2/key-value-stores/MgAfvTGwbgdNADHe6/records/AAa9GfPb732ABz1-0.html?signature=1x1Ro1eN3CwTjYkPVGSbJ"
+},
+{
+  "#debug": {
+    "requestId": "36CxPG2deP378Ah",
+    "url": "http://www.google.com/search?q=award%20winning%20landscaping%20websites&start=10",
+    "loadedUrl": "http://www.google.com/search?q=award%20winning%20landscaping%20websites&start=10",
+    "method": "GET",
+    "retryCount": 0,
+    "errorMessages": [],
+    "statusCode": 200
+  },
+  "#error": false,
+  "searchQuery": {
+    "term": "award winning landscaping websites",
+    "url": "http://www.google.com/search?q=award%20winning%20landscaping%20websites&start=10",
+    "device": "DESKTOP",
+    "page": 2,
+    "type": "SEARCH",
+    "domain": "google.com",
+    "countryCode": "US",
+    "languageCode": null,
+    "locationUule": null,
+    "resultsPerPage": 10
+  },
+  "url": "http://www.google.com/search?q=award%20winning%20landscaping%20websites&start=10",
+  "hasNextPage": true,
+  "serpProviderCode": "N",
+  "resultsTotal": null,
+  "relatedQueries": [
+    {
+      "title": "Award winning landscaping websites in usa",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Award+winning+landscaping+websites+in+usa&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDcQAQ"
+    },
+    {
+      "title": "Award winning landscaping websites reddit",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Award+winning+landscaping+websites+reddit&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDoQAQ"
+    },
+    {
+      "title": "Award winning landscaping websites free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Award+winning+landscaping+websites+free&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDsQAQ"
+    },
+    {
+      "title": "Landscaping website design free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+design+free&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDkQAQ"
+    },
+    {
+      "title": "Landscaping websites in usa",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+websites+in+usa&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDUQAQ"
+    },
+    {
+      "title": "Landscaping website templates",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+templates&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDYQAQ"
+    },
+    {
+      "title": "Best online landscape design service",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+online+landscape+design+service&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDgQAQ"
+    },
+    {
+      "title": "Websites for landscapers",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Websites+for+landscapers&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDQQAQ"
+    },
+    {
+      "title": "Award winning landscaping websites in usa",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Award+winning+landscaping+websites+in+usa&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDcQAQ"
+    },
+    {
+      "title": "Award winning landscaping websites reddit",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Award+winning+landscaping+websites+reddit&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDoQAQ"
+    },
+    {
+      "title": "Award winning landscaping websites free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Award+winning+landscaping+websites+free&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDsQAQ"
+    },
+    {
+      "title": "Landscaping website design free",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+design+free&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDkQAQ"
+    },
+    {
+      "title": "Landscaping websites in usa",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+websites+in+usa&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDUQAQ"
+    },
+    {
+      "title": "Landscaping website templates",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Landscaping+website+templates&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDYQAQ"
+    },
+    {
+      "title": "Best online landscape design service",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Best+online+landscape+design+service&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDgQAQ"
+    },
+    {
+      "title": "Websites for landscapers",
+      "url": "https://www.google.com/search?sca_esv=535308282edc524d&gl=US&hl=en&q=Websites+for+landscapers&sa=X&ved=2ahUKEwjAzMeTy-aUAxU3VqQEHf3BOkc4ChDVAnoECDQQAQ"
+    }
+  ],
+  "paidResults": [],
+  "paidProducts": [],
+  "organicResults": [
+    {
+      "title": "10 Great Websites For Landscapers & Gardeners",
+      "websiteTitle": "Ross NW Watergardens",
+      "url": "https://www.rossnwwatergardens.com/portland-landscaping-blog/10-great-websites-for-landscapers-gardeners",
+      "displayedUrl": "https://www.rossnwwatergardens.com › 10-great-websit...",
+      "description": "Here are 10 that any modern landscape designer or gardener will love: · Houzz. Part online glossy design mag, part Pinterest for home improvement ...Read more",
+      "date": "2016-11-21T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "Houzz"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 11
+    },
+    {
+      "title": "20 Best Landscaping Websites of 2026",
+      "websiteTitle": "CyberOptik",
+      "url": "https://www.cyberoptik.net/blog/20-best-landscaping-websites/",
+      "displayedUrl": "https://www.cyberoptik.net › blog › 20-best-landscapin...",
+      "description": "Best Landscaping Website Examples · 1. Sweeney's Custom Landscaping · 2. Perfect Turf · 3. Greenwise Organic Lawn Care · 4. Huntergreen · 5. Mark Tessier ...Read more",
+      "emphasizedKeywords": [
+        "Sweeney's Custom Landscaping"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 12
+    },
+    {
+      "title": "Award-winning Chicago Landscaping Company",
+      "websiteTitle": "Christy Webber Landscapes",
+      "url": "https://www.christywebber.com/",
+      "displayedUrl": "https://www.christywebber.com",
+      "description": "We hold a leading position amongst Chicago's best landscapers with broad experience designing and building residential, commercial, and municipal projects.",
+      "emphasizedKeywords": [
+        "Chicago's best landscapers"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 13
+    },
+    {
+      "title": "Best Landscaping Websites [10 Top Design Examples 2026]",
+      "websiteTitle": "Flamingo Agency",
+      "url": "https://www.flamingoagency.com/blog/best-landscaping-websites/",
+      "displayedUrl": "https://www.flamingoagency.com › blog › best-landsca...",
+      "description": "Top Landscaping Website Examples of 2026 · 1. BrightPLay Turf · 2. Yellowstone Landscape · 3. Keane Landscaping · 4. Ruppert Landscape · 5.Read more",
+      "date": "2025-02-23T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "1. BrightPLay Turf"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 14
+    },
+    {
+      "title": "Landscaping Website designs, themes, templates and ...",
+      "websiteTitle": "Dribbble",
+      "url": "https://dribbble.com/tags/landscaping-website",
+      "displayedUrl": "https://dribbble.com › tags › landscaping-website",
+      "description": "Discover 50 Landscaping Website designs on Dribbble. Your resource to discover and connect with designers worldwide.",
+      "emphasizedKeywords": [
+        "50 Landscaping Website designs on Dribbble"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 15
+    },
+    {
+      "title": "19 Best Landscaping Website Design Examples 2026",
+      "websiteTitle": "Colorlib",
+      "url": "https://colorlib.com/wp/landscaping-website-design/",
+      "displayedUrl": "https://colorlib.com › Home › Website Design",
+      "description": "Best Landscaping Website Designs · 1. De Leon Landscapes Co. · 2. Garden Builders · 3. Green By Nature · 4. Classic Landscape Ltd. · 5.Read more",
+      "date": "2026-03-19T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "1. De Leon Landscapes Co"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 16
+    },
+    {
+      "title": "15 best landscaping website examples for inspiration",
+      "websiteTitle": "Wix.com",
+      "url": "https://www.wix.com/blog/landscaping-websites",
+      "displayedUrl": "https://www.wix.com › blog › landscaping-websites",
+      "description": "15 best landscaping websites and their design · 01. Full Circle Lawn Care · 02. CP Landscaping · 03. Cross States Landscape · 04. Legacy Lawn & ...Read more",
+      "date": "2026-04-30T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "15 best landscaping websites"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 17
+    },
+    {
+      "title": "Looking for cool landscaping website examples, need ...",
+      "websiteTitle": "Reddit · r/landscaping",
+      "url": "https://www.reddit.com/r/landscaping/comments/1pi5mu4/looking_for_cool_landscaping_website_examples/",
+      "displayedUrl": "Reddit › r/landscaping",
+      "description": "Looking for landscaping · Landscaping design · Landscape ideas · A walkthrough of the coolest landscape project I worked on · Working on front ...Read more",
+      "emphasizedKeywords": [
+        "landscaping",
+        "Landscaping",
+        "the"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "commentsAmount": "20+ comments",
+      "lastUpdated": "5 months ago",
+      "type": "organic",
+      "position": 18
+    },
+    {
+      "title": "Top-ranking Landscaping Websites in the USA",
+      "websiteTitle": "Blue Collar Marketing",
+      "url": "https://bluecollarmarketing.ca/landscaping-websites-in-the-usa/",
+      "displayedUrl": "https://bluecollarmarketing.ca › landscaping-websites-in...",
+      "description": "Blue Collar Marketing creates high-converting landscaping websites in the USA. View our portfolio of successful American landscape contractor projects.",
+      "emphasizedKeywords": [
+        "Blue Collar Marketing creates high-converting landscaping websites"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 19
+    },
+    {
+      "title": "25 Amazing Landscaping Website Designs. Full Build ...",
+      "websiteTitle": "Leads4Build",
+      "url": "https://leads4build.com/insights/25-landscaping-websites-design",
+      "displayedUrl": "https://leads4build.com › insights › 25-landscaping-web...",
+      "description": "Get inspired by 25 amazing landscaping websites, then build your own with our step-by-step guide. Includes design principles, mobile ...",
+      "date": "2025-08-16T12:00:00.000Z",
+      "emphasizedKeywords": [
+        "Get inspired by 25 amazing landscaping websites"
+      ],
+      "siteLinks": [],
+      "productInfo": {},
+      "type": "organic",
+      "position": 20
+    }
+  ],
+  "suggestedResults": [],
+  "peopleAlsoAsk": [],
+  "customData": null,
+  "htmlSnapshotUrl": "https://api.apify.com/v2/key-value-stores/MgAfvTGwbgdNADHe6/records/36CxPG2deP378Ah-0.html?signature=Frc8pjzwpYRZ3O5FZFtz"
+}]

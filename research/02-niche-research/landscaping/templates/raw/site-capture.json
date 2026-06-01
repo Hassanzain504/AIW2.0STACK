@@ -1,0 +1,822 @@
+[{
+  "url": "https://www.sweeneyslandscaping.com/",
+  "crawl": {
+    "loadedUrl": "https://www.sweeneyslandscaping.com/",
+    "loadedTime": "2026-06-01T17:42:20.347Z",
+    "referrerUrl": "https://www.sweeneyslandscaping.com/",
+    "httpStatusCode": 200,
+    "depth": 0,
+    "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+    "canonicalUrl": "https://www.sweeneyslandscaping.com/",
+    "title": "Lawn Care and Landscaping | Elmhurst, Wood Dale, Oak Brook, & More",
+    "description": "Sweeney’s Custom Landscaping, Inc. provides quality landscape services in the Chicagoland area with a focus on customer service. We service many areas.",
+    "author": null,
+    "keywords": null,
+    "languageCode": null,
+    "openGraph": [
+      {
+        "property": "og:locale",
+        "content": "en_US"
+      },
+      {
+        "property": "og:type",
+        "content": "website"
+      },
+      {
+        "property": "og:title",
+        "content": "Lawn Care and Landscaping | Elmhurst, Wood Dale, Oak Brook, & More"
+      },
+      {
+        "property": "og:description",
+        "content": "Sweeney’s Custom Landscaping, Inc. provides quality landscape services in the Chicagoland area with a focus on customer service. We service many areas."
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.sweeneyslandscaping.com/"
+      },
+      {
+        "property": "og:site_name",
+        "content": "Sweeney's Custom Landscaping Inc"
+      },
+      {
+        "property": "article:modified_time",
+        "content": "2026-05-26T14:50:49+00:00"
+      },
+      {
+        "property": "og:image",
+        "content": "https://www.sweeneyslandscaping.com/wp-content/uploads/2026/05/pexels-guzel-sadykova-3331480-32161692-scaled.jpg"
+      },
+      {
+        "property": "og:image:width",
+        "content": "2147"
+      },
+      {
+        "property": "og:image:height",
+        "content": "2560"
+      },
+      {
+        "property": "og:image:type",
+        "content": "image/jpeg"
+      }
+    ],
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://www.sweeneyslandscaping.com/",
+            "url": "https://www.sweeneyslandscaping.com/",
+            "name": "Lawn Care and Landscaping | Elmhurst, Wood Dale, Oak Brook, & More",
+            "isPartOf": {
+              "@id": "https://www.sweeneyslandscaping.com/#website"
+            },
+            "primaryImageOfPage": {
+              "@id": "https://www.sweeneyslandscaping.com/#primaryimage"
+            },
+            "image": {
+              "@id": "https://www.sweeneyslandscaping.com/#primaryimage"
+            },
+            "thumbnailUrl": "https://www.sweeneyslandscaping.com/wp-content/uploads/2026/05/pexels-guzel-sadykova-3331480-32161692-scaled.jpg",
+            "datePublished": "2017-03-13T01:09:38+00:00",
+            "dateModified": "2026-05-26T14:50:49+00:00",
+            "description": "Sweeney’s Custom Landscaping, Inc. provides quality landscape services in the Chicagoland area with a focus on customer service. We service many areas.",
+            "breadcrumb": {
+              "@id": "https://www.sweeneyslandscaping.com/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://www.sweeneyslandscaping.com/"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://www.sweeneyslandscaping.com/#primaryimage",
+            "url": "https://www.sweeneyslandscaping.com/wp-content/uploads/2026/05/pexels-guzel-sadykova-3331480-32161692-scaled.jpg",
+            "contentUrl": "https://www.sweeneyslandscaping.com/wp-content/uploads/2026/05/pexels-guzel-sadykova-3331480-32161692-scaled.jpg",
+            "width": 2147,
+            "height": 2560
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sweeneyslandscaping.com/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.sweeneyslandscaping.com/#website",
+            "url": "https://www.sweeneyslandscaping.com/",
+            "name": "Sweeney&#039;s Custom Landscaping Inc",
+            "description": "Lawn Care and Landscaping",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.sweeneyslandscaping.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    ],
+    "headers": {
+      "date": "Mon, 01 Jun 2026 17:41:59 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "vary": "Accept-Encoding, accept, content-type",
+      "link": "<https://www.sweeneyslandscaping.com/wp-json/>; rel=\"https://api.w.org/\", <https://www.sweeneyslandscaping.com/wp-json/wp/v2/pages/2>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://wp.me/P8zaWz-2>; rel=shortlink",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare",
+      "pre-cognitive-push": "Enabled",
+      "quantum-flux-capacity": "Omega",
+      "strict-transport-security": "max-age=31536000",
+      "cache-control": "public, no-cache",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "x-grid-srcache-ttl": "3600",
+      "x-grid-srcache-fetch": "HIT",
+      "x-grid-srcache-store": "BYPASS",
+      "report-to": "{\"group\":\"cf-nel\", \"max_age\":604800, \"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TlnwPpcyVFIEkzOlw%2FzDezwxW0k7wedvxpx%2FmQL6JnK4bd5Yx%2B7k%2FOrXgTaxAL8mE0uGdou63d2%2FHm2iEbAVsbx6HtKR25CWV4CuLOGRO0iXF2GnPGpAGJotPHpJ0W5vM7N%2Brp6nxHBLReoHRs0%3D\"}]}",
+      "cf-cache-status": "DYNAMIC",
+      "nel": "{\"report_to\":\"cf-nel\", \"success_fraction\":0.0, \"max_age\":604800}",
+      "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=11, cfOrigin;dur=250",
+      "content-encoding": "zstd",
+      "cf-ray": "a050032738ade9f0-MIA",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-firefox-spdy": "h2"
+    }
+  },
+  "screenshotUrl": "https://api.apify.com/v2/key-value-stores/8OWffbobNuHgpcwJ7/records/screenshot-2fbe280-.jpg?signature=6RDW2YHQQcwwma2XY1Un",
+  "text": "Lawn Care and Landscaping | Elmhurst, Wood Dale, Oak Brook, & More\nGet a Free Estimate\nFor a refreshing lawn care experience call 630-238-8600 today or request a free no hassle quote by clicking the button below.\nGet Estimate Fast\nOur Personal 100% Iron-Clad, Risk Free, No-Nonsense Money Back Guarantee\nLearn More\nSweeney’s Custom Landscaping, Inc. provides quality landscape services in the Chicagoland area with a focus on customer service.\nWe will work with you and your vision to create the outdoor environment that suits your lifestyle and budget. We offer layout, installation and maintenance services.\nLearn More",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Lawn Care and Landscaping | Elmhurst, Wood Dale, Oak Brook, & More\n\n### Get a Free Estimate\n\nFor a refreshing lawn care experience call [630-238-8600](tel:630-238-8600) today or request a free no hassle quote by clicking the button below.  \n[Get Estimate Fast](https://my.serviceautopilot.com/viewform.html?rk=96c60065-f8eb-41e3-8bf1-875f866242cc&Type=new)\n\n![](https://www.sweeneyslandscaping.com/wp-content/uploads/2017/03/guarantee.png)\n\nOur Personal 100% Iron-Clad, Risk Free, No-Nonsense Money Back Guarantee\n\n[Learn More](https://www.sweeneyslandscaping.com/guarantee.html)\n\nSweeney’s Custom Landscaping, Inc. provides quality landscape services in the Chicagoland area with a focus on customer service.\n\nWe will work with you and your vision to create the outdoor environment that suits your lifestyle and budget. We offer layout, installation and maintenance services.\n\n[Learn More](https://www.sweeneyslandscaping.com/elmhurst-lawn-care-services.html)\n\n![](https://www.sweeneyslandscaping.com/wp-content/uploads/2025/03/Anniversary-Banner_SM_Final-2-461x1024.png)",
+  "debug": {
+    "requestHandlerMode": "browser"
+  }
+},
+{
+  "url": "https://www.perfectturf.com/",
+  "crawl": {
+    "loadedUrl": "https://perfectturf.com/",
+    "loadedTime": "2026-06-01T17:42:22.951Z",
+    "referrerUrl": "https://www.perfectturf.com/",
+    "httpStatusCode": 200,
+    "depth": 0,
+    "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+    "canonicalUrl": "https://perfectturf.com/",
+    "title": "Perfect Turf - High Quality Synthetic Turf",
+    "description": "Perfect Turf LLC is the manufacturer of Perfect Turf® brand synthetic turf, aka artificial grass, aka “astro turf”.",
+    "author": null,
+    "keywords": null,
+    "languageCode": "en-US",
+    "openGraph": [
+      {
+        "property": "og:locale",
+        "content": "en_US"
+      },
+      {
+        "property": "og:type",
+        "content": "website"
+      },
+      {
+        "property": "og:title",
+        "content": "Perfect Turf - High Quality Synthetic Turf"
+      },
+      {
+        "property": "og:description",
+        "content": "Perfect Turf LLC is the manufacturer of Perfect Turf® brand synthetic turf, aka artificial grass, aka “astro turf”."
+      },
+      {
+        "property": "og:url",
+        "content": "https://perfectturf.com/"
+      },
+      {
+        "property": "og:site_name",
+        "content": "Perfect Turf"
+      },
+      {
+        "property": "article:modified_time",
+        "content": "2024-04-17T19:12:38+00:00"
+      },
+      {
+        "property": "og:image",
+        "content": "https://perfectturf.com/wp-content/uploads/2022/02/Perfect-Lawn_corner.jpg"
+      },
+      {
+        "property": "og:image:width",
+        "content": "1800"
+      },
+      {
+        "property": "og:image:height",
+        "content": "1457"
+      },
+      {
+        "property": "og:image:type",
+        "content": "image/jpeg"
+      }
+    ],
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://perfectturf.com/",
+            "url": "https://perfectturf.com/",
+            "name": "Perfect Turf - High Quality Synthetic Turf",
+            "isPartOf": {
+              "@id": "https://perfectturf.com/#website"
+            },
+            "about": {
+              "@id": "https://perfectturf.com/#organization"
+            },
+            "primaryImageOfPage": {
+              "@id": "https://perfectturf.com/#primaryimage"
+            },
+            "image": {
+              "@id": "https://perfectturf.com/#primaryimage"
+            },
+            "thumbnailUrl": "https://perfectturf.com/wp-content/uploads/2022/02/Perfect-Lawn_corner.jpg",
+            "datePublished": "2019-06-07T15:42:27+00:00",
+            "dateModified": "2024-04-17T19:12:38+00:00",
+            "description": "Perfect Turf LLC is the manufacturer of Perfect Turf® brand synthetic turf, aka artificial grass, aka “astro turf”.",
+            "breadcrumb": {
+              "@id": "https://perfectturf.com/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://perfectturf.com/"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://perfectturf.com/#primaryimage",
+            "url": "https://perfectturf.com/wp-content/uploads/2022/02/Perfect-Lawn_corner.jpg",
+            "contentUrl": "https://perfectturf.com/wp-content/uploads/2022/02/Perfect-Lawn_corner.jpg",
+            "width": 1800,
+            "height": 1457
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://perfectturf.com/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://perfectturf.com/#website",
+            "url": "https://perfectturf.com/",
+            "name": "Perfect Turf",
+            "description": "High-Quality Artificial Grass",
+            "publisher": {
+              "@id": "https://perfectturf.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://perfectturf.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://perfectturf.com/#organization",
+            "name": "Perfect Turf",
+            "url": "https://perfectturf.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://perfectturf.com/#/schema/logo/image/",
+              "url": "https://perfectturf.com/wp-content/uploads/2022/02/perfect-turf-icon.svg",
+              "contentUrl": "https://perfectturf.com/wp-content/uploads/2022/02/perfect-turf-icon.svg",
+              "width": 302,
+              "height": 302,
+              "caption": "Perfect Turf"
+            },
+            "image": {
+              "@id": "https://perfectturf.com/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    ],
+    "headers": {
+      "date": "Mon, 01 Jun 2026 17:42:00 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "server": "cloudflare",
+      "vary": "Accept-Encoding, Accept-Encoding, Accept-Encoding, Accept-Encoding, Cookie",
+      "x-cacheable": "SHORT",
+      "cache-control": "max-age=600, must-revalidate",
+      "x-cache": "HIT: 1",
+      "x-cache-group": "normal",
+      "cf-cache-status": "DYNAMIC",
+      "set-cookie": "__cf_bm=4QKylBwhIPH1RjW5a32EyNhfiCOFCcQce5nXWtXZ2cg-1780335720.1816173-1.0.1.1-1VWNRx8Xy009Zinb.7TUVU5hSiY6QhcmWjZSdll_XhhIhlBzOLe4wBLKdhFtCzXDilet2Rz7GDdxBBcxtgBTBuNwBlV1lU9kd_BY.PcRH62kRGBGC4tXuPydBo0efSKq; HttpOnly; SameSite=None; Secure; Path=/; Domain=perfectturf.com; Expires=Mon, 01 Jun 2026 18:12:00 GMT",
+      "content-encoding": "br",
+      "cf-ray": "a050032b2af8da0b-MIA",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-firefox-spdy": "h2"
+    }
+  },
+  "screenshotUrl": "https://api.apify.com/v2/key-value-stores/8OWffbobNuHgpcwJ7/records/screenshot-bb9da57-.jpg?signature=xPUyXl5kEMCTHluq0Uxr",
+  "text": "Perfect Turf - High Quality Synthetic Turf\nIndustry Trusted, Customer Focused.\nCustomer Satisfaction from the Ground Up.\nLooking to save money on your surfacing contracts? Contact us to show you how to save time and money by going directly through OMNIA Partners!\nOMNIA® Partners\nPopular Uses\nHow We Roll\nWe’ll never steer you wrong just to sell you something. We will recommend the best options for your specific need.\n★ ★ ★ ★ ★\n“They have by far, the best product on the market. Whether it’s innovation on something old or coming up with something new altogether, they’re always providing the best product for our clients.\" \nBen Ubben – Christy Webber Landscaping\nWhat Sets Us Apart\n1 \nPlayGround Turf ™ was specifically designed for playgrounds. Premium safety features include antistatic, antimicrobial, CoolGrass-infused yarn\n2 \nPerfectPlay® Systems are IPEMA Certified for public play surfacing\n3 \n100% recycled foam padding helps provide fall height protection up to 12’\n4 \nTPV premium stabilizing rubber used at varying degrees of thickness to achieve required levels of fall height protection\n5 \nSystems are freeze/thaw stable and won’t lose fall height protection during winter months",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Perfect Turf - High Quality Synthetic Turf\n\n## Industry Trusted, Customer Focused.\n\nCustomer Satisfaction from the Ground Up.\n\n![Image](https://perfectturf.com/wp-content/uploads/2024/04/OMNIA-Partners-Logo_Wordmark-Black-e1713196615552.png)\n\nLooking to save money on your surfacing contracts? Contact us to show you how to save time and money by going directly through OMNIA Partners!\n\n[\n\nOMNIA® Partners\n\n\n\n](https://www.perfectturf.com/omnia-partners/)\n\n ![Image](https://perfectturf.com/wp-content/uploads/2024/04/greenbayplayfield1-For-Main-Page.jpg)\n\nPopular Uses\n\nHow We Roll\n\n![Image](https://perfectturf.com/wp-content/uploads/2022/02/perfect-turf-icon.svg)\n\nWe’ll never steer you wrong just to sell you something. We will recommend the best options for your specific need.\n\n★ ★ ★ ★ ★\n\n“They have by far, the best product on the market. Whether it’s innovation on something old or coming up with something new altogether, they’re always providing the best product for our clients.\"\n\nBen Ubben – Christy Webber Landscaping\n\nWhat Sets Us Apart\n\n1 \n\nPlayGround Turf ™ was specifically designed for playgrounds. Premium safety features include antistatic, antimicrobial, CoolGrass-infused yarn\n\n2 \n\nPerfectPlay® Systems are IPEMA Certified for public play surfacing\n\n3 \n\n100% recycled foam padding helps provide fall height protection up to 12’\n\n4 \n\nTPV premium stabilizing rubber used at varying degrees of thickness to achieve required levels of fall height protection\n\n5 \n\nSystems are freeze/thaw stable and won’t lose fall height protection during winter months",
+  "debug": {
+    "requestHandlerMode": "browser"
+  }
+},
+{
+  "url": "https://www.hessla.com/",
+  "crawl": {
+    "loadedUrl": "https://www.hessla.com/",
+    "loadedTime": "2026-06-01T17:42:36.113Z",
+    "referrerUrl": "https://www.hessla.com/",
+    "httpStatusCode": 200,
+    "depth": 0,
+    "contentLengthBytes": 7873,
+    "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+    "canonicalUrl": "https://www.hessla.com/",
+    "title": "Hess Landscape Architects",
+    "description": null,
+    "author": null,
+    "keywords": null,
+    "languageCode": "en",
+    "jsonLd": null,
+    "headers": {
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-content-type-options": "nosniff",
+      "last-modified": "Mon, 01 Jun 2026 11:43:51 GMT",
+      "cache-control": "max-age=0",
+      "expires": "Mon, 01 Jun 2026 17:42:33 GMT",
+      "vary": "Accept-Encoding",
+      "content-encoding": "gzip",
+      "content-length": "7873",
+      "content-type": "text/html; charset=UTF-8",
+      "date": "Mon, 01 Jun 2026 17:42:33 GMT",
+      "server": "Apache",
+      "x-firefox-spdy": "h2"
+    }
+  },
+  "screenshotUrl": "https://api.apify.com/v2/key-value-stores/8OWffbobNuHgpcwJ7/records/screenshot-e7df323-.jpg?signature=uII7uboF3BDhZUn09F5s",
+  "text": "Hess Landscape Architects\nFeatured Project\nChestnut Hill Estate\n2024 APLD Gold Award Winner",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Hess Landscape Architects\n\n*   [](https://www.hessla.com/projects/chesnut-hill-estate/)\n    \n    Featured Project\n    \n    **Chestnut Hill Estate**\n    \n    2024 APLD Gold Award Winner",
+  "debug": {
+    "requestHandlerMode": "browser"
+  }
+},
+{
+  "url": "https://www.deleonlandscapes.com/",
+  "crawl": {
+    "loadedUrl": "https://www.deleonlandscapes.com/",
+    "loadedTime": "2026-06-01T17:42:38.910Z",
+    "referrerUrl": "https://www.deleonlandscapes.com/",
+    "httpStatusCode": 200,
+    "depth": 0,
+    "contentLengthBytes": 148240,
+    "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+    "canonicalUrl": "https://www.deleonlandscapes.com/",
+    "title": "Home | Mysite",
+    "description": null,
+    "author": null,
+    "keywords": null,
+    "languageCode": "en",
+    "openGraph": [
+      {
+        "property": "og:title",
+        "content": "Home | Mysite"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.deleonlandscapes.com"
+      },
+      {
+        "property": "og:site_name",
+        "content": "Mysite"
+      },
+      {
+        "property": "og:type",
+        "content": "website"
+      }
+    ],
+    "jsonLd": null,
+    "headers": {
+      "content-type": "text/html; charset=UTF-8",
+      "link": "<https://static.parastorage.com/>; rel=preconnect; crossorigin;, <https://static.parastorage.com/>; rel=preconnect;, <https://static.wixstatic.com/>; rel=preconnect; crossorigin;, <https://static.wixstatic.com/>; rel=preconnect;, <https://siteassets.parastorage.com>; rel=preconnect; crossorigin;, ",
+      "etag": "W/\"66df97e7701ced4b2d577ec50964568e\"",
+      "content-language": "en-US",
+      "strict-transport-security": "max-age=31556952",
+      "x-cache-status": "HIT",
+      "cache-control": "public, max-age=0, must-revalidate",
+      "server": "Pepyaka",
+      "x-content-type-options": "nosniff",
+      "content-encoding": "br",
+      "accept-ranges": "bytes",
+      "age": "430844",
+      "date": "Mon, 01 Jun 2026 17:42:33 GMT",
+      "x-served-by": "cache-iad-kcgs7200151-IAD",
+      "x-cache": "HIT",
+      "vary": "Accept-Encoding",
+      "server-timing": "cache;desc=hit, varnish;desc=hit_hit, dc;desc=fastly_g",
+      "set-cookie": "ssr-caching=cache#desc=hit#varnish=hit_hit#dc#desc=fastly_g; max-age=20\nclient-session-bind=1ecb61a9-922b-4f75-ba0f-3318b03a02a6; Path=/; Secure; SameSite=Lax;\nserver-session-bind=1ecb61a9-922b-4f75-ba0f-3318b03a02a6; Path=/; Secure; SameSite=Lax; HttpOnly;",
+      "x-wix-request-id": "1780335753.203032760481488114",
+      "x-seen-by": "yvSunuo/8ld62ehjr5B7kA==, AHc3TXLcXOul+t9LIbGg9ciHE4dbw+wewoJ5nvKoyjE=, oDbbMvfdXCdtsgjD2KgaM8iHE4dbw+wewoJ5nvKoyjE=, Ua1iSBCTq7qSXjmRCGE1N6dKPNN2FSQQ8Qc+jXRsYL3uIjVcQmTft28WnuK4w/qjEpzrUii78VdYxnNKzUeyUYhIydfYCelFDfkrvUteY3ieFuYXqvxqlu3uoOK42PSH, 2d58ifebGbosy5xc+FRall03ygOtDHf8mCSC8aQSTWdJ9lc5initnoEmasSFk6LkqdB/muy8W4xVdZyKL0M+VB+QmoTduQy303KBw2INeI0=, 2UNV7KOq4oGjA5+PKsX47G86grxW7YVbTxNaQeYTCEMFVd1lR1L8/yRoc88kq/ej, 2UNV7KOq4oGjA5+PKsX47Efm2FDoAuZ3d2dZFPgraZgFVd1lR1L8/yRoc88kq/ej",
+      "content-length": "148240",
+      "via": "1.1 google",
+      "glb-x-seen-by": "bS8wRlGzu0Hc+WrYuHB8QIg44yfcdCMJRkBoQ1h6Vjc=",
+      "alt-svc": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000",
+      "x-firefox-spdy": "h2"
+    }
+  },
+  "screenshotUrl": "https://api.apify.com/v2/key-value-stores/8OWffbobNuHgpcwJ7/records/screenshot-a7255d5-.jpg?signature=mwseJ1ZOLtcbcEZNE70K",
+  "text": "Home | Mysite\nQuality Lawn Care\nReliable Services\nGet a Free Quote Now! \nOr Call Us: 973-666-1946\nFully \nBonded\nReliable & Trustworthy\nProfessional & Experienced\nContact",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Home | Mysite\n\n### Quality Lawn Care\n\n### Reliable Services\n\n## Get a Free Quote Now! \n\n##### Or Call Us:  973-666-1946\n\n#### Fully\n\n#### Bonded\n\n#### Reliable & Trustworthy\n\n#### Professional & Experienced\n\n![house pic for website.jpg](https://static.wixstatic.com/media/3fa1d7_250d884500894feb8dd6d6e86b5719b8~mv2.jpg/v1/fill/w_718,h_478,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/house%20pic%20for%20website.jpg)\n\nContact",
+  "debug": {
+    "requestHandlerMode": "browser"
+  }
+},
+{
+  "url": "https://www.iamgreenwise.com/",
+  "crawl": {
+    "loadedUrl": "https://www.iamgreenwise.com/",
+    "loadedTime": "2026-06-01T17:42:39.219Z",
+    "referrerUrl": "https://www.iamgreenwise.com/",
+    "httpStatusCode": 200,
+    "depth": 0,
+    "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+    "canonicalUrl": "https://www.iamgreenwise.com/",
+    "title": "Organic Lawn Care & Landscaping | Chicago & Milwaukee | Greenwise Organic Lawn Care",
+    "description": "Greenwise Organic Lawn Care provides natural and healthy lawn care and landscaping solutions across the Chicago and Milwaukee areas.",
+    "author": "Greenwise Organic Lawn Care",
+    "keywords": "organic lawn care, landscaping, Chicago, Milwaukee, sustainable landscaping, natural lawn care, eco-friendly landscaping",
+    "languageCode": "en",
+    "openGraph": [
+      {
+        "property": "og:type",
+        "content": "website"
+      },
+      {
+        "property": "og:url",
+        "content": "https://www.iamgreenwise.com"
+      },
+      {
+        "property": "og:title",
+        "content": "Organic Lawn Care & Landscaping | Chicago & Milwaukee | Greenwise Organic Lawn Care"
+      },
+      {
+        "property": "og:description",
+        "content": "Greenwise Organic Lawn Care provides natural and healthy lawn care and landscaping solutions across the Chicago and Milwaukee areas."
+      },
+      {
+        "property": "og:image",
+        "content": "https://www.iamgreenwise.com/portfoliolocalhistoriclandmarklandscaping-and-garden.png"
+      },
+      {
+        "property": "og:site_name",
+        "content": "Greenwise Organic Lawn Care"
+      },
+      {
+        "property": "og:locale",
+        "content": "en_US"
+      }
+    ],
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://www.iamgreenwise.com",
+        "name": "Greenwise Organic Lawn Care",
+        "alternateName": "Greenwise",
+        "url": "https://www.iamgreenwise.com",
+        "logo": "https://www.iamgreenwise.com/plain-greenwise-logo.png",
+        "image": "https://www.iamgreenwise.com/portfoliolocalhistoriclandmarklandscaping-and-garden.png",
+        "description": "Greenwise Organic Lawn Care provides natural and healthy lawn care and landscaping solutions across the Chicago and Milwaukee areas.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Evanston",
+          "addressRegion": "IL",
+          "addressCountry": "US"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Chicago"
+          },
+          {
+            "@type": "City",
+            "name": "Milwaukee"
+          },
+          {
+            "@type": "City",
+            "name": "Evanston"
+          }
+        ],
+        "priceRange": "$$",
+        "telephone": "847-866-1930",
+        "email": "info@iamgreenwise.com",
+        "foundingDate": "2007",
+        "sameAs": [],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "150"
+        }
+      }
+    ],
+    "headers": {
+      "accept-ranges": "bytes",
+      "age": "0",
+      "cache-control": "public, max-age=0, must-revalidate",
+      "cache-status": "\"Netlify Edge\"; fwd=miss",
+      "content-encoding": "br",
+      "content-type": "text/html; charset=UTF-8",
+      "date": "Mon, 01 Jun 2026 17:42:33 GMT",
+      "etag": "\"00baf5f8102801404c9963469c212a9f-ssl-df\"",
+      "server": "Netlify",
+      "strict-transport-security": "max-age=31536000",
+      "vary": "Accept-Encoding",
+      "x-nf-request-id": "01KT24FDS8235H9QFZBJD0BZX2",
+      "x-firefox-spdy": "h2"
+    }
+  },
+  "screenshotUrl": "https://api.apify.com/v2/key-value-stores/8OWffbobNuHgpcwJ7/records/screenshot-43e2e84-.jpg?signature=C2dKDOstdidtMfAC3CS3",
+  "text": "Organic Lawn Care & Landscaping | Chicago & Milwaukee\nChicago and Milwaukee's First Choice for Organic-Forward and Sustainable Lawn Care and Landscaping\nCreating and Caring for Environmentally Sound Landscapes Throughout Chicagoland and Metro Milwaukee Since 2007\nWhy Choose Greenwise?\nServing homeowners and businesses across Chicago and Milwaukee, Greenwise crafts safe, healthy lawns and landscapes tailored to your needs. We lighten our footprint by using battery-powered equipment in Chicagoland and by offering organic and natural lawn programs for those who want a chemical-free yard. \nOrganic & Natural Lawn Care\nWe offer organic lawn care programs that create beautiful, healthy lawns without synthetic chemicals. Safe for your family, pets, and the environment while delivering exceptional results.\nOrganic Fertilization\nNatural Weed Control\nLawn Aeration\nOrganic Seeding\nView Organic Lawn Care \nLandscape Maintenance\nProfessional landscape maintenance using battery-powered equipment. From weekly mowing to seasonal cleanups, we keep your property looking its best year-round.\nMowing\nGarden Bed Maintenance\nSeasonal Cleanups\nMulch Installation\nView Landscape Maintenance \nLandscape Design & Installation\nOur design team creates ecologically beneficial, beautiful outdoor spaces. From patios to gardens, we design and install landscapes that perfectly complement your property.\nLandscape Design\nPatios & Walkways\nPlanting & Gardens\nWater Management\nView Design & Installation \nSnow Removal\nReliable snow and ice management to keep your property safe and accessible all winter long. Rapid response times and eco-friendly de-icing products.\nView Snow Removal \nDon't See Your Area Listed?\nIf you're in the Chicago or Milwaukee area but don't see your specific community listed, don't stress! Reach out to us and let us know your address. We'll give you a call if we can service your area. \nCheck Service Availability\nTell us where you're located and we'll let you know if we can service your area.\nReady to Transform Your Outdoor Space?\nRequest a quote today and discover the Greenwise difference\nThank You!\nWe've received your request and will be in touch soon.",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Organic Lawn Care & Landscaping | Chicago & Milwaukee\n\n## Chicago and Milwaukee's First Choice for Organic-Forward and Sustainable Lawn Care and Landscaping\n\nCreating and Caring for Environmentally Sound Landscapes Throughout Chicagoland and Metro Milwaukee Since 2007\n\n## Why Choose Greenwise?\n\nServing homeowners and businesses across Chicago and Milwaukee, Greenwise crafts safe, healthy lawns and landscapes tailored to your needs. We lighten our footprint by using battery-powered equipment in Chicagoland and by offering organic and natural lawn programs for those who want a chemical-free yard.\n\n![Beautiful front yard with landscaped bushes](https://www.iamgreenwise.com/front-yard-and-bushes-480x300.png)\n\n![Natural stone retaining wall with plantings](https://www.iamgreenwise.com/retaining-wall-on-grass.png)\n\n![Outdoor patio with fireplace seating area](https://www.iamgreenwise.com/chairs-in-front-of-fireplace-480x300.png)\n\n![Garden with flowering plants and outdoor fireplace](https://www.iamgreenwise.com/flowers-and-fire-place-480x300.png)\n\n![Beautiful organic lawn](https://www.iamgreenwise.com/front-lawn-of-chicago-house.jpeg)\n\n### Organic & Natural Lawn Care\n\nWe offer organic lawn care programs that create beautiful, healthy lawns without synthetic chemicals. Safe for your family, pets, and the environment while delivering exceptional results.\n\n*   Organic Fertilization\n*   Natural Weed Control\n*   Lawn Aeration\n*   Organic Seeding\n\n[View Organic Lawn Care](https://www.iamgreenwise.com/services/organic-lawn-care)\n\n![Outdoor patio with fireplace seating area](https://www.iamgreenwise.com/flowers-and-fire-place.png)\n\n### Landscape Maintenance\n\nProfessional landscape maintenance using battery-powered equipment. From weekly mowing to seasonal cleanups, we keep your property looking its best year-round.\n\n*   Mowing\n*   Garden Bed Maintenance\n*   Seasonal Cleanups\n*   Mulch Installation\n\n[View Landscape Maintenance](https://www.iamgreenwise.com/services/landscape-maintenance)\n\n![Beautiful front yard with landscaped bushes](https://www.iamgreenwise.com/front-of-house-landscaping.jpeg)\n\n### Landscape Design & Installation\n\nOur design team creates ecologically beneficial, beautiful outdoor spaces. From patios to gardens, we design and install landscapes that perfectly complement your property.\n\n*   Landscape Design\n*   Patios & Walkways\n*   Planting & Gardens\n*   Water Management\n\n[View Design & Installation](https://www.iamgreenwise.com/services/landscape-design-installation)\n\n### Snow Removal\n\nReliable snow and ice management to keep your property safe and accessible all winter long. Rapid response times and eco-friendly de-icing products.\n\n[View Snow Removal](https://www.iamgreenwise.com/services/snow-removal)\n\n### Don't See Your Area Listed?\n\nIf you're in the Chicago or Milwaukee area but don't see your specific community listed, don't stress! Reach out to us and let us know your address. We'll give you a call if we can service your area.\n\n### Check Service Availability\n\nTell us where you're located and we'll let you know if we can service your area.\n\n![Beautiful back yard landscaping in Bucktown](https://www.iamgreenwise.com/back-yard-landscaping-in-bucktown-480x300.jpeg)\n\n![Natural garden plantings along side of house](https://www.iamgreenwise.com/natural-garden-side-of-house-480x300.jpeg)\n\n![Garden path with red bushes and landscaping](https://www.iamgreenwise.com/red-bushes-and-garden-path-480x300.png)\n\n![Walkway between bushes and green plantings](https://www.iamgreenwise.com/walkyway-between-bushes-480x300.png)\n\n![Garden walkway with bushes and landscaping](https://www.iamgreenwise.com/loop-of-garden-walkway-and-bushes-480x300.png)\n\n![Garden pathway leading to bench with natural plantings](https://www.iamgreenwise.com/garden-and-pathway-to-bench.png)\n\n## Ready to Transform Your Outdoor Space?\n\nRequest a quote today and discover the Greenwise difference\n\n## Thank You!\n\nWe've received your request and will be in touch soon.",
+  "debug": {
+    "requestHandlerMode": "browser"
+  }
+},
+{
+  "url": "https://www.teamupdraft.com/",
+  "crawl": {
+    "loadedUrl": "https://teamupdraft.com/",
+    "loadedTime": "2026-06-01T17:42:48.103Z",
+    "referrerUrl": "https://www.teamupdraft.com/",
+    "httpStatusCode": 200,
+    "depth": 0,
+    "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+    "canonicalUrl": "https://teamupdraft.com/",
+    "title": "TeamUpdraft | Trusted WordPress Solutions",
+    "description": "The ultimate suite of plugins for WordPress owners and developers. Easily back up, migrate, optimize, and secure your WordPress site today.",
+    "author": null,
+    "keywords": null,
+    "languageCode": "en-GB",
+    "openGraph": [
+      {
+        "property": "og:locale",
+        "content": "en_GB"
+      },
+      {
+        "property": "og:type",
+        "content": "website"
+      },
+      {
+        "property": "og:title",
+        "content": "Home"
+      },
+      {
+        "property": "og:description",
+        "content": "The ultimate suite of plugins for WordPress owners and developers. Easily back up, migrate, optimize, and secure your WordPress site today."
+      },
+      {
+        "property": "og:url",
+        "content": "https://teamupdraft.com/"
+      },
+      {
+        "property": "og:site_name",
+        "content": "TeamUpdraft"
+      },
+      {
+        "property": "article:modified_time",
+        "content": "2026-01-15T13:48:17+00:00"
+      },
+      {
+        "property": "og:image",
+        "content": "https://teamupdraft.com/wp-content/uploads/2025/03/tu-opengraph-teamupdraft.webp"
+      }
+    ],
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://teamupdraft.com/",
+            "url": "https://teamupdraft.com/",
+            "name": "TeamUpdraft | Trusted WordPress Solutions",
+            "isPartOf": {
+              "@id": "https://teamupdraft.com/#website"
+            },
+            "datePublished": "2025-03-14T06:07:46+00:00",
+            "dateModified": "2026-01-15T13:48:17+00:00",
+            "description": "The ultimate suite of plugins for WordPress owners and developers. Easily back up, migrate, optimize, and secure your WordPress site today.",
+            "breadcrumb": {
+              "@id": "https://teamupdraft.com/#breadcrumb"
+            },
+            "inLanguage": "en-GB",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://teamupdraft.com/"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://teamupdraft.com/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://teamupdraft.com/#website",
+            "url": "https://teamupdraft.com/",
+            "name": "TeamUpdraft",
+            "description": "TeamUpdraft",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://teamupdraft.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-GB"
+          }
+        ]
+      }
+    ],
+    "headers": {
+      "date": "Mon, 01 Jun 2026 17:42:42 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "server": "cloudflare",
+      "x-pingback": "https://teamupdraft.com/xmlrpc.php",
+      "link": "<https://teamupdraft.com/>; rel=shortlink",
+      "cache-control": "no-cache",
+      "wpo-cache-status": "saving to cache",
+      "referrer-policy": "same-origin",
+      "vary": "Accept-Encoding",
+      "set-cookie": "woocommerce_tax_country=US; expires=Wed, 01 Jul 2026 17:42:42 GMT; Max-Age=2592000; path=/",
+      "x-content-type-options": "nosniff",
+      "strict-transport-security": "max-age=63072000; includeSubDomains",
+      "last-modified": "Mon, 01 Jun 2026 17:42:42 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "x-xss-protection": "1; mode=block",
+      "cf-cache-status": "DYNAMIC",
+      "report-to": "{\"group\":\"cf-nel\", \"max_age\":604800, \"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=FgFXVkr4XjX9L8UssEXTYP0%2Fwb6Q3oze8FvBboceWbrvTp8AQsA%2FbVj3bGd8rRE7GCzKq2o%2BpyKuG%2FEcyAqT11pxUwGOuNSlcp1RVYyQ4uNUUMRUf8lFOyn2PpjdjCgz1Q%3D%3D\"}]}",
+      "nel": "{\"report_to\":\"cf-nel\", \"success_fraction\":0.0, \"max_age\":604800}",
+      "expect-ct": "max-age=86400, enforce",
+      "content-encoding": "br",
+      "cf-ray": "a05004318b1f0944-MIA",
+      "x-firefox-spdy": "h2"
+    }
+  },
+  "screenshotUrl": "https://api.apify.com/v2/key-value-stores/8OWffbobNuHgpcwJ7/records/screenshot-4cb245d-.jpg?signature=1LPGd5IRTNsDUx6XyUve5",
+  "text": "TeamUpdraft | Trusted WordPress Solutions\nEverything your WordPress site needs \nManage every aspect of your WordPress site with a powerful all-in-one plugin suite. Whether you’re an agency or an individual, take control with ease, speed and peace of mind. \nWordPress 5 million+ installs \nRating – 5 stars \nWe’re for WordPress website owners\nWe help you to improve your online presence and achieve your goals. We do that by building best-in-class plugins for WordPress.\nTeamUpdraft plugins are actively installed on more than 5 million WordPress websites worldwide. Our plugins are easy to use and many are ‘set and forget’ – set them up in minutes and they’ll do the hard work for you.\nWe’re for WordPress agencies and freelancers\nYou need a rock-solid plugin ecosystem.\nIf you design or develop WordPress websites for clients, you’re likely maintaining them too. You need WordPress plugins that are reliable, powerful and efficient, so you can keep your clients’ sites safe, and performant.\nWe’re TeamUpdraft\nWe believe in building beautifully coded WordPress plugins you can rely on.\nWe’re experienced\nWe’ve been building and fine tuning our craft for almost 15 years. Today our plugins are trusted and actively deployed on more than 5 million WordPress websites worldwide.\nWe’re the top 1%\nOur WordPress software developers are the very best in their field. Meticulous recruitment means we only work with the top 1% of candidates, wherever they may be.\nOur plugin suite\nBack up, restore and migrate your WordPress website\nBack up to top cloud providers like Google Drive, Dropbox, and OneDrive. Take manual backups or schedule them for convenience. Restore in just a couple of clicks. UpdraftPlus handles migrations effortlessly, even when databases are large, storage is low and memory is limited.\nSpeed up your WordPress website\nOptimize core web vitals and boost page speed load times through caching, database cleaning, image optimization, and minification. It’s one-click to turn on many of our speed-saving features, with more options available for advanced users.\nSecure your\nWordPress website\nProbably the most feature rich WordPress security plugin on the market. It really is all-in one. It does everything you need to protect your WordPress website from hacking attempts, brute force attacks, and malicious software.\nManage multiple\nWordPress websites\nGet a snapshot view of all your WordPress websites from one secure, browser-based view. Centrally manage updates, plugins, users, comments, backups, and more.\nWe go the extra mile\nOur support engineers are plugin developers and even our lead developers answer support tickets. We’re genuinely passionate about delivering expert, outstanding support.\nMore than 5 million of you choose our plugins to back up, migrate, optimize and secure your WordPress investments.",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# TeamUpdraft | Trusted WordPress Solutions\n\n## Everything your WordPress site needs\n\nManage every aspect of your WordPress site with a powerful all-in-one plugin suite. Whether you’re an agency or an individual, take control with ease, speed and peace of mind.\n\nWordPress 5 million+ installs\n\nRating – 5 stars\n\n![](https://teamupdraft.com/wp-content/uploads/2025/03/banner-teamupdraft-icons-640x300.webp)\n\n![](https://teamupdraft.com/wp-content/uploads/2025/03/banner-teamupdraft-1-1440x675.webp)\n\n## We’re for WordPress website owners\n\nWe help you to improve your online presence and achieve your goals. We do that by building best-in-class plugins for WordPress.\n\nTeamUpdraft plugins are actively installed on more than 5 million WordPress websites worldwide. Our plugins are easy to use and many are ‘set and forget’ – set them up in minutes and they’ll do the hard work for you.\n\n## We’re for WordPress agencies and freelancers\n\nYou need a rock-solid plugin ecosystem.\n\nIf you design or develop WordPress websites for clients, you’re likely maintaining them too. You need WordPress plugins that are reliable, powerful and efficient, so you can keep your clients’ sites safe, and performant.\n\n![WordPress admin page view open on PC desktop](https://teamupdraft.com/wp-content/uploads/2024/12/pexels-alphaen-21325133-640x558.webp)\n\n![Two female team members working, both looking at a laptop screen](https://teamupdraft.com/wp-content/uploads/2025/03/IMG_6234-640x427.jpg.webp)\n\n![Person wearing a blue WordPress T-shirt](https://teamupdraft.com/wp-content/uploads/2024/12/53806768502_d0c052703c_k-1-427x640.jpg.webp)\n\n## We’re TeamUpdraft\n\nWe believe in building beautifully coded WordPress plugins you can rely on.\n\n## We’re experienced\n\nWe’ve been building and fine tuning our craft for almost 15 years. Today our plugins are trusted and actively deployed on more than 5 million WordPress websites worldwide.\n\n![Man wearing glasses looking down at and working on his laptop](https://teamupdraft.com/wp-content/uploads/2024/12/pexels-mizunokozuki-12899141-640x427.jpg.webp)\n\n## We’re the top 1%\n\nOur WordPress software developers are the very best in their field. Meticulous recruitment means we only work with the top 1% of candidates, wherever they may be.\n\n![Two male team members working and looking at a laptop screen](https://teamupdraft.com/wp-content/uploads/2025/03/IMG_6240-640x427.jpg.webp)\n\n## Our plugin suite\n\n### Back up, restore and migrate your WordPress website\n\nBack up to top cloud providers like Google Drive, Dropbox, and OneDrive. Take manual backups or schedule them for convenience. Restore in just a couple of clicks. UpdraftPlus handles migrations effortlessly, even when databases are large, storage is low and memory is limited.\n\n![](https://teamupdraft.com/wp-content/uploads/2024/12/bg-upd-640x402.png.webp)\n\n## Speed up your WordPress website\n\nOptimize core web vitals and boost page speed load times through caching, database cleaning, image optimization, and minification. It’s one-click to turn on many of our speed-saving features, with more options available for advanced users.\n\n![](https://teamupdraft.com/wp-content/uploads/2024/12/bg-wpo-640x402.png.webp)\n\n### Secure your  \nWordPress website\n\nProbably the most feature rich WordPress security plugin on the market. It really is all-in one. It does everything you need to protect your WordPress website from hacking attempts, brute force attacks, and malicious software.\n\n![](https://teamupdraft.com/wp-content/uploads/2024/12/bg-aios-640x402.png.webp)\n\n### Manage multiple  \nWordPress websites\n\nGet a snapshot view of all your WordPress websites from one secure, browser-based view. Centrally manage updates, plugins, users, comments, backups, and more.\n\n![](https://teamupdraft.com/wp-content/uploads/2025/03/Updraft-central-home.png-640x402.webp)\n\n## We go the extra mile\n\nOur support engineers are plugin developers and even our lead developers answer support tickets. We’re genuinely passionate about delivering expert, outstanding support.\n\n**More than 5 million of you** choose our plugins to **back up, migrate, optimize** and **secure** your WordPress investments.",
+  "debug": {
+    "requestHandlerMode": "browser"
+  }
+},
+{
+  "url": "https://www.marktessier.com/",
+  "crawl": {
+    "loadedUrl": "https://marktessier.com/",
+    "loadedTime": "2026-06-01T17:42:50.510Z",
+    "referrerUrl": "https://www.marktessier.com/",
+    "httpStatusCode": 200,
+    "depth": 0,
+    "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+    "canonicalUrl": "https://marktessier.com/",
+    "title": "Home",
+    "description": "Mark Tessier Landscape Architecture, MTLA, Inc. is a full-service landscape architectural firm passionate about how the landscape evolves with time and use. We craft creatively programmed exterior spaces that unveil a sense of beauty, accessibility, and environmental responsibility.",
+    "author": null,
+    "keywords": "MTLA, landscape, landscape architecture, landscape design, sustainability, plants, santa monica, los angeles, california, innovative, community gardens, mark tessier, inspiration, private residential, hospitality, mixed-use, affordable housing, institutional, southern california, outdoor living, adaptive reuse, commerical, outdoor environment, landscape architect, garden design, design firm, mark tessier landscape architecture",
+    "languageCode": "en",
+    "openGraph": [
+      {
+        "property": "og:title",
+        "content": "Home"
+      },
+      {
+        "property": "og:type",
+        "content": "website"
+      },
+      {
+        "property": "og:site_name",
+        "content": "Mark Tessier Landscape Architecture"
+      },
+      {
+        "property": "og:url",
+        "content": "https://marktessier.com"
+      },
+      {
+        "property": "og:description",
+        "content": "Mark Tessier Landscape Architecture, MTLA, Inc. is a full-service landscape architectural firm passionate about how the landscape evolves with time and use. We craft creatively programmed exterior spaces that unveil a sense of beauty, accessibility, and environmental responsibility."
+      },
+      {
+        "property": "og:locale",
+        "content": "en_GB"
+      }
+    ],
+    "jsonLd": null,
+    "headers": {
+      "vary": "Accept-Encoding",
+      "content-encoding": "gzip",
+      "host-header": "c2hhcmVkLmJsdWVob3N0LmNvbQ==",
+      "x-frame-options": "DENY",
+      "x-content-type-options": "nosniff",
+      "x-xss-protection": "1; mode=block",
+      "cache-control": "max-age=420, private, must-revalidate",
+      "content-type": "text/html; charset=UTF-8",
+      "date": "Mon, 01 Jun 2026 17:42:45 GMT",
+      "server": "Apache",
+      "x-firefox-spdy": "h2"
+    }
+  },
+  "screenshotUrl": "https://api.apify.com/v2/key-value-stores/8OWffbobNuHgpcwJ7/records/screenshot-ce558e6-.jpg?signature=1LbtBMpcJc8L2Imxs5PM5",
+  "text": "Home\nChange is inherent to nature. Design that celebrates change allows environments to be truly alive.",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Home\n\n## \n\nChange is inherent to nature. Design that celebrates change allows environments to be truly alive.",
+  "debug": {
+    "requestHandlerMode": "browser"
+  }
+}]
