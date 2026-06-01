@@ -4,7 +4,7 @@
   "niche": null,
   "studentName": null,
   "gates": {
-    "setup.complete": false,
+    "setup.complete": true,
     "agency.brandLocked": false,
     "m1.profileLocked": false,
     "m2a.scoresLocked": false,
@@ -24,16 +24,18 @@
   },
   "credentials": {
     "anthropic": true,
-    "apify": false,
-    "supabase": false,
-    "vercel": false,
+    "apify": true,
+    "supabase": true,
+    "vercel": true,
     "assemblyAi": false,
-    "github": false
+    "github": true
   },
   "deployments": {
     "factory": null,
     "engine": null
   },
   "factoryRuns": [],
-  "history": []
+  "history": [
+    { "timestamp": "2026-06-01T00:00:00Z", "command": "/setup", "outcome": "complete" }
+  ]
 }
