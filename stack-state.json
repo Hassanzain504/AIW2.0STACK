@@ -23,7 +23,7 @@
     "factory.generated": false
   },
   "credentials": {
-    "anthropic": false,
+    "anthropic": true,
     "apify": false,
     "supabase": false,
     "vercel": false,
