@@ -1,8 +1,26 @@
 {
-  "studentName": null,
-  "currentModule": "m0_setup",
-  "candidateNiches": [],
+  "studentName": "Hassan",
+  "currentModule": "m2a_scoring",
+  "candidateNiches": [
+    "roofing-contractors",
+    "painting-contractors",
+    "hvac",
+    "plumbing",
+    "general-contractors",
+    "landscaping",
+    "electricians",
+    "pressure-washing"
+  ],
   "finalistNiches": [],
   "chosenNiche": null,
-  "lastUpdated": null
+  "lastUpdated": "2026-06-01T00:00:00Z",
+  "interviewNotes": {
+    "section1": "Freelance web dev 4 years. Clients: travel agency, painter, entertainment, shipping company (part-time, 9 months). Built lead gen and workflow automation for shipping company.",
+    "section2": "No deep industry from birth/family. Closest is home services from painting client. Interested in contractor gorilla model.",
+    "section3": "Knows conversion over aesthetics. Trust signals: forms, team photos, awards, trust badges, instant call buttons. Learned ugly but clear beats pretty but confusing.",
+    "section4": "Online communities only. No warm US network. No referral partners yet.",
+    "section5": "$400 max project. All one-off. No recurring revenue yet. Plans land-and-expand: site + SEO first, then upsell automation.",
+    "section6": "Wants direct owner relationships. No middlemen. No solar. No corporate/agency politics.",
+    "section7": "Full-time. $0 ad budget. Scores: web design 5, automations 4.5, SEO 4, content 2, sales 1. Target: $20-25k/month in 12 months."
+  }
 }

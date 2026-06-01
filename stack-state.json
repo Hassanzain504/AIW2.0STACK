@@ -6,7 +6,7 @@
   "gates": {
     "setup.complete": true,
     "agency.brandLocked": false,
-    "m1.profileLocked": false,
+    "m1.profileLocked": true,
     "m2a.scoresLocked": false,
     "m2b.researchComplete": false,
     "m2c.nicheDecided": false,
@@ -36,6 +36,7 @@
   },
   "factoryRuns": [],
   "history": [
-    { "timestamp": "2026-06-01T00:00:00Z", "command": "/setup", "outcome": "complete" }
+    { "timestamp": "2026-06-01T00:00:00Z", "command": "/setup", "outcome": "complete" },
+    { "timestamp": "2026-06-01T00:01:00Z", "command": "/discovery", "outcome": "complete" }
   ]
 }
