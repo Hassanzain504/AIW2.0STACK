@@ -8,7 +8,7 @@
     "agency.brandLocked": false,
     "m1.profileLocked": true,
     "m2a.scoresLocked": true,
-    "m2b.researchComplete": false,
+    "m2b.researchComplete": true,
     "m2c.nicheDecided": false,
     "m2d.templateBuilt": false,
     "m3.offerLocked": false,
@@ -38,6 +38,7 @@
   "history": [
     { "timestamp": "2026-06-01T00:00:00Z", "command": "/setup", "outcome": "complete" },
     { "timestamp": "2026-06-01T00:01:00Z", "command": "/discovery", "outcome": "complete" },
-    { "timestamp": "2026-06-01T00:02:00Z", "command": "/score-niches", "outcome": "complete" }
+    { "timestamp": "2026-06-01T00:02:00Z", "command": "/score-niches", "outcome": "complete" },
+    { "timestamp": "2026-06-01T00:03:00Z", "command": "/research", "outcome": "complete — 24 synthesis files written for roofing-contractors, hvac, landscaping" }
   ]
 }
