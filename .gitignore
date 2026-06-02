@@ -32,3 +32,4 @@ Thumbs.db
 website-factory/templates/landscaping/node_modules/
 website-factory/templates/*/node_modules/
 website-factory/templates/*/dist/
+.claude/worktrees/
