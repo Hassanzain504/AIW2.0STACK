@@ -14,7 +14,7 @@
     "m3.offerLocked": true,
     "m4.factoryStructureLoaded": true,
     "m5.factoryBriefLocked": true,
-    "factory.tailored": false,
+    "factory.tailored": true,
     "factory.deployed": false,
     "m6.engineStructureLoaded": false,
     "m7.engineBriefLocked": false,
@@ -44,6 +44,7 @@
     { "timestamp": "2026-06-01T00:05:00Z", "command": "/build-niche-template", "outcome": "landscaping template generated, all hard gates passed, 69 files" },
     { "timestamp": "2026-06-01T00:06:00Z", "command": "/craft-offer", "outcome": "offer pack locked" },
     { "timestamp": "2026-06-01T00:07:00Z", "command": "/load-factory-structure", "outcome": "complete" },
-    { "timestamp": "2026-06-01T00:08:00Z", "command": "/generate-wf-brief", "outcome": "brief locked" }
+    { "timestamp": "2026-06-01T00:08:00Z", "command": "/generate-wf-brief", "outcome": "brief locked" },
+    { "timestamp": "2026-06-02T00:00:00Z", "command": "/tailor-factory", "outcome": "complete — trust-signals.json badges added, CLAUDE.md oriented to landscaping, 05-copy-deck lessons seeded" }
   ]
 }

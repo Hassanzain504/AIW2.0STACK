@@ -6,35 +6,91 @@
       "label": "Written contract with deposit protection",
       "priority": 1,
       "placement": "standalone-section",
-      "required": true
+      "required": true,
+      "copy": "Your deposit is protected by a written contract. We provide a full scope, timeline, and payment schedule before any money changes hands."
     },
     {
-      "id": "satisfaction-guarantee",
-      "label": "Satisfaction guarantee or money-back guarantee",
+      "id": "before-after-gallery",
+      "label": "Filterable before/after project gallery with cost ranges",
       "priority": 2,
-      "placement": "hero-trust-bar",
-      "required": false
+      "placement": "project-gallery-section",
+      "required": true,
+      "copy": "Every project labeled by type, city, and investment range. Real before/after pairs from the same angle."
     },
     {
       "id": "google-reviews",
       "label": "Google review aggregate rating and count",
       "priority": 3,
       "placement": "social-proof-strip",
-      "required": true
-    },
-    {
-      "id": "license-insurance",
-      "label": "License number and insurance statement",
-      "priority": 4,
-      "placement": "footer-and-trust-bar",
-      "required": true
+      "required": true,
+      "copy": "{rating} stars across {count} Google reviews"
     },
     {
       "id": "named-team",
       "label": "Named owner and crew with real photos",
-      "priority": 5,
+      "priority": 4,
       "placement": "team-section",
-      "required": true
+      "required": true,
+      "copy": "Real names and faces for everyone who will be on your property."
+    },
+    {
+      "id": "license-insurance",
+      "label": "License number and insurance statement",
+      "priority": 5,
+      "placement": "footer-and-trust-bar",
+      "required": true,
+      "copy": "Fully licensed, bonded, and insured. License #{licenseNumber}."
+    },
+    {
+      "id": "satisfaction-guarantee",
+      "label": "Satisfaction guarantee or money-back guarantee",
+      "priority": 6,
+      "placement": "hero-trust-bar",
+      "required": false,
+      "copy": "100% satisfaction guaranteed or we make it right."
     }
-  ]
+  ],
+  "badges": [
+    {
+      "id": "nalp-member",
+      "name": "NALP Member",
+      "logoPath": "templates/landscaping/niche-playbook/trust-badges/nalp.svg",
+      "appliesIf": "brand-dna.trustSignals includes nalp",
+      "niche": "landscaping",
+      "source": "National Association of Landscape Professionals"
+    },
+    {
+      "id": "icpi-certified",
+      "name": "ICPI Certified Installer",
+      "logoPath": "templates/landscaping/niche-playbook/trust-badges/icpi.svg",
+      "appliesIf": "brand-dna.trustSignals includes icpi",
+      "niche": "landscaping",
+      "source": "Interlocking Concrete Pavement Institute — relevant for patio/hardscape clients"
+    },
+    {
+      "id": "bbb-accredited",
+      "name": "BBB Accredited",
+      "logoPath": "templates/landscaping/niche-playbook/trust-badges/bbb.svg",
+      "appliesIf": "brand-dna.trustSignals includes bbb",
+      "niche": "landscaping",
+      "source": "Better Business Bureau — ranks in landscaping SERPs, high homeowner recognition"
+    },
+    {
+      "id": "houzz-pro",
+      "name": "Houzz Pro",
+      "logoPath": "templates/landscaping/niche-playbook/trust-badges/houzz.svg",
+      "appliesIf": "brand-dna.trustSignals includes houzz",
+      "niche": "landscaping",
+      "source": "Houzz — recognized by design-aware homeowners; platform credential with review integration"
+    },
+    {
+      "id": "isa-arborist",
+      "name": "ISA Certified Arborist",
+      "logoPath": "templates/landscaping/niche-playbook/trust-badges/isa.svg",
+      "appliesIf": "brand-dna.trustSignals includes isa",
+      "niche": "landscaping",
+      "source": "International Society of Arboriculture — for clients with tree removal or health services"
+    }
+  ],
+  "badgeDropNote": "Badge SVG files must be manually placed at templates/landscaping/niche-playbook/trust-badges/{badge-id}.svg before the build stage can render them. Download from each issuing organization's media kit."
 }
