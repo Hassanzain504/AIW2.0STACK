@@ -12,7 +12,7 @@
     "m2c.nicheDecided": true,
     "m2d.templateBuilt": true,
     "m3.offerLocked": true,
-    "m4.factoryStructureLoaded": false,
+    "m4.factoryStructureLoaded": true,
     "m5.factoryBriefLocked": false,
     "factory.tailored": false,
     "factory.deployed": false,
@@ -42,6 +42,7 @@
     { "timestamp": "2026-06-01T00:03:00Z", "command": "/research", "outcome": "complete — 24 synthesis files written for roofing-contractors, hvac, landscaping" },
     { "timestamp": "2026-06-01T00:04:00Z", "command": "/pick-niche", "outcome": "landscaping chosen" },
     { "timestamp": "2026-06-01T00:05:00Z", "command": "/build-niche-template", "outcome": "landscaping template generated, all hard gates passed, 69 files" },
-    { "timestamp": "2026-06-01T00:06:00Z", "command": "/craft-offer", "outcome": "offer pack locked" }
+    { "timestamp": "2026-06-01T00:06:00Z", "command": "/craft-offer", "outcome": "offer pack locked" },
+    { "timestamp": "2026-06-01T00:07:00Z", "command": "/load-factory-structure", "outcome": "complete" }
   ]
 }
