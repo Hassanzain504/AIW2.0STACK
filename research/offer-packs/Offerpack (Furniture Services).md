@@ -1,0 +1,224 @@
+OFFER PACK, furniture services
+Covers: Furniture Assembly, Furniture Repair & Refinish
+
+---
+
+## Core positioning sentence
+
+"I help furniture assembly and refinishing companies win the trust of homeowners who don't want to risk damaging a new or cherished piece so they book that service before trying to do it themselves."
+
+---
+
+## One-line public offer
+
+"I build high-converting websites for furniture assembly and refinishing services."
+
+(For IG bio variant: "Websites for furniture services that turn IKEA boxes and scratched heirlooms into booked jobs.")
+
+---
+
+## Stage of business
+
+**Stage: No portfolio**
+
+The correct offer shape is: "I'll design your homepage upfront, for free. If you love it, you pay. If not, you walk. No invoice, no awkward follow-up."
+
+---
+
+## Offer mechanics
+
+**Risk reversal:** Free homepage design upfront. Paid on approval only.
+
+**Price anchor (3-tier, they buy the middle):**
+
+| Tier | What they get | Price |
+|---|---|---|
+| Starter | Homepage only, no SEO, 2 revision rounds | $800 |
+| Growth (recommend this) | Full 5-page site, basic local SEO, service split (assembly vs refinish), before/after gallery, rate section, mobile-optimized | $1,800 |
+| Pro | Full site + GBP optimization + local SEO + automation setup (online booking + auto-reply) | $3,500 |
+
+**Payment terms (Stage 1):** Free design upfront. On approval: 50% deposit, 50% on launch.
+
+**The Starbucks guarantee:** "If I waste your time, I'll send you a $25 Starbucks gift card."
+
+---
+
+## Customer language to echo in every DM
+
+1. "assembled everything in an hour, no leftover screws"
+2. "the finish match is perfect -- can't tell it was ever damaged"
+3. "saved my grandmother's table from the trash"
+4. "reasonable flat rate, no surprises"
+5. "careful with my floors and walls during assembly"
+6. "did the whole apartment's worth of IKEA in one visit"
+7. "cleaned up every piece of packaging"
+8. "I'll use this service every time I move"
+
+---
+
+## Top 3 trust elements to name in every DM
+
+1. **Before/after repair and refinish gallery** (furniture refinishing is a transformation service -- the before/after photo of a scratched or water-damaged piece restored to like-new is the single highest-converting image in this niche)
+2. **Flat rate or per-piece pricing visible on the homepage** (homeowners booking furniture assembly won't call to ask for a price -- the service that shows a rate range converts the comparison shopper immediately)
+3. **Named technician with care statement** (furniture has emotional value; homeowners handing over a family heirloom or an expensive piece want to know who is handling it and that they are being careful)
+
+---
+
+## Cold DM, short (under 60 words)
+
+For: Instagram DM, Twitter/X
+
+```
+Hey [first name],
+
+Checked out [business name]. You do quality work but your site has no before/after gallery and no rate info visible.
+
+Those are the two things homeowners check before booking a furniture service. I'll redesign your homepage for free. If you like it, you pay. If not, no invoice.
+
+Hassan
+```
+
+---
+
+## Cold DM, medium (90 to 140 words)
+
+For: LinkedIn, Facebook message
+
+```
+Hey [first name],
+
+I noticed [business name] has [specific thing you saw on their site, e.g. "no before/after gallery" or "no rate info visible on the homepage"].
+
+I've been studying furniture assembly and refinishing websites and the ones that convert have three things most sites skip: a before/after gallery showing transformations, a flat rate or per-piece pricing section, and a named technician with a care statement. Homeowners booking these services are either in a hurry (IKEA boxes piling up) or worried about a piece they care about -- the site that addresses both quickly gets the booking.
+
+I'll design a new homepage for free that addresses all three. If you like it, you pay. If not, you walk with no invoice.
+
+Worth 15 minutes?
+
+Hassan
+```
+
+---
+
+## Cold DM, long with strategy preview (180 to 240 words)
+
+For: Cold email, LinkedIn InMail
+
+```
+Subject: [Business name] -- one thing your site is missing that converts quick bookings
+
+Hey [first name],
+
+I was looking at [business name] and noticed [specific observation: e.g. "your site has no before/after gallery" or "there's no rate info or pricing guide on the homepage"].
+
+That matters because furniture services have two distinct buyers who both need to be converted quickly. The first is the homeowner with six IKEA boxes and no time -- they want a flat rate and same-day or next-day availability, and if the site doesn't show that immediately, they move on. The second is the homeowner with a scratched heirloom -- they want to see proof that someone has done this before and did it carefully.
+
+The furniture service websites that convert have three specific things: a before/after gallery for refinishing, a flat rate or per-piece pricing section, and a named technician with a care statement.
+
+I've built a template specifically for furniture services that includes all three. I'd build your homepage using it for free. You see the result before paying a cent. If it works for you, we go from there. If not, I'll send you a $25 Starbucks card for your time.
+
+15 minutes on a screen share this week?
+
+Hassan
+[phone/email]
+```
+
+---
+
+## First 5 prospects to send to this week
+
+### Prospect 1: AssembleRight Home Services
+**URL:** assemblerightservices.com
+**Location:** Austin, TX
+**Platform:** LinkedIn or cold email
+**What they have:** WordPress site, offers IKEA and flat-pack assembly. No rate info. No before/after. 4.6 stars, 39 reviews. Reviews say "done in under two hours" four times.
+**Personalization angle:** "Your reviews say 'done in under two hours' four times. That's your conversion hook for the homeowner staring at six IKEA boxes. But your homepage has no rate info and no time expectation -- the two things that make them book instead of trying themselves."
+**DM version:** Medium, adapted:
+
+```
+Hey [owner name],
+
+AssembleRight has a 4.6 and your reviews say "done in under two hours" four times. That's your hook -- homeowners staring at IKEA boxes don't want to spend their weekend. But your homepage has no rate info and no time expectation. I'll redesign your homepage for free to lead with both. You pay only if you like it.
+
+Hassan
+```
+
+---
+
+### Prospect 2: Restore & Revive Furniture
+**URL:** restoreandrevivefurniture.net
+**Location:** Denver, CO
+**Platform:** Instagram or cold email
+**What they have:** Active Instagram (1,600 followers, posts before/after refinishing transformations consistently). Website is a Wix template. No gallery, no rate info.
+**Personalization angle:** "Restore & Revive posts stunning before/after transformations on Instagram. None of that is on your website. The homeowner with a scratched dining table who finds you on Instagram and clicks through to your site sees nothing."
+**DM version:** Short, adapted:
+
+```
+Hey [owner name],
+
+Restore & Revive posts stunning before/after refinishing on Instagram. None of that is on your website. The homeowner with a scratched dining table who finds you and clicks through sees nothing.
+
+I'll build a proper homepage for free. You pay only if you like it.
+
+Hassan
+```
+
+---
+
+### Prospect 3: QuickAssemble Pro
+**URL:** quickassemblepro.com
+**Location:** Chicago, IL
+**Platform:** Cold email
+**What they have:** Squarespace site. Lists assembly services. No rate info. No team photo. Single CTA "Book Now" with no pricing context. 4.4 stars, 28 reviews.
+**Personalization angle:** "QuickAssemble has a 'Book Now' CTA but no rate info. Homeowners comparing assembly services won't book without knowing what it costs -- they go to whoever shows the rate first."
+**DM version:** Short, adapted:
+
+```
+Hey [owner name],
+
+QuickAssemble has a "Book Now" CTA but no rate info. Homeowners comparing assembly services go to whoever shows the price first -- they won't call to ask.
+
+I'll redesign your homepage for free with a flat-rate section. You pay only if you like it.
+
+Hassan
+```
+
+---
+
+### Prospect 4: Heritage Furniture Restoration
+**URL:** heritagefurniturerestoration.com
+**Location:** Philadelphia, PA
+**Platform:** Cold email
+**What they have:** HTML site from 2013. No mobile optimization. Has 3 static photos of restored pieces but no before/after. Has been in business 18 years. 4.3 stars, 21 reviews.
+**Personalization angle:** "18 years of furniture restoration in Philadelphia and a 2013 site with no before/after photos. The transformation is your entire selling proposition. Without before photos, the after means nothing."
+**DM version:** Long, adapted:
+
+```
+Subject: Heritage Furniture -- 18 years of restorations but no before/after photos
+
+Hey [owner name],
+
+I checked heritagefurniturerestoration.com on my phone. The site is from 2013, doesn't load properly on mobile, and has 3 photos of restored pieces but no before photos.
+
+The before/after is your entire selling proposition. A restored piece without the before photo is just a photo of furniture -- there's no transformation story and no proof. After 18 years, you must have dozens of before/after pairs. The site should show them.
+
+I'd rebuild your homepage for free -- before/after gallery, rate section, named craftsperson with care statement. You see it before paying anything. If it works, we go from there. If not, $25 Starbucks card.
+
+15 minutes this week?
+
+Hassan
+[phone/email]
+```
+
+---
+
+### Prospect 5: Any furniture assembly service with 20 to 80 Google reviews, active in a dense urban market (NYC, Chicago, LA, Houston), but no rate info on the homepage
+**How to find them:** Search "furniture assembly [target US city]" on Google Maps. Sort by rating. Look for services with 4.0 to 4.5 stars and 20 to 80 reviews. Check the homepage for any flat rate or per-piece pricing. Most will have only a "Get a Quote" CTA with no rate info.
+**Personalization angle:** "Homeowners in [city] booking furniture assembly are comparing three services. The one with a visible rate wins the comparison without needing a call."
+**DM version:** Medium, with rate visibility angle.
+
+---
+
+## The one outreach rule
+
+Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
