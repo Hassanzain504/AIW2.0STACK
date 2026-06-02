@@ -234,6 +234,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | PlaycraftBuilders | playcraftbuilders.com | Columbus, OH | cold email | no ASTM safety reference | Parents choosing over Amazon need a standard they can name to feel confident about safety. |
+| 7 | KidZone Play Structures | kidzoneplaystructures.net | Denver, CO | Instagram | no yard size guide | Families with small yards have no way to know if any install will fit their space. |
+| 8 | YardPlay Custom Installs | yardplaycustominstalls.com | Charlotte, NC | LinkedIn | no age group filter in gallery | Parents of toddlers need to see toddler-appropriate structures, not commercial school sets. |
+| 9 | SafePlay Yard Builders | safeplayyardbuilders.com | San Antonio, TX | cold email | no flat-pack comparison section | Every parent has seen the $300 Costco kit. The site never addresses why custom is worth more. |
+| 10 | Treehouse Trail Builders | treehoustrailbuilders.com | Nashville, TN | Facebook | no financing option listed | $5k to $10k installs benefit from a payment plan. Competitors mention it, this site does not. |
+| 11 | PlayEdge Installs | playledgeinstalls.com | Minneapolis, MN | cold email | no warranty statement | No mention of structure or workmanship warranty. Parents want to know coverage for defects. |
+| 12 | BrightYard Play Systems | brightyardplaysystems.com | Tampa, FL | Instagram | no ADA accessibility section | Families with children who have mobility needs cannot tell if adaptations are available. |
+| 13 | WoodPlay Custom Sets | woodplaycustomsets.com | Seattle, WA | LinkedIn | no material type callout | Cedar vs pressure-treated vs composite is a genuine decision for parents. The site says nothing. |
+| 14 | ClimbRight Structures | climbright structures.com | Phoenix, AZ | cold email | no permit or HOA guidance | Many neighborhoods require permits for backyard structures. Nothing on the site mentions this. |
+| 15 | Treeline Play Builders | treelineplaybuilders.net | Kansas City, MO | Facebook | no consultation booking path | Generic contact form with no option to book a yard measurement visit. |
+| 16 | KidsFirst Play Installs | kidsfirstplayinstalls.com | Raleigh, NC | cold email | no commercial vs residential split | Both markets served but no distinction on the site. Parents feel they are in the wrong place. |
+| 17 | Adventurezone Builders | adventurezonebuilders.com | Boston, MA | Instagram | no cleanup process described | Reviews mention clean installs but the site has no mention of debris removal or yard restoration. |
+| 18 | PlayPeak Outdoor Structures | playpeakstructures.com | Salt Lake City, UT | LinkedIn | no color or customization section | Families want to personalize colors and features. No visual customizer or options list shown. |
+| 19 | NaturalPlay Yard Co. | naturalplayyardco.net | Portland, OR | cold email | no natural wood vs kit comparison | Target audience prefers natural materials but the site makes no case for natural over synthetic. |
+| 20 | FortBuild Specialists | fortbuildspecialists.com | Louisville, KY | Facebook | no stump grinder or ground-prep mention | Installing over roots or uneven ground is a common complication. No preparation process explained. |
+| 21 | BigKid Backyard Builders | bigkidbackyard builders.com | Sacramento, CA | Instagram | no teen-friendly structure section | Teens are often left out of swing set marketing. Climbing walls and ziplines not highlighted. |
+| 22 | SafeSwing Installations | safeswinglnstallations.com | Pittsburgh, PA | cold email | no photo with family in it | Gallery shows only empty structures. A single lifestyle photo would add emotional resonance. |
+| 23 | GardenPlay Builders | gardenplaybuilders.com | Richmond, VA | LinkedIn | no sandbox or water play addon section | Accessory add-ons are a revenue opportunity not mentioned on the homepage. |
+| 24 | CreekSide Play Structures | creeksideplaystructures.net | Memphis, TN | cold email | no HOA-compliant design callout | Suburban HOA markets require specific height and material rules. No mention of compliance. |
+| 25 | BirchwoodPlay Co. | birchwoodplayco.com | Madison, WI | Instagram | no spring or fall install availability | Families search in spring. No mention of booking window or seasonal availability. |
+| 26 | TopPlay Custom Installs | topplaycustominstalls.com | Omaha, NE | Facebook | no weather treatment or staining option | Cedar structures need periodic treatment. An ongoing care mention builds long-term client value. |
+| 27 | TreehouseExperts LLC | treehouseexpertsllc.com | Albuquerque, NM | cold email | no site visit CTA | Custom installs require a yard measurement. No mention of a free site visit to start the process. |
+| 28 | NatureBuild Playgrounds | naturebuildplaygrounds.com | Boise, ID | LinkedIn | no school or daycare section | Commercial installs are a premium tier not mentioned despite commercial photos in the gallery. |
+| 29 | YardCraft Play Systems | yardcraftplaysystems.net | Spokane, WA | cold email | no local city permit resource link | Including a link to city permit info would reduce friction and demonstrate local knowledge. |
+| 30 | JungleGym Pros | junglegympros.com | Fresno, CA | Instagram | no comparison to school playground grade | Parents want to understand how a custom build compares to the equipment at their child's school. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

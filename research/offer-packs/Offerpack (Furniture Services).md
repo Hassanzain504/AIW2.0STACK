@@ -219,6 +219,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Revive Furniture Restoration | revivefurnitureco.com | Denver, CO | Instagram | No before/after restoration photos | A side-by-side of a damaged piece and its restored version is the single most powerful trust signal for this service. |
+| 7 | Craftline Upholstery | craftlineupholstery.com | Austin, TX | cold email | No fabric options or swatch guide | Buyers want to see material choices before committing to a reupholstery quote. |
+| 8 | Heritage Furniture Repair | heritagefurniturerepair.com | Chicago, IL | LinkedIn | No specialty callout for antique restoration | Antique furniture buyers are a premium segment; if you serve them, say so prominently. |
+| 9 | Restore & Renew Furniture | restoreandrenewfurniture.com | Nashville, TN | cold email | No price range or service tiers | Buyers comparing repair vs replace need a cost signal before they'll reach out. |
+| 10 | Precision Upholstery Works | precisionupholsteryworks.com | Phoenix, AZ | Facebook | No turnaround time or lead time visible | Buyers with a broken chair or sofa want to know how long they'll be without it. |
+| 11 | Heirloom Furniture Studio | heirloomfurniturestudio.com | Portland, OR | Instagram | No gallery organized by furniture type | Sofas, dining chairs, and headboards are mixed together with no way to find a specific item type. |
+| 12 | Cornerstone Furniture Services | cornerstonefurnitureservices.com | Columbus, OH | cold email | No insurance or in-home service callout | Buyers worried about pickup damage want assurance that your service is insured. |
+| 13 | Timbercraft Furniture Repair | timbercraftfurniturerepair.com | Charlotte, NC | LinkedIn | No commercial or office furniture section | Hotel and office furniture clients are a separate buyer; serving them requires a dedicated section. |
+| 14 | SilkLine Upholstery | silklineupholstery.com | Minneapolis, MN | cold email | No leather repair or conditioning section | Leather furniture is a premium repair category that many upholsterers serve but few call out. |
+| 15 | Noble Refinishing Studio | noblerefinishing.com | Richmond, VA | Instagram | No founder or craftsman bio | People trust a named furniture maker more than a generic brand name; add a face and story. |
+| 16 | Pacific Furniture Restoration | pacificfurniturerestoration.com | Seattle, WA | cold email | Slow mobile load | Most referral searches happen on a phone; a slow site loses the inquiry before it starts. |
+| 17 | Artisan Chair & Sofa | artisanchairsofa.com | Indianapolis, IN | Facebook | No pickup and delivery callout | A free pickup and delivery offer removes the friction that stops many buyers from moving forward. |
+| 18 | BlueCraft Upholstery | bluecraftupholstery.com | Louisville, KY | cold email | No eco-friendly or non-toxic finish callout | Buyers with pets or children are searching for non-toxic finishing options; address it on the page. |
+| 19 | TrueGrain Furniture Works | truegrainfurnitureworks.com | Raleigh, NC | LinkedIn | No commercial fabric or Crypton fabric callout | High-durability fabric options are a differentiator for clients with pets, kids, or commercial use. |
+| 20 | Ironwood Refinishing | ironwoodrefinishing.com | Kansas City, MO | cold email | No warranty on refinishing or reupholstery | A posted warranty removes the risk of buyers thinking the results won't last. |
+| 21 | Clearcoat Furniture Studio | clearcoatfurniture.com | Salt Lake City, UT | Instagram | No color matching or stain guide | Buyers wanting to match existing furniture need to know you can match stains and finishes. |
+| 22 | Lakeside Chair Works | lakesidechairworks.com | Milwaukee, WI | cold email | No rush-service or expedited order option | Some buyers have an event or deadline; an expedited service tier adds revenue at peak demand. |
+| 23 | Signature Upholstery Co | signatureupholsteryco.com | Baltimore, MD | Facebook | No pull quote from a happy client | Testimonials in the hero convert better than any service description. |
+| 24 | Ridgeline Furniture Repair | ridgelinefurniturerepair.com | Boise, ID | LinkedIn | No scratch or chip repair section | Small repair jobs are a gateway service that converts into larger reupholstery projects. |
+| 25 | ProRestore Furniture | prorestorefurniture.com | Memphis, TN | cold email | No photo of the shop or studio | A behind-the-scenes shop photo builds authenticity and craftsman credibility. |
+| 26 | Hearthside Furniture Works | hearthsidefurnitureworks.com | Des Moines, IA | Instagram | No FAQ on repair vs replace decision | The most common question buyers have is whether the piece is worth repairing; answer it on the page. |
+| 27 | Oakwood Chair Restoration | oakwoodchairrestoration.com | Spokane, WA | cold email | No service area map | Buyers outside the city center can't tell if you offer pickup from their neighborhood. |
+| 28 | Pinnacle Upholstery | pinacleupholstery.com | Albuquerque, NM | Facebook | No outdoor furniture reupholstery section | Outdoor cushion reupholstery is seasonal, high-demand, and largely unserved by most upholsterers. |
+| 29 | Keystone Furniture Studio | keystonefurniturestudio.com | Pittsburgh, PA | cold email | No customer photo submissions or before/after from clients | User-submitted before/after photos add social proof that studio photos alone can't match. |
+| 30 | Landmark Refinishing | landmarkrefinishing.com | Knoxville, TN | LinkedIn | No consultation or quote request form above the fold | The CTA is buried below the fold; a visible "get a free quote" button at the top would capture more leads. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

@@ -221,6 +221,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Ridgeline Home Services | ridgelinehomeservices.com | Denver, CO | cold email | No annual maintenance plan or membership offer | A recurring maintenance membership creates predictable revenue; the homepage doesn't mention one. |
+| 7 | Summit Handyman Services | summithandymanservices.com | Salt Lake City, UT | Instagram | No task list or scope-of-work examples | Buyers don't know what a handyman can and can't do; a clear scope list reduces pre-call uncertainty. |
+| 8 | Keystone Home Maintenance | keystonehomemaintenance.com | Pittsburgh, PA | cold email | No license or insured badge visible | For recurring home access, visible credentials are a basic trust requirement. |
+| 9 | Heritage Handyman Co | heritagehandymanco.com | Louisville, KY | LinkedIn | No before/after photos for repair or maintenance work | A side-by-side of a leaky faucet or broken trim before and after repair makes the value clear. |
+| 10 | ProCare Home Services | procarehomeservices.com | Columbus, OH | Facebook | No hourly rate or service minimum visible | Buyers comparing handyman costs need a rate signal before they'll call; hiding it loses leads. |
+| 11 | Apex Home Maintenance | apexhomemaintenance.com | Charlotte, NC | cold email | No seasonal checklist or spring/fall maintenance offer | Seasonal packages drive bookings in slow periods and build recurring relationships. |
+| 12 | BlueSky Handyman Services | blueskyhandymanservices.com | Nashville, TN | LinkedIn | No service area map | Buyers outside your main city can't confirm you'll travel to their neighborhood. |
+| 13 | Cornerstone Property Care | cornerstonepropertycare.com | Indianapolis, IN | Instagram | No review count or rating on homepage | Your Google rating is the fastest trust signal and it belongs in the hero section. |
+| 14 | Ironwood Home Repair | ironwoodhomerepair.com | Raleigh, NC | cold email | No same-day or emergency repair callout | If you take urgent calls, that capability should be the first thing buyers see on a phone. |
+| 15 | Lakeview Handyman | lakeviewhandyman.com | Cleveland, OH | Facebook | No booking calendar or scheduling link | Phone-only booking loses customers who want to schedule outside business hours. |
+| 16 | Pacific Home Maintenance | pacifichomemaintenance.com | Portland, OR | cold email | No rental property or landlord service section | Landlords and property managers are a recurring-revenue client segment; a dedicated section captures them. |
+| 17 | Northgate Home Services | northgatehomeservices.com | Baltimore, MD | LinkedIn | No team or technician photos | A photo of the actual handyman builds trust that a logo and service list never will. |
+| 18 | TrueHome Maintenance | truehomemaintenance.com | Kansas City, MO | cold email | No FAQ on common repair questions | Buyers with a leaky sink, sticking door, or loose deck board want answers before they call. |
+| 19 | Sunstone Home Services | sunstonehomeservices.com | Albuquerque, NM | Instagram | No commercial or small business maintenance section | Office and commercial clients are a separate revenue stream; if you serve them, say so. |
+| 20 | ClearPath Home Care | clearpathhomecare.com | Boise, ID | cold email | No customer testimonial pull quote | One specific review quote naming a repair type converts better than a generic star rating. |
+| 21 | Ridgecrest Handyman | ridgecresthandyman.com | Spokane, WA | Facebook | No financing or deferred payment option | Larger repair jobs over $500 benefit from a visible payment option to reduce sticker hesitation. |
+| 22 | Frontier Home Maintenance | frontierhomemaintenance.com | Des Moines, IA | cold email | No drywall, tile, or caulk repair visual examples | Photo examples of minor repair types help buyers confirm you handle exactly what they need. |
+| 23 | Heritage Property Maintenance | heritagepropertymaintenance.com | Knoxville, TN | LinkedIn | No satisfaction guarantee or redo policy | A "we make it right" guarantee removes the risk that stops first-time buyers from booking. |
+| 24 | ProFix Home Services | profixhomeservices.com | Memphis, TN | cold email | No referral or repeat-client discount mention | A referral discount turns happy clients into an active sales channel at no ad cost. |
+| 25 | Lakewood Handyman Co | lakewoodhandymanco.com | Milwaukee, WI | Instagram | No before/after for deck or patio repair | Exterior repair work before and after is a strong visual that most handyman sites skip. |
+| 26 | Irongate Home Care | irongatehomecare.com | Tucson, AZ | cold email | Slow mobile load | Most handyman searches start on a phone; a slow site loses the lead before the page loads. |
+| 27 | Summit Property Services | summitpropertyservices.com | Fresno, CA | Facebook | No scope exclusions or "what we don't do" section | Buyers waste time asking about services outside your specialty; a clear exclusion list saves both sides. |
+| 28 | BlueCrest Home Maintenance | bluecresthmaintenance.com | Jacksonville, FL | cold email | No monthly maintenance bundle pricing | A fixed monthly fee for a bundle of services creates predictable client relationships. |
+| 29 | Cornerstone Handyman Works | cornerstonehandymanworks.com | Richmond, VA | LinkedIn | No post-completion inspection or quality check mention | A follow-up quality check after every job is a differentiator that most handyman businesses skip. |
+| 30 | Northcrest Home Services | northcresthomeservices.com | Raleigh, NC | cold email | No licensed trades referral network mentioned | Buyers with plumbing or electrical needs beyond handyman scope want to know you can refer them. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

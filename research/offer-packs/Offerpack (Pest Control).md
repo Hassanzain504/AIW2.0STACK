@@ -228,6 +228,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | ShieldPest Solutions | shieldpestsolutions.com | Denver, CO | cold email | no treatment process explanation | Homeowners with kids and pets want to know what chemicals are used before booking. |
+| 7 | ClearHive Pest Control | clearhivepest.net | Nashville, TN | Instagram | no same-day availability badge | Reviews mention quick response but the homepage has no same-day or next-day statement. |
+| 8 | ProGuard Exterminators | proguardexterminators.com | Portland, OR | LinkedIn | no re-treatment guarantee | The #1 fear after treatment is the pests returning. No guarantee is shown anywhere on the site. |
+| 9 | FirstLine Pest Services | firstlinepestservices.com | Charlotte, NC | cold email | no technician introduction | Technician names are in the reviews but the site introduces no one. |
+| 10 | ZeroPest Professionals | zeropestpro.com | Minneapolis, MN | Facebook | no monthly plan CTA | Offers recurring service but the homepage only has a "Get a Quote" button. |
+| 11 | Apex Bug Control | apexbugcontrol.com | San Antonio, TX | cold email | no outdoor vs indoor treatment split | Single service page mixes indoor and outdoor treatment with no distinction. |
+| 12 | SafeHome Pest Management | safehomepestmgmt.net | Tampa, FL | Instagram | no child and pet safety section | No mention of product safety around children and pets despite being a common concern. |
+| 13 | NestFree Exterminators | nestfreeexterminators.com | Seattle, WA | LinkedIn | no termite vs rodent vs general split | All pest types listed in one block. Searchers for specific pest problems have to read everything. |
+| 14 | CityClear Pest Control | cityclearpest.com | Raleigh, NC | cold email | no inspection process explained | "Free inspection" offered but no description of what the inspection involves. |
+| 15 | TruShield Pest Services | trushieldpest.net | Boston, MA | Facebook | no commercial pest section | Reviews mention restaurant and office work but the site is 100 percent residential. |
+| 16 | BioGuard Pest Solutions | bioguardpest.com | Columbus, OH | cold email | no eco-friendly product callout | Company uses greener products per reviews but the site has no organic or eco mention. |
+| 17 | PestAway Professionals | pestawayprof.com | Louisville, KY | Instagram | no photo of technician in gear | No visual of the technician arriving at a home. Trust is harder to build without a face. |
+| 18 | AllClear Pest Control | allclearpestcontrol.net | Richmond, VA | LinkedIn | no seasonal pest calendar | Homeowners don't know when to call for mosquitoes, ants, or rodents. A seasonal guide converts. |
+| 19 | CleanHome Exterminators | cleanhomeexterminators.com | Kansas City, MO | cold email | no odor-free or discreet service mention | "Discreet" is a top review word but never addressed on the homepage. |
+| 20 | PeakGuard Pest Control | peakguardpest.com | Salt Lake City, UT | Facebook | no spider or scorpion section | Regional pest concerns not highlighted on a site serving a desert market. |
+| 21 | ProZone Pest Management | prozonepestmgmt.com | Memphis, TN | cold email | no before/after treatment photos | No visual proof of successful treatments. Reviews describe results that the site does not show. |
+| 22 | BioSafe Exterminators | biosafeexterminators.com | Indianapolis, IN | Instagram | no annual contract option | One-time calls visible. No annual protection contract mentioned despite offering one. |
+| 23 | GreenLine Pest Control | greenlinepestcontrol.net | Boise, ID | LinkedIn | no tick or flea outdoor treatment callout | Pet owners searching for yard treatment see no dedicated outdoor pest section. |
+| 24 | FastAct Pest Services | fastactpestservices.com | Pittsburgh, PA | cold email | no bed bug section | Bed bug calls are high-urgency and high-value. The service is buried in a bulleted list. |
+| 25 | TrustMark Exterminators | trustmarkexterminators.com | Omaha, NE | Facebook | no BBB or licensing badge | Claims "licensed and insured" in text but shows no badge or license number. |
+| 26 | SafeZone Pro Pest | safezonepropest.com | Albuquerque, NM | cold email | no wasp and bee section | Reviews mention wasp removal three times. It is listed as a service but has no dedicated callout. |
+| 27 | QuickClear Pest Control | quickclearpestcontrol.com | Spokane, WA | Instagram | no free inspection CTA above fold | Offers free inspection but the CTA is buried in the footer rather than in the hero. |
+| 28 | CleanSweep Exterminators | cleansweepexterminators.net | Knoxville, TN | LinkedIn | no satisfaction guarantee badge | Re-treatment policy exists per reviews but no guarantee badge or statement on the homepage. |
+| 29 | NoBug Pest Pros | nobugpestpros.com | Fresno, CA | cold email | no quarterly plan with auto-reminder | Quarterly service offered but no explanation of how auto-scheduling works. |
+| 30 | ShieldRight Pest Services | shieldrightpest.com | Tucson, AZ | Facebook | no German cockroach or termite hero | Desert market deals with specific pests but the hero is generic. Local specificity would convert. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

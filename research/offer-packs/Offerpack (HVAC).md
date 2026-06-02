@@ -229,6 +229,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Ridgeline Heating & Cooling | ridgelinehvac.com | Denver, CO | cold email | No upfront pricing statement | HVAC has a bad reputation for surprise bills; one sentence about a written quote before work starts removes that fear. |
+| 7 | Summit Climate Control | summitclimatecontrol.com | Salt Lake City, UT | Instagram | No financing option for system replacements | A new HVAC system regularly hits $8k-$15k; a visible payment plan mention reduces the barrier to call. |
+| 8 | Keystone HVAC Solutions | keystonehvacsolutions.com | Pittsburgh, PA | cold email | No NATE certification badge visible | NATE-certified technicians are a standard trust signal; yours aren't shown on the homepage. |
+| 9 | Heritage Heating & Air | heritagehvac.com | Louisville, KY | LinkedIn | No named technician profiles | Homeowners allowing HVAC work in their house want to know who is coming before they book. |
+| 10 | ProTemp HVAC Services | protemphvac.com | Columbus, OH | Facebook | No emergency CTA bar on mobile | A broken AC in July is a panic search; the first visible phone number wins the call. |
+| 11 | Apex Air Systems | apexairsystems.com | Charlotte, NC | cold email | No efficiency or SEER rating guide | Buyers comparing system options need a plain guide explaining what SEER ratings mean for their bill. |
+| 12 | BlueSky Comfort Systems | blueskycomfortsystems.com | Nashville, TN | Instagram | No before/after for system replacement | A photo of an old R-22 unit next to a new high-efficiency system makes the upgrade argument clear. |
+| 13 | Cornerstone Air & Heat | cornerstoneairheat.com | Indianapolis, IN | cold email | No maintenance plan or tune-up membership | A seasonal maintenance plan creates recurring revenue and prevents emergency calls. |
+| 14 | Ironwood Mechanical | ironwoodmechanical.com | Raleigh, NC | LinkedIn | No brand comparison guide | Carrier vs Trane vs Lennox is the buyer's most common question; answering it on the site gets the call. |
+| 15 | Lakeview HVAC | lakeviewhvac.com | Cleveland, OH | cold email | No review count or star rating in the hero | Your Google rating is your strongest trust signal; it should be in the first thing visitors see. |
+| 16 | Pacific Comfort Solutions | pacificcomfortsolutions.com | Portland, OR | Facebook | No heat pump or mini-split section | Heat pumps are the fastest-growing HVAC segment; if you install them, they need a dedicated section. |
+| 17 | Northgate Air & Heat | northgateairheat.com | Baltimore, MD | cold email | Slow mobile load on service pages | Emergency HVAC searches happen on phones; a slow site loses the call before the page loads. |
+| 18 | TrueTemp HVAC | truetemphvac.com | Kansas City, MO | Instagram | No EPA or refrigerant certification mention | EPA 608 certification for refrigerant handling is a required credential that builds buyer trust. |
+| 19 | Sunstone Heating & Cooling | sunstonehvac.com | Albuquerque, NM | LinkedIn | No indoor air quality or filtration section | IAQ products are a high-margin add-on category that most HVAC sites don't address. |
+| 20 | ClearAir Mechanical | clearairmechanical.com | Boise, ID | cold email | No commercial HVAC section | Light commercial clients are a separate revenue stream; if you serve them, create a dedicated section. |
+| 21 | Ridgecrest Climate Solutions | ridgecrestclimate.com | Spokane, WA | Facebook | No service area map or zip code list | Homeowners in outlying suburbs can't confirm you'll travel to them without a coverage map. |
+| 22 | Frontier Heating & Air | frontierhvac.com | Des Moines, IA | cold email | No smart thermostat installation section | Smart thermostats are a recurring upsell; if you install Nest or Ecobee, give them a section. |
+| 23 | Lakewood HVAC Pros | lakewoodhvacpros.com | Milwaukee, WI | Instagram | No ductwork inspection or sealing section | Leaky ducts are a common efficiency problem; duct sealing as a service is a natural upsell. |
+| 24 | Irongate Air Services | irongate-air.com | Knoxville, TN | cold email | No post-install warranty or parts guarantee | A posted parts-and-labor warranty on system replacements differentiates you from the lowest bid. |
+| 25 | BlueCrest HVAC | bluecresth-vac.com | Tucson, AZ | LinkedIn | No whole-home comfort assessment or free audit offer | A free home comfort audit is a lead magnet that competitors without one can't match. |
+| 26 | Summit Air Control | summitaircontrol.com | Fresno, CA | cold email | No seasonal promotion for spring or fall tune-ups | Seasonal tune-up promotions fill slow months and build recurring client relationships. |
+| 27 | Northcrest HVAC Solutions | northcresthvac.com | Memphis, TN | Facebook | No photo of the technicians or crew | Seeing named, uniformed technicians on the site builds the kind of trust that specs and features can't. |
+| 28 | ProFlow HVAC | proflow-hvac.com | Jacksonville, FL | cold email | No zoning system or multi-zone callout | Zoning installs are a premium upsell for two-story homes; if you do them, create a section. |
+| 29 | Heritage Air Systems | heritageairsystems.com | Richmond, VA | Instagram | No pull quote from a homeowner mentioning a specific technician | Reviews that name a technician are the most trust-building; pull one into the homepage hero. |
+| 30 | CedarPoint Mechanical | cedarpointmechanical.com | Minneapolis, MN | cold email | No energy rebate or utility program callout | Most utility companies offer rebates on high-efficiency systems; linking to them positions you as the expert. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

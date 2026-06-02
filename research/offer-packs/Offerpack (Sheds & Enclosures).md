@@ -230,9 +230,41 @@ Hassan
 ---
 
 ### Prospect 5: Any shed or enclosure builder with 20 to 80 Google reviews, active social media showing varied builds, but an unorganized or outdated website
-**How to find them:** Search "custom shed builder [city]" or "backyard structure [state]" on Google Maps. Look for 4+ stars and 25 to 70 reviews. Visit the site. If the gallery is unfiltered, there is no kit comparison, and no permit information, they are the right target.
+**How to find them:** Search "custom shed builder [city]" on Google Maps. Look for 4+ stars and 25 to 70 reviews. Visit the site. If the gallery is unfiltered, there is no kit comparison, and no permit information, they are the right target.
 **Personalization angle:** Find a review mentioning quality vs. cheap kits ("worth the money," "not like those flimsy kits") and note that comparison is not made on the homepage.
 **DM version:** Medium, with the specific review phrase inserted.
+
+---
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | CedarBuilt Sheds | cedarbuiltsheds.com | Raleigh, NC | cold email | no custom vs kit comparison section | Reviews say "worth every penny vs. the Costco kit" but the site never makes that case. |
+| 7 | BackyardBuilt Structures | backyardbuiltstructures.net | Denver, CO | Instagram | no gallery organized by shed type | All builds shown in one unfiltered grid. A buyer looking for a workshop cannot find it quickly. |
+| 8 | ProShed Contractors | proshedcontractors.com | Charlotte, NC | LinkedIn | no permit guidance section | Many homeowners are unsure if they need a permit. A guide would reduce friction and build trust. |
+| 9 | CraftShed Builders | craftshedbuilders.com | Nashville, TN | cold email | no size guide or dimension table | Buyers comparing to a kit want to know how big to go. No sizing tool or guide exists. |
+| 10 | TimberWorks Custom Sheds | timberworkscustomsheds.com | Minneapolis, MN | Facebook | no man-cave or she-shed section | These two search terms drive significant traffic. No dedicated gallery section for them. |
+| 11 | BuildRight Structures | buildrightstructures.com | Tampa, FL | cold email | no hurricane or wind rating callout | Florida buyers care about wind resistance. No mention of structural rating or anchoring. |
+| 12 | WoodCraft Enclosures | woodcraftenclosures.net | Portland, OR | Instagram | no eco-friendly material callout | Pacific Northwest buyers favor sustainable wood. No FSC or local timber mention. |
+| 13 | HeritageSheds LLC | heritageshedsllc.com | Columbus, OH | LinkedIn | no HOA-compliant design note | Suburban buyers with HOAs have no assurance that the build will meet restrictions. |
+| 14 | BarnStyle Builders | barnstylebuilders.com | Kansas City, MO | cold email | no barn door or interior shelving add-on | Add-on options are a revenue opportunity mentioned in reviews but not listed as products. |
+| 15 | SimpleSheds Co. | simpleshedsco.com | Phoenix, AZ | Facebook | no insulation or climate control section | Arizona buyers need insulated sheds. No mention of insulation options on the site. |
+| 16 | WorkshopBuilt Sheds | workshopbuiltsheds.com | Indianapolis, IN | cold email | no electrical rough-in option | Workshop buyers want to know if you can handle an electrical sub-panel during the build. |
+| 17 | PrecisionSheds Pro | precisionshedspro.com | Seattle, WA | Instagram | no roofline style comparison | Buyers are choosing between gable, gambrel, and lean-to roofs with no visual guide. |
+| 18 | StorageFirst Builders | storagefirstbuilders.com | Boston, MA | LinkedIn | no floor type comparison | Concrete slab vs. pressure-treated floor is a top question. Not addressed on the site. |
+| 19 | RuralBuilt Structures | ruralbuiltstructures.com | Salt Lake City, UT | cold email | no run-in shed or animal shelter section | Rural buyers keeping horses or goats search for this. Not listed as a product type. |
+| 20 | LoneStarSheds | lonestarsheds.net | San Antonio, TX | Facebook | no financing option | $5k to $15k custom build with no payment plan mention. Competitors who offer financing win. |
+| 21 | GardenShed Specialists | gardenshedspecialists.com | Richmond, VA | cold email | no garden studio section | A she-shed / garden studio gallery is a high-search sub-niche not featured. |
+| 22 | NorthernBuilt Enclosures | northernbuiltenclosures.com | Omaha, NE | Instagram | no snow load rating | Midwest buyers want to know if the roof can handle a heavy snow season. |
+| 23 | ClearCraft Shed Builders | clearcraftshedbuilders.net | Albuquerque, NM | LinkedIn | no quote turnaround time | Contact form with no promise on how fast a quote comes back. |
+| 24 | FrameRight Structures | framerightstructures.com | Boise, ID | cold email | no painting or staining option | Buyers want to match the shed to the house. No paint or stain mention in the product options. |
+| 25 | OakwoodBuilt Sheds | oakwoodbuiltsheds.com | Spokane, WA | Facebook | no add-on porch section | Porch or covered lean-to add-ons are a popular feature not shown in the gallery or options list. |
+| 26 | SteelFrameSheds | steelframesheds.com | Louisville, KY | cold email | no steel vs wood comparison | Some buyers want metal framing for durability. No comparison or option explained. |
+| 27 | SmithfieldBuilders | smithfieldbuilders.net | Pittsburgh, PA | Instagram | no loft or elevated storage section | Loft storage is a practical feature many buyers ask for. Not shown in any gallery photos. |
+| 28 | ProStruct Enclosures | prostructenclosures.com | Memphis, TN | LinkedIn | no delivery timeline section | Buyers want to know how long from deposit to installation. Nothing is said about lead time. |
+| 29 | TrueBuilt Custom Sheds | truebuiltcustomsheds.com | Tulsa, OK | cold email | no detached garage section | Detached garages are a premium build. Not listed as a product despite being a high-value lead. |
+| 30 | CrestlineSheds | crestlinesheds.com | Knoxville, TN | Facebook | no real testimonial with project photos | Reviews are strong but no testimonial is paired with a photo of the actual build. |
 
 ---
 

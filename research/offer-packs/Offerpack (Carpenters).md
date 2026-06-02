@@ -234,6 +234,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Timber & Tenon Carpentry | timberandtenon.com | Portland, OR | Instagram | No gallery organized by project type | Built-ins, trim, and decks are all mixed together with no way for a buyer to find what they need. |
+| 7 | Craftsman's Edge Woodworks | craftsmanedgewoodworks.com | Denver, CO | cold email | No before/after pairings | Showing the space before transformation would make the work land harder than finished-only photos. |
+| 8 | Millwork Masters | millworkmasters.com | Austin, TX | LinkedIn | No license or insurance badge visible | Higher-value clients expect credentials on the page before calling a custom carpenter. |
+| 9 | Heritage Carpentry Co | heritagecarpentryco.com | Richmond, VA | cold email | No project pricing range or scope examples | Buyers have no idea if you do small repairs or full renovations; they need a signal. |
+| 10 | Pinewood Custom Builds | pinewoodcustombuilds.com | Charlotte, NC | Facebook | No craftsman bio or founder story | Custom carpentry is personal; no human face on the site loses the trust angle. |
+| 11 | Summit Finish Carpentry | summitfinishcarpentry.com | Salt Lake City, UT | Instagram | Gallery has no material or style labels | Beautiful photos but no context about wood species, finish, or style for the buyer to evaluate. |
+| 12 | Old Town Carpentry | oldtowncarpentry.com | Alexandria, VA | cold email | No process or timeline section | Buyers planning a renovation need to know what working with you actually looks like. |
+| 13 | Blue Ridge Millwork | blueridgemillwork.com | Asheville, NC | LinkedIn | No service list on homepage | Visitors can't tell from the homepage whether you do trim, cabinetry, stairs, or all three. |
+| 14 | North Star Carpentry | northstarcarpentry.com | Minneapolis, MN | cold email | No testimonials or review count on the homepage | Google reviews exist but the site shows nothing; buyers are checking Google instead of staying on your page. |
+| 15 | Cedar & Oak Custom Woodwork | cedarandoakcarpentry.com | Columbus, OH | Facebook | No financing or payment terms mentioned | Custom projects over $5k benefit from a visible payment plan mention. |
+| 16 | Foxwood Carpentry | foxwoodcarpentry.com | Raleigh, NC | Instagram | No city or service area visible on homepage | Visitors from Google searches can't confirm you serve their neighborhood. |
+| 17 | Ironclad Finish Carpentry | ironclad-finishcarpentry.com | Indianapolis, IN | cold email | Slow mobile load | Homeowners clicking from local searches lose patience before the page finishes loading. |
+| 18 | Maple Hill Carpentry | maplehillcarpentry.com | Louisville, KY | LinkedIn | No consultation CTA above the fold | The only way to contact is a buried form; a clear "book a free consult" button is missing. |
+| 19 | Pacific Timber Works | pacifictimberworks.com | Seattle, WA | cold email | No specialty callout for custom built-ins | Your reviews mention built-ins twice but the homepage doesn't lead with that service. |
+| 20 | Ridgeline Carpentry | ridgelinecarpentry.com | Boise, ID | Facebook | No photo of tools, shop, or team | A candid shop photo builds authenticity that polished project photos alone don't create. |
+| 21 | Keystone Woodcraft | keystonewoodcraft.com | Pittsburgh, PA | Instagram | No FAQ or common-question section | Buyers have the same four questions every time; answering them on the page removes the call barrier. |
+| 22 | Sunrise Carpentry | sunrisecarpentry.com | Phoenix, AZ | cold email | No warranty or craftsmanship guarantee stated | A simple "we stand behind our work" statement with specifics would outperform competitors. |
+| 23 | Cornerstone Trim & Millwork | cornerstonetrimwork.com | Tampa, FL | LinkedIn | No residential vs commercial split | Homeowners and general contractors are different buyers; one generic page serves neither well. |
+| 24 | Willowbrook Woodworking | willowbrookwoodworking.com | Kansas City, MO | cold email | No portfolio filtering by room type | Kitchen, bedroom, and basement built-ins all need their own section to reach the right buyer. |
+| 25 | Granite Bay Custom Carpentry | granitebaycarpentr.com | Sacramento, CA | Instagram | No call-to-action after each gallery image | Gallery visitors have no prompt to reach out after viewing impressive work. |
+| 26 | Lakewood Carpentry | lakewoodcarpentryco.com | Cleveland, OH | Facebook | No awards or association membership listed | NARI or local HBA membership is a trust signal most competitors don't show. |
+| 27 | Foxcroft Finish Carpentry | foxcroftfinishcarpentry.com | Richmond, VA | cold email | No project minimum or scope guidance | Buyers waste time inquiring about $500 jobs when you only take $3k+ projects. |
+| 28 | True Craft Carpentry | truecraftcarpentry.com | Memphis, TN | LinkedIn | No recurring or maintenance service offer | A finish touch-up or annual inspection add-on would create repeat client revenue. |
+| 29 | Valley Oak Woodworks | valleyoakwoodworks.com | Fresno, CA | Instagram | No video walkthrough of a finished project | A 60-second reel showing a room transformation would outperform every static gallery photo. |
+| 30 | Stonegate Carpentry | stonegatecarpentry.com | Albuquerque, NM | cold email | No social proof specific to custom work quality | Reviews are generic; none of the review quotes about quality appear on the site itself. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

@@ -236,6 +236,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | TrueFlow Septic Services | trueflowseptic.com | Knoxville, TN | cold email | no emergency number above fold | Septic failures happen at night. The phone number is buried below the fold on mobile. |
+| 7 | ClearWell Drilling Co. | clearwelldrilling.net | Boise, ID | LinkedIn | no pump-out explainer page | Homeowners have no idea what a septic pump-out involves. A plain explainer converts the hesitant. |
+| 8 | HomeWell Services | homewellservicesllc.com | Asheville, NC | cold email | no license number displayed | Claims "licensed" in footer text. No number shown to verify the claim. |
+| 9 | GreenValley Septic | greenvalleyseptic.com | Eugene, OR | Facebook | no financing for system replacement | Septic system replacement can exceed $10k. No payment plan or financing mentioned. |
+| 10 | SureFlow Well & Septic | sureflowwellandseptic.com | Spokane, WA | cold email | no service area map | Rural customers are unsure if you cover their county before picking up the phone. |
+| 11 | BlueRidge Septic Pumping | blueridgesepticpumping.com | Roanoke, VA | Instagram | no inspection and permitting section | New homebuyers need a septic inspection before closing. Not mentioned as a service. |
+| 12 | RuralPump Services | ruralpumpservices.net | Madison, WI | LinkedIn | no tank size guide | Homeowners do not know if their tank needs pumping based on size and household count. |
+| 13 | PinewoodWell Drilling | pinewoodwelldrilling.com | Flagstaff, AZ | cold email | no water quality test mention | Well owners worry about contamination. A water test mention would convert this concern. |
+| 14 | SoilSafe Septic | soilsafeseptic.com | Burlington, VT | Facebook | no county regulation guide | Regulations vary by county. A contractor who mentions this builds local expertise. |
+| 15 | LakeshoreWell Co. | lakeshorewellco.com | Traverse City, MI | cold email | no drought-year well yield section | Drought conditions reduce well yield. A section on well deepening and yield testing would rank. |
+| 16 | CountryWater Services | countrywaterservices.com | Columbia, MO | Instagram | no grease trap section | Restaurant and commercial grease trap pumping is a distinct high-value service not listed. |
+| 17 | CleanTank Septic | cleantankseptic.net | Greenville, SC | LinkedIn | no inspection report sample | Buyers want to know what a report looks like before booking. A sample doc link would reduce friction. |
+| 18 | TrueDepth Well Drilling | truedepthwelldrilling.com | Billings, MT | cold email | no geological survey section | Buyers considering a new well want to know how site conditions affect cost and feasibility. |
+| 19 | ProPump Septic Services | propumpseptic.com | Fayetteville, AR | Facebook | no septic alarm troubleshooting section | Homeowners with alarm notifications search this topic. No content addresses it. |
+| 20 | ClearCreek Well Services | clearcreekwellservices.com | Fort Collins, CO | cold email | no pressure tank replacement section | Pressure tank failure is a common well problem. Not listed as a distinct service. |
+| 21 | HomeSource Septic | homesourceseptic.net | Harrisburg, PA | Instagram | no real estate inspection CTA | Property transactions require septic inspections. No dedicated CTA for buyers or agents. |
+| 22 | WellCraft Drilling | wellcraftdrilling.com | Bozeman, MT | LinkedIn | no drilling log sample | First-time well buyers want to understand what data is collected during drilling. |
+| 23 | RuralSafe Septic | ruralsafeseptic.com | Odessa, TX | cold email | no drought restrictions section | Water table issues are common in this region. No mention of usage guidance or restrictions. |
+| 24 | ClearDepth Well Co. | cleardepthwellco.net | Bowling Green, KY | Facebook | no submersible pump repair section | Pump failure is the most common well emergency. Not listed as a standalone service. |
+| 25 | SoilMaster Septic | soilmasterseptic.com | Macon, GA | cold email | no alternative system section | Challenging soils require alternative septic designs. No mention of mound or drip systems. |
+| 26 | NorthWell Services | northwellservices.com | Traverse City, MI | Instagram | no iron filtration section | Iron-heavy well water is a top complaint in this region. No filtration service mentioned. |
+| 27 | TrustWell Drilling | trustwelldrilling.net | Cheyenne, WY | LinkedIn | no hydro-fracturing section | Low-yield wells can be improved by hydro-fracturing. No educational content about this. |
+| 28 | ClearHorizon Septic | clearhorizonseptic.com | Clarksville, TN | cold email | no pump-out frequency guide | Homeowners want to know how often to pump. A simple frequency chart would build trust and SEO. |
+| 29 | ValleyWell Solutions | valleywellsolutions.com | Yakima, WA | Facebook | no winterization service | Well and septic winterization is a seasonal service not mentioned on the site. |
+| 30 | GoldenState Well & Septic | goldenstatewell.com | Redding, CA | cold email | no wildfire impact section | Post-wildfire well contamination is a serious and searchable issue in this region. Not addressed. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

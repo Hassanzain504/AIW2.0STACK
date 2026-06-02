@@ -232,6 +232,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | ColorCraft Painting Co. | colorcraftpaintingco.com | Raleigh, NC | cold email | no before/after gallery | Reviews say "transformation was incredible" but the homepage has no before and after photos. |
+| 7 | BrushMasters Pro | brushmasterspro.net | Nashville, TN | Instagram | no color consultation CTA | Instagram shows color reveal content but the site has no color consult booking path. |
+| 8 | Precision Coat Painters | precisioncoatpainters.com | Tampa, FL | LinkedIn | no prep and cleanup statement | The #1 fear for homeowners is damaged floors and drips. The site says nothing to address it. |
+| 9 | CityBrush Painting | citybrusshpainting.com | Boston, MA | cold email | no exterior vs interior split CTA | Both services listed together with no separate quote path for different project types. |
+| 10 | ProFinish Painters | profinishpainters.net | Las Vegas, NV | Facebook | no written scope guarantee | Reviews mention hidden charges twice. A scope-before-start statement would counter this directly. |
+| 11 | AllStar Painting Group | allstarpaintinggroup.com | Seattle, WA | cold email | no cabinet painting section | Cabinet refinishing is a high-margin service. Reviews mention it but it is not featured on the site. |
+| 12 | TrueColor Painting LLC | truecolorpaintingllc.com | Kansas City, MO | Instagram | no deck or fence painting callout | Exterior services menu omits deck and fence painting despite it being a common search term. |
+| 13 | Artisan Brush Works | artisanbrushworks.com | Portland, OR | LinkedIn | stock hero photo | Hero image is a generic paint brush stock photo. No real rooms, no real results shown. |
+| 14 | FreshWall Painting Co. | freshwallpainting.com | San Antonio, TX | cold email | no Houzz or portfolio embed | Company has a strong Houzz profile but no link or embed on the website. |
+| 15 | MainStreet Painters | mainstreetpainters.net | Columbus, OH | Facebook | no project timeline listed | Reviews say "finished on schedule" but the site gives no indication of typical project length. |
+| 16 | BrightRoom Painting | brightroompainting.com | Minneapolis, MN | cold email | no color consultation service explained | "Color help available" in a bullet point. No dedicated section explaining the consult process. |
+| 17 | SpeedCoat Professionals | speedcoatpro.com | Indianapolis, IN | Instagram | no furniture protection statement | Several reviews thank the crew for protecting furniture. The site has no mention of this practice. |
+| 18 | ProCoat Residential Painting | procoatresidential.com | Sacramento, CA | LinkedIn | no multi-family or rental callout | Investor clients are a premium market. The site is entirely homeowner-focused with no rental mention. |
+| 19 | SolidBrush Painters | solidbrushpainters.com | Richmond, VA | cold email | no paint brand mentioned | Premium paint brand callout converts quality-conscious buyers. Competitors name Sherwin-Williams. |
+| 20 | CleanEdge Painting Co. | cleanedgepaintingco.net | Louisville, KY | Facebook | no VOC or low-odor option | Families with babies and pets search for low-VOC paint. No mention of this option anywhere. |
+| 21 | NeatFinish Painters | neatfinishpainters.com | Memphis, TN | Instagram | no testimonial section on homepage | Google reviews are strong but not a single quote appears on the actual website. |
+| 22 | CrestCoat Painting | crestcoatpainting.com | Omaha, NE | cold email | no commercial painting callout | Reviews mention office and commercial work. The homepage is entirely residential in focus. |
+| 23 | VistaColor Painters | vistacolorpainters.net | Albuquerque, NM | LinkedIn | no wood staining section | Wood staining and finishing are revenue services not listed or shown in the gallery. |
+| 24 | TrueEdge Painting Services | trueedgepaintingservices.com | Salt Lake City, UT | cold email | no crew introduction | "Our painters" mentioned once with no names, no faces, and no experience context. |
+| 25 | GoldCoat Painters | goldcoatpainters.com | Boise, ID | Instagram | no deck refinishing section | Deck refinishing is a seasonal search term. Not listed as a service despite being offered. |
+| 26 | MetroBrush Painting | metrobrushpainting.com | Pittsburgh, PA | cold email | no annual touch-up or maintenance plan | Reviews mention repeat bookings but no maintenance program is offered on the site. |
+| 27 | SkylinePaint Co. | skylinepaintco.com | Tulsa, OK | Facebook | no popcorn ceiling removal section | Homeowners searching for popcorn removal see no dedicated landing area or gallery. |
+| 28 | PrimePainters LLC | primepaintersllc.net | Spokane, WA | cold email | no accent wall gallery | Accent wall painting is frequently searched but not featured in the service menu or gallery. |
+| 29 | UrbanBrush Painters | urbanbrushpainters.com | Knoxville, TN | Instagram | no before/after exterior gallery | Gallery shows only interior work. Exterior painting jobs are a high-value lead not represented. |
+| 30 | HorizonPaint Professionals | horizonpaintpro.com | Fresno, CA | LinkedIn | no trim and ceiling callout | Many homeowners want full room painting including trim. No mention of this common add-on. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

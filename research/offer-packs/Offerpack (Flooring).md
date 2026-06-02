@@ -227,6 +227,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Apex Floor Solutions | apexfloorsolutions.com | Phoenix, AZ | cold email | No material comparison guide | Homeowners confused about LVP vs hardwood vs tile won't call if the site doesn't guide them. |
+| 7 | Heritage Hardwood Floors | heritagehardwoodfloors.com | Nashville, TN | Instagram | No room-type filter in gallery | Buyers looking for kitchen tile don't want to scroll through bedroom hardwood; organize the gallery. |
+| 8 | Ridgeline Flooring Co | ridgelineflooring.com | Denver, CO | LinkedIn | No license or contractor badge visible | Higher-value floor projects need visible credentials before a homeowner calls. |
+| 9 | Summit Floor Coverings | summitfloorcoverings.com | Salt Lake City, UT | cold email | No financing option for whole-home jobs | Whole-house LVP installs regularly hit $10k+; a visible payment plan reduces the barrier to contact. |
+| 10 | Keystone Tile & Floor | keystonetilefloor.com | Pittsburgh, PA | Facebook | No before/after for tile pattern or grout work | Tile installation outcomes depend on the pattern and grout choice; show the decisions visually. |
+| 11 | Pacific Hardwood Floors | pacifichardwoodfloors.com | Portland, OR | cold email | No subfloor assessment or moisture barrier callout | Subfloor surprises are the top complaint; a clear pre-quote assessment statement removes the fear. |
+| 12 | BlueLine Flooring | bluelineflooring.com | Indianapolis, IN | LinkedIn | No carpet vs LVP in high-traffic areas guide | The most common comparison question buyers ask belongs on the site, not in a sales call. |
+| 13 | Cornerstone Floor Designs | cornerstonefloordesigns.com | Kansas City, MO | Instagram | No gallery with labeled cost ranges | Buyers at different budget levels leave if they can't tell what price tier the examples represent. |
+| 14 | Ironwood Floors | ironwoodfloors.com | Louisville, KY | cold email | Slow mobile load | Most floor research happens on a phone while standing in the room; slow load loses the lead. |
+| 15 | Lakeside Floor Co | lakesideflooring.com | Cleveland, OH | Facebook | No review count or rating on homepage | Google reviews are your strongest asset; they should be in the hero where buyers decide. |
+| 16 | TrueGrain Flooring | truegrainflooring.com | Richmond, VA | cold email | No maintenance or refinishing service section | Wood floor refinishing is a recurring revenue service that most floor sites don't mention. |
+| 17 | Northgate Flooring | northgateflooring.com | Baltimore, MD | LinkedIn | No commercial flooring section | Property managers and offices are a separate buyer; if you serve them, create a dedicated section. |
+| 18 | Sunstone Floors | sunstoneflooring.com | Albuquerque, NM | Instagram | No eco-friendly or low-VOC flooring callout | Buyers with pets or young children often search for non-toxic flooring options specifically. |
+| 19 | ClearGrain Flooring | cleargrainflooring.com | Boise, ID | cold email | No installation timeline or lead time visible | Buyers planning a renovation need to know how far out you're booking before they'll call. |
+| 20 | Ridgecrest Floor Specialists | ridgecrestfloorspecialists.com | Spokane, WA | Facebook | No sample ordering or showroom mention | Buyers who want to see materials in person need to know if you have samples available. |
+| 21 | Frontier Flooring | frontierflooring.com | Des Moines, IA | cold email | No FAQ on floor prep and underlayment | Common preparation questions come up on every sales call; answering them online shortens the cycle. |
+| 22 | Lakewood Hardwood Floors | lakewoodhardwoodfloors.com | Milwaukee, WI | Instagram | No stair and step installation section | Stair flooring is a premium add-on that pairs naturally with a floor install; it belongs on the site. |
+| 23 | Irongate Floor Company | irongateflooring.com | Knoxville, TN | cold email | No pull quote mentioning the cleanup process | Cleanup is the #2 concern after cost; a testimonial about clean installs is a direct conversion tool. |
+| 24 | BlueCrest Tile & Flooring | bluecresttileflooring.com | Tucson, AZ | LinkedIn | No tile pattern or design gallery | Pattern options like herringbone and offset brick appeal to design-conscious buyers; show them. |
+| 25 | Summit Tile & Stone | summittileandstone.com | Fresno, CA | cold email | No commercial tile or large-format tile section | Larger commercial and hospitality tile projects are a higher-ticket category that needs its own section. |
+| 26 | Hearthstone Flooring | hearth-stoneflooring.com | Memphis, TN | Facebook | No warranty on installation or labor | A posted labor warranty differentiates you from the lowest bid in any three-quote comparison. |
+| 27 | Clearwater Floors | clearwaterfloors.com | Jacksonville, FL | cold email | No humidity or moisture management callout | Florida buyers installing hardwood need assurance you account for humidity; say it explicitly. |
+| 28 | ProGrain Flooring | prograinflooring.com | Raleigh, NC | Instagram | No interior designer or contractor referral section | Design professionals refer floor installers regularly; a trade partner page makes that official. |
+| 29 | Heritage Carpet & Tile | heritagecarpettile.com | Charlotte, NC | cold email | No satisfaction guarantee or redo policy | A "we fix it if you're not satisfied" statement closes the gap for buyers comparing two installers. |
+| 30 | Northcrest Flooring | northcrestflooring.com | Minneapolis, MN | LinkedIn | No free in-home estimate or virtual consultation offer | Competitors offering a free in-home measure are capturing leads your site sends to them. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

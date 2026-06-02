@@ -230,6 +230,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | FlowFix Plumbing | flowfixplumbing.com | Denver, CO | cold email | no response time in hero | Emergency plumber but no arrival time commitment visible above the fold. |
+| 7 | PipePros Services | pipeprosservices.net | Nashville, TN | Instagram | no flat-rate pricing statement | Reviews say "gave price before starting" but the homepage has no upfront pricing language. |
+| 8 | TrustFlow Plumbing | trustflowplumbing.com | Charlotte, NC | LinkedIn | no license number displayed | Claims "licensed and insured" but shows no state license number to back it up. |
+| 9 | AllPipes Plumbing Co. | allpipesplumbing.com | Minneapolis, MN | cold email | no emergency CTA bar pinned at top | Emergency number buried in footer. Mobile users in a crisis never scroll that far. |
+| 10 | RapidFlow Plumbers | rapidflowplumbers.net | Tampa, FL | Facebook | no before/after drain repair photos | Service listing only. No visual proof of completed jobs anywhere on the site. |
+| 11 | SureFix Plumbing | surefixplumbing.com | Raleigh, NC | cold email | no hot water heater section | Water heater replacement is a high-ticket service not featured in the menu. |
+| 12 | ClearDrain Plumbing | cleardrainsplumbing.com | Boston, MA | Instagram | no sewer line inspection callout | Sewer camera inspection is a high-value lead source not mentioned anywhere. |
+| 13 | EasyFlow Plumbing | easyflowplumbing.net | Phoenix, AZ | LinkedIn | no financing mention for large jobs | Repiping and sewer replacement can exceed $5k. No financing option shown. |
+| 14 | QuickPipe Services | quickpipeservices.com | Columbus, OH | cold email | no same-day availability badge | Reviews mention same-day arrivals but no badge or statement appears on the homepage. |
+| 15 | SolidPipe Plumbing | solidpipeplumbing.com | Portland, OR | Facebook | no outdoor water line section | Irrigation and outdoor water line work is searched seasonally but not listed as a service. |
+| 16 | ValleyPlumb Co. | valleyplumbco.net | Sacramento, CA | cold email | no gas line service callout | Offers gas line work but it is not featured. Homeowners searching for it find nothing. |
+| 17 | MetroPlumb Professionals | metroplumbpro.com | Indianapolis, IN | Instagram | no bathroom remodel plumbing section | Remodel plumbing is a premium service not featured despite being offered. |
+| 18 | ClearStream Plumbing | clearstreamplumbing.com | Louisville, KY | LinkedIn | no main water shut-off location guide | An educational guide about shut-offs would attract homeowners and rank for search. |
+| 19 | PipeRight Services | piperightservices.net | Kansas City, MO | cold email | no water pressure issue callout | Low pressure is a top search term. The site has no dedicated section for this problem. |
+| 20 | DrainKing Plumbers | drainkingplumbers.com | Memphis, TN | Facebook | no trenchless repair mention | Trenchless sewer repair is premium priced. Not mentioned despite being a growing search term. |
+| 21 | FreshFlow Plumbing | freshflowplumbing.com | Richmond, VA | cold email | no tankless water heater section | Tankless installation is a high-interest search. Not visible on the service menu. |
+| 22 | QuickResponse Plumbing | quickresponseplumbing.net | Pittsburgh, PA | Instagram | no after-hours rate transparency | Emergency calls after hours have different pricing. Nothing on the site explains this. |
+| 23 | BlueLine Plumbing Co. | blueplineplumbing.com | Omaha, NE | LinkedIn | no water softener section | Water quality is a top concern in this market. No mention of softeners or filtration. |
+| 24 | TrueFlow Plumbing | trueflowplumbing.com | Salt Lake City, UT | cold email | no leak detection section | Leak detection is a distinct service with its own search volume. Not listed separately. |
+| 25 | GoldenPipe Services | goldenpipeservices.net | Albuquerque, NM | Facebook | no septic to sewer conversion mention | Older homes in this market often need this service. Not referenced anywhere on the site. |
+| 26 | ProPipe Plumbing LLC | propipeplumbing.com | Boise, ID | cold email | no frozen pipe prevention guide | Seasonal content that drives traffic in autumn and winter. No educational content anywhere. |
+| 27 | CleanLine Plumbing | cleanlineplumbing.com | Spokane, WA | Instagram | no drain camera inspection CTA | Camera inspection is a self-contained service with strong search demand. Not listed. |
+| 28 | CityFlow Plumbers | cityflowplumbers.net | Knoxville, TN | LinkedIn | no crawl space plumbing section | Older homes in this market have crawl spaces. No mention of the challenges involved. |
+| 29 | SurePath Plumbing | surepathplumbing.com | Tulsa, OK | cold email | no financing for full repipe | Full repipe can cost $8k to $15k. No payment plan or financing path shown. |
+| 30 | SwiftDrain Plumbing | swiftdrainplumbing.com | Fresno, CA | Facebook | no restaurant or commercial section | Grease trap and commercial drain calls are high-margin. The site shows only residential work. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

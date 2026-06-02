@@ -223,6 +223,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Blueprint Studio Architecture | blueprintstudioarch.com | Denver, CO | LinkedIn | No project timeline or process phase guide | Clients engaging an architect for the first time need to understand permitting, design, and build phases. |
+| 7 | Meridian Design Group | meridiandesigngroup.com | Austin, TX | cold email | No portfolio filter by project type | Residential, commercial, and ADU projects are all mixed; buyers in each category can't find their work. |
+| 8 | Canopy Architecture | canopyarchitecture.com | Portland, OR | LinkedIn | No AIA credential or license badge visible | Professional credentials are the baseline trust signal in architecture; yours aren't visible. |
+| 9 | Form & Function Design | formandfunctiondesign.com | Charlotte, NC | cold email | No pricing guide or typical engagement cost range | Prospective clients leave before calling because they can't tell if they can afford the service. |
+| 10 | Cornerstone Architects | cornerstonearchitects.net | Minneapolis, MN | LinkedIn | No case study with project photos, challenge, and solution | A structured case study sells better than a gallery alone because it shows thinking, not just results. |
+| 11 | Vista Design Studio | vistadesignstudio.com | Phoenix, AZ | cold email | No founder bio or named principal | Architecture is a personal service; clients want to know who leads their project before they call. |
+| 12 | Threshold Architecture | thresholdarchitecture.com | Raleigh, NC | Instagram | No before/after or concept-to-build transformation | Showing the original structure alongside the finished design is the strongest portfolio format. |
+| 13 | Bridgeline Design | bridgelinedesign.com | Nashville, TN | cold email | No FAQ on permitting or zoning questions | The three questions every client asks before hiring are not answered on the site. |
+| 14 | Prairie Light Architecture | prairielightarchitecture.com | Kansas City, MO | LinkedIn | No client testimonials on the homepage | Reviews may exist on Google but the site shows nothing to validate the quality of work. |
+| 15 | Archform Studio | archformstudio.com | Richmond, VA | cold email | No sustainable or LEED credential callout | Green design is a differentiator; if you have green credentials they should be visible in the hero. |
+| 16 | Northcrest Architecture | northcrestarchitecture.com | Indianapolis, IN | Instagram | Portfolio is not mobile-friendly | Most early research happens on a phone; a desktop-only portfolio loses buyers at the first click. |
+| 17 | Ridgewood Design Associates | ridgewooddesignassoc.com | Columbus, OH | cold email | No residential vs commercial project split | Homeowners and developers are evaluating different project types; one portfolio confuses both. |
+| 18 | Sunstone Architecture | sunstoneachitecture.com | Salt Lake City, UT | LinkedIn | No project cost scale or typical budget range | Architecture clients want to know if you work on $300k builds or $3M builds before they reach out. |
+| 19 | Waypoint Design Group | waypointdesigngroup.com | Pittsburgh, PA | cold email | No service area or state licensing visibility | Multi-state projects need a clear licensing statement or buyers will go with a local firm. |
+| 20 | Pacific Arch Studio | pacificarchstudio.com | Seattle, WA | Instagram | No interior vs exterior portfolio split | Buyers looking for interior redesign are confused by a gallery that leads with exterior massing shots. |
+| 21 | Cedarwood Architecture | cedarwoodarchitecture.com | Boise, ID | cold email | No consultation booking link or call scheduling tool | Visitors interested enough to act have no clear next step except a generic contact form. |
+| 22 | UrbanEdge Architects | urbanedgearchitects.com | Baltimore, MD | LinkedIn | No awards or publication features listed | Press mentions and design awards are credibility signals that differentiate you from competitors. |
+| 23 | Lakefront Design Studio | lakefrontdesignstudio.com | Milwaukee, WI | cold email | No process infographic or phase overview | A visual "here's how we work" section reduces the uncertainty that stops first-time clients from calling. |
+| 24 | Summit Architecture | summitarchitectureco.com | Albuquerque, NM | Instagram | No 3D rendering or concept sketch shown | Showing the design thinking process attracts clients who want a collaborative architect, not just a drafter. |
+| 25 | Ironwood Design | ironwooddesignstudio.com | Memphis, TN | cold email | No specialty callout for additions or ADUs | ADU design is a high-demand service; if you offer it, it needs its own page or section. |
+| 26 | Broadview Architecture | broadviewarchitecture.com | Spokane, WA | LinkedIn | No licensed engineer partnership mentioned | Structural and MEP coordination is a client concern; naming your engineering partner removes a worry. |
+| 27 | Centerline Design | centerlinedesignco.com | Des Moines, IA | cold email | No project completion stats or portfolio count | "50 completed residential projects" as a single stat builds credibility faster than a paragraph. |
+| 28 | Fieldview Architects | fieldviewarchitects.com | Knoxville, TN | Facebook | No mobile-first navigation | Desktop-heavy navigation means phone visitors can't find the portfolio or contact page easily. |
+| 29 | Lakeshore Architecture | lakeshoredesignarch.com | Cleveland, OH | cold email | No phased service offering | Some clients want design only; others want design-build. A tiered service page captures both. |
+| 30 | Horizons Architecture Group | horizonsarchgroup.com | Tucson, AZ | LinkedIn | No virtual or remote consult option stated | Mentioning remote design consults broadens your reach without requiring in-person meetings. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

@@ -227,6 +227,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Ironstone Concrete & Masonry | ironstoneconcrete.com | Dallas, TX | cold email | No finish-type labels in gallery | Exposed aggregate, stamped, and broom-finish are all shown together with no way to tell which is which. |
+| 7 | Keystone Masonry Works | keystonemasonryworks.com | Chicago, IL | LinkedIn | No warranty statement visible | Foundation and flatwork clients expect a posted warranty; yours shows nothing. |
+| 8 | SolidBase Concrete | solidbaseconcrete.com | Phoenix, AZ | cold email | No before/after project pairings | The visual proof of your work is more convincing with a before image next to the finished result. |
+| 9 | Crestview Concrete Co | crestviewconcreteco.com | Columbus, OH | Facebook | No cost-per-sqft guide | Homeowners comparing bids need a ballpark before they'll reach out for a quote. |
+| 10 | Precision Paving & Masonry | precisionpavingandmasonry.com | Charlotte, NC | Instagram | Gallery has no project scale or sq ft info | A photo of a patio with no dimensions tells the buyer nothing about the scope you handle. |
+| 11 | Heritage Stone & Concrete | heritagestoneandconcrete.com | Louisville, KY | cold email | No license or contractor number visible | Homeowners spending $10k+ on flatwork need to verify credentials before they call. |
+| 12 | Riverstone Masonry | riverstonemasonryco.com | Richmond, VA | LinkedIn | No residential vs commercial gallery split | Homeowners and commercial property owners are different buyers; one gallery loses both. |
+| 13 | BlueSlab Concrete | blueslabconcrete.com | Nashville, TN | cold email | No process or timeline section | Buyers planning a driveway install need to know what to expect from start to finish. |
+| 14 | Apex Concrete Solutions | apexconcretesolutions.com | Indianapolis, IN | Facebook | No client review pull quotes on homepage | 4.5 stars on Google is invisible from the site; putting one quote in the hero would convert better. |
+| 15 | Granite Ridge Masonry | graniteridgemasonry.com | Denver, CO | Instagram | No retaining wall or specialty project callout | Your reviews mention retaining walls but the homepage doesn't feature that service. |
+| 16 | ProSlab Flatwork | proslabflatwork.com | Tampa, FL | cold email | No service area map or city list | Homeowners outside your main city can't tell if you serve their neighborhood. |
+| 17 | Stonebridge Concrete | stonebridgeconcreteco.com | Minneapolis, MN | LinkedIn | No project financing option mentioned | Larger flatwork and retaining wall jobs benefit from a visible payment plan mention. |
+| 18 | Cornerstone Concrete & Paving | cornerstoneconcretepaving.com | Kansas City, MO | cold email | Slow mobile load | Most homeowners get your number from a phone search; slow mobile load loses the call. |
+| 19 | Solid Ground Masonry | solidgroundmasonry.com | Albuquerque, NM | Facebook | No founder or owner bio | Buyers hire people they trust; a brief owner intro with years of experience converts better than a logo alone. |
+| 20 | Summit Concrete Works | summitconcreteworks.com | Salt Lake City, UT | Instagram | No stamped concrete inspiration gallery | Stamped concrete is a premium upsell; buyers need to see options before they ask about it. |
+| 21 | Fieldstone Masonry | fieldstonemasonryco.com | Pittsburgh, PA | cold email | No before/after for crack or structural repair work | Repair clients need to see evidence of previous fixes, not just new construction. |
+| 22 | PavePro Concrete | paveproconcrete.com | Raleigh, NC | LinkedIn | No HOA or commercial reference listed | A single commercial or HOA client reference adds credibility that residential-only photos don't. |
+| 23 | Lakeside Concrete Specialists | lakesideconcreteco.com | Cleveland, OH | cold email | No FAQ or common-question section | Drainage, frost heave, and sealing questions come up on every sales call; answer them on the page. |
+| 24 | Desert Rock Masonry | desertrockmasonryaz.com | Tucson, AZ | Facebook | No color or texture option visual guide | Homeowners choosing between concrete finishes need visual options before they'll book a consult. |
+| 25 | Ridgeline Concrete Co | ridgelineconcreteco.com | Boise, ID | Instagram | No job-completion timeframe listed | Buyers want to know if a driveway takes two days or two weeks before they commit. |
+| 26 | Northgate Masonry | northgatemasonryco.com | Baltimore, MD | cold email | No satisfaction guarantee or redo policy | A simple "we fix it if it cracks in year one" statement removes the biggest hesitation. |
+| 27 | Quarry View Concrete | quarryviewconcrete.com | Memphis, TN | LinkedIn | No Google review count on homepage | Your rating belongs in the hero where it influences the first impression, not buried in a footer. |
+| 28 | Irongate Concrete | irongateconcrete.com | Des Moines, IA | cold email | No patio design or planning guide | A one-page PDF or on-site guide for patio planning would capture leads before competitors do. |
+| 29 | Creekside Masonry Works | creeksidemasonryworks.com | Spokane, WA | Facebook | No team or crew photos | Seeing actual workers on the site builds trust that stock images and polished renders can't match. |
+| 30 | Foundation First Concrete | foundationfirstconcrete.com | Knoxville, TN | cold email | No warranty on flatwork or structural repairs | Buyers choosing between two concrete companies will pick the one that posts a written warranty. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

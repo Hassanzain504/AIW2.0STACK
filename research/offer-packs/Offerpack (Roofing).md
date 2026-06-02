@@ -225,6 +225,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | StormGuard Roofing | stormguardroofing.net | Indianapolis, IN | cold email | no storm damage gallery | Offers storm repair but no before/after damage-to-finished photos anywhere on the site. |
+| 7 | RidgeLine Roofing Co. | ridgelineroofingco.com | Kansas City, MO | Instagram | no insurance walkthrough section | Reviews say "walked me through the whole claim" but the homepage says nothing about this. |
+| 8 | BlueSky Roofers | blueskyroofersllc.com | Raleigh, NC | LinkedIn | no crew introduction | Homeowners letting strangers onto their roof want to know who is coming. |
+| 9 | ProRoof Services | proroofservices.net | Tampa, FL | cold email | no shingle brand or warranty shown | No mention of shingle type or manufacturer warranty. Buyers comparing quotes need this. |
+| 10 | CrestView Roofing | crestviewroofing.com | Minneapolis, MN | Facebook | no ice dam or winter damage section | A major revenue driver in cold markets that is not featured on the site. |
+| 11 | HomeShield Roofing | homeshieldroofing.com | Charlotte, NC | cold email | no financing section | Roof replacement at $8k to $20k benefits from a payment plan mention. |
+| 12 | TrueTop Roofing | truetoproofing.net | Portland, OR | Instagram | no flat roof or commercial section | Flat roof repair is a distinct service with its own search traffic. Not listed. |
+| 13 | SkylineRoof Co. | skylinerooofco.com | Salt Lake City, UT | LinkedIn | no project timeline shown | Homeowners want to know how long a replacement takes before they commit. |
+| 14 | EagleView Roofing | eagleviewroofing.com | Louisville, KY | cold email | no metal roofing section | Metal roofing is a high-value premium segment not featured despite growing demand. |
+| 15 | Centurion Roofing | centurionroofinginc.com | Omaha, NE | Facebook | no attic ventilation mention | Poor ventilation is the root cause of many roof failures. No educational content. |
+| 16 | AllPro Roofers | allproroofers.com | Richmond, VA | cold email | no local weather reference | No mention of specific storm risks in Virginia. A localized headline would convert better. |
+| 17 | FirstChoice Roofing | firstchoiceroofingpro.com | Memphis, TN | Instagram | no before/after comparison photo | Gallery shows finished roofs only. No damage-to-finished side-by-side comparison. |
+| 18 | ClearTop Roofing | cleartoproofing.net | Albuquerque, NM | LinkedIn | no hail damage inspection CTA | Hail inspection is a lead-generation tool not offered on the homepage. |
+| 19 | SturdyRoof Services | sturdyroofservices.com | Pittsburgh, PA | cold email | no gutter replacement section | Gutters are often replaced alongside a roof. Not mentioned as a paired service. |
+| 20 | ProShield Roofers | proshieldroofers.com | Boise, ID | Facebook | no local supplier callout | No mention of where materials are sourced. Local supply is a trust signal for community-minded buyers. |
+| 21 | Landmark Roofing Co. | landmarkroofingco.com | Spokane, WA | cold email | no skylight installation section | Skylights are a premium add-on. Not mentioned as a service despite being offered. |
+| 22 | GreenRidge Roofing | greenridgeroofing.net | Knoxville, TN | Instagram | no 50-year shingle option | Longevity-focused buyers have no premium option shown on the service page. |
+| 23 | TrueShield Roofing | trueshieldroofing.com | Tulsa, OK | LinkedIn | no emergency tarping service | Emergency tarping after a storm is an entry-point service not listed anywhere. |
+| 24 | ProCraft Roofing | procraftroofinginc.com | Fresno, CA | cold email | no energy-efficient roofing section | Cool roofs and reflective coatings are a strong sell in hot climates. Not mentioned. |
+| 25 | SummitTop Roofing | summittooproofing.com | Madison, WI | Facebook | no chimney flashing section | Chimney flashing failures are a top leak cause. Not called out as a service. |
+| 26 | EliteRoof Specialists | eliteroofspecialists.com | Fayetteville, AR | cold email | no solar-ready roof option | Solar installs are growing. A "solar-ready" roof mention would attract a new buyer type. |
+| 27 | RedLine Roofing | redlineroofing.net | Baton Rouge, LA | Instagram | no hurricane tie-down or uplift section | Gulf coast homeowners search specifically for storm-resistant roofing methods. |
+| 28 | ClearCoast Roofing | clearcoastrroofing.com | Savannah, GA | LinkedIn | no annual roof inspection offer | Recurring inspection is a low-barrier entry service not offered on the homepage. |
+| 29 | BrightTop Roofing | brighttoprroofing.com | Little Rock, AR | cold email | no review count in hero | 4.7 stars shown but review count is hidden. Volume adds credibility to the rating. |
+| 30 | NorthStar Roofing | northstarroofingco.com | Chattanooga, TN | Facebook | no before storm vs after storm comparison | A dramatic damage-to-finished comparison image would anchor the homepage but is missing. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

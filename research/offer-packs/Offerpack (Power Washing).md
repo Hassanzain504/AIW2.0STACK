@@ -234,6 +234,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | BrightBlast Power Washing | brightblastpowerwash.com | Raleigh, NC | cold email | no before/after gallery | Reviews say "like new driveway" but not a single before photo appears on the site. |
+| 7 | SpotlessPro Washing | spotlessprowashing.net | Denver, CO | Instagram | no pricing table by surface | "Call for a quote" CTA only. Homeowners comparing three washers want a number before calling. |
+| 8 | ClearDrive Wash Co. | cleardrivewashco.com | Tampa, FL | LinkedIn | no insurance statement | Site says "professional service" but no mention of what happens if siding gets damaged. |
+| 9 | PowerSurge Wash | powersurgewash.com | Nashville, TN | Facebook | no soft wash vs pressure wash explanation | Two very different methods. The site uses both terms interchangeably with no explanation. |
+| 10 | FreshFacade Washing | freshfacadewashing.com | Charlotte, NC | cold email | no deck restoration section | Deck washing and brightening is a high-value add-on not listed as a service. |
+| 11 | CrystalBlast Services | crystalblastservices.com | Boston, MA | Instagram | no concrete sealing add-on | Driveway sealing after washing is a revenue opportunity not mentioned anywhere. |
+| 12 | RoofClean Pros | roofcleanpros.net | Orlando, FL | cold email | no roof washing section | Roof soft washing is a premium service not distinguished from driveway work on the site. |
+| 13 | QuickWash Specialists | quickwashspecialists.com | Columbus, OH | LinkedIn | no mobile-friendly phone CTA | Half of quote requests come from mobile. The phone number is text only, not tap-to-call. |
+| 14 | HydroShine Washing | hydroshine washing.com | Portland, OR | cold email | no seasonal discount callout | Spring and fall promotions are a booking driver. No mention of seasonal packages on the site. |
+| 15 | ProSurface Cleaners | prosurfacecleaners.com | Seattle, WA | Facebook | no graffiti removal section | Graffiti removal is a specialized high-margin service not listed despite being offered. |
+| 16 | SurfaceMaster Washing | surfacemasterwash.com | Phoenix, AZ | cold email | no pool deck section | Pool decks are a high-search surface type in this market. Not listed as a service. |
+| 17 | NeatHome Wash Co. | neathomewashco.net | Minneapolis, MN | Instagram | no commercial fleet washing section | Fleet and commercial washing are offered but not visible on a consumer-focused site. |
+| 18 | GreenWash Pros | greenwashpros.com | Indianapolis, IN | LinkedIn | no eco-friendly detergent callout | Eco rinse is a differentiator in this market. Reviews mention it but the site does not. |
+| 19 | AceBlast Washing | aceblastwashing.com | Richmond, VA | cold email | no before/after fence section | Fence washing before/after photos are a strong conversion image for homeowners with wood fences. |
+| 20 | CleanCrete Services | cleancrete services.net | Pittsburgh, PA | Facebook | no parking lot striping tie-in | Commercial lots need both washing and re-striping. Not mentioned as a bundled service. |
+| 21 | CrystalClear Wash | crystalclearwash.com | Louisville, KY | cold email | no gutter cleaning bundle callout | Gutter cleaning is frequently added to a wash job. No bundle mention or CTA on the site. |
+| 22 | ShineLine Pressure Washing | shinelinepressurewash.com | Omaha, NE | Instagram | no HOA compliance washing mention | Many HOAs require periodic home washing. No mention of helping homeowners meet that requirement. |
+| 23 | BrightPath Washing | brightpathwashing.net | Kansas City, MO | LinkedIn | no property management section | Property managers are repeat buyers. No B2B section or separate contact path. |
+| 24 | TrueBlast Services | trueblastservices.com | Salt Lake City, UT | cold email | no brick and stone cleaning section | Brick washing is a distinct search term with no dedicated callout. |
+| 25 | SnapClean Washing | snapcleanwashing.com | Albuquerque, NM | Facebook | no annual recurring plan | No mention of an annual package despite the climate making it a logical product. |
+| 26 | AllSurface Washers | allsurfacewashers.com | Boise, ID | cold email | no oil stain removal section | Oil and rust stain removal is a distinct service with its own search demand not featured. |
+| 27 | QuikShine Pressure Wash | quikshinepressurewash.com | Spokane, WA | Instagram | no before/after solar panel section | Solar panel washing is growing in this market. Not mentioned as a service. |
+| 28 | MaxBlast Washing | maxblastwashing.net | Knoxville, TN | LinkedIn | no quote turnaround time promise | Contact form only with no mention of how fast a quote comes back. |
+| 29 | StarSurface Cleaning | starsurfacecleaning.com | Fresno, CA | cold email | no new construction cleanup section | Post-construction wash is a builder-facing service not mentioned on a homeowner-facing site. |
+| 30 | ProWash Crew | prowashcrew.com | Tulsa, OK | Facebook | no window cleaning add-on mention | Window cleaning as a bundle add-on is a revenue opportunity not referenced anywhere. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

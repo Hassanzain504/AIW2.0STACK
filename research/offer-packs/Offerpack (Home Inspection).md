@@ -220,6 +220,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Summit Home Inspection | summithomeinspection.com | Denver, CO | cold email | No sample inspection report available | Buyers evaluating inspectors want to see the report format before booking; no sample is a missed conversion. |
+| 7 | Keystone Inspection Services | keystoneinspectionservices.com | Pittsburgh, PA | LinkedIn | No InterNACHI or ASHI certification badge visible | Credential badges are the first thing buyers check; yours aren't visible on the homepage. |
+| 8 | Ridgeline Home Inspectors | ridgelinehomeinspectors.com | Salt Lake City, UT | cold email | No turnaround time for the report | Buyers under contract need to know if they'll get results in 24 or 72 hours before booking. |
+| 9 | Heritage Inspection Group | heritageinspectiongroup.com | Louisville, KY | Instagram | No radon or mold testing section | Add-on tests are high-margin services that many buyers need; they need their own visible section. |
+| 10 | ProCheck Home Inspection | procheckhi.com | Columbus, OH | Facebook | No online scheduling tool | Phone-only booking loses buyers who want to schedule at night or on weekends. |
+| 11 | Apex Property Inspectors | apexpropertyinspectors.com | Charlotte, NC | cold email | No inspector bio with years of experience | Buyers want to know who is walking through the home they're about to purchase. |
+| 12 | BlueLine Home Inspection | bluelinehomeinspection.com | Nashville, TN | LinkedIn | No pool or sewer scope inspection callout | Specialty inspections are premium add-ons; if you offer them, they need their own section. |
+| 13 | Cornerstone Inspections | cornerstoneinspections.com | Indianapolis, IN | cold email | No FAQ on what is and isn't covered | The four most common buyer questions are not answered anywhere on the site. |
+| 14 | Ironwood Property Inspection | ironwoodpropertyinspection.com | Raleigh, NC | Instagram | No review count or star rating on homepage | Your Google rating is your most powerful trust signal and it's not on the site. |
+| 15 | Lakeview Home Inspectors | lakeviewhomeinspectors.com | Cleveland, OH | cold email | No realtor referral or agent program section | Realtors are your biggest lead source; a dedicated referral section would make that official. |
+| 16 | Pacific Home Inspection | pacifichomeinspection.com | Portland, OR | LinkedIn | No insurance or E&O policy mention | Buyers and agents want to know you carry errors and omissions insurance before booking. |
+| 17 | Northgate Inspection Services | northgateinspections.com | Baltimore, MD | cold email | No pre-listing or seller inspection section | Seller inspections are a growing service; a dedicated section captures that search traffic. |
+| 18 | TrueView Home Inspection | trueviewhomeinspection.com | Kansas City, MO | Facebook | Slow mobile load | Most home inspection searches happen during open houses on a phone; slow load loses the booking. |
+| 19 | Sunstone Property Inspectors | sunstonepropinspectors.com | Albuquerque, NM | Instagram | No new construction or phase inspection section | Builder inspections during construction are a separate high-value service that needs its own mention. |
+| 20 | ClearEye Inspection | cleareyeinspection.com | Boise, ID | cold email | No satisfaction or accuracy guarantee | A posted "if we miss it, we cover it" policy builds trust that standard inspector sites don't show. |
+| 21 | Ridgecrest Home Inspection | ridgecresthi.com | Spokane, WA | LinkedIn | No thermal imaging or moisture detection callout | Technology-enhanced inspections are a premium add-on; if you have the equipment, advertise it. |
+| 22 | Frontier Inspection Group | frontierinspectiongroup.com | Des Moines, IA | cold email | No service area map or county list | Buyers in rural counties can't confirm you'll travel to their property without a coverage map. |
+| 23 | Heritage Property Inspectors | heritagepropertyinspectors.com | Knoxville, TN | Facebook | No price or starting rate visible | Buyers comparing inspectors need a price signal before they'll reach out; hiding it loses conversions. |
+| 24 | ProSight Home Inspection | prosighthomeinspection.com | Memphis, TN | cold email | No financing or pay-at-close option mention | Buyers tight on upfront cash want to know if they can roll the inspection into closing costs. |
+| 25 | Lakewood Inspection Services | lakewoodinspectionservices.com | Milwaukee, WI | Instagram | No review quote from a first-time buyer | First-time buyers are your most anxious customers; a testimonial from one builds specific trust. |
+| 26 | Irongate Home Inspection | irongatehomeinspection.com | Tucson, AZ | cold email | No 11-month warranty inspection callout | An 11-month inspection for new construction buyers is a high-value add-on almost no inspector promotes. |
+| 27 | Summit Inspection Services | summitinspectionservices.com | Fresno, CA | LinkedIn | No infrared scan or air quality test mention | Specialty equipment and tests differentiate you from the inspector who only does a visual walkthrough. |
+| 28 | BlueSky Property Inspection | blueskyphomeinspection.com | Jacksonville, FL | cold email | No wind mitigation or 4-point inspection section | Florida buyers need wind mitigation reports for insurance; a dedicated section captures that search. |
+| 29 | Cornerstone Inspection Co | cornerstoneinspectionco.com | Richmond, VA | Facebook | No photo gallery of common defects found | Showing real findings from previous inspections proves thoroughness better than any word claim. |
+| 30 | Northcrest Home Inspectors | northcresthomeinspectors.com | Baltimore, MD | cold email | No automated report delivery or online portal mention | Inspectors offering a digital portal for report access stand out from PDF-email-only competitors. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

@@ -222,6 +222,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Apex Garage Door Solutions | apexgaragedoorsolutions.com | Phoenix, AZ | cold email | No emergency repair callout | Garage doors break at 7am before work; if you offer same-day service it needs to be the hero message. |
+| 7 | Ridgeline Garage Doors | ridgelinegaragedoors.com | Denver, CO | Instagram | No brand comparison guide | Clopay vs LiftMaster vs Amarr is the question every buyer has; answering it on the site gets the call. |
+| 8 | Summit Garage Builders | summitgaragebuilders.com | Salt Lake City, UT | cold email | No garage size guide or standard vs custom option | Buyers ordering a new garage need to understand size, clearance, and permit requirements upfront. |
+| 9 | Keystone Garage & Storage | keystonegarageandstorage.com | Pittsburgh, PA | LinkedIn | No storage or organization system section | Garage storage builds are a premium upsell to door replacement; yours doesn't mention them. |
+| 10 | Heritage Garage Specialists | heritagegara.com | Louisville, KY | cold email | No license or insurance badge on homepage | A homeowner authorizing a garage install or repair wants credentials visible before calling. |
+| 11 | ProLift Garage Doors | proliftgaragedoors.com | Columbus, OH | Facebook | No smart opener or WiFi integration callout | Smart garage openers are a growing upsell; if you install them, they need a homepage mention. |
+| 12 | Coastal Garage Works | coastalgarageworks.com | Jacksonville, FL | Instagram | No hurricane-rated or wind-load door section | Florida buyers need wind-load rated doors; a code-compliant callout would capture that search. |
+| 13 | BlueSky Garage Doors | blueskygaragedoors.com | Indianapolis, IN | cold email | Slow mobile load | Most garage door searches happen on a phone after a malfunction; slow load loses the call. |
+| 14 | Cornerstone Garage Systems | cornerstonegara.com | Raleigh, NC | LinkedIn | No before/after door replacement photos | Showing the worn old door next to the new panel is the fastest way to justify the upgrade cost. |
+| 15 | TrueTrack Garage Doors | truetrackgaragedoors.com | Nashville, TN | cold email | No spring repair or parts replacement section | Spring and cable repairs are the most common service; they need their own visible section. |
+| 16 | Irongate Garage Builders | irongate-garagebuilders.com | Charlotte, NC | Facebook | No custom carriage or wood-look door gallery | Premium door styles are a high-margin category that most garage door sites don't highlight. |
+| 17 | Lakeview Garage Doors | lakeviewgaragedoors.com | Cleveland, OH | cold email | No financing option for door replacement | A $2,500-$5,000 door replacement benefits from a visible payment plan mention. |
+| 18 | Pacific Garage Systems | pacificgaragesystems.com | Portland, OR | Instagram | No insulated door or R-value callout | Energy efficiency is a selling point in colder climates; insulation specs belong in the hero. |
+| 19 | Summit Garage Co | summitgarageco.com | Minneapolis, MN | LinkedIn | No technician profile or team photo | Homeowners authorizing a repair want to know who is showing up at their home before booking. |
+| 20 | Cleargate Garage Doors | cleargate-garagedoors.com | Kansas City, MO | cold email | No review count on homepage | 4.6 stars on Google is your strongest conversion asset; it should appear above the fold on your site. |
+| 21 | Ridgecrest Garage & Door | ridgecrestgarage.com | Boise, ID | Facebook | No service area map | Homeowners in outlying areas can't confirm you'll come to them without a coverage map. |
+| 22 | Northgate Garage Solutions | northgategaragesolutions.com | Baltimore, MD | cold email | No warranty on springs, cables, or openers | A posted parts-and-labor warranty differentiates you from the cheapest bid in every comparison. |
+| 23 | Sunstone Garage Works | sunstonegarageworks.com | Albuquerque, NM | Instagram | No detached garage or new construction section | New garage builds are a separate buyer; if you do them, a dedicated section captures that search. |
+| 24 | BlueCrest Garage Doors | bluecrestgaragedoors.com | Spokane, WA | cold email | No color or panel style selector | Buyers replacing a door want to see how different styles look on a house before deciding. |
+| 25 | Heartland Garage & Door | heartlandgaragedoor.com | Des Moines, IA | LinkedIn | No maintenance plan or annual service offer | An annual tune-up plan creates recurring revenue from your existing install base. |
+| 26 | Ironwood Garage Builders | ironwoodgaragebuilders.com | Memphis, TN | cold email | No permit handling or city approval mention | New garage builds require permits; stating you manage that removes a buyer friction point. |
+| 27 | ProPanel Garage Doors | propanelgaragedoors.com | Tucson, AZ | Facebook | No FAQ on opener compatibility | Buyers with an existing opener want to know if a new door is compatible; answer it on the page. |
+| 28 | Lakewood Garage Systems | lakewoodgaragesy.com | Milwaukee, WI | cold email | No commercial or multi-unit garage section | Property managers looking for multi-door replacements can't tell if you serve commercial properties. |
+| 29 | Keystone Door & Storage | keystonedoorstorage.com | Richmond, VA | Instagram | No pull quote from a satisfied homeowner | A single review quote with a specific job type converts better than a generic testimonials section. |
+| 30 | Pinnacle Garage Works | pinnaclegarageworks.com | Fresno, CA | cold email | No after-hours emergency rate disclosure | Transparency about overtime fees is a trust signal; hiding them causes the bad surprise in reviews. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

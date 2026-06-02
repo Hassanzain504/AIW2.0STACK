@@ -220,6 +220,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Smooth Wall Pros | smoothwallpros.com | Chicago, IL | cold email | No texture style gallery | Skip trowel, knockdown, and orange peel are all different; buyers can't choose without seeing them. |
+| 7 | Precision Drywall Co | precisiondrywallco.com | Dallas, TX | LinkedIn | No before/after for water-damage repair | Repair clients need to see the evidence of previous patch and blend work, not just new installs. |
+| 8 | Apex Drywall Services | apexdrywallservices.com | Phoenix, AZ | cold email | No dust-control or clean-job callout | Messy drywall work is the top complaint in reviews; a clean-site guarantee is a strong differentiator. |
+| 9 | Ridgeline Drywall | ridgelinedrywallco.com | Denver, CO | Instagram | No license or contractor number visible | Buyers hiring for large interior projects expect credentials on the page before calling. |
+| 10 | Plaster Masters | plastermasters.com | Boston, MA | cold email | No historical or restoration plaster section | If you do ornate plaster restoration, that's a premium niche that needs its own gallery section. |
+| 11 | Keystone Drywall & Finish | keystonedrywallfinish.com | Columbus, OH | Facebook | No project size or scope examples | Buyers can't tell if you do single-room patches or full house drywall from the homepage. |
+| 12 | Heritage Plaster Co | heritageplasterco.com | Pittsburgh, PA | LinkedIn | No process or timeline section | A "what to expect" section for a drywall project would reduce pre-call hesitation. |
+| 13 | Summit Drywall Specialists | summitdrywallspecialists.com | Salt Lake City, UT | cold email | No residential vs commercial split | GCs and homeowners are different buyers; serving both from one generic page confuses both. |
+| 14 | FlatLine Drywall | flatlinedrywallco.com | Indianapolis, IN | Instagram | No review count displayed on site | Google shows your rating but the homepage doesn't; it should be in the hero. |
+| 15 | Ironclad Plaster & Drywall | ironcladplasterdrywall.com | Nashville, TN | cold email | No FAQ on repair vs replace decision | Buyers with a water-damaged wall don't know whether to patch or redo; answer it on the page. |
+| 16 | Cornerstone Drywall | cornerstonedrywallco.com | Charlotte, NC | Facebook | No crew photos or team intro | A photo of the actual crew builds trust that a logo and service list never will. |
+| 17 | WallCraft Drywall | wallcraftdrywall.com | Raleigh, NC | LinkedIn | No soundproofing or specialty drywall callout | Acoustic and fire-rated drywall are premium upsells; if you offer them, they need visibility. |
+| 18 | BlueSky Drywall Services | blueskydrywallservices.com | Minneapolis, MN | cold email | Slow mobile load | Most referral searches happen on a phone; slow load means the lead goes to the next result. |
+| 19 | SolidWall Finishers | solidwallfinishers.com | Kansas City, MO | Instagram | No project portfolio beyond three photos | Three photos is not enough to demonstrate range; buyers need to see variety to build confidence. |
+| 20 | Clearcoat Drywall | clearcoatdrywall.com | Louisville, KY | cold email | No warranty on finish or tape work | A "no visible seams at 12 months" guarantee would stand out on every competitor comparison. |
+| 21 | Artisan Plaster Works | artisanplasterworks.com | Richmond, VA | LinkedIn | No interior designer or GC referral section | Referral partners are your biggest source of leads; a B2B page for trade professionals is missing. |
+| 22 | Pacific Drywall Solutions | pacificdrywallsolutions.com | Sacramento, CA | cold email | No paint-ready or level-5 finish callout | Level-5 finish is a premium spec; homeowners and designers who want it are searching for it. |
+| 23 | ProWall Drywall Co | prowalldrywallco.com | Tampa, FL | Facebook | No service area map | Homeowners outside your main city can't confirm you serve their neighborhood. |
+| 24 | Northside Drywall | northsidedrywallco.com | Milwaukee, WI | cold email | No emergency repair or rush service callout | Post-storm or post-leak emergency patches are high-margin; if you offer them, say so. |
+| 25 | Centerline Finishes | centerlinefinishes.com | Des Moines, IA | Instagram | No financing or payment option mentioned | Larger whole-house drywall jobs benefit from a visible payment plan mention. |
+| 26 | Highmark Drywall | highmarkdrywall.com | Boise, ID | cold email | No project minimum or scope guidance | Buyers wanting a single patch may not be your client; a minimum project size saves both sides time. |
+| 27 | Lakewood Plaster Co | lakewoodplasterco.com | Cleveland, OH | LinkedIn | No association membership or insurance badge | PDCA membership and insurance certificates are trust signals that most drywall sites skip. |
+| 28 | StoneSlab Drywall | stoneslabdrywall.com | Albuquerque, NM | cold email | No before/after for ceiling texture match | Matching existing texture is the hardest part of drywall repair; show that you can do it. |
+| 29 | PureFinish Drywall | purefinishdrywall.com | Spokane, WA | Facebook | No consultation CTA above the fold | The contact form is buried below the fold; a sticky call button or top-of-page CTA is missing. |
+| 30 | TrueWall Drywall Services | truewalldrywallservices.com | Knoxville, TN | cold email | No Google review quotes on homepage | Customer words convert better than company claims; pull two review quotes into the hero section. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

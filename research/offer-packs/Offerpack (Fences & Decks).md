@@ -227,6 +227,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Ridgeline Fence & Deck | ridgelinefencedeck.com | Denver, CO | cold email | No material comparison guide | Wood, vinyl, aluminum, and composite all have different price points; buyers need a guide before they call. |
+| 7 | Summit Outdoor Structures | summitoutdoorstructures.com | Salt Lake City, UT | Instagram | No before/after project pairings | Side-by-side transformations of yards convert browsers into callers faster than finished-only photos. |
+| 8 | Apex Fence Solutions | apexfencesolutions.com | Phoenix, AZ | cold email | No HOA-compliant fence section | HOA buyers need assurance you know the rules before they'll trust you with the project. |
+| 9 | Keystone Deck Builders | keystonedeckbuilders.com | Pittsburgh, PA | LinkedIn | No composite vs pressure-treated comparison | The most common buyer question is material choice; answering it on the page saves the first sales call. |
+| 10 | Heritage Fence Company | heritagefenceco.com | Louisville, KY | cold email | No warranty on materials or labor visible | A posted warranty differentiates you from the unlicensed competitor who bid $500 less. |
+| 11 | BlueCrest Decking | bluecrestdecking.com | Raleigh, NC | Facebook | No gallery organized by project type | Fences, decks, pergolas, and gates all mixed together with no way for buyers to find their project. |
+| 12 | Ironwood Fence & Gate | ironwoodfencegate.com | Nashville, TN | cold email | No gate automation or access control callout | Automated gates are a premium upsell; if you install them, they need their own section. |
+| 13 | ProDeck Outdoor Living | prodeckoutdoorliving.com | Charlotte, NC | Instagram | No financing option mentioned | Composite decks regularly exceed $15k; a visible payment plan mention reduces sticker shock. |
+| 14 | Cornerstone Fence Co | cornerstonefenceco.com | Columbus, OH | LinkedIn | No license or insurance badge on homepage | Buyers approving a fence installation on their property want credentials visible before calling. |
+| 15 | Lakewood Deck Specialists | lakewooddeckspecialists.com | Cleveland, OH | cold email | No pergola or shade structure section | Pergolas and covered decks are high-margin add-ons; if you build them, show them. |
+| 16 | Pacific Cedar Decking | pacificcedardecking.com | Portland, OR | Instagram | No permit or code compliance mention | Decks require permits in most jurisdictions; stating that you handle permits removes a buyer concern. |
+| 17 | Northstar Fence Builders | northstarfencebuilders.com | Minneapolis, MN | cold email | Slow mobile load | Most yard project research happens on a phone while the homeowner is standing in their yard. |
+| 18 | Sunstone Outdoor Structures | sunstoneoutdoor.com | Albuquerque, NM | Facebook | No photo of the actual install crew | Seeing real workers in the yard builds trust that polished finish photos alone cannot. |
+| 19 | Coastal Fence & Privacy | coastalfenceprivacy.com | Jacksonville, FL | cold email | No privacy fence inspiration gallery | Privacy fences are the most searched fence type; a dedicated gallery section captures that traffic. |
+| 20 | Frontier Deck & Rail | frontierdeckrail.com | Kansas City, MO | LinkedIn | No railing material or style options shown | Railing selection is a major decision point; showing metal, cable, glass, and wood options would convert. |
+| 21 | Ridgecrest Fencing | ridgecrestfencing.com | Boise, ID | Instagram | No maintenance or sealing service callout | An annual deck maintenance offer creates recurring revenue from your existing client base. |
+| 22 | Lakeside Fence Pros | lakesidefencepros.com | Milwaukee, WI | cold email | No dog fence or pet-safe fence section | Pet owner searches for "dog fence installer" are high-intent; a dedicated section captures them. |
+| 23 | BlueSky Fence & Deck | blueskydeckfence.com | Memphis, TN | Facebook | No project timeline or install schedule guide | Buyers planning around summer barbecue season need to know how far out you're booked. |
+| 24 | Heritage Post & Panel | heritagepostandpanel.com | Spokane, WA | cold email | No commercial fencing or security fencing section | Commercial property managers searching for fencing contractors can't tell if you serve them. |
+| 25 | TrueGrain Decking | truegraindeck.com | Des Moines, IA | LinkedIn | No project cost range or per-sqft estimate | Buyers comparing multiple quotes need a ballpark before they'll schedule an in-person estimate. |
+| 26 | Irongate Outdoor | irongate-outdoor.com | Richmond, VA | cold email | No customer testimonial on homepage | Google reviews are invisible from your site; pulling one quote into the hero would improve conversion. |
+| 27 | CedarPoint Fence Company | cedarpointfence.com | Indianapolis, IN | Instagram | No side-by-side old vs new fence photo | Showing what the yard looked like before the project makes the transformation tangible for buyers. |
+| 28 | Stonecroft Deck Builders | stonecroftdeckbuilders.com | Baltimore, MD | cold email | No winter or off-season discount callout | Off-season pricing is a real advantage; promoting it extends your booking window and fills slow months. |
+| 29 | Summit Gate Systems | summitgatesystems.com | Tucson, AZ | Facebook | No HOA or city permit compliance statement | Homeowners in HOA communities won't start a project without knowing you handle approval paperwork. |
+| 30 | Pacific Yard Structures | pacicyardstructures.com | Fresno, CA | cold email | No outdoor kitchen or built-in grill section | Outdoor kitchen add-ons are a high-ticket upsell that pairs naturally with deck projects. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

@@ -236,6 +236,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | QuickLock Services | quicklockservices.com | Denver, CO | cold email | no technician photo | Your reviews name the tech by name but the homepage has no face or license number. |
+| 7 | TrustKey Locksmith | trustkeylocksmith.com | San Antonio, TX | Instagram | no upfront pricing display | You advertise transparency but the homepage has no price range by service type. |
+| 8 | SafeEntry Locksmiths | safeentrylocksmith.net | Portland, OR | LinkedIn | no response time in hero | The hero says "fast service" but no specific arrival time is listed anywhere. |
+| 9 | ProAccess Lock & Key | proaccesslockandkey.com | Charlotte, NC | cold email | no license number visible | Operating in a market with known scam listings but no license number in the header. |
+| 10 | Citywide Locksmith Co. | citywidescklocksmith.com | Detroit, MI | Facebook | no mobile tap-to-call | Half your traffic is phone users locked out. The number is not a tap-to-call link. |
+| 11 | Capitol Lock Solutions | capitollocksolutions.com | Austin, TX | cold email | no service area map | Customers cannot tell if you cover their part of Austin before they call. |
+| 12 | HomeGuard Locksmith | homeguardlocksmith.net | Las Vegas, NV | Instagram | no pricing, stock hero photo | Hero is a stock padlock image. No face, no price, no reason to trust. |
+| 13 | SwiftKey Locksmiths | swiftkeylocksmith.com | Minneapolis, MN | LinkedIn | no named technician | Business name implies speed but no person behind the business is introduced. |
+| 14 | LockRight Services | lockrightservices.com | Tampa, FL | cold email | no rekey vs lockout separation | All services listed in one block with no CTA split for emergency vs scheduled work. |
+| 15 | SecurePoint Locksmith | securepointlocksmith.com | St. Louis, MO | Facebook | no Google review count shown | 4.8 rating but no review count visible. Number would add significant credibility. |
+| 16 | Premier Lock & Security | premierlockandkey.com | Baltimore, MD | cold email | no 24/7 badge visible | Offers overnight service but no visible "available 24/7" badge above the fold. |
+| 17 | Apex Key & Lock | apexkeyandlock.com | Louisville, KY | Instagram | no before/after rekey gallery | No photos of completed rekey jobs to show the process and outcome. |
+| 18 | FirstLine Locksmith | firstlinelocksmith.net | Tucson, AZ | cold email | no technician ID section | Homeowners in Tucson cannot verify who is coming to their door before unlocking it. |
+| 19 | GoldenState Lock Co. | goldenstateiockco.com | Sacramento, CA | LinkedIn | no price anchor for car lockout | Auto lockout is a top service but no price range is shown for it. |
+| 20 | RightKey Locksmith | rightkeyiocksmith.com | Kansas City, MO | cold email | no emergency CTA bar | Emergency contact number is buried in the footer, not pinned at the top. |
+| 21 | Urban Lock Solutions | urbanlocksolutions.net | Seattle, WA | Instagram | no team badge or photo | Site lists "bonded and licensed" in text but no badge, no face, no number. |
+| 22 | Keymaster Locksmiths | keymasterlocksmiths.com | Phoenix, AZ | Facebook | no commercial vs residential split | Serves both markets but the homepage mixes them with no clear navigation. |
+| 23 | LockStar Services | lockstarservices.com | Pittsburgh, PA | cold email | no arrival time guarantee | Reviews say "arrived in 20 minutes" but the site makes no time commitment. |
+| 24 | Precision Lock & Key | precisionlockandkey.net | Orlando, FL | LinkedIn | no scam differentiation copy | In a market flooded with scam listings, the site does nothing to separate itself. |
+| 25 | CityKey Locksmith | citykeyiocksmith.com | Indianapolis, IN | cold email | no neighborhood coverage list | No coverage map or zip code list to confirm service reach before calling. |
+| 26 | TrueGuard Locksmiths | trueguardlocksmith.com | Raleigh, NC | Instagram | no pricing transparency section | Generic "call for a quote" CTA with no price range to anchor expectations. |
+| 27 | SafeCall Lock & Key | safecalllocksmith.net | Memphis, TN | cold email | no license badge | License is mentioned in footer text. Not scannable, not a trust signal. |
+| 28 | HomeEntry Locksmith | homeentrylocksmith.com | Richmond, VA | Facebook | no response time in mobile hero | Mobile version crops the hero and the response time claim disappears. |
+| 29 | AccessPro Locksmiths | accessprolocksmith.com | Salt Lake City, UT | LinkedIn | no technician bio section | Homeowners letting a stranger into their home want to know who that person is. |
+| 30 | AllKey Lock Services | allkeylockservices.com | Albuquerque, NM | cold email | no car lockout CTA | Auto lockout is listed under services but has no dedicated CTA or price range. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

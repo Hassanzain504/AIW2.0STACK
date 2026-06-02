@@ -220,6 +220,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Ridgeline Insulation | ridgelineinsulation.com | Denver, CO | cold email | No R-value comparison guide | Buyers choosing between fiberglass, spray foam, and cellulose need a spec guide before they'll call. |
+| 7 | Summit Insulation Solutions | summitinsulationsolutions.com | Salt Lake City, UT | Instagram | No before/after attic insulation photos | A thermal image or side-by-side of old compressed insulation vs a new blown-in install is a strong conversion tool. |
+| 8 | Keystone Insulation Co | keystoneinsulationco.com | Pittsburgh, PA | cold email | No energy savings estimate or payback period | Buyers want to know the ROI before spending $3k-$8k on insulation; a simple estimate section converts. |
+| 9 | Heritage Insulation Services | heritageinsulationservices.com | Louisville, KY | LinkedIn | No rebate or utility program callout | State and utility rebates for insulation upgrades are a real buyer incentive that most sites ignore. |
+| 10 | Apex Insulation Group | apexinsulationgroup.com | Columbus, OH | cold email | No spray foam vs blown-in vs batt comparison | The most common buyer question is product comparison; answering it on the page gets the call. |
+| 11 | ProSeal Insulation | prosealinsulation.com | Charlotte, NC | Facebook | No air sealing section | Air sealing paired with insulation is a premium add-on; if you do it, give it a dedicated section. |
+| 12 | BlueSky Insulation | blueskyinsulationco.com | Nashville, TN | cold email | No crawl space or basement insulation section | Below-grade insulation is a separate product category that needs its own page or section. |
+| 13 | Cornerstone Insulation | cornerstoneinsulationco.com | Indianapolis, IN | Instagram | No license or certification badge | BPI or RESNET certification is a trust signal that most insulation sites skip entirely. |
+| 14 | Ironwood Insulation | ironwoodinsulation.com | Raleigh, NC | LinkedIn | No new construction vs retrofit split | Builders and homeowners looking for retrofits are different buyers; one page serves neither well. |
+| 15 | Lakeview Insulation Services | lakeviewinsulationservices.com | Cleveland, OH | cold email | No energy audit or blower door test mention | A free energy audit offer is a lead magnet that positions you ahead of competitors with no audit. |
+| 16 | Pacific Insulation Co | pacificinsulationco.com | Portland, OR | Facebook | No sound insulation or acoustic application section | Acoustic insulation for media rooms and home offices is a high-margin niche your site ignores. |
+| 17 | Northgate Insulation | northgateinsulation.com | Baltimore, MD | cold email | No review count or star rating on homepage | Google reviews are your strongest trust signal; they should be in the hero section, not only on Google. |
+| 18 | TrueFoam Insulation | truefoaminsulation.com | Kansas City, MO | Instagram | No closed-cell vs open-cell spray foam explanation | The buyer question of which spray foam type is right for their application goes unanswered on the site. |
+| 19 | Sunstone Insulation | sunstoneinsulation.com | Albuquerque, NM | LinkedIn | No financing or EnergyBetter loan mention | Insulation upgrades are frequently financed; a visible financing option reduces the upfront cost barrier. |
+| 20 | ClearSeal Insulation | clearsealinsulation.com | Boise, ID | cold email | No service area map | Homeowners in rural or suburban fringe areas can't confirm you'll travel to their location. |
+| 21 | Ridgecrest Insulation Co | ridgecrestinsulationco.com | Spokane, WA | Facebook | No photo of the crew or equipment | A photo of a spray rig or crew in PPE builds authenticity that product spec sheets can't match. |
+| 22 | Frontier Insulation Services | frontierinsulationservices.com | Des Moines, IA | cold email | No commercial or pole barn insulation section | Agricultural and commercial insulation is a different buyer; a dedicated section captures that search. |
+| 23 | Heritage Foam & Fiber | heritagefoamandfiber.com | Knoxville, TN | LinkedIn | No attic vs wall vs crawl space guide | Buyers don't know which area to prioritize; a simple priority guide positions you as the trusted expert. |
+| 24 | ProWall Insulation | prowallinsulation.com | Memphis, TN | cold email | No thermal imaging or blower door scan offer | Technology-enhanced assessments are a premium differentiator that most insulation sites don't offer. |
+| 25 | Lakewood Insulation Group | lakewoodinsulationgroup.com | Milwaukee, WI | Instagram | No seasonal promotion or winter-ready campaign | Pre-winter insulation installs are a natural campaign hook; yours doesn't promote one. |
+| 26 | Irongate Insulation | irongate-insulation.com | Tucson, AZ | cold email | No FAQ on insulation for desert climates | Radiant barrier and reflective insulation are desert-specific products most generic sites don't address. |
+| 27 | Summit Foam Solutions | summitfoamsolutions.com | Fresno, CA | Facebook | No customer testimonial pull quote about energy savings | A specific "my bill dropped $80 per month" quote converts insulation buyers better than any spec sheet. |
+| 28 | BlueCrest Insulation | bluecrestinsulation.com | Jacksonville, FL | cold email | No hurricane wind-resistance or moisture-barrier callout | Florida buyers need moisture and wind performance; a code-compliance callout captures that concern. |
+| 29 | Cornerstone Spray Foam | cornerstonesprayfoa.com | Richmond, VA | LinkedIn | No health and indoor air quality section | Off-gassing concerns about spray foam are common; addressing them transparently builds trust. |
+| 30 | Northcrest Insulation Co | northcrestinsulationco.com | Raleigh, NC | cold email | No post-install energy monitoring or utility bill comparison offer | Offering a 90-day energy bill comparison positions your service as an investment, not just a cost. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

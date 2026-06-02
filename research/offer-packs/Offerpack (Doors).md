@@ -234,6 +234,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Heritage Door Company | heritagedoorco.com | Denver, CO | cold email | No door style or material guide | Homeowners comparing wood, fiberglass, and steel entry doors need guidance your site doesn't provide. |
+| 7 | Precision Entry Doors | precisionentrydoors.com | Phoenix, AZ | LinkedIn | No security rating or energy-efficiency callout | Two of the top buyer concerns in entry doors are invisible on your homepage. |
+| 8 | Keystone Door & Window | keystonedoorwindow.com | Pittsburgh, PA | cold email | No before/after installation photos | A side-by-side of an old vs new door is the fastest way to show the transformation value. |
+| 9 | Landmark Doors | landmarkdoorsco.com | Charlotte, NC | Instagram | No manufacturer brand logos shown | Listing brands like Therma-Tru or Pella builds instant credibility with product-aware buyers. |
+| 10 | Summit Door Solutions | summitdoorsolutions.com | Salt Lake City, UT | cold email | No installation timeline or lead time visible | Buyers planning a renovation need to know if it takes one week or six weeks to get a door installed. |
+| 11 | Clearview Doors | clearviewdoorsco.com | Columbus, OH | Facebook | No energy savings or insulation R-value mention | Energy-conscious homeowners want a performance spec, not just an aesthetic photo. |
+| 12 | Atlantic Door Specialists | atlanticdoorspecialists.com | Baltimore, MD | LinkedIn | No license or bonded badge on homepage | Buyers allowing installation work on their home want visible credentials before booking. |
+| 13 | ProEntry Doors | proentry-doors.com | Nashville, TN | cold email | No color or finish option visual guide | Buyers choosing between finishes need a visual selector, not a list of names. |
+| 14 | Irongate Entry Systems | irongateeentrysystems.com | Tampa, FL | Instagram | No Google review count on homepage | Your rating on Google is your strongest asset; it belongs in the site hero, not only on Google. |
+| 15 | Ridgecrest Door Company | ridgecrestdoors.com | Minneapolis, MN | cold email | No storm door or screen door upsell section | A paired storm door recommendation on the main entry door page would increase average ticket size. |
+| 16 | Woodcraft Entry Doors | woodcraftentrydoors.com | Raleigh, NC | Facebook | No FAQ on installation damage or patching | Homeowners worried about wall damage during install need an answer before they'll book. |
+| 17 | Prairie Door & Millwork | prairiedoor-millwork.com | Kansas City, MO | LinkedIn | No sliding vs swinging door comparison | Buyers considering patio and French door options need a simple comparison guide. |
+| 18 | Copperline Doors | copplerlinedoors.com | Indianapolis, IN | cold email | No custom sizing or special order mention | Older homes with non-standard openings need to know you handle non-standard sizing. |
+| 19 | Bayside Door Installations | baysidedoorinstall.com | Jacksonville, FL | Instagram | No financing option mentioned | A $3k-$6k entry door system benefits from a visible payment plan option to reduce sticker shock. |
+| 20 | Valor Door Company | valordoorco.com | Louisville, KY | cold email | Slow mobile load on the gallery page | Most door research starts on a phone; slow gallery load loses buyers before they see the work. |
+| 21 | Northgate Doors | northgatedoorsco.com | Spokane, WA | Facebook | No commercial door or ADA-compliant door section | If you serve commercial clients, that needs its own page to capture that search traffic. |
+| 22 | Silverline Entry Solutions | silverlineentrysolutions.com | Des Moines, IA | cold email | No service area map or zip code coverage | Homeowners on the edge of your service zone can't confirm you'll come to them. |
+| 23 | Archway Door & Hardware | archwaydoorhardware.com | Richmond, VA | LinkedIn | No smart lock or keypad integration mention | Smart entry options are a growing upsell that your competitors are leading with. |
+| 24 | Timberline Door Co | timblerlinedoorco.com | Boise, ID | cold email | No founder or installer bio | Buyers letting someone replace their front door want to know who is doing the work. |
+| 25 | Gatework Door Systems | gateworkdoorsystems.com | Memphis, TN | Instagram | No certification or AAMA compliance listed | Energy Star or AAMA-tested door specs are trust signals that informed buyers look for. |
+| 26 | Crestview Entry Doors | crestviewentrydoors.com | Knoxville, TN | cold email | No pull quote from a satisfied customer on homepage | A single review quote with a homeowner name converts better than a generic "why choose us" section. |
+| 27 | Eastside Door Pros | eastsidedoorpros.com | Cleveland, OH | Facebook | No warranty comparison between product lines | Buyers evaluating door brands want to compare warranty terms; none are visible. |
+| 28 | Bridgeview Door & Frame | bridgeviewdoorframe.com | Albuquerque, NM | cold email | No emergency or same-day service mention for damaged doors | A storm or break-in can damage a door; if you offer urgent service, that should be visible. |
+| 29 | Lakeview Entry Systems | lakeviewentrysystems.com | Milwaukee, WI | LinkedIn | No Houzz or Zillow-integrated portfolio | Buyers browsing design platforms before choosing a contractor won't find you without a presence. |
+| 30 | CrossKey Door Solutions | crosskeydoorsolutions.com | Tucson, AZ | cold email | No financing partner logo or monthly payment estimate | Showing a $89/month payment estimate alongside a $2,500 door reduces the price-shock barrier. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

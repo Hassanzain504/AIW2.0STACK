@@ -228,6 +228,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Brightvolt Electric | brightvoltelectric.com | Denver, CO | cold email | No upfront pricing statement | Electricians have a reputation for surprise bills; one sentence about written quotes before work starts removes that fear. |
+| 7 | Apex Electrical Services | apexelectricalservices.com | Phoenix, AZ | LinkedIn | No license number or state license badge visible | Every homeowner hiring an electrician checks for a license; it belongs in the hero, not buried in a footer. |
+| 8 | Keystone Electric | keystoneelectricco.com | Pittsburgh, PA | cold email | No named technician profiles | Homeowners letting an electrician into their home want to know who is coming before booking. |
+| 9 | Ridgeline Electric | ridgelineelectricco.com | Salt Lake City, UT | Instagram | No emergency or same-day service callout | Electrical outages don't wait; if you offer same-day service it should be the first thing visitors see. |
+| 10 | Summit Electric Solutions | summitelectricsolutions.com | Charlotte, NC | cold email | No EV charger installation callout | EV charger installs are a high-margin service with growing demand; yours isn't visible on the site. |
+| 11 | ProWire Electric | proireelectric.com | Columbus, OH | Facebook | No before/after panel upgrade photos | Panel upgrades are a high-ticket service; showing the old panel next to the new one builds confidence. |
+| 12 | Copper Trail Electric | coppertrailelectric.com | Nashville, TN | LinkedIn | No generator or whole-home backup callout | Generator installs are a premium upsell that isn't mentioned despite being a common search term. |
+| 13 | Northgate Electrical | northgateelectrical.com | Minneapolis, MN | cold email | No residential vs commercial service split | Homeowners and business owners are different buyers; one generic services page serves neither. |
+| 14 | BlueLine Electric | bluelineelectricco.com | Tampa, FL | Instagram | No review count or star rating on homepage | 4.7 on Google is your strongest asset; it should appear in the hero where buyers make decisions. |
+| 15 | Clearfield Electric | clearfieldelectric.com | Indianapolis, IN | cold email | Slow mobile load on service pages | Most emergency electrical searches happen on a phone; slow load loses the call before it happens. |
+| 16 | Irongate Electrical Services | irongate-electrical.com | Louisville, KY | Facebook | No inspection or code compliance section | Post-purchase home inspection failures cost buyers money; showing you work to code is a trust signal. |
+| 17 | Lakewood Electric | lakewoodelectricco.com | Cleveland, OH | cold email | No service area map or zip code list | Homeowners on the edge of your coverage zone won't call if they can't confirm you serve them. |
+| 18 | Heritage Electric | heritageelectricco.com | Richmond, VA | LinkedIn | No financing option for large panel or rewire jobs | Full rewires and panel replacements are $5k-$15k jobs; a visible payment plan reduces sticker shock. |
+| 19 | Pacific Spark Electric | pacificsparkelectric.com | Portland, OR | cold email | No smart home or automation integration callout | Smart switch and dimmer installs are a growing upsell; if you offer them, say so prominently. |
+| 20 | Frontier Electric Co | frontierelectricco.com | Kansas City, MO | Instagram | No pull quote from a satisfied homeowner | A single review quote naming a technician and a specific job converts better than any feature list. |
+| 21 | Cornerstone Electric | cornerstoneelectricco.com | Raleigh, NC | cold email | No after-hours or emergency rate callout | Transparency about after-hours fees is a trust signal; hiding it creates the bad surprise in reviews. |
+| 22 | Stonewall Electric | stonewallelectric.com | Baltimore, MD | LinkedIn | No outdoor lighting or landscape electric section | Outdoor electrical is a high-margin add-on that's absent from the site entirely. |
+| 23 | BlueSky Electrical | blueskyelectrical.com | Albuquerque, NM | cold email | No FAQ on common electrical questions | Panel size, breaker trips, and GFCI outlets come up on every sales call; answer them on the page. |
+| 24 | Summit Spark Electric | summitsparkelectric.com | Boise, ID | Facebook | No technician certification list (NFPA, OSHA) | Named certifications signal professionalism that unlicensed competitors can't claim. |
+| 25 | Powerline Electric | powerlineelectric.com | Des Moines, IA | cold email | No before/after for outlet and switch modernization | Older homes with dated outlets are a huge market; showing the upgrade is a conversion-driver. |
+| 26 | GreenSpark Electric | greensparkelectric.com | Milwaukee, WI | Instagram | No solar integration or EV-ready panel callout | Homeowners planning solar installs often need panel upgrades first; capturing that search costs nothing. |
+| 27 | Ridgecrest Electric | ridgecrestelectric.com | Spokane, WA | cold email | No satisfaction guarantee or redo policy | A simple "we fix any issue within 30 days at no charge" statement converts skeptical buyers. |
+| 28 | Lakeview Electric | lakeviewelectricco.com | Memphis, TN | LinkedIn | No commercial project portfolio | If you serve commercial clients, a separate tab showing commercial work would capture GC referrals. |
+| 29 | Valley Wire Electric | valleywireelectric.com | Knoxville, TN | Facebook | No team photo or crew introduction | Seeing the actual electricians on the site builds the kind of trust a logo and service list never will. |
+| 30 | Suncoast Electric | suncoastelectricco.com | Jacksonville, FL | cold email | No annual inspection or maintenance plan offer | A yearly electrical inspection package creates recurring revenue and keeps clients loyal. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

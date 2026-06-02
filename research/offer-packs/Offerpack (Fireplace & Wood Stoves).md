@@ -234,6 +234,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Hearthside Fireplace Co | hearthsidefireplacecc.com | Denver, CO | cold email | No fuel-type comparison guide | Gas, wood, and electric fireplaces serve different needs; a guide on the page removes the first barrier. |
+| 7 | Ember & Stone Fireplaces | emberandstone.com | Salt Lake City, UT | Instagram | No before/after installation photos | Showing the room before the fireplace was added and after makes the value immediately tangible. |
+| 8 | Summit Hearth Design | summithearth.com | Minneapolis, MN | cold email | No EPA certification or clean-burn callout | EPA-certified stoves are a regulatory and marketing differentiator that most sites don't mention. |
+| 9 | Cornerstone Hearth & Home | cornerstonehearth.com | Pittsburgh, PA | LinkedIn | No inspection or chimney sweep service section | Pairing fireplace sales with annual inspections creates recurring revenue; it's missing from the site. |
+| 10 | BlueSky Fireplaces | blueskyfireplaces.com | Kansas City, MO | cold email | No manufacturer brand logos or certifications visible | NFI or HPBA credentials are buyer-facing trust signals; yours aren't shown anywhere. |
+| 11 | Ridgecrest Hearth | ridgecresthearth.com | Boise, ID | Instagram | No financing option for high-ticket installs | Custom fireplace installs can reach $8k-$20k; a visible payment plan reduces the commitment barrier. |
+| 12 | Keystone Wood Stove | keystonewoodstove.com | Portland, OR | cold email | No insert vs new install comparison | Many buyers don't know if they need an insert or a full install; answering that question converts leads. |
+| 13 | Hearthwood Fireplaces | hearthwoodfireplaces.com | Raleigh, NC | Facebook | No surround material or tile options shown | Fireplace surround choices are part of the design decision; showing options would increase average ticket. |
+| 14 | InnerFlame Hearth Co | innerflame-hearth.com | Nashville, TN | LinkedIn | No safety or clearance specification callout | Code clearances and safety specs are questions every buyer has; answering on the page builds trust. |
+| 15 | Ironside Fireplace | ironsidefirepace.com | Indianapolis, IN | cold email | No outdoor fireplace or fire pit section | Outdoor fireplace projects are high-margin and growing in demand; they're absent from your site. |
+| 16 | Sunstone Hearth | sunstonehearth.com | Albuquerque, NM | Instagram | No gallery organized by style | Traditional, modern, and farmhouse styles appeal to very different buyers; organize accordingly. |
+| 17 | Creekstone Fireplaces | creekstonefireplaces.com | Asheville, NC | cold email | No chimney liner or relining section | Chimney relining is a necessary companion to stove and insert installs; it needs its own mention. |
+| 18 | Fireside Living | fireside-living.com | Columbus, OH | Facebook | No service area map | Buyers in rural or suburban fringe areas can't tell if you travel to their location. |
+| 19 | Lakewood Hearth | lakewoodhearth.com | Cleveland, OH | cold email | No seasonal promotion for fall/winter installs | Pre-season promotions drive bookings before the rush; yours doesn't mention them. |
+| 20 | ProHearth Installation | prohearthinstall.com | Charlotte, NC | LinkedIn | Slow mobile load | Buyers researching fireplace options on a phone leave slow sites before seeing any content. |
+| 21 | Irongate Hearth & Home | irongatehearth.com | Louisville, KY | cold email | No warranty on installation or parts | A posted warranty on the install and the components would differentiate you from handyman competitors. |
+| 22 | Clearflame Fireplace | clearflamefireplace.com | Richmond, VA | Instagram | No pull quote from a homeowner on homepage | Customer words in the hero section build trust that product specs and feature lists can't match. |
+| 23 | CedarHearth Fireplaces | cedarhearth.com | Spokane, WA | cold email | No gas conversion section | Homeowners wanting to convert a wood fireplace to gas are a defined buyer segment; show that you do it. |
+| 24 | Stonegate Fireplace Co | stonegatefireplace.com | Memphis, TN | Facebook | No project size or room type context in gallery | Buyers want to see fireplaces in rooms similar to theirs; label gallery photos by room type. |
+| 25 | BlueCrest Wood Stoves | bluecrestwoodstoves.com | Des Moines, IA | cold email | No eco-friendly or low-emission callout | Buyers in states with air quality regulations care about emissions; a clean-burn statement helps. |
+| 26 | TrueFlame Hearth | trueflame-hearth.com | Milwaukee, WI | LinkedIn | No showroom or in-person viewing option mentioned | A showroom is a major differentiator; if you have one, the homepage should say so prominently. |
+| 27 | Ridgeline Stove Co | ridgelinestoveco.com | Knoxville, TN | Instagram | No FAQ on gas line requirements | Buyers wondering if their home needs a new gas line before a fireplace install hesitate to call; answer it. |
+| 28 | Northgate Hearth | northgatehearth.com | Tucson, AZ | cold email | No permit handling or city inspection mention | Fireplace installs require permits in most jurisdictions; stating you manage that removes a buyer worry. |
+| 29 | PineCrest Fireplaces | pinecrestfireplaces.com | Fresno, CA | Facebook | No testimonial mentioning the install process | Process-focused reviews build trust for buyers who fear disruption to their home during install. |
+| 30 | Hearthline Installations | hearthlineinstall.com | Baltimore, MD | cold email | No energy-efficiency or BTU output comparison | Buyers comparing stove models want output specs; a comparison table on the site would capture that search. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

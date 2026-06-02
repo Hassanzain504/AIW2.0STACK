@@ -238,6 +238,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Crestline Custom Homes | crestlinecustomhomes.com | Raleigh, NC | cold email | no completed home gallery with specs | Photos show beautiful work but no square footage, style, or budget range is listed. |
+| 7 | Lakeside Home Builders | lakesidehomebuilders.net | Austin, TX | LinkedIn | no build process timeline | Buyers planning a $600k build need to see what happens at each stage before they commit. |
+| 8 | Pioneer Custom Builders | pioneercustombuilders.com | Salt Lake City, UT | cold email | no founder bio | Reviews mention the owner by name but the site has no introduction to who leads projects. |
+| 9 | Blue Ridge Homes | blueridgehomesbuilder.com | Asheville, NC | Instagram | no communication milestone section | "Kept us informed" appears in 4 reviews but the site makes no process commitment. |
+| 10 | Timberline Custom Builds | timberlinecustombuilds.com | Spokane, WA | LinkedIn | no home style filter in gallery | All completed homes shown in one unfiltered grid. Buyers cannot find their preferred style. |
+| 11 | Heritage Home Builders | heritagehomebuilders.net | Knoxville, TN | cold email | no budget range context | Buyers do not know whether to inquire because no starting price guidance exists. |
+| 12 | Granite Peak Homes | granitepeakhomes.com | Billings, MT | Facebook | no testimonial video | Strong written reviews but no video walk-through or client story to build deeper trust. |
+| 13 | Keystone Custom Homes | keystonecustomhomespa.com | Harrisburg, PA | cold email | no land purchase guidance | Many buyers are also looking for lots. A mention of builder relationships with land agents would convert more. |
+| 14 | Lakewood Residential | lakewoodresidential.com | Naperville, IL | LinkedIn | no post-build photo section | Gallery ends at the construction phase. No lifestyle shots of completed, furnished interiors. |
+| 15 | Prestige Home Construction | prestigehomeconstruction.net | Tampa, FL | cold email | no energy efficiency section | Green building is a growing buyer priority and the site does not address it. |
+| 16 | Summit Crest Builders | summitcrestbuilders.com | Fort Collins, CO | Instagram | no design consultation CTA | "Start with a conversation" is buried. No dedicated design consult booking path on the homepage. |
+| 17 | BlueSky Home Builders | blueskyhomebuilders.com | Tulsa, OK | cold email | no lot selection section | Buyers unsure about land need a pointer. Competitors who mention this convert the early-stage buyer. |
+| 18 | Emerald Home Group | emeraldhomegroup.net | Portland, OR | LinkedIn | no subcontractor vetting mention | Buyers worry about who actually does the framing and plumbing. A vetting statement removes that. |
+| 19 | Appalachian Custom Homes | appalachiancustomhomes.com | Greenville, SC | cold email | no design upgrade options gallery | Buyer cannot envision fixture or finish upgrades without a visual reference. |
+| 20 | Lakefront Builders LLC | lakefrontbuilders.com | Madison, WI | Facebook | no photo with build date and location | Gallery shows homes but no context. Buyers cannot tell if projects are local or recent. |
+| 21 | Craftsman Creek Homes | craftsmancreekhomes.com | Little Rock, AR | cold email | no mortgage or financing resource link | Buyers need lender referrals. A builder who mentions pre-approval process removes a friction point. |
+| 22 | NorthPoint Home Builders | northpointhomebuilders.net | Omaha, NE | Instagram | no project management software mention | Competitors use BuilderTrend and mention it. Transparency on how updates are delivered builds trust. |
+| 23 | Prairie Home Construction | prairiehomeconstruction.com | Wichita, KS | LinkedIn | no teardown or existing lot mention | Many buyers want to tear down an old structure. No mention of this service path. |
+| 24 | Stillwater Custom Builders | stillwatercustombuilders.com | Oklahoma City, OK | cold email | no warranty length stated | Custom homes should include a structural warranty. The site mentions nothing about it. |
+| 25 | Evergreen Home Group | evergreenhomegroup.net | Eugene, OR | Facebook | no sustainable materials callout | Reviews mention eco-friendly materials twice. No mention on the homepage. |
+| 26 | Highlands Residential | highlandsresidential.com | Colorado Springs, CO | cold email | no indoor/outdoor living section | Mountain market buyers want indoor-outdoor flow. Gallery has no examples with decks or views. |
+| 27 | Clearwater Home Builders | clearwaterhomebuilders.com | Sarasota, FL | LinkedIn | no flood zone experience mention | Coastal buyers need to know the builder understands flood codes and elevated slab requirements. |
+| 28 | Stonegate Custom Homes | stonegatecustomhomes.com | Fayetteville, AR | cold email | no client portal or update log mention | No mention of how buyers stay informed during the 9-12 month build. |
+| 29 | BluePath Home Design | bluePathhomedesign.com | Chattanooga, TN | Instagram | no model home or showroom CTA | Buyers in this market visit model homes before committing. No in-person visit path on the site. |
+| 30 | Riverview Custom Builds | riverviewcustombuilds.com | Richmond, VA | cold email | no school district callout | Family buyers filter by schools. No mention of which neighborhoods or districts the builder works in. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

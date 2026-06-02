@@ -227,6 +227,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | SunSet Pool Design | sunsetpooldesign.com | San Diego, CA | cold email | no investment range in gallery | Beautiful photos but no label on pool type or price. Homeowners planning a budget have nothing to work with. |
+| 7 | TropicBuild Pools | tropicbuildpools.net | Orlando, FL | Instagram | no build process timeline | Reviews mention the build took longer than expected. A week-by-week timeline would prevent that complaint. |
+| 8 | WaveCraft Pool Co. | wavecraftpools.com | Houston, TX | LinkedIn | no named project designer | $80k pool is a relationship buy. No designer is introduced anywhere on the site. |
+| 9 | PalmPool Builders | palmpoolbuilders.com | Scottsdale, AZ | cold email | no spa vs pool comparison section | Homeowners choosing between a pool and a spa have no guidance on the site. |
+| 10 | CoastalBlue Pools | coastalbluepools.net | Jacksonville, FL | Facebook | no 3D design render example | Competitors offer 3D design previews. No mention of this on the site despite it being offered. |
+| 11 | LuxePool Creations | luxepoolcreations.com | Dallas, TX | cold email | no water feature section | Waterfalls and fountains are high-margin upgrades not featured in the service menu. |
+| 12 | AquaVista Builders | aquavistabuilders.com | Sacramento, CA | Instagram | no financing section | $60k to $120k investment. No financing path shown despite monthly payment conversations in reviews. |
+| 13 | ClearWater Pool Group | clearwaterpoolgroup.com | Charlotte, NC | LinkedIn | no permit and HOA handling mention | Many suburban markets require permits and HOA approval. Not mentioned on the site. |
+| 14 | SkyBlue Pool Design | skybluepool design.com | Tucson, AZ | cold email | no maintenance plan callout | Pool maintenance is recurring revenue. Not mentioned despite being offered. |
+| 15 | SurfPoint Pools | surfpointpools.net | Tampa, FL | Facebook | no salt vs chlorine comparison | A top buyer decision point that the site ignores entirely. |
+| 16 | TidalCraft Builders | tidalcraftbuilders.com | Ft. Lauderdale, FL | cold email | no swim-up bar or outdoor kitchen section | High-end add-ons are a revenue opportunity not featured despite reviews mentioning them. |
+| 17 | SandBar Pool Co. | sandbarpoolco.com | Austin, TX | Instagram | no fiber optic or LED lighting section | Lighting upgrades are a common inquiry. Not mentioned in the gallery or service list. |
+| 18 | BluBuild Pool Builders | blubuildpools.com | Albuquerque, NM | LinkedIn | no above-ground vs in-ground distinction | Both options served but the site blends them with no clear navigation. |
+| 19 | TerracePools LLC | terracePoolsllc.com | Nashville, TN | cold email | no demolition or removal service | Many buyers want to replace an existing pool. No mention of removal or renovation services. |
+| 20 | HorizonPool Creations | horizonpoolcreations.net | Baton Rouge, LA | Facebook | no 360-degree virtual tour | Competitors show virtual tours of completed pools. This site has static photos only. |
+| 21 ="| SunrisePools | sunrisepoolbuilders.com | Raleigh, NC | cold email | no winter prep or closing guide | In climate-transition markets, pool closing service is a revenue stream not mentioned. |
+| 22 | BlueSplash Builders | bluesplashbuilders.com | Columbus, OH | Instagram | no above-ground option callout | Above-ground premium pools are an entry price point not addressed on the site. |
+| 23 | GreenEdge Pool Design | greenedgepooldesign.com | Portland, OR | LinkedIn | no eco-friendly or solar heating section | An underserved niche in colder climates where operating cost matters more. |
+| 24 | SunStream Pools | sunstreampools.com | Richmond, VA | cold email | no warranty terms shown | Custom pool is a 20-year investment. No mention of what the warranty covers or for how long. |
+| 25 | TideWater Pool Co. | tidewaterpoolco.net | Virginia Beach, VA | Facebook | no saltwater system comparison | Saltwater vs chlorine is the top FAQ for new pool buyers. Not addressed on the site. |
+| 26 | BlueCove Pool Builders | bluecovepoolbuilders.com | Indianapolis, IN | cold email | no renovation or resurfacing section | Pool resurfacing is a lower-barrier entry service not featured on the homepage. |
+| 27 | PoolCraft Designs | poolcraftdesigns.com | Louisville, KY | Instagram | no customer design portal mention | Competitors use online design tools. No mention of how a buyer visualizes their project. |
+| 28 | OceanViewPools | oceanviewpoolsbuilder.com | Savannah, GA | LinkedIn | no concrete vs fiberglass comparison | Buyers researching materials need this comparison to move forward. Not on the site. |
+| 29 | SilverLake Pool Builders | silverlakepoolbuilders.net | Memphis, TN | cold email | no payment schedule section | Large project buyers want to understand milestone payments before signing. |
+| 30 | CoastalEdge Pools | coastaledgepools.com | Pensacola, FL | Facebook | no hot tub add-on section | Combined pool and hot tub installs are a premium upsell not mentioned on the homepage. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

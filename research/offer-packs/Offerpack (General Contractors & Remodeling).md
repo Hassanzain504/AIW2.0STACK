@@ -227,6 +227,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Ridgeline Renovations | ridgelinerenovations.com | Denver, CO | cold email | No project type filter in portfolio | Kitchen, bath, basement, and addition projects are all mixed; buyers in each category can't find their work. |
+| 7 | Summit Builders Group | summitbuildersgroup.com | Salt Lake City, UT | LinkedIn | No license number or state GC license badge | GC license credentials are the first thing homeowners verify; they belong in the site hero. |
+| 8 | Keystone Remodeling Co | keystoneremodelingco.com | Pittsburgh, PA | cold email | No project cost range or typical budget guide | Homeowners exploring a remodel need a rough budget range before they'll request a consultation. |
+| 9 | Heritage Build & Renovate | heritagebuildandrenovate.com | Louisville, KY | Instagram | No before/after project pairings | A before/after kitchen or bath transformation outperforms any finished-only photo gallery. |
+| 10 | ProCraft Remodeling | procraftremodeling.com | Columbus, OH | Facebook | No timeline or project phase overview | Buyers want to understand what living through a remodel looks like before they commit. |
+| 11 | Apex Construction Group | apexconstructiongrp.com | Charlotte, NC | cold email | No subcontractor management or trade partner mention | Homeowners want to know whether you use subs and how you manage them; silence creates doubt. |
+| 12 | Cornerstone Remodel & Build | cornerstoneremodelbuil.com | Nashville, TN | LinkedIn | No financing or construction loan guidance | Large remodels often require financing; a visible link or mention of options removes a major barrier. |
+| 13 | BlueLine Builders | bluelinebuilders.com | Raleigh, NC | cold email | No design-build vs bid-build explanation | First-time remodelers don't know the difference; explaining it on the site positions you as the expert. |
+| 14 | Summit Home Renovations | summithomerenovations.com | Minneapolis, MN | Instagram | No review count or star rating on homepage | 4.7 on Google belongs in the hero where buyers make decisions, not only on Google Maps. |
+| 15 | Irongate Construction | irongateconstruction.com | Indianapolis, IN | cold email | Slow mobile load | Most remodel research starts on a phone; a slow site loses the lead before it begins. |
+| 16 | Lakeview General Contractors | lakeviewgeneralcontractors.com | Cleveland, OH | LinkedIn | No specialty callout for ADU or in-law suite builds | ADU projects are a growing high-ticket service; if you build them, create a dedicated section. |
+| 17 | Pacific Crest Builders | pacificcrestbuilders.com | Portland, OR | cold email | No named project manager or lead contractor bio | Homeowners want to know who is in charge of their project; a faceless GC site loses that trust. |
+| 18 | Northgate Remodeling | northgateremodeling.com | Baltimore, MD | Facebook | No commercial buildout or tenant improvement section | Commercial TI work is a separate buyer; if you do it, a dedicated section captures those searches. |
+| 19 | Clearfield Construction | clearfieldconstruction.com | Kansas City, MO | cold email | No permit and inspection management callout | Stating that you handle all permits and inspections removes the biggest administrative burden buyers fear. |
+| 20 | TrueForm Remodeling | trueformremodeling.com | Boise, ID | Instagram | No client testimonial pull quote on homepage | Review quotes specific to a project type convert better than a generic star rating alone. |
+| 21 | Lakewood Home Builders | lakewoodhomebuilders.com | Milwaukee, WI | cold email | No post-completion warranty or punch-list process | A posted 12-month warranty on workmanship differentiates you from every competitor without one. |
+| 22 | Ridgecrest Builders | ridgecrestbuilders.com | Spokane, WA | LinkedIn | No portfolio filtered by project budget range | Buyers with a $50k budget and buyers with a $200k budget are different; separate galleries serve both. |
+| 23 | Heritage Construction Group | heritageconstructiongrp.com | Knoxville, TN | cold email | No energy-efficiency or green build section | Energy Star or LEED-aligned remodels are a growing segment; a callout captures that buyer. |
+| 24 | Ironwood Renovations | ironwoodrenovations.com | Des Moines, IA | Facebook | No FAQ on remodel disruption and timeline | The top homeowner concern is how disruptive a remodel will be; answer it explicitly on the page. |
+| 25 | Sunstone Builders | sunstonebuildersco.com | Albuquerque, NM | cold email | No service area map or county coverage | Homeowners in suburban or exurban areas can't confirm you'll travel to their property. |
+| 26 | BlueCraft General Contractors | bluecraftgc.com | Tucson, AZ | LinkedIn | No trade partner or preferred subcontractor list | Naming your plumbing, electrical, and tile subs by name builds trust in the quality of the whole team. |
+| 27 | CedarPoint Construction | cedarpointconstruction.com | Richmond, VA | cold email | No phased remodel option for budget-constrained buyers | Offering a phased approach (kitchen now, bath later) captures buyers who can't afford everything at once. |
+| 28 | Frontier Build Group | frontierbuildgroup.com | Memphis, TN | Instagram | No exterior remodel or siding and window section | Exterior renovation is often a separate search from interior remodel; a dedicated section captures it. |
+| 29 | Keystone Build & Design | keystonebuilddesign.com | Jacksonville, FL | cold email | No photo of the team or job site in progress | A candid photo of the crew at work builds authenticity that finished project photos alone can't create. |
+| 30 | Northcrest Remodeling | northcrestremodeling.com | Fresno, CA | Facebook | No referral or repeat client program mention | Happy clients are your best source of new leads; a referral section turns them into an active channel. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

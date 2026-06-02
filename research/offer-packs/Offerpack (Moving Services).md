@@ -221,6 +221,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | SwiftMove Relocation | swiftmoverelocations.com | Houston, TX | cold email | no binding quote statement | Homepage says "licensed and insured" but nothing about a binding price before moving day. |
+| 7 | ClearPath Movers | clearpathmovers.net | Seattle, WA | Instagram | no crew profile section | Reviews name the crew leader but the site has no team introduction at all. |
+| 8 | CapitalCity Moving Co. | capitalcitymoving.com | Columbus, OH | LinkedIn | no damage coverage statement | Expensive furniture owners have no reassurance about coverage if something breaks. |
+| 9 | RoadTrust Movers | roadtrustmovers.com | Denver, CO | Facebook | no long-distance vs local split | Both services listed together with no separate CTAs for different buyer intent. |
+| 10 | QuickHaul Moving | quickhaulmoving.net | Charlotte, NC | cold email | no response time for same-day moves | "Same-day available" claim with no specifics on how that actually works. |
+| 11 | MetroMove Experts | metromoveexperts.com | Boston, MA | LinkedIn | no before/after packing gallery | Offers packing services but no photos of wrapped furniture or completed pack. |
+| 12 | Premier Relocation Group | premierrelocationgroup.com | Miami, FL | cold email | mobile site loads in 9 seconds | Last-minute mobile bookers leave before your number appears. |
+| 13 | TrustHaulPro | trusthaulpro.com | Nashville, TN | Instagram | no background check mention | "Trusted crew" in the hero with no background check badge or verification. |
+| 14 | AllCity Movers | allcitymovers.net | Portland, OR | cold email | no storage option callout | Mentions storage in a bullet list. No dedicated section for customers who need a gap period. |
+| 15 | SunriseMovingCo | sunrisemovingco.com | Phoenix, AZ | Facebook | no flat-rate price example | "Get a free quote" CTA only. No example price to anchor expectations. |
+| 16 | BlueStar Relocation | bluestarrelocation.com | Minneapolis, MN | cold email | no crew background check badge | Three negative reviews mention strangers in the home. Badge would address this directly. |
+| 17 | FirstChoice Movers | firstchoicemovers.net | Tampa, FL | Instagram | no service area coverage list | Customers cannot confirm coverage before booking. |
+| 18 | ClearMove Professionals | clearmovepro.com | San Diego, CA | LinkedIn | no climate or specialty item section | No mention of piano, art, or fragile item handling despite offering those services. |
+| 19 | PeakHaul Moving | peakhaulmoving.com | Salt Lake City, UT | cold email | no online booking option | Only a phone number CTA. Mobile users booking on evenings get no self-service path. |
+| 20 | EastCoast Movers LLC | eastcoastmoversllc.com | Baltimore, MD | Facebook | no review count shown in hero | 4.7 stars but no review count next to it. The rating alone means less without volume. |
+| 21 | StarRoute Relocation | starrouterelocation.net | Raleigh, NC | cold email | no packing supply add-on section | Offers boxes and wrap as an add-on but the homepage makes no mention of it. |
+| 22 | WhiteGlove Movers | whiteglovemoversco.com | St. Louis, MO | Instagram | no luxury item handling callout | Name implies premium service but no copy explains what "white glove" means. |
+| 23 | QuickSet Moving Co. | quicksetmoving.com | Kansas City, MO | LinkedIn | no local vs long-distance pricing split | Both service tiers mentioned in one paragraph with no separate pricing context. |
+| 24 | PinPoint Relocation | pinpointrelocation.com | Pittsburgh, PA | cold email | no USDOT number visible | Interstate mover operating without showing their federal registration number. |
+| 25 | GreenValley Movers | greenvalleymovers.net | Albuquerque, NM | Facebook | no instant quote form | Generic contact form with 48-hour response. Booking decisions happen faster. |
+| 26 | PrimeMove Services | primemoveservices.com | Louisville, KY | cold email | no move-day checklist resource | Competitors offer free prep guides. This site has no lead magnet or trust content. |
+| 27 | FastTrack Movers | fasttrackmovers.net | Indianapolis, IN | Instagram | no Saturday or weekend availability callout | Residential movers book on weekends. No mention of weekend slots anywhere. |
+| 28 | SafeHaul Relocation | safehaulrelocation.com | Richmond, VA | LinkedIn | no post-move review ask CTA | 4.2 stars and 19 reviews. A review request nudge would accelerate social proof. |
+| 29 | NorthStar Moving Group | northstarmovinggroup.com | Milwaukee, WI | cold email | no corporate relocation section | Clearly does office moves but the homepage is entirely residential in tone. |
+| 30 | ClearRoute Movers | clearroutemovers.com | Sacramento, CA | Instagram | no furniture assembly add-on mention | Multiple reviews mention "also set up our furniture" but it is not listed as a service. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

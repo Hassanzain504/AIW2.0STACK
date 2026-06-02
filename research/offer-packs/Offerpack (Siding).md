@@ -220,6 +220,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | FreshFace Siding Co. | freshfacesiding.com | Indianapolis, IN | cold email | no before/after curb appeal gallery | Gallery shows installation progress. No same-house before/after that shows the transformation. |
+| 7 | ProPanel Siding | propanelsidingpros.com | Nashville, TN | Instagram | no insurance claim section | Storm damage is a primary lead source and the homepage never mentions insurance assistance. |
+| 8 | TrueEdge Siding | trueedgesiding.net | Kansas City, MO | LinkedIn | no material comparison table | Vinyl vs fiber cement vs engineered wood is the top buyer question. Not addressed. |
+| 9 | AllWeather Siding Group | allweathersidinggroup.com | Minneapolis, MN | cold email | no energy savings mention | Insulated siding improves energy bills. Reviews mention it but the homepage does not. |
+| 10 | ExteriorFirst Siding | exteriorfirstsiding.com | Raleigh, NC | Facebook | no color visualizer or tool | Competitors link to a color visualizer. This site shows swatches only. |
+| 11 | CleanCut Siding Pros | cleancutsidingpros.com | Charlotte, NC | cold email | no trim and soffit section | Complete exterior jobs include trim. Not mentioned despite being part of the offering. |
+| 12 | HomeFront Siding | homefrontsiding.com | Omaha, NE | Instagram | no HOA compliant siding note | Suburban HOA buyers need confirmation that the style and color meets HOA rules. |
+| 13 | WeatherShield Siding | weathershieldsiding.net | Columbus, OH | LinkedIn | no rot and moisture damage section | Site talks about new installs only. Repair and remediation of existing damage is not addressed. |
+| 14 | CrestlineSiding Co. | crestlinesidingco.com | Pittsburgh, PA | cold email | no vinyl vs fiber cement cost range | Buyers want a cost comparison before committing to a quote call. |
+| 15 | StormSafe Siding | stormsafesiding.com | Oklahoma City, OK | Facebook | no wind resistance rating | Tornado-prone market where wind ratings on materials would be a top conversion angle. |
+| 16 | PrimeCoat Siding | primcoatsiding.com | Louisville, KY | cold email | no gutter replacement tie-in | Gutters are often replaced with siding. No mention of a combined service package. |
+| 17 | ProShield Exteriors | proshieldexteriors.com | Richmond, VA | Instagram | no paintable siding option | Some buyers want a paintable surface. No mention of HardiePlank or comparable product. |
+| 18 | SteelSide Exteriors | steelsideexteriors.com | Memphis, TN | LinkedIn | no steel siding comparison | Steel siding has a niche following. Not featured despite being offered. |
+| 19 | ColorEdge Siding | coloredgesiding.net | Salt Lake City, UT | cold email | no fade warranty section | Utah sun is harsh on siding. A fade or color warranty section would convert this concern. |
+| 20 | MidwestSiding Pros | midwestsidingpros.com | Des Moines, IA | Facebook | no mold resistant product callout | Midwest humidity creates mold risk. A mold-resistant siding mention would differentiate. |
+| 21 | Freshwall Siding | freshwallsiding.com | Portland, OR | cold email | no cedar shake option shown | Pacific Northwest buyers often prefer cedar shake aesthetics. Not shown in the gallery. |
+| 22 | SolidHome Siding | solidhomesiding.com | Boise, ID | Instagram | no window and door flashing section | Flashing around windows is a key waterproofing step. Not mentioned as part of the install. |
+| 23 | NorthStar Siding Co. | northstarsidingco.net | Spokane, WA | LinkedIn | no before photo showing damaged siding | Gallery shows beautiful finished work but no damaged-siding starting point for comparison. |
+| 24 | BlueSky Exteriors | blueskyexteriors.com | Knoxville, TN | cold email | no insulated vinyl section | Insulated vinyl siding is a premium product not mentioned despite being a top energy upgrade. |
+| 25 | ProCraft Siding | procraftsiding.net | Tulsa, OK | Facebook | no hail impact rating | Hail is a top damage cause in this market. No mention of siding rated for impact resistance. |
+| 26 | ClassicCoat Siding | classiccoatsiding.com | Albuquerque, NM | cold email | no stucco to siding conversion section | Many older NM homes have stucco. Conversion is a common and profitable project not listed. |
+| 27 | TruFront Exteriors | trufrontexteriors.com | Fresno, CA | Instagram | no composite board and batten section | Board and batten is a trending aesthetic with its own search demand. Not shown in gallery. |
+| 28 | ClearFront Siding | clearfrontsiding.com | Madison, WI | LinkedIn | no ice and water barrier mention | Midwest winters make ice dam protection critical. No mention of underlayment or barrier products. |
+| 29 | EdgeGuard Siding | edgeguardsiding.net | Little Rock, AR | cold email | no exterior painting bundle | Siding installation often precedes an exterior repaint. No mention of a bundled service. |
+| 30 | AllCraft Siding Co. | allcraftsidingco.com | Chattanooga, TN | Facebook | no local manufacturer proximity note | Local supply partnerships reduce lead time and build trust. Not mentioned. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

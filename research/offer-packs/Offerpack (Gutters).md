@@ -220,6 +220,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Ridgeline Gutter Pros | ridgelinegutterpros.com | Denver, CO | cold email | No seamless vs sectional gutter comparison | Most homeowners don't know the difference; a simple guide on the page positions you as the expert. |
+| 7 | Summit Gutter Systems | summitguttersystems.com | Salt Lake City, UT | Instagram | No before/after installation photos | Showing old sagging gutters next to a new seamless run makes the upgrade argument for itself. |
+| 8 | Keystone Gutter Co | keystonegutterco.com | Pittsburgh, PA | cold email | No gutter guard or leaf protection section | Gutter guards are a high-margin upsell; if you install them, they need their own section. |
+| 9 | Heritage Gutter & Drainage | heritagegutterdrainage.com | Louisville, KY | LinkedIn | No downspout and drainage solution callout | Poor drainage is the real problem gutters solve; addressing it on the page differentiates you. |
+| 10 | Apex Gutter Solutions | apexguttersolutions.com | Charlotte, NC | cold email | No license or insurance badge on homepage | Homeowners authorizing roofline work want visible credentials before they call. |
+| 11 | ProFlow Gutters | proflowgutters.com | Columbus, OH | Facebook | No gutter sizing or profile option guide | K-style vs half-round and 5-inch vs 6-inch are decisions buyers face; a guide captures that traffic. |
+| 12 | Coastal Gutter Specialists | coastalgutterspecialists.com | Jacksonville, FL | cold email | No hurricane or heavy-rain capacity callout | Florida buyers need high-capacity gutters; a storm-rated spec or capacity mention wins that search. |
+| 13 | BlueSky Gutter Services | blueskygutterservices.com | Indianapolis, IN | Instagram | No color selector or color-match option | Gutter color matching to trim and fascia is a real differentiator; show the options. |
+| 14 | Cornerstone Gutters | cornerstonegutters.com | Raleigh, NC | cold email | No cleaning or annual maintenance plan | A seasonal cleaning plan creates recurring revenue from your install base; it's missing from the site. |
+| 15 | Ironwood Gutter Co | ironwoodgutterco.com | Nashville, TN | LinkedIn | No review count or rating on homepage | Your Google rating is the fastest trust signal; it should be in the hero, not only on Google Maps. |
+| 16 | Lakewood Gutter & Fascia | lakewoodgutterfascia.com | Cleveland, OH | cold email | No fascia or soffit repair callout | Rotten fascia and soffit often go hand-in-hand with gutter replacement; if you fix them, say so. |
+| 17 | Pacific Gutter Systems | pacificguttersystems.com | Portland, OR | Facebook | No copper or specialty gutter section | Copper and steel gutters are premium products; a dedicated section captures higher-value buyers. |
+| 18 | TrueFlow Gutter Pros | trueflowgutterpros.com | Minneapolis, MN | cold email | No winter or ice dam callout | Minnesota buyers worry about ice dams; a heated gutter section or ice guard mention captures that search. |
+| 19 | Northgate Gutter Solutions | northgateguttersolutions.com | Baltimore, MD | Instagram | No financing option for full-house installs | A full gutter replacement on a large home can reach $3k-$6k; a payment plan mention helps. |
+| 20 | Sunstone Gutters | sunstonegutters.com | Albuquerque, NM | cold email | No downspout extension or underground drainage section | Directing water away from the foundation is a premium add-on most gutter sites ignore. |
+| 21 | ClearFlow Gutters | clearflowgutters.com | Kansas City, MO | LinkedIn | No crew photo or team introduction | Homeowners allowing work on their roofline want to see who is showing up before booking. |
+| 22 | Ridgecrest Gutters | ridgecrestgutters.com | Boise, ID | cold email | No service area map | Homeowners in suburban neighborhoods can't confirm you'll travel to their location. |
+| 23 | Frontier Gutter Services | frontiergutterservices.com | Des Moines, IA | Facebook | No pull quote from a satisfied homeowner on homepage | One specific review quote mentioning the install crew converts better than a generic testimonials page. |
+| 24 | Lakeside Gutter Pros | lakesidegutterpros.com | Milwaukee, WI | cold email | No gutter repair vs replace guide | Buyers with damaged gutters don't know whether to repair or replace; answer it on the page. |
+| 25 | BlueCrest Gutter Systems | bluecrestguttersystems.com | Spokane, WA | Instagram | No before/after for clogged or overflowing gutters | A photo of overflowing gutters next to a clean seamless run makes the problem-solution clear. |
+| 26 | Irongate Gutters | irongate-gutters.com | Richmond, VA | cold email | No warranty on installation or seams | A posted labor warranty differentiates you from competitors whose price is lower and their work is not. |
+| 27 | Heritage Gutter Works | heritagegutterworks.com | Knoxville, TN | LinkedIn | No commercial property or multi-unit callout | Property managers searching for bulk gutter work can't tell if you serve their scale of project. |
+| 28 | Northcrest Gutter Co | northcrestgutterco.com | Memphis, TN | cold email | Slow mobile load | Most gutter inquiries start on a phone after a rain event; slow load loses the lead immediately. |
+| 29 | ProLine Gutter Solutions | prolineguttersolutions.com | Tucson, AZ | Facebook | No customer testimonial video or photo | Video testimonials or client-submitted photos add social proof that text reviews alone can't match. |
+| 30 | Timberline Gutters | timberlinegutters.com | Fresno, CA | cold email | No FAQ on gutter pitch or water pooling questions | Common installation questions left unanswered make buyers call competitors who have already answered them. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

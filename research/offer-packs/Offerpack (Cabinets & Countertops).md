@@ -220,6 +220,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Granite State Kitchen & Bath | granitestatekb.com | Manchester, NH | cold email | No seam or edge-detail photos | Your reviews mention flawless seams; the site shows no close-up fabrication shots to prove it. |
+| 7 | Artisan Countertop Studio | artisancountertopstudio.com | Denver, CO | LinkedIn | No material comparison guide | Homeowners choosing between quartz and quartzite need guidance your site doesn't give. |
+| 8 | Rocky Mountain Cabinet Co | rockymtncabinets.com | Salt Lake City, UT | Instagram | Gallery has no labels or room types | Beautiful photos but no context for the viewer to know which style matches their kitchen. |
+| 9 | Heritage Woodworks | heritagewoodworksco.com | Richmond, VA | cold email | No lead time or process info | Custom cabinet buyers need a realistic timeline before they commit; yours shows nothing. |
+| 10 | Prestige Surfaces | prestigesurfacesinc.com | Orlando, FL | Facebook | No before/after pairings | Side-by-side kitchen transformations would convert browsers into callers far faster. |
+| 11 | Cornerstone Cabinet & Stone | cornerstonecabinets.net | Columbus, OH | LinkedIn | License and insurance not visible | Higher-value clients expect credentials on the page before they call. |
+| 12 | TileCraft Countertops | tilecraftcountertops.com | San Antonio, TX | cold email | No pricing range or cost guide | Homeowners comparing quotes need a ballpark; no range means they move on. |
+| 13 | Cascade Kitchen Design | cascadekitchendesign.com | Portland, OR | Instagram | No 3D rendering or design-process mention | Competitors offering a free design consult are taking your leads before a call happens. |
+| 14 | Pinnacle Stone Fabricators | pinnaclestone.com | Charlotte, NC | cold email | Slow mobile load, no tap-to-call | Homeowners on phones can't reach you quickly; the next result gets the call. |
+| 15 | Signature Cabinet Solutions | signaturecabinetsolutions.com | Minneapolis, MN | Facebook | No testimonials on the homepage | Reviews are on Google but invisible on the site where decisions are made. |
+| 16 | Craftline Cabinetry | craftlinecabinetry.com | Indianapolis, IN | cold email | No style filter in the gallery | Shaker, raised-panel, and modern styles all mixed together with no way to filter. |
+| 17 | Summit Stone & Cabinet | summitstonecabinet.com | Boise, ID | Instagram | No countertop edge profiles shown | Edge selection is a differentiator; your site shows none. |
+| 18 | Blueprint Kitchen Studio | blueprintkitchenstudio.com | Raleigh, NC | LinkedIn | No design consultation CTA | Visitors have no obvious first step to take other than a generic contact form. |
+| 19 | Landmark Surfaces | landmarksurfacesllc.com | Louisville, KY | cold email | No project size or scope examples | Homeowners can't tell if you do full kitchens or just countertop swaps. |
+| 20 | Timberline Cabinet Works | timberlinecabinetworks.com | Spokane, WA | Facebook | No warranty or craftsmanship guarantee visible | Competitors with a posted warranty claim are winning trust before you even speak. |
+| 21 | Noble Stone Designs | noblestonedesigns.com | Tucson, AZ | cold email | No local-vs-big-box comparison section | A simple callout comparing service quality to big-box stores would own the decision. |
+| 22 | Keystone Kitchen & Bath | keystonekitchenbath.com | Pittsburgh, PA | LinkedIn | No cabinet material types explained | Homeowners don't know the difference between MDF and solid wood; your site doesn't help. |
+| 23 | Pacific Crest Cabinetry | pacificcrestcabinetry.com | Eugene, OR | Instagram | No financing or payment option mention | Clients spending $15k+ need to know options exist before they pick up the phone. |
+| 24 | Elevation Cabinet Studio | elevationcabinetstudio.com | Albuquerque, NM | cold email | No founder or craftsman bio | People buy custom work from people; your site has no human face. |
+| 25 | Refined Edge Countertops | refinededgecountertops.com | Memphis, TN | Facebook | No project timeline visible | Buyers mid-renovation need a lead time answer before they'll commit to a consultation. |
+| 26 | Homestead Cabinet Co | homesteadcabinetco.com | Des Moines, IA | cold email | No kitchen-specific vs bathroom-specific gallery split | All rooms mixed together; bathroom buyers don't see bathroom work easily. |
+| 27 | Granite Peak Surfaces | granitepeaksurfaces.com | Billings, MT | Instagram | No Google review count displayed on homepage | 4.7 stars sits only on Google, not on the site where it would convert. |
+| 28 | Urban Stone Studio | urbanstonestudio.com | Nashville, TN | LinkedIn | No pull quote or client story | Testimonials in paragraph form build more trust than star ratings alone. |
+| 29 | Ironwood Cabinet & Mill | ironwoodcabinetmill.com | Knoxville, TN | cold email | No service area map or coverage list | Homeowners outside the city can't tell if you serve their location. |
+| 30 | Clearwater Countertop Co | clearwatercountertop.com | Clearwater, FL | Facebook | No photo of the actual shop or showroom | A photo of the fabrication space builds credibility no competitor copy can match. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

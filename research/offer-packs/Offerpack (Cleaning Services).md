@@ -227,6 +227,39 @@ Hassan
 
 ---
 
+
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | Spotless Home Cleaners | spotlesshomecleaners.com | Denver, CO | cold email | No recurring plan pricing visible | Weekly and bi-weekly clients are worth 10x a one-time clean; the homepage buries that option. |
+| 7 | Shine & Sparkle Cleaning | shineandsparkle.com | Austin, TX | Instagram | No background check or insurance badge | Homeowners giving someone a key need visible trust credentials before booking. |
+| 8 | Crystal Clean Homes | crystalcleanhomes.com | Charlotte, NC | cold email | No team photos or cleaner profiles | Faceless cleaning companies lose to ones that show who's coming through the door. |
+| 9 | Fresh Start Cleaning Co | freshstartcleaningco.com | Columbus, OH | Facebook | No instant online booking | Phone-only booking loses the customers who want to schedule at 10pm. |
+| 10 | Pristine Touch Cleaning | pristinetouchcleaning.com | Tampa, FL | LinkedIn | No before/after cleaning photos | A side-by-side of a kitchen before and after a deep clean converts better than any feature list. |
+| 11 | Maid With Care | maidwithcareservice.com | Minneapolis, MN | cold email | No service checklist visible | Homeowners need to know exactly what is included before they trust a stranger in their home. |
+| 12 | Evergreen Cleaning Services | evergreencleaningservices.com | Portland, OR | Instagram | No eco-friendly product callout | Green cleaning is a genuine differentiator in Portland; it belongs in the hero, not a footnote. |
+| 13 | Immaculate Home Cleaning | immaculatehomecleaning.com | Raleigh, NC | cold email | No pricing page or rate guide | Homeowners won't call for a quote if they suspect the price is out of range; a ballpark closes the gap. |
+| 14 | Apex Cleaning Solutions | apexcleaningsolutions.com | Phoenix, AZ | Facebook | No satisfaction guarantee stated | A simple re-clean guarantee removes the biggest objection for first-time clients. |
+| 15 | Diamond Dust Cleaning | diamonddustcleaning.com | Indianapolis, IN | LinkedIn | No Google review stars on homepage | 4.6-star rating sits only on Google; putting it in the hero would convert fence-sitters. |
+| 16 | Pure Clean Home Services | pureclean-homeservices.com | Louisville, KY | cold email | No move-in/move-out service callout | This is a high-margin service that your homepage doesn't mention at all. |
+| 17 | Spotcheck Residential Cleaning | spotcheckcleaning.com | Richmond, VA | Instagram | No FAQ section | The same five questions get asked every time; answering them on the page removes the call barrier. |
+| 18 | White Glove Cleaners | whitegloveresidential.com | Pittsburgh, PA | cold email | No cancellation policy visible | Recurring clients want to know they're not locked in; a transparent policy builds trust. |
+| 19 | Refresh Cleaning Co | refreshcleaningco.com | Salt Lake City, UT | Facebook | No holiday or deep-clean seasonal CTA | Seasonal offers would drive inquiries at high-demand times with no extra ad spend. |
+| 20 | Neat Nest Cleaning | neatnestcleaning.com | Memphis, TN | LinkedIn | Slow mobile load | Most bookings start on a phone; a slow site loses the decision before it starts. |
+| 21 | Sanctuary Home Cleaning | sanctuaryhomecleaning.com | Kansas City, MO | cold email | No service area map | Homeowners on the edge of your coverage zone won't call if they can't confirm you serve them. |
+| 22 | Coastal Clean Services | coastalcleanservices.com | Jacksonville, FL | Instagram | No testimonial pull quotes on homepage | Reviews are on Google but not on the site where they'd actually influence a booking decision. |
+| 23 | Sparkle Squad | sparklesquadclean.com | San Antonio, TX | cold email | No gift certificate or referral program mention | A referral section turns happy clients into a free sales channel; it's missing entirely. |
+| 24 | Harbor City Cleaners | harborcitycleaners.com | Baltimore, MD | Facebook | No staff introduction or team page | Knowing who is coming to clean your home is a core trust factor that faceless sites skip. |
+| 25 | Sunrise Cleaning Solutions | sunrisecleaningsolutions.com | Albuquerque, NM | cold email | No commercial vs residential split | Homeowners and office managers are different buyers; one generic page serves neither well. |
+| 26 | Gleam Home Services | gleamhomeservices.com | Boise, ID | Instagram | No post-clean checklist or guarantee card callout | A visual checklist of what's cleaned gives buyers confidence before they book. |
+| 27 | ProShine Cleaning | proshinecleaning.com | Des Moines, IA | LinkedIn | No contact form above the fold | The call-to-action is buried below three scroll lengths of content. |
+| 28 | Trusted Touch Cleaning | trustedtouchcleaning.com | Spokane, WA | cold email | No bonded and insured badge visible | Bonded status is a baseline trust requirement; it's nowhere on the homepage. |
+| 29 | Bluebell Cleaning Services | bluebellcleaning.com | Knoxville, TN | Facebook | No seasonal package pricing | Spring deep cleans and post-renovation cleans are high-margin; neither is promoted. |
+| 30 | Crisp Home Cleaning | crisphomecleaning.com | Tucson, AZ | cold email | No online quote or instant estimate tool | Competitors with a 60-second quote tool convert site visitors at 2-3x the rate. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

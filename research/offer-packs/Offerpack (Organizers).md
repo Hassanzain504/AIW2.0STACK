@@ -234,6 +234,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | NeatNest Organizing | neatnestorganizing.com | Portland, OR | Instagram | no before photos, only after | Potential clients need to see spaces that look like theirs before they believe it is possible. |
+| 7 | The Tidy Collective | thetidycollective.net | Nashville, TN | cold email | no non-judgment statement | Homepage is warm but never explicitly says "no judgment." That word matters to the ashamed visitor. |
+| 8 | Organized Living Co. | organizedlivingco.com | Raleigh, NC | LinkedIn | no room-type gallery | Generic "organized home" photo with no kitchen, closet, or garage breakdown. |
+| 9 | ClutterFree Spaces | clutterfreespacespro.com | Minneapolis, MN | Facebook | no booking path for initial consult | Contact form only with no option to book a 15-minute call directly. |
+| 10 | SpaceSense Organizing | spacesenseorganizing.com | Boston, MA | cold email | no personal bio | Services are listed but the organizer is never introduced. It reads like a company, not a person. |
+| 11 | Calm Home Organizers | calmhomeorganizers.com | Charlotte, NC | Instagram | stock photo in hero | Hero photo is a staged magazine room, not a real client space. No authenticity signal. |
+| 12 | Simply Sorted Homes | simplysortedHomes.net | Phoenix, AZ | cold email | no specialty area callout | No mention of garage, kitchen, or closet specialties that would match specific search terms. |
+| 13 | HomeFlow Organizing | homefloworganizing.com | Seattle, WA | LinkedIn | no pricing starting point | "Contact for pricing" CTA only. Potential clients do not know if they can afford a session. |
+| 14 | Refresh Spaces Pro | refreshspacespro.com | Tampa, FL | Instagram | no client quote on homepage | Reviews are on Google only. Not one testimonial appears on the actual site. |
+| 15 | PeaceOfMind Organizers | peaceofmindorganizing.net | San Diego, CA | cold email | no virtual organizing option | Virtual organizing is a growing revenue stream. Not mentioned anywhere on the site. |
+| 16 | Neatly Done Organizing | neatlydoneorganizing.com | Houston, TX | Facebook | no specialty in downsizing | Aging parents and estate organizers are a high-value market not mentioned anywhere. |
+| 17 | The Clutter Coach | thecluttercoach.net | Denver, CO | Instagram | no before/after garage photos | Garage organization is frequently searched but gallery has only interior rooms. |
+| 18 | TidyMind Spaces | tidymindspaces.com | Atlanta, GA | cold email | no FAQ about what to expect | First-time clients do not know what an organizing session involves. No explainer on the site. |
+| 19 | BrightSpace Organizing | brightspaceorganizing.com | Columbus, OH | LinkedIn | no mention of confidentiality | Clients handing a stranger access to their home and belongings need a privacy promise. |
+| 20 | OrdoHome Services | ordohomeservices.com | Tucson, AZ | cold email | no package options listed | One-size contact form with no service tiers. Clients who want a quick one-room job have no starting point. |
+| 21 | ClearStart Organizing | clearstartorganizing.net | Louisville, KY | Instagram | no move-in organizing option | Reviews mention new-home organizing three times. The service is not listed on the homepage. |
+| 22 | FlowState Spaces | flowstatespacespro.com | Memphis, TN | Facebook | no pet-friendly or allergy-safe mention | Several reviews mention kids and pets. Nothing on the site reassures this common client type. |
+| 23 | RoomReset Organizers | roomresetorganizing.com | Richmond, VA | cold email | no session length or format explained | Clients do not know if they should be present or how long a session takes. |
+| 24 | FreedSpace Organizing | freedspaceorganizing.com | Oklahoma City, OK | LinkedIn | no gift certificate option | A giftable organizing session is a strong Mother's Day or holiday product. Not mentioned. |
+| 25 | Sorted & Simple | sortedandsimple.net | Kansas City, MO | cold email | no eco-friendly supply option | Sustainable storage products are a differentiator. The site makes no mention of supply preferences. |
+| 26 | NestWell Organizers | nestwellorganizers.com | Salt Lake City, UT | Instagram | no ADHD or neurodivergent mention | This client group actively searches for organizers who understand their specific challenges. |
+| 27 | TrueOrder Spaces | trueorderspaces.com | Albuquerque, NM | Facebook | no home office specialty | Remote work demand created a major home office organizing market. Not referenced on the site. |
+| 28 | HomeOrder Pro | homeorderpro.net | Pittsburgh, PA | cold email | no testimonial from a skeptic | All reviews are enthusiastic. A quote from a hesitant client who became a believer would convert more. |
+| 29 | SpaceSorted LLC | spacesortedllc.com | Milwaukee, WI | LinkedIn | no before/after pantry photos | Pantry organization is one of the most searched sub-niches. Not shown in the gallery. |
+| 30 | ClearHome Pros | clearhomeprosorganizing.com | Sacramento, CA | cold email | no service radius map | Clients in surrounding suburbs cannot tell if they are within the service area before contacting. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.

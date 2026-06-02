@@ -221,6 +221,38 @@ Hassan
 
 ---
 
+### Prospects 6-30 (compact)
+
+| # | Business | URL | City, State | Platform | Key Gap | Angle |
+|---|---|---|---|---|---|---|
+| 6 | SafeAir Mold Services | safeairmold.com | Atlanta, GA | cold email | IICRC badge only on About page | Frightened homeowners don't scroll to the About page. Certification needs to be in the hero. |
+| 7 | DryZone Restoration | dryzonerestoration.net | Denver, CO | Instagram | no insurance claim section | Reviews mention insurance coordination but the homepage has no dedicated section for it. |
+| 8 | CleanBreath Remediation | cleanbreathremediation.com | Charlotte, NC | LinkedIn | no clearance test mention | Before/after photos exist but no mention of post-remediation air quality testing. |
+| 9 | FloodGuard Restoration | floodguardrestoration.com | Minneapolis, MN | cold email | no same-day response badge | Emergency restoration company with no stated response time in the hero. |
+| 10 | TrueClean Mold Solutions | truecleanmold.net | Portland, OR | Facebook | no before/after visual with caption | Before/after photos show the damage but no caption explains what was done or why. |
+| 11 | PureDry Waterproofing | puredry waterproofing.com | Columbus, OH | cold email | no warranty on waterproofing work | Basement waterproofing warranties are a top buying signal. Not mentioned. |
+| 12 | BioShield Remediation | bioshieldremediation.com | Raleigh, NC | Instagram | no asbestos section | Handles asbestos but the service is buried. Homeowners with older homes search specifically for it. |
+| 13 | CleanSlate Disaster Recovery | cleanslaterestore.com | Tampa, FL | LinkedIn | no fire damage section | Fire and smoke restoration is a distinct high-value service not featured on the homepage. |
+| 14 | AirGuard Mold Services | airguardmold.com | Boston, MA | cold email | no crawl space encapsulation section | Crawl space work is a high-ticket service not listed despite being a local priority. |
+| 15 | SafePath Restoration | safepathrestoration.net | Pittsburgh, PA | Facebook | no 24/7 emergency number above fold | Emergency company with the phone number below the fold on mobile. |
+| 16 | PurePath Waterproofing | purepathwaterproofing.com | Indianapolis, IN | cold email | no interior vs exterior drain section | Two very different approaches. The site offers both but makes no distinction. |
+| 17 | ClearSpace Remediation | clearspaceremediation.com | Kansas City, MO | Instagram | no odor removal section | Fire and water events cause odors. Odor remediation is a separate service not shown. |
+| 18 | DryRight Restoration | dryrightrestoration.com | Louisville, KY | LinkedIn | no certificate expiry or renewal note | IICRC badge shown but no date. Homeowners want to know the certification is current. |
+| 19 | BlueSky Mold Removal | blueskymoldremoval.net | Salt Lake City, UT | cold email | no radon testing section | Radon is a serious concern in this region and the site has no mention of testing. |
+| 20 | FreshStart Restoration | freshstartrestoration.com | Memphis, TN | Facebook | no storm water damage section | Storm and hail water intrusion is a distinct event type. Not called out in the service menu. |
+| 21 | SafeHome Remediators | safehomeremediators.com | Richmond, VA | cold email | no adjuster coordination testimonial | Reviews mention adjuster help. A direct quote from a client about claims would convert faster. |
+| 22 | ClearAir Mold Co. | clearairmoldco.com | Omaha, NE | Instagram | no basement mold vs attic mold split | Both are served but a homeowner searching "attic mold" sees nothing specific on the landing page. |
+| 23 | StormDry Restoration | stormdryrestoration.net | Boise, ID | LinkedIn | no structural drying equipment mention | No mention of professional drying equipment that proves work is done correctly. |
+| 24 | TrueShield Waterproofing | trueshieldwaterproofing.com | Spokane, WA | cold email | no French drain section | French drains are a high-search basement waterproofing solution not mentioned. |
+| 25 | AirClear Remediation | airclearremediation.com | Albuquerque, NM | Facebook | no post-fire soot cleaning section | Smoke and soot damage clean-up is a standalone search term not covered on the site. |
+| 26 | CleanPath Mold Services | cleanpathmold.com | Knoxville, TN | cold email | no dehumidifier rental or install mention | Long-term humidity control is a service homeowners ask for. Not addressed. |
+| 27 | ProDry Restoration | prodryrestoration.com | Tulsa, OK | Instagram | no sewage backup section | Sewage backup remediation requires specialized handling. Not listed as a distinct service. |
+| 28 | SafeHaven Restoration | safehavenrestoration.net | Fresno, CA | LinkedIn | no biohazard cleanup section | A service with its own search demand that is not listed anywhere on the site. |
+| 29 | GreenShield Mold Solutions | greenshieldmold.com | Madison, WI | cold email | no mold inspection vs remediation split | Buyers searching for an inspection see no distinct product from a full remediation quote. |
+| 30 | TrueBreath Remediation | truebreathremediation.com | Little Rock, AR | Facebook | no customer health outcome testimonial | Reviews mention health improvements. No quote about breathing easier appears on the homepage. |
+
+---
+
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
