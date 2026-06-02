@@ -1,0 +1,23 @@
+{
+  "$schemaVersion": 1,
+  "tracks": [
+    {
+      "slug": "maintenance",
+      "label": "Weekly Lawn Care",
+      "steps": [
+        {"step": 1, "title": "Free quote", "body": "Tell us about your yard. We give you a firm price with no surprises."},
+        {"step": 2, "title": "Schedule your first visit", "body": "Pick a day that works. We show up on time with the right equipment."},
+        {"step": 3, "title": "Consistent service every week", "body": "Same crew, same standard, every single visit."}
+      ]
+    },
+    {
+      "slug": "design-install",
+      "label": "Design and Install",
+      "steps": [
+        {"step": 1, "title": "Free yard assessment", "body": "We walk your property and listen to what you want to achieve."},
+        {"step": 2, "title": "Design proposal with visuals", "body": "You see the plan and approve it before any work begins."},
+        {"step": 3, "title": "Build on your timeline", "body": "We install on the schedule we agreed to and clean up when we are done."}
+      ]
+    }
+  ]
+}

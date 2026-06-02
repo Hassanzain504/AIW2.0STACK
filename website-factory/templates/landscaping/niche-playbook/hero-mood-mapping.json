@@ -1,0 +1,37 @@
+{
+  "$schemaVersion": 1,
+  "moods": [
+    {
+      "slug": "lush-transformation",
+      "label": "Lush transformation",
+      "description": "Finished backyard with green lawn, stone patio, and planting beds. Golden hour light preferred.",
+      "overlay": "rgba(0,0,0,0.35)",
+      "textColor": "white",
+      "recommended": true
+    },
+    {
+      "slug": "clean-lawn",
+      "label": "Clean lawn maintenance",
+      "description": "Freshly mowed lawn with sharp edges, morning light, residential setting.",
+      "overlay": "rgba(0,0,0,0.30)",
+      "textColor": "white",
+      "recommended": false
+    },
+    {
+      "slug": "before-after-split",
+      "label": "Before and after comparison",
+      "description": "Side-by-side or split-screen showing a dramatic transformation.",
+      "overlay": "rgba(0,0,0,0.40)",
+      "textColor": "white",
+      "recommended": false
+    }
+  ],
+  "defaultMood": "lush-transformation",
+  "compositionRules": [
+    "Exterior daylight only. No indoor shots.",
+    "Real project photos. No stock.",
+    "Landscape orientation, minimum 1500x900px.",
+    "Dark overlay required for white text legibility.",
+    "No people in hero unless it is a crew-in-action shot with a strong project visible."
+  ]
+}

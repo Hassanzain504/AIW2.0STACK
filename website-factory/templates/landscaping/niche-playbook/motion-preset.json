@@ -1,0 +1,10 @@
+{
+  "$schemaVersion": 1,
+  "preset": "natural",
+  "durationMs": 240,
+  "staggerMs": 60,
+  "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+  "entranceVariant": "fade-up",
+  "reducedMotionFallback": "0.01ms",
+  "notes": "Gentle, unhurried motion. No flashy animations. Prefers-reduced-motion collapses all transitions."
+}

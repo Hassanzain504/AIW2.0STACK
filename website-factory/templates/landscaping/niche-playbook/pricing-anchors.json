@@ -1,0 +1,69 @@
+{
+  "niche": "landscaping",
+  "note": "Price ranges are US national averages. Hassan should verify against local market rates before presenting to clients or using in copy.",
+  "pricingAnchors": [
+    {
+      "service": "Weekly lawn mowing",
+      "low": 35,
+      "high": 85,
+      "unit": "per visit",
+      "factors": "Yard size, terrain complexity, frequency"
+    },
+    {
+      "service": "Spring or fall cleanup",
+      "low": 150,
+      "high": 800,
+      "unit": "per visit",
+      "factors": "Property size, amount of leaf and debris removal"
+    },
+    {
+      "service": "Fertilization program (seasonal)",
+      "low": 200,
+      "high": 800,
+      "unit": "per season",
+      "factors": "Number of applications, yard size, organic vs synthetic"
+    },
+    {
+      "service": "Patio installation (pavers or stone)",
+      "low": 5000,
+      "high": 20000,
+      "unit": "per project",
+      "factors": "Square footage, material choice, base complexity"
+    },
+    {
+      "service": "Landscape design and planting",
+      "low": 3000,
+      "high": 25000,
+      "unit": "per project",
+      "factors": "Number of plants, bed size, design complexity"
+    },
+    {
+      "service": "Retaining wall",
+      "low": 2000,
+      "high": 15000,
+      "unit": "per project",
+      "factors": "Length, height, material (block vs natural stone)"
+    },
+    {
+      "service": "Outdoor lighting system",
+      "low": 800,
+      "high": 5000,
+      "unit": "per project",
+      "factors": "Number of fixtures, transformer size, smart controls"
+    },
+    {
+      "service": "French drain or drainage correction",
+      "low": 1500,
+      "high": 8000,
+      "unit": "per project",
+      "factors": "Linear footage, depth, complexity of water path"
+    },
+    {
+      "service": "Full backyard transformation",
+      "low": 15000,
+      "high": 60000,
+      "unit": "per project",
+      "factors": "Total scope, materials, site conditions"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {"path": "/", "component": "HomePage", "title": "Home"},
+    {"path": "/services", "component": "ServicesPage", "title": "Services"},
+    {"path": "/gallery", "component": "GalleryPage", "title": "Our Work"},
+    {"path": "/about", "component": "AboutPage", "title": "About Us"},
+    {"path": "/contact", "component": "ContactPage", "title": "Contact"},
+    {"path": "/lawn-care", "component": "LawnCarePage", "title": "Lawn Care"},
+    {"path": "/landscape-design", "component": "DesignInstallPage", "title": "Landscape Design & Install"}
+  ]
+}

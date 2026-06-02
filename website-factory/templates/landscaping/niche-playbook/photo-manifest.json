@@ -1,0 +1,53 @@
+{
+  "$schemaVersion": 1,
+  "categories": [
+    {
+      "slug": "hero",
+      "label": "Hero image",
+      "minCount": 1,
+      "idealCount": 3,
+      "haltIfMissing": true,
+      "specs": "1500x900px minimum, exterior daylight, landscape orientation"
+    },
+    {
+      "slug": "gallery",
+      "label": "Gallery project photos",
+      "minCount": 10,
+      "idealCount": 20,
+      "haltIfMissing": true,
+      "specs": "1200x900px minimum, JPG quality 90+, labeled by project type"
+    },
+    {
+      "slug": "before-after",
+      "label": "Before and after pairs",
+      "minCount": 1,
+      "idealCount": 3,
+      "haltIfMissing": false,
+      "specs": "Same angle and distance for both shots in each pair"
+    },
+    {
+      "slug": "team-owner",
+      "label": "Owner headshot",
+      "minCount": 1,
+      "idealCount": 1,
+      "haltIfMissing": true,
+      "specs": "Outdoor natural light preferred, real working environment acceptable"
+    },
+    {
+      "slug": "team-crew",
+      "label": "Crew photos",
+      "minCount": 0,
+      "idealCount": 2,
+      "haltIfMissing": false,
+      "specs": "Candid working shots, branded gear preferred"
+    },
+    {
+      "slug": "logos",
+      "label": "Association and trust logos",
+      "minCount": 0,
+      "idealCount": 3,
+      "haltIfMissing": false,
+      "specs": "PNG or SVG, white background or transparent"
+    }
+  ]
+}

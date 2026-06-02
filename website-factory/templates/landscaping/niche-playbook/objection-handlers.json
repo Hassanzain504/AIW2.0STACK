@@ -1,0 +1,40 @@
+{
+  "niche": "landscaping",
+  "objections": [
+    {
+      "id": "obj-01",
+      "objection": "Your price is higher than the other quotes I got.",
+      "response": "Most of the difference comes down to what happens when something goes wrong. Cheaper crews often skip the written contract and the proper base preparation under patios. A patio that sinks after two winters costs more to fix than the savings on the original price. We give you a firm quote, a written contract, and full insurance. You are comparing apples and oranges.",
+      "channel": "phone",
+      "tone": "direct, non-defensive"
+    },
+    {
+      "id": "obj-02",
+      "objection": "I had a bad experience with a landscaper who took my deposit and disappeared.",
+      "response": "That is exactly why we have the deposit protection section on our website. Every project starts with a signed contract that specifies scope, timeline, payment schedule, and what happens if anything changes. We can show you the contract language before you commit to anything.",
+      "channel": "phone or email",
+      "tone": "empathetic, reassuring"
+    },
+    {
+      "id": "obj-03",
+      "objection": "I am not sure I can afford a full transformation right now.",
+      "response": "That is fair. We can phase the project over one or two seasons so it fits your budget. A lot of clients start with the patio or the front bed refresh and add to it the following year. We can put together a phased plan if that helps.",
+      "channel": "phone or in-person",
+      "tone": "flexible, problem-solving"
+    },
+    {
+      "id": "obj-04",
+      "objection": "Can I just get the lawn mowing done for now and decide on the design project later?",
+      "response": "Absolutely. Plenty of our long-term clients started on the weekly program and got a design project done a year or two later when they were ready. The weekly service is no obligation beyond the season.",
+      "channel": "phone",
+      "tone": "accommodating, no pressure"
+    },
+    {
+      "id": "obj-05",
+      "objection": "I want to think about it.",
+      "response": "Of course. To help you think it through, I can send you photos from similar projects in your neighborhood with the investment ranges so you have something concrete to consider. The free estimate is also good for 30 days so there is no rush on that.",
+      "channel": "phone or email",
+      "tone": "patient, value-adding"
+    }
+  ]
+}

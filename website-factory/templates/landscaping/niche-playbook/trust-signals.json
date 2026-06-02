@@ -1,0 +1,40 @@
+{
+  "$schemaVersion": 1,
+  "signals": [
+    {
+      "id": "deposit-protection",
+      "label": "Written contract with deposit protection",
+      "priority": 1,
+      "placement": "standalone-section",
+      "required": true
+    },
+    {
+      "id": "satisfaction-guarantee",
+      "label": "Satisfaction guarantee or money-back guarantee",
+      "priority": 2,
+      "placement": "hero-trust-bar",
+      "required": false
+    },
+    {
+      "id": "google-reviews",
+      "label": "Google review aggregate rating and count",
+      "priority": 3,
+      "placement": "social-proof-strip",
+      "required": true
+    },
+    {
+      "id": "license-insurance",
+      "label": "License number and insurance statement",
+      "priority": 4,
+      "placement": "footer-and-trust-bar",
+      "required": true
+    },
+    {
+      "id": "named-team",
+      "label": "Named owner and crew with real photos",
+      "priority": 5,
+      "placement": "team-section",
+      "required": true
+    }
+  ]
+}

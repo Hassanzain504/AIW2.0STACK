@@ -1,0 +1,41 @@
+{
+  "$schemaVersion": 1,
+  "pages": [
+    {
+      "slug": "cover",
+      "label": "Cover page",
+      "order": 1,
+      "required": true
+    },
+    {
+      "slug": "your-situation",
+      "label": "What we found about your current online presence",
+      "order": 2,
+      "required": true
+    },
+    {
+      "slug": "solution",
+      "label": "What we are building for you",
+      "order": 3,
+      "required": true
+    },
+    {
+      "slug": "proof",
+      "label": "Sites we have built for landscapers like you",
+      "order": 4,
+      "required": false
+    },
+    {
+      "slug": "investment",
+      "label": "Investment and what is included",
+      "order": 5,
+      "required": true
+    },
+    {
+      "slug": "next-steps",
+      "label": "How to get started",
+      "order": 6,
+      "required": true
+    }
+  ]
+}

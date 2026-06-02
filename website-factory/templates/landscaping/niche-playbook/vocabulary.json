@@ -1,0 +1,59 @@
+{
+  "$schemaVersion": 1,
+  "preferredTerms": [
+    {
+      "use": "yard",
+      "avoid": "outdoor living space"
+    },
+    {
+      "use": "your vision",
+      "avoid": "your goals"
+    },
+    {
+      "use": "natural stone patio",
+      "avoid": "hardscape feature"
+    },
+    {
+      "use": "planting beds",
+      "avoid": "landscaped areas"
+    },
+    {
+      "use": "backyard transformation",
+      "avoid": "outdoor renovation"
+    },
+    {
+      "use": "our crew",
+      "avoid": "our team of professionals"
+    },
+    {
+      "use": "written contract",
+      "avoid": "agreement"
+    },
+    {
+      "use": "firm price",
+      "avoid": "quote"
+    },
+    {
+      "use": "weekly lawn care",
+      "avoid": "lawn maintenance services"
+    },
+    {
+      "use": "free estimate",
+      "avoid": "complimentary consultation"
+    }
+  ],
+  "blockedPhrases": [
+    "stunning",
+    "from start to finish",
+    "dedicated team",
+    "dedicated service",
+    "dedicated professionals"
+  ],
+  "toneRules": [
+    "First-person plural: we build, our crew, our work",
+    "Homeowner-facing: your yard, your project, your budget",
+    "Specific over generic: natural stone patio, not outdoor space",
+    "One sentence per idea",
+    "Short sentences, plain words"
+  ]
+}

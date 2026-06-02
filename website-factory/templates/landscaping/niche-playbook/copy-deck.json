@@ -1,0 +1,36 @@
+{
+  "niche": "landscaping",
+  "heroHeadlines": [
+    "Your Vision. Our Work. [City]'s Landscaping Specialists.",
+    "A Yard You Are Proud to Come Home To.",
+    "We Build the Yard You Have Been Putting Off.",
+    "Lawn Care and Landscape Design Done Right in [City].",
+    "From Weekly Mowing to Full Backyard Transformations in [City]."
+  ],
+  "valueProps": [
+    "Written contract before any work starts. You know exactly what you are paying for.",
+    "Same crew every visit. They know your yard and your standards.",
+    "Real photos of real projects, not stock images, so you can see what to expect.",
+    "Free estimates with firm pricing. No surprises on invoice day.",
+    "Licensed and fully insured. Certificate available on request."
+  ],
+  "socialProofTemplates": [
+    "{firstName} hired us for a {projectType} in {neighborhood}. Here is what they said: \"{reviewText}\"",
+    "Before: {beforeDescription}. After: {afterDescription}. {firstName} in {city} now has a yard they use.",
+    "{firstName} has been on our weekly lawn care program for {duration}. Their words: \"{reviewText}\""
+  ],
+  "copyLocks": {
+    "ctaPrimary": "Get My Free Estimate",
+    "ctaSecondary": "See Our Work",
+    "formHeader": "Tell us about your yard. We will respond within 24 hours.",
+    "formPrivacy": "We respond within 24 hours. No spam. Your information is never sold or shared.",
+    "mobileCallLabel": "Call Now",
+    "depositProtectionBody": "Every project starts with a written contract that specifies scope, timeline, payment schedule, and what happens if anything changes. You know exactly what you are paying for before any work begins. No surprises, no hidden charges.",
+    "trustBarItems": [
+      "{yearsInBusiness} Years in Business",
+      "{projectsCompleted}+ Projects Completed",
+      "{city}-Based",
+      "Licensed and Insured"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "niche": "landscaping",
+  "trustSignals": [
+    {
+      "priority": 1,
+      "signal": "deposit-protection-section",
+      "label": "Written contract with deposit protection",
+      "description": "A standalone section on every page confirming the homeowner's deposit is protected by a written contract specifying scope, timeline, and payment schedule.",
+      "placement": "standalone section between gallery and team",
+      "rationale": "The #1 homeowner fear in this niche is losing a deposit to a contractor who disappears or does substandard work. No competitor addresses this directly. Addressing it wins trust immediately."
+    },
+    {
+      "priority": 2,
+      "signal": "money-back-guarantee",
+      "label": "Satisfaction guarantee",
+      "description": "A bold guarantee statement - if you are not satisfied we will make it right or refund you.",
+      "placement": "hero section below CTAs or as a badge in the trust bar",
+      "rationale": "sweeneyslandscaping.com (top scorer) uses this as a prominent hero element. It removes purchase risk and signals confidence in the work quality."
+    },
+    {
+      "priority": 3,
+      "signal": "google-review-aggregate",
+      "label": "Google review aggregate with star rating and count",
+      "description": "Display the aggregate Google rating (e.g. 4.9 stars across 127 reviews) with a direct link to the Google listing.",
+      "placement": "social proof strip below hero",
+      "rationale": "Homeowners check Google reviews before calling any home service contractor. Surfacing this on the page removes the friction of searching separately."
+    },
+    {
+      "priority": 4,
+      "signal": "license-and-insurance",
+      "label": "License number and insurance statement",
+      "description": "Display the contractor license number and a clear statement of full insurance coverage, with a note that the certificate is available on request.",
+      "placement": "footer, contact page, and as a trust bar item in the hero",
+      "rationale": "Unlicensed or uninsured contractors are a real risk. Homeowners who have been burned before look for this explicitly."
+    },
+    {
+      "priority": 5,
+      "signal": "named-team-with-photos",
+      "label": "Named crew with real photos",
+      "description": "Owner headshot and bio plus named crew members with roles and photos.",
+      "placement": "team section on homepage and about page",
+      "rationale": "Home service is personal. A named, visible team reduces the fear of strangers on the property and signals the business is accountable."
+    }
+  ]
+}

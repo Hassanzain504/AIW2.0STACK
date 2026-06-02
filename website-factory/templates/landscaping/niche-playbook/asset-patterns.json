@@ -1,0 +1,41 @@
+{
+  "$schemaVersion": 1,
+  "categories": [
+    {
+      "slug": "logo",
+      "altKeywords": ["logo", "brand"],
+      "filenameKeywords": ["logo", "brand", "icon"],
+      "selectorHints": [".logo img", "header img", "nav img"],
+      "exclude": ["favicon"],
+      "priority": 1
+    },
+    {
+      "slug": "gallery",
+      "altKeywords": ["project", "yard", "lawn", "patio", "garden", "landscape", "before", "after", "work"],
+      "filenameKeywords": ["project", "yard", "lawn", "patio", "garden", "landscape", "work", "before", "after"],
+      "selectorHints": [".gallery img", ".portfolio img", ".projects img"],
+      "exclude": ["stock", "placeholder", "banner"],
+      "priority": 2
+    },
+    {
+      "slug": "team-owner",
+      "altKeywords": ["owner", "founder", "headshot", "portrait"],
+      "filenameKeywords": ["owner", "founder", "headshot", "portrait", "team-lead"],
+      "exclude": ["stock"],
+      "priority": 3
+    },
+    {
+      "slug": "team-crew",
+      "altKeywords": ["crew", "team", "staff", "employee", "worker"],
+      "filenameKeywords": ["crew", "team", "staff"],
+      "exclude": ["stock"],
+      "priority": 4
+    },
+    {
+      "slug": "trust-badge",
+      "altKeywords": ["certified", "licensed", "insured", "bbb", "nalp", "planet", "award"],
+      "filenameKeywords": ["badge", "certified", "award", "bbb", "nalp", "guarantee"],
+      "priority": 5
+    }
+  ]
+}

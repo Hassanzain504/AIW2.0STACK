@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --primary: 0 102 204;
+  --primary-dark: 0 51 102;
+  --primary-slate: 85 119 170;
+  --accent: 255 170 0;
+  --accent-light: 255 204 85;
+  --accent-dark: 204 136 0;
+  --neutral: 170 170 170;
+  --neutral-dim: 136 136 136;
+  --silver: 204 204 204;
+  --ink: 34 34 34;
+}
+html {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  font-optical-sizing: auto;
+}
+
+.tabular-nums,
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+[data-em-dash-audit]::after {
+  content: attr(data-em-dash-audit);
+  background: yellow;
+  color: red;
+}

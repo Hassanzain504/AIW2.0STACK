@@ -1,0 +1,33 @@
+{
+  "niche": "landscaping",
+  "palette": {
+    "primary": "#2D5016",
+    "primaryDark": "#1A3009",
+    "primarySlate": "#3D6B2A",
+    "accent": "#8B9E3A",
+    "accentLight": "#B5C76A",
+    "accentDark": "#6B7A2B",
+    "neutral": "#F7F5F0",
+    "neutralDim": "#EDE9E2",
+    "silver": "#C5BFB5",
+    "ink": "#1A1A1A"
+  },
+  "typography": {
+    "headingFamily": "Playfair Display",
+    "bodyFamily": "Inter",
+    "headingWeight": "700",
+    "scale": "1.25",
+    "headingFontUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap",
+    "bodyFontUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+  },
+  "motion": {
+    "duration_ms": 240,
+    "stagger_ms": 60,
+    "preset": "natural"
+  },
+  "motionPreset": "natural",
+  "themeMode": "light",
+  "shapeMotif": "organic",
+  "meta_title": "Landscaping Services | [City] Lawn Care & Landscape Design",
+  "meta_description": "Professional landscaping, lawn care, and landscape design for homeowners in [City]. Free estimates. Written contracts. Licensed and insured."
+}

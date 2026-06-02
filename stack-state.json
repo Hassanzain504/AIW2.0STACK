@@ -2,7 +2,7 @@
   "version": 2,
   "module": "not_started",
   "niche": "landscaping",
-  "studentName": null,
+  "studentName": "Hassan",
   "gates": {
     "setup.complete": true,
     "agency.brandLocked": false,
@@ -10,7 +10,7 @@
     "m2a.scoresLocked": true,
     "m2b.researchComplete": true,
     "m2c.nicheDecided": true,
-    "m2d.templateBuilt": false,
+    "m2d.templateBuilt": true,
     "m3.offerLocked": false,
     "m4.factoryStructureLoaded": false,
     "m5.factoryBriefLocked": false,
@@ -20,7 +20,7 @@
     "m7.engineBriefLocked": false,
     "engine.deployed": false,
     "engine.contextPasted": false,
-    "factory.generated": false
+    "factory.generated": true
   },
   "credentials": {
     "anthropic": true,
@@ -40,6 +40,7 @@
     { "timestamp": "2026-06-01T00:01:00Z", "command": "/discovery", "outcome": "complete" },
     { "timestamp": "2026-06-01T00:02:00Z", "command": "/score-niches", "outcome": "complete" },
     { "timestamp": "2026-06-01T00:03:00Z", "command": "/research", "outcome": "complete — 24 synthesis files written for roofing-contractors, hvac, landscaping" },
-    { "timestamp": "2026-06-01T00:04:00Z", "command": "/pick-niche", "outcome": "landscaping chosen" }
+    { "timestamp": "2026-06-01T00:04:00Z", "command": "/pick-niche", "outcome": "landscaping chosen" },
+    { "timestamp": "2026-06-01T00:05:00Z", "command": "/build-niche-template", "outcome": "landscaping template generated, all hard gates passed, 69 files" }
   ]
 }

@@ -1,0 +1,65 @@
+{
+  "niche": "landscaping",
+  "ctaVariants": [
+    {
+      "id": "cta-01",
+      "text": "Get My Free Estimate",
+      "context": "primary CTA across all pages and mobile sticky bar",
+      "type": "primary"
+    },
+    {
+      "id": "cta-02",
+      "text": "See Our Work",
+      "context": "hero secondary CTA, anchors to gallery",
+      "type": "secondary"
+    },
+    {
+      "id": "cta-03",
+      "text": "Get a Maintenance Quote",
+      "context": "lawn care card in ServiceSplit section",
+      "type": "service-specific"
+    },
+    {
+      "id": "cta-04",
+      "text": "Start a Project",
+      "context": "design and install card in ServiceSplit section",
+      "type": "service-specific"
+    },
+    {
+      "id": "cta-05",
+      "text": "Call Now",
+      "context": "mobile sticky bar left button, links to tel:",
+      "type": "mobile-call"
+    },
+    {
+      "id": "cta-06",
+      "text": "Request a Free Yard Assessment",
+      "context": "design/install service page",
+      "type": "service-specific"
+    },
+    {
+      "id": "cta-07",
+      "text": "Get a Firm Quote",
+      "context": "how it works section, step 1 for lawn care",
+      "type": "informational"
+    },
+    {
+      "id": "cta-08",
+      "text": "View Our Projects",
+      "context": "mid-page gallery link, services page",
+      "type": "secondary"
+    },
+    {
+      "id": "cta-09",
+      "text": "Schedule My First Visit",
+      "context": "lawn care page, how it works step 2",
+      "type": "service-specific"
+    },
+    {
+      "id": "cta-10",
+      "text": "Talk to the Owner",
+      "context": "about page, high-intent homeowners who want personal contact",
+      "type": "trust"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "niche": "landscaping",
+  "services": [
+    {
+      "slug": "weekly-lawn-care",
+      "name": "Weekly Lawn Care",
+      "shortName": "Lawn Care",
+      "description": "Regular scheduled service keeping your yard clean, trimmed, and healthy throughout the season.",
+      "typicalItems": [
+        "Mowing to correct height for grass type",
+        "Edging along beds, walkways, and driveways",
+        "Blowing off hard surfaces after each visit",
+        "Visual health check at every visit"
+      ],
+      "priceRange": "Starting at $45/visit depending on yard size",
+      "buyerJourney": "maintenance"
+    },
+    {
+      "slug": "fertilization-weed-control",
+      "name": "Fertilization and Weed Control",
+      "shortName": "Lawn Treatment",
+      "description": "Seasonal lawn treatment programs that build soil health and keep weeds from taking over.",
+      "typicalItems": [
+        "Soil test and program recommendation",
+        "Seasonal fertilization applications",
+        "Pre-emergent and post-emergent weed control",
+        "Grub and insect prevention where needed"
+      ],
+      "priceRange": "$150-$600/season depending on yard size and program",
+      "buyerJourney": "maintenance"
+    },
+    {
+      "slug": "spring-fall-cleanup",
+      "name": "Spring and Fall Cleanup",
+      "shortName": "Seasonal Cleanup",
+      "description": "One-time visits to prepare the yard for the season ahead or close it down properly for winter.",
+      "typicalItems": [
+        "Leaf and debris removal",
+        "Bed cleanup and edge refresh",
+        "Pruning dead growth from beds and shrubs",
+        "Final mow and trim before season end"
+      ],
+      "priceRange": "$200-$800 depending on property size",
+      "buyerJourney": "maintenance"
+    },
+    {
+      "slug": "patio-installation",
+      "name": "Patio Installation",
+      "shortName": "Patios",
+      "description": "Natural stone, brick, or concrete paver patio installation built on a properly prepared base.",
+      "typicalItems": [
+        "Site assessment and grade check",
+        "Excavation and base preparation",
+        "Stone, brick, or paver installation",
+        "Edging, jointing, and finishing",
+        "Cleanup and final walkthrough"
+      ],
+      "priceRange": "$5,000-$20,000 depending on size and material",
+      "buyerJourney": "design-install"
+    },
+    {
+      "slug": "landscape-design-install",
+      "name": "Landscape Design and Installation",
+      "shortName": "Landscape Design",
+      "description": "Full design and installation of planting beds, trees, shrubs, and ground cover tailored to your property.",
+      "typicalItems": [
+        "Free yard assessment and consultation",
+        "Design proposal with plant selections",
+        "Bed preparation and soil amendment",
+        "Plant installation with spacing and care plan",
+        "Mulch installation and finishing"
+      ],
+      "priceRange": "$3,000-$25,000 depending on scope",
+      "buyerJourney": "design-install"
+    },
+    {
+      "slug": "retaining-walls",
+      "name": "Retaining Walls",
+      "shortName": "Retaining Walls",
+      "description": "Block, stone, or timber retaining wall construction to manage grades, erosion, and usable yard space.",
+      "typicalItems": [
+        "Grade assessment and drainage planning",
+        "Footing excavation and base prep",
+        "Wall construction with proper drainage backfill",
+        "Cap and finishing"
+      ],
+      "priceRange": "$2,000-$15,000 depending on height and length",
+      "buyerJourney": "design-install"
+    },
+    {
+      "slug": "outdoor-lighting",
+      "name": "Outdoor Lighting",
+      "shortName": "Lighting",
+      "description": "Low-voltage landscape lighting for paths, trees, patios, and architectural features.",
+      "typicalItems": [
+        "Lighting design and zone plan",
+        "Transformer installation",
+        "Path, uplighting, and accent fixture installation",
+        "Timer and smart controller setup"
+      ],
+      "priceRange": "$800-$5,000 depending on scope",
+      "buyerJourney": "design-install"
+    },
+    {
+      "slug": "drainage-solutions",
+      "name": "Drainage Solutions",
+      "shortName": "Drainage",
+      "description": "French drains, dry creek beds, and grading corrections to move water away from the house and keep the yard usable.",
+      "typicalItems": [
+        "Site assessment and water flow mapping",
+        "French drain or channel drain installation",
+        "Dry creek bed construction",
+        "Grading and resloping where needed"
+      ],
+      "priceRange": "$1,500-$8,000 depending on scope",
+      "buyerJourney": "design-install"
+    }
+  ]
+}

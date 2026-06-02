@@ -1,0 +1,61 @@
+{
+  "niche": "landscaping",
+  "faqs": [
+    {
+      "id": "faq-01",
+      "question": "How much does a backyard transformation cost?",
+      "answer": "Most backyard projects in our area range from $8,000 to $40,000 depending on size, materials, and scope. We give you a firm written quote after the free yard assessment so you know the exact number before any work starts.",
+      "intent": "price-research",
+      "seoValue": "high"
+    },
+    {
+      "id": "faq-02",
+      "question": "Do you offer financing?",
+      "answer": "Yes. We work with several financing partners so you can spread the cost over 12 to 60 months. Ask us about current rates when you call for your free estimate.",
+      "intent": "financing",
+      "seoValue": "medium"
+    },
+    {
+      "id": "faq-03",
+      "question": "What if I need to change the design after we start?",
+      "answer": "Any change to scope gets a written change order with an updated price before we touch anything. You approve it first. No surprises.",
+      "intent": "contract-protection",
+      "seoValue": "medium"
+    },
+    {
+      "id": "faq-04",
+      "question": "How long does a typical installation take?",
+      "answer": "A patio or planting bed project typically takes 2 to 5 days. A full backyard transformation can take 1 to 3 weeks. We give you a timeline in writing as part of your proposal.",
+      "intent": "planning",
+      "seoValue": "medium"
+    },
+    {
+      "id": "faq-05",
+      "question": "What do I need to do before the crew arrives?",
+      "answer": "Clear access to the work area and make sure any gates or doors are unlocked. We handle the rest. We will walk you through the pre-visit checklist when we confirm your start date.",
+      "intent": "onboarding",
+      "seoValue": "low"
+    },
+    {
+      "id": "faq-06",
+      "question": "What happens if something gets damaged during the project?",
+      "answer": "We are fully insured. Any damage caused by our crew is covered and repaired at our expense. We can provide our certificate of insurance before work starts.",
+      "intent": "risk-mitigation",
+      "seoValue": "medium"
+    },
+    {
+      "id": "faq-07",
+      "question": "Can I see photos of your past work before I decide?",
+      "answer": "Yes. Our gallery shows real projects with investment ranges and locations. We can also share additional photos from specific neighborhoods or project types when you call.",
+      "intent": "social-proof",
+      "seoValue": "medium"
+    },
+    {
+      "id": "faq-08",
+      "question": "What is included in weekly lawn care?",
+      "answer": "Mowing, edging, blowing off hard surfaces, and a quality check at the end of every visit. Fertilization, weed control, and seasonal cleanups are add-on services we can quote separately.",
+      "intent": "service-scope",
+      "seoValue": "high"
+    }
+  ]
+}
