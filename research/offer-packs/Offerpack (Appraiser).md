@@ -298,3 +298,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item. Mark YES or NO.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Appraiser credentials and certifications displayed | Buyers, sellers, and lenders require a licensed appraiser -- credibility must be front and center | "Your certifications aren't visible on the homepage -- lenders and buyers need to see those before they call." |
+| 2 | Types of appraisals offered (residential, estate, divorce, PMI removal, etc.) | Clients have specific needs -- if the type isn't listed, they assume you don't do it | "Your site doesn't list estate or PMI removal appraisals -- you're invisible to those specific searches." |
+| 3 | Turnaround time clearly stated | Banks and attorneys work on deadlines -- fast turnaround is a strong differentiator | "There's no mention of your typical turnaround time -- competitors who list 48-hour delivery are winning those clients." |
+| 4 | Service counties or regions covered | Lenders and attorneys need to confirm you cover their area before they refer | "Your coverage area isn't listed -- referral sources can't tell if you serve their clients' addresses." |
+| 5 | Visible contact form or phone number above the fold | Appraisal requests are time-sensitive -- friction in contacting you costs jobs | "Your contact info requires scrolling past a wall of text -- urgent requests are going elsewhere." |
+| 6 | USPAP compliance mentioned | It's the industry standard -- mentioning it immediately signals professionalism to informed buyers | "USPAP compliance isn't mentioned anywhere -- that's the first thing a lender or attorney looks for." |
+| 7 | Fee range or starting price mentioned | Clients want to know the ballpark before committing to a call | "No pricing range on the site -- clients who can't estimate cost are choosing appraisers who are transparent." |
+| 8 | Google reviews or testimonials from past clients | Real estate decisions are large -- social proof from homeowners or attorneys builds trust fast | "Your Google rating isn't displayed on your site -- that's the most powerful trust signal for new clients." |
+
+The more items marked NO, the stronger the prospect. A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems -- a better website won't fix distrust. Above 4.6 with 80+ reviews means they are already successful and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means they do good work, they have proof, but they are not yet winning online. That is exactly the appraiser who needs a better website and is ready to pay for one.
+
+**Additional filters for appraisers:**
+- They work primarily through referrals but have no testimonials or referral partner logos on the site
+- Active in a market with frequent estate sales, divorces, or refinancing activity
+- Reviews mention quick turnaround but the site has no mention of speed or deadlines
+- Solo appraisers or two-person firms without a marketing budget who still rely on word of mouth
+
+**Best cities to search first for appraisers:** Orlando FL, Tampa FL, Phoenix AZ, Dallas TX, Denver CO, Atlanta GA, Charlotte NC, Las Vegas NV
+
+**Search strings to use on Google Maps:**
+- "home appraiser [city]"
+- "real estate appraisal [city]"
+- "property appraiser near me"

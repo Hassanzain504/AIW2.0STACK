@@ -296,3 +296,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item. Mark YES or NO.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Portfolio of past mounting projects with photos | Clients hiring for art or mirror placement are visual buyers -- they need to see the quality of your work | "Your site has no project photos -- art and mirror clients decide with their eyes before they call." |
+| 2 | Types of walls handled (plaster, brick, tile, drywall) | Many homes have tricky surfaces -- a client with a brick wall needs to know you can do it | "Your site doesn't mention wall types -- clients with plaster or brick are calling someone who does." |
+| 3 | Maximum weight or size capacity stated | Large mirrors and gallery walls require specialist hardware -- stating capacity filters in the right clients | "No weight or size limits mentioned -- clients with heavy pieces assume you can't handle it." |
+| 4 | Visible phone number or booking link | Art hanging is often tied to a move-in or renovation deadline -- easy contact converts fast | "Your contact options are buried -- clients on a move-in deadline are booking whoever they can reach first." |
+| 5 | Insurance and damage protection mentioned | Clients are trusting you with expensive or sentimental pieces -- liability coverage is a big trust factor | "No mention of insurance or damage protection -- clients with valuable art need to see that before they book." |
+| 6 | Service area listed | Many clients are interior designers or homeowners in specific neighborhoods -- they need to know you'll come to them | "Your service area isn't listed -- designers and homeowners outside your city assume you don't cover them." |
+| 7 | Pricing transparency or starting rate | Art hanging is a discretionary spend -- a starting price removes the fear of calling | "No pricing info at all -- clients with a budget are calling someone who gives them a ballpark first." |
+| 8 | Google reviews or testimonials | This is a trust-based service where referrals matter -- reviews on-site reinforce the word-of-mouth effect | "Your Google reviews aren't showing on the site -- interior designers checking you out can't see your track record." |
+
+The more items marked NO, the stronger the prospect. A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems -- a better website won't fix distrust. Above 4.6 with 80+ reviews means they are already successful and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means they do good work, they have proof, but they are not yet winning online. That is exactly the contractor who needs a better website and is ready to pay for one.
+
+**Additional filters for art and mirror mounting:**
+- They market to interior designers or staging companies but the site looks generic and handyman-like
+- Reviews mention careful handling and clean work but the site has no photos to prove it
+- Active on Instagram showing completed gallery walls but the website is a basic contact page
+- Located in an affluent suburb or urban area with high interior design activity and new home builds
+
+**Best cities to search first for art and mirror mounting:** Los Angeles CA, New York NY, Miami FL, Austin TX, Nashville TN, Seattle WA, Scottsdale AZ, Chicago IL
+
+**Search strings to use on Google Maps:**
+- "art hanging service [city]"
+- "mirror mounting [city]"
+- "picture hanging near me"

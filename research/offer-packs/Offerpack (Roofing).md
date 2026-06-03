@@ -262,3 +262,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item. Mark YES or NO.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Photo of actual completed roof job (not stock) | Homeowners judge quality by seeing real work from real jobs in their area | "I noticed your site doesn't show any before-and-after photos -- I can fix that this week." |
+| 2 | Visible phone number above the fold | Storm-damage homeowners call immediately -- they won't hunt for your number | "Your phone number is buried -- storm leads are calling the next guy who makes it easy." |
+| 3 | Google review count and star rating displayed on homepage | Social proof is the first thing a panicked homeowner checks before calling | "Your 47 Google reviews aren't showing on your site -- that's free trust you're leaving off the table." |
+| 4 | Insurance and licensing badge | Homeowners filing claims need to know you are licensed and insured before they call | "Most homeowners check for insurance info before calling -- yours isn't visible anywhere." |
+| 5 | Service area clearly stated | Homeowners want to know you serve their zip code before they waste time calling | "There's no mention of which cities or counties you cover -- that's costing you local traffic." |
+| 6 | Free inspection or free estimate call-to-action | Lowers the barrier for a homeowner who is nervous about cost | "Your site has no free inspection offer -- that's the single hook that gets storm leads to call." |
+| 7 | Financing options mentioned | Roof replacements are $8k-$20k -- payment options convert hesitant buyers | "No mention of financing on your site -- competitors who show it are winning the jobs you're losing." |
+| 8 | Mobile-friendly layout | Most homeowners search from a phone right after the storm hits | "Your site breaks on mobile -- I checked on an iPhone and the contact form is unusable." |
+
+The more items marked NO, the stronger the prospect. A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems -- a better website won't fix distrust. Above 4.6 with 80+ reviews means they are already successful and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means they do good work, they have proof, but they are not yet winning online. That is exactly the contractor who needs a better website and is ready to pay for one.
+
+**Additional filters for roofing:**
+- They run Google Ads but have a slow or template homepage (check via PageSpeed Insights)
+- Active on Facebook posting storm-damage photos but the website looks like it was built in 2015
+- Reviews mention specific crew members or the owner by name but the site introduces no one
+- Located in a hail corridor or hurricane zone where storm-season demand spikes annually
+
+**Best cities to search first for roofing:** Denver CO, Dallas TX, Oklahoma City OK, Kansas City MO, Houston TX, Atlanta GA, Nashville TN, Indianapolis IN
+
+**Search strings to use on Google Maps:**
+- "roofing contractor [city]"
+- "storm damage roof repair [city]"
+- "roof replacement near me"

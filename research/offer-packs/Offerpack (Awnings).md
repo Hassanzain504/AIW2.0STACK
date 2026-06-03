@@ -296,3 +296,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item. Mark YES or NO.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Photo gallery of installed awnings by type (retractable, fixed, commercial) | Awnings are a visual purchase -- homeowners and business owners buy based on how it will look | "Your site has no project gallery -- buyers making a $2k-$8k awning decision need to see your work first." |
+| 2 | Material and fabric options shown | Buyers want to choose their color and material before calling -- showing options reduces back-and-forth | "No fabric or color options on the site -- competitors who show swatches online are winning the first call." |
+| 3 | Motorized vs. manual options explained | Many buyers don't know motorized awnings exist -- explaining the difference opens a bigger sale | "Motorized awnings aren't mentioned on your site -- that's a higher-ticket item you're leaving off the table." |
+| 4 | Warranty on materials and installation stated | Awnings are an outdoor investment exposed to wind, rain, and UV -- warranty builds confidence | "No warranty info anywhere -- buyers comparing quotes will choose the competitor who shows a 5-year guarantee." |
+| 5 | Visible phone number or quote request form | Awning buyers often want to discuss sizing and placement -- easy contact starts that conversation | "Your contact form is hard to find -- a buyer ready to measure and order is calling whoever answers first." |
+| 6 | Service area or coverage region listed | Many awning companies limit their install radius -- buyers want to confirm you serve their address | "No service area on your site -- buyers outside your immediate city assume you won't come to them." |
+| 7 | Commercial and residential split clearly | A restaurant owner looking for storefront canopies needs to know you handle commercial work | "There's no mention of commercial installs -- you're invisible to every restaurant or retail client searching for shade." |
+| 8 | Google reviews or testimonials on homepage | Awnings are a discretionary, aesthetic purchase -- social proof from homeowners tips the decision | "Your Google reviews aren't visible on the site -- a homeowner comparing two quotes will choose the one with proof." |
+
+The more items marked NO, the stronger the prospect. A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems -- a better website won't fix distrust. Above 4.6 with 80+ reviews means they are already successful and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means they do good work, they have proof, but they are not yet winning online. That is exactly the contractor who needs a better website and is ready to pay for one.
+
+**Additional filters for awnings:**
+- They serve both residential patios and commercial storefronts but the site targets neither clearly
+- Reviews mention fast installation or great customer service but the site has no testimonials section
+- They offer motorized or smart awnings but this is not mentioned anywhere on the homepage
+- Located in a sunbelt state or coastal market where outdoor living season is long and shading products are in demand year-round
+
+**Best cities to search first for awnings:** Phoenix AZ, Las Vegas NV, Miami FL, San Diego CA, Houston TX, Tampa FL, Dallas TX, Tucson AZ
+
+**Search strings to use on Google Maps:**
+- "awning installation [city]"
+- "retractable awning [city]"
+- "patio awning near me"

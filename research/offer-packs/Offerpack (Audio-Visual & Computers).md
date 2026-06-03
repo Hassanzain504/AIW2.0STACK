@@ -296,3 +296,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item. Mark YES or NO.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Services split clearly (TV mounting, surround sound, network setup, computer repair, etc.) | Clients have a specific need -- if they can't find it listed, they assume you don't offer it | "Your services aren't broken out clearly -- a client searching for home theater setup can't tell if you do it." |
+| 2 | Photos of completed AV installations | Home theater and whole-home audio are aspirational purchases -- showing the finished look converts browsers | "Your site has no photos of installed systems -- clients buy the vision before they buy the service." |
+| 3 | Brands and systems supported (Sonos, Samsung, Bose, Lutron, etc.) | Tech buyers want compatibility confirmed before they call -- listing brands filters in the right clients | "No brands listed on your site -- a Sonos customer isn't going to call and hope you know it." |
+| 4 | Visible phone number or booking link above the fold | Tech installations often have a move-in or party deadline -- easy contact wins the job | "Your contact info requires scrolling -- clients on a deadline book the first person they can reach." |
+| 5 | Google reviews with specific project mentions | AV and tech work is a referral-driven category -- on-site reviews bring that trust to cold visitors | "Your Google reviews aren't on the site -- someone checking you out for a $3k home theater job needs to see proof." |
+| 6 | Service area stated clearly | Many clients assume AV specialists only serve certain zip codes or suburbs | "No service area listed -- clients outside the city center assume you won't come to them." |
+| 7 | Pricing tiers or starting rates for common jobs | TV mounting and basic setups have a known price range -- showing it filters serious buyers | "No pricing on the site -- competitors who list a flat TV-mount rate are getting the easy calls you're missing." |
+| 8 | Remote support or ongoing maintenance option mentioned | Recurring revenue and referrals come from clients who can call you back -- mentioning support builds long-term value | "No mention of ongoing support or maintenance -- clients want someone they can call when something breaks." |
+
+The more items marked NO, the stronger the prospect. A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems -- a better website won't fix distrust. Above 4.6 with 80+ reviews means they are already successful and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means they do good work, they have proof, but they are not yet winning online. That is exactly the contractor who needs a better website and is ready to pay for one.
+
+**Additional filters for audio-visual and computers:**
+- They post setup photos on Instagram or Facebook but the website is a plain contact page or Wix template
+- Reviews mention specific installs (4K projector room, outdoor speakers) but the site lists nothing visually
+- They serve both residential and commercial but the site mixes the two with no clear separation
+- Located in a suburb with new-build homes where demand for smart home and AV installs is high
+
+**Best cities to search first for audio-visual and computers:** Scottsdale AZ, Austin TX, Raleigh NC, Denver CO, Charlotte NC, Tampa FL, Nashville TN, Seattle WA
+
+**Search strings to use on Google Maps:**
+- "home theater installation [city]"
+- "TV mounting service [city]"
+- "AV installer near me"

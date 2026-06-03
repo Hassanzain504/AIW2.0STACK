@@ -300,3 +300,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item. Mark YES or NO.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | List of brands they service (e.g. Samsung, LG, Whirlpool) | Homeowners search by brand -- if your brand isn't listed, they assume you don't fix it | "Your site doesn't list the brands you service -- you're invisible to every Samsung or LG search." |
+| 2 | Same-day or next-day availability stated clearly | A broken fridge or washer is urgent -- speed wins the job | "There's no mention of same-day service on your site -- that's the one thing appliance customers search for." |
+| 3 | Visible phone number above the fold | Appliance emergencies drive immediate calls -- the number must be the first thing they see | "Your phone number is not visible without scrolling -- urgent callers are leaving your site." |
+| 4 | Google review count and rating on homepage | Homeowners pick the most-reviewed local tech -- if yours aren't showing, you're losing to competitors who display theirs | "Your 30+ Google reviews aren't on your website -- that social proof is doing nothing for you right now." |
+| 5 | Flat-rate or diagnostic fee stated upfront | Price anxiety is the number one reason people don't call -- transparency wins clicks | "You don't mention your diagnostic fee anywhere -- customers assume the worst and call someone else." |
+| 6 | Service area or zip codes listed | Homeowners want instant confirmation you come to their area before they pick up the phone | "There's no service area listed on your site -- you're losing calls from people who assume you're too far." |
+| 7 | Warranty on parts and labor | A warranty makes the decision easy for nervous buyers | "No warranty mentioned anywhere -- competitors who show a 90-day parts guarantee are winning those jobs." |
+| 8 | Mobile-optimized layout | Most emergency appliance searches happen on a phone while standing in the kitchen | "Your site is hard to navigate on mobile -- I tested it and the call button doesn't work properly." |
+
+The more items marked NO, the stronger the prospect. A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems -- a better website won't fix distrust. Above 4.6 with 80+ reviews means they are already successful and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means they do good work, they have proof, but they are not yet winning online. That is exactly the contractor who needs a better website and is ready to pay for one.
+
+**Additional filters for appliances:**
+- They advertise fast turnaround on social media but the website has no urgency language or booking form
+- Reviews mention specific techs by name but the site has no team page or photos
+- They service multiple brands but only one or two are listed on the homepage
+- Located in a suburb with high owner-occupied housing stock where appliance repair demand is steady year-round
+
+**Best cities to search first for appliances:** Phoenix AZ, Charlotte NC, Columbus OH, Jacksonville FL, Austin TX, San Antonio TX, Las Vegas NV, Raleigh NC
+
+**Search strings to use on Google Maps:**
+- "appliance repair [city]"
+- "washing machine repair [city]"
+- "refrigerator repair near me"
