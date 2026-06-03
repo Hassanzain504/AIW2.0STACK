@@ -265,3 +265,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Material type gallery (hardwood, LVP, tile, carpet, laminate, cork) | Flooring buyers browse by material type long before they call a contractor | "Your site doesn't organize flooring by material type -- buyers searching for LVP or hardwood won't know you do it." |
+| 2 | Before-and-after room transformation photos | Nothing sells a flooring upgrade like seeing an ugly carpet become beautiful hardwood | "Before-and-after photos of your flooring installs would be the single most effective thing on your site." |
+| 3 | Brands or product lines carried | Flooring buyers research specific products; naming brands builds trust and captures search traffic | "Your site doesn't mention which flooring brands you carry -- that's one of the first things a buyer looks for." |
+| 4 | Free in-home estimate offer | Flooring quotes require measurement; a free in-home estimate removes the biggest barrier | "Offering a free in-home estimate on your site gives buyers the low-risk first step they need to reach out." |
+| 5 | Room-by-room guidance (best flooring for kitchens, bathrooms, basements) | Buyers are overwhelmed by choices; educational content builds trust and keeps them on the site | "A simple 'which flooring is right for each room' guide would keep buyers on your site longer and make them more likely to call." |
+| 6 | Service area cities listed | Flooring contractors are local; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't confirm you will come to their home." |
+| 7 | Financing options or payment plans | Whole-home flooring can run $10,000 to $30,000; financing information keeps buyers from bouncing | "Mentioning financing on your site would stop buyers from leaving the moment they see the price." |
+| 8 | Google reviews or testimonials with project types mentioned | Flooring is a considered purchase; named reviews from real projects build specific confidence | "Your Google rating doesn't appear on your site -- showing it would give buyers proof they can trust you with their home." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for flooring companies:**
+- Sells and installs (not just a retail showroom with subcontracted labor)
+- No LVP or luxury vinyl page despite it being the fastest-growing flooring category
+- Photo gallery exists on Houzz or social media but not on their website
+- Does not appear in the Google Maps 3-pack for flooring installation in their area
+
+**Best cities to search first:** Atlanta, Dallas, Houston, Phoenix, Charlotte, Columbus, Indianapolis, Tampa
+
+**Search strings to use on Google Maps:**
+- "flooring contractor [city]"
+- "hardwood floor installation [city]"
+- "LVP flooring installer near me"

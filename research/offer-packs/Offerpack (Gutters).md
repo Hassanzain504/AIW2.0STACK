@@ -256,3 +256,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Gutter type options listed (seamless, K-style, half-round, copper, aluminum, vinyl) | Buyers compare materials and styles before calling; a site with no options loses them | "Your site doesn't list gutter types or materials -- buyers comparing options will call a competitor who explains them." |
+| 2 | Gutter guard brands or options page | Gutter guards are a high-margin upsell; a dedicated page attracts buyers specifically searching for them | "Adding a gutter guard page would capture buyers who are specifically searching for low-maintenance gutter solutions." |
+| 3 | Before-and-after installation photos | Gutters are invisible when done right; showing the transformation from sagging to seamless proves quality | "Before-and-after photos of your gutter installs would give buyers visual proof that the upgrade is worth it." |
+| 4 | Cleaning and maintenance service page | Gutter cleaning is a recurring revenue line that generates repeat business and upsell opportunities | "Adding a gutter cleaning page would attract homeowners who need regular service and often upgrade their gutters after." |
+| 5 | Service area cities listed | Gutter companies operate in a defined local area; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't confirm you will come to their neighborhood." |
+| 6 | Free estimate call to action on every page | Gutter quotes require a site visit; a prominent free estimate offer removes the barrier | "A free estimate button on every page would turn more visitors into quote requests immediately." |
+| 7 | Google reviews with star rating displayed | Gutter buyers often choose based on who has the most reviews in their area | "Displaying your Google rating on your site would give buyers an instant reason to call you over a competitor." |
+| 8 | Lifetime or transferable warranty statement | Seamless gutter warranties are a key differentiator buyers ask about | "Mentioning your warranty on your site answers the question buyers ask most before signing a gutter contract." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for gutter companies:**
+- Installs seamless gutters (not just cleans or repairs)
+- No dedicated gutter guard page despite it being a high-margin upsell
+- No photo gallery of installed gutters on their website
+- Does not appear in the Google Maps 3-pack for gutter installation in their area
+
+**Best cities to search first:** Atlanta, Charlotte, Columbus, Indianapolis, Raleigh, Nashville, Dallas, Houston
+
+**Search strings to use on Google Maps:**
+- "gutter installation [city]"
+- "seamless gutters [city]"
+- "gutter guard installation near me"

@@ -273,3 +273,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | 24-hour emergency service statement visible above the fold | Most locksmith calls are urgent; a site that makes emergency availability obvious wins the call | "Your site doesn't make your emergency availability obvious -- someone locked out at midnight will call whoever makes that clear first." |
+| 2 | Service breakdown (residential, automotive, commercial, safe opening) | Locksmiths cover four distinct markets; a vague page loses buyers in each one | "Your site groups all locksmith services together -- separate pages would capture more searches from each category." |
+| 3 | Pricing transparency or price range by service type | Locksmith is a high-fraud category; transparent pricing builds trust that generic sites lack | "Adding a pricing guide to your site would set you apart from the bait-and-switch locksmiths that have damaged trust in the industry." |
+| 4 | License number or state certification displayed | Locksmith licensing is required in many states; buyers look for it before calling in a high-fraud category | "Displaying your license number on your site would immediately separate you from the fly-by-night locksmiths buyers are wary of." |
+| 5 | Click-to-call phone number as the primary action above the fold | Emergency locksmith leads call, not fill forms; the phone number must be the most visible element | "Your phone number is buried -- someone who is locked out right now will call whoever has the biggest, clearest number on their phone screen." |
+| 6 | Service area cities or zip codes listed | Locksmiths have a defined response radius; buyers confirm coverage before calling | "Your site doesn't list your service area -- local buyers can't confirm you will come to them." |
+| 7 | Response time or average ETA statement | Emergency buyers choose based on who arrives fastest; a stated ETA wins the call | "Stating your average response time on your site would win the calls from people who need help right now." |
+| 8 | Google reviews with response time and honest pricing noted | Locksmith trust is earned through reviews because the category has a scam reputation | "Showing your Google reviews on your homepage would give buyers in a vulnerable moment the confidence to call you." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for locksmiths:**
+- Serves residential and automotive (the two highest-volume emergency categories)
+- No pricing transparency on their website
+- No state license number or certification visible
+- Does not appear in the Google Maps 3-pack for locksmith in their area
+
+**Best cities to search first:** Atlanta, Dallas, Houston, Phoenix, Chicago, Columbus, Indianapolis, Tampa
+
+**Search strings to use on Google Maps:**
+- "locksmith [city]"
+- "emergency locksmith [city]"
+- "car lockout service near me"

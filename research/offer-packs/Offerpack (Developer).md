@@ -261,3 +261,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Portfolio of completed developments with project names and locations | Real estate buyers and investors evaluate track record before anything else | "Your site has no portfolio of completed projects -- investors want proof before they pick up the phone." |
+| 2 | Current projects or available units page | Buyers and agents need to know what is on offer right now | "Your site doesn't show current or upcoming projects -- that's the first thing a buyer's agent looks for." |
+| 3 | Floor plans or site plan downloads | Pre-construction buyers want specifics before committing to a meeting | "Offering downloadable floor plans would get you more qualified inquiries from serious buyers." |
+| 4 | Named principal or development team bio | Buyers invest in people, not just properties; a face builds confidence | "Your site doesn't show who is behind the company -- that anonymity makes buyers hesitant." |
+| 5 | Contact form with project-specific inquiry option | Developer leads vary widely; a structured form routes inquiries efficiently | "A short inquiry form tied to specific projects would get you better leads than a generic email link." |
+| 6 | Press or media mentions (local business journal, real estate news) | Developer credibility is built partly on third-party recognition | "If your projects have been covered in the press, featuring those links would give your site instant authority." |
+| 7 | Neighborhood or location context for each project | Buyers compare locations; providing context reduces back-and-forth | "Adding neighborhood details to each project page would answer the first question every buyer asks." |
+| 8 | Mobile-friendly layout with fast load time | Buyers browse developments on their phone between viewings | "Your site is slow on mobile -- that alone causes most visitors to leave before they see your projects." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for real estate developers:**
+- Small to mid-size developer (under 50 units per project) where the principal is still involved in sales
+- Active social media (Instagram renders) but weak website with no project pages
+- No downloadable floor plans or unit availability list
+- Does not appear in local search for new construction or development in their city
+
+**Best cities to search first:** Austin, Nashville, Charlotte, Tampa, Raleigh, Denver, Phoenix, Boise
+
+**Search strings to use on Google Maps:**
+- "real estate developer [city]"
+- "new home development [city]"
+- "residential developer near me"

@@ -271,3 +271,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Space type portfolio (closets, kitchens, garages, home offices, pantries) | Organizer buyers search by the space they need help with; a vague portfolio loses each specific search | "Your site doesn't organize your portfolio by space type -- buyers looking for garage or pantry organization can't confirm you do it." |
+| 2 | Before-and-after transformation photos | Organization is a visual category; a dramatic before-and-after is the primary conversion tool | "Before-and-after photos of your organization projects would be the most persuasive thing on your site." |
+| 3 | Custom closet or storage system options with brands (California Closets, Closet Factory, Elfa) | Buyers research systems before they call an organizer; naming brands or proprietary systems builds credibility | "Your site doesn't mention which storage systems you use -- buyers who have researched brands want to know if you work with them." |
+| 4 | Process explanation (consultation, design, install, or coaching only) | Organizers work in very different ways; clarity about what you do prevents mismatched inquiries | "Your site doesn't explain your process -- buyers don't know if you install systems, coach them to do it themselves, or both." |
+| 5 | Pricing or package options visible | Organizer services range from hourly coaching to full custom installation; price context qualifies leads | "Adding a pricing or package page would get you better-qualified inquiries from buyers who know what they are looking for." |
+| 6 | Service area or cities listed | Organizers are local; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't tell if you travel to their neighborhood." |
+| 7 | Free consultation or in-home assessment offer | Organization projects are site-specific; a free first visit removes the barrier to contact | "Offering a free consultation on your site gives buyers a no-risk way to start and gets you in front of them." |
+| 8 | Google reviews or testimonials with space type mentioned | Social proof anchored to a specific space (closet, garage) is far more persuasive than a generic review | "A review mentioning the specific space you organized would give buyers exactly the proof they need to book you." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for professional organizers:**
+- Serves residential (not just corporate or commercial)
+- No before-and-after gallery visible on their website
+- No pricing or package information despite operating in a buyer-researched category
+- Does not appear in local Google search for home organizer or closet organizer
+
+**Best cities to search first:** Los Angeles, Dallas, Atlanta, Denver, Chicago, Austin, Seattle, Miami
+
+**Search strings to use on Google Maps:**
+- "professional organizer [city]"
+- "home organizer [city]"
+- "closet organizer near me"

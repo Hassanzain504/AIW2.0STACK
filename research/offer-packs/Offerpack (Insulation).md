@@ -256,3 +256,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Insulation type pages (spray foam, blown-in, batt, rigid board, radiant barrier) | Buyers search by insulation type; a generic page misses every specific search | "Your site doesn't list insulation types separately -- a homeowner searching for spray foam won't know you do it." |
+| 2 | Energy savings calculator or bill reduction content | Insulation is sold on ROI; a tool or content that quantifies savings converts browsers | "Adding an energy savings estimate to your site would give buyers the financial justification to call you today." |
+| 3 | Rebate and utility incentive information | Many insulation jobs qualify for utility rebates or federal credits; a site that explains this wins the call | "Your site doesn't mention energy rebates or tax credits -- that information alone gets insulation buyers off the fence." |
+| 4 | Before-and-after thermal images or R-value comparisons | Insulation quality is invisible; infrared photos or R-value charts make the value tangible | "Before-and-after thermal images on your site would show buyers exactly what poor insulation looks like and why they need you." |
+| 5 | Residential attic, crawl space, and wall insulation breakdown | Each application has different buyer concerns; specific pages capture each search | "Separate pages for attic, crawl space, and wall insulation would get you more search traffic from homeowners with specific problems." |
+| 6 | Service area or cities listed | Insulation contractors work within a defined local radius | "Your site doesn't list your service area -- local homeowners can't confirm you will come to their home." |
+| 7 | Free energy audit or free quote offer | Insulation projects require assessment before pricing; a free audit offer removes the barrier | "Offering a free home energy audit on your site gives buyers a low-risk reason to let you in the door." |
+| 8 | Google reviews or testimonials with energy bill savings mentioned | Social proof tied to measurable outcomes (lower bills) is the most persuasive possible review | "If your customers have mentioned lower energy bills in reviews, showing those on your site would convert far more visitors." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for insulation companies:**
+- Installs at least two insulation types (spray foam and blown-in is the most common combination)
+- No rebate or utility incentive information on their website
+- No energy savings content or calculator
+- Does not appear in local Google search for attic insulation or spray foam
+
+**Best cities to search first:** Houston, Atlanta, Dallas, Phoenix, Charlotte, Columbus, Nashville, Indianapolis
+
+**Search strings to use on Google Maps:**
+- "insulation contractor [city]"
+- "spray foam insulation [city]"
+- "attic insulation near me"

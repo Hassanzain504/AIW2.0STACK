@@ -291,3 +291,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Media type and application list (soda blast, dry ice, abrasive, wet blast for auto, marine, industrial) | Sandblasting covers many methods and applications; buyers need to confirm you do their specific job | "Your site doesn't list which blasting methods you use -- a buyer who needs soda blasting for auto restoration won't know if you offer it." |
+| 2 | Mobile vs. shop sandblasting distinction | Some jobs require on-site blasting; buyers confirm this before calling | "Your site doesn't say whether you come to the customer or they bring items to your shop -- that question stops a lot of people from calling." |
+| 3 | Before-and-after surface photos by application type | The transformation from rusty or painted to clean bare metal is dramatic; photos close the sale | "Before-and-after photos of your blasting work would be the single most persuasive thing on your site." |
+| 4 | Industries and item types served (automotive, marine, structural steel, farm equipment, industrial tanks) | Buyers from different industries need to confirm you handle their sector | "Listing the industries and item types you serve on your site would attract buyers who currently don't know if you do their kind of work." |
+| 5 | Containment and environmental compliance statement | Many blasting jobs require waste containment; buyers want to know you handle it | "Your site doesn't mention containment or environmental compliance -- commercial buyers require that information before awarding a contract." |
+| 6 | Service area or mobile travel radius | Sandblasting is often mobile; buyers confirm your travel radius before calling | "Your site doesn't list your service area or travel radius -- buyers who need on-site blasting can't tell if you will come to them." |
+| 7 | Turnaround time or project timeline guidance | Buyers integrating blasting into a broader restoration project need lead time information | "Stating your typical turnaround time on your site would help buyers plan their project and choose you over a shop with no timeline." |
+| 8 | Google reviews with item or industry type mentioned | Reviews that name the item and describe the result are the most persuasive in a niche service | "A review mentioning the truck chassis or boat hull you blasted would give buyers the specific confidence to contact you." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for sandblasting companies:**
+- Offers mobile or on-site blasting (not shop-only)
+- No before-and-after photo gallery
+- No industries or item types listed on their website
+- Does not appear in local Google search for sandblasting or media blasting
+
+**Best cities to search first:** Houston, Dallas, Tulsa, Birmingham, Columbus, Indianapolis, Kansas City, Baton Rouge
+
+**Search strings to use on Google Maps:**
+- "sandblasting service [city]"
+- "media blasting [city]"
+- "mobile sandblasting near me"

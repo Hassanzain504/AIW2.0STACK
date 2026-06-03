@@ -267,3 +267,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Equipment brands they service or install (Carrier, Trane, Lennox, Daikin, Rheem) | HVAC buyers trust brand names; a site that names brands captures brand-specific searches | "Your site doesn't mention which HVAC brands you install or service -- buyers searching for Carrier or Trane service won't find you." |
+| 2 | Separate pages for installation, repair, and maintenance | HVAC buyers have three distinct needs; one generic page misses all three searches | "Your site groups all HVAC services together -- separate pages for install, repair, and maintenance would get you far more traffic." |
+| 3 | 24-hour emergency repair statement | HVAC failures are urgent; visible emergency availability wins the call every time | "Your site doesn't mention emergency service -- someone with no AC in July will call whoever makes that clear first." |
+| 4 | Financing options for new system installations | A new HVAC system runs $5,000 to $15,000; financing information keeps buyers from leaving on price shock | "Adding financing information to your site would stop buyers from leaving when they see the cost of a new system." |
+| 5 | Service area cities or zip codes listed | HVAC contractors are local; buyers confirm coverage before reading any service information | "Your site doesn't list your service area -- local buyers can't confirm you will come to their home." |
+| 6 | Maintenance plan or tune-up page | Recurring service plans are the most profitable line in HVAC and generate predictable revenue | "Adding a maintenance plan page would attract homeowners who want a reliable HVAC partner year-round." |
+| 7 | Licensing, bonding, and EPA certification visible | HVAC requires specific certifications; buyers and property managers verify credentials before calling | "Your site doesn't show your certifications -- that's one of the first things a property manager checks before hiring." |
+| 8 | Google reviews with response time and professionalism noted | HVAC emergencies require trust instantly; reviews that mention fast response win the lead | "Showing your Google reviews on the homepage would give buyers the confidence to call you during an emergency." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for HVAC companies:**
+- Serves residential (not exclusively large commercial)
+- No maintenance plan or tune-up page
+- No financing information despite high average system cost
+- Does not appear in the Google Maps 3-pack for AC repair or HVAC installation in their area
+
+**Best cities to search first:** Phoenix, Dallas, Houston, Atlanta, Tampa, Charlotte, Las Vegas, Orlando
+
+**Search strings to use on Google Maps:**
+- "HVAC contractor [city]"
+- "AC repair [city]"
+- "furnace installation near me"

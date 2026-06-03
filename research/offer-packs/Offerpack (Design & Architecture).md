@@ -259,3 +259,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Portfolio with labeled project types (residential addition, kitchen remodel, new build) | Design clients select based on whether your past work matches their vision | "Your portfolio doesn't label project types -- prospects can't tell if you've done the kind of work they need." |
+| 2 | Principal or lead designer bio with photo | Design is a personal relationship; buyers research the person before the firm | "Your site has no bio for the designer -- clients want to know who they will be working with before reaching out." |
+| 3 | Clear description of the design process (phases, timeline, deliverables) | Design clients are anxious about cost and process; clarity converts browsers | "Your site doesn't explain your process -- prospects don't know what working with you actually looks like." |
+| 4 | Project size or budget range indication | Design firms lose time on poor-fit inquiries; a minimum helps qualify leads | "Stating a project minimum on your site would save you hours of calls from clients who are not the right fit." |
+| 5 | Named awards, publications, or press mentions | Design buyers weigh credentials heavily before committing a large budget | "If your work has been published or recognized, showing that on your homepage would make a strong first impression." |
+| 6 | Testimonials from past clients with project type noted | Social proof anchored to a project type builds specific trust | "A client quote next to each portfolio project would give visitors the confidence to reach out." |
+| 7 | Contact form with project inquiry fields | Vague contact pages generate low-quality leads; structured forms qualify better | "Your contact page is just an email address -- a short inquiry form would get you better leads and fewer time-wasters." |
+| 8 | Mobile-optimized portfolio layout | Design clients browse on tablets and phones while discussing ideas at home | "Your portfolio is hard to view on a phone -- that's where most of your potential clients are looking first." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for design and architecture firms:**
+- Small to mid-size practice (1 to 10 staff) where the principal is also a salesperson
+- Has strong Instagram presence but a weak or outdated website
+- No process or phases page explaining how projects run
+- Does not show up in local search for residential architecture or interior design
+
+**Best cities to search first:** Austin, Denver, Nashville, Raleigh, Scottsdale, Charleston, Portland, Boise
+
+**Search strings to use on Google Maps:**
+- "residential architect [city]"
+- "interior design firm [city]"
+- "home designer near me"

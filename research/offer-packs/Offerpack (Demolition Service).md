@@ -298,3 +298,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Job type list (interior demo, structure demo, pool removal, shed removal) | Demolition buyers need to confirm you do their specific job before calling | "Your site doesn't list the types of demolition you handle, so prospects move on to someone who does." |
+| 2 | Licensing and insurance statement with certificate link or badge | Demolition is high-risk; buyers and GCs require proof of coverage instantly | "Your site has no mention of licensing or insurance -- contractors and homeowners need to see that before they call." |
+| 3 | Before-and-after or in-progress project photos | Buyers want visual proof you are organized, not just destructive | "Photos showing your job sites clean and controlled would set you apart from competitors in your area." |
+| 4 | Debris removal and haul-away statement | Many buyers assume demo and removal are separate; clarity removes a friction point | "Your site doesn't say whether debris removal is included -- that question stops a lot of people from calling." |
+| 5 | Service area cities or counties listed | Demo contractors work within a tight radius; buyers want to confirm coverage fast | "Your site doesn't list your service area, so local prospects don't know if you will come to their address." |
+| 6 | Free estimate or fast quote request form | Demo pricing varies too much for buyers to guess; a quote form captures the lead | "A simple quote form would get you leads overnight instead of waiting for people to call during business hours." |
+| 7 | Google reviews or project testimonials on the homepage | Demo is a one-time job; trust signals replace the referral network online | "Showing your Google rating on your site would give visitors confidence you are reliable and professional." |
+| 8 | Click-to-call number in the site header | Demo leads are often urgent (storm damage, permit deadlines); easy contact matters | "Your phone number is hard to find -- someone who needs emergency demolition will just call a competitor." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for demolition companies:**
+- Works on residential or light commercial (not heavy industrial only)
+- No dedicated page for interior selective demolition (a common homeowner need)
+- Website lacks any project photos or looks like a basic directory listing
+- Does not appear in local Google search for their primary demo service
+
+**Best cities to search first:** Houston, Dallas, Phoenix, Atlanta, Columbus, Indianapolis, Memphis, Jacksonville
+
+**Search strings to use on Google Maps:**
+- "demolition contractor [city]"
+- "interior demolition [city]"
+- "pool removal near me"

@@ -267,3 +267,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | 24-hour emergency service statement visible above the fold | Burst pipes and flooding are urgent; a site that makes emergency availability obvious wins the call | "Your site doesn't make your emergency plumbing service obvious -- someone with a burst pipe will call whoever makes that clear first." |
+| 2 | Service breakdown (drain cleaning, water heater, pipe repair, remodel, water treatment) | Plumbing buyers have specific jobs; a vague page misses every specific search | "Your site groups all plumbing together -- separate pages for drain cleaning and water heater replacement would get you more search traffic." |
+| 3 | License number displayed on the site | Plumbers are required to be licensed; buyers verify this before letting anyone touch their pipes | "Your site doesn't show your plumber's license number -- homeowners check for that before they let you in." |
+| 4 | Tankless water heater or water heater page | Water heater replacement is one of the highest-volume emergency plumbing calls | "Adding a water heater page would capture one of the most searched plumbing services and rank you for those emergency calls." |
+| 5 | Financing options for large jobs | Repipes and sewer line repairs can run $5,000 to $20,000; financing information keeps buyers from shopping | "Mentioning financing on your site would stop buyers from leaving when they see the cost of a major plumbing repair." |
+| 6 | Service area cities or zip codes listed | Plumbers are local; buyers confirm coverage before reading any service information | "Your site doesn't list your service area -- local buyers can't confirm you will come to their home." |
+| 7 | Online booking or after-hours contact option | Plumbing emergencies happen at 2am; an easy after-hours contact option captures those leads | "Adding an after-hours contact option or online booking would get you leads even when your phones are off." |
+| 8 | Google reviews with fast response and honest pricing noted | Plumbing is a high-trust purchase; reviews that mention response time and fair pricing win the call | "Showing your Google reviews on your homepage would give buyers in an emergency the confidence to call you first." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for plumbing companies:**
+- Serves residential (not exclusively commercial or industrial)
+- No water heater or tankless water heater page
+- License number not visible on the website
+- Does not appear in the Google Maps 3-pack for plumber in their area
+
+**Best cities to search first:** Atlanta, Dallas, Houston, Phoenix, Tampa, Charlotte, Columbus, Denver
+
+**Search strings to use on Google Maps:**
+- "plumber [city]"
+- "emergency plumber [city]"
+- "water heater replacement near me"

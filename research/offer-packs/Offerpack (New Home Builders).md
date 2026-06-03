@@ -275,3 +275,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Active communities or available lots page | Buyers want to know where they can build before they call anyone | "Your site doesn't show available lots or active communities -- buyers can't start their research without that information." |
+| 2 | Floor plan library with square footage and bedroom counts | Home buyers browse floor plans the way shoppers browse products; no plans means no engagement | "Your site has no floor plans -- buyers who can't browse options will go to a builder who shows them." |
+| 3 | Base pricing or starting price per floor plan | New home buyers need a price anchor to self-qualify before calling | "Adding a starting price to each floor plan would save you hours of calls from buyers who are not in your budget range." |
+| 4 | Completed home photo gallery organized by community or plan | Buyers want to see finished homes, not just renderings | "A gallery of your completed homes would give buyers the visual confidence that your builds match their expectations." |
+| 5 | Virtual tour or model home information | Model home visits are the primary conversion point; making them easy to book increases traffic | "Adding model home hours or a virtual tour to your site would get more buyers in the door before they visit a competitor." |
+| 6 | Warranty and build quality statement | New home warranties are a key purchase factor; a site that explains them builds confidence | "Your site doesn't mention your builder warranty -- that's one of the first things buyers ask about before signing a contract." |
+| 7 | Financing partners or preferred lender information | Most new home buyers need financing guidance early in the process | "Adding preferred lender information to your site would give buyers one less reason to delay reaching out to you." |
+| 8 | Contact form with lot or community interest field | Builder leads vary by community; a structured form routes inquiries efficiently and qualifies buyers | "A contact form that asks which community or plan the buyer is interested in would give your sales team better leads to work." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for new home builders:**
+- Builds 5 to 50 homes per year (small enough that a better website is a meaningful advantage)
+- No floor plan library with pricing on their website
+- No active communities or available lots page
+- Does not appear in local Google search for new homes or custom home builder in their market
+
+**Best cities to search first:** Austin, Nashville, Charlotte, Raleigh, Dallas, Phoenix, Boise, Denver
+
+**Search strings to use on Google Maps:**
+- "new home builder [city]"
+- "custom home builder [city]"
+- "production home builder near me"

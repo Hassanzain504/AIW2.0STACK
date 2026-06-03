@@ -255,3 +255,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Dock types listed (floating, fixed, aluminum, wood, composite) | Buyers searching for a specific dock type skip sites that don't confirm they build it | "Your site doesn't specify what kinds of docks you build -- a buyer looking for a floating aluminum dock will move on." |
+| 2 | Photo gallery of completed docks by water type (lake, river, coastal) | Dock buyers are visual and waterfront-proud; photos drive the decision | "Your site has no photos of completed docks -- buyers want to see your work before they call." |
+| 3 | Permit handling or regulatory guidance section | Dock permits are required in most jurisdictions; a site that addresses this gets the call | "Mentioning that you handle permits on your site removes the biggest hassle buyers worry about." |
+| 4 | Service area by waterway, lake, or region | Dock builders work specific waterways; buyers confirm access before reading further | "Your site doesn't list which lakes or waterways you serve -- local buyers can't confirm you cover their area." |
+| 5 | Boat lift and accessories section | Upsell services on the site increase average job value and qualify buyers further | "Adding a boat lift section to your site would attract buyers who need more than just a dock and increase your average job." |
+| 6 | Free estimate or site visit offer | Dock quotes require an on-site visit; offering it on the site lowers the barrier | "Offering a free on-site estimate on your site gives buyers a clear next step instead of guessing how to start." |
+| 7 | Testimonials with lake or property names | Location-anchored reviews build credibility with buyers on the same waterway | "A review mentioning the lake or neighborhood would do more for you than a generic five-star rating." |
+| 8 | Material options and warranty information | Dock buyers compare materials carefully because longevity matters for a water investment | "Explaining your material options and warranty on your site would answer the top question buyers have before calling." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for dock builders:**
+- Operates near inland lakes, reservoirs, or coastal waterways with high recreational boat ownership
+- No dedicated page for boat lifts or dock accessories
+- Website lacks any waterway or lake-specific content
+- Does not appear in local Google search for dock building or dock repair
+
+**Best cities to search first:** Orlando, Tampa, Knoxville, Nashville, Austin, Minneapolis, Traverse City, Lake of the Ozarks
+
+**Search strings to use on Google Maps:**
+- "dock builder [city]"
+- "boat dock installation [city]"
+- "floating dock contractor near me"

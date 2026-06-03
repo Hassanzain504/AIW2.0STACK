@@ -256,3 +256,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Service list covering new drywall, repair, skim coat, texture matching, and plaster | Buyers have very specific drywall needs; a vague page loses the click | "Your site doesn't break out your services -- buyers searching for skim coat or texture matching won't know you do it." |
+| 2 | Close-up photos of finished surfaces and texture work | Drywall quality is invisible until it is painted; before-and-after photos prove skill | "Close-up photos of your finished drywall work would give buyers proof of your quality before they call." |
+| 3 | Water damage and hole repair section | Repair is a high-frequency entry point for new customers | "Adding a repair section to your site would capture all the homeowners searching for patch and paint help." |
+| 4 | Residential and commercial distinction | Buyers need to confirm you serve their property type | "Your site doesn't say whether you work on homes, commercial spaces, or both -- that ambiguity costs you leads." |
+| 5 | Service area or city list | Drywall contractors are local; buyers confirm coverage before reading further | "Your site doesn't list where you work -- local buyers can't tell if you serve their area." |
+| 6 | Free estimate or quick response promise | Drywall jobs are often time-sensitive (renovation in progress); a fast turnaround promise wins the lead | "Promising a fast estimate turnaround on your site would set you apart from competitors who don't respond quickly." |
+| 7 | Testimonials or Google reviews on the homepage | Drywall quality is hard to judge without referrals; online reviews fill that gap | "Showing your Google reviews on the homepage would give buyers the confidence to call you over a random competitor." |
+| 8 | Click-to-call phone number in the header | Many drywall leads are mid-renovation and need help now | "Your phone number is hard to find -- a contractor mid-reno who needs you today will call whoever answers first." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for drywall and plaster companies:**
+- Works on residential projects (not exclusively large commercial)
+- No photo gallery of finished or textured surfaces
+- Website does not mention plaster repair or texture matching specifically
+- Does not rank in local Google search for drywall repair or finishing
+
+**Best cities to search first:** Atlanta, Dallas, Houston, Phoenix, Charlotte, Columbus, Denver, Las Vegas
+
+**Search strings to use on Google Maps:**
+- "drywall contractor [city]"
+- "drywall repair [city]"
+- "plaster repair near me"

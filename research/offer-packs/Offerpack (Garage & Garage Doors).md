@@ -260,3 +260,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Door style gallery (carriage house, contemporary, traditional, glass panel) | Homeowners choose garage doors by style; a photo gallery drives the purchase decision | "Your site has no door style gallery -- buyers browsing for a new door will go to whoever shows them options." |
+| 2 | Brand names displayed (Clopay, Wayne Dalton, Amarr, LiftMaster) | Brand recognition builds instant trust in a considered purchase | "Your site doesn't mention which door brands you carry -- that's one of the first things buyers look for." |
+| 3 | Same-day or emergency repair statement | Garage door failures are urgent; visible emergency service wins the call | "Your site doesn't say whether you handle emergency repairs -- someone with a stuck door will call whoever makes that clear." |
+| 4 | Spring, opener, and cable repair page | Repair is a high-frequency entry point for new customers who then upgrade later | "Adding a repair services page would attract homeowners who need a quick fix and often turn into door replacement customers." |
+| 5 | Insulation rating or energy efficiency content | Insulated doors are the fastest-growing category; buyers search for R-value information | "Adding insulation rating content to your site would capture the buyers searching for energy-efficient garage doors." |
+| 6 | Service area cities listed | Garage door companies are local; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't confirm you will come to their home." |
+| 7 | Free estimate or new door quote form | New door pricing depends on size, style, and insulation; a form captures the lead without a call | "A free estimate form for new doors on your site would get you more leads overnight instead of waiting for calls." |
+| 8 | Google reviews with response times and service quality noted | Garage door emergencies require trust fast; reviews mentioning speed win the call | "Showing your Google reviews on your homepage would give buyers instant confidence you are reliable and fast." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for garage door companies:**
+- Installs and repairs (not just repair-only or install-only)
+- No door style gallery or brand logos on their website
+- No emergency or same-day service page
+- Does not appear in the Google Maps 3-pack for garage door repair in their area
+
+**Best cities to search first:** Dallas, Houston, Phoenix, Atlanta, Denver, Columbus, Indianapolis, Charlotte
+
+**Search strings to use on Google Maps:**
+- "garage door repair [city]"
+- "garage door installation [city]"
+- "garage door company near me"

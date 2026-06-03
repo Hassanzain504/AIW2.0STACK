@@ -289,3 +289,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Project type gallery (koi ponds, pondless waterfalls, decorative fountains, water gardens) | Buyers visualize before they call; a photo gallery is the primary conversion tool | "Your site has no photo gallery of finished water features -- buyers can't picture your work without seeing it." |
+| 2 | Service scope (design, build, maintenance, repair, seasonal service) | Buyers may want design-build or just maintenance; clarity reduces calls that waste your time | "Your site doesn't separate build services from maintenance -- buyers looking for pond cleaning don't know if you offer it." |
+| 3 | Ecosystem pond vs. decorative pond explanation | Buyers are confused by options; educational content builds trust and positions you as the expert | "A short explanation of ecosystem vs. decorative ponds on your site would help buyers self-select and arrive ready to buy." |
+| 4 | Seasonal maintenance and winterization page | Recurring service revenue is the backbone of a profitable water feature business | "Adding a seasonal maintenance page would attract existing pond owners who need ongoing service -- not just new builds." |
+| 5 | Before-and-after project photos | A pond transformation is dramatic; a comparison shot is the most persuasive element on the page | "Before-and-after photos of your pond and waterfall builds would make your site significantly more persuasive." |
+| 6 | Service area or cities served | Water feature companies have defined trade areas; buyers confirm you serve them before reading further | "Your site doesn't list your service area -- local buyers can't tell if you work in their neighborhood." |
+| 7 | Free consultation or pond assessment offer | Water feature projects are site-specific; offering a free visit removes the barrier to contact | "Offering a free pond consultation on your site gives buyers a no-risk first step to start the conversation." |
+| 8 | Google reviews or testimonials with project descriptions | Water feature buyers rely heavily on referrals; online reviews fill that role for new prospects | "Showing your Google reviews on your homepage would give first-time visitors the confidence to reach out." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for fountain and pond companies:**
+- Builds and maintains (not just installs with no service follow-through)
+- No dedicated maintenance or seasonal service page
+- Photo gallery on Facebook but not on their website
+- Does not appear in local Google search for koi pond or water feature installation
+
+**Best cities to search first:** Dallas, Houston, Atlanta, Phoenix, Charlotte, Denver, Nashville, Raleigh
+
+**Search strings to use on Google Maps:**
+- "pond builder [city]"
+- "water feature installation [city]"
+- "koi pond contractor near me"

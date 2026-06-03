@@ -255,3 +255,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Item type list (furniture, appliances, construction debris, yard waste, electronics, hot tubs) | Junk removal buyers search by what they need removed; a specific list captures each search | "Your site doesn't list what types of items you remove -- buyers with a specific item (old hot tub, concrete, electronics) won't know if you take it." |
+| 2 | Pricing transparency (volume-based, item-based, or dumpster rental pricing) | Junk removal is a price-comparison category; a pricing guide reduces the barrier to contact | "Your site has no pricing guide -- buyers comparing prices will call whoever gives them a number first." |
+| 3 | Same-day or next-day availability statement | Junk removal is often an impulse or urgency purchase; visible fast availability wins the booking | "Your site doesn't mention same-day or next-day service -- buyers who need a fast pickup will call whoever makes that available." |
+| 4 | Donation and recycling diversion commitment | Environmentally conscious buyers choose services that keep items out of landfill | "Mentioning your donation drop-off and recycling partnerships on your site would win the eco-conscious buyers who are choosing between you and a competitor." |
+| 5 | Before-and-after space photos | Seeing a cluttered garage transformed into a clean space is the emotional trigger for a junk removal booking | "Before-and-after photos of cleared spaces on your site would give buyers the visual motivation to finally make the call." |
+| 6 | Service area cities or zip codes listed | Junk removal is hyper-local; buyers confirm you serve their area before booking | "Your site doesn't list your service area -- local buyers can't confirm you will come to their property." |
+| 7 | Online booking or instant quote tool | Junk removal buyers want to book without calling; an online tool captures leads around the clock | "An online booking or instant quote tool would capture customers at any hour, even when your phones are off." |
+| 8 | Google reviews with item type and clean-up quality noted | Reviews that describe what was removed and how clean the space was left are the most persuasive type | "Reviews mentioning the specific items removed and how clean your crew left the space would convert far more visitors." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for waste removal companies:**
+- Serves residential and light commercial (not exclusively construction debris or roll-off only)
+- No online booking or instant quote tool despite the category being highly price-comparison driven
+- No donation or recycling commitment visible
+- Does not appear in the Google Maps 3-pack for junk removal in their area
+
+**Best cities to search first:** Atlanta, Dallas, Houston, Phoenix, Charlotte, Columbus, Nashville, Denver
+
+**Search strings to use on Google Maps:**
+- "junk removal [city]"
+- "trash removal service [city]"
+- "same day junk pickup near me"

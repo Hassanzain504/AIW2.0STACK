@@ -289,3 +289,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Product type gallery (frameless shower doors, custom mirrors, glass railings, storefronts) | Glass buyers are visual; a gallery of finished installations drives the purchase decision | "Your site has no photo gallery -- buyers can't picture your work without seeing your installations." |
+| 2 | Custom vs. stock options explained | Custom glass is a considered purchase; buyers want to understand what is possible before calling | "Your site doesn't explain custom versus standard options -- buyers don't know if you can do their specific project." |
+| 3 | Frameless shower door dedicated page | Shower enclosures are the highest-volume residential glass job; a dedicated page captures that search traffic | "Adding a dedicated frameless shower door page would capture one of the most searched glass services in your area." |
+| 4 | Tempered and safety glass statement | Buyers in high-risk areas (showers, railings, children's spaces) require safety glass confirmation | "Your site doesn't mention tempered or safety glass -- buyers who need code-compliant installations need to see that." |
+| 5 | Measurement and installation process explanation | Custom glass requires precise measurement; explaining the process reduces buyer anxiety | "A short explanation of your measurement and installation process would remove the main uncertainty buyers have about custom glass." |
+| 6 | Service area or cities listed | Glass companies serve a defined local radius; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't tell if you will come to their home or business." |
+| 7 | Free measure or in-home estimate offer | Custom glass requires an in-person measurement; offering it free removes the barrier to contact | "Offering a free measurement on your site gives buyers a clear, low-risk first step to start their project." |
+| 8 | Google reviews or project testimonials on the homepage | Glass is a high-trust purchase because mistakes are visible and expensive to fix | "Showing your Google reviews on your homepage would give buyers the confidence to choose you over an unknown competitor." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for glass and mirror companies:**
+- Does residential and commercial (higher average job value and two distinct lead sources)
+- No dedicated frameless shower door page
+- No custom mirror or glass railing page despite those being high-margin jobs
+- Does not appear in local Google search for frameless shower door or custom glass
+
+**Best cities to search first:** Dallas, Houston, Phoenix, Atlanta, Tampa, Las Vegas, Orlando, Charlotte
+
+**Search strings to use on Google Maps:**
+- "glass company [city]"
+- "frameless shower door [city]"
+- "custom mirror installation near me"

@@ -293,3 +293,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Permit type list (building, electrical, plumbing, mechanical, demolition, ADU, pool) | Permit expediting buyers need to confirm you handle their specific permit type | "Your site doesn't list the permit types you handle -- a contractor needing an electrical permit can't tell if you do that." |
+| 2 | Jurisdiction coverage (cities, counties, and municipalities served) | Permit services are jurisdiction-specific; buyers confirm you work with their local authority | "Your site doesn't list which jurisdictions you work with -- contractors can't tell if you cover their city or county." |
+| 3 | Turnaround time or expediting guarantee | Speed is the primary differentiator in permit services; a stated timeline wins the contract | "Stating your typical turnaround time on your site would win contractors who are behind schedule and need fast approvals." |
+| 4 | Contractor and architect client section | GCs and architects are the primary buyers; a section addressing them converts professional accounts | "A section on your site specifically for contractors and architects would show them you understand their permit workflow." |
+| 5 | Fee structure or package pricing overview | Permit buyers are budget-conscious; transparent fees build trust over a competitor with hidden charges | "Adding a fee overview to your site would differentiate you from competitors who make buyers call just to get pricing." |
+| 6 | Document preparation and plan review assistance mention | Many buyers need more than submission; showing full-service capability increases average job value | "Your site doesn't mention document preparation -- contractors who need help with plans don't know if you offer that." |
+| 7 | Contact form with permit type and jurisdiction fields | Structured intake reduces back-and-forth and routes the right jobs to the right contact | "A contact form with permit type and jurisdiction fields would get you better-qualified leads and save you time on discovery calls." |
+| 8 | Google reviews or client testimonials with project types | Permit buyers rely on referrals; online proof from real contractors substitutes for word-of-mouth | "Showing reviews from contractors who mention permit type and speed would be the most persuasive proof you can put on your site." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for permit services:**
+- Works with residential GCs, architects, and homeowners (not exclusively commercial)
+- No jurisdiction coverage page listing cities and counties they serve
+- No turnaround time or expediting statement visible
+- Does not appear in local Google search for permit expediting or permit services
+
+**Best cities to search first:** Los Angeles, Miami, Houston, Chicago, Dallas, Austin, Atlanta, San Diego
+
+**Search strings to use on Google Maps:**
+- "permit expediting service [city]"
+- "building permit service [city]"
+- "permit consultant near me"

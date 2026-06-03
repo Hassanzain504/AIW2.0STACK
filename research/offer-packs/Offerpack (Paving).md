@@ -291,3 +291,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Paving type pages (asphalt, concrete, pavers, sealcoating) | Paving buyers search by material; a generic "paving" page misses each specific search | "Your site doesn't list paving types separately -- a homeowner searching for asphalt driveway or pavers won't know you do it." |
+| 2 | Residential and commercial distinction | Driveway and parking lot paving are completely different scales and buyer types | "Your site doesn't say whether you do residential driveways or commercial parking lots -- buyers at both scales need to know." |
+| 3 | Before-and-after driveway and parking lot photos | A cracked driveway transformed into smooth asphalt is a powerful visual; buyers need to see it | "Before-and-after photos of your paving jobs would give buyers the visual motivation to call you for a quote." |
+| 4 | Sealcoating and maintenance page | Sealcoating is a recurring revenue line with lower sales resistance; a dedicated page captures that market | "Adding a sealcoating page would attract homeowners who need regular maintenance and often upgrade to repaving later." |
+| 5 | Free estimate call to action prominently placed | Paving quotes depend on square footage and condition; a free estimate removes the barrier to contact | "A free estimate button on your homepage and services pages would turn more visitors into quote requests." |
+| 6 | Service area counties or cities listed | Paving contractors have heavy equipment; buyers confirm travel radius before reading further | "Your site doesn't list your service area -- local buyers can't confirm you will come to their property." |
+| 7 | Warranty or longevity statement | Asphalt and paver longevity varies widely; a stated warranty builds confidence | "Mentioning your paving warranty on your site would answer the question buyers ask most before signing a contract." |
+| 8 | Google reviews with project types noted | Paving is a high-ticket outdoor purchase; social proof drives the decision to call | "Showing your Google reviews on your site would give buyers the confidence to choose you over a cheaper competitor." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for paving companies:**
+- Paves both residential and commercial (higher average job value)
+- No sealcoating or maintenance page despite it being a recurring revenue source
+- No photo gallery of completed driveways or parking lots
+- Does not appear in local Google search for asphalt paving or driveway paving
+
+**Best cities to search first:** Columbus, Indianapolis, Chicago, Pittsburgh, Philadelphia, Detroit, Kansas City, Louisville
+
+**Search strings to use on Google Maps:**
+- "paving contractor [city]"
+- "asphalt driveway [city]"
+- "sealcoating near me"

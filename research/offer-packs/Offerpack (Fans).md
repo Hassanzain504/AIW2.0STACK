@@ -255,3 +255,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Fan brands and models they install or sell (Hunter, Big Ass Fans, Minka-Aire) | Buyers shop by brand; a site that names brands gets more trust and more clicks | "Your site doesn't mention which fan brands you carry or install -- that's one of the first things buyers search." |
+| 2 | Service list (ceiling fan installation, replacement, repair, outdoor fan install) | Fans cover several distinct jobs; a specific service page captures each search | "Your site groups everything together -- separate pages for installation and repair would get you more search traffic." |
+| 3 | Whole-house or commercial fan section | Large-fan jobs have higher value; a dedicated section attracts them | "Adding a section for whole-house or commercial fans would attract the higher-value jobs your competitors miss." |
+| 4 | Installation photo gallery (ceiling fans in living rooms, patios, commercial ceilings) | Visual merchandising drives fan purchases; showing installed fans in real rooms sells | "Photos of your installed fans in actual rooms would help buyers picture the finished result and call you to get it." |
+| 5 | Service area or city list | Fan installation is local; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't tell if you will come to their neighborhood." |
+| 6 | Online booking or quote request form | Fan installation is a small job; buyers want to book without a long phone process | "An online booking or quote form on your site would capture customers who want to schedule without calling." |
+| 7 | Google reviews or testimonials visible | Even a small-ticket job benefits from social proof in a competitive market | "Showing your Google reviews would give buyers a reason to choose you over a handyman with no reviews." |
+| 8 | Click-to-call number in the header | Fan installs are impulse decisions; easy contact captures the buyer before they move on | "Your phone number is hard to find -- someone ready to book a fan install will call the first number they see." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for fan installation companies:**
+- Installs both residential and commercial or outdoor ceiling fans
+- No dedicated page for commercial or large-diameter fan installations
+- Website has no photos of installed fans in customer homes
+- Does not appear in local Google search for ceiling fan installation
+
+**Best cities to search first:** Houston, Phoenix, Dallas, Atlanta, Tampa, Las Vegas, Orlando, Miami
+
+**Search strings to use on Google Maps:**
+- "ceiling fan installation [city]"
+- "ceiling fan replacement [city]"
+- "fan installer near me"

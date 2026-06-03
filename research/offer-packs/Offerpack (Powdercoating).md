@@ -289,3 +289,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Item type list (wheels, patio furniture, gates, motorcycle parts, industrial equipment, architectural elements) | Powder coating buyers search by item type; a generic page misses every specific search | "Your site doesn't list the types of items you coat -- a buyer looking for wheel coating or patio furniture refinishing won't know you do it." |
+| 2 | Color chart or RAL/Pantone matching information | Color selection is the first question every buyer has; a color reference keeps them on your site | "Your site has no color chart -- buyers who want to match a specific color will call whoever shows them their options first." |
+| 3 | Before-and-after restoration photos | Powder coating transforms worn items into like-new condition; a visual proof is the primary sales tool | "Before-and-after photos of your powder coating work would convert far more visitors than any description of the process." |
+| 4 | Turnaround time statement | Buyers planning a project need to know lead time before committing | "Stating your typical turnaround time on your site would help buyers plan their project and choose you over a shop with no timeline." |
+| 5 | Mobile sandblasting or prep service mention | Prep service is a major differentiator for buyers who have rusty or corroded items | "Mentioning sandblasting prep on your site would attract buyers who have rusty items and don't know if you handle the full job." |
+| 6 | Service area or drop-off and pickup radius | Powder coating is local; buyers need to know if you are within a reasonable driving distance | "Your site doesn't say where you are located or how far you travel -- local buyers can't tell if you serve their area." |
+| 7 | Pricing range by item type or size | Powder coating costs vary widely; a rough guide qualifies leads and saves time on estimates | "Adding a rough pricing guide by item type would get you better-qualified inquiries and fewer calls asking for basic cost information." |
+| 8 | Google reviews with item types mentioned | Reviews that name the specific item and finish quality are highly persuasive for this niche | "A review mentioning wheel coating or patio furniture restoration would give buyers exactly the proof they need to drop off their items." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for powder coating shops:**
+- Does both retail (wheels, furniture) and commercial (architectural, industrial)
+- No color chart or RAL reference visible on their website
+- No before-and-after photo gallery
+- Does not appear in local Google search for powder coating near me
+
+**Best cities to search first:** Dallas, Houston, Phoenix, Atlanta, Las Vegas, Denver, Charlotte, Columbus
+
+**Search strings to use on Google Maps:**
+- "powder coating [city]"
+- "powder coat wheels [city]"
+- "powder coating shop near me"

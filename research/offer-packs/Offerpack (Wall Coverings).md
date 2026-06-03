@@ -255,3 +255,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Product type pages (wallpaper, grasscloth, murals, board and batten, shiplap, fabric wall panels) | Wall covering buyers search by product type; a generic page misses each specific search | "Your site doesn't separate wallpaper from shiplap or murals -- buyers searching for a specific treatment won't know if you do it." |
+| 2 | Installation vs. product-only distinction | Some buyers want product only; others need installation; clarity prevents mismatched inquiries | "Your site doesn't say whether you sell product only, install only, or both -- buyers who need full service can't tell if you handle it." |
+| 3 | Before-and-after room transformation photos | Wall coverings are a dramatic visual upgrade; a before-and-after photo is the primary conversion tool | "Before-and-after photos of your wall covering installations would be the most persuasive thing on your site." |
+| 4 | Commercial and hospitality project page | Hotels, restaurants, and offices are high-volume buyers for wall coverings; a dedicated page captures them | "Adding a commercial and hospitality projects page would attract the high-value institutional accounts that represent your biggest jobs." |
+| 5 | Brand or product line partnerships (Schumacher, Cole and Son, Phillip Jeffries, Farrow and Ball) | Design buyers research brands before selecting an installer | "Your site doesn't mention which wallpaper brands you work with -- buyers who have already selected a brand will call whoever confirms they install it." |
+| 6 | Removal and surface preparation service | Many clients need old wallpaper removed before new installation; showing this service captures full-job inquiries | "Adding a wallpaper removal and surface prep section would attract clients who need the full job done, not just installation." |
+| 7 | Service area or cities listed | Wall covering installers work within a defined local radius | "Your site doesn't list your service area -- local buyers can't confirm you cover their neighborhood or commercial property." |
+| 8 | Google reviews with room type or property type mentioned | Reviews that describe the room or property context are more persuasive than generic ratings | "Reviews that mention the specific room or the commercial space you worked in would give buyers the relevant proof they need to hire you." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for wall covering companies:**
+- Installs at least two product types (wallpaper and shiplap, or wallpaper and murals)
+- No commercial or hospitality project page
+- No brand partnerships or product lines named on the website
+- Does not appear in local Google search for wallpaper installation or wall covering installer
+
+**Best cities to search first:** New York, Los Angeles, Chicago, Dallas, Houston, Atlanta, Miami, Nashville
+
+**Search strings to use on Google Maps:**
+- "wallpaper installer [city]"
+- "wall covering installation [city]"
+- "wallpaper hanging near me"

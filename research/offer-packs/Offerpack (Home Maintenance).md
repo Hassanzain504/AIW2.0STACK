@@ -257,3 +257,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Service list with specific task examples (caulking, drywall patch, fixture replacement, filter changes) | Home maintenance buyers have a specific task list; a vague "handyman" page sends them elsewhere | "Your site doesn't list the specific tasks you handle -- buyers with a punch list can't tell if you do all their jobs." |
+| 2 | Recurring maintenance plan or seasonal checklist page | Recurring plans create predictable revenue; a dedicated page attracts buyers who want ongoing help | "Adding a recurring maintenance plan page would attract homeowners who want a reliable year-round service partner." |
+| 3 | Minimum job size or hourly rate range | Home maintenance buyers compare cost before calling; transparency wins the inquiry | "Showing your hourly rate or minimum job size on your site would get you better-qualified leads and fewer price-shoppers." |
+| 4 | Before-and-after repair photos | Even small repairs look dramatic with a good before-and-after; it proves attention to quality | "Before-and-after photos of your repairs would show buyers you care about quality, not just speed." |
+| 5 | Service area or neighborhoods listed | Home maintenance is hyper-local; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't confirm you work in their neighborhood." |
+| 6 | Online booking or request form | Home maintenance buyers often have non-urgent tasks; they want to request without calling | "An online booking or task request form on your site would capture the buyers who don't want to call for a small job." |
+| 7 | Background check or licensed trades statement | Buyers letting someone into their home need assurance beyond word-of-mouth | "Stating that your team is background-checked on your site would remove the hesitation buyers have about letting strangers in." |
+| 8 | Google reviews with specific task types mentioned | Breadth of capability is the key differentiator; reviews that name specific jobs prove it | "Showing reviews that mention specific jobs would prove to buyers that you can handle their whole punch list." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for home maintenance companies:**
+- Serves residential (not commercial facility management)
+- No recurring plan or subscription service page
+- No task-specific service list on their website
+- Does not appear in local Google search for handyman or home maintenance service
+
+**Best cities to search first:** Atlanta, Denver, Dallas, Charlotte, Raleigh, Nashville, Columbus, Indianapolis
+
+**Search strings to use on Google Maps:**
+- "home maintenance service [city]"
+- "handyman [city]"
+- "home repair near me"

@@ -255,3 +255,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Court type pages (tennis, pickleball, basketball, multi-sport, backyard) | Court builders serve different buyer types; a page per court type captures each specific search | "Your site doesn't separate tennis, pickleball, and basketball court pages -- buyers searching for pickleball won't find you if it's buried in a general page." |
+| 2 | Surface options explained (acrylic, post-tension concrete, cushioned, color options) | Court surface is the most researched decision in a court build; a site that explains options becomes the go-to reference | "Your site doesn't explain surface options -- buyers who want a cushioned acrylic court will call whoever helps them understand the difference." |
+| 3 | Residential and commercial distinction | Backyard courts and club facilities have different buyers, budgets, and concerns | "Your site doesn't separate residential and commercial court projects -- homeowners and club facility managers need to see different things." |
+| 4 | Resurfacing and repair service page | Court resurfacing is a recurring revenue line with lower sales resistance than new builds | "Adding a resurfacing and repair page would attract the thousands of court owners in your area who need maintenance, not a new build." |
+| 5 | Before-and-after or project gallery organized by sport | Buyers want to see their specific court type; organizing the gallery by sport makes it more useful | "Your project gallery isn't organized by sport -- grouping photos by tennis, pickleball, and basketball would make it far more useful for each buyer." |
+| 6 | Lighting and fencing add-on page | Lighting and perimeter fencing are high-margin add-ons; showing them on the site increases average job value | "Adding a lighting and fencing options page would show buyers everything they can add and increase your average project value." |
+| 7 | Service area or states served | Court builders often travel within a regional radius; buyers confirm coverage before reaching out | "Your site doesn't list your service area -- buyers outside your city don't know if you will travel to their property." |
+| 8 | Google reviews with court type and client description | Reviews that name the court type and describe the client's experience (homeowner, school, club) build specific trust | "A review mentioning the pickleball court you built for a family or the school you served would give buyers the specific proof they need to call." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for court builders:**
+- Builds multiple court types (pickleball and tennis is the most common combination right now)
+- No pickleball page despite it being the fastest-growing court category
+- No resurfacing or repair page
+- Does not appear in local Google search for pickleball court installation or tennis court builder
+
+**Best cities to search first:** Phoenix, Dallas, Houston, Atlanta, Charlotte, Denver, Tampa, Scottsdale
+
+**Search strings to use on Google Maps:**
+- "tennis court builder [city]"
+- "pickleball court installation [city]"
+- "sports court contractor near me"

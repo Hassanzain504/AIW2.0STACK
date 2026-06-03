@@ -255,3 +255,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Equipment list with photos (excavators, skid steers, dump trucks) | Buyers and GCs want to know you have the right equipment for their job scale | "Your site doesn't show your equipment -- contractors hiring you need to know you can handle their project size." |
+| 2 | Service breakdown (land clearing, grading, trenching, foundation excavation, pond digging) | Excavation covers many distinct jobs; buyers confirm their specific need before calling | "Your site doesn't list the types of excavation you do -- a GC needing foundation work can't tell if you handle it." |
+| 3 | Residential and commercial project distinction | Buyers need to know you work at their scale | "Your site doesn't say whether you work on residential or commercial jobs -- that ambiguity costs you bids." |
+| 4 | Project photos or job site gallery | Excavation is visual; a photo of a clean-cut foundation or graded lot proves capability | "Photos of your job sites would give GCs and homeowners the visual proof they need to call you for a bid." |
+| 5 | Insurance and bonding statement | Excavation involves heavy equipment and significant liability; buyers require coverage confirmation | "Your site has no mention of insurance -- GCs and property owners check that before they put you on a bid list." |
+| 6 | Service area by county or region | Excavation equipment has transport costs; buyers confirm you work in their area first | "Your site doesn't list your service area -- local contractors can't tell if you operate in their county." |
+| 7 | Free estimate or bid request form | Excavation jobs are quoted on-site; a form captures the lead before competitors do | "A bid request form on your site would get you more project inquiries without requiring a phone call first." |
+| 8 | Click-to-call phone number in the header | Excavation is often time-sensitive for construction schedules | "Your phone number is hard to find -- a GC looking to fill a schedule slot will call whoever they can reach immediately." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for excavation companies:**
+- Operates in suburban or semi-rural markets with active residential construction
+- No equipment page or project photo gallery
+- Website looks like a basic directory listing with no service detail
+- Does not appear in local Google search for land clearing or grading
+
+**Best cities to search first:** Dallas, Houston, Atlanta, Nashville, Charlotte, Raleigh, Indianapolis, Columbus
+
+**Search strings to use on Google Maps:**
+- "excavation contractor [city]"
+- "land clearing [city]"
+- "grading and excavation near me"

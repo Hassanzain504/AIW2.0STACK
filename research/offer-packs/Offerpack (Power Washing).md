@@ -271,3 +271,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Surface type pages (driveway, house exterior, deck, roof, commercial, fleet) | Power washing buyers search by surface type; a single page misses every specific search | "Your site groups all power washing together -- separate pages for driveway, house exterior, and roof washing would get you far more search traffic." |
+| 2 | Soft washing vs. pressure washing explanation | Roof and siding buyers are afraid of damage; explaining soft washing builds trust and closes that objection | "Your site doesn't explain soft washing -- buyers worried about damaging their siding or roof will call whoever explains the safe method." |
+| 3 | Before-and-after cleaning photos by surface type | Power washing is the ultimate before-and-after category; dramatic photos are the primary conversion tool | "Before-and-after photos of your cleaning jobs would be the most persuasive thing you could add to your site." |
+| 4 | Commercial and fleet washing page | Commercial accounts are larger and more predictable than residential; a dedicated page captures them | "Adding a commercial washing page would attract property managers and fleet operators who represent your highest-value recurring contracts." |
+| 5 | Frequency recommendation (annual, biannual) | Repeat business is the key to a profitable pressure washing business; scheduling guidance keeps customers returning | "Adding a frequency guide to your site would convert one-time customers into annual accounts automatically." |
+| 6 | Service area cities or zip codes listed | Power washing is hyper-local; buyers confirm coverage before reading any service information | "Your site doesn't list your service area -- local buyers can't confirm you will come to their property." |
+| 7 | Online quote or instant booking tool | Power washing buyers are comparison shopping; a fast quote tool captures them before they call three competitors | "An online quote tool on your site would get you leads before buyers call three other companies to compare prices." |
+| 8 | Google reviews with surface type and outcome mentioned | Reviews that name the surface and describe the result are the most persuasive type in this category | "Reviews mentioning 'driveway looks brand new' or 'roof moss completely gone' would convert far more visitors than a generic five-star rating." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for power washing companies:**
+- Does at least three surface types (house, driveway, and deck or roof)
+- No soft washing explanation despite siding and roof being major service categories
+- No before-and-after photo gallery
+- Does not appear in the Google Maps 3-pack for pressure washing in their area
+
+**Best cities to search first:** Atlanta, Charlotte, Raleigh, Tampa, Orlando, Houston, Dallas, Nashville
+
+**Search strings to use on Google Maps:**
+- "pressure washing [city]"
+- "power washing service [city]"
+- "soft wash roof cleaning near me"

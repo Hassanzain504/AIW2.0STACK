@@ -266,3 +266,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | License number displayed on the site | Electricians are required to be licensed; buyers check this before calling anyone | "Your site doesn't show your license number -- that's the first thing a homeowner looks for before letting an electrician in." |
+| 2 | Service breakdown (panel upgrades, EV charger install, rewiring, generator hookup) | Buyers search by specific job; a generic "electrical services" page loses them | "Your site doesn't list specific services -- a homeowner searching for EV charger installation won't know you do it." |
+| 3 | Emergency or 24-hour availability statement | Electrical emergencies happen at night; visible availability wins urgent calls | "Your site doesn't say whether you handle emergencies -- someone with a tripped breaker at 10pm will call whoever makes it clear." |
+| 4 | Service area cities or zip codes listed | Electricians are local and buyers confirm coverage before reading any further | "Your site doesn't list your service area -- local prospects can't tell if you will come to their neighborhood." |
+| 5 | Before-and-after or project photos (panel, EV station, generator) | Visual proof is rare in electrical and a strong differentiator | "Adding photos of your panel upgrades or EV charger installs would set you apart from competitors who just list services." |
+| 6 | Google reviews or testimonials with job types mentioned | Electrical is a trust purchase; named reviews from real jobs build confidence | "Your Google rating doesn't appear on your site -- displaying it would give visitors an immediate reason to call you." |
+| 7 | Online estimate request or contact form | Many electrical leads want to describe their job in writing before calling | "A short estimate request form on your site would capture leads who prefer not to call before knowing rough pricing." |
+| 8 | Click-to-call phone number in the header with business hours | Electrical calls need to be easy; a buried number loses urgent leads | "Your phone number is hard to find -- someone with an electrical problem will call the first contractor whose number they see." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for electricians:**
+- Residential-focused or mixed residential and light commercial
+- No EV charger or panel upgrade page (two of the fastest-growing electrical service categories)
+- License number not visible on the website
+- Does not appear in the Google Maps 3-pack for their primary service term
+
+**Best cities to search first:** Atlanta, Dallas, Phoenix, Tampa, Charlotte, Denver, Columbus, Nashville
+
+**Search strings to use on Google Maps:**
+- "electrician [city]"
+- "panel upgrade electrician [city]"
+- "EV charger installation near me"

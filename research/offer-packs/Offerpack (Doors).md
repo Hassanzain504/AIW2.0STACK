@@ -272,3 +272,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Door type gallery (entry, interior, sliding, French, storm, security) | Buyers shop by door type; a generic "doors" page sends them to a competitor with photos | "Your site doesn't show the types of doors you install -- buyers can't tell if you do the specific door they need." |
+| 2 | Brand names carried (Therma-Tru, Pella, JELD-WEN, Masonite) | Brand recognition creates instant trust in a high-ticket purchase | "Your site doesn't mention which door brands you carry -- that's one of the first things buyers search for." |
+| 3 | Before-and-after installation photos | An entry door upgrade is transformative; a comparison shot makes the sale | "Before-and-after photos of your door installs would show buyers the curb appeal difference immediately." |
+| 4 | Energy efficiency or security rating content | Two of the top three buyer motivations are energy savings and safety | "Adding energy efficiency and security information to your site would speak directly to why most buyers replace their doors." |
+| 5 | Service area or cities listed | Door installers are local; buyers confirm coverage before exploring further | "Your site doesn't list your service area -- local buyers can't confirm you will come to their neighborhood." |
+| 6 | Free estimate or in-home measurement offer | Door replacement requires measurements; offering the first visit free removes friction | "Offering a free in-home measurement on your site gives buyers a clear, low-risk first step." |
+| 7 | Google reviews or testimonials on the homepage | Door installation is a trust purchase; social proof overcomes the hesitation to invite a stranger in | "Showing your Google reviews on the homepage would give first-time visitors a reason to trust you before they call." |
+| 8 | Click-to-call phone number in the header | Door leads are often urgent (damaged door, security concern); easy contact matters | "Your phone number is buried -- someone dealing with a broken door will call whoever they can reach first." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for door companies:**
+- Installs at least two door types (entry and interior, or entry and garage)
+- No dedicated page for energy-efficient or security doors
+- Website has no photos of completed installations
+- Does not appear in the Google Maps 3-pack for door installation in their area
+
+**Best cities to search first:** Chicago, Columbus, Indianapolis, Dallas, Houston, Charlotte, Atlanta, Denver
+
+**Search strings to use on Google Maps:**
+- "door installation [city]"
+- "entry door replacement [city]"
+- "exterior door installer near me"

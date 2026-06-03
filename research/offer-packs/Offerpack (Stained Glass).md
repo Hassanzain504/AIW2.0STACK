@@ -255,3 +255,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Portfolio organized by project type (residential windows, church windows, restoration, custom panels, entryways) | Stained glass is a purely visual purchase; a gallery organized by application is the primary conversion tool | "Your portfolio isn't organized by project type -- a church looking for restoration work and a homeowner wanting a custom panel need to see different examples." |
+| 2 | Restoration and repair service page | Restoration of existing stained glass is a high-value service with less competition than new work | "Adding a restoration and repair page would attract churches and historic properties that need existing windows saved, not replaced." |
+| 3 | Custom design process explanation | Stained glass buyers are buying a collaboration, not a product; explaining your design process builds trust | "Your site doesn't explain how custom designs are created -- buyers who have never commissioned stained glass don't know where to start." |
+| 4 | Religious and commercial installation page | Church and commercial commissions are higher in value than residential; a page targeting them captures those buyers | "A page specifically for religious and commercial stained glass commissions would attract the highest-value buyers in your market." |
+| 5 | Glass type and color options shown | Buyers want to understand the range of options before the first conversation | "Showing your glass options and color palette on your site would help buyers arrive at a consultation with a clearer vision and a faster decision." |
+| 6 | Lead time and project timeline guidance | Custom stained glass takes months; buyers need to plan ahead and want that context before calling | "Stating your typical lead time on your site would help buyers plan and would stop them from calling a competitor because they assumed you couldn't meet a deadline." |
+| 7 | Geographic reach or shipping capability | Custom stained glass can be shipped nationwide; noting this expands your market significantly | "Your site doesn't say whether you ship finished panels -- buyers outside your city don't know if they can work with you." |
+| 8 | Google reviews or client testimonials with project type and commissioning experience described | Stained glass reviews that describe the collaborative experience are as important as showing the finished work | "A testimonial describing your design process and the client's experience would reassure buyers who are nervous about commissioning custom art." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for stained glass studios:**
+- Does both new commissions and restoration (higher revenue diversity)
+- No restoration or repair page despite that being a recurring need in the church market
+- No design process explanation despite the collaborative nature of the work
+- Does not appear in local Google search for stained glass studio or custom stained glass
+
+**Best cities to search first:** Chicago, Pittsburgh, Philadelphia, Columbus, Louisville, Nashville, New Orleans, Kansas City
+
+**Search strings to use on Google Maps:**
+- "stained glass studio [city]"
+- "custom stained glass [city]"
+- "stained glass repair near me"

@@ -255,3 +255,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Siding material pages (fiber cement, vinyl, wood, engineered wood, steel, stone veneer) | Siding buyers compare materials for months before calling; a page per material captures each search | "Your site doesn't have separate pages for vinyl vs. fiber cement siding -- buyers researching specific materials won't find you." |
+| 2 | Before-and-after exterior transformation photos | Siding replacement changes curb appeal dramatically; a before-and-after is the primary conversion tool | "Before-and-after photos of your siding installs would be the single most effective thing on your site." |
+| 3 | Brand names displayed (James Hardie, LP SmartSide, CertainTeed, Mastic) | Brand-specific searches are high-intent; a site that names brands captures those buyers | "Your site doesn't mention which siding brands you install -- buyers searching for James Hardie installers won't find you." |
+| 4 | Insulated siding or energy efficiency content | Energy savings is one of the top siding purchase motivations | "Adding insulated siding and energy savings content would speak to the buyers who want lower utility bills as well as better curb appeal." |
+| 5 | Warranty comparison by material type | Siding warranties vary significantly; buyers research this before deciding on material | "Your site doesn't compare warranties by material -- that information would help buyers feel confident choosing you and the right product." |
+| 6 | Service area cities listed | Siding contractors are local; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't confirm you work in their neighborhood." |
+| 7 | Free estimate and financing options visible | Whole-home siding runs $10,000 to $30,000; price context and financing keep buyers from bouncing | "Showing a free estimate offer and financing options on your site would convert more visitors who are researching cost." |
+| 8 | Google reviews with material types and outcome noted | Siding reviews that mention the specific material and describe the finished look are highly persuasive | "Reviews that mention 'James Hardie' or 'vinyl siding' and describe how the house looks now would convert far more visitors." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for siding companies:**
+- Installs at least two siding types (e.g., fiber cement and vinyl)
+- No James Hardie or LP SmartSide certified installer page
+- No before-and-after transformation gallery
+- Does not appear in the Google Maps 3-pack for siding installation or siding contractor in their area
+
+**Best cities to search first:** Chicago, Columbus, Indianapolis, Minneapolis, Charlotte, Atlanta, Denver, Kansas City
+
+**Search strings to use on Google Maps:**
+- "siding contractor [city]"
+- "James Hardie installer [city]"
+- "vinyl siding replacement near me"

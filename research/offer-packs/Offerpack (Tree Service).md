@@ -233,3 +233,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Service breakdown (tree removal, trimming, stump grinding, emergency storm service, land clearing) | Tree buyers have specific needs; a page per service captures each search and prevents confusion | "Your site groups all tree services together -- separate pages for removal, trimming, and stump grinding would get you more search traffic." |
+| 2 | ISA Certified Arborist credential displayed | Arborist certification is a key trust signal that separates professional tree companies from unlicensed crews | "Your site doesn't show your ISA Arborist certification -- homeowners who want a professional, not just a cheap crew, check for that first." |
+| 3 | Emergency storm service and availability statement | Storm damage creates urgent tree calls; visible emergency availability wins those leads instantly | "Your site doesn't mention storm emergency service -- a homeowner with a tree on their roof will call whoever makes emergency service obvious." |
+| 4 | Insurance and liability statement | Tree work near structures carries significant liability; proof of coverage is the first thing buyers ask for | "Your site has no mention of insurance -- homeowners with a tree over their house need to see proof of coverage before they let anyone near it." |
+| 5 | Before-and-after or project photos by service type | Tree removal and trimming results are dramatic; photos prove professionalism and clean-up standards | "Before-and-after photos of your tree removals and trimming work would show buyers you leave the property cleaner than you found it." |
+| 6 | Service area cities or neighborhoods listed | Tree companies serve a defined local radius; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't confirm you cover their neighborhood." |
+| 7 | Free estimate call to action on every page | Tree quotes require a site visit; a prominent free estimate offer removes the barrier to contact | "A free estimate button on every page would turn more visitors into quote requests without requiring them to search for your contact." |
+| 8 | Google reviews with job type and clean-up quality noted | Tree reviews that mention the specific job and how clean the property was left are highly persuasive | "Reviews mentioning the tree removed and how your crew cleaned up afterward would convert far more visitors than a generic rating." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for tree service companies:**
+- Has ISA Certified Arborist on staff or owner is certified
+- No emergency storm service page despite that being a major revenue source
+- No insurance certificate or liability statement visible
+- Does not appear in the Google Maps 3-pack for tree service or tree removal in their area
+
+**Best cities to search first:** Atlanta, Charlotte, Raleigh, Nashville, Columbus, Dallas, Houston, Indianapolis
+
+**Search strings to use on Google Maps:**
+- "tree service [city]"
+- "tree removal [city]"
+- "arborist near me"

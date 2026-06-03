@@ -273,3 +273,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Service breakdown (septic pumping, inspection, repair, installation, well drilling, water testing) | Septic and well services cover distinct needs; buyers confirm their specific service before calling | "Your site doesn't separate pumping, inspection, and installation -- buyers with different needs can't tell which services you offer." |
+| 2 | Pumping frequency guide (when to pump, warning signs) | Septic buyers often don't know they need service; educational content captures them before a crisis | "A pumping frequency guide on your site would attract homeowners who don't know they need service and turn them into customers." |
+| 3 | Emergency service availability statement | Septic backups and contaminated wells are health emergencies; visible availability wins the call | "Your site doesn't say whether you handle emergencies -- a homeowner with a backed-up septic will call whoever makes that clear first." |
+| 4 | County or state regulatory compliance page | Septic and well work is regulated; buyers want to know you understand and manage the compliance process | "Your site doesn't mention permit or regulatory requirements -- homeowners going through a property sale need that guidance and will call whoever provides it." |
+| 5 | Real estate transaction inspection page | Septic inspections are required at point of sale; a dedicated page captures that buyer category | "Adding a real estate septic inspection page would attract buyers selling or buying a home who need an inspection within days." |
+| 6 | Service area counties listed | Septic and well companies serve a defined rural and suburban radius | "Your site doesn't list your service counties -- rural homeowners can't confirm you will come to their address." |
+| 7 | Free estimate or inspection offer | Septic and well scopes require a site visit; offering it free removes the barrier to contact | "Offering a free inspection on your site gives homeowners a low-risk first step and gets you in the door." |
+| 8 | Google reviews with property type and service outcome mentioned | Septic buyers rely heavily on local word-of-mouth; online reviews substitute for the neighbor referral | "Showing your Google reviews on your site would give first-time visitors the proof they need to trust you with their septic system." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for septic and well companies:**
+- Serves residential (not exclusively commercial or municipal)
+- No real estate inspection page despite that being a common service trigger
+- No pumping frequency guide or educational content
+- Does not appear in local Google search for septic pumping or well service
+
+**Best cities to search first:** Nashville, Atlanta, Raleigh, Columbus, Indianapolis, Louisville, Richmond, Knoxville
+
+**Search strings to use on Google Maps:**
+- "septic tank pumping [city]"
+- "septic system inspection [city]"
+- "well drilling near me"

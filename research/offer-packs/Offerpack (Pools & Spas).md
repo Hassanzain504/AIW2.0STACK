@@ -264,3 +264,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Pool design gallery (freeform, geometric, infinity edge, lap pool) | Pool buyers browse styles for months before calling a builder; a gallery keeps them on your site | "Your site has no pool design gallery -- buyers who are still deciding on style will stay on a competitor's site instead of yours." |
+| 2 | Gunite, fiberglass, and vinyl liner distinction | Buyers research pool types extensively; a site that explains options becomes the trusted reference | "Your site doesn't explain the difference between pool types -- buyers who want that guidance will call whoever provides it." |
+| 3 | Outdoor living and hardscape integration page | Pool buyers almost always add decking, outdoor kitchens, and pergolas; showing the full project scope increases average job value | "Adding an outdoor living integration page would show buyers the full backyard transformation they can get from one contractor." |
+| 4 | Pricing range or financing information | Pool installations run $40,000 to $100,000+; price context stops buyers from avoiding the call | "Showing a starting price or financing options on your site would get you more calls from buyers who want to know if they can afford it." |
+| 5 | Permit and approval process explanation | Pool permits are required everywhere; buyers worry about the bureaucratic process | "Explaining your permit process on your site would remove one of the biggest anxieties buyers have about building a pool." |
+| 6 | Maintenance and service agreement page | Pool service is a recurring revenue line; a dedicated page captures existing pool owners too | "Adding a pool maintenance page would attract the thousands of pool owners in your area who need ongoing service." |
+| 7 | Warranty on construction and equipment listed | Pool warranties vary widely; a strong warranty is a key differentiator for a 30-year investment | "Your site doesn't mention your construction warranty -- buyers making a six-figure investment need to see that before signing." |
+| 8 | Google reviews with before-and-after photos or backyard descriptions | Pool reviews that paint a picture of the backyard transformation are the most persuasive type | "Showing reviews that describe the finished backyard experience would give buyers the emotional confidence to choose you." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for pool and spa companies:**
+- Builds and services (not just service-only)
+- No pool type comparison page (gunite vs. fiberglass vs. vinyl)
+- No outdoor living or hardscape integration page
+- Does not appear in local Google search for pool builder or custom pool in their area
+
+**Best cities to search first:** Phoenix, Dallas, Houston, Tampa, Orlando, Las Vegas, Atlanta, San Antonio
+
+**Search strings to use on Google Maps:**
+- "pool builder [city]"
+- "custom pool installation [city]"
+- "inground pool contractor near me"

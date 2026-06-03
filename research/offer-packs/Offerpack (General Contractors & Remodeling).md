@@ -265,3 +265,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Project type portfolio (kitchen remodel, bathroom, addition, basement finish) | Remodeling buyers decide based on whether your past work matches their vision | "Your site doesn't organize projects by type -- buyers looking for a kitchen remodel can't tell if that's your specialty." |
+| 2 | Licensing, bonding, and insurance badge or statement | GC work is high-ticket; buyers require credential proof before they call | "Your site has no mention of licensing or insurance -- that's the first thing homeowners check before hiring a GC." |
+| 3 | Before-and-after project photos with cost range | Nothing converts a remodeling prospect faster than a stunning transformation with a real budget reference | "Before-and-after photos with a rough budget range would answer the two biggest questions buyers have before calling." |
+| 4 | Principal or team bio with photo | Remodeling is a long relationship; buyers want to know who they are trusting in their home | "Your site has no team bio -- homeowners want to know who they will be working with for months before they sign." |
+| 5 | Detailed project process or timeline explanation | Remodeling buyers are anxious about disruption; a clear process overview reduces hesitation | "Your site doesn't explain your project process -- buyers don't know what it's like to work with you and that uncertainty stops them." |
+| 6 | Service area or neighborhoods listed | GCs have a defined radius; buyers confirm you work in their area before reading further | "Your site doesn't list your service area -- local buyers can't confirm you take jobs in their neighborhood." |
+| 7 | Financing options or payment schedule information | Kitchen and bathroom remodels often run $30,000 to $100,000; financing context reduces sticker shock | "Mentioning financing options on your site would keep buyers from leaving the moment they see the price." |
+| 8 | Google reviews with project types mentioned | High-ticket remodeling requires strong social proof; reviews anchored to project types are most persuasive | "Showing your Google reviews on the homepage would give buyers the confidence to reach out for a large project." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for general contractors and remodelers:**
+- Focuses on residential (not commercial-only or new construction-only)
+- No dedicated kitchen or bathroom remodel pages despite those being the highest-value residential categories
+- Portfolio exists on Houzz or social but not on their website
+- Does not appear in local Google search for kitchen remodel or home addition
+
+**Best cities to search first:** Atlanta, Dallas, Houston, Denver, Charlotte, Raleigh, Nashville, Columbus
+
+**Search strings to use on Google Maps:**
+- "general contractor [city]"
+- "kitchen remodel contractor [city]"
+- "home remodeling near me"

@@ -265,3 +265,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Pest type pages (termites, rodents, bed bugs, ants, mosquitoes, cockroaches) | Pest buyers search by pest type; a generic page misses every specific search | "Your site groups all pests together -- separate pages for termites, rodents, and bed bugs would get you far more search traffic." |
+| 2 | Treatment method explanation (heat, fumigation, bait, exclusion, green options) | Buyers are concerned about chemicals near children and pets; explaining methods builds trust | "Your site doesn't explain your treatment methods -- buyers with kids or pets need that information before they call." |
+| 3 | Recurring protection plan or quarterly service page | Pest control is a subscription business; a plan page builds recurring revenue and reduces churn | "Adding a recurring protection plan page would attract homeowners who want peace of mind year-round, not just a one-time treatment." |
+| 4 | Guarantee or re-treatment policy visible | Pest buyers fear paying and still having a problem; a guarantee overcomes the hesitation | "Your site doesn't mention a guarantee or re-treatment policy -- that's the question buyers ask most before signing up." |
+| 5 | Licensed and certified technician statement | Pest control is regulated; buyers want to see proof their technician is certified | "Your site doesn't show your state pest control license -- that's one of the first things a homeowner checks before letting someone spray their house." |
+| 6 | Service area cities or zip codes listed | Pest control is local; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't confirm you cover their neighborhood." |
+| 7 | Online booking or quote request form | Pest leads often come from urgency; an easy booking option captures them before they cool off | "An online booking form on your site would capture leads at the moment they are most motivated -- usually right after they see the pest." |
+| 8 | Google reviews with pest type and outcome mentioned | Pest control reviews that name the pest and confirm the problem was solved are highly persuasive | "Reviews that mention the pest type and how you solved it would be far more persuasive than a generic five-star rating." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for pest control companies:**
+- Serves residential (not exclusively commercial or industrial)
+- No recurring plan or subscription service page
+- No guarantee or re-treatment policy stated on the website
+- Does not appear in the Google Maps 3-pack for pest control in their area
+
+**Best cities to search first:** Houston, Atlanta, Dallas, Tampa, Orlando, Phoenix, Charlotte, Jacksonville
+
+**Search strings to use on Google Maps:**
+- "pest control [city]"
+- "termite treatment [city]"
+- "mosquito control near me"

@@ -256,3 +256,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Service types listed (local move, long-distance, packing, storage, specialty items) | Moving buyers have distinct needs; a vague site loses buyers who need a specific service | "Your site doesn't separate local, long-distance, and packing services -- buyers with different needs can't tell if you do their job." |
+| 2 | Online quote or price calculator | Moving is a price-sensitive purchase; a quote tool captures leads before they call three competitors | "An online moving quote tool on your site would get you leads before buyers call three companies to compare prices." |
+| 3 | Licensing and insurance information (USDOT number for interstate) | Moving scams are a well-known problem; licensing transparency builds trust instantly | "Your site doesn't show your USDOT number or insurance information -- buyers protecting their belongings check for that first." |
+| 4 | Truck fleet or equipment photos | Buyers want to see the actual trucks and equipment before trusting their belongings to you | "Photos of your trucks and equipment on your site would build the visual trust that buyers need before handing over their possessions." |
+| 5 | Reviews with moving date and job size mentioned | Moving reviews are most persuasive when they reference a specific job and outcome | "Showing reviews that mention the move type and how it went would be far more persuasive than a generic star rating." |
+| 6 | Service area or metro regions clearly stated | Moving companies operate in defined areas; buyers confirm coverage immediately | "Your site doesn't list your service area -- local buyers can't confirm you cover their route." |
+| 7 | Specialty item handling page (pianos, safes, antiques, art) | Specialty moves are high-value jobs that most movers decline; a page capturing them is a differentiator | "Adding a specialty item page would attract the high-value piano and safe moves that your competitors are turning away." |
+| 8 | Booking or reservation call to action | Moving bookings happen weeks in advance; a clear reservation process captures leads earlier | "A clear booking CTA on your site would let buyers reserve your date before they get distracted or call a competitor." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for moving companies:**
+- Handles local and long-distance (wider revenue base)
+- No online quote tool or price calculator on the website
+- No USDOT number or insurance information visible
+- Does not appear in the Google Maps 3-pack for moving company in their market
+
+**Best cities to search first:** Atlanta, Dallas, Houston, Phoenix, Charlotte, Denver, Nashville, Tampa
+
+**Search strings to use on Google Maps:**
+- "moving company [city]"
+- "local movers [city]"
+- "long distance moving near me"

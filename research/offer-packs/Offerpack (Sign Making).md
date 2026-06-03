@@ -289,3 +289,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Product type gallery (channel letters, monument signs, vehicle wraps, banners, window graphics, trade show) | Sign buyers search by sign type; a generic page loses every specific search | "Your site doesn't organize products by sign type -- a business owner searching for channel letters or vehicle wraps won't know if you do it." |
+| 2 | Indoor vs. outdoor and lit vs. unlit distinction | Sign buyers have specific application needs; confirming capabilities before calling saves time for both sides | "Your site doesn't separate indoor and outdoor or illuminated and non-illuminated signs -- buyers with specific requirements need that clarity." |
+| 3 | Portfolio with business type context (retail, restaurant, healthcare, real estate) | Sign buyers trust suppliers who have done their industry before | "Your portfolio doesn't label the industry -- buyers want to see that you have done signs for businesses like theirs." |
+| 4 | Vehicle wrap gallery with before-and-after photos | Vehicle wraps are one of the highest-margin sign products; a dedicated gallery attracts those buyers | "A vehicle wrap gallery with before-and-after photos would attract one of your highest-value product categories." |
+| 5 | Design service or artwork assistance mention | Many sign buyers don't have print-ready files; showing you handle design increases your close rate | "Your site doesn't mention design services -- buyers who don't have artwork will call whoever confirms they can handle the full job." |
+| 6 | Permitting assistance for exterior signs | Exterior sign permits are required in most municipalities; a site that addresses this gets the call | "Mentioning permit assistance on your site would remove the biggest headache for businesses buying their first exterior sign." |
+| 7 | Turnaround time or rush production option | Event banners and grand opening signs are time-sensitive; a clear lead time wins urgent orders | "Stating your typical turnaround on your site would win the buyers who have a deadline and need to know if you can meet it." |
+| 8 | Google reviews with business name or sign type mentioned | Reviews that describe the sign and the business outcome are highly persuasive in this category | "A review that mentions the specific sign type and how it improved the business's visibility would convert far more visitors." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for sign companies:**
+- Produces at least three sign types (channel letters, vehicle wraps, and banners are the most common combination)
+- No vehicle wrap gallery despite it being a high-margin category
+- No permit assistance information despite most exterior sign buyers needing it
+- Does not appear in local Google search for sign company or business signs
+
+**Best cities to search first:** Dallas, Houston, Atlanta, Phoenix, Chicago, Charlotte, Columbus, Denver
+
+**Search strings to use on Google Maps:**
+- "sign company [city]"
+- "channel letter sign [city]"
+- "vehicle wrap near me"

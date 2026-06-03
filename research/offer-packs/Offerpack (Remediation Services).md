@@ -256,3 +256,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Remediation type pages (mold, water damage, fire and smoke, asbestos, lead) | Remediation buyers have a specific emergency; a vague page loses each one to a specialist | "Your site doesn't separate mold, water damage, and fire remediation -- buyers in a specific emergency won't know if you handle their situation." |
+| 2 | 24-hour emergency response statement above the fold | Remediation is almost always urgent; visible availability wins the call every time | "Your site doesn't make your 24-hour availability obvious -- a homeowner with active water damage will call whoever they can reach first." |
+| 3 | Insurance claim assistance or direct billing information | Most remediation jobs go through homeowner insurance; a site that addresses this process gets the call | "Your site doesn't mention insurance billing -- buyers going through insurance will call whoever makes that process clear." |
+| 4 | Certifications visible (IICRC, EPA, state asbestos or lead license) | Remediation is a certified trade; buyers and adjusters require proof of credentials before authorizing work | "Your site doesn't show your IICRC or EPA certifications -- insurance adjusters and homeowners check for those before authorizing any work." |
+| 5 | Before-and-after remediation photos | Buyers need visual proof of complete removal, not just treatment | "Before-and-after photos of your remediation work would show buyers that the problem is truly gone, not just covered." |
+| 6 | Service area or response radius listed | Remediation buyers call local companies first; confirming coverage is the first step | "Your site doesn't list your service area -- local homeowners can't confirm you will come to them quickly." |
+| 7 | Free inspection or assessment offer | Mold and water damage scopes require an inspection; offering it free removes the barrier | "Offering a free inspection on your site gives homeowners a low-risk first step and gets you in the door before competitors." |
+| 8 | Guarantee or clearance testing statement | Buyers fear paying and still having a health hazard; a clearance test guarantee overcomes that | "Mentioning post-remediation clearance testing on your site answers the question every mold buyer has before signing." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for remediation companies:**
+- Handles at least two remediation types (mold and water damage is the most common combination)
+- No IICRC certification visible on the website
+- No insurance billing or claim assistance information
+- Does not appear in the Google Maps 3-pack for mold remediation or water damage in their area
+
+**Best cities to search first:** Houston, Atlanta, Tampa, Orlando, Dallas, New Orleans, Charlotte, Miami
+
+**Search strings to use on Google Maps:**
+- "mold remediation [city]"
+- "water damage restoration [city]"
+- "fire damage cleanup near me"

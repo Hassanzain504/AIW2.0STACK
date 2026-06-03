@@ -289,3 +289,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Capabilities list (welding, CNC cutting, forming, powder coating, custom fabrication) | Metal fab buyers are engineers or contractors who need to confirm specific capabilities before calling | "Your site doesn't list your fabrication capabilities -- buyers who need CNC cutting or custom welding won't know if you can do their job." |
+| 2 | Industry sectors served (architectural, industrial, agricultural, residential) | Metal fab serves very different buyers; naming sectors helps each one self-qualify | "Your site doesn't say which industries you serve -- commercial buyers don't know if you handle their project type." |
+| 3 | Project portfolio with material types and finish options | Fabrication buyers evaluate craftsmanship before issuing an RFQ | "Your site has no project portfolio -- buyers who need to see your quality level before sending specs won't have a reason to call." |
+| 4 | RFQ or quote request form with file upload | Metal fab buyers send drawings; a form that accepts files is the standard entry point | "Your contact form doesn't accept file uploads -- engineers and contractors who want to send drawings have no easy way to reach you." |
+| 5 | Turnaround time or lead time statement | Metal fab buyers plan production schedules; a lead time statement helps them decide quickly | "Stating your typical lead time on your site would help buyers on a schedule decide if you can meet their deadline." |
+| 6 | Certifications and quality standards (AWS certified welders, ISO, AISC) | Commercial and industrial buyers require certification proof before awarding contracts | "Your site doesn't mention welder certifications or quality standards -- commercial buyers need to see those before they send an RFQ." |
+| 7 | Equipment list with specifications | Buyers with large or precision jobs need to know you have the right equipment | "Listing your equipment with specs on your site would give buyers confidence you can handle their project without a preliminary phone call." |
+| 8 | Service area or shipping radius | Metal fab is often local for large items but ships for smaller components; clarity prevents wasted calls | "Your site doesn't say where you ship or deliver -- buyers outside your area don't know if working with you is feasible." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for metal fabrication shops:**
+- Serves at least two sectors (e.g., architectural and industrial, or residential and commercial)
+- No RFQ form or file upload capability on their website
+- No certifications or welding credentials displayed
+- Does not appear in local Google search for custom metal fabrication or steel fabrication
+
+**Best cities to search first:** Houston, Dallas, Columbus, Indianapolis, Pittsburgh, Milwaukee, Kansas City, Birmingham
+
+**Search strings to use on Google Maps:**
+- "metal fabrication shop [city]"
+- "custom steel fabrication [city]"
+- "welding shop near me"

@@ -273,3 +273,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Structure type gallery (storage sheds, workshops, she-sheds, pool cabanas, equipment enclosures) | Shed buyers browse style options extensively before contacting a dealer or builder | "Your site doesn't show the range of shed and enclosure types you offer -- buyers looking for a specific style will go to a competitor who shows them." |
+| 2 | Material options listed (wood, vinyl, metal, composite) with pros and cons | Buyers compare materials carefully for an outdoor structure that must last 20+ years | "Your site doesn't explain material options -- buyers comparing wood vs. vinyl will call whoever helps them understand the difference." |
+| 3 | Size configurator or standard size chart | Shed buyers start with a size in mind; a clear size chart helps them self-qualify and move toward purchase | "Adding a size chart or configurator to your site would help buyers quickly find what they need and give them a reason to contact you." |
+| 4 | Delivery and installation service statement | Many shed buyers are not contractors; knowing you handle delivery and setup removes the biggest friction point | "Your site doesn't say whether you deliver and install -- buyers who don't want to figure out assembly on their own need to see that." |
+| 5 | Permit requirement guidance | Sheds over a certain size require permits; a site that addresses this builds confidence | "Adding a permit guidance section to your site would remove the biggest bureaucratic concern buyers have before ordering." |
+| 6 | Customization options page (windows, doors, lofts, workbenches, electrical) | Customization drives higher average order value; showing options motivates buyers to spend more | "A customization options page would show buyers everything they can add and increase your average order value." |
+| 7 | Free quote or design consultation offer | Shed projects are specific to each property; a free quote removes the barrier to the first conversation | "Offering a free shed design quote on your site gives buyers a low-risk way to start the process." |
+| 8 | Google reviews or customer photos with their sheds on the property | Real customer photos of installed sheds on actual properties are highly persuasive | "Customer photos of your sheds installed in real backyards would give buyers the most authentic visual proof of your quality." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for shed and enclosure companies:**
+- Sells and installs (not just a manufacturer or kit retailer)
+- No customization options page
+- No permit guidance or frequently asked questions about site requirements
+- Does not appear in local Google search for custom sheds or storage buildings
+
+**Best cities to search first:** Dallas, Houston, Atlanta, Phoenix, Charlotte, Columbus, Nashville, Indianapolis
+
+**Search strings to use on Google Maps:**
+- "shed builder [city]"
+- "custom storage shed [city]"
+- "portable storage building near me"

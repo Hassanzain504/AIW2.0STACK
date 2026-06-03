@@ -255,3 +255,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Equipment brands they assemble (Peloton, NordicTrack, Bowflex, Life Fitness, Tonal) | Buyers search by brand name; a site that lists brands gets found by buyers who just bought that equipment | "Your site doesn't mention which equipment brands you assemble -- buyers searching for Peloton assembly won't find you." |
+| 2 | Service scope (residential home gym, commercial gym, corporate wellness, school or hotel) | Buyers confirm their setting before calling; a vague page loses commercial contracts | "Your site doesn't say whether you work in homes, gyms, or commercial facilities -- that ambiguity costs you contracts." |
+| 3 | Turnaround time or same-day availability statement | Fitness equipment buyers just spent money and want it assembled fast | "Stating your typical response time or same-day availability on your site would get you leads over slower competitors." |
+| 4 | Disassembly and relocation service | Moving a home gym is a recurring need; showing this service captures repeat customers | "Adding disassembly and relocation to your site would attract buyers who are moving and need their gym gear moved safely." |
+| 5 | Photo gallery of assembled home gyms and commercial setups | Visual proof of professional assembly builds trust over a handyman alternative | "Photos of your assembly work in real home gyms and commercial spaces would show buyers the quality difference." |
+| 6 | Service area cities listed | Assembly services are local; buyers confirm you travel to them before reading further | "Your site doesn't list your service area -- local buyers can't confirm you cover their zip code." |
+| 7 | Online booking or instant quote tool | Fitness equipment buyers are typically ready to book; a frictionless booking converts them | "An online booking link on your site would capture buyers who want to schedule immediately after buying equipment." |
+| 8 | Google reviews or client testimonials visible | Buyers are comparing you to a handyman; reviews that mention speed and professionalism win | "Showing your Google reviews on the homepage would give buyers the confidence to choose you over a cheaper alternative." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for fitness equipment assembly companies:**
+- Serves both residential and commercial clients
+- No brand-specific landing pages (e.g., no Peloton or NordicTrack page)
+- No online booking link visible on any page
+- Does not appear in local Google search for gym equipment assembly
+
+**Best cities to search first:** Dallas, Houston, Atlanta, Phoenix, Chicago, Denver, Seattle, Washington DC
+
+**Search strings to use on Google Maps:**
+- "gym equipment assembly [city]"
+- "fitness equipment installation [city]"
+- "Peloton assembly service near me"

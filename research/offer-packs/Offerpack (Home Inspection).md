@@ -256,3 +256,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Inspector credentials and certifications (InterNACHI, ASHI, state license number) | Buyers and real estate agents verify credentials before booking; they must be visible | "Your site doesn't display your inspection certifications -- agents and buyers check for that before recommending you." |
+| 2 | Service menu with pricing (general inspection, radon, mold, sewer scope, thermal imaging) | Buyers compare service bundles and prices before calling; vague sites lose them to transparent competitors | "Your site doesn't show your inspection packages or pricing -- buyers will call whoever gives them a clear picture first." |
+| 3 | Sample inspection report download | Reports are the deliverable; showing a sample builds confidence in your thoroughness | "Offering a sample report download on your site would show buyers the quality of your work before they book." |
+| 4 | Online booking or scheduling link | Home inspectors are time-sensitive (contract deadlines); easy online scheduling converts more buyers | "Your site has no online booking -- buyers on a contract deadline will book with whoever lets them schedule instantly." |
+| 5 | Response time or same-day availability statement | Inspection timelines are driven by contract contingency periods; fast availability wins the booking | "Stating your typical availability and turnaround time on your site would win buyers who are under a tight deadline." |
+| 6 | Service area zip codes or counties listed | Inspectors have a defined territory; real estate agents confirm coverage before referring | "Your site doesn't list your service area -- agents can't recommend you if they don't know which counties you cover." |
+| 7 | Real estate agent referral section | Agents are the primary referral source for inspectors; a page targeting them captures that relationship | "A short section for real estate agents on your site would make it easier for them to refer you to every client they have." |
+| 8 | Google reviews with agent or buyer names | Social proof from both buyers and agents validates your reliability in both markets | "Showing your Google reviews from real buyers and agents would build instant trust with everyone who lands on your site." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for home inspectors:**
+- Licensed and certified inspector (InterNACHI or ASHI preferred)
+- No online booking link despite time-sensitive buyer needs
+- No sample report available on their website
+- Does not appear in local Google search for home inspection in their area
+
+**Best cities to search first:** Atlanta, Dallas, Phoenix, Charlotte, Nashville, Denver, Columbus, Raleigh
+
+**Search strings to use on Google Maps:**
+- "home inspector [city]"
+- "home inspection company [city]"
+- "certified home inspector near me"

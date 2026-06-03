@@ -265,3 +265,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Material options listed (wood, vinyl, aluminum, composite decking, chain link) | Buyers compare materials before they call; a site without options loses them to a competitor who explains | "Your site doesn't list the fence or deck materials you offer -- buyers will call whoever explains their options first." |
+| 2 | Photo gallery organized by project type (privacy fence, pool deck, composite deck) | Outdoor living decisions are visual; buyers need to see finished projects that match their goal | "Your site has no photo gallery -- buyers can't picture your quality without seeing your past work." |
+| 3 | Free estimate offer with a clear call to action | Fence and deck pricing depends on measurements; a free estimate removes the barrier to contact | "A free estimate button on every page would turn more visitors into quote requests overnight." |
+| 4 | Permits handled statement | Many fence and deck jobs require permits; a site that addresses this reduces buyer anxiety | "Mentioning that you handle permits on your site removes one of the biggest worries buyers have before calling." |
+| 5 | Service area or cities listed | Deck and fence contractors are local; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't tell if you work in their neighborhood." |
+| 6 | Manufacturer warranties or product certifications | Composite decking brands have warranties buyers care about; naming them builds trust | "Mentioning the warranties on your deck materials would answer the question buyers ask most before committing." |
+| 7 | Google reviews or named customer testimonials on the homepage | Outdoor projects are high-ticket; social proof reduces the hesitation to call | "Showing your Google reviews on the homepage would give visitors the confidence to choose you over a cheaper competitor." |
+| 8 | Before-and-after transformation photos | Nothing sells a backyard upgrade like a dramatic comparison shot | "A before-and-after section would show prospects exactly what their yard could look like and make them want to call." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for fence and deck companies:**
+- Builds both fences and decks (higher average job value and more referral surface)
+- No composite decking page despite it being the fastest-growing material category
+- Photo gallery exists on Facebook but not on their website
+- Does not appear in the Google Maps 3-pack for fence or deck installation in their area
+
+**Best cities to search first:** Dallas, Houston, Atlanta, Charlotte, Columbus, Denver, Nashville, Indianapolis
+
+**Search strings to use on Google Maps:**
+- "fence company [city]"
+- "deck builder [city]"
+- "composite deck installation near me"

@@ -269,3 +269,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Interior vs. exterior painting distinction with separate pages | Buyers search for interior or exterior painting specifically; one generic page misses both searches | "Your site groups interior and exterior painting together -- separate pages would get you significantly more search traffic." |
+| 2 | Before-and-after project photos with paint color names | Paint buyers are visual; a dramatic transformation with color details is the primary conversion tool | "Before-and-after photos with color names on your site would be the single most effective thing you could add." |
+| 3 | Paint brand information (Sherwin-Williams, Benjamin Moore, Behr) | Buyers who prefer specific brands want to know you use them | "Your site doesn't mention which paint brands you use -- buyers who care about quality paint brands will ask a competitor who does." |
+| 4 | Commercial painting page if applicable | Commercial contracts are larger and more predictable; a dedicated page captures that market | "Adding a commercial painting page would attract the office and facility managers who represent your highest-value jobs." |
+| 5 | Free estimate call to action on every page | Painting quotes require a walk-through; a prominent free estimate offer removes the barrier to contact | "A free estimate button on every page would turn more visitors into quote requests without requiring them to search for your contact info." |
+| 6 | Service area cities listed | Painting companies are local; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't confirm you work in their neighborhood." |
+| 7 | Google reviews with project types and satisfaction noted | Painting is a high-comparison category; reviews are the primary trust signal | "Your Google rating doesn't appear on your site -- showing it would give visitors an instant reason to call you over a competitor." |
+| 8 | Warranty or quality guarantee statement | Paint warranties differentiate a professional painter from a low-bid competitor | "Mentioning your workmanship warranty on your site would answer the question every buyer has before they sign." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for painting companies:**
+- Paints both interior and exterior (higher average job value and year-round work)
+- No before-and-after gallery on their website despite painting being a highly visual category
+- No paint brand information visible
+- Does not appear in the Google Maps 3-pack for painting contractor in their area
+
+**Best cities to search first:** Atlanta, Dallas, Houston, Phoenix, Charlotte, Columbus, Denver, Nashville
+
+**Search strings to use on Google Maps:**
+- "painting contractor [city]"
+- "interior painter [city]"
+- "exterior house painting near me"

@@ -223,3 +223,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Savings calculator or estimated bill reduction tool | Solar buyers purchase on ROI; a tool that shows savings converts browsers faster than any other element | "Your site has no savings calculator -- buyers who want to know if solar will pay off for them will use a competitor's calculator and call them." |
+| 2 | Panel brand and efficiency ratings listed | Solar buyers research panel specs extensively; naming brands and wattage ratings builds credibility | "Your site doesn't mention which solar panels you install -- buyers researching panel brands won't know if you carry what they want." |
+| 3 | Battery storage and backup page | Battery backup is the fastest-growing solar add-on; a dedicated page captures that search traffic | "Adding a battery storage page would attract buyers who specifically want backup power, which is one of the hottest solar searches right now." |
+| 4 | Federal tax credit and state incentive information | Solar buyers are motivated by incentives; a site that explains them gets calls from buyers who are still deciding | "Your site doesn't explain the federal tax credit or state incentives -- that information alone gets undecided buyers to pick up the phone." |
+| 5 | Installation process and timeline explanation | Solar buyers are anxious about roof work, permits, and utility interconnection; clarity reduces hesitation | "Your site doesn't explain the installation process -- buyers who don't know what to expect are less likely to commit." |
+| 6 | Financing options (loan, lease, PPA) explained | Solar financing is complex; a site that simplifies the options builds trust and converts undecided buyers | "Explaining your financing options clearly on your site would help buyers who want solar but don't know how to pay for it." |
+| 7 | Service area and utility partnerships listed | Solar is subject to utility rules; buyers want to confirm you work in their service territory | "Your site doesn't list which utility territories you work in -- local buyers can't confirm you will be approved to connect their system." |
+| 8 | Google reviews with system size and savings mentioned | Solar reviews that include actual kW installed and dollar savings are the most persuasive type | "Reviews that mention system size and monthly bill reduction would be the single most convincing proof you can put on your site." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for solar companies:**
+- Installs residential rooftop solar (not exclusively commercial or utility-scale)
+- No savings calculator or ROI tool on their website
+- No battery storage page despite it being the fastest-growing add-on category
+- Does not appear in local Google search for solar installation or solar panels
+
+**Best cities to search first:** Phoenix, San Antonio, Houston, Dallas, Tampa, Orlando, Denver, Las Vegas
+
+**Search strings to use on Google Maps:**
+- "solar installer [city]"
+- "residential solar panels [city]"
+- "solar company near me"

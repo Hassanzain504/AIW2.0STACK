@@ -255,3 +255,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | System type pages (whole-house filtration, reverse osmosis, water softener, UV purification, well water treatment) | Water treatment buyers search by their specific problem; a page per system captures each search | "Your site doesn't have separate pages for softeners, RO systems, and well water treatment -- buyers with different problems won't find the right answer." |
+| 2 | Water quality problem guide (hard water, iron, sulfur, chlorine, PFAS, bacteria) | Buyers start with a symptom, not a product; a problem-to-solution guide converts them before competitors | "Your site doesn't explain which system solves which water problem -- buyers who know their problem but not the solution will call whoever explains it." |
+| 3 | Free water test or consultation offer | A free water test is the standard entry point in this category; offering it on the site removes the barrier | "Offering a free water test on your site gives buyers a no-risk first step and gets you in front of them before competitors do." |
+| 4 | System brand and product line named (Kinetico, EcoWater, Culligan, Pentair) | Water treatment buyers research brands before choosing a dealer; naming brands captures those searches | "Your site doesn't mention which water treatment brands you sell -- buyers who have researched Kinetico or EcoWater won't know if you are a dealer." |
+| 5 | Rental vs. purchase option explained | Many water treatment companies offer both; buyers comparing total cost need that information upfront | "Your site doesn't explain rental vs. purchase -- buyers comparing total cost with competitors who offer both need to see your options." |
+| 6 | Service and maintenance plan page | Annual service is a recurring revenue line that ties customers to your company | "Adding a service and maintenance plan page would attract buyers who want long-term support and not just a one-time installation." |
+| 7 | Service area cities or coverage map | Water treatment dealers have defined territories; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't confirm you cover their city or well water zone." |
+| 8 | Google reviews with water problem and outcome mentioned | Reviews that describe the specific water issue and how it was resolved are the most persuasive in this category | "A review mentioning hard water stains eliminated or sulfur smell gone would convert far more visitors than a generic five-star rating." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for water treatment companies:**
+- Serves residential (not exclusively commercial or municipal)
+- No free water test or consultation offer on their website
+- No rental vs. purchase comparison despite offering both
+- Does not appear in local Google search for water softener or water filtration in their area
+
+**Best cities to search first:** Phoenix, Tampa, Indianapolis, Columbus, Dallas, Houston, Las Vegas, Charlotte
+
+**Search strings to use on Google Maps:**
+- "water treatment company [city]"
+- "water softener installation [city]"
+- "whole house water filter near me"

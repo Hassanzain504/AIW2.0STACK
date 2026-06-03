@@ -230,3 +230,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Window type pages (double-hung, casement, bay, picture, egress, sliding) | Window buyers compare types and brands before calling; a page per type captures each search | "Your site doesn't have separate pages for window types -- a buyer researching casement or bay windows won't know if you install them." |
+| 2 | Brand names displayed (Andersen, Pella, Marvin, Simonton, Milgard) | Brand-specific searches are high-intent; naming brands captures buyers who have already made a product decision | "Your site doesn't mention which window brands you install -- buyers searching for Andersen or Pella installers won't find you." |
+| 3 | Window coverings and treatments distinction (blinds, shades, shutters, drapes) | Window coverings is a separate purchase category; a page for it doubles your addressable market | "Your site doesn't mention window coverings -- adding a page for blinds and shutters would double the number of buyers you can attract." |
+| 4 | Energy efficiency ratings and U-factor content | Energy savings is one of the top window replacement motivations; buyers research ENERGY STAR compliance | "Your site doesn't mention energy efficiency ratings or ENERGY STAR compliance -- that's the first thing buyers check when replacing windows for utility savings." |
+| 5 | Before-and-after installation photos by window type | A window replacement changes the look of a home dramatically; photos sell the upgrade | "Before-and-after photos of your window installations would give buyers the visual motivation to start the project now." |
+| 6 | Financing options visible | Whole-home window replacement runs $10,000 to $25,000; financing information reduces sticker shock | "Showing financing options on your site would stop buyers from leaving when they see the total cost of a full window replacement." |
+| 7 | Service area cities listed | Window companies are local; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't confirm you work in their neighborhood." |
+| 8 | Google reviews with window type and energy savings noted | Reviews that mention the specific window product and reduced drafts or lower bills are highly persuasive | "Reviews mentioning improved comfort and lower energy bills after your window installation would convert far more visitors than a generic rating." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for window and covering companies:**
+- Installs at least two window brands or sells both windows and coverings
+- No ENERGY STAR or energy efficiency content despite it being a top buyer motivation
+- No financing information despite high average project cost
+- Does not appear in the Google Maps 3-pack for window replacement or window installer in their area
+
+**Best cities to search first:** Chicago, Columbus, Indianapolis, Minneapolis, Atlanta, Charlotte, Denver, Dallas
+
+**Search strings to use on Google Maps:**
+- "window replacement [city]"
+- "window installer [city]"
+- "plantation shutters near me"

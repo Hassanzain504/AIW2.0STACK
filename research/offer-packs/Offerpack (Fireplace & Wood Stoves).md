@@ -272,3 +272,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Product and brand list (Napoleon, Regency, Harman, Jotul) | Fireplace buyers research brands before visiting a showroom or calling a dealer | "Your site doesn't mention which fireplace brands you carry -- buyers who research brands online won't find you." |
+| 2 | Service types listed (gas insert install, wood stove install, chimney liner, annual cleaning) | Buyers come with a specific job; a vague service page sends them to a competitor who is specific | "Your site groups all services together -- separate pages for gas inserts and chimney cleaning would get you more traffic." |
+| 3 | Showroom photos or virtual tour if applicable | Fireplace purchases are tactile; a showroom preview builds motivation to visit | "Photos of your showroom would give online shoppers a reason to come in and see your products in person." |
+| 4 | Safety and certification information (CSIA certified, NFI certified) | Fireplace and chimney work is a safety-critical service; credentials reduce hesitation | "Displaying your CSIA or NFI certification would immediately build trust with buyers who are concerned about safety." |
+| 5 | Before-and-after installation photos | A dated fireplace transformed into a modern gas insert is a powerful visual sell | "Before-and-after photos of your fireplace makeovers would show buyers exactly what they could have." |
+| 6 | Seasonal tune-up or chimney sweep page | Annual service is a recurring revenue line that keeps customers coming back | "Adding a chimney cleaning page would attract buyers who just want annual service and often turn into equipment upgrades." |
+| 7 | Service area or states served | Fireplace dealers and installers have defined trade areas; buyers confirm coverage early | "Your site doesn't say which areas you cover -- local buyers can't confirm you will come to them." |
+| 8 | Financing options mentioned | Fireplace inserts and wood stoves can run $3,000 to $8,000; financing information reduces sticker shock | "Mentioning financing on your site would keep buyers who see the price from leaving before they call." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for fireplace and wood stove dealers:**
+- Sells and installs (not just sells or just installs)
+- No page dedicated to gas inserts or wood-burning stove installation
+- No visible certification or credential information
+- Does not appear in local Google search for gas fireplace insert or chimney cleaning
+
+**Best cities to search first:** Denver, Chicago, Minneapolis, Portland, Salt Lake City, Kansas City, Columbus, Pittsburgh
+
+**Search strings to use on Google Maps:**
+- "fireplace dealer [city]"
+- "gas fireplace insert installation [city]"
+- "chimney cleaning near me"

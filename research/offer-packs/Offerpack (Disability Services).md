@@ -255,3 +255,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Clear list of services (home modifications, ramp installation, lift installation, bathroom adaptation) | Families searching for disability modifications have a specific job; vague sites get skipped | "Your site doesn't specify which home modifications you handle -- families searching for ramp or lift help can't tell if you do their job." |
+| 2 | Photo gallery of completed accessibility projects | Families need to visualize the modification before committing to a quote | "Photos of your completed ramps, lifts, and bath adaptations would show families exactly what to expect." |
+| 3 | Funding and insurance guidance (VA grants, Medicaid waiver, NDIS if applicable) | Many buyers rely on grants or insurance; a site that explains options gets the call first | "Your site doesn't mention VA grants or Medicaid waivers -- families who need funding guidance will call whoever explains it first." |
+| 4 | Accreditation or certification logos (CAPS, NAHB, NARI) | This market demands proof of specialized training before trust is given | "Displaying your accessibility certifications would immediately set you apart from general contractors bidding on the same jobs." |
+| 5 | Testimonials from families or caregivers | Emotional proof matters more in this niche than in almost any other | "A short quote from a family you helped would do more to build trust than any description of your services." |
+| 6 | Click-to-call phone number visible on mobile | Caregivers searching in a crisis call immediately; a buried number loses the lead | "Your phone number is hard to find on mobile -- someone in an urgent situation will call whoever they can reach first." |
+| 7 | Service area clearly stated | Accessibility modifications are hyper-local; families confirm coverage before reading further | "Your site doesn't say which cities you serve, so local families can't confirm you will come to them." |
+| 8 | Free assessment or home visit offer | A free on-site assessment is the standard entry point in this niche | "Offering a free home assessment on your site gives families a low-risk first step and gets you in the door." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for disability services:**
+- Holds CAPS (Certified Aging-in-Place Specialist) or similar certification
+- Primarily residential; not focused solely on commercial ADA compliance
+- Website lacks any mention of grant programs or funding assistance
+- Does not appear in local search for aging-in-place or wheelchair ramp installation
+
+**Best cities to search first:** Tampa, Phoenix, Atlanta, Houston, Las Vegas, Jacksonville, San Antonio, Charlotte
+
+**Search strings to use on Google Maps:**
+- "home accessibility modification [city]"
+- "wheelchair ramp installation [city]"
+- "aging in place contractor near me"

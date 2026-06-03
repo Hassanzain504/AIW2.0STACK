@@ -237,3 +237,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Seasonal contract vs. per-event pricing explained | Snow removal buyers want to know how they will be charged before committing | "Your site doesn't explain seasonal versus per-event pricing -- buyers comparing options will call whoever explains the difference first." |
+| 2 | Residential and commercial service distinction | Homeowners and property managers have completely different needs and budgets | "Your site doesn't separate residential driveways from commercial parking lots -- buyers at both scales can't confirm you serve them." |
+| 3 | Service coverage list (plowing, salting, de-icing, sidewalk clearing, loading dock clearing) | Snow buyers have specific service needs; confirming scope prevents mismatched inquiries | "Your site doesn't list the specific snow services you provide -- a property manager who needs sidewalk and loading dock clearing doesn't know if you do it." |
+| 4 | Response time or trigger depth statement | Snow buyers choose based on reliability and speed; a stated response time builds confidence | "Stating your trigger depth and average response time on your site would win property managers who need guaranteed service windows." |
+| 5 | Equipment list with photos (plows, salt spreaders, skid steers) | Commercial buyers want to know you have enough equipment to service their lot reliably | "Photos of your snow removal equipment on your site would give commercial property managers confidence you can handle their lot." |
+| 6 | Service area cities or routes listed | Snow removal is hyper-local; buyers confirm you cover their area before reading further | "Your site doesn't list your service area -- local buyers can't confirm you will come to their property." |
+| 7 | Seasonal contract sign-up deadline or early-bird offer | Snow removal buyers must sign before the season; urgency elements drive early commitment | "Adding a seasonal contract deadline or early-bird discount to your site would convert more visitors before they wait until November." |
+| 8 | Google reviews with reliability and response time noted | Snow removal is a trust purchase because one missed storm can cause injury or liability | "Reviews that mention your reliability and fast response after a storm would be the most persuasive proof you can show new prospects." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for snow removal companies:**
+- Serves commercial or HOA accounts (higher contract value than residential only)
+- No seasonal contract information or sign-up page on their website
+- No equipment photos or fleet list
+- Does not appear in local Google search for snow plowing or commercial snow removal
+
+**Best cities to search first:** Chicago, Minneapolis, Columbus, Indianapolis, Cleveland, Detroit, Buffalo, Milwaukee
+
+**Search strings to use on Google Maps:**
+- "snow removal service [city]"
+- "commercial snow plowing [city]"
+- "parking lot snow removal near me"

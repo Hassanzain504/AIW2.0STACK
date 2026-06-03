@@ -271,3 +271,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Product brands and equipment lines (Rainbow Play Systems, Swing-N-Slide, commercial Kompan) | Playground buyers research brands and models online before contacting an installer | "Your site doesn't mention which playground brands you install -- parents and facility managers who have already researched brands won't know if you carry what they want." |
+| 2 | Residential vs. commercial distinction | Backyard swing sets and school playgrounds are completely different categories with different buyers | "Your site doesn't separate residential and commercial playground services -- parents and school facility managers both need to know you serve them." |
+| 3 | Safety certification and ASTM compliance statement | Playgrounds are a safety product; parents and facility managers require compliance confirmation | "Your site doesn't mention ASTM or safety certifications -- that's the first thing a school or daycare facility checks before calling." |
+| 4 | Installation photo gallery organized by project type | Parents buying for their backyard want to see residential installs; facilities want to see commercial builds | "Your photo gallery isn't organized by project type -- separating residential and commercial installs would make it more useful for each buyer." |
+| 5 | Maintenance and inspection service page | Regular inspections are required for commercial installations; a page capturing that revenue is valuable | "Adding a playground inspection and maintenance page would attract the recurring commercial contracts that generate reliable revenue." |
+| 6 | Surfacing options page (rubber mulch, poured rubber, engineered wood fiber) | Surfacing is often the largest cost component; buyers research it separately | "Adding a surfacing options page would help buyers understand the full cost and keep them on your site longer." |
+| 7 | Service area or states served | Playground installers often cover a regional area; buyers confirm before reading further | "Your site doesn't list your service area -- local buyers and facility managers can't confirm you cover their location." |
+| 8 | Free quote or site assessment offer | Playground quotes are site-specific; offering a free assessment gets you in front of buyers before competitors | "Offering a free site assessment on your site gives parents and facilities a clear first step with no commitment." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for outdoor playground companies:**
+- Installs both residential and commercial (higher value per job on commercial side)
+- No ASTM compliance or safety certification visible on the website
+- No surfacing options page
+- Does not appear in local Google search for playground installation or commercial playground equipment
+
+**Best cities to search first:** Dallas, Houston, Atlanta, Phoenix, Charlotte, Columbus, Indianapolis, Denver
+
+**Search strings to use on Google Maps:**
+- "playground installation [city]"
+- "commercial playground equipment [city]"
+- "backyard playset installer near me"

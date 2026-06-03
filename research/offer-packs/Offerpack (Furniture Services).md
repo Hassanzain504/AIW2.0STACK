@@ -255,3 +255,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Service list (assembly, repair, restoration, upholstery, custom builds) | Furniture services cover very different jobs; a vague page loses buyers who need a specific service | "Your site doesn't break out your services -- buyers looking for furniture repair versus assembly can't tell if you do both." |
+| 2 | Before-and-after restoration or repair photos | Furniture restoration is about transformation; visual proof is the primary conversion driver | "Before-and-after photos of your furniture restorations would be the most persuasive thing on your site." |
+| 3 | Furniture brands or types they work on (Restoration Hardware, IKEA flat-pack, antique, commercial) | Buyers want to confirm you handle their specific furniture type or brand | "Your site doesn't mention which furniture types or brands you work with -- buyers can't tell if you handle their piece." |
+| 4 | In-home service or pickup and delivery statement | Furniture is heavy; buyers need to know how logistics work before they call | "Your site doesn't explain whether you come to the customer or they bring items to you -- that question stops a lot of people." |
+| 5 | Service area or cities covered | Furniture services are local; buyers confirm coverage before reading further | "Your site doesn't list your service area -- local buyers can't tell if you will come to their location." |
+| 6 | Turnaround time or rush service mention | Buyers often need furniture assembled for an event or repaired before guests arrive | "Mentioning your typical turnaround or rush availability on your site would win leads who need work done quickly." |
+| 7 | Free estimate or quote request form | Furniture restoration costs vary widely; a quote form captures the lead without requiring a phone call | "A quote request form on your site would get you leads from buyers who want a price before committing to a call." |
+| 8 | Google reviews or client photos with their projects | Furniture buyers rely on word-of-mouth; online proof substitutes for personal referrals | "Showing your Google reviews with photos of finished work would give buyers the confidence to book you sight unseen." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for furniture service companies:**
+- Offers at least two of: assembly, repair, restoration, or upholstery
+- No before-and-after photos visible on their website
+- No clear statement about in-home service vs. workshop only
+- Does not appear in local search for furniture repair or furniture assembly
+
+**Best cities to search first:** Dallas, Atlanta, Chicago, Houston, Phoenix, Denver, Nashville, Charlotte
+
+**Search strings to use on Google Maps:**
+- "furniture repair [city]"
+- "furniture assembly service [city]"
+- "furniture restoration near me"
