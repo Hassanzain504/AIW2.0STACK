@@ -265,3 +265,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Service list broken out by type (residential, commercial, deep clean, move-out) | Cleaning buyers search by specific service; a generic page loses the click | "Your site lists 'cleaning services' but doesn't specify what types -- visitors leave when they can't find their answer." |
+| 2 | Visible pricing or instant quote tool | Cleaning is a repeat-purchase decision; price transparency accelerates booking | "Adding a pricing page or quote calculator would convert more visitors without you lifting the phone." |
+| 3 | Before-and-after photos of actual jobs | Proof of quality matters more than promises in a trust-low category | "Before-and-after photos of your work would do more selling than any paragraph of text on your site." |
+| 4 | Online booking or contact form | Cleaning buyers often want to book at 9pm when you are not answering | "Your site has no online booking option -- you are losing jobs every night when people search and can't schedule." |
+| 5 | Staff or owner photo with a short bio | Cleaners enter people's homes; a face builds the trust that converts browsers | "Showing a photo of you or your team builds the personal trust people need before letting a cleaner into their home." |
+| 6 | Insurance and bonded statement | This is the most common objection in the cleaning category | "Your site doesn't mention insurance or bonding -- that single line stops a lot of potential clients from calling." |
+| 7 | Google reviews count and average rating | The cleaning market is competitive; social proof is the primary differentiator | "Your Google rating doesn't appear on your site -- displaying it would give new visitors an instant reason to choose you." |
+| 8 | Service area cities listed | Cleaning is hyper-local; buyers want to confirm you cover their zip code | "Your site doesn't list your service area, so local prospects assume you might not cover their neighborhood." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for cleaning services:**
+- Operates in suburban residential markets or mixed commercial zones
+- Has active Facebook or Instagram but no clear service page on their website
+- No online booking system visible on any page
+- Does not appear in the Google Maps 3-pack for their primary service term
+
+**Best cities to search first:** Atlanta, Austin, Charlotte, Denver, Nashville, Orlando, Raleigh, Tampa
+
+**Search strings to use on Google Maps:**
+- "house cleaning service [city]"
+- "residential cleaning company [city]"
+- "deep cleaning service near me"

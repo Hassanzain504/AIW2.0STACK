@@ -265,3 +265,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Project photo gallery (driveways, patios, retaining walls, stamped concrete) | Concrete buyers make visual decisions long before they call | "Your site has no photo gallery -- buyers can't picture your quality without seeing your past work." |
+| 2 | Breakdown of services by type (flatwork, stamped, block walls, foundation repair) | Masonry buyers search by specific job type, not "concrete services" | "Your site groups everything under one heading -- adding separate service pages would get you more search traffic." |
+| 3 | Free estimate call to action on every page | Concrete jobs vary widely in price; a quote request lowers the barrier to contact | "A free estimate button on every page would turn more browsers into quote requests." |
+| 4 | Licensing and insurance statement | Large hardscape projects require homeowner confidence in credentials | "Your site doesn't mention licensing or insurance -- that's the first thing homeowners check before hiring." |
+| 5 | Service area map or city list | Concrete contractors are local; buyers confirm coverage before reading further | "Your site doesn't say where you work, so local prospects can't tell if you cover their neighborhood." |
+| 6 | Before-and-after project photos | Nothing proves value in concrete work like a comparison shot | "A before-and-after section would show prospects exactly what their driveway or patio could look like." |
+| 7 | Google reviews or named testimonials | A high-ticket outdoor project requires trust; reviews reduce hesitation | "Displaying your Google reviews on your site would give visitors the proof they need to call you first." |
+| 8 | Click-to-call mobile number in the header | Most concrete leads come from mobile searchers standing outside looking at a problem | "Your phone number is buried -- most people looking at a cracked driveway are searching on their phone." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for concrete and masonry:**
+- Operates in suburban markets with high homeownership rates
+- Does not rank in the Google Maps 3-pack for driveway or patio searches
+- Portfolio photos exist on Facebook but not on their website
+- No dedicated pages for stamped concrete or retaining walls (high-value services)
+
+**Best cities to search first:** Dallas, Houston, Phoenix, Columbus, Indianapolis, Charlotte, Denver, Las Vegas
+
+**Search strings to use on Google Maps:**
+- "concrete contractor [city]"
+- "stamped concrete patio [city]"
+- "retaining wall builder near me"

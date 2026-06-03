@@ -300,3 +300,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Brand logos of systems they install (Beam, NuTone, Vacuflo) | Buyers trust brand names they recognize | "Your site doesn't show which vacuum brands you carry -- that's the first thing shoppers look for." |
+| 2 | Service menu covering install, repair, and retrofit | Central vacuum buyers have three distinct needs; a vague page loses each one | "Your site doesn't separate installation from repair services, so leads don't know if you can help them." |
+| 3 | Pricing range or quote request form | Central vacuum is a considered purchase; people want a ballpark before calling | "Adding a rough pricing guide or quote form would get you more serious inquiries instead of tire-kickers." |
+| 4 | Before-and-after or in-wall installation photos | The hidden nature of central vacuum makes buyers skeptical; visuals reduce that | "Photos of your installation work inside walls would answer the biggest question buyers have before they call." |
+| 5 | Click-to-call phone number in the header | Most central vacuum leads prefer to call with questions | "Your phone number is hard to find -- visitors are leaving before they reach out." |
+| 6 | Coverage area or service radius stated | Central vacuum is hyper-local; buyers want to know you serve their neighborhood | "Your site doesn't say which areas you cover, so local prospects don't know if you will come to them." |
+| 7 | FAQ section addressing retrofitting older homes | Retrofit is the most common concern and the biggest barrier to purchase | "A short FAQ about retrofitting would answer the question that stops most buyers from calling." |
+| 8 | Google reviews or testimonials visible on the homepage | A niche service needs strong social proof to overcome unfamiliarity | "Showing even three customer quotes on your homepage would make visitors feel safer booking you." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for central vacuum companies:**
+- Sells and installs at least one major brand (Beam, NuTone, or similar)
+- Located in suburban or new-construction markets where homes are larger
+- No dedicated landing page for retrofit installations
+- Website looks outdated (pre-2018 design, no mobile optimization)
+
+**Best cities to search first:** Phoenix, Dallas, Houston, Charlotte, Denver, Salt Lake City, Nashville, Raleigh
+
+**Search strings to use on Google Maps:**
+- "central vacuum installation [city]"
+- "central vacuum repair [city]"
+- "built-in vacuum system near me"

@@ -294,3 +294,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Photo gallery of ceiling work (coffered, tray, vaulted) | Homeowners decide visually before they call | "I noticed your site doesn't show photos of your ceiling work -- I can fix that in a week." |
+| 2 | List of ceiling types serviced (popcorn removal, medallions, drywall) | Buyers search by specific service; a generic page loses them | "Your site doesn't mention popcorn ceiling removal -- that's one of the top searches in your area." |
+| 3 | Before-and-after photos | Nothing sells a ceiling transformation better than side-by-side proof | "Before-and-after shots of your work would double the time visitors spend on your site." |
+| 4 | Click-to-call phone number in the header | Most ceiling leads call rather than fill a form | "Your phone number is buried -- visitors are leaving before they find it." |
+| 5 | Named service areas or city pages | Local SEO depends on geography being stated clearly | "Your site doesn't mention which cities you serve, so Google isn't ranking you for local searches." |
+| 6 | Google review count and star rating displayed | Social proof reduces the hesitation to call a new contractor | "Showing your Google rating on your site would build trust with visitors who don't know you yet." |
+| 7 | Free estimate or consultation call to action | Ceilings are visual; people want someone to come look before committing | "Adding a free estimate button would give visitors a low-risk reason to contact you today." |
+| 8 | Mobile-friendly layout | Most homeowners browse on a phone while standing in the room looking up | "Your site is hard to use on a phone, and most of your visitors are on one." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for ceiling contractors:**
+- Operates in suburban or older residential markets where popcorn ceilings are common
+- Does not appear in the Google Maps 3-pack for their main service term
+- No visible portfolio page or gallery on their current site
+- Has a Facebook page with photos but those photos are not on their website
+
+**Best cities to search first:** Atlanta, Charlotte, Columbus, Indianapolis, Phoenix, Tampa, Denver, Raleigh
+
+**Search strings to use on Google Maps:**
+- "ceiling contractor [city]"
+- "popcorn ceiling removal [city]"
+- "coffered ceiling installation near me"

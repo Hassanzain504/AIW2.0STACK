@@ -272,3 +272,43 @@ Hassan
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
 
 Do not pitch. Ask for 15 minutes. The goal of the DM is not to sell a website. The goal is to get a screen-share call where you show them the free design.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Project gallery organized by type (built-ins, trim, furniture, framing) | Homeowners and builders search for a carpenter who has done their specific job before | "I noticed your site doesn't separate your project types -- a sorted gallery would help the right clients find you faster." |
+| 2 | Photo of the carpenter or shop owner on the homepage | Custom woodwork is a personal craft -- buyers want to know who is making their piece | "Putting your face on the site turns a faceless trade listing into someone a homeowner trusts to enter their home." |
+| 3 | Clear description of custom vs. repair vs. installation services | Many carpenters lose calls because visitors can't tell if they do the specific job needed | "Spelling out the three types of work you do on the homepage would stop visitors from leaving before they call." |
+| 4 | Lead time or booking window mentioned | Skilled carpenters often have a wait -- stating it upfront filters serious buyers and adds perceived demand | "Adding a simple note like 'currently booking 3 weeks out' signals quality and creates urgency for serious prospects." |
+| 5 | Material or wood species list (oak, walnut, MDF, cedar) | Buyers sourcing a match for existing woodwork need to know you work with the right material | "Listing the wood species and materials you work with would help homeowners know you can match what they already have." |
+| 6 | Service area stated clearly | Carpenters are hyperlocal -- a visitor from the next county needs to know you will travel | "Listing the towns and counties you serve would stop you losing leads who assume you don't come to their area." |
+| 7 | Google review display or testimonial with a specific project description | Generic praise means nothing -- project-specific reviews prove skill | "Pulling one or two detailed project reviews onto your homepage would do more selling than any paragraph you write." |
+| 8 | Contact form or direct phone number above the fold | A carpenter's site often buries contact info -- that friction kills conversions | "Moving your phone number to the top of every page is the single fastest fix that turns browsers into callers." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for carpenters:**
+- Does custom or finish work but has only a basic Facebook page or no website
+- Has portfolio photos on Instagram but no gallery on a standalone site
+- Site lists no service area or only a single city when they likely cover more
+- No mention of turnaround time or project minimums
+
+**Best cities to search first:** Portland OR, Nashville TN, Austin TX, Denver CO, Raleigh NC, Charlotte NC, Minneapolis MN
+
+**Search strings to use on Google Maps:**
+- "custom carpenter [city]"
+- "finish carpenter [city]"
+- "built-in shelving carpenter near me"

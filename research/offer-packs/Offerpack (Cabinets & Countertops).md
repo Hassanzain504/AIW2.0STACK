@@ -256,3 +256,43 @@ Hassan
 ## The one outreach rule
 
 Send the short DM first on Instagram or LinkedIn. If no reply in 4 days, send the medium version to their email. If no reply in another 5 days, send the long version with the Starbucks offer. Three touches per prospect, then move on.
+
+---
+
+## Website essentials checklist
+
+Use this before every outreach. Open the prospect's site and check each item.
+
+| # | Element | Why it matters | If missing, use this email hook |
+|---|---|---|---|
+| 1 | Portfolio gallery with labeled materials (wood type, stone name, finish) | Homeowners choose by material and style before they choose a contractor | "I noticed your site doesn't show the specific wood or stone options you work with -- I can fix that in a week." |
+| 2 | Before-and-after photo set for at least one kitchen and one bathroom | Transformation proof closes more than any written claim | "A simple before-and-after section on your site would let your work sell itself -- want me to show you a mockup?" |
+| 3 | Lead time or turnaround statement | Kitchen remodels stall because homeowners fear a months-long wait | "Adding a clear timeline estimate to your site would answer the question every homeowner asks before they call." |
+| 4 | Named staff or owner photo with a short bio | Homeowners invite this person into their kitchen -- anonymity kills trust | "Putting your face and name on the site builds the trust that gets you the call over a big-box installer." |
+| 5 | Financing or payment plan mention | Cabinet and countertop jobs often run $5k to $30k -- payment options remove the hesitation | "Mentioning financing options on your site could convert the homeowners who love your work but stall on price." |
+| 6 | Clear service area with city or county names | Local homeowners want a local contractor -- vague location loses clicks | "Listing the specific towns you serve would help you rank for searches in those areas and filter out bad leads." |
+| 7 | Quote request form or call-to-action above the fold | Every page should move the visitor toward a call or form fill | "Your site buries the contact form -- moving it above the fold alone could double the calls you get this month." |
+| 8 | Google review count and star rating displayed on site | Social proof from third-party platforms beats any claim you write yourself | "Pulling your Google reviews onto the site would show new visitors the proof that's already out there about your work." |
+
+A site missing 4 or more items is your highest priority target.
+
+---
+
+## Who to target
+
+**Star rating:** 4.0 to 4.6 stars
+**Review count:** 20 to 80 Google reviews
+**Why this range:** Below 4.0 means reputation problems a better website won't fix. Above 4.6 with 80+ reviews means they are already winning and harder to convince. The 4.0 to 4.6 range with 20 to 80 reviews means good work, real proof, but not yet winning online.
+
+**Additional filters for cabinets and countertops:**
+- Has photos on Google Maps but no dedicated gallery on their site
+- Lists services as a plain text block rather than visual cards or photos
+- No mention of brands they carry (KraftMaid, Silestone, Cambria, etc.)
+- Website was last updated more than two years ago based on copyright footer
+
+**Best cities to search first:** Phoenix AZ, Charlotte NC, Dallas TX, Denver CO, Tampa FL, Raleigh NC, Atlanta GA
+
+**Search strings to use on Google Maps:**
+- "cabinet installation [city]"
+- "custom countertops [city]"
+- "kitchen cabinet company near me"
