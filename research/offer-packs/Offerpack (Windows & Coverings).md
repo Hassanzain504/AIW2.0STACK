@@ -270,3 +270,50 @@ A site missing 4 or more items is your highest priority target.
 - "window replacement [city]"
 - "window installer [city]"
 - "plantation shutters near me"
+
+---
+
+## LinkedIn and Facebook: connection request and first message
+
+### Step 1 -- Connection request note (under 300 characters, LinkedIn limit)
+
+```
+Hey [first name], I work with home service contractors on their web presence. Came across [business name] and liked what I saw. Would love to connect and follow your work.
+
+Hassan
+```
+
+No pitch. No mention of their site problems. Just a genuine reason to connect.
+
+---
+
+### Step 2 -- First message after they accept (send within 24 hours)
+
+```
+Hey [first name], thanks for connecting.
+
+I've been following a few window and covering companies recently -- studying what makes some of them stand out online versus others in the same market. Really interesting how much the website approach varies.
+
+How's business going this season? Are you finding most of your leads come through Google or more through referrals?
+
+Hassan
+```
+
+Goal: start a real conversation. Ask a question they actually care about. Do not mention your service. Listen to their answer -- it will tell you exactly which gap to lead with when you eventually bring up the website.
+
+---
+
+### Step 3 -- Follow-up after they respond (only if they engage)
+
+If they say referrals are the main source:
+```
+That makes sense -- referrals are the best leads. I've noticed that the window companies growing fastest right now are the ones turning their website into a second referral machine. The before/after gallery with real installs, the energy savings data, the financing info -- homeowners share those links the same way they share a referral. Anyway, curious what your site looks like from that angle. Would you be open to me taking a look and giving you honest feedback? No pitch, just a genuine look.
+```
+
+If they say Google is already working:
+```
+Good to hear Google is working for you. Out of curiosity, is the site doing the converting, or are most people calling after seeing the Maps listing? I've been looking at a lot of window contractor sites lately and the ones that actually convert the click into a call all have a few specific things the others skip. Happy to share what I've been seeing if it's useful.
+```
+
+The goal of Step 3 is to earn permission to look at their site and give feedback -- not to sell a redesign. The redesign conversation comes after they ask what you think of their site.
+
