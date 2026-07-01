@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# AI answer engines allowed so Wolf Contractor can be cited in AI results.
+User-agent: GPTBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.wolfcontractor.com/sitemap.xml
