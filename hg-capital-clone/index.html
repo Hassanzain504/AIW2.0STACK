@@ -255,6 +255,8 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
 .v-indigo{background:radial-gradient(circle at 30% 20%,var(--purple),transparent 55%),radial-gradient(circle at 80% 80%,var(--red),transparent 50%),var(--indigo)}
 .v-red{background:radial-gradient(circle at 75% 15%,var(--yellow),transparent 45%),radial-gradient(circle at 20% 85%,var(--indigo),transparent 55%),var(--red)}
 .v-ink{background:radial-gradient(circle at 25% 75%,var(--indigo),transparent 55%),radial-gradient(circle at 85% 20%,var(--coral),transparent 45%),var(--ink)}
+.v-purple{background:radial-gradient(circle at 70% 25%,var(--red),transparent 50%),radial-gradient(circle at 20% 80%,var(--indigo),transparent 55%),var(--purple)}
+.v-coral{background:radial-gradient(circle at 25% 20%,var(--yellow),transparent 50%),radial-gradient(circle at 80% 80%,var(--purple),transparent 55%),var(--coral)}
 .ins-image .glyph{
   position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
   font-size:56px;color:rgba(240,238,232,.9);font-weight:300;
@@ -315,53 +317,58 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
 }
 .stat.in::after{width:100%}
 
-/* ---------- Modules ---------- */
-.modules{padding-bottom:0}
-.module{
-  display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,96px);align-items:center;
-  padding:clamp(64px,8vw,120px) 0;border-top:1px solid var(--line);
+/* ---------- Video sections (HomeVideosMain x4): full-bleed background, copy left, small media card right ---------- */
+.vsec{
+  min-height:92vh;position:relative;overflow:hidden;color:var(--cream);
+  display:flex;align-items:stretch;padding:clamp(80px,10vw,140px) var(--pad);
 }
-.module:first-child{border-top:0}
-.module.flip .m-visual{order:2}
-.m-visual{
-  aspect-ratio:4/3.4;border-radius:22px;overflow:hidden;position:relative;
+.vsec-bg{position:absolute;inset:0;overflow:hidden}
+.vsec-bg .fill{position:absolute;inset:0;animation:bgdrift 22s ease-in-out infinite alternate}
+@keyframes bgdrift{from{transform:scale(1)}to{transform:scale(1.1)}}
+.vsec-bg::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(26,30,34,.82) 0%,rgba(26,30,34,.55) 48%,rgba(26,30,34,.25) 100%);
 }
-.m-visual .fill{position:absolute;inset:0;transform:scale(1.1);transition:transform 1.2s var(--ease-img) .1s}
-.m-visual.in .fill{transform:scale(1)}
-.module:hover .m-visual .fill{transform:scale(1.1);transition:transform .8s var(--ease)}
-.m-visual .num{
-  position:absolute;top:24px;left:26px;font-family:var(--mono);font-size:12px;letter-spacing:.2em;
-  color:rgba(240,238,232,.85);border:1px solid rgba(240,238,232,.4);padding:7px 14px;border-radius:100px;
-  backdrop-filter:blur(4px);
+.vsec-inner{
+  position:relative;z-index:1;display:flex;flex-direction:column;justify-content:space-between;
+  gap:clamp(48px,7vw,96px);width:100%;max-width:1360px;margin:0 auto;
 }
-.m-visual .big-glyph{
-  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  font-size:clamp(90px,10vw,150px);font-weight:300;color:rgba(240,238,232,.9);letter-spacing:-.04em;
+.vsec-copy{max-width:640px}
+.vsec-kicker{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--blue-grey);margin-bottom:24px;display:flex;align-items:center;gap:14px;
 }
-.m-copy .kicker{margin-bottom:20px}
-.m-copy h2{margin-bottom:22px;font-size:clamp(28px,3.2vw,44px)}
-.m-copy p{font-size:17.5px;color:rgba(26,30,34,.72);max-width:520px}
-.m-copy .btn{margin-top:34px}
-.m-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-.m-tags span{
-  font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-  border:1px solid var(--line);padding:7px 14px;border-radius:100px;color:var(--grey);
-  transition:all .3s;
+.vsec-kicker::before{content:'';width:44px;height:1px;background:var(--red)}
+.vsec-copy h2{font-size:clamp(30px,3.6vw,52px);margin-bottom:22px}
+.vsec-copy p{font-size:17.5px;color:rgba(240,238,232,.78);max-width:560px}
+.vsec-copy .btn{margin-top:34px}
+/* HomeVideosSmallVideo: small media card bottom right */
+.vsec-video{
+  align-self:flex-end;width:min(380px,72vw);border-radius:16px;overflow:hidden;position:relative;
+  aspect-ratio:16/9;display:block;border:1px solid rgba(240,238,232,.2);
 }
-.m-tags span:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
-
-/* ---------- Culture band ---------- */
-.band{
-  background:var(--indigo);color:#fff;text-align:center;position:relative;overflow:hidden;
+.vsec-video .fill{position:absolute;inset:0;transform:scale(1.1);transition:transform 1.2s var(--ease-img) .1s}
+.vsec-video.in .fill{transform:scale(1)}
+.vsec-video:hover .fill{transform:scale(1.1);transition:transform .8s var(--ease)}
+.vsec-video::after{content:'';position:absolute;inset:0;background:rgba(26,30,34,.25)}
+.vsec-play{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;
 }
-.band::before,.band::after{
-  content:'';position:absolute;width:42vw;height:42vw;border-radius:50%;filter:blur(80px);opacity:.5;
+.vsec-play i{
+  width:64px;height:64px;border-radius:50%;background:rgba(240,238,232,.15);backdrop-filter:blur(8px);
+  border:1px solid rgba(240,238,232,.5);display:flex;align-items:center;justify-content:center;
+  transition:background-color .2s var(--ease-snap),transform .2s var(--ease-snap);
 }
-.band::before{background:var(--red);top:-40%;left:-12%}
-.band::after{background:var(--purple);bottom:-40%;right:-12%}
-.band .wrap{position:relative;z-index:1;max-width:960px}
-.band h2{font-size:clamp(30px,4.4vw,58px);margin-bottom:36px}
-.band h2 .hl{color:var(--yellow)}
+.vsec-play i::before{
+  content:'';border-style:solid;border-width:9px 0 9px 15px;
+  border-color:transparent transparent transparent var(--cream);margin-left:4px;
+}
+.vsec-video:hover .vsec-play i{background:var(--red);transform:scale(1.08)}
+.vsec-caption{
+  position:absolute;left:16px;bottom:14px;z-index:2;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(240,238,232,.85);
+}
 
 /* ---------- Footer ---------- */
 .footer{background:var(--ink);color:var(--cream);padding:clamp(72px,9vw,120px) var(--pad) 40px}
@@ -431,8 +438,8 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
   .signup-pill{position:static;margin:36px auto 0;align-self:flex-start}
   .stats-grid{grid-template-columns:1fr}
   .stat:nth-child(even){padding-left:0;border-left:0}
-  .module{grid-template-columns:1fr}
-  .module.flip .m-visual{order:0}
+  .vsec{min-height:0}
+  .vsec-video{align-self:flex-start}
   .foot-top{grid-template-columns:1fr}
   .scroll-cue{display:none}
 }
@@ -607,64 +614,72 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
   </div>
 </section>
 
-<!-- Modules -->
-<section class="section modules" id="modules">
-  <div class="wrap">
-
-    <div class="module">
-      <div class="m-visual" data-reveal>
-        <div class="fill v-indigo"></div>
-        <div class="num">01 / Transformation</div>
-        <div class="big-glyph">Ai</div>
-      </div>
-      <div class="m-copy" data-reveal>
-        <div class="kicker">AI transformation</div>
-        <h2>A value creation team with startup intensity</h2>
-        <p>Our in-house team of 100+ AI specialists embeds directly inside portfolio companies. Through Forge Lab, our internal incubator, we design, build and ship agentic products in weeks rather than quarters.</p>
-        <div class="m-tags"><span>Forge Lab</span><span>Applied AI</span><span>Product velocity</span></div>
-        <a class="btn btn-dark" href="#modules">Meet the team <span class="arr">&rarr;</span></a>
-      </div>
+<!-- Video sections -->
+<section class="vsec" id="modules">
+  <div class="vsec-bg"><div class="fill v-indigo"></div></div>
+  <div class="vsec-inner">
+    <div class="vsec-copy" data-reveal>
+      <div class="vsec-kicker">01 / AI transformation</div>
+      <h2>A value creation team with startup intensity</h2>
+      <p>Our in-house team of 100+ AI specialists embeds directly inside portfolio companies. Through Forge Lab, our internal incubator, we design, build and ship agentic products in weeks rather than quarters.</p>
+      <a class="btn btn-ghost" href="#modules">Forge Lab <span class="arr">&rarr;</span></a>
     </div>
-
-    <div class="module flip">
-      <div class="m-visual" data-reveal>
-        <div class="fill v-red"></div>
-        <div class="num">02 / Community</div>
-        <div class="big-glyph">&#10057;</div>
-      </div>
-      <div class="m-copy" data-reveal>
-        <div class="kicker">Community intelligence</div>
-        <h2>One of the largest software ecosystems deploying AI</h2>
-        <p>Seventy-plus companies, one network. We connect thousands of senior operators through The Grid, our private collaboration platform, and more than a hundred events every year, so hard-won lessons travel fast.</p>
-        <div class="m-tags"><span>The Grid</span><span>120+ events</span><span>Operator network</span></div>
-        <a class="btn btn-dark" href="#modules">Inside the network <span class="arr">&rarr;</span></a>
-      </div>
-    </div>
-
-    <div class="module">
-      <div class="m-visual" data-reveal>
-        <div class="fill v-ink"></div>
-        <div class="num">03 / Enterprise</div>
-        <div class="big-glyph">&para;</div>
-      </div>
-      <div class="m-copy" data-reveal>
-        <div class="kicker">A focus on enterprise</div>
-        <h2>Mission-critical systems, complex workflows</h2>
-        <p>We concentrate on businesses that run essential infrastructure for their customers: proprietary data, regulated processes, and workflows that companies cannot afford to get wrong. That is where durable value lives.</p>
-        <div class="m-tags"><span>Vertical SaaS</span><span>Regulated markets</span><span>Deep data</span></div>
-        <a class="btn btn-dark" href="#modules">Our portfolio <span class="arr">&rarr;</span></a>
-      </div>
-    </div>
-
+    <a class="vsec-video" href="#modules" data-reveal>
+      <div class="fill v-red"></div>
+      <span class="vsec-play"><i></i></span>
+      <span class="vsec-caption">Watch: inside Forge Lab, 02:14</span>
+    </a>
   </div>
 </section>
 
-<!-- Culture band -->
-<section class="section band" id="culture">
-  <div class="wrap" data-reveal>
-    <div class="kicker" style="justify-content:center;color:rgba(255,255,255,.8)">Life at HG</div>
-    <h2>The humility to listen. The conviction to invest. <span class="hl">The skill to make big things happen.</span></h2>
-    <a class="btn btn-ghost" href="#footer" style="border-color:rgba(255,255,255,.5);color:#fff">See for yourself <span class="arr">&rarr;</span></a>
+<section class="vsec">
+  <div class="vsec-bg"><div class="fill v-red"></div></div>
+  <div class="vsec-inner">
+    <div class="vsec-copy" data-reveal>
+      <div class="vsec-kicker">02 / Community intelligence</div>
+      <h2>One of the largest software ecosystems deploying AI</h2>
+      <p>Seventy-plus companies, one network. We connect thousands of senior operators through The Grid, our private collaboration platform, and more than a hundred events every year, so hard-won lessons travel fast.</p>
+      <a class="btn btn-ghost" href="#modules">The Grid Summit <span class="arr">&rarr;</span></a>
+    </div>
+    <a class="vsec-video" href="#modules" data-reveal>
+      <div class="fill v-ink"></div>
+      <span class="vsec-play"><i></i></span>
+      <span class="vsec-caption">Watch: The Grid Summit, 01:47</span>
+    </a>
+  </div>
+</section>
+
+<section class="vsec">
+  <div class="vsec-bg"><div class="fill v-ink"></div></div>
+  <div class="vsec-inner">
+    <div class="vsec-copy" data-reveal>
+      <div class="vsec-kicker">03 / A focus on enterprise</div>
+      <h2>Mission-critical systems, complex workflows</h2>
+      <p>We concentrate on businesses that run essential infrastructure for their customers: proprietary data, regulated processes, and workflows that companies cannot afford to get wrong. That is where durable value lives.</p>
+      <a class="btn btn-ghost" href="#modules">Our portfolio <span class="arr">&rarr;</span></a>
+    </div>
+    <a class="vsec-video" href="#modules" data-reveal>
+      <div class="fill v-indigo"></div>
+      <span class="vsec-play"><i></i></span>
+      <span class="vsec-caption">Watch: enterprise in depth, 03:05</span>
+    </a>
+  </div>
+</section>
+
+<section class="vsec" id="culture">
+  <div class="vsec-bg"><div class="fill v-purple"></div></div>
+  <div class="vsec-inner">
+    <div class="vsec-copy" data-reveal>
+      <div class="vsec-kicker">04 / Life at HG</div>
+      <h2>The humility to listen. The conviction to invest.</h2>
+      <p>Our culture is the edge: listen first, back bold ideas early, and bring the skills and resources that turn conviction into results.</p>
+      <a class="btn btn-ghost" href="#footer">See for yourself <span class="arr">&rarr;</span></a>
+    </div>
+    <a class="vsec-video" href="#footer" data-reveal>
+      <div class="fill v-coral"></div>
+      <span class="vsec-play"><i></i></span>
+      <span class="vsec-caption">Watch: a week at HG, 02:38</span>
+    </a>
   </div>
 </section>
 
