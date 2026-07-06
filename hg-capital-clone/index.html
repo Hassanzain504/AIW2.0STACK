@@ -338,6 +338,9 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
   display:flex;align-items:stretch;padding:clamp(80px,10vw,140px) var(--pad);
 }
 .vsec-bg{position:absolute;inset:0;overflow:hidden}
+.vsec-bg .bg-video{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+}
 .vsec-bg .fill{position:absolute;inset:0;animation:bgdrift 22s ease-in-out infinite alternate}
 @keyframes bgdrift{from{transform:scale(1)}to{transform:scale(1.1)}}
 .vsec-bg::after{
@@ -663,7 +666,7 @@ body.cursor-on .cursor{opacity:1}
 
 <!-- Video sections -->
 <section class="vsec vsec-light video-left" id="modules">
-  <div class="vsec-bg"><div class="fill v-pastel"></div></div>
+  <div class="vsec-bg"><div class="fill v-pastel"></div><video class="bg-video" src="assets/bg-01.mp4" autoplay muted loop playsinline preload="auto"></video></div>
   <div class="vsec-inner">
     <div class="vsec-copy" data-reveal>
       <div class="vsec-kicker">01 / AI transformation</div>
@@ -680,7 +683,7 @@ body.cursor-on .cursor{opacity:1}
 </section>
 
 <section class="vsec copy-right">
-  <div class="vsec-bg"><div class="fill v-red"></div></div>
+  <div class="vsec-bg"><div class="fill v-red"></div><video class="bg-video" src="assets/bg-02.mp4" autoplay muted loop playsinline preload="auto"></video></div>
   <div class="vsec-inner">
     <div class="vsec-copy" data-reveal>
       <div class="vsec-kicker">02 / Community intelligence</div>
@@ -697,7 +700,7 @@ body.cursor-on .cursor{opacity:1}
 </section>
 
 <section class="vsec video-left">
-  <div class="vsec-bg"><div class="fill v-ink"></div></div>
+  <div class="vsec-bg"><div class="fill v-ink"></div><video class="bg-video" src="assets/bg-03.mp4" autoplay muted loop playsinline preload="auto"></video></div>
   <div class="vsec-inner">
     <div class="vsec-copy" data-reveal>
       <div class="vsec-kicker">03 / A focus on enterprise</div>
@@ -714,7 +717,7 @@ body.cursor-on .cursor{opacity:1}
 </section>
 
 <section class="vsec copy-right" id="culture">
-  <div class="vsec-bg"><div class="fill v-purple"></div></div>
+  <div class="vsec-bg"><div class="fill v-purple"></div><video class="bg-video" src="assets/bg-04.mp4" autoplay muted loop playsinline preload="auto"></video></div>
   <div class="vsec-inner">
     <div class="vsec-copy" data-reveal>
       <div class="vsec-kicker">04 / Life at HG</div>
