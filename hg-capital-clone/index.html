@@ -289,15 +289,22 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
   background:radial-gradient(circle,rgba(91,103,213,.28),transparent 65%);
   top:-30%;right:-20%;pointer-events:none;
 }
-.stats-head{max-width:760px;margin-bottom:72px}
-.stats-head p{margin-top:22px;font-size:19px;color:rgba(240,238,232,.65)}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line-light)}
+/* intro column left, three stat items right (HomeStatsInner grid) */
+.stats-layout{display:grid;grid-template-columns:1fr 2.1fr;gap:clamp(40px,6vw,110px);position:relative;z-index:1}
+.stats-intro h3{font-size:clamp(26px,2.8vw,40px);font-weight:600;letter-spacing:-.025em;line-height:1.12}
+.stats-intro p{margin-top:20px;font-size:17px;color:rgba(240,238,232,.65);max-width:340px}
+.stats-intro .btn{margin-top:36px}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-light)}
 .stat{
-  padding:44px 32px 44px 0;border-bottom:1px solid var(--line-light);
-  display:flex;flex-direction:column;gap:16px;position:relative;
+  padding:40px 28px 40px 0;border-bottom:1px solid var(--line-light);
+  display:flex;flex-direction:column;gap:18px;position:relative;
 }
-.stat + .stat{padding-left:32px;border-left:1px solid var(--line-light)}
-.stat-label{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-grey)}
+.stat + .stat{padding-left:28px;border-left:1px solid var(--line-light)}
+.stat-label{
+  font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue-grey);
+  display:flex;align-items:center;gap:10px;
+}
+.stat-label::before{content:'';width:9px;height:9px;background:var(--red);transform:rotate(45deg);flex:none}
 .stat-num{font-size:clamp(44px,4.6vw,72px);font-weight:600;letter-spacing:-.03em;line-height:1;display:flex;align-items:baseline}
 .stat-num .unit{font-size:.55em;color:var(--red);font-weight:500;margin-left:2px}
 .stat-num .pre{font-size:.55em;color:var(--red);font-weight:500;margin-right:2px}
@@ -307,7 +314,6 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
   transition:width 1.2s var(--ease) .3s;
 }
 .stat.in::after{width:100%}
-.stats-cta{margin-top:64px}
 
 /* ---------- Modules ---------- */
 .modules{padding-bottom:0}
@@ -414,6 +420,8 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
   .nav{display:none}
   .burger{display:flex}
   .ins-grid{grid-template-columns:280px repeat(3,300px);min-width:0;width:max-content}
+  .stats-layout{grid-template-columns:1fr}
+  .stats-intro p{max-width:520px}
   .stats-grid{grid-template-columns:1fr 1fr}
   .stat{padding:36px 24px 36px 0}
   .stat + .stat{padding-left:0;border-left:0}
@@ -572,35 +580,29 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
 <!-- Stats -->
 <section class="section stats dark" id="stats">
   <div class="wrap">
-    <div class="stats-head">
-      <div class="kicker" data-reveal>AI impact at scale</div>
-      <h2 data-reveal>A snapshot of value creation across the portfolio</h2>
-      <p data-reveal>Demo figures for a fictional portfolio of 70+ software companies deploying AI in product and internal workflows.</p>
-    </div>
-    <div class="stats-grid">
-      <div class="stat" data-reveal data-stat>
-        <div class="stat-label">GenAI deployment</div>
-        <div class="stat-num"><span class="count" data-count="1400">0</span><span class="unit">+</span></div>
-        <p>projects live across the portfolio, with every company deploying GenAI in product or operations</p>
+    <div class="stats-layout">
+      <div class="stats-intro" data-reveal>
+        <h3>AI impact at scale</h3>
+        <p>A snapshot of AI-driven value creation across a demo portfolio of 70+ software companies.</p>
+        <a class="btn btn-ghost" href="#modules">How we create value <span class="arr">&rarr;</span></a>
       </div>
-      <div class="stat" data-reveal data-stat>
-        <div class="stat-label">EBITDA impact</div>
-        <div class="stat-num"><span class="pre">$</span><span class="count" data-count="250">0</span><span class="unit">m</span></div>
-        <p>of budgeted earnings impact attributed to AI initiatives this year</p>
+      <div class="stats-grid">
+        <div class="stat" data-reveal data-stat>
+          <div class="stat-label">GenAI deployment</div>
+          <div class="stat-num"><span class="count" data-count="1400">0</span><span class="unit">+</span></div>
+          <p>projects live across the portfolio, with every company deploying GenAI in product or operations</p>
+        </div>
+        <div class="stat" data-reveal data-stat>
+          <div class="stat-label">AI EBITDA impact</div>
+          <div class="stat-num"><span class="pre">$</span><span class="count" data-count="250">0</span><span class="unit">m</span></div>
+          <p>of budgeted earnings impact attributed to AI initiatives this year</p>
+        </div>
+        <div class="stat" data-reveal data-stat>
+          <div class="stat-label">Agentic product</div>
+          <div class="stat-num"><span class="count" data-count="90">0</span><span class="unit">+</span></div>
+          <p>agentic products and features launched by portfolio teams</p>
+        </div>
       </div>
-      <div class="stat" data-reveal data-stat>
-        <div class="stat-label">Agentic product</div>
-        <div class="stat-num"><span class="count" data-count="90">0</span><span class="unit">+</span></div>
-        <p>agentic products and features launched by portfolio teams</p>
-      </div>
-      <div class="stat" data-reveal data-stat>
-        <div class="stat-label">Portfolio</div>
-        <div class="stat-num"><span class="count" data-count="70">0</span><span class="unit">+</span></div>
-        <p>software companies across enterprise, vertical and infrastructure markets</p>
-      </div>
-    </div>
-    <div class="stats-cta" data-reveal>
-      <a class="btn btn-ghost" href="#modules">How we create value <span class="arr">&rarr;</span></a>
     </div>
   </div>
 </section>
