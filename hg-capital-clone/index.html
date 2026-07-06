@@ -228,27 +228,44 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
 [data-reveal]{opacity:0;transform:translateY(2rem);transition:opacity 1.5s var(--ease),transform 1.5s var(--ease)}
 [data-reveal].in{opacity:1;transform:none}
 
-/* ---------- News & Insights strip (HomeHeroInsights) ---------- */
-.insights{border-top:1px solid var(--line);padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(56px,7vw,96px)}
-.ins-scroller{overflow-x:auto;scrollbar-width:none;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
-.ins-scroller::-webkit-scrollbar{display:none}
-.ins-grid{display:grid;grid-template-columns:1.05fr repeat(3,1fr);gap:26px;min-width:1080px}
-.ins-head{display:flex;flex-direction:column;justify-content:flex-end;gap:18px;padding-bottom:8px;padding-right:26px}
-.ins-head h3{font-size:clamp(26px,2.6vw,38px);font-weight:600;letter-spacing:-.025em;line-height:1.1}
-.ins-head p{font-size:16.5px;color:rgba(26,30,34,.65);max-width:300px}
-.ins-head .btn{align-self:flex-start;margin-top:8px}
-.ins-item{position:relative;display:flex;flex-direction:column}
-.ins-link{position:absolute;inset:0;z-index:3}
-.ins-image{
-  aspect-ratio:4/3;border-radius:16px;overflow:hidden;position:relative;background:var(--blue-grey);
+/* ---------- News & Insights (HomeHeroInsights): indigo panel grid, featured card + stacked side cards ---------- */
+.insights{
+  background:linear-gradient(165deg,#5B67D5 0%,#3E47B5 45%,#272E7A 100%);
+  color:#fff;padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(56px,7vw,96px);
 }
+.ins-grid{display:grid;grid-template-columns:1fr 1.18fr .82fr;gap:26px;align-items:stretch}
+/* left header panel */
+.ins-head{
+  background:rgba(255,255,255,.07);border-radius:18px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  gap:24px;padding:clamp(36px,4vw,64px) clamp(28px,3vw,52px);
+}
+.ins-head h3{font-size:clamp(26px,2.6vw,38px);font-weight:600;letter-spacing:-.025em;line-height:1.15;text-wrap:balance}
+.ins-head p{font-size:16px;color:rgba(255,255,255,.82);max-width:420px}
+.btn-white{
+  display:inline-flex;align-items:center;gap:12px;background:#fff;color:var(--ink);
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+  padding:14px 26px 14px 14px;border-radius:100px;
+  transition:background-color .2s var(--ease-snap),color .2s var(--ease-snap);
+}
+.btn-white .dot{
+  width:26px;height:26px;border-radius:50%;flex:none;
+  background:conic-gradient(var(--indigo),var(--red),var(--yellow),var(--purple),var(--indigo));
+}
+.btn-white:hover{background:var(--ink);color:#fff}
+/* cards: the card IS the image, content overlaid */
+.ins-item{position:relative;border-radius:16px;overflow:hidden;display:block;min-height:240px}
+.ins-feat{aspect-ratio:1/1}
+.ins-side{display:flex;flex-direction:column;gap:26px}
+.ins-side .ins-item{flex:1}
+.ins-link{position:absolute;inset:0;z-index:4}
 /* media scale-in reveal: 1.1 -> 1, 1.2s custom curve, then 0.8s expo hover zoom */
-.ins-image .fill{position:absolute;inset:0;transform:scale(1.1);transition:transform 1.2s var(--ease-img) .1s}
+.ins-item .fill{position:absolute;inset:0;transform:scale(1.1);transition:transform 1.2s var(--ease-img) .1s}
 [data-reveal].in .fill{transform:scale(1)}
 .ins-item:hover .fill{transform:scale(1.1);transition:transform .8s var(--ease)}
-/* ContentfulImageWipe: cream panel slides off to reveal the image */
-.ins-image .wipe{
-  position:absolute;inset:0;background:var(--cream);z-index:2;
+/* ContentfulImageWipe: panel slides off to reveal the image */
+.ins-item .wipe{
+  position:absolute;inset:0;background:#39418F;z-index:3;
   transform:scaleX(1);transform-origin:right;transition:transform 1.2s var(--ease-img) .15s;
 }
 [data-reveal].in .wipe{transform:scaleX(0)}
@@ -257,32 +274,30 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
 .v-ink{background:radial-gradient(circle at 25% 75%,var(--indigo),transparent 55%),radial-gradient(circle at 85% 20%,var(--coral),transparent 45%),var(--ink)}
 .v-purple{background:radial-gradient(circle at 70% 25%,var(--red),transparent 50%),radial-gradient(circle at 20% 80%,var(--indigo),transparent 55%),var(--purple)}
 .v-coral{background:radial-gradient(circle at 25% 20%,var(--yellow),transparent 50%),radial-gradient(circle at 80% 80%,var(--purple),transparent 55%),var(--coral)}
-.ins-image .glyph{
+.ins-item .glyph{
   position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  font-size:56px;color:rgba(240,238,232,.9);font-weight:300;
+  font-size:56px;color:rgba(240,238,232,.85);font-weight:300;
 }
-/* tag pill overlaid top-left of the image */
+/* tag pill, frosted, top right, with red dot */
 .ins-tag{
-  position:absolute;top:14px;left:14px;z-index:2;
+  position:absolute;top:14px;right:14px;z-index:2;
+  display:inline-flex;align-items:center;gap:8px;
   font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
-  background:var(--cream);color:var(--ink);padding:7px 14px;border-radius:100px;
-  transition:background-color .2s var(--ease-snap),color .2s var(--ease-snap);
+  background:rgba(240,238,232,.8);backdrop-filter:blur(8px);color:var(--ink);
+  padding:7px 14px;border-radius:100px;
 }
-.ins-item:hover .ins-tag{background:var(--red);color:#fff}
-/* hover overlay */
-.ins-image::after{
-  content:'';position:absolute;inset:0;background:rgba(26,30,34,.25);opacity:0;z-index:1;
-  transition:opacity .2s var(--ease-snap);
+.ins-tag::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--red)}
+/* frosted content bar over the bottom of the image */
+.ins-panel{
+  position:absolute;left:0;bottom:0;right:12%;z-index:2;
+  background:rgba(26,30,34,.42);backdrop-filter:blur(12px);
+  border-radius:0 14px 0 0;padding:16px 22px 18px;
+  display:flex;flex-direction:column;gap:8px;
+  transition:background-color .2s var(--ease-snap);
 }
-.ins-item:hover .ins-image::after{opacity:1}
-.ins-content{padding:18px 4px 0;display:flex;flex-direction:column;gap:10px}
-.ins-date{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
-.ins-content h4{
-  font-size:19px;font-weight:600;line-height:1.32;letter-spacing:-.015em;
-  transition:color .15s var(--ease-snap);
-}
-.ins-item:hover h4{color:var(--red)}
-.card:hover .card-cta .arr{transform:translateX(6px)}
+.ins-item:hover .ins-panel{background:rgba(26,30,34,.62)}
+.ins-date{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(240,238,232,.75)}
+.ins-panel h4{font-size:clamp(16px,1.35vw,20px);font-weight:600;line-height:1.32;letter-spacing:-.015em;color:#fff}
 
 /* ---------- Stats ---------- */
 .stats{background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
@@ -448,7 +463,10 @@ body.cursor-on .cursor{opacity:1}
 @media(max-width:1024px){
   .nav{display:none}
   .burger{display:flex}
-  .ins-grid{grid-template-columns:280px repeat(3,300px);min-width:0;width:max-content}
+  .ins-grid{grid-template-columns:1fr}
+  .ins-feat{aspect-ratio:4/3}
+  .ins-side .ins-item{aspect-ratio:4/3}
+  .ins-panel{right:0;border-radius:0}
   .stats-layout{grid-template-columns:1fr}
   .stats-intro p{max-width:520px}
   .stats-grid{grid-template-columns:1fr 1fr}
@@ -552,52 +570,46 @@ body.cursor-on .cursor{opacity:1}
   </button>
 </section>
 
-<!-- News & Insights strip -->
+<!-- News & Insights -->
 <section class="section insights" id="insights">
   <div class="wrap">
-    <div class="ins-scroller">
-      <div class="ins-grid">
-        <div class="ins-head" data-reveal>
-          <h3>News &amp; Insights</h3>
-          <p>In-depth analysis from our teams on the front line of enterprise AI.</p>
-          <a class="btn btn-dark" href="#insights">View all insights <span class="arr">&rarr;</span></a>
+    <div class="ins-grid">
+      <div class="ins-head" data-reveal>
+        <h3>In-depth analysis from the teams on the ground</h3>
+        <p>For more than two decades we have invested through every major wave of enterprise technology. Our teams write about what they see first.</p>
+        <a class="btn-white" href="#insights"><span class="dot"></span>News &amp; Insights</a>
+      </div>
+      <article class="ins-item ins-feat" data-reveal>
+        <a class="ins-link" href="#insights" aria-label="The second wave of enterprise AI"></a>
+        <div class="fill v-indigo"></div>
+        <div class="glyph">01</div>
+        <div class="wipe"></div>
+        <span class="ins-tag">Insight</span>
+        <div class="ins-panel">
+          <p class="ins-date">22nd June 2026</p>
+          <h4>The second wave of enterprise AI: five signals we are watching this year</h4>
         </div>
-        <article class="ins-item" data-reveal>
-          <a class="ins-link" href="#insights" aria-label="The second wave of enterprise AI"></a>
-          <div class="ins-image">
-            <div class="fill v-indigo"></div>
-            <div class="glyph">01</div>
-            <div class="wipe"></div>
-            <span class="ins-tag">Insight</span>
-          </div>
-          <div class="ins-content">
-            <p class="ins-date">22 June 2026</p>
-            <h4>The second wave of enterprise AI: five signals we are watching this year</h4>
-          </div>
-        </article>
+      </article>
+      <div class="ins-side">
         <article class="ins-item" data-reveal>
           <a class="ins-link" href="#insights" aria-label="What shipping forty agentic products taught us"></a>
-          <div class="ins-image">
-            <div class="fill v-red"></div>
-            <div class="glyph">02</div>
-            <div class="wipe"></div>
-            <span class="ins-tag">Report</span>
-          </div>
-          <div class="ins-content">
-            <p class="ins-date">15 June 2026</p>
+          <div class="fill v-red"></div>
+          <div class="glyph">02</div>
+          <div class="wipe"></div>
+          <span class="ins-tag">Insight</span>
+          <div class="ins-panel">
+            <p class="ins-date">15th June 2026</p>
             <h4>What shipping forty agentic products taught our engineering teams</h4>
           </div>
         </article>
         <article class="ins-item" data-reveal>
           <a class="ins-link" href="#insights" aria-label="A new lens on pricing"></a>
-          <div class="ins-image">
-            <div class="fill v-ink"></div>
-            <div class="glyph">03</div>
-            <div class="wipe"></div>
-            <span class="ins-tag">Perspective</span>
-          </div>
-          <div class="ins-content">
-            <p class="ins-date">10 June 2026</p>
+          <div class="fill v-ink"></div>
+          <div class="glyph">03</div>
+          <div class="wipe"></div>
+          <span class="ins-tag">Insight</span>
+          <div class="ins-panel">
+            <p class="ins-date">10th June 2026</p>
             <h4>A new lens on pricing: how software gets valued in an AI-first market</h4>
           </div>
         </article>
