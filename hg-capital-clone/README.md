@@ -8,11 +8,16 @@ Open `index.html` in any browser. No build step, no dependencies.
 
 ## What is inside
 
-- Loader screen with progress bar, then staggered hero line reveal
+The page mirrors the reference homepage section by section:
+
+- Loader screen, then staggered hero line reveal
 - Fixed header that switches from light-on-dark to dark-on-light on scroll, hides on scroll down, returns on scroll up
-- Full-viewport hero with animated gradient blobs, grid overlay, and mouse parallax
-- Marquee ticker strip
-- Large intro statement, News and Insights card grid, dark stats section with count-up numbers, three alternating content modules, culture band, and full footer with demo subscribe form
+- Full-viewport hero with animated gradient background, mouse parallax, small brand line, and a frosted subscribe pill bottom right
+- News and Insights strip: header cell inline with three cards, image wipe reveals, tag pills over the images
+- Dark stats section: intro column left, three count-up stat items right
+- Four full-bleed video-style sections with numbered kickers and small play cards
+- Footer with newsletter banner, dot-matrix decorations, link columns, scroll-to-top, and copyright row
+- Custom cursor dot that eases after the mouse and grows over interactive elements
 - Scroll reveals driven by IntersectionObserver
 
 ## Motion system
