@@ -1,4 +1,4 @@
-# HG Capital demo site
+# Baumann Capital demo site
 
 A single-file static website that recreates the design language of a modern private equity firm homepage (reference: hgcapital.com). All copy, statistics, article titles, and brand names are original placeholder demo content. Fonts are free substitutes (Hanken Grotesk and IBM Plex Mono via Google Fonts, with system fallbacks).
 

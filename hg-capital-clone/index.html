@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Navigate what's next | HG Capital (Demo)</title>
-<meta name="description" content="Demo website. HG Capital is a fictional private equity brand used for design demonstration. All content is placeholder.">
+<title>Building generational wealth through fieldwork | Baumann Capital (Demo)</title>
+<meta name="description" content="Demo website for Baumann Capital, a research-intensive, value-oriented equity fund in Munich. Placeholder content for design demonstration.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -146,11 +146,11 @@ body.nav-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg
   content:'';position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(26,30,34,.35) 0%,rgba(26,30,34,.15) 45%,rgba(26,30,34,.88) 100%);
 }
-.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;will-change:transform}
-.blob-1{width:55vw;height:55vw;background:var(--indigo);top:-15%;right:-10%;animation:drift1 16s ease-in-out infinite alternate}
-.blob-2{width:42vw;height:42vw;background:var(--red);bottom:-5%;left:-12%;animation:drift2 19s ease-in-out infinite alternate;opacity:.4}
-.blob-3{width:30vw;height:30vw;background:var(--purple);top:30%;left:35%;animation:drift3 14s ease-in-out infinite alternate;opacity:.35}
-.blob-4{width:20vw;height:20vw;background:var(--coral);top:12%;left:12%;animation:drift2 22s ease-in-out infinite alternate-reverse;opacity:.3}
+.blob{position:absolute;border-radius:50%;will-change:transform}
+.blob-1{width:60vw;height:60vw;opacity:.7;background:radial-gradient(circle closest-side,var(--indigo),transparent 72%);top:-15%;right:-10%;animation:drift1 16s ease-in-out infinite alternate}
+.blob-2{width:48vw;height:48vw;background:radial-gradient(circle closest-side,var(--red),transparent 72%);bottom:-5%;left:-12%;animation:drift2 19s ease-in-out infinite alternate;opacity:.4}
+.blob-3{width:36vw;height:36vw;background:radial-gradient(circle closest-side,var(--purple),transparent 72%);top:30%;left:35%;animation:drift3 14s ease-in-out infinite alternate;opacity:.35}
+.blob-4{width:26vw;height:26vw;background:radial-gradient(circle closest-side,var(--coral),transparent 72%);top:12%;left:12%;animation:drift2 22s ease-in-out infinite alternate-reverse;opacity:.3}
 @keyframes drift1{to{transform:translate(-14vw,12vh) scale(1.15)}}
 @keyframes drift2{to{transform:translate(10vw,-10vh) scale(1.2)}}
 @keyframes drift3{to{transform:translate(-8vw,-14vh) scale(.85)}}
@@ -341,11 +341,13 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
 .vsec-bg .bg-video{
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
 }
-.vsec-bg .fill{position:absolute;inset:0;animation:bgdrift 22s ease-in-out infinite alternate}
-@keyframes bgdrift{from{transform:scale(1)}to{transform:scale(1.1)}}
+.vsec-bg .fill{position:absolute;inset:0}
 .vsec-bg::after{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(100deg,rgba(26,30,34,.82) 0%,rgba(26,30,34,.55) 48%,rgba(26,30,34,.25) 100%);
+  background:linear-gradient(100deg,rgba(26,30,34,.55) 0%,rgba(26,30,34,.22) 45%,rgba(26,30,34,0) 75%);
+}
+.copy-right .vsec-bg::after{
+  background:linear-gradient(280deg,rgba(26,30,34,.55) 0%,rgba(26,30,34,.22) 45%,rgba(26,30,34,0) 75%);
 }
 .vsec-inner{
   position:relative;z-index:1;display:flex;flex-direction:column;justify-content:space-between;
@@ -387,6 +389,12 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
   font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
   color:rgba(240,238,232,.85);
 }
+/* feature variant (04): copy left, large video right, vertically centered */
+.vsec-feature .vsec-inner{
+  display:grid;grid-template-columns:1fr 1.45fr;align-items:center;gap:clamp(40px,6vw,90px);
+}
+.vsec-feature .vsec-video{width:100%;align-self:center;border-radius:10px}
+.vsec-feature .vsec-play i{width:80px;height:80px}
 /* layout variants: odd sections keep everything left, even sections move to the right */
 .video-left .vsec-video{align-self:flex-start}
 .copy-right .vsec-copy{align-self:flex-end}
@@ -509,7 +517,7 @@ body.cursor-on .cursor{opacity:1}
 
 <!-- Loader -->
 <div class="loader" id="loader">
-  <div class="loader-mark"><span>HG Capital</span></div>
+  <div class="loader-mark"><span>Baumann Capital</span></div>
   <div class="loader-bar"><i></i></div>
   <div class="loader-label">Loading...</div>
 </div>
@@ -517,32 +525,32 @@ body.cursor-on .cursor{opacity:1}
 <!-- Header -->
 <header class="header" id="header">
   <div class="header-inner">
-    <a class="logo" href="#top">HG<em>Demo</em></a>
+    <a class="logo" href="#top">Baumann<em>Capital</em></a>
     <nav class="nav">
       <div class="nav-dd">
-        <a href="#stats">Approach
+        <a href="#stats">About
           <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
         </a>
         <div class="dd-panel">
-          <a href="#stats">Driving AI transformation</a>
-          <a href="#stats">Responsible investing</a>
-          <a href="#stats">How we create value</a>
+          <a href="#stats">Our approach</a>
+          <a href="#stats">Responsible ownership</a>
+          <a href="#stats">How we invest</a>
         </div>
       </div>
-      <a href="#insights">Insights</a>
-      <a href="#stats">Portfolio</a>
-      <a href="#stats">Team</a>
+      <a href="#insights">Letters</a>
+      <a href="#modules">Research</a>
+      <a href="#stats">Factsheet</a>
       <div class="nav-dd">
-        <a href="#culture">Life at HG
+        <a href="#culture">Life at Baumann
           <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
         </a>
         <div class="dd-panel">
           <a href="#culture">Our culture</a>
-          <a href="#culture">Diversity and inclusion</a>
-          <a href="#culture">Open roles</a>
+          <a href="#culture">How we work</a>
+          <a href="#culture">Careers</a>
         </div>
       </div>
-      <a href="#footer">Investors</a>
+      <a href="#footer">Contact</a>
     </nav>
     <div class="header-right">
       <button class="search-btn" aria-label="Search">
@@ -555,12 +563,12 @@ body.cursor-on .cursor{opacity:1}
 
 <!-- Mobile nav -->
 <nav class="mnav" id="mnav">
-  <a href="#stats">Approach</a>
-  <a href="#insights">Insights</a>
-  <a href="#stats">Portfolio</a>
-  <a href="#stats">Team</a>
-  <a href="#culture">Life at HG</a>
-  <a href="#footer">Investors</a>
+  <a href="#stats">About</a>
+  <a href="#insights">Letters</a>
+  <a href="#modules">Research</a>
+  <a href="#stats">Factsheet</a>
+  <a href="#culture">Life at Baumann</a>
+  <a href="#footer">Contact</a>
 </nav>
 
 <!-- Hero -->
@@ -574,14 +582,14 @@ body.cursor-on .cursor{opacity:1}
   </div>
   <div class="hero-content">
     <h1>
-      <span class="hline"><span>Private equity for</span></span>
-      <span class="hline"><span>the intelligence era.</span></span>
-      <span class="hline"><span class="accent">We back software that rewires work.</span></span>
+      <span class="hline"><span>Building generational</span></span>
+      <span class="hline"><span>wealth through fieldwork.</span></span>
+      <span class="hline"><span class="accent">A value fund with an owner's mentality.</span></span>
     </h1>
-    <p class="hero-brand">HG Capital. Navigate what's next</p>
+    <p class="hero-brand">Baumann Capital. Munich</p>
   </div>
   <button class="signup-pill" onclick="document.getElementById('footer').scrollIntoView({behavior:'smooth'})">
-    <span class="pill-label">Subscribe to the HG monthly update</span>
+    <span class="pill-label">Subscribe to our investor letters</span>
     <span class="pill-btn">&rarr;</span>
   </button>
 </section>
@@ -591,42 +599,42 @@ body.cursor-on .cursor{opacity:1}
   <div class="wrap">
     <div class="ins-grid">
       <div class="ins-head" data-reveal>
-        <h3>In-depth analysis from the teams on the ground</h3>
-        <p>For more than two decades we have invested through every major wave of enterprise technology. Our teams write about what they see first.</p>
-        <a class="btn-white" href="#insights"><span class="dot"></span>News &amp; Insights</a>
+        <h3>Primary research, straight from the field</h3>
+        <p>We spend our time with the companies themselves, and with their competitors, suppliers and customers. Our letters share what the fieldwork turns up.</p>
+        <a class="btn-white" href="#insights"><span class="dot"></span>Letters &amp; Research</a>
       </div>
       <article class="ins-item ins-feat" data-reveal>
-        <a class="ins-link" href="#insights" aria-label="The second wave of enterprise AI"></a>
+        <a class="ins-link" href="#insights" aria-label="Mid-year investor letter"></a>
         <div class="fill v-indigo"></div>
         <div class="glyph">01</div>
         <div class="wipe"></div>
-        <span class="ins-tag">Insight</span>
+        <span class="ins-tag">Letter</span>
         <div class="ins-panel">
-          <p class="ins-date">22nd June 2026</p>
-          <h4>The second wave of enterprise AI: five signals we are watching this year</h4>
+          <p class="ins-date">30th June 2026</p>
+          <h4>Mid-year letter: what full-cycle discipline looks like in practice</h4>
         </div>
       </article>
       <div class="ins-side">
         <article class="ins-item" data-reveal>
-          <a class="ins-link" href="#insights" aria-label="What shipping forty agentic products taught us"></a>
+          <a class="ins-link" href="#insights" aria-label="Field notes from three plant visits"></a>
           <div class="fill v-red"></div>
           <div class="glyph">02</div>
           <div class="wipe"></div>
-          <span class="ins-tag">Insight</span>
+          <span class="ins-tag">Field notes</span>
           <div class="ins-panel">
-            <p class="ins-date">15th June 2026</p>
-            <h4>What shipping forty agentic products taught our engineering teams</h4>
+            <p class="ins-date">12th June 2026</p>
+            <h4>Field notes: three plant visits that changed our view of a holding</h4>
           </div>
         </article>
         <article class="ins-item" data-reveal>
-          <a class="ins-link" href="#insights" aria-label="A new lens on pricing"></a>
+          <a class="ins-link" href="#insights" aria-label="Why owner-operators outperform"></a>
           <div class="fill v-ink"></div>
           <div class="glyph">03</div>
           <div class="wipe"></div>
-          <span class="ins-tag">Insight</span>
+          <span class="ins-tag">Research</span>
           <div class="ins-panel">
-            <p class="ins-date">10th June 2026</p>
-            <h4>A new lens on pricing: how software gets valued in an AI-first market</h4>
+            <p class="ins-date">2nd June 2026</p>
+            <h4>Why owner-operators outperform: notes from two decades of cycles</h4>
           </div>
         </article>
       </div>
@@ -639,25 +647,25 @@ body.cursor-on .cursor{opacity:1}
   <div class="wrap">
     <div class="stats-layout">
       <div class="stats-intro" data-reveal>
-        <h3>AI impact at scale</h3>
-        <p>A snapshot of AI-driven value creation across a demo portfolio of 70+ software companies.</p>
-        <a class="btn btn-ghost" href="#modules">How we create value <span class="arr">&rarr;</span></a>
+        <h3>Fieldwork at scale</h3>
+        <p>A snapshot of the primary research behind the portfolio. Demo figures for illustration.</p>
+        <a class="btn btn-ghost" href="#modules">How we invest <span class="arr">&rarr;</span></a>
       </div>
       <div class="stats-grid">
         <div class="stat" data-reveal data-stat>
-          <div class="stat-label">GenAI deployment</div>
-          <div class="stat-num"><span class="count" data-count="1400">0</span><span class="unit">+</span></div>
-          <p>projects live across the portfolio, with every company deploying GenAI in product or operations</p>
+          <div class="stat-label">Primary interviews</div>
+          <div class="stat-num"><span class="count" data-count="250">0</span><span class="unit">+</span></div>
+          <p>conversations a year with management teams, competitors, suppliers and customers</p>
         </div>
         <div class="stat" data-reveal data-stat>
-          <div class="stat-label">AI EBITDA impact</div>
-          <div class="stat-num"><span class="pre">$</span><span class="count" data-count="250">0</span><span class="unit">m</span></div>
-          <p>of budgeted earnings impact attributed to AI initiatives this year</p>
+          <div class="stat-label">Countries visited</div>
+          <div class="stat-num"><span class="count" data-count="15">0</span><span class="unit">+</span></div>
+          <p>plants, trade fairs and head offices seen first-hand every year</p>
         </div>
         <div class="stat" data-reveal data-stat>
-          <div class="stat-label">Agentic product</div>
-          <div class="stat-num"><span class="count" data-count="90">0</span><span class="unit">+</span></div>
-          <p>agentic products and features launched by portfolio teams</p>
+          <div class="stat-label">Average holding</div>
+          <div class="stat-num"><span class="count" data-count="5">0</span><span class="unit">yr+</span></div>
+          <p>an ownership mentality measured in years and cycles, not quarters</p>
         </div>
       </div>
     </div>
@@ -666,69 +674,69 @@ body.cursor-on .cursor{opacity:1}
 
 <!-- Video sections -->
 <section class="vsec vsec-light video-left" id="modules">
-  <div class="vsec-bg"><div class="fill v-pastel"></div><video class="bg-video" src="assets/bg-01.mp4" autoplay muted loop playsinline preload="auto"></video></div>
+  <div class="vsec-bg"><div class="fill v-pastel"></div><video class="bg-video" src="assets/bg-01.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
   <div class="vsec-inner">
     <div class="vsec-copy" data-reveal>
-      <div class="vsec-kicker">01 / AI transformation</div>
-      <h2>A value creation team with startup intensity</h2>
-      <p>Our in-house team of 100+ AI specialists embeds directly inside portfolio companies. Through Forge Lab, our internal incubator, we design, build and ship agentic products in weeks rather than quarters.</p>
-      <a class="btn-white" href="#modules"><span class="dot"></span>Forge Lab</a>
+      <div class="vsec-kicker">01 / Primary research</div>
+      <h2>Research that starts where the spreadsheets end</h2>
+      <p>We build conviction in the field: plant tours, trade fairs, and hundreds of conversations with the people who run, supply and compete with the businesses we study.</p>
+      <a class="btn-white" href="#modules"><span class="dot"></span>Our process</a>
     </div>
     <a class="vsec-video" href="#modules" data-reveal>
       <div class="fill v-red"></div>
       <span class="vsec-play"><i></i></span>
-      <span class="vsec-caption">Watch: inside Forge Lab, 02:14</span>
+      <span class="vsec-caption">Watch: a research trip, 02:14</span>
     </a>
   </div>
 </section>
 
 <section class="vsec copy-right">
-  <div class="vsec-bg"><div class="fill v-red"></div><video class="bg-video" src="assets/bg-02.mp4" autoplay muted loop playsinline preload="auto"></video></div>
+  <div class="vsec-bg"><div class="fill v-red"></div><video class="bg-video" src="assets/bg-02.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
   <div class="vsec-inner">
     <div class="vsec-copy" data-reveal>
-      <div class="vsec-kicker">02 / Community intelligence</div>
-      <h2>One of the largest software ecosystems deploying AI</h2>
-      <p>Seventy-plus companies, one network. We connect thousands of senior operators through The Grid, our private collaboration platform, and more than a hundred events every year, so hard-won lessons travel fast.</p>
-      <a class="btn btn-ghost" href="#modules">The Grid Summit <span class="arr">&rarr;</span></a>
+      <div class="vsec-kicker">02 / Value orientation</div>
+      <h2>Quality businesses, bought below their worth</h2>
+      <p>We look for durable economics and honest stewards, and we buy when the price leaves a margin of safety. The aim is simple: returns above global equity markets over full cycles.</p>
+      <a class="btn btn-ghost" href="#modules">Our approach <span class="arr">&rarr;</span></a>
     </div>
     <a class="vsec-video" href="#modules" data-reveal>
       <div class="fill v-ink"></div>
       <span class="vsec-play"><i></i></span>
-      <span class="vsec-caption">Watch: The Grid Summit, 01:47</span>
+      <span class="vsec-caption">Watch: how we value a business, 01:47</span>
     </a>
   </div>
 </section>
 
 <section class="vsec video-left">
-  <div class="vsec-bg"><div class="fill v-ink"></div><video class="bg-video" src="assets/bg-03.mp4" autoplay muted loop playsinline preload="auto"></video></div>
+  <div class="vsec-bg"><div class="fill v-ink"></div><video class="bg-video" src="assets/bg-03.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
   <div class="vsec-inner">
     <div class="vsec-copy" data-reveal>
-      <div class="vsec-kicker">03 / A focus on enterprise</div>
-      <h2>Mission-critical systems, complex workflows</h2>
-      <p>We concentrate on businesses that run essential infrastructure for their customers: proprietary data, regulated processes, and workflows that companies cannot afford to get wrong. That is where durable value lives.</p>
-      <a class="btn btn-ghost" href="#modules">Our portfolio <span class="arr">&rarr;</span></a>
+      <div class="vsec-kicker">03 / Ownership mentality</div>
+      <h2>We act like owners, because we are</h2>
+      <p>A concentrated portfolio, held for years. We think in cash flows rather than headlines, decades rather than quarters, and stewardship rather than speculation.</p>
+      <a class="btn btn-ghost" href="#modules">Portfolio principles <span class="arr">&rarr;</span></a>
     </div>
     <a class="vsec-video" href="#modules" data-reveal>
       <div class="fill v-indigo"></div>
       <span class="vsec-play"><i></i></span>
-      <span class="vsec-caption">Watch: enterprise in depth, 03:05</span>
+      <span class="vsec-caption">Watch: owner thinking, 03:05</span>
     </a>
   </div>
 </section>
 
-<section class="vsec copy-right" id="culture">
-  <div class="vsec-bg"><div class="fill v-purple"></div><video class="bg-video" src="assets/bg-04.mp4" autoplay muted loop playsinline preload="auto"></video></div>
+<section class="vsec vsec-feature" id="culture">
+  <div class="vsec-bg"><div class="fill v-purple"></div><video class="bg-video" src="assets/bg-04.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
   <div class="vsec-inner">
     <div class="vsec-copy" data-reveal>
-      <div class="vsec-kicker">04 / Life at HG</div>
-      <h2>The humility to listen. The conviction to invest.</h2>
-      <p>Our culture is the edge: listen first, back bold ideas early, and bring the skills and resources that turn conviction into results.</p>
-      <a class="btn btn-ghost" href="#footer">See for yourself <span class="arr">&rarr;</span></a>
+      <div class="vsec-kicker">04 / Life at Baumann</div>
+      <h2>Life at Baumann</h2>
+      <p>Our culture sets us apart: the patience to do the fieldwork, the discipline to wait for the right price, and the conviction to act when it arrives.</p>
+      <a class="btn-white" href="#footer"><span class="dot"></span>See for yourself</a>
     </div>
     <a class="vsec-video" href="#footer" data-reveal>
-      <div class="fill v-coral"></div>
+      <div class="fill v-indigo"></div>
       <span class="vsec-play"><i></i></span>
-      <span class="vsec-caption">Watch: a week at HG, 02:38</span>
+      <span class="vsec-caption">Watch: inside Baumann Capital, 02:38</span>
     </a>
   </div>
 </section>
@@ -739,12 +747,12 @@ body.cursor-on .cursor{opacity:1}
   <div class="dots dots-b" aria-hidden="true"></div>
   <div class="wrap">
     <a class="news-banner" href="#footer" onclick="event.preventDefault();this.querySelector('h2').textContent='Subscribed. Check your inbox.'">
-      <h2>Subscribe to HG's monthly updates</h2>
+      <h2>Subscribe to Baumann Capital's investor letters</h2>
       <span class="pill-btn">&rarr;</span>
     </a>
     <div class="foot-grid">
       <div class="foot-brand" data-reveal>
-        <div class="foot-logo">HG Capital</div>
+        <div class="foot-logo">Baumann Capital</div>
         <a class="foot-contact" href="#footer">Contact us</a>
         <div class="socials">
           <a href="#footer" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.9 1.2h3.7l-8.1 9.3L24 22.8h-7.5l-5.9-7.7-6.7 7.7H.2l8.7-9.9L0 1.2h7.7l5.3 7 5.9-7z"/></svg></a>
@@ -754,17 +762,17 @@ body.cursor-on .cursor{opacity:1}
       </div>
       <div class="foot-col" data-reveal>
         <h4>Information</h4>
-        <a href="#stats">Approach</a>
-        <a href="#insights">Insights</a>
-        <a href="#modules">Portfolio</a>
-        <a href="#culture">Life at HG</a>
-        <a href="#footer">Investors</a>
+        <a href="#stats">About</a>
+        <a href="#insights">Letters</a>
+        <a href="#modules">Research</a>
+        <a href="#stats">Factsheet</a>
+        <a href="#footer">Contact</a>
       </div>
       <div class="foot-col" data-reveal>
         <h4>Legal</h4>
         <a href="#footer">Privacy notice</a>
-        <a href="#footer">Cookie notice</a>
-        <a href="#footer">Governance</a>
+        <a href="#footer">Imprint</a>
+        <a href="#footer">MiFID II disclosure</a>
         <a href="#footer">Accessibility</a>
         <button class="linklike" type="button">Cookie settings</button>
       </div>
@@ -773,9 +781,9 @@ body.cursor-on .cursor{opacity:1}
       <button class="foot-up" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
         <svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M7 15V1M1 7l6-6 6 6" stroke="currentColor" stroke-width="1.8"/></svg>
       </button>
-      <div class="foot-legal">&copy; Copyright 2026 HG Capital &middot; Demo</div>
+      <div class="foot-legal">&copy; Copyright 2026 Baumann Capital GmbH &middot; Demo</div>
     </div>
-    <p class="demo-note">This is a design demonstration. HG Capital is a fictional brand and all content on this page is placeholder.</p>
+    <p class="demo-note">Design demonstration for Baumann Capital. Placeholder content, not investment advice. Intended for professional investors within the meaning of MiFID II.</p>
   </div>
 </footer>
 
@@ -851,6 +859,14 @@ function runCount(stat) {
   };
   requestAnimationFrame(tick);
 }
+
+// Only decode and play background videos while they are on screen
+const bgVids = document.querySelectorAll('.bg-video');
+const vio = new IntersectionObserver(entries => entries.forEach(e => {
+  const v = e.target;
+  if (e.isIntersecting) { v.play().catch(() => {}); } else { v.pause(); }
+}), {rootMargin: '120px'});
+bgVids.forEach(v => vio.observe(v));
 
 // Custom cursor: eased follow, grows over interactive elements
 const cursor = document.getElementById('cursor');
