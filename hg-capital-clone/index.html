@@ -384,6 +384,18 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
   font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
   color:rgba(240,238,232,.85);
 }
+/* layout variants: odd sections keep everything left, even sections move to the right */
+.video-left .vsec-video{align-self:flex-start}
+.copy-right .vsec-copy{align-self:flex-end}
+/* light pastel variant for the AI transformation section */
+.vsec-light{color:var(--ink)}
+.v-pastel{background:radial-gradient(circle at 78% 12%,#F3E9F1,transparent 55%),radial-gradient(circle at 12% 85%,#C9D4F4,transparent 60%),linear-gradient(118deg,#DCD8F4 0%,#C7D1F1 55%,#CFC6EE 100%)}
+.vsec-light .vsec-bg::after{background:linear-gradient(100deg,rgba(255,255,255,.35) 0%,rgba(255,255,255,0) 60%)}
+.vsec-light .vsec-kicker{color:var(--indigo)}
+.vsec-light .vsec-copy h2{color:var(--indigo)}
+.vsec-light .vsec-copy p{color:rgba(26,30,34,.75)}
+.vsec-light .btn-white{box-shadow:0 12px 34px -14px rgba(26,30,34,.35)}
+.vsec-light .vsec-video{border-color:rgba(26,30,34,.15);box-shadow:0 24px 60px -24px rgba(26,30,34,.35)}
 
 /* ---------- Footer (NewsletterForm banner + FooterMain with dots) ---------- */
 .footer{background:var(--ink);color:var(--cream);padding:clamp(64px,8vw,110px) var(--pad) 40px;position:relative;overflow:hidden}
@@ -480,6 +492,7 @@ body.cursor-on .cursor{opacity:1}
   .stat:nth-child(even){padding-left:0;border-left:0}
   .vsec{min-height:0}
   .vsec-video{align-self:flex-start}
+  .copy-right .vsec-copy{align-self:flex-start}
   .foot-top{grid-template-columns:1fr}
   .scroll-cue{display:none}
 }
@@ -649,14 +662,14 @@ body.cursor-on .cursor{opacity:1}
 </section>
 
 <!-- Video sections -->
-<section class="vsec" id="modules">
-  <div class="vsec-bg"><div class="fill v-indigo"></div></div>
+<section class="vsec vsec-light video-left" id="modules">
+  <div class="vsec-bg"><div class="fill v-pastel"></div></div>
   <div class="vsec-inner">
     <div class="vsec-copy" data-reveal>
       <div class="vsec-kicker">01 / AI transformation</div>
       <h2>A value creation team with startup intensity</h2>
       <p>Our in-house team of 100+ AI specialists embeds directly inside portfolio companies. Through Forge Lab, our internal incubator, we design, build and ship agentic products in weeks rather than quarters.</p>
-      <a class="btn btn-ghost" href="#modules">Forge Lab <span class="arr">&rarr;</span></a>
+      <a class="btn-white" href="#modules"><span class="dot"></span>Forge Lab</a>
     </div>
     <a class="vsec-video" href="#modules" data-reveal>
       <div class="fill v-red"></div>
@@ -666,7 +679,7 @@ body.cursor-on .cursor{opacity:1}
   </div>
 </section>
 
-<section class="vsec">
+<section class="vsec copy-right">
   <div class="vsec-bg"><div class="fill v-red"></div></div>
   <div class="vsec-inner">
     <div class="vsec-copy" data-reveal>
@@ -683,7 +696,7 @@ body.cursor-on .cursor{opacity:1}
   </div>
 </section>
 
-<section class="vsec">
+<section class="vsec video-left">
   <div class="vsec-bg"><div class="fill v-ink"></div></div>
   <div class="vsec-inner">
     <div class="vsec-copy" data-reveal>
@@ -700,7 +713,7 @@ body.cursor-on .cursor{opacity:1}
   </div>
 </section>
 
-<section class="vsec" id="culture">
+<section class="vsec copy-right" id="culture">
   <div class="vsec-bg"><div class="fill v-purple"></div></div>
   <div class="vsec-inner">
     <div class="vsec-copy" data-reveal>
