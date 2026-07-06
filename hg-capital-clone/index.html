@@ -560,6 +560,7 @@ body.cursor-on .cursor{opacity:1}
 <section class="hero" id="top">
   <div class="hero-bg">
     <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <video class="bg-video" id="heroVideo" src="assets/hero-bg.mp4" autoplay muted loop playsinline preload="metadata"></video>
     <div class="hero-grid"></div>
   </div>
   <div class="hero-content">
@@ -877,7 +878,10 @@ if (cv) {
     {c: '127,178,255', r: 0.38, x: 0.55, y: 0.52, ax: 0.10, ay: 0.15, s: 0.00040, a: 0.30},
     {c: '58,191,248',  r: 0.30, x: 0.14, y: 0.22, ax: 0.08, ay: 0.10, s: 0.00048, a: 0.28}
   ];
-  new IntersectionObserver(es => { run = es[0].isIntersecting; }).observe(cv);
+  new IntersectionObserver(es => { run = es[0].isIntersecting && !videoUp; }).observe(cv);
+  let videoUp = false;
+  const hv = document.getElementById('heroVideo');
+  if (hv) hv.addEventListener('playing', () => { videoUp = true; run = false; cv.style.display = 'none'; });
   (function draw(t) {
     requestAnimationFrame(draw);
     if (!run) return;
