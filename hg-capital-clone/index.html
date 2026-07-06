@@ -160,15 +160,11 @@ body.nav-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg
   background-size:80px 80px;
   mask-image:radial-gradient(ellipse at 70% 30%,#000 0%,transparent 70%);
 }
-.hero-content{position:relative;z-index:2;max-width:1200px}
-.hero-kicker{
-  font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--blue-grey);margin-bottom:26px;display:flex;align-items:center;gap:14px;
-}
-.hero-kicker::before{content:'';width:44px;height:1px;background:var(--red)}
+.hero-content{position:relative;z-index:2;max-width:1250px}
+/* HomeHeroContent: big statement, then small brand line beneath */
 .hero h1{
-  font-size:clamp(38px,6.4vw,86px);font-weight:600;line-height:1.04;letter-spacing:-.035em;
-  margin-bottom:34px;
+  font-size:clamp(36px,5.8vw,80px);font-weight:600;line-height:1.05;letter-spacing:-.035em;
+  margin-bottom:30px;
 }
 .hero h1 .accent{color:var(--blue-grey)}
 .hline{display:block;overflow:hidden}
@@ -176,13 +172,32 @@ body.nav-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg
 body.loaded .hline span{transform:translateY(0)}
 .hline:nth-child(2) span{transition-delay:.12s}
 .hline:nth-child(3) span{transition-delay:.24s}
-.hero-foot{
-  display:flex;align-items:flex-end;justify-content:space-between;gap:36px;flex-wrap:wrap;
-  opacity:0;transform:translateY(2rem);transition:opacity 1.5s var(--ease) .55s,transform 1.5s var(--ease) .55s;
+.hero-brand{
+  font-family:var(--mono);font-size:13px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--blue-grey);display:flex;align-items:center;gap:14px;
+  opacity:0;transform:translateY(2rem);transition:opacity 1.5s var(--ease) .5s,transform 1.5s var(--ease) .5s;
 }
-body.loaded .hero-foot{opacity:1;transform:none}
-.hero-tag{font-size:clamp(17px,1.6vw,21px);color:rgba(240,238,232,.75);max-width:420px}
-.hero-tag strong{color:var(--cream);font-weight:600}
+.hero-brand::before{content:'';width:44px;height:1px;background:var(--red)}
+body.loaded .hero-brand{opacity:1;transform:none}
+/* HomeHeroSignUpCta: frosted pill with round arrow button, bottom right */
+.signup-pill{
+  position:absolute;right:var(--pad);bottom:clamp(28px,5vh,56px);z-index:3;
+  display:flex;align-items:center;gap:20px;
+  background:rgba(240,238,232,.1);backdrop-filter:blur(14px);
+  border:1px solid rgba(240,238,232,.25);border-radius:100px;
+  padding:10px 10px 10px 28px;color:var(--cream);
+  transition:background-color .2s var(--ease-snap),border-color .2s var(--ease-snap);
+  opacity:0;transform:translateY(2rem);
+}
+body.loaded .signup-pill{opacity:1;transform:none;transition:opacity 1.5s var(--ease) .8s,transform 1.5s var(--ease) .8s,background-color .2s var(--ease-snap)}
+.signup-pill:hover{background:rgba(240,238,232,.2);border-color:rgba(240,238,232,.45)}
+.signup-pill .pill-label{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.pill-btn{
+  width:54px;height:54px;border-radius:50%;background:var(--red);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:18px;
+  transition:transform .2s var(--ease-snap),background-color .2s var(--ease-snap);
+}
+.signup-pill:hover .pill-btn{transform:translateX(4px);background:var(--cream);color:var(--ink)}
 .btn{
   display:inline-flex;align-items:center;gap:12px;
   font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
@@ -198,28 +213,6 @@ body.loaded .hero-foot{opacity:1;transform:none}
 .btn-ghost:hover{background:var(--cream);color:var(--ink);border-color:var(--cream)}
 .btn-dark{background:var(--ink);color:var(--cream)}
 .btn-dark:hover{background:var(--red);color:#fff}
-.scroll-cue{
-  position:absolute;right:var(--pad);bottom:clamp(40px,6vh,72px);z-index:2;
-  font-family:var(--mono);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:rgba(240,238,232,.5);
-  writing-mode:vertical-rl;display:flex;align-items:center;gap:12px;
-}
-.scroll-cue::after{content:'';width:1px;height:56px;background:linear-gradient(var(--red),transparent);animation:cue 2s ease-in-out infinite}
-@keyframes cue{0%,100%{opacity:.3}50%{opacity:1}}
-
-/* ---------- Ticker ---------- */
-.ticker{
-  background:var(--red);color:#fff;overflow:hidden;padding:16px 0;
-  border-top:1px solid rgba(255,255,255,.15);
-}
-.ticker-track{display:flex;gap:0;width:max-content;animation:ticker 34s linear infinite}
-.ticker:hover .ticker-track{animation-play-state:paused}
-.ticker-item{
-  font-family:var(--mono);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;
-  padding:0 28px;display:flex;align-items:center;gap:28px;white-space:nowrap;
-}
-.ticker-item::after{content:'✳';font-size:14px;opacity:.7}
-@keyframes ticker{to{transform:translateX(-50%)}}
-
 /* ---------- Shared section bits ---------- */
 .section{padding:clamp(80px,11vw,150px) var(--pad)}
 .wrap{max-width:1360px;margin:0 auto}
@@ -234,14 +227,6 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
 /* reveal: opacity + translateY(2rem), 1.5s easeOutExpo, same as reference */
 [data-reveal]{opacity:0;transform:translateY(2rem);transition:opacity 1.5s var(--ease),transform 1.5s var(--ease)}
 [data-reveal].in{opacity:1;transform:none}
-
-/* ---------- Intro statement ---------- */
-.intro p.big{
-  font-size:clamp(24px,3.1vw,44px);font-weight:500;line-height:1.28;letter-spacing:-.02em;
-  max-width:1150px;
-}
-.intro p.big .dim{color:rgba(26,30,34,.38)}
-.intro-link{margin-top:44px}
 
 /* ---------- News ---------- */
 .news{border-top:1px solid var(--line)}
@@ -443,18 +428,18 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
     <a class="logo" href="#top">HG<em>Demo</em></a>
     <nav class="nav">
       <div class="nav-dd">
-        <a href="#approach">Approach
+        <a href="#stats">Approach
           <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
         </a>
         <div class="dd-panel">
-          <a href="#approach">Driving AI transformation</a>
-          <a href="#approach">Responsible investing</a>
+          <a href="#stats">Driving AI transformation</a>
+          <a href="#stats">Responsible investing</a>
           <a href="#stats">How we create value</a>
         </div>
       </div>
       <a href="#insights">Insights</a>
-      <a href="#approach">Portfolio</a>
-      <a href="#approach">Team</a>
+      <a href="#stats">Portfolio</a>
+      <a href="#stats">Team</a>
       <div class="nav-dd">
         <a href="#culture">Life at HG
           <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
@@ -478,10 +463,10 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
 
 <!-- Mobile nav -->
 <nav class="mnav" id="mnav">
-  <a href="#approach">Approach</a>
+  <a href="#stats">Approach</a>
   <a href="#insights">Insights</a>
-  <a href="#approach">Portfolio</a>
-  <a href="#approach">Team</a>
+  <a href="#stats">Portfolio</a>
+  <a href="#stats">Team</a>
   <a href="#culture">Life at HG</a>
   <a href="#footer">Investors</a>
 </nav>
@@ -496,42 +481,17 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
     <div class="hero-grid"></div>
   </div>
   <div class="hero-content">
-    <div class="hero-kicker">Private equity, demo edition</div>
     <h1>
       <span class="hline"><span>Private equity for</span></span>
       <span class="hline"><span>the intelligence era.</span></span>
       <span class="hline"><span class="accent">We back software that rewires work.</span></span>
     </h1>
-    <div class="hero-foot">
-      <p class="hero-tag"><strong>HG Capital.</strong> Navigate what's next. A demo brand for a fictional technology investor, built for design demonstration.</p>
-      <a class="btn btn-red" href="#footer">Subscribe to the monthly update <span class="arr">&rarr;</span></a>
-    </div>
+    <p class="hero-brand">HG Capital. Navigate what's next</p>
   </div>
-  <div class="scroll-cue">Scroll</div>
-</section>
-
-<!-- Ticker -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track" id="tickerTrack">
-    <div class="ticker-item">70+ portfolio companies</div>
-    <div class="ticker-item">Enterprise software</div>
-    <div class="ticker-item">AI transformation</div>
-    <div class="ticker-item">Workflow automation</div>
-    <div class="ticker-item">B2B SaaS</div>
-    <div class="ticker-item">Vertical market leaders</div>
-    <div class="ticker-item">Long-term partnership</div>
-  </div>
-</div>
-
-<!-- Intro statement -->
-<section class="section intro" id="approach">
-  <div class="wrap">
-    <div class="kicker" data-reveal>Who we are</div>
-    <p class="big" data-reveal>For more than two decades we have invested through every major wave of enterprise technology. <span class="dim">Today we partner with software companies that automate the world's most complex work, and we help them move faster than the market.</span></p>
-    <div class="intro-link" data-reveal>
-      <a class="btn btn-dark" href="#stats">How we create value <span class="arr">&rarr;</span></a>
-    </div>
-  </div>
+  <button class="signup-pill" onclick="document.getElementById('footer').scrollIntoView({behavior:'smooth'})">
+    <span class="pill-label">Subscribe to the HG monthly update</span>
+    <span class="pill-btn">&rarr;</span>
+  </button>
 </section>
 
 <!-- News & Insights -->
@@ -686,7 +646,7 @@ h2{font-size:clamp(30px,4vw,54px);font-weight:600;line-height:1.1;letter-spacing
       <div class="foot-cols" data-reveal>
         <div class="foot-col">
           <h4>Information</h4>
-          <a href="#approach">Approach</a>
+          <a href="#stats">Approach</a>
           <a href="#insights">Insights</a>
           <a href="#modules">Portfolio</a>
           <a href="#culture">Life at HG</a>
@@ -757,10 +717,6 @@ mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   document.body.classList.remove('nav-open');
   mnav.classList.remove('open');
 }));
-
-// Duplicate ticker content for seamless loop
-const track = document.getElementById('tickerTrack');
-track.innerHTML += track.innerHTML;
 
 // Scroll reveals with stagger per section
 const io = new IntersectionObserver(entries => {
