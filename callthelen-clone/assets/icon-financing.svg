@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61" height="61" viewBox="0 0 61 61">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_50" data-name="Ellipse 50" cx="30.5" cy="30.5" r="30.5" transform="translate(-18503 -9057)" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_125" data-name="Mask Group 125" transform="translate(18503 9057)" clip-path="url(#clip-path)">
+    <path id="Vector_5_" data-name="Vector (5)" d="M1.9,0H38.186a1.9,1.9,0,0,1,1.9,1.9V6.016H0V1.9A1.9,1.9,0,0,1,1.9,0ZM32.937,19.129a1,1,0,1,1,0-2H35.2a1,1,0,0,1,0,2Zm-5.691,0a1,1,0,1,1,0-2h2.264a1,1,0,1,1,0,2Zm-5.691,0a1,1,0,1,1,0-2h2.264a1,1,0,0,1,0,2Zm-5.691,0a1,1,0,1,1,0-2h2.264a1,1,0,1,1,0,2Zm-10.068-3.2H9.808a.913.913,0,0,1,.912.912V19.41a.913.913,0,0,1-.912.912H5.795a.913.913,0,0,1-.912-.912V16.844A.913.913,0,0,1,5.795,15.932ZM40.084,8.02H0V26.427a1.9,1.9,0,0,0,1.9,1.9H38.186a1.9,1.9,0,0,0,1.9-1.9Z" transform="translate(-18492.541 -9040.662)" fill="#fff" fill-rule="evenodd"/>
+  </g>
+</svg>
