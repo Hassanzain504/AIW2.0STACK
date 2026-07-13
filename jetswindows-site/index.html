@@ -83,20 +83,58 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-content">
-      <p class="script hero-script">Richmond's Home Exterior Experts</p>
-      <h1>Crystal-Clear Windows.<br />Spotless Exteriors.</h1>
-      <p class="hero-sub">Founder-owned, Richmond homegrown window cleaning and pressure washing.
-        Professional techs, honest quotes, and results backed by our satisfaction guarantee.</p>
-      <div class="hero-actions">
-        <a href="#quote" class="btn btn-teal btn-lg">Get A Free Quote</a>
-        <a href="tel:8044187338" class="btn btn-ghost btn-lg">Call (804) 418-7338</a>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>#1 Window Cleaning &amp; Pressure Washing in Richmond, VA</h1>
+        <p class="hero-sub">Founder-owned and Richmond homegrown. Professional techs, honest
+          quotes, and results backed by our satisfaction guarantee.</p>
+        <ul class="hero-chips">
+          <li>
+            <span class="chip-ico"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            Licensed &amp; Insured
+          </li>
+          <li>
+            <span class="chip-ico"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2.7 5.5 6 .9-4.3 4.2 1 6-5.4-2.8L6.6 19.6l1-6L3.3 9.4l6-.9L12 3z"/></svg></span>
+            5.0 Google Rating
+          </li>
+          <li>
+            <span class="chip-ico"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></span>
+            1,000+ Jobs Completed
+          </li>
+          <li>
+            <span class="chip-ico"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span>
+            Satisfaction Guaranteed
+          </li>
+        </ul>
       </div>
-      <ul class="hero-trust">
-        <li><strong>5.0</strong> Google rating (50+ reviews)</li>
-        <li><strong>1,000+</strong> jobs completed</li>
-        <li><strong>Licensed</strong> &amp; insured</li>
-      </ul>
+
+      <div class="hero-visual">
+        <img src="assets/owners-truck.webp" alt="Henry Bearden and Zach Pasternak, founders of Jet's, with their trucks" />
+        <span class="hero-visual-tag">Henry &amp; Zach &middot; Founders</span>
+      </div>
+    </div>
+
+    <!-- Horizontal quote bar -->
+    <div class="container">
+      <form class="quote-bar" novalidate>
+        <div class="quote-bar-title">
+          <h2>Get Your <span class="script">free</span> Quote</h2>
+        </div>
+        <label><span>Full Name</span><input type="text" name="name" placeholder="Your name" /></label>
+        <label><span>Phone</span><input type="tel" name="phone" placeholder="(804) 555-0123" /></label>
+        <label><span>Service</span>
+          <select name="service">
+            <option>Window Cleaning</option>
+            <option>Pressure Washing</option>
+            <option>House Soft Washing</option>
+            <option>Gutter Cleaning</option>
+            <option>Aggregate Sealing</option>
+            <option>Not Sure</option>
+          </select>
+        </label>
+        <label><span>City</span><input type="text" name="city" placeholder="Short Pump" /></label>
+        <button type="submit" class="btn btn-teal">Submit</button>
+      </form>
     </div>
   </section>
 
