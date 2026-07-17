@@ -1,0 +1,1788 @@
+<title>Wolf Contractor Content Desk - Window Cleaning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --paper:#EEF2F4; --card:#FFFFFF; --card-2:#F7FAFB;
+    --ink:#0E1620; --ink-2:#4A5964; --ink-3:#7C8A93;
+    --line:#D8E1E6; --line-2:#E7EDF0;
+    --accent:#0E88A6; --accent-ink:#FFFFFF; --accent-soft:#E1F0F4;
+    --amber:#C77E22;
+    --hassan:#0E88A6; --muneeb:#3E7C59; --company:#C77E22;
+    --focus:#0E88A6;
+    --shadow:0 1px 2px rgba(14,22,32,.05),0 6px 20px rgba(14,22,32,.05);
+    --mono:ui-monospace,"SF Mono","Cascadia Code","Roboto Mono",Menlo,Consolas,monospace;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#0B1219; --card:#121D26; --card-2:#0F1922;
+      --ink:#E7EDF1; --ink-2:#9DABB4; --ink-3:#6D7C85;
+      --line:#22323C; --line-2:#1A2831;
+      --accent:#39B4CE; --accent-ink:#04222A; --accent-soft:#12333D;
+      --amber:#E0A244;
+      --hassan:#39B4CE; --muneeb:#5FB587; --company:#E0A244;
+      --focus:#39B4CE;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 26px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="light"]{
+    --paper:#EEF2F4; --card:#FFFFFF; --card-2:#F7FAFB;
+    --ink:#0E1620; --ink-2:#4A5964; --ink-3:#7C8A93;
+    --line:#D8E1E6; --line-2:#E7EDF0;
+    --accent:#0E88A6; --accent-ink:#FFFFFF; --accent-soft:#E1F0F4;
+    --amber:#C77E22; --hassan:#0E88A6; --muneeb:#3E7C59; --company:#C77E22;
+    --focus:#0E88A6; --shadow:0 1px 2px rgba(14,22,32,.05),0 6px 20px rgba(14,22,32,.05);
+  }
+  :root[data-theme="dark"]{
+    --paper:#0B1219; --card:#121D26; --card-2:#0F1922;
+    --ink:#E7EDF1; --ink-2:#9DABB4; --ink-3:#6D7C85;
+    --line:#22323C; --line-2:#1A2831;
+    --accent:#39B4CE; --accent-ink:#04222A; --accent-soft:#12333D;
+    --amber:#E0A244; --hassan:#39B4CE; --muneeb:#5FB587; --company:#E0A244;
+    --focus:#39B4CE; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 26px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);font-size:16px;line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 20px}
+
+  /* Top bar */
+  .top{border-bottom:1px solid var(--line);background:
+    linear-gradient(180deg,var(--card),var(--card-2));}
+  .top-inner{max-width:920px;margin:0 auto;padding:22px 20px 20px;
+    display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:12px}
+  .mark{width:38px;height:38px;flex:0 0 38px;border-radius:9px;
+    background:var(--ink);display:grid;place-items:center;position:relative;overflow:hidden}
+  .mark svg{width:24px;height:24px}
+  .brand h1{font-size:1.06rem;letter-spacing:.16em;margin:0;font-weight:800;text-transform:uppercase}
+  .brand p{margin:2px 0 0;font-family:var(--mono);font-size:.72rem;color:var(--ink-2);letter-spacing:.02em}
+  .dl{display:flex;gap:10px;flex-wrap:wrap}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  .btn{font-family:var(--mono);font-size:.74rem;letter-spacing:.03em;
+    border:1px solid var(--line);background:var(--card);color:var(--ink);
+    padding:9px 13px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;
+    transition:border-color .15s,background .15s,transform .05s}
+  .btn:hover{border-color:var(--accent)}
+  .btn:active{transform:translateY(1px)}
+  .btn .ic{width:14px;height:14px;display:inline-block;color:var(--accent)}
+  .btn-solid{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .btn-solid .ic{color:var(--accent-ink)}
+  .btn-solid:hover{filter:brightness(1.05)}
+
+  /* Controls */
+  .controls{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .controls-inner{max-width:920px;margin:0 auto;padding:12px 20px;
+    display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--card)}
+  .seg button{font-family:var(--mono);font-size:.76rem;letter-spacing:.04em;padding:8px 15px;color:var(--ink-2);
+    text-transform:uppercase;transition:color .15s,background .15s}
+  .seg button[aria-selected="true"]{background:var(--accent);color:var(--accent-ink)}
+  .chips{display:flex;gap:7px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;padding:6px 11px;border-radius:20px;
+    border:1px solid var(--line);color:var(--ink-2);background:var(--card);transition:all .15s}
+  .chip[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+  .search{flex:1;min-width:150px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);
+    background:var(--card);border-radius:9px;padding:0 11px}
+  .search input{border:none;outline:none;background:none;color:var(--ink);font-family:var(--sans);
+    font-size:.86rem;padding:9px 0;width:100%}
+  .search .ic{width:15px;height:15px;color:var(--ink-3);flex:0 0 15px}
+  .count{font-family:var(--mono);font-size:.72rem;color:var(--ink-3);white-space:nowrap}
+
+  /* Weeks + tickets */
+  main{padding:26px 0 80px}
+  .week{margin:0 0 30px}
+  .week-head{display:flex;align-items:baseline;gap:14px;margin:0 0 4px;padding:0 2px}
+  .week-head h2{font-size:1.02rem;font-weight:800;letter-spacing:.04em;margin:0;text-transform:uppercase}
+  .week-head .rng{font-family:var(--mono);font-size:.74rem;color:var(--ink-2)}
+  .week-line{height:2px;background:
+    repeating-linear-gradient(90deg,var(--line) 0 14px,transparent 14px 22px);margin:8px 2px 16px;border-radius:2px}
+  .rest{font-family:var(--mono);font-size:.73rem;color:var(--ink-3);padding:2px 2px 0;letter-spacing:.02em}
+
+  .ticket{background:var(--card);border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow);
+    margin:0 0 15px;overflow:hidden}
+  .ticket-head{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:13px 16px;
+    border-bottom:1px solid var(--line-2);background:var(--card-2)}
+  .meta{font-family:var(--mono);font-size:.72rem;color:var(--ink-2);letter-spacing:.02em;white-space:nowrap}
+  .meta.dot::after{content:"";display:inline-block;width:3px;height:3px;border-radius:50%;
+    background:var(--ink-3);margin-left:9px;vertical-align:middle}
+  .who{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;
+    padding:3px 9px;border-radius:6px;border:1px solid;font-weight:600}
+  .who.Hassan{color:var(--hassan);border-color:color-mix(in srgb,var(--hassan) 45%,transparent)}
+  .who.Muneeb{color:var(--muneeb);border-color:color-mix(in srgb,var(--muneeb) 45%,transparent)}
+  .who.Company{color:var(--company);border-color:color-mix(in srgb,var(--company) 45%,transparent)}
+  .type{font-size:.8rem;color:var(--ink-2)}
+  .series{font-family:var(--mono);font-size:.66rem;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--amber);border:1px solid color-mix(in srgb,var(--amber) 45%,transparent);
+    padding:3px 8px;border-radius:6px}
+  .head-spacer{flex:1}
+  .copy-btn{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;border:1px solid var(--line);
+    background:var(--card);color:var(--ink);padding:6px 12px;border-radius:7px;display:inline-flex;
+    align-items:center;gap:7px;transition:all .15s}
+  .copy-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .copy-btn .ic{width:13px;height:13px}
+  .copy-btn.ok{border-color:var(--muneeb);color:var(--muneeb);background:color-mix(in srgb,var(--muneeb) 12%,var(--card))}
+
+  .body{padding:16px 18px 6px}
+  .body .post{white-space:pre-wrap;font-size:.95rem;line-height:1.62;color:var(--ink);
+    max-width:64ch}
+  .hook{font-size:.72rem;font-family:var(--mono);color:var(--ink-3);letter-spacing:.02em;
+    margin:0 0 12px;padding-left:11px;border-left:2px solid var(--line)}
+  .tags{font-family:var(--mono);font-size:.74rem;color:var(--accent);padding:12px 18px 16px;
+    display:flex;flex-wrap:wrap;gap:6px 10px}
+  .tags span{white-space:nowrap}
+
+  /* threads */
+  .thread{display:flex;flex-direction:column;gap:0;padding:8px 18px 12px}
+  .tw{display:flex;gap:13px;padding:12px 0;border-bottom:1px solid var(--line-2)}
+  .tw:last-child{border-bottom:none}
+  .tw .n{flex:0 0 26px;height:26px;border-radius:7px;background:var(--accent-soft);color:var(--accent);
+    font-family:var(--mono);font-size:.74rem;font-weight:700;display:grid;place-items:center;margin-top:1px}
+  .tw .txt{white-space:pre-wrap;font-size:.93rem;line-height:1.55;max-width:60ch}
+
+  .empty{text-align:center;color:var(--ink-3);font-family:var(--mono);font-size:.82rem;padding:60px 0}
+  footer{border-top:1px solid var(--line);padding:22px 0 40px}
+  footer .wrap{font-family:var(--mono);font-size:.72rem;color:var(--ink-3);line-height:1.7}
+  a{color:var(--accent)}
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+    background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:.78rem;padding:10px 18px;
+    border-radius:9px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  :focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:6px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  @media (max-width:560px){
+    .brand h1{font-size:.92rem} .body .post,.tw .txt{max-width:none}
+    .top-inner{align-items:flex-start}
+  }
+</style>
+
+<div class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#39B4CE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 5h16v11H4z"/><path d="M12 5v11M4 10.5h16"/><path d="M6.5 19l2-3M17.5 19l-2-3"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Wolf Contractor</h1>
+        <p>Content Desk / window cleaning USA / 17 Jul&ndash;17 Aug</p>
+      </div>
+    </div>
+    <div class="dl">
+      <button class="btn btn-solid" id="dlLi"><span class="ic" aria-hidden="true">&#8595;</span>LinkedIn .md</button>
+      <button class="btn" id="dlX"><span class="ic" aria-hidden="true">&#8595;</span>X / Twitter .md</button>
+    </div>
+  </div>
+</div>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="seg" role="tablist" aria-label="Platform">
+      <button role="tab" aria-selected="true" data-plat="linkedin">LinkedIn</button>
+      <button role="tab" aria-selected="false" data-plat="x">X / Twitter</button>
+    </div>
+    <div class="chips" id="whoChips" aria-label="Filter by author">
+      <button class="chip" data-who="all" aria-pressed="true">All</button>
+      <button class="chip" data-who="Hassan" aria-pressed="false">Hassan</button>
+      <button class="chip" data-who="Muneeb" aria-pressed="false">Muneeb</button>
+      <button class="chip" data-who="Company" aria-pressed="false">Company</button>
+    </div>
+    <label class="search">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></span>
+      <input id="search" type="search" placeholder="Search posts, hooks, topics..." aria-label="Search posts">
+    </label>
+    <span class="count" id="count"></span>
+  </div>
+</div>
+
+<main><div class="wrap" id="feed"></div></main>
+
+<footer><div class="wrap">
+  Copy pulls the ready-to-post text (LinkedIn posts include hashtags; X threads copy as blank-line-separated tweets your scheduler will split).<br>
+  Do the first-hour engagement manually after each post. That is where the leads come from. Full playbook and scheduling notes are in the downloaded files.
+</div></footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">Copied</div>
+
+<script>
+const W = {
+  li1:{label:"Week 1 (partial)",rng:"Fri 17 - Sun 19 Jul",rest:"Sun 19 Jul: rest, both founders."},
+  li2:{label:"Week 2",rng:"Mon 20 - Sun 26 Jul",rest:"Sun 26 Jul: rest."},
+  li3:{label:"Week 3",rng:"Mon 27 Jul - Sun 2 Aug",rest:"Sat 1 & Sun 2 Aug: rest, both founders."},
+  li4:{label:"Week 4",rng:"Mon 3 - Sun 9 Aug",rest:"Sun 9 Aug: rest."},
+  li5:{label:"Week 5",rng:"Mon 10 - Sun 16 Aug",rest:"Sun 16 Aug: rest."},
+  li6:{label:"Week 6 (close)",rng:"Mon 17 Aug",rest:""},
+  x1:{label:"Week 1 (partial)",rng:"Fri 17 - Sun 19 Jul",rest:""},
+  x2:{label:"Week 2",rng:"Mon 20 - Sun 26 Jul",rest:""},
+  x3:{label:"Week 3",rng:"Mon 27 Jul - Sun 2 Aug",rest:""},
+  x4:{label:"Week 4",rng:"Mon 3 - Sun 9 Aug",rest:""},
+  x5:{label:"Week 5",rng:"Mon 10 - Sun 16 Aug",rest:""},
+  x6:{label:"Week 6 (close)",rng:"Mon 17 Aug",rest:""},
+};
+
+const P = [];
+const add = (o)=>P.push(o);
+
+/* ---------------- LINKEDIN ---------------- */
+add({pl:"linkedin",wk:"li1",date:"Fri 17 Jul",time:"7:30 AM",who:"Hassan",type:"Founder origin",
+tags:"#WindowCleaning #HomeServices #SmallBusinessGrowth #WolfContractor",
+body:`Two years ago we noticed something about window cleaners.
+
+The best ones had the worst marketing.
+
+We watched a guy with 15 years of spotless work get outranked on Google by a company that started six months ago.
+
+We watched an owner lose a recurring storefront route because a competitor showed up first on "window cleaning near me" and he showed up on page 3.
+
+We watched another one cut his prices all winter just to survive, while the shop across town ran the same route year after year and never touched their rate.
+
+These were not bad business owners.
+
+They were great at the work, sold "marketing" by people who have never carried a ladder or squeegeed a storefront at 6 AM.
+
+So we started Wolf Contractor.
+
+Built for the trades. Right now, built for window cleaning.
+
+We speak your language.
+We understand your season.
+We know a full recurring route matters more than a viral post.
+
+We do four things:
+
+→ Websites that book jobs
+→ Local SEO that owns your city on the map
+→ Reviews that build trust before the first call
+→ Follow-up that runs while you are up a ladder
+
+If you clean windows better than anyone in your city but the phone does not show it, that is not a skills problem.
+
+It is a visibility problem.
+
+And visibility problems have solutions.
+
+Let us build yours.`});
+
+add({pl:"linkedin",wk:"li1",date:"Fri 17 Jul",time:"12:30 PM",who:"Company",type:"Authority / industry data",
+tags:"#WindowCleaning #LocalSEO #GoogleBusinessProfile #WolfContractor",
+body:`There are about 44,000 window cleaning companies in the US.
+
+The top four hold less than 5 percent of the market.
+
+Read that again.
+
+There is no dominant national brand in window cleaning. No one owns it. Every city is up for grabs, and the winner is decided by one thing most owners ignore.
+
+Who shows up first when someone searches.
+
+The pattern in every local market:
+
+→ 72 percent of people research on Google before they call
+→ 85 percent of "window cleaning near me" searches show the Map Pack
+→ The top 3 map spots take 42 percent of the clicks
+
+So the top 3 cleaners in a city split most of the demand.
+
+Everyone else fights over the scraps, usually by cutting price.
+
+That is not a marketing problem.
+That is a math problem.
+
+Here is what we install for window cleaning companies:
+
+01. Local SEO that puts you in the top 3 map results
+02. A Google Business Profile built to rank, not just exist
+03. Review automation after every completed job
+04. Booking and follow-up that captures leads while you work
+
+The demand is already there. The only question is who catches it.
+
+Comment "MAP" and we will send the breakdown of how the top 3 in your city are getting there.`});
+
+add({pl:"linkedin",wk:"li1",date:"Sat 18 Jul",time:"10:00 AM",who:"Muneeb",type:"Personal / weekend",
+tags:"#WindowCleaning #SmallBusiness #Trades #WolfContractor",
+body:`Saturday morning, real talk.
+
+Building Wolf Contractor with Hassan has taught me one thing.
+
+The window cleaning industry does not need another marketing agency.
+
+It needs someone who actually understands the work.
+
+Last week I was on a call with a window cleaner. Halfway through he stopped and said:
+
+"Wait. You actually know what a water-fed pole is?"
+
+Yeah. We do.
+
+We know your busy season starts in spring. We know a storefront route is worth more than a hundred one-off jobs. We know the difference between a residential quote and bidding a three-story commercial building.
+
+Most agencies treat window cleaning as a generic "home services" box. They run the same playbook they would run for a dentist.
+
+That is why most trades owners are unhappy with the agency they hired.
+
+We built Wolf to be different. Not because the world needed one more agency. Because window cleaners deserved better than what they were being sold.
+
+If you have been burned before, I get it. A lot of you have.
+
+DM us. The first conversation is not a sales call. It is us learning your business, your routes, and your season.`});
+
+add({pl:"linkedin",wk:"li2",date:"Mon 20 Jul",time:"7:30 AM",who:"Hassan",type:"Bold opinion",
+tags:"#WindowCleaning #SmallBusinessGrowth #LeadGeneration #WolfContractor",
+body:`Unpopular opinion for window cleaning owners:
+
+Word of mouth is quietly capping your growth.
+
+I know.
+
+"My whole business is referrals."
+"My customers love me."
+"I stay busy without any marketing."
+
+Cool.
+
+Now answer this:
+
+What happens the year a couple of your best repeat customers move away?
+What happens when a franchise with a real budget opens across town?
+What happens the first slow winter referrals dry up and you have nothing else feeding the pipeline?
+
+Word of mouth is not a strategy.
+
+It is a hope. And hope does not survive a bad quarter.
+
+The window cleaners who keep growing through slow seasons are not the ones with the best reputation.
+
+They are the ones with more than one way to get found.
+
+→ The map pack
+→ Local SEO for each town they serve
+→ Reviews compounding every week
+→ A site that books at midnight
+→ Follow-up that never drops a lead
+→ Commercial accounts that pay year round
+
+Referrals should be the bonus on top. Not the whole thing.
+
+If you are 90 percent reliant on word of mouth, you are one bad season away from a real problem.
+
+Build the engine before you need it.`});
+
+add({pl:"linkedin",wk:"li2",date:"Tue 21 Jul",time:"7:00 AM",who:"Muneeb",type:"Residential story",
+tags:"#WindowCleaning #WindowCleaningBusiness #LocalSEO #WolfContractor",
+body:`A window cleaner told me last week:
+
+"I am the best in my city. But my phone went quiet."
+
+Meanwhile the shop across town, whose work he says is average, is booked six weeks out.
+
+The difference?
+
+That competitor shows up first when a homeowner searches "window cleaning near me."
+
+The guy I talked to? Page 3. Invisible.
+
+What most window cleaners do not know:
+
+→ 72 percent of homeowners look you up on Google before calling
+→ 85 percent of those searches show the map, not the blue links
+→ The top 3 on that map take almost half the clicks
+
+Your work does not matter if no one can find you.
+
+The best window cleaner in the city is invisible if he is not in the top 3.
+
+We fix this with a system:
+
+- A site that loads under a second on a phone
+- A Google Business Profile built to rank in the map pack
+- Service-area pages for every town on your route
+- Review requests that fire automatically after every job
+
+The cleaner I mentioned? We start Monday.
+
+If your phone went quiet, it is not because your work slipped. It is because your visibility did.
+
+DM me "WINDOWS" and I will show you exactly where you show up in your city right now.`});
+
+add({pl:"linkedin",wk:"li2",date:"Tue 21 Jul",time:"1:00 PM",who:"Company",type:"Series launch",series:"Streak-Free Tuesday",
+tags:"#StreakFreeTuesday #WindowCleaning #ServiceBusiness #WolfContractor",
+body:`Introducing: STREAK-FREE TUESDAY.
+
+Every Tuesday on this page, we break down one real growth lesson from the window cleaning companies we work with.
+
+Streak-free is the standard you get judged on. So that is the standard for this series too.
+
+No theory.
+No fluff.
+No "10 tips to grow your business."
+
+Just one specific thing that is working right now, in residential, commercial, or high-rise window cleaning.
+
+Next Tuesday is the first case study.
+
+Topic: how a residential window cleaner went from chasing one-off jobs to a recurring route that fills itself, in 90 days.
+
+Follow this page so you do not miss it.
+
+Got a growth question you want us to break down in a future Streak-Free Tuesday? Drop it in the comments. We are reading every one.`});
+
+add({pl:"linkedin",wk:"li2",date:"Wed 22 Jul",time:"7:30 AM",who:"Hassan",type:"Series launch + framework",series:"The Clear View",
+tags:"#TheClearView #WindowCleaning #LeadGeneration #WolfContractor",
+body:`Starting today: THE CLEAR VIEW.
+
+Every Wednesday I break down one thing that is working or broken in how window cleaners get customers. Clear glass, clear thinking. Save these.
+
+Episode 1: the fastest fix in your whole business.
+
+Most window cleaners lose the majority of their leads to one thing.
+
+Slow follow-up.
+
+Here is how it dies:
+
+Lead comes in at 10 AM.
+You are up a ladder until 4.
+You call back at 5.
+
+They already booked the cleaner who answered at 10:07.
+
+Not a sales problem. A speed problem.
+
+The 5-step follow-up system we install:
+
+01. Lead fills the form, instant text within 30 seconds
+02. Missed call, auto-text with a booking link
+03. No reply in 1 hour, a second softer text
+04. No reply in 24 hours, an email with a quote reminder
+05. Booking confirmed, automatic reminders so they do not no-show
+
+You touch none of it. It runs while you are on a storefront, on a ladder, or driving.
+
+The first cleaner to respond usually wins the job. It is rarely the best cleaner. It is the fastest one.
+
+If you are losing quotes to whoever called back first, comment "SPEED" and I will map where your follow-up is leaking.`});
+
+add({pl:"linkedin",wk:"li2",date:"Thu 23 Jul",time:"7:00 AM",who:"Muneeb",type:"Series launch + story",series:"Ladder Talk",
+tags:"#LadderTalk #WindowCleaning #CommercialCleaning #WolfContractor",
+body:`Starting today: LADDER TALK.
+
+Every Thursday I share one real story from a conversation with a window cleaning owner, plus the lesson underneath it. Named for where the work actually happens.
+
+Episode 1.
+
+Last week a window cleaner showed me two numbers. His summer month, and his January.
+
+January was down almost a third. Every year. Same drop. He has just accepted it as "the season."
+
+Here is what I told him.
+
+The winter dip is not a weather problem. It is a revenue-mix problem.
+
+His business is almost all one-off residential. When it gets cold and people stop thinking about their windows, the phone goes quiet.
+
+The window cleaners who do not feel winter have one thing he does not: a base of recurring commercial accounts.
+
+The math:
+
+One storefront at 200 dollars a month is 2,400 a year.
+Twenty of those is 48,000 dollars that shows up whether it snows or not.
+
+Restaurants, retail, offices, medical. Their glass has to stay clean 12 months a year. They do not care about the season.
+
+That is the anchor that makes the whole business stable.
+
+So we are building him a commercial page that ranks, a simple outreach system to property managers, and reviews aimed at business owners.
+
+The goal is not more summer. It is a winter that does not scare him.
+
+If your January looks like his, comment "SEASON" and I will send the commercial route breakdown.`});
+
+add({pl:"linkedin",wk:"li2",date:"Fri 24 Jul",time:"5:00 PM",who:"Company",type:"Week recap",
+tags:"#WindowCleaning #TradesBusiness #ClientResults #WolfContractor",
+body:`This week at Wolf Contractor:
+
+→ Onboarded a residential window cleaner stuck on one-off jobs who wants a recurring route
+→ Launched a new site for a cleaner whose old page loaded in 6 seconds. The new one loads under 1
+→ Fixed a Google Business Profile with the wrong service area, quietly costing the owner map-pack visibility in half his towns
+→ Mapped a commercial outreach plan for an owner tired of the winter dip
+
+We do not post these for ego.
+
+We post them because most window cleaning owners do not see what is possible until someone else proves it.
+
+Your business can run like this. Your phone can ring without you knocking a single door. Your winter can stop being the month you dread.
+
+It takes the right system, built for your trade.
+
+Next week we are onboarding two more window cleaning companies.
+
+DM us "ONBOARD" before Sunday if you want to be one of them.`});
+
+add({pl:"linkedin",wk:"li2",date:"Sat 25 Jul",time:"10:00 AM",who:"Muneeb",type:"Personal / weekend",
+tags:"#WindowCleaning #SmallBusiness #Trades #WolfContractor",
+body:`Saturday morning thought.
+
+Most window cleaners I talk to are exhausted.
+
+Not from the work. They love the work. There is something about leaving a pane perfectly clear.
+
+They are exhausted by everything around the work.
+
+→ Chasing quotes that never reply
+→ Knocking doors in the heat to keep the schedule full
+→ Wondering why the shop across town shows up first on Google
+→ Watching the phone go quiet every winter
+→ Doing the books at 9 PM after a full day on the ladders
+
+This is not what they signed up for.
+
+They started a window cleaning business because they are great at the craft. Not to become a marketer, a salesperson, and an SEO expert on top of running crews.
+
+That is exactly why Hassan and I built Wolf Contractor. To take the digital weight off, so a window cleaner can go back to what they are actually great at.
+
+If you are reading this on a Saturday because you are "catching up on the business side," let this be your sign.
+
+You do not have to do all of it yourself. That is literally why we exist.`});
+
+add({pl:"linkedin",wk:"li3",date:"Mon 27 Jul",time:"7:30 AM",who:"Hassan",type:"Tactical / map pack",
+tags:"#WindowCleaning #LocalSEO #GoogleBusinessProfile #WolfContractor",
+body:`When a homeowner searches "window cleaning near me," here is what actually happens.
+
+85 percent of the time, Google shows the Map Pack first. Three businesses. A map. Reviews.
+
+Those top 3 spots take about 42 percent of all the clicks.
+
+Everyone below them splits what is left.
+
+So in your city, three window cleaners are catching most of the demand, and the rest are fighting over scraps by dropping their price.
+
+The question is not "how do I get more leads."
+
+It is "how do I get into those three spots."
+
+Here is what moves you up the map pack:
+
+→ A complete, verified Google Business Profile, not one set up years ago and forgotten
+→ Your exact service categories and every town you cover
+→ A steady flow of new reviews, not a pile from 2022 and nothing since
+→ Photos of real jobs added regularly
+→ A website with a page for each town, backing up the profile
+
+None of this is luck. It is a checklist. Most of your competitors will never work through it.
+
+That is the opening.
+
+Comment "MAP" and I will send you the exact map-pack checklist we run for window cleaning clients.`});
+
+add({pl:"linkedin",wk:"li3",date:"Tue 28 Jul",time:"1:00 PM",who:"Company",type:"Case study",series:"Streak-Free Tuesday",
+tags:"#StreakFreeTuesday #WindowCleaning #CaseStudy #WolfContractor",
+body:`STREAK-FREE TUESDAY, Case Study #1
+
+Client: residential window cleaner, two-person operation
+Starting point: living job to job, no recurring base, dead winters
+Result after 90 days: a recurring route plus a commercial pipeline
+
+What we built:
+
+Weeks 1 to 2:
+→ New website, loads under 1 second, old one was over 6
+→ Google Business Profile rebuilt and verified for the full service area
+→ Service-area pages for each town on the route
+
+Weeks 3 to 4:
+→ Review automation, every completed job triggers a review request by text
+→ A recurring plan offer added to the site, quarterly and monthly
+→ Tap-to-call and instant-quote buttons on every page
+
+Weeks 5 to 8:
+→ Commercial page built and ranking for "commercial window cleaning" in his city
+→ Simple outreach to local property managers and storefronts
+→ Follow-up sequence so no quote gets forgotten
+
+Weeks 9 to 12:
+→ Reviews crossed 100, now outranking older competitors on the map
+→ Top 3 map spots in 4 of his towns
+→ Signed his first 3 recurring commercial storefronts
+
+The result: off the one-off treadmill, onto a base of recurring revenue, with a winter that no longer empties out.
+
+Not magic. A system, built for his trade.
+
+Want this? DM "ROUTE" and tell us your city. Two onboarding spots open this month.`});
+
+add({pl:"linkedin",wk:"li3",date:"Wed 29 Jul",time:"7:30 AM",who:"Hassan",type:"Framework / reviews",series:"The Clear View",
+tags:"#TheClearView #WindowCleaning #OnlineReviews #WolfContractor",
+body:`THE CLEAR VIEW, Episode 2.
+
+Your Google reviews are not a vanity number.
+
+They are one of the biggest reasons you rank in the map pack, or do not.
+
+The data:
+
+→ 57 percent of people always or frequently read reviews before choosing a local business
+→ A profile with 100 plus reviews outranks one with 10, all else equal
+→ Reviews are one of the strongest signals in local ranking
+
+So a window cleaner with 12 reviews loses to one with 140, even if the 12-review guy does better work.
+
+The problem: most owners "ask for reviews" the way they mean to floss. They forget. It never becomes a system.
+
+The system we install:
+
+01. The moment a job is marked complete, an automatic text goes out
+02. That text has a one-tap link straight to your Google review page
+03. It goes within an hour, while the clean glass is still fresh in their mind
+04. Non-responders get one gentle reminder a few days later
+05. Every new review gets a reply, which Google also rewards
+
+Do this for 90 days and your review count does not creep. It climbs.
+
+Review count is the one ranking factor you fully control. You cannot out-spend Google. But you can out-review every competitor in your city, one job at a time.
+
+Comment "REVIEWS" and I will send the exact review-request text we set up for window cleaners.`});
+
+add({pl:"linkedin",wk:"li3",date:"Thu 30 Jul",time:"7:00 AM",who:"Muneeb",type:"Field story / commercial",series:"Ladder Talk",
+tags:"#LadderTalk #CommercialCleaning #WindowCleaning #WolfContractor",
+body:`LADDER TALK, Episode 2.
+
+A commercial window cleaner told me last week he wanted to grow.
+
+So I asked him one question. When did you last actually try to win a new storefront account?
+
+Long pause. "Honestly, a couple years ago."
+
+He has a handful of accounts he landed years back and has been coasting on ever since.
+
+Here is what I found when I looked at his setup:
+
+→ A Google Business Profile built for homeowners, nothing aimed at businesses
+→ No page ranking for "commercial window cleaning [his city]"
+→ No system to reach property managers and store owners
+→ Reviews that all talk about houses, none about storefronts
+
+Then he wonders why the commercial side never grows.
+
+Commercial is the best revenue in this business. Recurring. Year round. Immune to the winter dip. One account can be 2,400 dollars a year, and businesses do not shop around the way homeowners do once you are reliable.
+
+So we are building him a commercial page that speaks to business owners, a steady outreach system to property managers, and proof aimed at the commercial buyer.
+
+He was not out of opportunities. He just had no system to go get them.
+
+DM "COMMERCIAL" if you want to see the storefront outreach system we are using.`});
+
+add({pl:"linkedin",wk:"li3",date:"Fri 31 Jul",time:"8:00 AM",who:"Muneeb",type:"Personal / Friday",
+tags:"#WindowCleaning #Trades #SmallBusiness #WolfContractor",
+body:`Something I say to every window cleaner who reaches out.
+
+The first call is not a sales call.
+
+I am not going to pitch you a package in the first five minutes. I am going to ask questions.
+
+Where do your jobs come from right now? Mostly referrals? Door knocking? A bit of Google?
+What does your winter look like?
+Do you have any commercial, or is it all residential?
+When someone calls, who answers, and how fast?
+
+Because here is the truth. I cannot tell you what you need until I understand how your business actually runs.
+
+Most agencies skip this. They sell the same package to everyone and hope it fits.
+
+That is why so many window cleaners have a bad-agency story.
+
+We do it the other way. Learn first. Recommend second. And if we are not the right fit, we will tell you that too.
+
+If you have been thinking about it, DM me. No pitch. Just a conversation about your business.`});
+
+add({pl:"linkedin",wk:"li3",date:"Fri 31 Jul",time:"12:00 PM",who:"Company",type:"Service spotlight / website",
+tags:"#WindowCleaning #WebDesign #ConversionOptimization #WolfContractor",
+body:`The 6 things we check on every window cleaning website audit:
+
+01. Mobile load speed. Under one second, or you lose half your visitors before the page opens.
+02. Tap-to-call number on every screen. A homeowner on a phone should be one thumb from calling you.
+03. Service-area pages for each town on your route. Google ranks exact matches, not one "areas we serve" list.
+04. Real photos of your work. Before-and-after glass, not stock images of a spray bottle.
+05. Reviews above the fold. The proof has to hit before they scroll.
+06. A clear "book now" or "instant quote" button. Not "contact us." A path to a booking.
+
+Most window cleaning sites fail 4 of these 6.
+
+That is not "needs a refresh." That is leaking jobs every day.
+
+A website is not a brochure. It is your hardest-working salesperson. It works at 11 PM when a homeowner finally decides to deal with the glass they have ignored for a month.
+
+But only if it is built to book, not just to look nice.
+
+Comment "AUDIT" and one of our founders will personally review your site this week and tell you which of the 6 you are failing.`});
+
+add({pl:"linkedin",wk:"li4",date:"Mon 3 Aug",time:"7:30 AM",who:"Hassan",type:"Premium positioning",
+tags:"#WindowCleaning #Pricing #SmallBusinessGrowth #WolfContractor",
+body:`If you are competing to be the cheapest window cleaner in town, you have already lost.
+
+Homeowners do not hire the cheapest cleaner.
+
+They hire the one they trust the most.
+
+And trust gets built before you ever send a quote. Online.
+
+The cleaner charging 350 for a full house while the guy down the road bids 180?
+
+Usually not doing better work. Better positioned.
+
+What premium window cleaning companies do differently:
+
+→ A gallery of real before-and-after glass, not stock photos
+→ A pile of reviews that mention care and reliability, not just "good price"
+→ A quick walkthrough video, filmed on a phone, showing how they protect the home
+→ Content that answers the questions a homeowner is already asking
+
+When a homeowner lands on 120 five-star reviews, a clean site, and real proof of the work, price stops being the first question.
+
+You stop being "a window cleaner" and become "the window cleaner in this city."
+
+We help window cleaning businesses build that presence, so you can raise your rates and stay booked.
+
+Stop competing on price. Start competing on trust. It is the one thing a cheaper competitor cannot copy overnight.`});
+
+add({pl:"linkedin",wk:"li4",date:"Tue 4 Aug",time:"1:00 PM",who:"Company",type:"Case study / commercial",series:"Streak-Free Tuesday",
+tags:"#StreakFreeTuesday #CommercialCleaning #WindowCleaning #WolfContractor",
+body:`STREAK-FREE TUESDAY, Case Study #2
+
+Client: window cleaner, two trucks, mostly residential
+Problem: strong summers, dead winters, no recurring base
+Goal: build a commercial route that pays year round
+
+What we built:
+
+→ A commercial page ranking for "commercial window cleaning" in his city and two neighboring towns
+→ A simple, repeatable outreach system to local property managers, restaurants, and retail
+→ Proof aimed at business buyers: reviews and photos from storefront jobs, not just houses
+→ Follow-up so a "call us next quarter" turned into a signed schedule instead of a lost note
+
+The result over the season:
+
+→ 18 recurring storefront accounts added
+→ At an average around 200 a month, that is roughly 43,000 dollars of recurring annual revenue
+→ A winter that, for the first time, held steady instead of falling off a cliff
+→ Enough stable work to keep both trucks busy through the slow months
+
+The residential work did not go anywhere. It just stopped being the only thing holding the business up.
+
+Commercial is the anchor. Most window cleaners never go after it with a system.
+
+DM "COMMERCIAL" and tell us your city. We will show you where to start.`});
+
+add({pl:"linkedin",wk:"li4",date:"Wed 5 Aug",time:"7:30 AM",who:"Hassan",type:"Framework / route math",series:"The Clear View",
+tags:"#TheClearView #WindowCleaning #RecurringRevenue #WolfContractor",
+body:`THE CLEAR VIEW, Episode 3.
+
+One number changes how you see your window cleaning business.
+
+Recurring revenue.
+
+Here is the math most owners never sit down and do.
+
+A one-off residential clean pays once. You win the job, you do the work, and then you have to go win another job. Forever. You are only as busy as your last week of marketing.
+
+A recurring commercial account pays every single month, on a schedule, without you chasing it.
+
+One 200 dollar storefront is 2,400 a year.
+Ten of them is 24,000.
+Twenty is 48,000 of revenue that shows up whether it rains, snows, or the phone is quiet.
+
+And it compounds. Recurring jobs get faster over time. Less buildup, familiar scope, your crew knows the site. The margin often improves as the account ages.
+
+So here is the shift.
+
+Stop measuring your business by how many one-off jobs you can win this month.
+
+Start measuring it by how much recurring revenue you can stack that does not depend on you winning anything new.
+
+That number is what a bank looks at. It is what lets you hire. It is what makes the business worth something if you ever sell.
+
+Every window cleaner has residential. Almost none of them build the recurring base underneath it.
+
+That base is the difference between a job you own and a business that runs.
+
+Comment "ROUTE" and I will send the route-math worksheet we use to plan a recurring base.`});
+
+add({pl:"linkedin",wk:"li4",date:"Thu 6 Aug",time:"7:00 AM",who:"Muneeb",type:"Field story / add-ons",series:"Ladder Talk",
+tags:"#LadderTalk #WindowCleaning #PressureWashing #WolfContractor",
+body:`LADDER TALK, Episode 3.
+
+A window cleaner told me last week he was "just a window guy."
+
+Then he mentioned, almost in passing, that customers keep asking if he also does gutters. And pressure washing. And the solar panels.
+
+And he keeps saying no.
+
+He is turning away money at the door of a customer who already trusts him.
+
+Here is the math that stopped him.
+
+Landing a brand new customer is the expensive part. The ads, the SEO, the reviews, the follow-up. All of it exists to win that first job.
+
+Once they trust you, selling them a second service costs almost nothing. They already let you into their home. They already like your work.
+
+Gutter cleaning. Pressure washing. Solar panel cleaning. Holiday lights in winter. Screen repair.
+
+Same customer. Same truck. Same trust. More revenue per stop.
+
+And the winter services matter most, because they fill the exact months window cleaning goes quiet.
+
+So we set him up with service pages for each add-on, each one offered automatically after the window job, and review requests that mention the extra services so future customers know to ask.
+
+He was not "just a window guy." He was a home-exterior business that only sold one thing.
+
+If customers keep asking you for services you turn down, comment "ADDON" and I will send the add-on map we built for him.`});
+
+add({pl:"linkedin",wk:"li4",date:"Fri 7 Aug",time:"8:00 AM",who:"Muneeb",type:"Personal / Friday",
+tags:"#WindowCleaning #Entrepreneurship #Trades #WolfContractor",
+body:`A window cleaner asked me yesterday:
+
+"What separates the ones who scale from the ones who stay stuck at just me and a ladder?"
+
+Honest answer, after two years working with trades businesses:
+
+It is not skill. The stuck ones are often the best cleaners.
+It is not the city. I have seen it go both ways in the same market.
+
+It is their relationship with letting go.
+
+The owners stuck as a one-person operation for years almost always share one belief:
+
+Nobody can do it as well as I can.
+
+So they do everything. The cleaning, the quotes, the scheduling, the follow-up, the books, the marketing. All on their own two shoulders.
+
+Then they wonder why they are working 60-hour weeks and the business never grows past them.
+
+The owners who scale to crews and routes figured out one thing.
+
+Their job is to build the system that runs the business. Not to be the system.
+
+That means trusting a cleaner you hired. Trusting software to send the follow-up. Trusting a partner to handle the marketing so you can stay in the field, or step out of it.
+
+Letting go feels expensive at first. It is actually the cheapest thing you will ever do.
+
+Because the alternative is being the bottleneck in your own business. Forever.`});
+
+add({pl:"linkedin",wk:"li4",date:"Fri 7 Aug",time:"5:00 PM",who:"Company",type:"Week recap",
+tags:"#WindowCleaning #TradesBusiness #ClientResults #WolfContractor",
+body:`This week at Wolf Contractor:
+
+→ Signed a residential cleaner who wants his first commercial route
+→ Set up review automation for an owner sitting on 14 reviews. His competitor has 130. Not for long
+→ Built add-on service pages for a "window guy" who was turning down pressure washing money
+→ Launched a commercial page for a two-truck operation heading into a stronger winter
+
+We post these because most window cleaning owners do not see what is possible until someone else proves it.
+
+Your business can run like this. Predictable leads. A route that fills itself. A winter that does not scare you.
+
+We only take on what we can fully serve, so spots each month are limited.
+
+DM "WOLF" if you want to be on the list for next month.`});
+
+add({pl:"linkedin",wk:"li4",date:"Sat 8 Aug",time:"10:30 AM",who:"Hassan",type:"Weekend depth / data",
+tags:"#WindowCleaning #SmallBusiness #Trades #WolfContractor",
+body:`Saturday thought.
+
+I have been in the window cleaning numbers all week.
+
+The US window cleaning industry does about 2.9 billion dollars a year. Roughly 44,000 companies in it. The top four hold less than 5 percent of the market combined.
+
+Sit with that. No giant. No national brand that owns this. Just 44,000 owners, most of them local, most fighting for the same customers the same way.
+
+And here is the part that gets me. In a 2.9 billion dollar industry, the average owner runs on a 2 to 10 percent margin and takes home a modest living.
+
+Why?
+
+Because most of them are doing great work inside a broken lead system.
+
+They compete on price because they cannot see another lever. They dread winter because they have no recurring base. They stay invisible because being found online was never something anyone taught them.
+
+The opportunity is not working more Saturdays. It is claiming more of a market that is already there.
+
+Every "window cleaning near me" search in your city is happening right now, whether you show up or not. Multiply that by every day, every town on your route, every winter you were quiet.
+
+That is a business someone else is building on searches you could have owned.
+
+You do not have a work-harder problem. You have a get-found problem.
+
+The market is enormous, fragmented, and wide open. The only question is whether you are built to capture your share.`});
+
+add({pl:"linkedin",wk:"li5",date:"Mon 10 Aug",time:"7:30 AM",who:"Hassan",type:"Objection handler",
+tags:"#WindowCleaning #SmallBusinessMarketing #DigitalMarketing #WolfContractor",
+body:`"I tried marketing. It did not work."
+
+I hear this from window cleaners constantly.
+
+And every time I dig in, here is what they actually tried:
+
+→ A random agency that built a slow template site and vanished
+→ Google Ads pointed at their homepage, no tracking, no idea what came from where
+→ A social media guy posting stock photos of a spray bottle
+→ An "SEO package" that showed impressions and zero phone calls
+
+That is not marketing. That is money set on fire.
+
+Real growth for a window cleaning business looks like:
+
+→ A site built to turn a search into a booked job
+→ Local SEO that puts you in the top 3 on the map
+→ Review automation that builds trust before the first call
+→ Follow-up that catches every lead the moment it comes in
+→ Tracking that shows exactly which dollar became which job
+
+The problem was never "marketing."
+
+The problem was working with people who have never cleaned a window and treated your business like every other client.
+
+We only work with the trades. Right now, window cleaners.
+
+If you have been burned, I get it. Most owners I talk to have a bad-agency story. The answer is not to give up and knock doors forever. It is to work with someone who actually understands your business.
+
+Comment "BURNED" and I will send the exact questions to ask before you hire anyone next time.`});
+
+add({pl:"linkedin",wk:"li5",date:"Tue 11 Aug",time:"1:00 PM",who:"Company",type:"Case study / reviews",series:"Streak-Free Tuesday",
+tags:"#StreakFreeTuesday #WindowCleaning #OnlineReviews #WolfContractor",
+body:`STREAK-FREE TUESDAY, Case Study #3
+
+Client: residential and light commercial window cleaner
+Starting point: 14 Google reviews, stuck below the map pack
+The competitor across town: 130 reviews, sitting in the top 3
+
+What we built:
+
+→ Review automation, a one-tap request texted within an hour of every completed job
+→ A gentle reminder to non-responders a few days later
+→ A reply written on every single review, positive or not, which Google rewards
+→ Older photos swapped for recent before-and-after shots
+
+What happened over the season:
+
+→ Review count went from 14 to 160
+→ He moved into the top 3 map pack in his main city
+→ "Window cleaning near me" started sending him calls it never had before
+→ Close rate went up too, because new callers arrived already trusting him
+
+Reviews were not a side project. They were the lever.
+
+It is the one ranking factor you fully control. You cannot out-spend Google. You can out-review every competitor in your city, one job at a time.
+
+Comment "REVIEWS" and we will send the review-request setup we used.`});
+
+add({pl:"linkedin",wk:"li5",date:"Wed 12 Aug",time:"7:30 AM",who:"Hassan",type:"Framework / seasonality",series:"The Clear View",
+tags:"#TheClearView #WindowCleaning #RecurringRevenue #WolfContractor",
+body:`THE CLEAR VIEW, Episode 4.
+
+Your winter is not a weather problem.
+
+It is a design problem.
+
+Northern window cleaners can lose up to 30 percent of revenue in winter. Most treat it as a fact of life. It is not. It is the result of a business built on one season and one service.
+
+Here is how you design the dip out.
+
+01. Commercial accounts. Storefronts need clean glass 12 months a year. A base of recurring commercial contracts is revenue that does not care about the temperature. This is the single biggest winter fix.
+
+02. Winter add-on services. Holiday light installation uses the same ladders, the same trucks, the same customers you already have. It fills November and December, the exact months window work goes quiet. Gutter cleaning fills fall.
+
+03. Interior work. Exterior freezes. Interior does not. Storefronts, offices, and homes still want inside glass done in the cold months. Sell it.
+
+04. Book winter in summer. When you are busy and trusted in July, that is when you sign the recurring plan that carries you through January. Not when you are panicking in December.
+
+The window cleaners who do not feel winter did not get lucky with the weather.
+
+They built the business so winter could not hurt them.
+
+Design it out now, while it is still summer and you have the leverage.
+
+Comment "SEASON" and I will send the winter-proofing plan we build with clients.`});
+
+add({pl:"linkedin",wk:"li5",date:"Thu 13 Aug",time:"7:00 AM",who:"Muneeb",type:"Field story / trust",series:"Ladder Talk",
+tags:"#LadderTalk #WindowCleaning #SmallBusiness #WolfContractor",
+body:`LADDER TALK, Episode 4.
+
+One of the window cleaners we work with told me about a job he almost did not get.
+
+The homeowner had two quotes. His, and one that was 90 dollars cheaper.
+
+She picked him. So he asked her why.
+
+Her answer stuck with me.
+
+"Your reviews. There were a hundred of them and every one mentioned that you showed up when you said you would and left the place clean. The other guy had six reviews and no photos. I didn't want to gamble on my house."
+
+That is the whole game right there.
+
+Homeowners are not buying clean windows. They can barely tell the difference in a photo. They are buying certainty. The feeling that this person will show up, do it right, and not leave a mess or a surprise.
+
+That certainty gets built before you ever meet them. In your reviews. Your photos. Your response speed. Your website.
+
+The cheaper guy did not lose on price. He lost on trust, weeks before the quote, without ever knowing it.
+
+So when a window cleaner tells me "people just want the lowest price," I tell them about this homeowner.
+
+They do not want the lowest price. They want to stop worrying. Give them that online, and price stops being the first question.
+
+If you want to see how we build that trust before the first call, comment "TRUST" and I will walk you through it.`});
+
+add({pl:"linkedin",wk:"li5",date:"Fri 14 Aug",time:"8:00 AM",who:"Muneeb",type:"Personal / Friday",
+tags:"#WindowCleaning #Trades #SmallBusiness #WolfContractor",
+body:`Two years into building Wolf Contractor, here is the thing that still gets me.
+
+Window cleaners are some of the hardest-working owners I have ever met. Up before dawn. On ladders in the heat. Home late. Doing the books on the couch.
+
+And so many of them are quietly convinced that the reason the shop across town is busier is that the other guy is just better.
+
+He is usually not better. He is just easier to find and easier to trust online.
+
+That gap is not a talent gap. It is a systems gap. And a systems gap can be closed in a few months.
+
+I like this work because we are not selling a dream. We are handing hard-working people the one piece they were never taught. How to get found by the customers already looking for them.
+
+If you are one of those owners, doing great work and wondering why it does not show in the phone, DM me. Let us look at what is actually going on.
+
+Have a good weekend.`});
+
+add({pl:"linkedin",wk:"li5",date:"Fri 14 Aug",time:"5:00 PM",who:"Company",type:"Week recap",
+tags:"#WindowCleaning #TradesBusiness #ClientResults #WolfContractor",
+body:`Week wrap at Wolf Contractor:
+
+→ Helped a cleaner go from 14 reviews toward the top 3 map pack in his city
+→ Built a winter-proofing plan for a northern operator tired of losing a third of his revenue every January
+→ Launched add-on service pages so a residential cleaner can sell gutters and pressure washing to customers he already has
+→ Started a commercial outreach system for a two-truck operation
+
+The pattern is always the same. The work was never the problem. Being found, being trusted, and being fast were.
+
+Your business can run predictably. A route that fills itself. A winter that holds.
+
+Spots each month are limited. We only take what we can fully serve.
+
+DM "WOLF" to get on next month's list.`});
+
+add({pl:"linkedin",wk:"li5",date:"Sat 15 Aug",time:"10:00 AM",who:"Muneeb",type:"Personal / weekend",
+tags:"#WindowCleaning #SmallBusiness #Trades #WolfContractor",
+body:`If you are reading this on a Saturday morning, phone in hand, half catching up on the business side of your window cleaning company, this is for you.
+
+You do not have to carry all of it.
+
+The marketing. The follow-up. The reviews. The reason the phone is not ringing the way your work deserves. None of that has to sit on you alone on a Saturday.
+
+You started this business to clean windows and be your own boss. Not to become a full-time marketer at night.
+
+The owners who eventually breathe again are the ones who stopped trying to be good at everything and let a system, and a partner, carry the parts that were never their strength.
+
+That is the whole reason Hassan and I built Wolf.
+
+Enjoy your Saturday. The glass will still be there Monday. So will we, if you want to talk.`});
+
+add({pl:"linkedin",wk:"li6",date:"Mon 17 Aug",time:"7:30 AM",who:"Hassan",type:"Month close",
+tags:"#WindowCleaning #SmallBusinessGrowth #LocalSEO #WolfContractor",
+body:`We have posted here every week for a month. If you strip it all down, it is one message.
+
+The window cleaner who gets found wins the city.
+
+Not the best cleaner. Not the cheapest. The one who shows up first, has the most reviews, answers the fastest, and never lets a lead go cold.
+
+Everything we talk about ladders up to that:
+
+→ The map pack, because that is where your customers look first
+→ Reviews, because that is what makes them trust you before the call
+→ Follow-up, because the fastest response usually wins the job
+→ Commercial and recurring revenue, because that is what makes the whole thing stable
+→ A website that books, because it works while you are on a ladder
+
+None of it is luck. All of it is a system. And in an industry of 44,000 companies with no dominant brand, the owner who builds that system first owns the city.
+
+That can be you.
+
+If a month of reading this has you thinking it is time, DM me. First conversation is not a pitch. It is us learning your business.
+
+Here is to the next month.`});
+
+add({pl:"linkedin",wk:"li6",date:"Mon 17 Aug",time:"12:30 PM",who:"Company",type:"Milestone recap",
+tags:"#WindowCleaning #TradesBusiness #ClientResults #WolfContractor",
+body:`One month of Wolf Contractor on LinkedIn. Here is what we have been building for window cleaning companies:
+
+→ Recurring routes to replace the one-off treadmill
+→ Map-pack visibility so customers find you first
+→ Review engines that took clients from a dozen reviews toward the top 3
+→ Commercial pipelines that hold revenue steady through winter
+→ Add-on services that turn a "window guy" into a full home-exterior business
+
+The common thread: the work was never the problem. Being found, being trusted, and being fast were.
+
+If you run a window cleaning business and this month made you think about what yours could look like, this is the moment.
+
+We are opening a small number of onboarding spots for next month. We only take what we can fully serve.
+
+DM "WOLF" with your city, and we will start with a free look at where you show up right now.`});
+
+/* ---------------- X / TWITTER ---------------- */
+/* singles */
+add({pl:"x",wk:"x1",date:"Fri 17 Jul",time:"8:00 AM",who:"Hassan",type:"Kickoff single",
+body:`There are ~44,000 window cleaning companies in the US.
+The top 4 own less than 5% of the market.
+No giant. No brand that owns it.
+Whoever shows up first in a city takes it.
+That is the whole opportunity.
+We build that for window cleaners. Welcome to the account.`});
+add({pl:"x",wk:"x1",date:"Fri 17 Jul",time:"12:30 PM",who:"Company",type:"Data single",
+body:`85% of "window cleaning near me" searches show the map pack.
+The top 3 spots take 42% of the clicks.
+If you are not top 3, you are fighting over scraps.
+The demand is already there. The only question is who catches it.`});
+add({pl:"x",wk:"x1",date:"Fri 17 Jul",time:"5:30 PM",who:"Muneeb",type:"Reply-bait single",
+body:`Window cleaners: honest answer.
+Where do most of your jobs come from right now?
+Referrals? Door knocking? Google? Repeat customers?
+Reply with one word. Curious what this account is actually made of.`});
+add({pl:"x",wk:"x1",date:"Sat 18 Jul",time:"10:00 AM",who:"Muneeb",type:"Personal single",
+body:`The window cleaning industry does not need another marketing agency.
+It needs someone who knows what a water-fed pole is and why your January is slow.
+That is why we built Wolf. For the trades, not for everyone.`});
+add({pl:"x",wk:"x1",date:"Sun 19 Jul",time:"11:00 AM",who:"Hassan",type:"Light single",
+body:`Sunday truth for window cleaners:
+Your competitor is not busier because he is better.
+He is busier because he is easier to find.
+That gap is a systems gap. It closes fast.`});
+
+add({pl:"x",wk:"x2",date:"Mon 20 Jul",time:"7:30 AM",who:"Hassan",type:"Bold single",
+body:`Word of mouth is not a strategy.
+It is a hope.
+And hope does not survive one slow winter or one competitor with a real budget.
+Referrals should be 30% of your pipeline. Not 90%.`});
+add({pl:"x",wk:"x2",date:"Mon 20 Jul",time:"5:00 PM",who:"Muneeb",type:"Tip single",
+body:`The fastest window cleaner to answer usually wins the job.
+Not the best one. The fastest one.
+Lead comes in at 10am, you call back at 5pm, they booked someone at 10:07.
+Fix your response time before anything else.`});
+add({pl:"x",wk:"x2",date:"Tue 21 Jul",time:"7:30 AM",who:"Hassan",type:"Single",
+body:`"I'm the best cleaner in my city."
+Cool. What page are you on when someone Googles you?
+Page 3 with the best work still loses to page 1 with average work.`});
+add({pl:"x",wk:"x2",date:"Tue 21 Jul",time:"12:00 PM",who:"Muneeb",type:"Story single",
+body:`A window cleaner told me his phone "just went quiet."
+Nothing changed about his work.
+His competitor started showing up first on Google. That is all it took.
+Visibility is not optional anymore. It is the whole game.`});
+add({pl:"x",wk:"x2",date:"Wed 22 Jul",time:"5:30 PM",who:"Muneeb",type:"Single",
+body:`Reminder: your Google Business Profile is not a "set it in 2021 and forget it" thing.
+It is your storefront. Half your future customers see it before they see you.`});
+add({pl:"x",wk:"x2",date:"Thu 23 Jul",time:"7:30 AM",who:"Hassan",type:"Single",
+body:`The winter dip is not a weather problem.
+It is a revenue-mix problem.
+All residential = dead January.
+Recurring commercial = a winter that does not move.`});
+add({pl:"x",wk:"x2",date:"Fri 24 Jul",time:"8:00 AM",who:"Hassan",type:"Single",
+body:`One 200 dollar storefront = 2,400 a year.
+Twenty of them = 48,000 that shows up whether it rains, snows, or the phone is quiet.
+Most window cleaners have 3 and stopped there.`});
+add({pl:"x",wk:"x2",date:"Fri 24 Jul",time:"4:00 PM",who:"Company",type:"Recap single",
+body:`This week we onboarded a cleaner stuck on one-off jobs, rebuilt a 6-second website into a sub-1-second one, and fixed a Google profile quietly killing a guy's map visibility.
+The work was never the problem. Being found was.`});
+add({pl:"x",wk:"x2",date:"Sat 25 Jul",time:"10:00 AM",who:"Muneeb",type:"Personal single",
+body:`Most window cleaners are not tired from the work.
+They love the work.
+They are tired from chasing quotes, knocking doors, and wondering why the phone is quiet.
+That part is fixable. That part is us.`});
+add({pl:"x",wk:"x2",date:"Sun 26 Jul",time:"11:00 AM",who:"Hassan",type:"Light single",
+body:`Every "window cleaning near me" search in your city is happening right now.
+Whether you show up or not.
+If you don't, your competitor is meeting your customer instead.`});
+
+add({pl:"x",wk:"x3",date:"Mon 27 Jul",time:"7:30 AM",who:"Hassan",type:"Data single",
+body:`72% of people Google a local business before they call.
+So your Google presence is not "marketing."
+It is the front door. Most window cleaners have a broken one and do not know it.`});
+add({pl:"x",wk:"x3",date:"Mon 27 Jul",time:"5:00 PM",who:"Muneeb",type:"Tip single",
+body:`Ask for the review within the hour, not next week.
+Right after the job, one-tap link by text, while they are still looking at the clean glass.
+Wait a week and you get crickets.`});
+add({pl:"x",wk:"x3",date:"Tue 28 Jul",time:"8:00 AM",who:"Hassan",type:"Single",
+body:`Reviews are the one ranking factor you fully control.
+You cannot out-spend Google.
+You can out-review every competitor in your city, one job at a time.`});
+add({pl:"x",wk:"x3",date:"Tue 28 Jul",time:"5:30 PM",who:"Muneeb",type:"Single",
+body:`"When did you last try to win a NEW commercial account?"
+Asked a cleaner that this week.
+Long pause. "A couple years ago."
+Coasting on old accounts is not a growth plan.`});
+add({pl:"x",wk:"x3",date:"Wed 29 Jul",time:"5:30 PM",who:"Muneeb",type:"Single",
+body:`Your competitor has 130 reviews.
+You have 14.
+Guess who Google shows first when someone searches at 9pm.
+The work is not the gap. The proof is.`});
+add({pl:"x",wk:"x3",date:"Thu 30 Jul",time:"7:30 AM",who:"Hassan",type:"Single",
+body:`A "Services" page that lists everything you do ranks for nothing.
+Google wants a page about window cleaning in the exact town being searched.
+One page per service, per town. That is the unlock.`});
+add({pl:"x",wk:"x3",date:"Fri 31 Jul",time:"8:00 AM",who:"Hassan",type:"Single",
+body:`Homeowners do not buy clean windows.
+They can barely tell the difference in a photo.
+They buy certainty that you will show up and not wreck their house.
+That is built in your reviews, before you meet them.`});
+add({pl:"x",wk:"x3",date:"Fri 31 Jul",time:"12:00 PM",who:"Muneeb",type:"Personal single",
+body:`My first call with a window cleaner is never a pitch.
+It is questions.
+Where do jobs come from. What does winter look like. Who answers the phone.
+Cannot prescribe before I diagnose.`});
+add({pl:"x",wk:"x3",date:"Fri 31 Jul",time:"4:00 PM",who:"Company",type:"Spotlight single",
+body:`6 things we check on every window cleaning website:
+1. Loads under 1 sec on mobile
+2. Tap-to-call on every screen
+3. A page per town
+4. Real before/after photos
+5. Reviews above the fold
+6. A "book now" button
+Most sites fail 4 of 6.`});
+add({pl:"x",wk:"x3",date:"Sat 1 Aug",time:"10:00 AM",who:"Muneeb",type:"Light single",
+body:`Saturday and you are "catching up on the business side"?
+That knot in your stomach about where the next job comes from is not a you problem.
+It is a systems problem. Systems can be built.`});
+add({pl:"x",wk:"x3",date:"Sun 2 Aug",time:"11:00 AM",who:"Hassan",type:"Light single",
+body:`In a 2.9 billion dollar industry, the average window cleaning owner takes home a modest living.
+Not a skill problem.
+A get-found problem.`});
+
+add({pl:"x",wk:"x4",date:"Mon 3 Aug",time:"7:30 AM",who:"Hassan",type:"Bold single",
+body:`If you are the cheapest window cleaner in town, you have already lost.
+Homeowners do not hire the cheapest.
+They hire the one they trust the most.
+Trust is built online, before the quote.`});
+add({pl:"x",wk:"x4",date:"Mon 3 Aug",time:"5:00 PM",who:"Muneeb",type:"Tip single",
+body:`Customers keep asking you for gutters? Pressure washing? Solar panels?
+Stop saying no.
+Same customer, same truck, same trust. More revenue per stop.
+And it fills your slow months.`});
+add({pl:"x",wk:"x4",date:"Tue 4 Aug",time:"8:00 AM",who:"Hassan",type:"Single",
+body:`Cheapest quote does not win.
+Most trusted quote wins.
+The guy charging double is usually not a better cleaner. He is a better marketer.`});
+add({pl:"x",wk:"x4",date:"Tue 4 Aug",time:"5:30 PM",who:"Muneeb",type:"Single",
+body:`Winter is coming and half of you have no plan for it.
+Holiday lights. Gutter cleaning. Interior work. Commercial routes.
+Same ladders. Same customers. Book it in summer while you have leverage.`});
+add({pl:"x",wk:"x4",date:"Wed 5 Aug",time:"5:30 PM",who:"Muneeb",type:"Single",
+body:`A one-off job pays once.
+A recurring account pays every month while you sleep.
+Most window cleaners are addicted to the first and terrified of selling the second.`});
+add({pl:"x",wk:"x4",date:"Thu 6 Aug",time:"7:30 AM",who:"Hassan",type:"Single",
+body:`Your website is not a brochure.
+It is your hardest-working salesperson.
+It sells at 11pm when a homeowner finally decides to deal with the dirty glass.
+If it is slow and ugly, it is closing nothing.`});
+add({pl:"x",wk:"x4",date:"Fri 7 Aug",time:"8:00 AM",who:"Hassan",type:"Single",
+body:`The owners stuck at "just me and a ladder" for years all believe the same thing.
+Nobody can do it as well as I can.
+So they do everything. And stay stuck. Forever.`});
+add({pl:"x",wk:"x4",date:"Fri 7 Aug",time:"12:00 PM",who:"Muneeb",type:"Personal single",
+body:`Two years working with trades taught me the ones who scale are not the best cleaners.
+They are the ones who learned to let go of doing everything themselves.`});
+add({pl:"x",wk:"x4",date:"Fri 7 Aug",time:"4:00 PM",who:"Company",type:"Recap single",
+body:`This week: a first commercial route for a residential cleaner, review automation for a guy sitting on 14 reviews, and add-on pages so a "window guy" can finally sell the gutters people keep asking for.`});
+add({pl:"x",wk:"x4",date:"Sat 8 Aug",time:"10:30 AM",who:"Hassan",type:"Data single",
+body:`Window cleaning: 2.9B industry, ~44,000 companies, top 4 own under 5%.
+No giant. Wide open.
+Most owners do 6-figure work in a 7-figure industry and never claim their share.`});
+add({pl:"x",wk:"x4",date:"Sun 9 Aug",time:"11:00 AM",who:"Muneeb",type:"Light single",
+body:`Sunday reminder:
+You started a window cleaning business to clean windows and be your own boss.
+Not to become a full-time marketer at night.
+Let something else carry that part.`});
+
+add({pl:"x",wk:"x5",date:"Mon 10 Aug",time:"7:30 AM",who:"Hassan",type:"Objection single",
+body:`"I tried marketing, it didn't work."
+Every time I dig in, here is what they tried:
+A template site. Untracked ads. A guy posting stock photos of a spray bottle.
+That is not marketing. That is money on fire.`});
+add({pl:"x",wk:"x5",date:"Mon 10 Aug",time:"5:00 PM",who:"Muneeb",type:"Tip single",
+body:`Reply to every Google review. Even the short ones. Even the bad ones.
+Google rewards it. Homeowners read it.
+Takes 30 seconds. Most of your competitors do zero.`});
+add({pl:"x",wk:"x5",date:"Tue 11 Aug",time:"8:00 AM",who:"Hassan",type:"Single",
+body:`You cannot out-spend Google.
+You can out-review your whole city.
+One job, one text, one review at a time. It compounds into the top 3.`});
+add({pl:"x",wk:"x5",date:"Tue 11 Aug",time:"5:30 PM",who:"Muneeb",type:"Single",
+body:`A homeowner picked my client over a guy who was 90 dollars cheaper.
+Her reason: "You had 100 reviews and photos. He had 6 and none. I didn't want to gamble on my house."
+Trust beats price.`});
+add({pl:"x",wk:"x5",date:"Wed 12 Aug",time:"5:30 PM",who:"Muneeb",type:"Single",
+body:`Book your winter in July.
+When you are busy and trusted is exactly when you sign the recurring plans that carry you through January.
+Not when you are panicking in December.`});
+add({pl:"x",wk:"x5",date:"Thu 13 Aug",time:"7:30 AM",who:"Hassan",type:"Single",
+body:`Northern window cleaners can lose 30% of revenue in winter.
+The ones who do not feel it did not get lucky with weather.
+They designed the dip out. Commercial, add-ons, interior work, booked early.`});
+add({pl:"x",wk:"x5",date:"Fri 14 Aug",time:"8:00 AM",who:"Hassan",type:"Single",
+body:`Your competitor is not better than you.
+He is easier to find and easier to trust online.
+That is a systems gap, not a talent gap. And it closes in months.`});
+add({pl:"x",wk:"x5",date:"Fri 14 Aug",time:"12:00 PM",who:"Muneeb",type:"Personal single",
+body:`The thing that still gets me two years in:
+so many great window cleaners are convinced the busier shop is just better.
+He is not. He is just findable. That is fixable.`});
+add({pl:"x",wk:"x5",date:"Fri 14 Aug",time:"4:00 PM",who:"Company",type:"Recap single",
+body:`This week: took a cleaner from 14 reviews toward the top 3 map pack, built a winter-proofing plan for a northern operator, and launched add-on pages for a residential guy leaving money on the table.`});
+add({pl:"x",wk:"x5",date:"Sat 15 Aug",time:"10:00 AM",who:"Muneeb",type:"Personal single",
+body:`Reading this on a Saturday, half working, half worrying about the next job?
+You do not have to carry the marketing, the follow-up, and the reviews alone.
+That is literally why we exist.`});
+add({pl:"x",wk:"x5",date:"Sun 16 Aug",time:"11:00 AM",who:"Hassan",type:"Light single",
+body:`The window cleaner who gets found wins the city.
+Not the best. Not the cheapest.
+The one who shows up first, has the most reviews, and answers the fastest.`});
+
+add({pl:"x",wk:"x6",date:"Mon 17 Aug",time:"7:30 AM",who:"Hassan",type:"Month-close single",
+body:`One month of posts. One message.
+The window cleaner who gets found wins the city.
+Map pack. Reviews. Fast follow-up. Recurring revenue. A site that books.
+None of it is luck. All of it is a system. It can be yours.`});
+add({pl:"x",wk:"x6",date:"Mon 17 Aug",time:"12:30 PM",who:"Company",type:"Milestone single",
+body:`One month in. What we have been building for window cleaners:
+Recurring routes. Map-pack visibility. Review engines. Commercial pipelines. Add-on revenue.
+The work was never the problem. Being found was.
+DM "WOLF" with your city for next month's onboarding.`});
+
+/* X threads */
+add({pl:"x",wk:"x2",date:"Tue 21 Jul",time:"1:00 PM",who:"Company",type:"Series intro thread",series:"Streak-Free Tuesday",
+thread:[
+`Introducing STREAK-FREE TUESDAY.
+Every Tuesday: one real growth lesson from the window cleaning companies we work with.
+No fluff. No "10 tips." Just what is working right now.
+Here is how it will go.`,
+`Streak-free is the standard you get judged on.
+So it is the standard for this series.
+Every Tuesday, one clean takeaway you can actually use.`,
+`Some weeks it is a case study. A real client, real numbers, what we built.
+Some weeks it is one lever: reviews, the map pack, follow-up, commercial routes.
+Always specific. Always window cleaning.`,
+`Next Tuesday is the first case study.
+How a residential cleaner went from chasing one-off jobs to a recurring route that fills itself, in 90 days.`,
+`Follow so you do not miss it.
+And if you have a growth question you want us to break down, reply here. We are reading every one.`]});
+
+add({pl:"x",wk:"x2",date:"Wed 22 Jul",time:"7:30 AM",who:"Hassan",type:"Framework thread (launch + ep1)",series:"The Clear View",
+thread:[
+`New series: THE CLEAR VIEW.
+Every Wednesday I break down one thing that is working or broken in how window cleaners get customers.
+Clear glass, clear thinking. Save these.
+Episode 1: the fastest fix in your business.`,
+`Most window cleaners lose the majority of their leads to one thing.
+Slow follow-up.
+Not price. Not skill. Speed.`,
+`How it dies:
+Lead comes in at 10am.
+You are up a ladder until 4.
+You call back at 5.
+They booked the cleaner who answered at 10:07.`,
+`The 5-step system we install:
+1. Form filled, instant text in 30 seconds
+2. Missed call, auto-text with booking link
+3. No reply in 1 hour, second text
+4. No reply in 24 hours, email
+5. Booked, automatic reminders`,
+`You touch none of it.
+It runs while you are on a storefront, on a ladder, or driving to the next job.`,
+`The first cleaner to respond usually wins.
+It is rarely the best one. It is the fastest one.
+Speed is not a luxury in this business. It is the bar.`,
+`If you are losing quotes to whoever called back first, reply "SPEED" and I will map where your follow-up is leaking.
+More Clear View next Wednesday.`]});
+
+add({pl:"x",wk:"x2",date:"Thu 23 Jul",time:"7:00 AM",who:"Muneeb",type:"Field-story thread (launch + ep1)",series:"Ladder Talk",
+thread:[
+`New series: LADDER TALK.
+Every Thursday, one real story from a conversation with a window cleaning owner, plus the lesson underneath it.
+Named for where the work actually happens.
+Episode 1.`,
+`Last week a window cleaner showed me two numbers.
+His summer month. And his January.
+January was down almost a third. Every year. He calls it "the season."`,
+`It is not the season.
+His business is all one-off residential.
+Cold hits, people stop thinking about their windows, phone goes quiet.`,
+`The cleaners who do not feel winter have one thing he does not.
+A base of recurring commercial accounts.`,
+`The math:
+One storefront, 200 a month, is 2,400 a year.
+Twenty of them is 48,000 that does not care if it snows.
+Restaurants, retail, offices. Their glass has to stay clean 12 months a year.`,
+`So we are building him a commercial page that ranks, a simple outreach system to property managers, and reviews aimed at business owners.
+The goal is not more summer. It is a winter that does not scare him.`,
+`If your January looks like his, reply "SEASON" and I will send the commercial route breakdown.
+More Ladder Talk next Thursday.`]});
+
+add({pl:"x",wk:"x3",date:"Tue 28 Jul",time:"1:00 PM",who:"Company",type:"Case-study thread",series:"Streak-Free Tuesday",
+thread:[
+`STREAK-FREE TUESDAY, Case Study #1.
+A residential window cleaner went from chasing one-off jobs to a recurring route that fills itself.
+90 days. Here is exactly what we built.`,
+`Starting point:
+Two-person operation.
+Living job to job.
+No recurring base. Dead winters.`,
+`Weeks 1-2:
+New site, loads under 1 sec (old one was 6+).
+Google profile rebuilt and verified for the full service area.
+A page for each town on the route.`,
+`Weeks 3-4:
+Review automation, a text after every job.
+Recurring plan offer added to the site.
+Tap-to-call and instant-quote on every page.`,
+`Weeks 5-8:
+Commercial page ranking for "commercial window cleaning" in his city.
+Outreach to local property managers.
+Follow-up so no quote gets forgotten.`,
+`Weeks 9-12:
+Reviews crossed 100.
+Top 3 map pack in 4 towns.
+First 3 recurring commercial storefronts signed.`,
+`Result:
+Off the one-off treadmill.
+Onto recurring revenue.
+A winter that no longer empties out.
+Not magic. A system.`,
+`Want this? Reply "ROUTE" with your city.
+2 onboarding spots open this month.
+More Streak-Free Tuesday next week.`]});
+
+add({pl:"x",wk:"x3",date:"Wed 29 Jul",time:"7:30 AM",who:"Hassan",type:"Framework thread (ep2 reviews)",series:"The Clear View",
+thread:[
+`THE CLEAR VIEW, Episode 2.
+Your reviews are not a vanity number.
+They are one of the biggest reasons you rank in the map pack, or do not.`,
+`The data:
+57% of people read reviews before choosing a local business.
+100+ reviews outranks 10, all else equal.
+Reviews are one of the strongest local ranking signals, full stop.`,
+`So a cleaner with 12 reviews loses to one with 140.
+Even if the 12-review guy does better work.`,
+`The problem: most owners "ask for reviews" the way they mean to floss.
+They forget. It never becomes a system.`,
+`The system:
+1. Job marked done, auto-text goes out
+2. One-tap link to your Google review page
+3. Sent within the hour, glass still fresh in their mind
+4. One reminder to non-responders
+5. Reply to every review, Google rewards it`,
+`Do this for 90 days and your review count does not creep. It climbs.
+It is the one ranking factor you fully control.`,
+`Reply "REVIEWS" and I will send the exact request text we set up for window cleaners.
+More Clear View next Wednesday.`]});
+
+add({pl:"x",wk:"x3",date:"Thu 30 Jul",time:"7:00 AM",who:"Muneeb",type:"Field-story thread (ep2 commercial)",series:"Ladder Talk",
+thread:[
+`LADDER TALK, Episode 2.
+A commercial window cleaner told me he wanted to grow.
+So I asked one question that stopped him cold.`,
+`"When did you last actually try to win a new storefront account?"
+Long pause.
+"Honestly, a couple years ago."`,
+`He has a handful of accounts from years back and has been coasting since.
+Here is what I found in his setup.`,
+`A Google profile built for homeowners, nothing for businesses.
+No page ranking for "commercial window cleaning [city]."
+No system to reach property managers.
+Reviews all about houses.`,
+`Meanwhile commercial is the best revenue in this business.
+Recurring. Year round. Immune to winter.
+And businesses do not shop around once you are reliable.`,
+`So we built him a commercial page that speaks to business owners, a repeatable outreach system, and proof aimed at the commercial buyer.
+He was not out of opportunities. He had no system to go get them.`,
+`Reply "COMMERCIAL" and I will show you the storefront outreach system.
+More Ladder Talk next Thursday.`]});
+
+add({pl:"x",wk:"x4",date:"Tue 4 Aug",time:"1:00 PM",who:"Company",type:"Case-study thread (commercial)",series:"Streak-Free Tuesday",
+thread:[
+`STREAK-FREE TUESDAY, Case Study #2.
+A two-truck window cleaner added 18 recurring storefronts in one season.
+Here is how we built the commercial route.`,
+`Starting point:
+Mostly residential.
+Strong summers, dead winters.
+No recurring base to hold the business up.`,
+`What we built:
+A commercial page ranking for "commercial window cleaning" in his city and 2 nearby towns.`,
+`A simple, repeatable outreach system to local property managers, restaurants, and retail.
+Not cold spam. A process he could run every week.`,
+`Proof aimed at business buyers.
+Reviews and photos from storefront jobs, not just houses.
+Follow-up so "call us next quarter" became a signed schedule.`,
+`The season result:
+18 recurring storefront accounts.
+Around 200 a month each is roughly 43,000 in recurring annual revenue.
+A winter that held steady for the first time.`,
+`The residential work did not go anywhere.
+It just stopped being the only thing holding him up.
+Commercial is the anchor. Most cleaners never chase it with a system.`,
+`Reply "COMMERCIAL" with your city and we will show you where to start.
+More Streak-Free Tuesday next week.`]});
+
+add({pl:"x",wk:"x4",date:"Wed 5 Aug",time:"7:30 AM",who:"Hassan",type:"Framework thread (ep3 route math)",series:"The Clear View",
+thread:[
+`THE CLEAR VIEW, Episode 3.
+One number changes how you see your whole business.
+Recurring revenue.
+Here is the math most window cleaners never sit down and do.`,
+`A one-off residential clean pays once.
+Win it, do it, then go win another. Forever.
+You are only as busy as your last week of marketing.`,
+`A recurring commercial account pays every month, on a schedule, without you chasing it.
+One 200 dollar storefront is 2,400 a year.
+Ten is 24,000. Twenty is 48,000.`,
+`And it compounds.
+Recurring jobs get faster over time. Less buildup, familiar scope, crew knows the site.
+Margin often improves as the account ages.`,
+`So change what you measure.
+Not "how many one-off jobs can I win this month."
+But "how much recurring revenue can I stack that does not depend on winning anything new."`,
+`That number is what a bank looks at.
+It is what lets you hire.
+It is what makes the business worth something if you ever sell.`,
+`Every window cleaner has residential.
+Almost none build the recurring base underneath it.
+That base is the difference between a job you own and a business that runs.`,
+`Reply "ROUTE" and I will send the route-math worksheet.
+More Clear View next Wednesday.`]});
+
+add({pl:"x",wk:"x4",date:"Thu 6 Aug",time:"7:00 AM",who:"Muneeb",type:"Field-story thread (ep3 add-ons)",series:"Ladder Talk",
+thread:[
+`LADDER TALK, Episode 3.
+A window cleaner told me he was "just a window guy."
+Then he mentioned he keeps turning down money. Without realizing it.`,
+`Customers keep asking if he also does gutters.
+And pressure washing.
+And the solar panels.
+And he keeps saying no.`,
+`He is turning away money at the door of a customer who already trusts him.`,
+`The math that stopped him:
+Winning a new customer is the expensive part. Ads, SEO, reviews, follow-up.
+Selling a second service to someone who already trusts you costs almost nothing.`,
+`Gutters. Pressure washing. Solar panel cleaning. Holiday lights. Screen repair.
+Same customer. Same truck. Same trust. More per stop.
+And the winter ones fill the exact months window work goes quiet.`,
+`So we set him up with a service page for each add-on, each one offered automatically after the window job, and reviews that mention the extra services.`,
+`He was not "just a window guy."
+He was a home-exterior business that only sold one thing.`,
+`If customers keep asking for services you turn down, reply "ADDON" and I will send the add-on map.
+More Ladder Talk next Thursday.`]});
+
+add({pl:"x",wk:"x5",date:"Tue 11 Aug",time:"1:00 PM",who:"Company",type:"Case-study thread (reviews)",series:"Streak-Free Tuesday",
+thread:[
+`STREAK-FREE TUESDAY, Case Study #3.
+14 reviews to 160 in one season, and what it did to his phone.`,
+`Starting point:
+Residential and light commercial cleaner.
+14 Google reviews. Stuck below the map pack.
+Competitor across town: 130 reviews, sitting top 3.`,
+`What we built:
+Review automation, a one-tap request texted within an hour of every job.
+A reminder to non-responders a few days later.`,
+`A reply written on every single review, good or bad. Google rewards it.
+Old photos swapped for recent before-and-after shots.`,
+`Over the season:
+Reviews went 14 to 160.
+He moved into the top 3 map pack in his main city.
+"Window cleaning near me" started sending him calls it never had.`,
+`Bonus: his close rate went up too.
+New callers arrived already trusting him.
+The proof did the selling before the phone rang.`,
+`Reviews were not a side project. They were the lever.
+The one ranking factor you fully control.`,
+`Reply "REVIEWS" and we will send the setup.
+More Streak-Free Tuesday next week.`]});
+
+add({pl:"x",wk:"x5",date:"Wed 12 Aug",time:"7:30 AM",who:"Hassan",type:"Framework thread (ep4 seasonality)",series:"The Clear View",
+thread:[
+`THE CLEAR VIEW, Episode 4.
+Your winter is not a weather problem.
+It is a design problem.
+Here is how you design the dip out.`,
+`Northern window cleaners can lose up to 30% of revenue in winter.
+Most treat it as a fact of life.
+It is not. It is the result of a business built on one season and one service.`,
+`Fix 1: Commercial accounts.
+Storefronts need clean glass 12 months a year.
+A base of recurring commercial contracts is revenue that ignores the temperature.
+Biggest winter fix there is.`,
+`Fix 2: Winter add-ons.
+Holiday light installs use the same ladders, trucks, and customers.
+They fill November and December, the exact months window work dies.
+Gutters fill fall.`,
+`Fix 3: Interior work.
+Exterior freezes. Interior does not.
+Homes, offices, and storefronts still want inside glass done in the cold.
+Sell it.`,
+`Fix 4: Book winter in summer.
+When you are busy and trusted in July, that is when you sign the recurring plan that carries January.
+Not when you are panicking in December.`,
+`The cleaners who do not feel winter did not get lucky.
+They built the business so winter could not hurt them.
+Design it out now, while you still have summer leverage.`,
+`Reply "SEASON" and I will send the winter-proofing plan.
+That is the last Clear View of the month. Back next Wednesday.`]});
+
+add({pl:"x",wk:"x5",date:"Thu 13 Aug",time:"7:00 AM",who:"Muneeb",type:"Field-story thread (ep4 trust)",series:"Ladder Talk",
+thread:[
+`LADDER TALK, Episode 4.
+A homeowner told my client why she picked him over a guy who was 90 dollars cheaper.
+It was not the price.`,
+`She had two quotes. His, and one 90 dollars cheaper.
+She picked him. So he asked her why.`,
+`Her answer:
+"Your reviews. A hundred of them, all saying you showed up and left it clean. The other guy had six and no photos. I didn't want to gamble on my house."`,
+`That is the whole game.
+Homeowners are not buying clean windows.
+They are buying certainty. That you will show up, do it right, not leave a mess.`,
+`That certainty is built before you ever meet them.
+In your reviews. Your photos. Your response speed. Your website.`,
+`The cheaper guy did not lose on price.
+He lost on trust, weeks before the quote, and never knew it.`,
+`So when a cleaner tells me "people just want the lowest price," I tell them about this homeowner.
+They do not want the lowest price. They want to stop worrying.`,
+`Give them that online and price stops being the first question.
+Reply "TRUST" and I will walk you through how we build it.`]});
+
+/* ---------------- render ---------------- */
+const feed=document.getElementById('feed');
+const countEl=document.getElementById('count');
+const toast=document.getElementById('toast');
+let state={plat:'linkedin',who:'all',q:''};
+const esc=(s)=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const wkOrder=['li1','li2','li3','li4','li5','li6','x1','x2','x3','x4','x5','x6'];
+
+function copyText(p){
+  if(p.thread){ return p.thread.join('\n\n'); }
+  let t=p.body;
+  if(p.pl==='linkedin' && p.tags){ t+='\n\n'+p.tags; }
+  return t;
+}
+function showToast(msg){ toast.textContent=msg; toast.classList.add('show');
+  clearTimeout(showToast._t); showToast._t=setTimeout(()=>toast.classList.remove('show'),1400); }
+function doCopy(text,btn){
+  const done=()=>{ if(btn){btn.classList.add('ok'); const o=btn.querySelector('.lbl'); const prev=o?o.textContent:''; if(o)o.textContent='Copied';
+      setTimeout(()=>{btn.classList.remove('ok'); if(o)o.textContent=prev;},1400);} showToast('Copied to clipboard'); };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done).catch(()=>fallback(text,done));
+  } else { fallback(text,done); }
+}
+function fallback(text,done){
+  const ta=document.createElement('textarea'); ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try{ document.execCommand('copy'); done(); }catch(e){ showToast('Copy failed, select manually'); }
+  document.body.removeChild(ta);
+}
+
+function matches(p){
+  if(p.pl!==state.plat) return false;
+  if(state.who!=='all' && p.who!==state.who) return false;
+  if(state.q){
+    const hay=((p.body||'')+' '+(p.thread?p.thread.join(' '):'')+' '+p.type+' '+(p.series||'')+' '+p.who+' '+(p.tags||'')).toLowerCase();
+    if(!hay.includes(state.q)) return false;
+  }
+  return true;
+}
+
+function render(){
+  const vis=P.filter(matches);
+  countEl.textContent=vis.length+(vis.length===1?' post':' posts');
+  feed.innerHTML='';
+  if(!vis.length){ feed.innerHTML='<div class="empty">No posts match. Clear the search or filter.</div>'; return; }
+  const weeks=wkOrder.filter(w=>w.startsWith(state.plat==='linkedin'?'li':'x'));
+  weeks.forEach(wk=>{
+    const items=vis.filter(p=>p.wk===wk);
+    if(!items.length) return;
+    const meta=W[wk];
+    const sec=document.createElement('section'); sec.className='week';
+    let h='<div class="week-head"><h2>'+esc(meta.label)+'</h2><span class="rng">'+esc(meta.rng)+'</span></div><div class="week-line"></div>';
+    if(state.plat==='linkedin' && meta.rest && state.who==='all' && !state.q){ h+='<div class="rest">'+esc(meta.rest)+'</div>'; }
+    sec.innerHTML=h;
+    items.forEach(p=>sec.appendChild(card(p)));
+    feed.appendChild(sec);
+  });
+}
+
+function card(p){
+  const el=document.createElement('article'); el.className='ticket';
+  let head='<div class="ticket-head">'
+    +'<span class="meta dot">'+esc(p.date)+'</span>'
+    +'<span class="meta dot">'+esc(p.time)+'</span>'
+    +'<span class="who '+p.who+'">'+esc(p.who)+'</span>'
+    +'<span class="type">'+esc(p.type)+'</span>'
+    +(p.series?'<span class="series">'+esc(p.series)+'</span>':'')
+    +'<span class="head-spacer"></span>'
+    +'<button class="copy-btn" type="button"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></span><span class="lbl">'+(p.thread?'Copy thread':'Copy')+'</span></button>'
+    +'</div>';
+  let bodyHtml;
+  if(p.thread){
+    bodyHtml='<div class="thread">'+p.thread.map((t,i)=>'<div class="tw"><div class="n">'+(i+1)+'</div><div class="txt">'+esc(t)+'</div></div>').join('')+'</div>';
+  } else {
+    bodyHtml='<div class="body"><div class="post">'+esc(p.body)+'</div></div>';
+    if(p.pl==='linkedin' && p.tags){ bodyHtml+='<div class="tags">'+p.tags.split(' ').map(t=>'<span>'+esc(t)+'</span>').join('')+'</div>'; }
+  }
+  el.innerHTML=head+bodyHtml;
+  el.querySelector('.copy-btn').addEventListener('click',(e)=>{ doCopy(copyText(p),e.currentTarget); });
+  return el;
+}
+
+/* controls */
+document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-selected','false'));
+  b.setAttribute('aria-selected','true'); state.plat=b.dataset.plat;
+  window.scrollTo({top:0,behavior:'instant' in window?'instant':'auto'}); render();
+}));
+document.querySelectorAll('#whoChips .chip').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#whoChips .chip').forEach(x=>x.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true'); state.who=b.dataset.who; render();
+}));
+document.getElementById('search').addEventListener('input',(e)=>{ state.q=e.target.value.trim().toLowerCase(); render(); });
+
+/* downloads */
+function buildMd(plat){
+  const title=plat==='linkedin'?'Wolf Contractor - LinkedIn Content, Full Month':'Wolf Contractor - X (Twitter) Content, Full Month';
+  let out='# '+title+'\n### Fri 17 July to Mon 17 August 2026 | Window cleaning, USA\n\n';
+  const weeks=wkOrder.filter(w=>w.startsWith(plat==='linkedin'?'li':'x'));
+  weeks.forEach(wk=>{
+    const items=P.filter(p=>p.pl===plat && p.wk===wk);
+    if(!items.length) return;
+    const m=W[wk];
+    out+='\n---\n\n## '+m.label+'  ('+m.rng+')\n';
+    if(plat==='linkedin' && m.rest) out+='Rest: '+m.rest+'\n';
+    out+='\n';
+    items.forEach(p=>{
+      out+='### '+p.date+' - '+p.time+' - '+p.who+' - '+p.type+(p.series?' ['+p.series+']':'')+'\n\n';
+      if(p.thread){ p.thread.forEach((t,i)=>{ out+='Tweet '+(i+1)+'\n'+t+'\n\n'; }); }
+      else { out+=p.body+'\n\n'; if(p.tags) out+=p.tags+'\n\n'; }
+    });
+  });
+  return out;
+}
+function download(plat){
+  const md=buildMd(plat);
+  const blob=new Blob([md],{type:'text/markdown;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url; a.download=plat==='linkedin'?'wolf-window-cleaning-linkedin-month.md':'wolf-window-cleaning-twitter-x-month.md';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(url),1500);
+  showToast('Downloading '+a.download);
+}
+document.getElementById('dlLi').addEventListener('click',()=>download('linkedin'));
+document.getElementById('dlX').addEventListener('click',()=>download('x'));
+
+render();
+</script>
