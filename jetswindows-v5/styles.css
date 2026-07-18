@@ -123,43 +123,59 @@ p{margin:0 0 1rem}
 .hero-proof strong{display:block;font-family:var(--font-head);font-weight:600;font-size:.98rem;text-transform:uppercase;letter-spacing:.04em;color:var(--deep)}
 .hero-proof span{font-weight:500;font-size:.95rem;opacity:.8}
 
-/* hero form */
-.hero-form-wrap{position:relative}
-.hero-form-wrap::before{
-  content:"";position:absolute;inset:-14px -14px 14px 14px;
-  border-radius:24px;background:var(--teal);opacity:.18;transform:rotate(2deg);
+/* hero owners visual (in place of the old form card) */
+.hero-owners-visual{
+  position:relative;align-self:end;
+  display:flex;flex-direction:column;align-items:center;
 }
-.hero-form{
-  position:relative;background:var(--white);
-  border-radius:22px;padding:32px 32px 26px;
-  border:2px solid var(--deep);
-  box-shadow:0 30px 70px rgba(4,48,59,.18);
+.hero-owners-visual::before{
+  content:"";position:absolute;left:50%;bottom:40px;transform:translateX(-50%);
+  width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle,rgba(79,169,167,.45),rgba(79,169,167,.1) 60%,transparent 72%);
 }
-.form-head{text-align:center;margin-bottom:22px}
-.form-head .script{color:var(--teal);font-size:1.5rem;margin:0}
-.form-head h2{font-size:1.8rem;text-transform:uppercase;letter-spacing:.02em}
-.form-head span{font-weight:600;font-size:.92rem;opacity:.7}
-.hero-form label{display:block;font-weight:700;font-size:.88rem;margin-bottom:14px;color:var(--deep)}
-.hero-form input,.hero-form select{
-  width:100%;margin-top:6px;padding:13px 15px;
-  border:1.5px solid var(--line);border-radius:11px;
-  font-family:var(--font-body);font-size:1rem;color:var(--ink);background:var(--paper);
+.hero-owners-visual img{
+  position:relative;width:100%;max-width:430px;
+  filter:drop-shadow(0 18px 36px rgba(0,0,0,.5));
 }
-.hero-form input:focus,.hero-form select:focus{
+.hero-owners-tag{
+  position:relative;margin-top:-4px;
+  background:var(--white);color:var(--deep);
+  font-family:var(--font-head);font-weight:600;font-size:.85rem;
+  text-transform:uppercase;letter-spacing:.08em;
+  padding:9px 18px;border-radius:999px;
+  box-shadow:0 10px 26px rgba(0,0,0,.35);
+}
+
+/* horizontal quote bar */
+.quote-bar{
+  position:relative;z-index:5;
+  display:grid;grid-template-columns:auto 1fr 1fr 1fr 1fr auto;gap:16px;align-items:end;
+  background:var(--white);color:var(--ink);
+  border-radius:18px;padding:22px 26px;
+  box-shadow:0 30px 70px rgba(0,0,0,.35);
+  margin-top:10px;
+}
+.quote-bar-title h2{
+  font-size:1.3rem;text-transform:uppercase;letter-spacing:.02em;color:var(--deep);
+  line-height:1.15;max-width:150px;
+}
+.quote-bar-title .script{text-transform:none;color:var(--teal);font-size:1.25em}
+.quote-bar label{display:block;font-weight:700;font-size:.82rem;color:var(--deep)}
+.quote-bar label span{display:block;margin-bottom:5px}
+.quote-bar input,.quote-bar select{
+  width:100%;padding:12px 14px;
+  border:1.5px solid var(--line);border-radius:10px;
+  font-family:var(--font-body);font-size:.98rem;color:var(--ink);background:var(--paper);
+}
+.quote-bar input:focus,.quote-bar select:focus{
   outline:2px solid var(--teal);border-color:var(--teal);background:var(--white);
 }
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.hero-form .btn{margin-top:6px}
-.form-foot{
-  margin:16px 0 0;text-align:center;font-weight:700;font-size:.85rem;color:var(--deep);
-  display:flex;align-items:center;justify-content:center;gap:8px;
-}
-.form-foot svg{color:var(--teal)}
+.quote-bar .btn{padding:14px 30px}
 
 /* filmstrip */
 .filmstrip{
   display:grid;grid-template-columns:repeat(5,1fr);gap:10px;
-  padding:0 10px 10px;
+  padding:36px 10px 10px;
 }
 .filmstrip img{
   width:100%;height:190px;object-fit:cover;border-radius:14px;
@@ -294,6 +310,10 @@ p{margin:0 0 1rem}
 /* ===== Responsive ===== */
 @media (max-width:1024px){
   .hero-grid,.about-grid{grid-template-columns:1fr;gap:48px}
+  .quote-bar{grid-template-columns:1fr 1fr}
+  .quote-bar-title{grid-column:1/-1}
+  .quote-bar-title h2{max-width:none}
+  .quote-bar .btn{grid-column:1/-1}
   .nav-menu{display:none}
   .filmstrip{grid-template-columns:repeat(3,1fr)}
   .filmstrip img:nth-child(n+4){display:none}
@@ -304,7 +324,7 @@ p{margin:0 0 1rem}
   .svc-row img{display:none}
 }
 @media (max-width:640px){
-  .form-row{grid-template-columns:1fr}
+  .quote-bar{grid-template-columns:1fr;padding:22px}
   .filmstrip{grid-template-columns:1fr 1fr}
   .filmstrip img:nth-child(n+3){display:none}
   .stats-inner{grid-template-columns:1fr 1fr}
