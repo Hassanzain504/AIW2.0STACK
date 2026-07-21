@@ -231,6 +231,22 @@ section{padding:80px 0}
 .crew-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
 .crew-tags span{background:var(--band);color:var(--ink);font-family:var(--fh);font-weight:700;font-size:.76rem;letter-spacing:.6px;text-transform:uppercase;padding:8px 14px;border-radius:999px}
 
+/* ===== Team section ===== */
+.team-photo{position:relative;margin:0;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-hover)}
+.team-photo img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.team-tags{position:absolute;left:0;right:0;bottom:0;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:22px;background:linear-gradient(transparent,rgba(6,43,52,.82))}
+.team-tags span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);color:#fff;font-family:var(--fh);font-weight:700;font-size:.78rem;letter-spacing:.6px;text-transform:uppercase;padding:8px 16px;border-radius:999px;backdrop-filter:blur(4px)}
+/* crew member grid (with real photos) */
+.crew-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.crew-member{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .35s ease,box-shadow .35s ease}
+.crew-member:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
+.crew-member img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 22%}
+.crew-member .cm-body{padding:16px 18px 20px;text-align:center}
+.crew-member .cm-body strong{display:block;font-family:var(--fh);font-weight:800;color:var(--ink);font-size:1.1rem;letter-spacing:.5px}
+.crew-member .cm-body span{font-family:var(--fs);color:var(--teal);font-size:1.05rem}
+@media (max-width:1024px){.crew-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.crew-grid{grid-template-columns:1fr 1fr}}
+
 /* ===== Steps ===== */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .step{background:var(--card);border-radius:16px;padding:28px 24px;box-shadow:var(--shadow);transition:transform .35s ease,box-shadow .35s ease}
