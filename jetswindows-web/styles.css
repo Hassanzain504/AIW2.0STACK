@@ -161,6 +161,7 @@ p{margin:0 0 1rem}
 
 /* ===== Section scaffold ===== */
 section{padding:80px 0}
+section[id],[id].ba{scroll-margin-top:96px}
 .section-head{max-width:760px;margin:0 auto 46px;text-align:center}
 .section-head h2{font-size:clamp(34px,4.6vw,46px)}
 .section-head p{color:var(--body);font-size:1.08rem;margin-top:14px}
@@ -236,16 +237,11 @@ section{padding:80px 0}
 .team-photo img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
 .team-tags{position:absolute;left:0;right:0;bottom:0;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:22px;background:linear-gradient(transparent,rgba(6,43,52,.82))}
 .team-tags span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);color:#fff;font-family:var(--fh);font-weight:700;font-size:.78rem;letter-spacing:.6px;text-transform:uppercase;padding:8px 16px;border-radius:999px;backdrop-filter:blur(4px)}
-/* crew member grid (with real photos) */
-.crew-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.crew-member{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .35s ease,box-shadow .35s ease}
+/* crew member cards (real photos) */
+.crew-track{grid-auto-columns:minmax(240px,1fr)}
+.crew-member{margin:0;background:var(--card);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .35s ease,box-shadow .35s ease;scroll-snap-align:start}
 .crew-member:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
-.crew-member img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 22%}
-.crew-member .cm-body{padding:16px 18px 20px;text-align:center}
-.crew-member .cm-body strong{display:block;font-family:var(--fh);font-weight:800;color:var(--ink);font-size:1.1rem;letter-spacing:.5px}
-.crew-member .cm-body span{font-family:var(--fs);color:var(--teal);font-size:1.05rem}
-@media (max-width:1024px){.crew-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:640px){.crew-grid{grid-template-columns:1fr 1fr}}
+.crew-member img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block}
 
 /* ===== Steps ===== */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
