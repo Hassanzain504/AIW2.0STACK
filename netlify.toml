@@ -1,0 +1,21 @@
+# Netlify config for Jet's Window Cleaning static site.
+# The site is a no-build static site living in the jetswindows-web/ folder.
+[build]
+  publish = "jetswindows-web"
+  command = ""
+
+# Long-cache static assets (images, fonts, css, js) for speed.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
