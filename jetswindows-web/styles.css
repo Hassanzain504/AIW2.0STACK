@@ -175,9 +175,9 @@ section[id],[id].ba{scroll-margin-top:96px}
 /* ===== Trust badges ===== */
 .trust{background:var(--band);padding:30px 0}
 .trust-row{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
-.trust-item{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--ink)}
-.trust-item svg{color:var(--teal);flex:none}
-.trust-item span{font-family:var(--fh);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.5px;line-height:1.2}
+.trust-item{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--ink)}
+.trust-item svg{color:var(--teal);flex:none;width:32px;height:32px}
+.trust-item span{font-family:var(--fh);font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.5px;line-height:1.2}
 
 /* ===== Cards grids ===== */
 .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
