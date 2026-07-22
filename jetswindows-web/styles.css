@@ -150,8 +150,8 @@ p{margin:0 0 1rem}
   background:#fffef8;border-radius:20px;box-shadow:0 24px 50px rgba(3,22,28,.4);padding:16px 22px;
   display:flex;flex-wrap:wrap;gap:12px 14px;align-items:flex-end;
 }
-.quote-inline .qi-title{min-width:170px;line-height:1;font-family:var(--fh);font-weight:800;color:var(--ink);font-size:26px;letter-spacing:1px;text-transform:uppercase}
-.quote-inline .qi-title .script{color:var(--teal);text-transform:none;font-size:24px;letter-spacing:0}
+.quote-inline .qi-title{min-width:150px;line-height:1.02;font-family:var(--fh);font-weight:800;color:var(--ink);font-size:30px;letter-spacing:1px;text-transform:uppercase}
+.quote-inline .qi-title .script{color:var(--teal);text-transform:none;font-size:30px;letter-spacing:0}
 .quote-inline label{flex:1;min-width:150px;display:flex;flex-direction:column;gap:6px;font-family:var(--fh);font-weight:700;font-size:11px;letter-spacing:1.4px;color:var(--body);text-transform:uppercase}
 .quote-inline input,.quote-inline select{
   width:100%;padding:12px 14px;border:1.5px solid var(--field-border);border-radius:10px;
@@ -391,4 +391,99 @@ section[id],[id].ba{scroll-margin-top:96px}
   .stat-strip{flex-direction:column;gap:20px}
   .stat-strip .stat + .stat::before{display:none}
   .crew-head{flex-direction:column;align-items:start}
+}
+
+/* ================================================================
+   Ported sections (retro-style) — Services, Areas, Quote, Footer
+   Adapted to this site's tokens (Barlow Condensed / Pacifico / teal-cream)
+   ================================================================ */
+.teal-bar{display:block;width:96px;height:4px;background:var(--teal);border-radius:2px;margin:18px auto 22px}
+.teal-bar.left{margin-left:0}
+.teal-bar.small{width:80px;margin:10px auto 22px}
+.teal-bar.left.small{margin-left:0}
+.accent-bar{display:block;width:96px;height:4px;background:var(--mint);border-radius:2px;margin:18px 0 24px}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
+.btn-deep{background:var(--ink);color:var(--cream)}
+.btn-deep:hover{background:var(--deepest);color:#fff;transform:translateY(-2px)}
+.btn.full{width:100%}
+.center-btn{text-align:center;margin-top:44px}
+.section-sub{font-size:1.1rem;font-weight:500;color:var(--body)}
+.script-link{font-family:var(--fs);font-size:1.3rem;color:var(--teal);border-bottom:2px solid var(--ink);padding-bottom:2px;display:inline-block}
+.script-link:hover{color:var(--ink)}
+
+/* Retro service cards */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.retro-card{position:relative;background:var(--card);border:2px solid var(--ink);border-radius:12px;box-shadow:5px 6px 0 rgba(11,58,70,.28);display:flex;flex-direction:column}
+.card-photo{position:relative;border-radius:10px 10px 0 0;overflow:visible}
+.card-photo>img{width:100%;height:210px;object-fit:cover;border-radius:9px 9px 0 0;border-bottom:5px solid var(--teal)}
+.card-badge{position:absolute;left:50%;bottom:-34px;transform:translateX(-50%);width:74px;height:74px;border-radius:50%;background:var(--ink);border:4px solid var(--teal);display:flex;align-items:center;justify-content:center;z-index:2}
+.card-body{position:relative;padding:52px 30px 30px;text-align:center;display:flex;flex-direction:column;align-items:center;flex:1}
+.card-body::before,.card-body::after{content:"";position:absolute;top:44px;width:26px;height:88px;background:var(--teal)}
+.card-body::before{left:-2px;clip-path:polygon(0 0,100% 18%,100% 82%,0 100%,55% 50%)}
+.card-body::after{right:-2px;clip-path:polygon(100% 0,0 18%,0 82%,100% 100%,45% 50%)}
+.card-body h3{color:var(--ink);font-size:1.5rem;margin-bottom:12px}
+.card-body p{font-size:1.02rem;font-weight:500;margin-bottom:18px;max-width:300px;color:var(--body)}
+.card-body .script-link{margin-top:auto}
+
+/* Service areas (map + list) */
+.service-area{padding:88px 0;background:var(--cream)}
+.service-area-inner{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:center}
+.area-map{border:3px solid var(--ink);border-radius:14px;overflow:hidden;box-shadow:5px 6px 0 rgba(11,58,70,.25);background:var(--card)}
+.area-map iframe{display:block;width:100%}
+.area-copy h2{font-size:clamp(1.7rem,3.2vw,2.5rem)}
+.area-copy>p{font-weight:500;font-size:1.05rem;margin-bottom:26px;max-width:620px;color:var(--body)}
+.area-list{list-style:none;margin:0 0 34px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px 20px}
+.area-list li{position:relative;padding-left:20px;font-weight:700;font-size:1.02rem;color:var(--ink)}
+.area-list li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;border-radius:50%;background:var(--teal)}
+
+/* Quote section (team photo + form) */
+.quote{padding:88px 0;background:var(--ink);color:#fff;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 18px,transparent 18px 36px);border-top:8px solid var(--teal)}
+.quote-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.quote-copy h2{color:var(--cream);margin-bottom:0;font-size:clamp(30px,4vw,44px)}
+.quote-copy p{color:rgba(255,255,255,.9);font-weight:500;max-width:520px}
+.quote-copy a{color:var(--mint);font-weight:700}
+.quote-photo{border-radius:12px;margin-top:26px;border:3px solid var(--teal);box-shadow:6px 7px 0 rgba(0,0,0,.3);width:100%}
+.quote-form{background:var(--card);border-radius:14px;padding:34px 32px;border:2px solid var(--ink);box-shadow:6px 7px 0 rgba(0,0,0,.3);color:var(--ink)}
+.quote-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.quote-form label{display:block;font-family:var(--fh);font-weight:700;font-size:.82rem;letter-spacing:.6px;text-transform:uppercase;margin-bottom:16px;color:var(--ink)}
+.quote-form input,.quote-form select,.quote-form textarea{width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid var(--field-border);border-radius:10px;font-family:var(--fb);font-size:1rem;color:var(--ink);background:var(--field)}
+.quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{outline:2px solid var(--teal);border-color:var(--teal);background:#fff}
+.form-note{margin:14px 0 0;text-align:center;font-weight:600;font-size:.92rem;color:var(--ink)}
+
+/* Retro footer */
+.footer{background:var(--deepest);padding-top:72px}
+.footer-inner{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:48px;align-items:start;padding-bottom:64px}
+.footer-card{background:var(--cream);border:2px solid var(--teal);border-radius:14px;box-shadow:5px 6px 0 rgba(46,143,137,.3);padding:30px 32px 34px}
+.footer-script{font-family:var(--fs);font-size:2rem;color:var(--teal);margin:0;text-transform:none}
+.office-label{font-family:var(--fh);font-weight:700;text-transform:uppercase;color:var(--teal);font-size:1.05rem;letter-spacing:.5px;margin:16px 0 4px}
+.office-addr{color:var(--ink);font-weight:600;margin:0 0 6px}
+.office-hours{margin:16px 0 6px;color:var(--body-2)}
+.office-hours strong{color:var(--ink)}
+.office-emergency{color:var(--teal);font-weight:700;margin:12px 0 0}
+.footer-center{text-align:center;color:var(--cream)}
+.footer-logo{width:110px;border-radius:16px;margin:0 auto 22px}
+.footer-call{font-family:var(--fh);font-weight:700;text-transform:uppercase;font-size:1.5rem;letter-spacing:.5px;color:var(--cream);margin-bottom:20px}
+.footer-call a{color:var(--cream)}
+.footer .socials{display:flex;justify-content:center;gap:14px;margin-bottom:22px}
+.footer .socials a{width:38px;height:38px;border-radius:50%;background:var(--teal);color:#fff;display:inline-flex;align-items:center;justify-content:center;transition:transform .15s}
+.footer .socials a:hover{transform:translateY(-2px)}
+.footer-license{font-weight:600;font-size:.92rem;margin-bottom:12px;color:#c8d7d3}
+.footer-links{display:flex;justify-content:center;gap:22px}
+.footer-links a{font-weight:600;font-size:.9rem;color:#c8d7d3}
+.footer-links a:hover{color:var(--mint)}
+.footer-btns{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.footer-bottom{background:var(--teal);color:#fff;text-align:center;padding:16px 24px}
+.footer-bottom p{margin:0;font-weight:600}
+
+@media (max-width:1024px){
+  .card-grid{grid-template-columns:1fr 1fr}
+  .service-area-inner,.quote-inner{grid-template-columns:1fr;gap:40px}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .footer-center{grid-column:1/-1;order:-1}
+}
+@media (max-width:640px){
+  .card-grid,.footer-inner{grid-template-columns:1fr}
+  .quote-form .form-row{grid-template-columns:1fr}
+  .area-list{grid-template-columns:1fr 1fr}
 }

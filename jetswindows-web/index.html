@@ -150,7 +150,7 @@
       <!-- Hero quote form -->
       <div class="hero-form reveal">
         <form class="quote-inline" data-quote aria-label="Get a free quote">
-          <div class="qi-title">Get your <span class="script">free</span> quote</div>
+          <div class="qi-title">Get Your<br /><span class="script">Free</span> Quote</div>
           <label>Full Name<input type="text" name="name" placeholder="Your name" required /></label>
           <label>Phone<input type="tel" name="phone" placeholder="(804) 555-0123" required /></label>
           <label>Service
@@ -162,7 +162,6 @@
               <option>Not sure yet</option>
             </select>
           </label>
-          <label>City / Suburb<input type="text" name="city" placeholder="Short Pump" /></label>
           <button type="submit" class="btn btn-primary">Get My Free Quote →</button>
         </form>
       </div>
@@ -182,42 +181,50 @@
   </section>
 
   <!-- Services -->
-  <section id="services">
+  <section class="services" id="services">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">Home Exterior Services</p>
-        <h2>Window cleaning &amp; pressure washing in Richmond, VA</h2>
-        <p>From streak-free glass to like-new driveways, one crew handles it all with careful, thorough, professional work.</p>
+        <p class="script eyebrow">Home Exterior Services</p>
+        <h2>Window Cleaning &amp; Pressure Washing in Richmond, VA</h2>
+        <span class="teal-bar"></span>
+        <p class="section-sub">From streak-free glass to like-new driveways, one crew handles it all with careful, thorough, professional work.</p>
       </div>
-      <div class="cards-3">
-        <article class="svc-card reveal">
-          <div class="thumb"><img src="assets/svc-window.webp" alt="Jet's technician cleaning residential windows with a water-fed pole" loading="lazy" /></div>
-          <div class="svc-body">
-            <span class="svc-ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M12 3v18M4 12h16"/></svg></span>
+      <div class="card-grid">
+        <article class="retro-card reveal">
+          <div class="card-photo">
+            <img src="assets/svc-window.webp" alt="Jet's technician cleaning residential windows with a water-fed pole in Richmond" loading="lazy" />
+            <span class="card-badge"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="#fff" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M12 3v18M4 12h16"/></svg></span>
+          </div>
+          <div class="card-body">
             <h3>Window Cleaning</h3>
-            <p>Interior and exterior residential window cleaning with a streak-free finish. Screens and sills included. Our flagship service.</p>
-            <a class="card-link" href="services.html">Get a Quote →</a>
+            <p>Interior and exterior residential window cleaning with a streak-free finish. Our flagship service.</p>
+            <a href="services.html" class="script-link">Get A Quote</a>
           </div>
         </article>
-        <article class="svc-card reveal">
-          <div class="thumb"><img src="assets/svc-pressure.webp" alt="Pressure washing a concrete driveway back to like-new" loading="lazy" /></div>
-          <div class="svc-body">
-            <span class="svc-ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 1 1-12 0c0-3.5 3-7 6-11z"/></svg></span>
+        <article class="retro-card reveal">
+          <div class="card-photo">
+            <img src="assets/svc-pressure.webp" alt="Pressure washing a driveway back to like-new in Richmond, VA" loading="lazy" />
+            <span class="card-badge"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="#fff" stroke-width="1.6"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 1 1-12 0c0-3.5 3-7 6-11z"/></svg></span>
+          </div>
+          <div class="card-body">
             <h3>Pressure Washing</h3>
-            <p>Driveways, concrete, patios, and walkways power washed back to like-new condition — careful around plants and landscaping.</p>
-            <a class="card-link" href="services.html">Get a Quote →</a>
+            <p>Driveways, concrete, patios, and walkways power washed back to like-new condition.</p>
+            <a href="services.html" class="script-link">Get A Quote</a>
           </div>
         </article>
-        <article class="svc-card reveal">
-          <div class="thumb"><img src="assets/svc-house.webp" alt="Soft washing a home exterior to remove dirt and algae" loading="lazy" /></div>
-          <div class="svc-body">
-            <span class="svc-ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></span>
+        <article class="retro-card reveal">
+          <div class="card-photo">
+            <img src="assets/svc-house.webp" alt="Soft washing a home exterior to remove dirt and algae" loading="lazy" />
+            <span class="card-badge"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="#fff" stroke-width="1.6"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></span>
+          </div>
+          <div class="card-body">
             <h3>House Soft Washing</h3>
-            <p>Gentle, effective soft washing that removes dirt, algae, and grime without damaging siding, paint, or trim.</p>
-            <a class="card-link" href="services.html">Get a Quote →</a>
+            <p>Gentle, effective soft washing that removes dirt, algae, and grime without damaging siding.</p>
+            <a href="services.html" class="script-link">Get A Quote</a>
           </div>
         </article>
       </div>
+      <div class="center-btn reveal"><a href="#quote" class="btn btn-deep">Get A Free Quote</a></div>
     </div>
   </section>
 
@@ -383,17 +390,23 @@
   </section>
 
   <!-- Service areas -->
-  <section id="areas">
-    <div class="container">
-      <div class="areas-card reveal">
-        <p class="eyebrow">Your Local Experts</p>
-        <h2>Serving Short Pump, Henrico &amp; greater Richmond</h2>
-        <p>We cover the greater Richmond area — as far north as Ashland, west to Goochland, south to Midlothian and Chesterfield, and east to the city of Richmond.</p>
-        <div class="area-pills">
-          <span>Short Pump</span><span>Henrico</span><span>Glen Allen</span><span>Richmond</span><span>Midlothian</span><span>Tuckahoe</span><span>Ashland</span><span>Goochland</span><span>Manakin-Sabot</span><span>Hanover</span><span>Mechanicsville</span><span>Chesterfield</span>
-        </div>
-        <p class="areas-note">Including neighborhoods like Foxhall, Barrington, Mooreland Farms, Colonial Place, Windsor Farms &amp; Wyndham.</p>
-        <div class="mt-cta" style="margin-top:26px"><a class="btn btn-primary btn-lg" href="#quote">Get A Free Quote</a></div>
+  <section class="service-area" id="areas">
+    <div class="container service-area-inner">
+      <div class="area-map reveal">
+        <iframe src="https://www.google.com/maps?q=Short+Pump,+Henrico,+VA&z=10&output=embed" width="100%" height="440" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Jet's Window Cleaning service area map"></iframe>
+      </div>
+      <div class="area-copy reveal">
+        <p class="script eyebrow">Your Local Experts</p>
+        <h2>Serving Short Pump, Henrico &amp; Greater Richmond</h2>
+        <span class="teal-bar left"></span>
+        <p>We cover the greater Richmond area, as far north as Ashland, west to Goochland, south to Midlothian and Chesterfield, and east to the city of Richmond.</p>
+        <ul class="area-list">
+          <li>Short Pump</li><li>Henrico</li><li>Glen Allen</li>
+          <li>Richmond</li><li>Midlothian</li><li>Tuckahoe</li>
+          <li>Ashland</li><li>Goochland</li><li>Manakin-Sabot</li>
+          <li>Chesterfield</li><li>Hanover</li><li>Mechanicsville</li>
+        </ul>
+        <a href="#quote" class="btn btn-deep">Get A Free Quote</a>
       </div>
     </div>
   </section>
@@ -412,72 +425,77 @@
   </section>
 
   <!-- Quote form -->
-  <section class="quote-section" id="quote">
-    <div class="container quote-grid">
+  <section class="quote" id="quote">
+    <div class="container quote-inner">
       <div class="quote-copy reveal">
-        <p class="eyebrow">Free, No-Pressure Quotes</p>
-        <h2>Get your free quote today</h2>
-        <p>Tell us a little about your home and we'll get back to you fast with an honest quote. Prefer to talk? Call or text <a href="tel:+18044187338">(804) 418-7338</a> — 8am to 8pm, seven days a week.</p>
+        <p class="script eyebrow teal-script">Free, No-Pressure Quotes</p>
+        <h2>Get Your Free Quote Today</h2>
+        <span class="accent-bar"></span>
+        <p>Tell us a little about your home and we'll get back to you fast with an honest quote. Prefer to talk? Call or text <a href="tel:+18044187338">(804) 418-7338</a>, 8am to 8pm, seven days a week.</p>
+        <img src="assets/team-crew.webp" alt="The Jet's crew with their trucks in Richmond, VA" class="quote-photo" loading="lazy" />
       </div>
-      <form class="quote-full reveal" data-quote aria-label="Request a free quote">
-        <div class="fr">
-          <label>Full Name<input type="text" name="name" placeholder="Your name" required /></label>
-          <label>Phone<input type="tel" name="phone" placeholder="(804) 555-0123" required /></label>
+      <form class="quote-form reveal" data-quote aria-label="Request a free quote">
+        <div class="form-row">
+          <label>Full Name<input type="text" name="name" required autocomplete="name" placeholder="Your name" /></label>
+          <label>Phone<input type="tel" name="phone" required autocomplete="tel" placeholder="(804) 555-0123" /></label>
         </div>
-        <div class="fr">
-          <label>Email<input type="email" name="email" placeholder="you@email.com" /></label>
+        <div class="form-row">
+          <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@email.com" /></label>
           <label>City / Neighborhood<input type="text" name="city" placeholder="e.g. Short Pump" /></label>
         </div>
         <label>Service Needed
-          <select name="service">
-            <option>Window Cleaning</option><option>Pressure Washing</option><option>House Soft Washing</option><option>Windows + Pressure Combo</option><option>Not sure yet</option>
-          </select>
+          <select name="service"><option>Window Cleaning</option><option>Pressure Washing</option><option>House Soft Washing</option><option>Windows + Pressure Combo</option><option>Not sure yet</option></select>
         </label>
-        <label>Tell Us About The Job<textarea name="message" rows="3" placeholder="Number of windows, home size, anything helpful..."></textarea></label>
-        <button type="submit" class="btn btn-primary btn-lg btn-block">Request My Free Quote</button>
+        <label>Tell Us About The Job<textarea name="message" rows="4" placeholder="Number of windows, home size, anything helpful..."></textarea></label>
+        <button type="submit" class="btn btn-teal btn-lg full">Request My Free Quote</button>
+        <p class="form-note">We'll reach out the same day whenever possible.</p>
       </form>
     </div>
   </section>
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="brand-name">Jet's<small>Window Cleaning &amp; Pressure Washing</small></span>
-        <p style="margin-top:16px">Founder-owned window cleaning and pressure washing, proudly serving greater Richmond since 2023.</p>
+      <div class="footer-card">
+        <p class="script footer-script">Office Information</p>
+        <span class="teal-bar left small"></span>
+        <h4 class="office-label">Richmond, VA</h4>
+        <p class="office-addr">Serving the greater Richmond area</p>
+        <p class="office-hours"><strong>Every Day</strong><br />8:00am - 8:00pm EST</p>
+        <p class="office-emergency">Free Estimates</p>
+      </div>
+
+      <div class="footer-center">
+        <img src="assets/logo.png" alt="Jet's Window Cleaning & Pressure Washing logo" class="footer-logo" />
+        <p class="footer-call">Call Today: <a href="tel:+18044187338">(804) 418-7338</a></p>
         <div class="socials">
           <a href="https://www.facebook.com/jetswindows" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5H17V3.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1V10H7.9v3h2.7v8h2.9z"/></svg></a>
           <a href="https://www.instagram.com/jetswindows" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
         </div>
+        <p class="footer-license">Licensed &amp; Insured &nbsp;|&nbsp; <a href="mailto:info@jetswindows.com" style="color:inherit">info@jetswindows.com</a></p>
+        <nav class="footer-links" aria-label="Legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Site Map</a>
+        </nav>
       </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html">Window Cleaning</a></li>
-          <li><a href="services.html">Pressure Washing</a></li>
-          <li><a href="services.html">House Soft Washing</a></li>
-          <li><a href="results.html">Before &amp; After</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="tel:+18044187338">(804) 418-7338</a></li>
-          <li><a href="mailto:info@jetswindows.com">info@jetswindows.com</a></li>
-          <li>Mon–Sun, 8:00am – 8:00pm</li>
-          <li>Serving Greater Richmond, VA</li>
-          <li><a href="#quote">Get a Free Quote</a></li>
-        </ul>
+
+      <div class="footer-card">
+        <p class="script footer-script">Helpful Links</p>
+        <span class="teal-bar small"></span>
+        <div class="footer-btns">
+          <a href="#quote" class="btn btn-teal full">Get A Free Quote</a>
+          <a href="services.html" class="btn btn-deep full">Our Services</a>
+          <a href="results.html" class="btn btn-deep full">Before &amp; After</a>
+          <a href="#reviews" class="btn btn-deep full">Reviews</a>
+          <a href="#areas" class="btn btn-deep full">Service Areas</a>
+          <a href="blog.html" class="btn btn-deep full">Blog</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="legal">
-        <span>© 2026 Jet's Window Cleaning &amp; Pressure Washing</span>
-        <span>·</span><span>Licensed &amp; Insured</span>
-        <span>·</span><span>Satisfaction Guaranteed</span>
-      </div>
+      <p>&copy; 2026 Jet's Window Cleaning &amp; Pressure Washing | All Rights Reserved.</p>
     </div>
   </footer>
 
