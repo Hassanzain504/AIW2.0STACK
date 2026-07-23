@@ -17,10 +17,36 @@ export default function Footer() {
           </div>
           <FooterCol
             title="Services"
-            items={['Custom websites', 'Local SEO', 'Google Ads', 'Lead funnels', 'Hosting', 'Photography']}
+            items={[
+              { label: 'Custom websites', href: '/services/website-design/' },
+              { label: 'Local SEO', href: '/services/local-seo/' },
+              { label: 'Google Ads', href: '/services/google-ads/' },
+              { label: 'Lead funnels', href: '/#services' },
+              { label: 'Hosting', href: '/#services' },
+              { label: 'Photography', href: '/#services' },
+            ]}
           />
-          <FooterCol title="Trades" items={['Electricians', 'Plumbers', 'Roofers', 'HVAC', 'Landscapers', 'See all →']} />
-          <FooterCol title="Company" items={['Work', 'Process', 'Pricing', 'FAQ', 'Careers', 'Contact']} />
+          <FooterCol
+            title="Trades"
+            items={[
+              { label: 'Window cleaning', href: '/window-cleaning-marketing/' },
+              { label: 'Pressure washing', href: '/pressure-washing-marketing/' },
+              { label: 'Roofing', href: '/roofing-marketing/' },
+              { label: 'HVAC', href: '/hvac-marketing/' },
+              { label: 'Plumbing', href: '/plumbing-marketing/' },
+              { label: 'See all →', href: '/window-cleaning-marketing/' },
+            ]}
+          />
+          <FooterCol
+            title="Company"
+            items={[
+              { label: 'Work', href: '/#work' },
+              { label: 'Process', href: '/#process' },
+              { label: 'Pricing', href: '/pricing/' },
+              { label: 'FAQ', href: '/#faq' },
+              { label: 'Contact', href: '#cta' },
+            ]}
+          />
         </div>
         <div
           style={{
@@ -51,7 +77,7 @@ export default function Footer() {
   );
 }
 
-function FooterCol({ title, items }: { title: string; items: string[] }) {
+function FooterCol({ title, items }: { title: string; items: { label: string; href: string }[] }) {
   return (
     <div>
       <div className="mono" style={{ fontSize: 11, letterSpacing: '0.15em', opacity: 0.55, textTransform: 'uppercase' }}>
@@ -59,9 +85,9 @@ function FooterCol({ title, items }: { title: string; items: string[] }) {
       </div>
       <ul style={{ listStyle: 'none', padding: 0, margin: '16px 0 0' }}>
         {items.map((i) => (
-          <li key={i} style={{ fontSize: 14, padding: '6px 0', opacity: 0.85 }}>
-            <a href="#" style={{ textDecoration: 'none', color: 'inherit' }}>
-              {i}
+          <li key={i.label} style={{ fontSize: 14, padding: '6px 0', opacity: 0.85 }}>
+            <a href={i.href} style={{ textDecoration: 'none', color: 'inherit' }}>
+              {i.label}
             </a>
           </li>
         ))}

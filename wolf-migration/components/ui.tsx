@@ -112,7 +112,10 @@ type IconName =
   | 'plumbing'
   | 'electrician'
   | 'hvac'
-  | 'window';
+  | 'window'
+  | 'pressurewash'
+  | 'landscaping'
+  | 'painting';
 
 export const NavIcon = ({
   name,
@@ -187,6 +190,27 @@ export const NavIcon = ({
         <rect x="4" y="3" width="16" height="18" rx="1" />
         <path d="M12 3v18M4 12h16" />
         <path d="M15.5 7.5l2.5 2" />
+      </g>
+    ),
+    pressurewash: (
+      <g {...pr}>
+        <path d="M4 20h9a5 5 0 0 0 5-5V7" />
+        <path d="M18 4h3v3h-3z" />
+        <path d="M8 20l1-4M12 20l1-4M4 20l1-4" />
+      </g>
+    ),
+    landscaping: (
+      <g {...pr}>
+        <path d="M12 21v-7" />
+        <path d="M12 14c-4 0-6-3-6-6 4 0 6 3 6 6z" />
+        <path d="M12 12c0-3 2-6 6-6 0 3-2 6-6 6z" />
+      </g>
+    ),
+    painting: (
+      <g {...pr}>
+        <rect x="3" y="4" width="13" height="6" rx="1" />
+        <path d="M16 7h4v4h-7" />
+        <path d="M12 11v4h-2v6" />
       </g>
     ),
   };
@@ -314,24 +338,25 @@ export function Stat({ big, unit, label }: { big: string; unit: string; label: s
   );
 }
 
-// Shared nav menu data
+// Shared nav menu data. Trade links point to the real per-trade landing pages.
 export const NAV_TRADES = [
-  { icon: 'general' as const, label: 'General Contractors', slug: 'general-contractors' },
-  { icon: 'remodel' as const, label: 'Remodeling', slug: 'remodeling' },
-  { icon: 'roofing' as const, label: 'Roofing', slug: 'roofing' },
-  { icon: 'builders' as const, label: 'Home Builders', slug: 'home-builders' },
-  { icon: 'commercial' as const, label: 'Commercial', slug: 'commercial' },
-  { icon: 'plumbing' as const, label: 'Plumbing', slug: 'plumbing' },
-  { icon: 'electrician' as const, label: 'Electrician', slug: 'electrician' },
-  { icon: 'hvac' as const, label: 'HVAC', slug: 'hvac' },
-  { icon: 'window' as const, label: 'Window Cleaning', slug: 'window-cleaning' },
+  { icon: 'window' as const, label: 'Window Cleaning', href: '/window-cleaning-marketing/' },
+  { icon: 'pressurewash' as const, label: 'Pressure Washing', href: '/pressure-washing-marketing/' },
+  { icon: 'roofing' as const, label: 'Roofing', href: '/roofing-marketing/' },
+  { icon: 'hvac' as const, label: 'HVAC', href: '/hvac-marketing/' },
+  { icon: 'plumbing' as const, label: 'Plumbing', href: '/plumbing-marketing/' },
+  { icon: 'electrician' as const, label: 'Electrician', href: '/electrician-marketing/' },
+  { icon: 'landscaping' as const, label: 'Landscaping', href: '/landscaping-marketing/' },
+  { icon: 'painting' as const, label: 'Painting', href: '/painting-contractor-marketing/' },
+  { icon: 'remodel' as const, label: 'Remodeling', href: '/remodeling-marketing/' },
+  { icon: 'general' as const, label: 'General Contractor', href: '/general-contractor-marketing/' },
 ];
 
 export const NAV_SERVICES = [
-  { icon: 'general' as const, slug: 'custom-trade-sites', t: 'Custom Trade Sites', d: 'Fast, mobile-first sites built to book the call' },
-  { icon: 'commercial' as const, slug: 'local-seo', t: 'Local SEO That Ranks', d: 'Own the map pack in every town you serve' },
-  { icon: 'electrician' as const, slug: 'google-ads', t: 'Google Ads Management', d: 'Fill the calendar with ready-to-book leads' },
-  { icon: 'plumbing' as const, slug: 'lead-funnels', t: 'Lead Gen Funnels', d: 'Quote pages that convert 3–5× better' },
-  { icon: 'hvac' as const, slug: 'hosting-speed', t: 'Hosting & Speed', d: 'Sub-1s load times, 99.98% uptime' },
-  { icon: 'remodel' as const, slug: 'content-photography', t: 'Content & Photography', d: 'Real shoots of your crew, trucks & jobs' },
+  { icon: 'general' as const, href: '/services/website-design/', t: 'Custom Trade Sites', d: 'Fast, mobile-first sites built to book the call' },
+  { icon: 'commercial' as const, href: '/services/local-seo/', t: 'Local SEO That Ranks', d: 'Own the map pack in every town you serve' },
+  { icon: 'electrician' as const, href: '/services/google-ads/', t: 'Google Ads Management', d: 'Fill the calendar with ready-to-book leads' },
+  { icon: 'plumbing' as const, href: '/#services', t: 'Lead Gen Funnels', d: 'Quote pages that convert 3–5× better' },
+  { icon: 'hvac' as const, href: '/#services', t: 'Hosting & Speed', d: 'Sub-1s load times, 99.98% uptime' },
+  { icon: 'remodel' as const, href: '/#services', t: 'Content & Photography', d: 'Real shoots of your crew, trucks & jobs' },
 ];

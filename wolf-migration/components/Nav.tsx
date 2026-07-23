@@ -78,17 +78,17 @@ export default function Nav() {
         <Logo />
         <nav style={{ display: 'flex', gap: 28, marginLeft: 40, fontSize: 14, fontWeight: 500, alignItems: 'center' }}>
           <a
-            href="Services.html"
+            href="/#services"
             onMouseEnter={() => setOpen('services')}
             style={{ ...linkStyle, color: open === 'services' ? 'var(--accent)' : 'inherit' }}
           >
             Services {caret(open === 'services')}
           </a>
-          <a href="#work" onMouseEnter={() => setOpen(null)} style={linkStyle}>
+          <a href="/#work" onMouseEnter={() => setOpen(null)} style={linkStyle}>
             Work
           </a>
           <a
-            href="Trades We Serve.html"
+            href="/window-cleaning-marketing/"
             onMouseEnter={() => setOpen('trades')}
             style={{ ...linkStyle, color: open === 'trades' ? 'var(--accent)' : 'inherit' }}
           >
@@ -188,7 +188,7 @@ function NavServicesMenu() {
         {NAV_SERVICES.map((s) => (
           <a
             key={s.t}
-            href={`Services.html#/s/${s.slug}`}
+            href={s.href}
             style={{
               display: 'flex',
               gap: 12,
@@ -237,8 +237,8 @@ function NavTradesMenu() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 4 }}>
         {NAV_TRADES.map((n) => (
           <a
-            key={n.slug}
-            href={`Trades We Serve.html#/t/${n.slug}`}
+            key={n.href}
+            href={n.href}
             style={{
               display: 'flex',
               gap: 10,
@@ -260,7 +260,7 @@ function NavTradesMenu() {
         ))}
       </div>
       <a
-        href="Trades We Serve.html"
+        href="/window-cleaning-marketing/"
         style={{
           display: 'flex',
           justifyContent: 'space-between',
