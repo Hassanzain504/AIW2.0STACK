@@ -1,0 +1,29 @@
+[
+  {
+    "id": "th_third_one",
+    "text": "I think that's the third one.",
+    "voice": "en-US-AndrewNeural",
+    "emphasis": "think"
+  },
+  {
+    "id": "schwa_computer",
+    "text": "The computer in the corner needs a banana.",
+    "voice": "en-US-EmmaNeural"
+  },
+  {
+    "id": "vw_very_well",
+    "text": "We visited Vienna very well prepared.",
+    "voice": "en-US-GuyNeural"
+  },
+  {
+    "id": "rhythm_party",
+    "text": "Can you come to the party on Saturday?",
+    "voice": "en-US-AndrewNeural",
+    "emphasis": "party"
+  },
+  {
+    "id": "assessment_rainbow",
+    "text": "When the sunlight strikes raindrops in the air, they act as a prism and form a rainbow.",
+    "voice": "en-US-EmmaNeural"
+  }
+]
