@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "n8n": {
+      "type": "http",
+      "url": "https://n8n-j9pt.srv1818828.hstgr.cloud/mcp-server/http",
+      "headers": {
+        "Authorization": "Bearer ${N8N_MCP_TOKEN}"
+      }
+    },
+    "n8n-manage": {
+      "command": "npx",
+      "args": ["-y", "n8n-mcp"],
+      "env": {
+        "MCP_MODE": "stdio",
+        "LOG_LEVEL": "error",
+        "DISABLE_CONSOLE_OUTPUT": "true",
+        "N8N_API_URL": "https://n8n-j9pt.srv1818828.hstgr.cloud",
+        "N8N_API_KEY": "${N8N_API_KEY}"
+      }
+    }
+  }
+}
