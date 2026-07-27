@@ -105,7 +105,14 @@
     flex: 0 0 auto;
   }
 
-  .logo-mark svg { display: block; }
+  .logo-mark .w {
+    font-family: 'Anton', 'Impact', sans-serif;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--cream);
+    transform: translateY(1px);
+    text-transform: uppercase;
+  }
 
   .brand-name {
     font-family: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
@@ -145,9 +152,7 @@
 
     <div class="brand">
       <div class="logo-mark">
-        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 3 L9 3 L13 9 L17 3 L23 3 L16 13 L23 23 L17 23 L13 17 L9 23 L3 23 L10 13 Z" fill="#F1E9D8"/>
-        </svg>
+        <span class="w">W</span>
       </div>
       <div class="brand-name">WOLFCONTRACTOR.COM</div>
     </div>
