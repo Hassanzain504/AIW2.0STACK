@@ -4,147 +4,172 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
 :root{
-  --paper:#F3F1ED; --card:#FFFFFF; --card2:#EAE7E1; --card3:#DFDBD3;
-  --line:#D6D1C8; --line2:#B5AEA2;
-  --ink:#16191C; --ink2:#4C5359; --ink3:#7A828A;
-  --accent:#1B5C82; --accent2:#2C7BA8; --accent-bg:#DDEAF2;
-  --bad:#A8382A; --bad-bg:#F7E3DF; --bad-line:#DDA79C;
-  --good:#1B6E4E; --good-bg:#DDEFE5; --good-line:#93C7AC;
-  --warn:#94620F; --warn-bg:#F5E9CF; --warn-line:#D3B473;
-  --shade:0 1px 2px rgba(22,25,28,.05), 0 10px 30px -22px rgba(22,25,28,.4);
+  --paper:#F2F2F0; --card:#FFFFFF; --card2:#E9E9E6; --card3:#DEDEDA;
+  --line:#D4D4CF; --line2:#B2B2AC;
+  --ink:#14171A; --ink2:#4A5157; --ink3:#787F86;
+  --accent:#0E637F; --accent2:#1682A6; --accent-bg:#DCEDF3;
+  --bad:#A6362A; --bad-bg:#F7E2DE; --bad-line:#DBA69C;
+  --good:#1A6B4C; --good-bg:#DCEEE4; --good-line:#8FC5AA;
+  --warn:#8F5D0D; --warn-bg:#F5E7CC; --warn-line:#D1B06E;
+  --band:#14171A; --bandink:#F2F2F0;
+  --shade:0 1px 2px rgba(20,23,26,.05), 0 12px 34px -24px rgba(20,23,26,.45);
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --paper:#0F1315; --card:#171C1F; --card2:#1F2529; --card3:#272E33;
-    --line:#2B3237; --line2:#414A51;
-    --ink:#E8EBED; --ink2:#A2ADB5; --ink3:#727E87;
-    --accent:#63AED6; --accent2:#84C3E4; --accent-bg:#14293A;
-    --bad:#EC8D79; --bad-bg:#2D1712; --bad-line:#6B372B;
-    --good:#54C495; --good-bg:#0F2A1F; --good-line:#2C6349;
-    --warn:#DFA950; --warn-bg:#2C2210; --warn-line:#6A5222;
-    --shade:0 1px 2px rgba(0,0,0,.5), 0 10px 30px -22px rgba(0,0,0,.9);
+    --paper:#0C0F11; --card:#14181B; --card2:#1C2226; --card3:#252C31;
+    --line:#282F34; --line2:#3E474E;
+    --ink:#E7EAEC; --ink2:#A0ABB2; --ink3:#6F7B83;
+    --accent:#55B4D4; --accent2:#7ACAE4; --accent-bg:#0F2C38;
+    --bad:#EB8B76; --bad-bg:#2C1611; --bad-line:#69352A;
+    --good:#52C193; --good-bg:#0E281E; --good-line:#2A6147;
+    --warn:#DDA64C; --warn-bg:#2A2110; --warn-line:#675020;
+    --band:#05080A; --bandink:#E7EAEC;
+    --shade:0 1px 2px rgba(0,0,0,.55), 0 12px 34px -24px rgba(0,0,0,.95);
   }
 }
 :root[data-theme="dark"]{
-  --paper:#0F1315; --card:#171C1F; --card2:#1F2529; --card3:#272E33;
-  --line:#2B3237; --line2:#414A51;
-  --ink:#E8EBED; --ink2:#A2ADB5; --ink3:#727E87;
-  --accent:#63AED6; --accent2:#84C3E4; --accent-bg:#14293A;
-  --bad:#EC8D79; --bad-bg:#2D1712; --bad-line:#6B372B;
-  --good:#54C495; --good-bg:#0F2A1F; --good-line:#2C6349;
-  --warn:#DFA950; --warn-bg:#2C2210; --warn-line:#6A5222;
-  --shade:0 1px 2px rgba(0,0,0,.5), 0 10px 30px -22px rgba(0,0,0,.9);
+  --paper:#0C0F11; --card:#14181B; --card2:#1C2226; --card3:#252C31;
+  --line:#282F34; --line2:#3E474E;
+  --ink:#E7EAEC; --ink2:#A0ABB2; --ink3:#6F7B83;
+  --accent:#55B4D4; --accent2:#7ACAE4; --accent-bg:#0F2C38;
+  --bad:#EB8B76; --bad-bg:#2C1611; --bad-line:#69352A;
+  --good:#52C193; --good-bg:#0E281E; --good-line:#2A6147;
+  --warn:#DDA64C; --warn-bg:#2A2110; --warn-line:#675020;
+  --band:#05080A; --bandink:#E7EAEC;
+  --shade:0 1px 2px rgba(0,0,0,.55), 0 12px 34px -24px rgba(0,0,0,.95);
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);
   font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1010px;margin:0 auto;padding:0 22px}
 .mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
-.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
 
-/* masthead */
-.mast{border-bottom:3px solid var(--ink);background:var(--card)}
-.mast .wrap{padding-top:34px;padding-bottom:26px}
-.tagrow{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:baseline;
-  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--ink3);font-weight:600}
-.tagrow .hot{color:var(--accent)}
+/* ══ masthead ══ */
+.mast{background:var(--band);color:var(--bandink)}
+.mast .wrap{padding:30px 22px 34px}
+.lockup{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;
+  padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.16)}
+.mark{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;
+  letter-spacing:.13em;text-transform:uppercase;line-height:1}
+.mark span{color:#55B4D4}
+.lockup .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.6;font-weight:600;text-align:right}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.17em;
+  text-transform:uppercase;color:#55B4D4;font-weight:600;margin-top:26px}
 h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
-  font-size:clamp(38px,7vw,66px);line-height:.98;letter-spacing:-.01em;
-  margin:14px 0 0;text-transform:uppercase;text-wrap:balance}
-.lede{font-size:17px;color:var(--ink2);max-width:62ch;margin:16px 0 0}
-.prep{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);
-  display:flex;flex-wrap:wrap;gap:8px 34px;font-size:13.5px;color:var(--ink2)}
-.prep b{color:var(--ink);font-weight:600}
+  font-size:clamp(40px,7.4vw,72px);line-height:.95;letter-spacing:-.012em;
+  margin:12px 0 0;text-transform:uppercase;text-wrap:balance}
+.lede{font-size:17.5px;color:rgba(231,234,236,.72);max-width:64ch;margin:18px 0 0}
+.prep{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px 30px}
+.prep div span{display:block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  letter-spacing:.14em;text-transform:uppercase;opacity:.5;font-weight:600;margin-bottom:4px}
+.prep div b{font-weight:600;font-size:15px}
 
-/* stat strip */
-.stats{background:var(--ink);color:var(--paper)}
-.stats .wrap{padding:0}
-.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
-.stat{padding:22px 20px;border-left:1px solid rgba(255,255,255,.13)}
+/* ══ stat strip ══ */
+.stats{background:var(--card);border-bottom:1px solid var(--line)}
+.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr))}
+.stat{padding:20px;border-left:1px solid var(--line)}
 .stat:first-child{border-left:none}
-.stat .n{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:40px;
-  line-height:1;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
-.stat .k{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;
-  text-transform:uppercase;opacity:.62;margin-top:7px;font-weight:600}
-.stat.r .n{color:#F5947E} .stat.g .n{color:#6FD3A4} .stat.b .n{color:#7CC0E6}
+.stat .n{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:38px;
+  line-height:1;font-variant-numeric:tabular-nums}
+.stat .k{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink3);margin-top:7px;font-weight:600}
+.stat.r .n{color:var(--bad)} .stat.b .n{color:var(--accent)} .stat.g .n{color:var(--good)}
 
-/* sections */
-section{padding:52px 0 8px}
-.shead{display:flex;gap:16px;align-items:baseline;margin-bottom:8px}
-.sno{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:13px;
-  color:var(--accent);letter-spacing:.1em;padding-top:6px}
+/* ══ sections ══ */
+section{padding:54px 0 6px}
+.shead{display:flex;gap:15px;align-items:baseline}
+.sno{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12.5px;
+  color:var(--accent);letter-spacing:.11em;padding-top:7px;flex-shrink:0}
 h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;
-  font-size:clamp(26px,4vw,38px);line-height:1.04;margin:0;text-transform:uppercase;
-  letter-spacing:-.005em;text-wrap:balance}
-.sdek{color:var(--ink2);font-size:16px;max-width:64ch;margin:2px 0 26px 44px}
+  font-size:clamp(27px,4.2vw,40px);line-height:1.02;margin:0;text-transform:uppercase;
+  letter-spacing:-.006em;text-wrap:balance}
+.sdek{color:var(--ink2);font-size:16.5px;max-width:66ch;margin:8px 0 26px 43px}
 @media(max-width:640px){.sdek{margin-left:0}}
-h3{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:21px;
-  text-transform:uppercase;letter-spacing:.01em;margin:34px 0 12px}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:22px;
+  text-transform:uppercase;letter-spacing:.012em;margin:36px 0 12px;
+  padding-bottom:7px;border-bottom:2px solid var(--ink)}
+h4.sub{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:17px;
+  text-transform:uppercase;letter-spacing:.03em;color:var(--accent);margin:22px 0 8px}
 
-/* fault cards */
+/* ══ tables ══ */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--card);
+  box-shadow:var(--shade)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:600px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:12px 14px;border-bottom:2px solid var(--line2);background:var(--card2);white-space:nowrap}
+th.you{color:var(--bad)}
+td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.you{background:var(--bad-bg);font-weight:600;color:var(--bad)}
+td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+td.no{color:var(--bad);font-weight:600} td.yes{color:var(--good);font-weight:600}
+td.lab{font-weight:500}
+
+/* ══ faults ══ */
 .faults{display:flex;flex-direction:column;gap:1px;background:var(--line);
   border:1px solid var(--line);border-radius:3px;overflow:hidden}
-.fault{background:var(--card);padding:16px 18px;display:grid;
-  grid-template-columns:auto 1fr;gap:14px}
-.sev{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
-  letter-spacing:.1em;text-transform:uppercase;padding:4px 7px;border-radius:2px;
-  height:fit-content;white-space:nowrap;border:1px solid}
+.fault{background:var(--card);padding:15px 17px;display:grid;grid-template-columns:auto 1fr;gap:13px}
+.sev{font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;padding:4px 7px;border-radius:2px;height:fit-content;
+  white-space:nowrap;border:1px solid}
 .sev.c{background:var(--bad-bg);color:var(--bad);border-color:var(--bad-line)}
 .sev.h{background:var(--warn-bg);color:var(--warn);border-color:var(--warn-line)}
 .sev.m{background:var(--card3);color:var(--ink2);border-color:var(--line2)}
-.fault .ft{font-weight:600;font-size:16px;line-height:1.35}
+.fault .ft{font-weight:600;font-size:15.5px;line-height:1.35}
 .fault .fd{font-size:14.5px;color:var(--ink2);margin-top:5px}
-.fault code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;
-  background:var(--card2);padding:1px 5px;border-radius:2px;color:var(--ink)}
+code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--card2);
+  padding:1px 5px;border-radius:2px;color:var(--ink)}
 
-/* tables */
-.tw{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--card)}
-table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
-th{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.11em;
-  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
-  padding:11px 14px;border-bottom:1px solid var(--line);background:var(--card2);
-  white-space:nowrap}
-td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:last-child td{border-bottom:none}
-td.no{color:var(--bad);font-weight:600} td.yes{color:var(--good);font-weight:600}
-td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
-
-/* conversion checklist */
-.cx{display:flex;flex-direction:column;gap:12px}
-.cxi{background:var(--card);border:1px solid var(--line);border-radius:3px;
-  border-left:3px solid var(--bad);padding:16px 18px}
-.cxi.has{border-left-color:var(--good)}
-.cxtop{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between}
-.cxn{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;
-  text-transform:uppercase;letter-spacing:.01em}
-.pill{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
-  letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:2px;
-  border:1px solid var(--bad-line);background:var(--bad-bg);color:var(--bad);white-space:nowrap}
-.pill.ok{border-color:var(--good-line);background:var(--good-bg);color:var(--good)}
-.cxw{font-size:14.5px;color:var(--ink2);margin:8px 0 0}
-.seelive{display:inline-flex;align-items:center;gap:8px;margin-top:11px;
-  font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;
-  color:var(--accent);text-decoration:none;padding:6px 11px;border-radius:2px;
-  background:var(--accent-bg);border:1px solid transparent;word-break:break-all}
-.seelive:hover{border-color:var(--accent);text-decoration:underline}
-.seelive:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.seelive .lbl{font-weight:600;letter-spacing:.06em;text-transform:uppercase;
-  font-size:9.5px;opacity:.85;white-space:nowrap}
-
-/* callout */
+/* ══ callouts ══ */
 .call{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
   border-radius:3px;padding:20px 22px;margin:22px 0;box-shadow:var(--shade)}
 .call.red{border-left-color:var(--bad)}
 .call.green{border-left-color:var(--good)}
-.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;
-  text-transform:uppercase;margin:0 0 8px;letter-spacing:.01em}
-.call p{margin:0 0 10px;font-size:15px;color:var(--ink2)}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;
+  text-transform:uppercase;margin:0 0 9px;letter-spacing:.012em}
+.call p{margin:0 0 10px;font-size:15.5px;color:var(--ink2)}
 .call p:last-child{margin-bottom:0}
 .call strong{color:var(--ink)}
+.tiny{font-size:13px;color:var(--ink3)}
 
-/* math model */
-.model{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:1px;
+/* ══ blueprint ══ */
+.bp{background:var(--card);border:1px solid var(--line);border-radius:3px;
+  margin-bottom:12px;overflow:hidden;box-shadow:var(--shade)}
+.bph{background:var(--card2);padding:13px 18px;border-bottom:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline}
+.bph .bpn{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;
+  text-transform:uppercase;letter-spacing:.012em}
+.bph .bpc{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink3);
+  font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.bph .bpq{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  font-weight:600;letter-spacing:.09em;text-transform:uppercase;padding:3px 8px;
+  border-radius:2px;border:1px solid var(--bad-line);background:var(--bad-bg);color:var(--bad)}
+.bph .bpq.ok{border-color:var(--good-line);background:var(--good-bg);color:var(--good)}
+.bpb{padding:15px 18px}
+ol.secs{margin:0;padding-left:0;list-style:none;counter-reset:s}
+ol.secs li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;gap:11px;
+  padding:8px 0;border-bottom:1px dashed var(--line);font-size:15px}
+ol.secs li:last-child{border-bottom:none}
+ol.secs li::before{content:counter(s,decimal-leading-zero);
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;
+  color:var(--accent);padding-top:4px}
+ol.secs li b{font-weight:600}
+ol.secs li span{color:var(--ink2)}
+.seelive{display:inline-flex;align-items:center;gap:8px;margin-top:12px;
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:500;
+  color:var(--accent);text-decoration:none;padding:6px 11px;border-radius:2px;
+  background:var(--accent-bg);border:1px solid transparent;word-break:break-all}
+.seelive:hover{border-color:var(--accent);text-decoration:underline}
+.seelive:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.seelive .lbl{font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  font-size:9px;opacity:.85;white-space:nowrap}
+
+/* ══ model ══ */
+.model{display:grid;grid-template-columns:repeat(auto-fit,minmax(152px,1fr));gap:1px;
   background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;margin:18px 0}
 .mstep{background:var(--card);padding:16px 15px}
 .mstep .mv{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:30px;
@@ -154,16 +179,16 @@ td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
 .mstep .mn{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.45}
 .mstep:last-child .mv{color:var(--good)}
 
-/* town blocks */
+/* ══ towns ══ */
 .town{background:var(--card);border:1px solid var(--line);border-radius:3px;
-  margin-bottom:14px;overflow:hidden}
-.townh{background:var(--card2);padding:13px 18px;border-bottom:1px solid var(--line);
+  margin-bottom:13px;overflow:hidden}
+.townh{background:var(--card2);padding:12px 18px;border-bottom:1px solid var(--line);
   display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
-.townh .tn{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
-  text-transform:uppercase;letter-spacing:.01em}
-.townh .td{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink3);font-weight:600}
-.townb{padding:6px 18px 14px}
-.comp{padding:12px 0;border-bottom:1px solid var(--line)}
+.townh .tn{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;
+  text-transform:uppercase;letter-spacing:.012em}
+.townh .td{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink3);font-weight:600}
+.townb{padding:4px 18px 12px}
+.comp{padding:11px 0;border-bottom:1px solid var(--line)}
 .comp:last-child{border-bottom:none}
 .compn{font-weight:600;font-size:15.5px}
 .compn a{color:var(--accent);text-decoration:none}
@@ -173,427 +198,638 @@ td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
 
 ul.tight{margin:10px 0 0;padding-left:20px}
 ul.tight li{margin-bottom:7px;font-size:15px;color:var(--ink2)}
-ul.tight li b{color:var(--ink)}
+ul.tight li b{color:var(--ink);font-weight:600}
 
-/* close */
-.close{background:var(--ink);color:var(--paper);margin-top:56px;padding:44px 0 48px}
-.close h2{color:var(--paper)}
-.close .sdek{color:rgba(255,255,255,.68)}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;
-  background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.13);
-  border-radius:3px;overflow:hidden;margin-top:8px}
-.step{background:var(--ink);padding:18px}
-.step .sn{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.11em;
-  color:#7CC0E6;font-weight:600}
-.step .st{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:18px;
+/* ══ close ══ */
+.close{background:var(--band);color:var(--bandink);margin-top:58px;padding:46px 0 50px}
+.close h2{color:var(--bandink)}
+.close .sno{color:#55B4D4}
+.close .sdek{color:rgba(231,234,236,.66)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:1px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);
+  border-radius:3px;overflow:hidden;margin-top:6px}
+.step{background:var(--band);padding:18px}
+.step .sn{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;
+  color:#55B4D4;font-weight:600}
+.step .st{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
   text-transform:uppercase;margin-top:7px}
-.step .sp{font-size:13.5px;opacity:.7;margin-top:6px;line-height:1.5}
-.foot{padding:26px 0 44px;font-size:12.5px;color:var(--ink3);border-top:1px solid var(--line)}
-.foot p{margin:0 0 8px;max-width:78ch}
+.step .sp{font-size:13.5px;opacity:.68;margin-top:6px;line-height:1.5}
+.foot{padding:26px 0 46px;font-size:12.5px;color:var(--ink3)}
+.foot p{margin:0 0 9px;max-width:80ch}
+.foot b{color:var(--ink2)}
 </style>
 
 <header class="mast">
   <div class="wrap">
-    <div class="tagrow">
-      <span>Growth Audit</span>
-      <span class="hot">Website + Google Maps</span>
-      <span>22 August 2026</span>
+    <div class="lockup">
+      <div class="mark">Black<span>&nbsp;Ops</span>&nbsp;Cleaning</div>
+      <div class="meta">Growth Audit<br>23 August 2026</div>
     </div>
-    <h1>Black Ops Cleaning<br>Growth Audit</h1>
-    <p class="lede">A line-by-line review of blackopscleaningco.com and your Google presence,
-      measured against the nine cleaning companies you are competing with across Montgomery
-      County. Everything below was verified directly from your live site and theirs.</p>
+    <div class="kicker">Website &amp; Google Maps Assessment</div>
+    <h1>You are invisible<br>in your own city</h1>
+    <p class="lede">Nine cleaning companies compete for work in Montgomery County. Three of them
+      were measured line by line against blackopscleaningco.com. On every single measure that
+      decides who a customer finds first, Black Ops scores zero. Not low. Zero.</p>
     <div class="prep">
-      <div>Prepared for <b>Amilcar Ayala, Black Ops Cleaning Company LLC</b></div>
-      <div>121 Talbott St, Rockville, MD 20852</div>
-      <div>Prepared by <b>[Your Agency Name]</b></div>
+      <div><span>Prepared for</span><b>Amilcar Ayala</b></div>
+      <div><span>Company</span><b>Black Ops Cleaning Company LLC</b></div>
+      <div><span>Location</span><b>121 Talbott St, Rockville, MD 20852</b></div>
+      <div><span>Prepared by</span><b>Hassan</b></div>
     </div>
   </div>
 </header>
 
 <div class="stats">
-  <div class="wrap">
-    <div class="statgrid">
-      <div class="stat r"><div class="n">7.6 MB</div><div class="k">Homepage weight</div></div>
-      <div class="stat r"><div class="n">4</div><div class="k">Pages on your site</div></div>
-      <div class="stat b"><div class="n">500</div><div class="k">Pages on theirs</div></div>
-      <div class="stat r"><div class="n">0</div><div class="k">Reviews, all platforms</div></div>
-      <div class="stat r"><div class="n">0</div><div class="k">Keywords ranking</div></div>
-    </div>
-  </div>
+  <div class="wrap"><div class="statgrid">
+    <div class="stat r"><div class="n">0</div><div class="k">Search terms you rank for</div></div>
+    <div class="stat r"><div class="n">0</div><div class="k">AI engines that cite you</div></div>
+    <div class="stat r"><div class="n">0</div><div class="k">Reviews, every platform</div></div>
+    <div class="stat r"><div class="n">4</div><div class="k">Pages on your site</div></div>
+    <div class="stat b"><div class="n">2</div><div class="k">Your authority score</div></div>
+  </div></div>
 </div>
 
 <div class="wrap">
 
 <section>
-  <div class="shead"><div class="sno">01</div><h2>What is broken on the website</h2></div>
-  <p class="sdek">Every item here was found by crawling your live site. Nothing is estimated.
-    Severity is ordered by what is costing you customers right now.</p>
+  <div class="shead"><div class="sno">01</div><h2>The scoreboard</h2></div>
+  <p class="sdek">Pulled from Semrush on 23 August 2026, alongside a direct crawl of every site
+    listed. These are the three competitors you are actually losing work to.</p>
 
-  <div class="faults">
-    <div class="fault"><span class="sev c">Critical</span><div>
-      <div class="ft">Your homepage is 7.6 MB. It should be under 1 MB.</div>
-      <div class="fd">Six images on the homepage are over 900 KB each, the largest is
-        <code>Commerical-Buildings.png</code> at 1,297 KB. They are saved as PNG, which is a
-        format meant for logos, not photographs. On a phone on mobile data this is the
-        difference between your page appearing in about one second and about eight. Most people
-        leave before it loads. Your hosting is not the problem, your server responds in 0.28
-        seconds. It is only the images.</div></div></div>
-
-    <div class="fault"><span class="sev c">Critical</span><div>
-      <div class="ft">CDC, EPA and OSHA logos are displayed on your homepage</div>
-      <div class="fd">All three are US federal agencies that restrict use of their seals.
-        Showing them beside your certifications implies an endorsement that does not exist.
-        Given you are pursuing federal contracting work, this is exactly the kind of thing that
-        can disqualify a bidder. It takes ten minutes to remove. We would replace them with
-        accurate wording, which is just as persuasive and is true: "Follows CDC and EPA
-        disinfection guidance", "OSHA bloodborne pathogen compliant".</div></div></div>
-
-    <div class="fault"><span class="sev c">Critical</span><div>
-      <div class="ft">Google has no idea where your business is located</div>
-      <div class="fd">Your site carries no LocalBusiness structured data. There is no phone
-        number, no address, no service area and no coordinates in a format Google can read. Your
-        street address, 121 Talbott St, does not appear anywhere on the website at all, even
-        though it is listed on your Chamber and HomeAdvisor profiles. For a business that lives
-        or dies on local search, this is the cheapest fix with the largest effect.</div></div></div>
-
-    <div class="fault"><span class="sev c">Critical</span><div>
-      <div class="ft">You have four pages. You offer eleven services across three states.</div>
-      <div class="fd">Your entire site is the homepage, About, Contact and one shared Services
-        page. That means nothing on your site can rank for "biohazard cleanup Montgomery County"
-        or "medical facility cleaning Bethesda", because no page is about those things. Clean
-        Method has 500 pages. Tri State Restorations has around 618.</div></div></div>
-
-    <div class="fault"><span class="sev h">High</span><div>
-      <div class="ft">Three of your four pages have no main heading</div>
-      <div class="fd">Services, About and Contact all have zero H1 tags. This is a common
-        Elementor default that nobody changes. Your homepage does have one, but it reads
-        "Precision Cleaning, Every Time", which is a tagline. It contains no service and no
-        location, so it tells Google nothing.</div></div></div>
-
-    <div class="fault"><span class="sev h">High</span><div>
-      <div class="ft">Your homepage and services page are competing against each other</div>
-      <div class="fd">Homepage title: "Professional Cleaning Services in DMV | Black Ops
-        Cleaning". Services page title: "Professional Cleaning Services DMV | Black Ops Cleaning
-        Co." They are nearly identical, so Google has to guess which one to show and neither
-        builds authority.</div></div></div>
-
-    <div class="fault"><span class="sev h">High</span><div>
-      <div class="ft">Your page descriptions sell residential cleaning. Your business does not.</div>
-      <div class="fd">The homepage description says "for homes and businesses" and the services
-        page says "residential, commercial and specialized". But everything else on the site,
-        your ISSA and GBAC certifications, your imagery, and your own positioning is commercial,
-        medical and government. This pulls in homeowner enquiries you cannot serve profitably
-        and confuses Google about what your company actually is. There is also a stray full stop
-        mid-sentence: "Black Ops Cleaning. offers".</div></div></div>
-
-    <div class="fault"><span class="sev h">High</span><div>
-      <div class="ft">22 of your 32 homepage images have no description text</div>
-      <div class="fd">Empty alt attributes. On a page that is mostly images, that is a wasted
-        signal to Google and a page that is unusable for anyone with a screen reader.</div></div></div>
-
-    <div class="fault"><span class="sev m">Medium</span><div>
-      <div class="ft">The two "map" links on your site point at the wrong place</div>
-      <div class="fd">The location link in your footer, on all three pages, resolves to
-        <code>google.com/maps/place/Rockville,+MD,+USA</code>, which is the city of Rockville. A
-        second one on the homepage resolves to the state of Virginia. Neither points at your
-        business. Whoever built the site searched the city in Maps and pasted the share link.</div></div></div>
-
-    <div class="fault"><span class="sev m">Medium</span><div>
-      <div class="ft">Your contact form cannot qualify a commercial enquiry</div>
-      <div class="fd">It collects name, email and message, plus two fields that were never
-        given labels. There is no phone field, no service type, no facility type and no square
-        footage. For commercial cleaning that is the difference between a usable quote request
-        and three emails of back and forth.</div></div></div>
-
-    <div class="fault"><span class="sev m">Medium</span><div>
-      <div class="ft">You advertise emergency response with 9 to 5 hours</div>
-      <div class="fd">Your site sells emergency cleaning and sewage decontamination. Your listed
-        hours are Monday to Friday, 9:00 to 5:00. Sewage backups and biohazard incidents happen
-        at night and at weekends. Every single biohazard competitor in this market advertises
-        24/7. Right now the highest margin calls in your entire service list are going to
-        whoever picks up.</div></div></div>
-
-    <div class="fault"><span class="sev m">Medium</span><div>
-      <div class="ft">You cannot tell where a single lead came from</div>
-      <div class="fd">There is no call tracking on the site. One number appears everywhere, so
-        there is no way to know whether a call came from Google, from Maps, from a truck or from
-        a referral. Until that is fixed, no marketing spend can be judged.</div></div></div>
-  </div>
-</section>
-
-<section>
-  <div class="shead"><div class="sno">02</div><h2>You against the market</h2></div>
-  <p class="sdek">Measured directly from each company's live website and sitemap on
-    22 August 2026.</p>
-
+  <h4 class="sub">Search visibility</h4>
   <div class="tw"><table>
-    <thead><tr>
-      <th>What we checked</th><th>Black Ops</th><th>Clean Method</th>
-      <th>Green Apple</th><th>Tri State</th>
-    </tr></thead>
+    <thead><tr><th>Measure</th><th class="you">Black Ops</th><th>Clean Method</th>
+      <th>Green Apple</th><th>Tri State</th></tr></thead>
     <tbody>
-      <tr><td>Total pages published</td><td class="num no">4</td><td class="num">500</td><td class="num">163</td><td class="num">618</td></tr>
-      <tr><td>Pages targeting a named town</td><td class="num no">0</td><td class="num">15</td><td class="num">7</td><td class="num">Yes</td></tr>
-      <tr><td>LocalBusiness data for Google</td><td class="no">Missing</td><td class="yes">Yes</td><td class="yes">Yes</td><td>Partial</td></tr>
-      <tr><td>Star rating shown to Google</td><td class="no">None</td><td class="yes">Yes</td><td>No</td><td>No</td></tr>
-      <tr><td>Service data for Google</td><td class="no">Missing</td><td class="yes">Yes</td><td class="yes">Yes</td><td>No</td></tr>
-      <tr><td>FAQ data for Google and AI answers</td><td class="no">Missing</td><td>No</td><td class="yes">Yes</td><td>No</td></tr>
-      <tr><td>Customer reviews on the site</td><td class="no">None</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
-      <tr><td>Enquiry forms on homepage</td><td class="num">1</td><td class="num">2</td><td class="num">3</td><td class="num">2</td></tr>
-      <tr><td>Tap-to-call links on homepage</td><td class="num no">1</td><td class="num">3</td><td class="num">7</td><td class="num">14</td></tr>
-      <tr><td>Industry accreditations shown</td><td>ISSA, GBAC</td><td>BSCAI, ISSA</td><td>Yes</td><td>BBB since 2008</td></tr>
-      <tr><td>Ranking for any search term</td><td class="no">Zero</td><td class="yes">561</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+      <tr><td class="lab">Authority score</td><td class="you num">2</td><td class="num">19</td><td class="num">21</td><td class="num">21</td></tr>
+      <tr><td class="lab">Monthly organic visitors</td><td class="you num">None</td><td class="num">824</td><td class="num">2,500</td><td class="num">1,100</td></tr>
+      <tr><td class="lab">Search terms ranking</td><td class="you num">0</td><td class="num">3,900</td><td class="num">1,400</td><td class="num">877</td></tr>
+      <tr><td class="lab">Pages published</td><td class="you num">4</td><td class="num">500</td><td class="num">163</td><td class="num">618</td></tr>
+      <tr><td class="lab">Pages targeting a town</td><td class="you num">0</td><td class="num">15</td><td class="num">7</td><td class="num">Yes</td></tr>
+    </tbody>
+  </table></div>
+
+  <h4 class="sub">Citations and links, which is where it gets interesting</h4>
+  <div class="tw"><table>
+    <thead><tr><th>Measure</th><th class="you">Black Ops</th><th>Clean Method</th>
+      <th>Green Apple</th><th>Tri State</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Referring domains (citations)</td><td class="you num">141</td><td class="num">492</td><td class="num">501</td><td class="num">318</td></tr>
+      <tr><td class="lab">Total backlinks</td><td class="you num">261</td><td class="num">8,000</td><td class="num">2,000</td><td class="num">1,100</td></tr>
+      <tr><td class="lab">Visitors those links produce</td><td class="you num">0</td><td class="num">824</td><td class="num">2,500</td><td class="num">1,100</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call">
+    <h4>You do not have a link problem. You have a page problem.</h4>
+    <p>This is the most useful number in the entire audit. You have <strong>141 referring
+      domains</strong>. Tri State Restorations, a company trading since 2007 with 618 pages and
+      1,100 monthly visitors, has <strong>318</strong>. You are already at 44 percent of their
+      citation count.</p>
+    <p>And it produces <strong>nothing</strong>. Zero visitors, zero rankings, authority score of 2.</p>
+    <p>The reason is simple. Links point at a website so that its pages can rank. You have four
+      pages. There is almost nothing for those 141 citations to hold up. Most agencies would
+      look at this and sell you link building. That would be the wrong purchase. You need pages
+      first, and then the citations you already have start doing their job.</p>
+    <p class="tiny">One caveat we will check in week one: 141 domains is high for a four-page
+      site. Some of that is likely automatic directory listings, which is normal and harmless.
+      If any of it turns out to be purchased links from a previous supplier, we will find it and
+      clean it up before it holds you back.</p>
+  </div>
+
+  <h4 class="sub">AI search, where the next five years of enquiries are going</h4>
+  <div class="tw"><table>
+    <thead><tr><th>AI engine</th><th class="you">Black Ops</th><th>Clean Method</th>
+      <th>Green Apple</th><th>Tri State</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Overall AI visibility</td><td class="you num">0</td><td class="num">15</td><td class="num">15</td><td class="num">14</td></tr>
+      <tr><td class="lab">Times mentioned by an AI</td><td class="you num">0</td><td class="num">11</td><td class="num">19</td><td class="num">6</td></tr>
+      <tr><td class="lab">Your pages cited by an AI</td><td class="you num">0</td><td class="num">152</td><td class="num">15</td><td class="num">28</td></tr>
+      <tr><td class="lab">ChatGPT</td><td class="you no">Never</td><td class="num">25 pages cited</td><td class="num">10 mentions</td><td class="num">8 pages cited</td></tr>
+      <tr><td class="lab">Google AI Overviews</td><td class="you no">Never</td><td class="num">37 pages cited</td><td class="num">2 pages cited</td><td class="num">8 pages cited</td></tr>
+      <tr><td class="lab">Google AI Mode</td><td class="you no">Never</td><td class="num">103 pages cited</td><td class="num">12 pages cited</td><td class="num">18 pages cited</td></tr>
+      <tr><td class="lab">Gemini</td><td class="you no">Never</td><td class="num">6 mentions</td><td class="num">5 mentions</td><td class="num">7 pages cited</td></tr>
     </tbody>
   </table></div>
 
   <div class="call red">
-    <h4>The one that matters most</h4>
-    <p>Your site and Clean Method's site have <strong>zero search terms in common</strong>. Not
-      a small overlap. Zero. They rank for 561 terms. You rank for none of them, and none of
-      your own.</p>
-    <p>Your certifications are genuinely stronger than most of this list. GBAC and ISSA CMI are
-      uncommon for a company your size. The problem is not your capability. It is that none of
-      it is on the internet in a form that can be found.</p>
+    <h4>When someone asks an AI to recommend a cleaner in Rockville, you do not exist</h4>
+    <p>Clean Method has been cited <strong>152 times</strong> across ChatGPT, Google AI
+      Overviews, Google AI Mode and Gemini. Black Ops has been cited <strong>zero times, by all
+      four</strong>.</p>
+    <p>Google AI Overviews now sit above the normal search results, which means fewer people
+      scroll to the old list of blue links at all. The companies being named inside those
+      answers are taking the enquiries that used to be shared out. This is not a future
+      problem. It is showing in the data today.</p>
+    <p>AI answers pull names from three things: clear question-and-answer content on your pages,
+      structured data a machine can read, and third-party mentions. You currently have none of
+      the three, which is exactly why the number is zero.</p>
   </div>
 </section>
 
 <section>
-  <div class="shead"><div class="sno">03</div><h2>What a cleaning website needs to convert</h2></div>
-  <p class="sdek">These are the elements that turn a visitor into a phone call. Each one links
-    to a live competitor page where you can see it working. Open them and judge for yourself.</p>
-
-  <div class="cx">
-
-    <div class="cxi">
-      <div class="cxtop"><div class="cxn">A separate page for every service</div>
-        <span class="pill">You have 1 shared page</span></div>
-      <p class="cxw">Eleven services on one page means none of them can rank and none of them
-        can be sold properly. Each service needs its own page with its own process, pricing
-        guidance and questions answered. Your highest value work, biohazard and trauma, is
-        currently one bullet point.</p>
-      <a class="seelive" href="https://cleanmethod.com/commercial-cleaning-services/" target="_blank" rel="noopener">
-        <span class="lbl">See it live</span> cleanmethod.com/commercial-cleaning-services/</a>
-    </div>
-
-    <div class="cxi">
-      <div class="cxtop"><div class="cxn">A separate page for every town</div>
-        <span class="pill">You have 0</span></div>
-      <p class="cxw">This is how a business ranks beyond the few miles around its own address.
-        Clean Method has 15 town pages. Green Apple has 7. You have none, which is why you are
-        invisible in Bethesda, Gaithersburg and Silver Spring. Note that the Clean Method page
-        below is for Rockville, your own city, and they are based in Northern Virginia.</p>
-      <a class="seelive" href="https://cleanmethod.com/near-me/maryland/rockville/" target="_blank" rel="noopener">
-        <span class="lbl">See it live</span> cleanmethod.com/near-me/maryland/rockville/</a>
-    </div>
-
-    <div class="cxi">
-      <div class="cxtop"><div class="cxn">Google reviews high on the page</div>
-        <span class="pill">You have 0 reviews anywhere</span></div>
-      <p class="cxw">A star rating near the top of the page is the single strongest trust signal
-        on a service website. Clean Method publishes theirs in a format Google reads, which is
-        why their listing can show stars in search results. You currently have zero reviews on
-        Google, Angi and Facebook, so there is nothing to show. Fixing this is the highest
-        priority item in the whole audit.</p>
-      <a class="seelive" href="https://cleanmethod.com/" target="_blank" rel="noopener">
-        <span class="lbl">See it live</span> cleanmethod.com</a>
-    </div>
-
-    <div class="cxi">
-      <div class="cxtop"><div class="cxn">A short form, and a phone number on every screen</div>
-        <span class="pill">1 form, 1 tap-to-call</span></div>
-      <p class="cxw">Tri State has 14 tap-to-call links on their homepage alone. Green Apple has
-        7 and three separate forms. You have one of each. A commercial enquiry form should be
-        five or six fields, and it should ask the qualifying questions: service, facility type,
-        square footage, frequency. Yours asks for a message.</p>
-      <a class="seelive" href="https://www.tristaterestores.com/" target="_blank" rel="noopener">
-        <span class="lbl">See it live</span> tristaterestores.com</a>
-    </div>
-
-    <div class="cxi">
-      <div class="cxtop"><div class="cxn">A team section with real faces</div>
-        <span class="pill">Not on your site</span></div>
-      <p class="cxw">A facility manager is letting strangers into their building after hours.
-        They want to see who. Clean Method devotes a section of their About page to exactly
-        this, including background checks. You have the strongest story in this market, an Army
-        veteran who grew up in his father's cleaning business, and it is not being told
-        visually anywhere.</p>
-      <a class="seelive" href="https://cleanmethod.com/about-us/" target="_blank" rel="noopener">
-        <span class="lbl">See it live</span> cleanmethod.com/about-us/</a>
-    </div>
-
-    <div class="cxi">
-      <div class="cxtop"><div class="cxn">Real photographs, not stock</div>
-        <span class="pill">Stock in use</span></div>
-      <p class="cxw">One of your homepage images is named
-        <code>smiling-cleaner-vacuuming-floor-in-office-near-mul-968JLYQa.png</code>, which is a
-        stock library filename. Another is a manufacturer's product photo of a floor sweeper.
-        Commercial buyers spot stock photography instantly and it costs trust. The fix is free:
-        your crew photographs every job. Five photos per completed job, built into your
-        close-out routine.</p>
-    </div>
-
-    <div class="cxi">
-      <div class="cxtop"><div class="cxn">Trust badges the buyer actually recognises</div>
-        <span class="pill">Wrong badges shown</span></div>
-      <p class="cxw">Your ISSA and GBAC certifications are real and genuinely uncommon. They
-        should sit in a bar directly under your hero, alongside veteran-owned, insured, and your
-        licence number. What should not be there are the CDC, EPA and OSHA logos. Clean Method
-        uses BSCAI and ISSA, which are legitimate industry bodies, and that is the correct
-        model.</p>
-      <a class="seelive" href="https://cleanmethod.com/about-us/" target="_blank" rel="noopener">
-        <span class="lbl">See it live</span> cleanmethod.com/about-us/</a>
-    </div>
-
-    <div class="cxi">
-      <div class="cxtop"><div class="cxn">A hero that says what you do and where</div>
-        <span class="pill">Tagline only</span></div>
-      <p class="cxw">Your hero reads "Precision Cleaning, Every Time". Clean Method's Rockville
-        page opens with "Your Partner for Commercial Cleaning Services in Rockville, MD". One is
-        a slogan, the other tells a buyer and a search engine exactly what the page is. The hero
-        image should be a real job of yours, compressed properly, with the phone number and form
-        visible without scrolling.</p>
-      <a class="seelive" href="https://cleanmethod.com/near-me/maryland/rockville/" target="_blank" rel="noopener">
-        <span class="lbl">See it live</span> cleanmethod.com/near-me/maryland/rockville/</a>
-    </div>
-
-    <div class="cxi">
-      <div class="cxtop"><div class="cxn">Questions answered on the page</div>
-        <span class="pill">No FAQ anywhere</span></div>
-      <p class="cxw">Buyers want to know cost, timescales, insurance and what happens next
-        before they call. Answering those on the page removes the friction and, increasingly, it
-        is how Google's AI answers pick which company to name. Green Apple has this marked up so
-        Google can read it. Your site has no FAQ content at all.</p>
-      <a class="seelive" href="https://greenapplecleaningmd.com/" target="_blank" rel="noopener">
-        <span class="lbl">See it live</span> greenapplecleaningmd.com</a>
-    </div>
-
-    <div class="cxi">
-      <div class="cxtop"><div class="cxn">Pricing guidance, in public</div>
-        <span class="pill">Nothing published</span></div>
-      <p class="cxw">Most of this market hides pricing, which is exactly why publishing a real
-        range wins. Commercial cleaning is priced per square foot. Saying so, with a range and
-        what moves it, builds trust and captures a large volume of "how much does it cost"
-        searches that nobody local is answering.</p>
-    </div>
-
-    <div class="cxi">
-      <div class="cxtop"><div class="cxn">A system that asks every customer for a review</div>
-        <span class="pill">None in place</span></div>
-      <p class="cxw">Green Apple has a review request built directly into their Rockville page.
-        This is not a website feature, it is a routine: the technician asks in person at
-        completion, a text goes out within the hour with a one-tap link, and one reminder
-        follows three days later. It is the single thing that most determines whether you appear
-        on the map.</p>
-      <a class="seelive" href="https://greenapplecleaningmd.com/rockville/janitorial-office/" target="_blank" rel="noopener">
-        <span class="lbl">See it live</span> greenapplecleaningmd.com/rockville/janitorial-office/</a>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <div class="shead"><div class="sno">04</div><h2>Google Maps: the asset you do not have</h2></div>
-  <p class="sdek">This is the largest single gap in your marketing, and it is the one that can
-    be closed fastest.</p>
-
-  <div class="call red">
-    <h4>Our finding: you almost certainly have no Google Business Profile</h4>
-    <p>We checked six different ways and found no business listing. The evidence:</p>
-    <ul class="tight">
-      <li>The two map links on your website point at <b>the city of Rockville</b> and
-        <b>the state of Virginia</b>, not at a business listing</li>
-      <li>Your site tells Google about your Facebook and Instagram, but lists <b>no Google
-        profile</b></li>
-      <li>There is <b>no map embedded</b> anywhere on the site, not even on the contact page</li>
-      <li>There is <b>no "review us on Google"</b> anywhere</li>
-      <li>You have <b>zero reviews</b> on Angi and zero on Facebook</li>
-      <li>Across six separate searches, <b>no Google Maps listing for your company appeared</b></li>
-    </ul>
-    <p style="margin-top:12px">If that is right, then every search for a cleaning company near
-      Rockville is currently showing a competitor's map listing and yours is not in the running.
-      Not ranked low. Not present.</p>
-  </div>
-
-  <h3>What a working profile is worth</h3>
-  <p style="color:var(--ink2);font-size:15px;max-width:64ch">Below is a deliberately
-    conservative model. The industry benchmark, from BrightLocal's Google Business Profile
-    research, is that a verified profile averages around 50 calls a month and around 59 total
-    customer actions. We have modelled at well under a third of that, because a new profile with
-    few reviews will not hit the average straight away.</p>
+  <div class="shead"><div class="sno">02</div><h2>What this is costing you</h2></div>
+  <p class="sdek">Not a forecast. A conservative model, with every assumption shown, so you can
+    argue with any part of it.</p>
 
   <div class="model">
     <div class="mstep"><div class="mv">50</div><div class="mk">Industry benchmark</div>
-      <div class="mn">Average monthly calls to a verified profile, across local service
-        businesses.</div></div>
+      <div class="mn">Average monthly calls to a verified Google Business Profile across local
+        service businesses.</div></div>
     <div class="mstep"><div class="mv">15</div><div class="mk">What we model for you</div>
-      <div class="mn">Under a third of the benchmark. A new profile, building reviews from
-        zero.</div></div>
+      <div class="mn">Under a third of the benchmark. A brand new profile building reviews from
+        zero will not hit the average straight away.</div></div>
     <div class="mstep"><div class="mv">3</div><div class="mk">Become quote requests</div>
-      <div class="mn">At a 20 percent rate. Many calls are price checks or wrong
+      <div class="mn">One in five. Many calls are price checks, suppliers or wrong
         numbers.</div></div>
-    <div class="mstep"><div class="mv">1</div><div class="mk">Closes, per month</div>
-      <div class="mn">One in three quotes won. Your own close rate will replace this
-        figure.</div></div>
+    <div class="mstep"><div class="mv">1</div><div class="mk">Job won, per month</div>
+      <div class="mn">One quote in three closes. Your real close rate replaces this in month
+        two.</div></div>
   </div>
+
+  <h4 class="sub">What one job is worth, by service line</h4>
+  <div class="tw"><table>
+    <thead><tr><th>Service</th><th>Typical value</th><th>Type</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Commercial janitorial contract</td><td class="num">$700 to $2,800 per month</td><td>Recurring, often 1 to 3 years</td></tr>
+      <tr><td class="lab">Medical facility cleaning</td><td class="num">Premium on the above</td><td>Recurring</td></tr>
+      <tr><td class="lab">Government facility contract</td><td class="num">Largest available</td><td>Multi-year</td></tr>
+      <tr><td class="lab">Biohazard cleanup</td><td class="num">$1,500 to $25,000, avg $4,000</td><td>One off</td></tr>
+      <tr><td class="lab">Unattended death cleanup</td><td class="num">$2,000 to $7,000</td><td>One off</td></tr>
+      <tr><td class="lab">Hoarding cleanup</td><td class="num">$2,750 to $25,000, avg $7,500</td><td>One off</td></tr>
+      <tr><td class="lab">Sewage decontamination</td><td class="num">$2,000 to $15,000</td><td>One off, often insured</td></tr>
+    </tbody>
+  </table></div>
 
   <div class="call green">
-    <h4>What that one job is worth</h4>
-    <p><strong>If it is a janitorial contract:</strong> mid-size commercial contracts in this
-      market run roughly $1,000 to $1,500 a month, and they recur for as long as the contract
-      holds. One contract signed in month three is still paying in month thirty.</p>
-    <p><strong>If it is a specialty job:</strong> biohazard cleanup averages around $4,000
-      nationally, unattended death cleanup runs $2,000 to $7,000, and hoarding cleanup averages
-      around $7,500. A single one of those covers this entire engagement outright.</p>
-    <p style="font-size:13.5px;color:var(--ink3);margin-top:14px">These are published industry
-      figures, not measurements from your business. We install call tracking in week one, so
-      from month two this model is replaced by your real numbers.</p>
+    <h4>Read those two tables together</h4>
+    <p>One job a month, at your own service values, is somewhere between <strong>$8,400 and
+      $33,600 of recurring contract value a year</strong> if it is janitorial, or a
+      <strong>single specialty job that pays for this entire engagement outright</strong>.</p>
+    <p>And this model assumes only the Google Maps listing. It counts nothing from the website,
+      nothing from the eleven service pages you do not have, and nothing from AI search.</p>
+    <p class="tiny">These are published industry averages, referenced for scale, not a promise of
+      your results. Call tracking goes in during week one so that from month two every number
+      here is replaced by yours.</p>
   </div>
-
-  <h3>What we would do with the profile</h3>
-  <ul class="tight">
-    <li><b>Create and verify it in week one.</b> Verification can take weeks, so it starts
-      immediately or it delays everything else.</li>
-    <li><b>Set the correct primary category.</b> This is the strongest single field on a
-      profile and we would match it against what the current top three in Rockville use.</li>
-    <li><b>Load all eleven services</b> as separate items with proper descriptions, plus the
-      Products section, which almost nobody in this market uses.</li>
-    <li><b>Twenty real photographs</b> to start, then weekly uploads from your crew.</li>
-    <li><b>Seed and answer the questions</b> buyers actually ask, before a competitor answers
-      them for you.</li>
-    <li><b>Build the review routine</b> and start with your existing clients.</li>
-    <li><b>Merge your duplicate Facebook page</b> and fix your Chamber of Commerce listing,
-      which currently returns an error page.</li>
-  </ul>
 </section>
 
 <section>
-  <div class="shead"><div class="sno">05</div><h2>Where each competitor is weak</h2></div>
-  <p class="sdek">There is a pattern here worth noticing before the detail. Almost none of the
-    strongest competitors are actually based in Rockville.</p>
+  <div class="shead"><div class="sno">03</div><h2>Google Maps: you are not on it</h2></div>
+  <p class="sdek">This is the largest single gap in your marketing, and the fastest one to
+    close.</p>
+
+  <div class="call red">
+    <h4>Our finding: there is almost certainly no Google Business Profile</h4>
+    <p>We checked six ways and found no business listing:</p>
+    <ul class="tight">
+      <li>The two map links on your website resolve to <b>the city of Rockville</b> and
+        <b>the state of Virginia</b>, not to a business</li>
+      <li>Your site tells Google about Facebook and Instagram but names <b>no Google
+        profile</b></li>
+      <li>There is <b>no map embedded</b> anywhere, not even on the contact page</li>
+      <li>There is <b>no invitation to review you on Google</b> anywhere</li>
+      <li><b>Zero reviews</b> on Angi. <b>Zero</b> on Facebook.</li>
+      <li>Across six separate searches, <b>no Maps listing for your company appeared</b></li>
+    </ul>
+    <p style="margin-top:12px">Every search for a cleaner near Rockville is showing a
+      competitor's map listing. Yours is not ranked low. It is not in the race.</p>
+  </div>
+
+  <h3>Why the map matters more than the website, at first</h3>
+  <ul class="tight">
+    <li><b>It is the top of the page.</b> For any "near me" or town-based search, the map block
+      sits above the normal results. Most people never scroll past it.</li>
+    <li><b>AI has not taken it.</b> AI Overviews are eating clicks from the normal results but
+      barely touch the map. That makes the map more valuable this year than last, not less.</li>
+    <li><b>Proximity is on your side, here and nowhere else.</b> Distance from the searcher is
+      one of the strongest factors in the map. Your pin is in Rockville. This is the one place
+      geography is already working for you.</li>
+    <li><b>It moves in weeks, not months.</b> Website rankings take three to six months.
+      A properly built profile starts shifting in three to eight weeks.</li>
+  </ul>
+
+  <h3>The review system, and why it is the whole game</h3>
+  <p style="color:var(--ink2);max-width:66ch">A review does two separate jobs at once, and
+    people usually only think about the second one.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>What reviews do</th><th>Effect</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Decide whether you appear at all</td><td>Review count and, more
+        importantly, how regularly new ones arrive, are among the strongest factors in whether
+        Google shows you in the map block. This is why a new company with a good profile and
+        30 real reviews beats a ten year old company with a half-built profile and 12.</td></tr>
+      <tr><td class="lab">Decide whether anyone calls you</td><td>Three companies appear in the
+        map block. A facility manager compares three star ratings in about four seconds. With
+        zero reviews you lose that comparison every time, even when you rank.</td></tr>
+      <tr><td class="lab">Feed the website</td><td>Reviews get published on your service and
+        town pages, marked up so Google can show a star rating next to your result. Clean Method
+        does exactly this.</td></tr>
+      <tr><td class="lab">Feed AI answers</td><td>When an AI is asked for the best cleaner in
+        Rockville, review volume and sentiment are part of how it picks names.</td></tr>
+      <tr><td class="lab">Compound</td><td>Every review makes the next one easier to get and
+        makes every job you have already done keep working for you.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call">
+    <h4>How the review routine actually works</h4>
+    <p>This is a routine built into how you close a job, not a piece of software.</p>
+    <ul class="tight">
+      <li><b>The technician asks in person</b> at completion, while the customer is happy</li>
+      <li><b>A text goes out within the hour</b> with a one-tap link straight to the review box</li>
+      <li><b>One reminder at day three</b>, then it stops</li>
+      <li><b>Every review gets a reply within 24 hours</b>, naming the service and the town</li>
+      <li><b>Steady beats sudden.</b> Five to ten a month reads as real. Forty in one week reads
+        as bought, and Google filters it</li>
+      <li><b>For trauma and biohazard work, ask carefully or not at all.</b> Many of those
+        clients will not want to be publicly connected to the job. Never push</li>
+    </ul>
+    <p style="margin-top:12px"><strong>One part of this only you can do.</strong> Business to
+      business reviews come from a phone call, not an automation. The first twenty need to come
+      from you personally calling clients you have already served. We build the system, write
+      the scripts and templates, and handle every reply. The calls are yours.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">04</div><h2>What is broken on the website</h2></div>
+  <p class="sdek">Every item was found by crawling your live site on 22 August. Nothing here is
+    estimated.</p>
+
+  <div class="faults">
+    <div class="fault"><span class="sev c">Critical</span><div>
+      <div class="ft">Your homepage is 7.6 MB. It should be under 1 MB.</div>
+      <div class="fd">Six homepage images are over 900 KB each. The largest,
+        <code>Commerical-Buildings.png</code>, is 1,297 KB, and the filename has a typo in it.
+        They are saved as PNG, a format meant for logos rather than photographs. On a phone on
+        mobile data that is the difference between the page appearing in about one second and
+        about eight. Most people leave first. Your hosting is fine, the server responds in 0.28
+        seconds. It is only the images.</div></div></div>
+
+    <div class="fault"><span class="sev c">Critical</span><div>
+      <div class="ft">CDC, EPA and OSHA logos are on your homepage</div>
+      <div class="fd">All three are federal agencies that restrict use of their seals. Placing
+        them beside your certifications implies an endorsement that does not exist. You are
+        pursuing federal contracting work, which makes this worse than it would be for anyone
+        else. Ten minutes to remove. We replace them with wording that is equally persuasive and
+        is true: "Follows CDC and EPA disinfection guidance", "OSHA bloodborne pathogen
+        compliant".</div></div></div>
+
+    <div class="fault"><span class="sev c">Critical</span><div>
+      <div class="ft">Google does not know where your business is</div>
+      <div class="fd">Your site carries no machine-readable business data. No phone number, no
+        address, no service area, no coordinates in a format Google reads. Your street address,
+        121 Talbott St, appears nowhere on the website at all, despite being on your Chamber and
+        HomeAdvisor listings. Cheapest fix in this document, largest effect.</div></div></div>
+
+    <div class="fault"><span class="sev c">Critical</span><div>
+      <div class="ft">Four pages. Eleven services. Three states.</div>
+      <div class="fd">Homepage, About, Contact and one shared Services page. Nothing on your site
+        can rank for "biohazard cleanup Montgomery County" or "medical facility cleaning
+        Bethesda" because no page is about those things. Your highest margin work is currently a
+        bullet point.</div></div></div>
+
+    <div class="fault"><span class="sev h">High</span><div>
+      <div class="ft">Three of four pages have no main heading</div>
+      <div class="fd">Services, About and Contact have no H1. A common page-builder default that
+        nobody changes. Your homepage has one, but it reads "Precision Cleaning, Every Time",
+        which is a slogan. No service, no location, so it tells Google nothing.</div></div></div>
+
+    <div class="fault"><span class="sev h">High</span><div>
+      <div class="ft">Your homepage and services page compete with each other</div>
+      <div class="fd">"Professional Cleaning Services in DMV | Black Ops Cleaning" against
+        "Professional Cleaning Services DMV | Black Ops Cleaning Co." Nearly identical, so
+        Google has to guess which to show and neither builds authority.</div></div></div>
+
+    <div class="fault"><span class="sev h">High</span><div>
+      <div class="ft">Your page descriptions sell residential cleaning</div>
+      <div class="fd">"For homes and businesses" on the homepage, "residential, commercial and
+        specialized" on the services page. Everything else about you, ISSA and GBAC
+        certification, your imagery, your own positioning, is commercial, medical and
+        government. It attracts homeowner enquiries you cannot serve profitably and confuses
+        Google. There is also a stray full stop mid-sentence: "Black Ops Cleaning.
+        offers".</div></div></div>
+
+    <div class="fault"><span class="sev h">High</span><div>
+      <div class="ft">22 of 32 homepage images have no description text</div>
+      <div class="fd">Empty alt attributes. On a page that is mostly images that is a wasted
+        signal and a page nobody using a screen reader can navigate. Worth noting given you are
+        bidding for government work, where website accessibility gets looked at.</div></div></div>
+
+    <div class="fault"><span class="sev m">Medium</span><div>
+      <div class="ft">Your map links point at the wrong place</div>
+      <div class="fd">The location link in your footer, on all three pages, resolves to
+        <code>google.com/maps/place/Rockville,+MD,+USA</code>, the city. A second one resolves to
+        the state of Virginia. Neither points at your business.</div></div></div>
+
+    <div class="fault"><span class="sev m">Medium</span><div>
+      <div class="ft">Your contact form cannot qualify a commercial enquiry</div>
+      <div class="fd">Name, email, message, plus two fields that were never labelled. No phone
+        field, no service type, no facility type, no square footage. For commercial work that is
+        the difference between a usable quote request and three emails of back and
+        forth.</div></div></div>
+
+    <div class="fault"><span class="sev m">Medium</span><div>
+      <div class="ft">You advertise emergency response with 9 to 5 hours</div>
+      <div class="fd">Your site sells emergency cleaning and sewage decontamination. Your listed
+        hours are Monday to Friday, 9:00 to 5:00. Every biohazard competitor in this market
+        advertises 24/7. The highest margin calls in your service list are going to whoever
+        picks up.</div></div></div>
+
+    <div class="fault"><span class="sev m">Medium</span><div>
+      <div class="ft">Stock photography</div>
+      <div class="fd">One homepage image is named
+        <code>smiling-cleaner-vacuuming-floor-in-office-near-mul-968JLYQa.png</code>, a stock
+        library filename. Another is a manufacturer's product shot of a floor sweeper.
+        Commercial buyers spot this instantly. The fix is free: your crew photographs every
+        job.</div></div></div>
+
+    <div class="fault"><span class="sev m">Medium</span><div>
+      <div class="ft">You cannot tell where a single lead came from</div>
+      <div class="fd">No call tracking. One number everywhere. No way to know whether a call came
+        from Google, from Maps, from a truck or from a referral. Until this is fixed no marketing
+        spend can be judged, including ours.</div></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">05</div><h2>The blueprint</h2></div>
+  <p class="sdek">What a complete cleaning company website has, page by page and section by
+    section. Where a competitor already does something well, there is a link so you can open it
+    and judge for yourself.</p>
+
+  <h3>Part one: the pages</h3>
+
+  <div class="bp">
+    <div class="bph"><span class="bpn">Homepage</span><span class="bpc">1 page</span>
+      <span class="bpq">Rebuild</span></div>
+    <div class="bpb">
+      <ol class="secs">
+        <li><b>Utility bar.</b> <span>Phone, hours, 24/7 emergency line, service area. Visible
+          before anything else.</span></li>
+        <li><b>Hero.</b> <span>What you do and where, in plain words. A real photograph of your
+          own work. Phone number and a short form without scrolling.</span></li>
+        <li><b>Trust bar.</b> <span>Veteran-owned, ISSA CMI, GBAC, insured, licence number,
+          years operating. One line, directly under the hero.</span></li>
+        <li><b>Services grid.</b> <span>All eleven, each linking to its own page. Specialty work
+          given equal weight to janitorial, not buried.</span></li>
+        <li><b>Reviews.</b> <span>Star rating and three real quotes, high on the page, marked up
+          so Google can display the rating.</span></li>
+        <li><b>Why Black Ops.</b> <span>Four to six differentiators. Veteran-owned, GBAC
+          certified, locally based in Rockville, biohazard capable, federally registered.</span></li>
+        <li><b>How it works.</b> <span>Three to five steps with timescales. Removes the fear of
+          not knowing what happens after the call.</span></li>
+        <li><b>Service area.</b> <span>Map and a written list of every town. This is what tells a
+          buyer in Bethesda that you cover them.</span></li>
+        <li><b>Recent work.</b> <span>Real job photographs with the town named.</span></li>
+        <li><b>Meet the team.</b> <span>Your face and your story, with a link to the full About
+          page.</span></li>
+        <li><b>FAQ.</b> <span>Eight to twelve real questions, answered directly. This is the
+          block AI answers pull from.</span></li>
+        <li><b>Final call to action.</b> <span>Phone and form again.</span></li>
+        <li><b>Footer.</b> <span>Full name, address, phone identical to your Google listing.
+          Every service and town linked. Certifications, licence, social
+          profiles.</span></li>
+      </ol>
+      <a class="seelive" href="https://cleanmethod.com/" target="_blank" rel="noopener">
+        <span class="lbl">See it live</span> cleanmethod.com</a>
+    </div>
+  </div>
+
+  <div class="bp">
+    <div class="bph"><span class="bpn">Service pages</span><span class="bpc">11 pages</span>
+      <span class="bpq">You have 1 shared page</span></div>
+    <div class="bpb">
+      <p style="margin:0 0 10px;color:var(--ink2);font-size:15px">One page per service. Biohazard,
+        crime scene and trauma, unattended death, sewage decontamination, hoarding, emergency
+        response, commercial janitorial, medical facility, government facility, disinfection and
+        electrostatic, post-construction.</p>
+      <ol class="secs">
+        <li><b>H1 naming the service and the area</b></li>
+        <li><b>The problem in the customer's own words.</b> <span>The symptoms they are actually
+          typing into Google.</span></li>
+        <li><b>What is included,</b> <span>specifically, not vaguely</span></li>
+        <li><b>Your process,</b> <span>three to five steps with real timescales</span></li>
+        <li><b>Certifications relevant to this service</b></li>
+        <li><b>Pricing guidance.</b> <span>A real range and what moves it. Almost nobody in this
+          market publishes this, which is exactly why it wins.</span></li>
+        <li><b>Photographs of this work,</b> <span>yours</span></li>
+        <li><b>Reviews from this service line</b></li>
+        <li><b>FAQ, eight to twelve questions</b></li>
+        <li><b>Links to the towns</b> <span>where you provide it</span></li>
+        <li><b>Call to action</b></li>
+      </ol>
+      <p style="margin:12px 0 0;color:var(--ink2);font-size:14.5px"><b>Specialty pages are
+        written differently.</b> Someone searching for trauma cleanup is having the worst week
+        of their life. Calm, factual, short sentences. No marketing language. Discretion,
+        certification and speed, in that order.</p>
+      <a class="seelive" href="https://cleanmethod.com/commercial-cleaning-services/" target="_blank" rel="noopener">
+        <span class="lbl">See it live</span> cleanmethod.com/commercial-cleaning-services/</a>
+    </div>
+  </div>
+
+  <div class="bp">
+    <div class="bph"><span class="bpn">Town pages</span><span class="bpc">12 pages</span>
+      <span class="bpq">You have 0</span></div>
+    <div class="bpb">
+      <p style="margin:0 0 10px;color:var(--ink2);font-size:15px">This is how a business ranks
+        beyond the few miles around its own address. Rockville, North Bethesda, Gaithersburg,
+        Bethesda, Potomac, Kensington, Wheaton, Silver Spring, Chevy Chase, Germantown,
+        Washington DC, Arlington. Clean Method has 15 of these. Green Apple has 7.</p>
+      <ol class="secs">
+        <li><b>H1: the service in that town</b></li>
+        <li><b>Drive time and response time from Rockville</b></li>
+        <li><b>A real job you completed there,</b> <span>with a photograph</span></li>
+        <li><b>The business districts and neighbourhoods you cover</b></li>
+        <li><b>What is specific to that town.</b> <span>Building stock, the kind of businesses
+          there, local conditions.</span></li>
+        <li><b>A review from a customer in that town</b></li>
+        <li><b>Every service, linked</b></li>
+        <li><b>Town-specific FAQ</b></li>
+        <li><b>Map and call to action</b></li>
+      </ol>
+      <p style="margin:12px 0 0;color:var(--ink2);font-size:14.5px"><b>The test that matters:</b>
+        swap the town name. If the page still reads fine, it is filler and Google will treat it
+        as such. Each one needs a real job, a real photo and a real local detail. That is why
+        these take real work and why most companies get no value from them.</p>
+      <a class="seelive" href="https://cleanmethod.com/near-me/maryland/rockville/" target="_blank" rel="noopener">
+        <span class="lbl">See it live, for your own city</span> cleanmethod.com/near-me/maryland/rockville/</a>
+    </div>
+  </div>
+
+  <div class="bp">
+    <div class="bph"><span class="bpn">Blog / Resources</span><span class="bpc">Hub + ongoing</span>
+      <span class="bpq">You have none</span></div>
+    <div class="bpb">
+      <p style="margin:0 0 12px;color:var(--ink2);font-size:15px">Not company news. Nobody reads
+        company news. This is where you answer what buyers search in the days before they
+        spend money, and it is the single biggest source of AI citations.</p>
+      <h4 class="sub" style="margin-top:4px">The hub page</h4>
+      <ol class="secs">
+        <li><b>Grouped by topic,</b> <span>not by date. Biohazard, commercial cleaning, medical,
+          government contracting.</span></li>
+        <li><b>Every post links up</b> <span>to the service page it supports</span></li>
+        <li><b>Enquiry form on every post</b></li>
+      </ol>
+      <h4 class="sub">The first ten posts, in order</h4>
+      <ol class="secs">
+        <li><b>How much does biohazard cleanup cost in Maryland</b></li>
+        <li><b>Does insurance cover unattended death cleanup</b></li>
+        <li><b>Who cleans up after a death at home</b> <span>(the police do not, and people
+          genuinely do not know this)</span></li>
+        <li><b>How long does crime scene cleanup take</b></li>
+        <li><b>What commercial cleaning costs per square foot in Maryland</b></li>
+        <li><b>How often should a medical office be professionally cleaned</b></li>
+        <li><b>What GBAC certification is and why it matters</b></li>
+        <li><b>Sewage backup in a commercial building: what to do in the first hour</b></li>
+        <li><b>How to choose a janitorial contractor for a federal facility</b></li>
+        <li><b>Hoarding cleanup: what to expect and what it costs</b></li>
+      </ol>
+      <p style="margin:12px 0 0;color:var(--ink2);font-size:14.5px"><b>Format matters as much as
+        topic.</b> Each post opens with a direct forty to sixty word answer under a heading
+        written as the question. That exact format is what AI answers quote. Two to four posts a
+        month, forever. This is the part that compounds.</p>
+      <a class="seelive" href="https://greenapplecleaningmd.com/" target="_blank" rel="noopener">
+        <span class="lbl">See it live</span> greenapplecleaningmd.com</a>
+    </div>
+  </div>
+
+  <div class="bp">
+    <div class="bph"><span class="bpn">About &amp; Team</span><span class="bpc">1 page</span>
+      <span class="bpq">Exists, needs rebuild</span></div>
+    <div class="bpb">
+      <p style="margin:0 0 10px;color:var(--ink2);font-size:15px">A facility manager is letting
+        strangers into their building after hours. They want to see who. You have the strongest
+        founder story in this market and it is not being told.</p>
+      <ol class="secs">
+        <li><b>Your story.</b> <span>Eight years in the Army. Ten years alongside your father in
+          the family cleaning business. Then JPMorgan Chase. Then this. Nobody else here has
+          that.</span></li>
+        <li><b>Photographs of you and the crew,</b> <span>in uniform, on site</span></li>
+        <li><b>Vetting and background checks.</b> <span>Essential for medical and government
+          buyers.</span></li>
+        <li><b>Certifications explained,</b> <span>not just logos. What ISSA CMI and GBAC
+          actually mean.</span></li>
+        <li><b>Insurance, bonding, licence numbers</b></li>
+        <li><b>Veteran-owned status</b> <span>and the certification progress</span></li>
+        <li><b>Community and chamber membership</b></li>
+      </ol>
+      <a class="seelive" href="https://cleanmethod.com/about-us/" target="_blank" rel="noopener">
+        <span class="lbl">See it live</span> cleanmethod.com/about-us/</a>
+    </div>
+  </div>
+
+  <div class="bp">
+    <div class="bph"><span class="bpn">Government contracting</span><span class="bpc">1 page + PDF</span>
+      <span class="bpq">Missing, and it is your biggest opportunity</span></div>
+    <div class="bpb">
+      <p style="margin:0 0 10px;color:var(--ink2);font-size:15px">You are already registered in
+        SAM.gov. You appear in GovTribe, G2Xchange and Pegbo. You are further into federal
+        contracting than your website suggests, and none of it is visible to a contracting
+        officer who searches your name after seeing a bid.</p>
+      <ol class="secs">
+        <li><b>Veteran-owned status and your UEI</b></li>
+        <li><b>Registered NAICS codes</b> <span>(janitorial is 561720)</span></li>
+        <li><b>CAGE code and SAM registration status</b></li>
+        <li><b>Security and personnel.</b> <span>Background checks, clearance eligibility,
+          badging, escort procedures, key control.</span></li>
+        <li><b>Facilities served.</b> <span>Federal, state, county, municipal, public
+          schools.</span></li>
+        <li><b>Capability statement as a downloadable PDF.</b> <span>This is the first thing a
+          procurement officer asks for. You should not have to email it.</span></li>
+        <li><b>An invitation to prime contractors</b> <span>looking to subcontract</span></li>
+      </ol>
+      <p style="margin:12px 0 0;color:var(--ink2);font-size:14.5px">In the DMV, veteran-owned
+        certification is not a badge. It is a procurement channel. Set-aside contracts are
+        legally restricted to certified firms, which means your competition there is a handful
+        of companies rather than two hundred.</p>
+    </div>
+  </div>
+
+  <div class="bp">
+    <div class="bph"><span class="bpn">Supporting pages</span><span class="bpc">5 pages</span>
+      <span class="bpq">Mostly missing</span></div>
+    <div class="bpb">
+      <ol class="secs">
+        <li><b>Contact.</b> <span>Qualifying form (service, facility type, square footage,
+          frequency, timeline), phone, email, address, map, hours, emergency line. Exists but
+          needs rebuilding.</span></li>
+        <li><b>Reviews and testimonials.</b> <span>Everything in one place, filterable by service
+          and town, feeding the individual pages.</span></li>
+        <li><b>Our work / case studies.</b> <span>Six to ten real jobs. The problem, what you
+          did, the result, photographs. This is what wins larger contracts.</span></li>
+        <li><b>Careers.</b> <span>You will need staff to grow, and a careers page doubles as a
+          trust signal. It shows a buyer you are a real employer, not one van.</span></li>
+        <li><b>Privacy, terms and accessibility statement.</b> <span>Expected of any serious
+          contractor, and looked at more closely for government work.</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <h3>Part two: what has to be true on every page</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Requirement</th><th>Why</th><th class="you">Right now</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Under 1 MB, loads in under 2 seconds on mobile</td><td>Most of your visitors are on a phone. Speed is both a ranking factor and a conversion factor.</td><td class="you">7.6 MB</td></tr>
+      <tr><td class="lab">Exactly one H1, naming service and place</td><td>Tells Google and the reader what the page is</td><td class="you">Missing on 3 of 4</td></tr>
+      <tr><td class="lab">Unique title and description</td><td>Stops your own pages competing</td><td class="you">Duplicated</td></tr>
+      <tr><td class="lab">Business, service and FAQ data for Google</td><td>How you appear in the map, in rich results and in AI answers</td><td class="you">None</td></tr>
+      <tr><td class="lab">Tap-to-call in the header and a sticky bar on mobile</td><td>Tri State has 14 on one page. You have 1.</td><td class="you">1</td></tr>
+      <tr><td class="lab">Short qualifying form</td><td>Turns an enquiry into a quote in one step</td><td class="you">Unqualified</td></tr>
+      <tr><td class="lab">Real photographs, compressed, with descriptions</td><td>Trust, plus image search, plus accessibility</td><td class="you">Stock, 22 with no text</td></tr>
+      <tr><td class="lab">Trust bar under the hero</td><td>Answers "are these people legitimate" in two seconds</td><td class="you">Wrong badges</td></tr>
+      <tr><td class="lab">Reviews visible</td><td>The deciding factor between three options</td><td class="you">None</td></tr>
+      <tr><td class="lab">FAQ block</td><td>Removes friction, and it is what AI quotes</td><td class="you">None</td></tr>
+      <tr><td class="lab">Internal links to related services and towns</td><td>Spreads authority, keeps people moving</td><td class="you">Nothing to link</td></tr>
+      <tr><td class="lab">Call tracking on every number</td><td>Proves which marketing works</td><td class="you">None</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call">
+    <h4>Three things you did not ask about that belong in the plan</h4>
+    <p><strong>A photo routine, not a photo shoot.</strong> Five photographs from every completed
+      job, delivered weekly. It feeds the website, the town pages, the Google profile and your
+      social accounts, forever. Nothing else fixes the stock photography problem permanently.</p>
+    <p><strong>Follow-up on quotes.</strong> Commercial cleaning has a long sales cycle. A
+      walkthrough, a bid, then a decision weeks later. Most quotes in this trade die from
+      silence, not from price. A simple sequence after every quote recovers work you have
+      already paid to win.</p>
+    <p><strong>The 24/7 decision, made in week one.</strong> Every biohazard competitor here
+      advertises it. If you will not answer at 3am, we should not build the emergency pages,
+      because they will rank and then convert at nothing. This is a business decision, and it
+      has to come before the build.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">06</div><h2>Where each competitor is weak</h2></div>
+  <p class="sdek">There is a pattern worth seeing before the detail.</p>
 
   <div class="call">
     <h4>The advantage nobody is using</h4>
-    <p>Clean Method is based in Northern Virginia. Green Apple runs out of Baltimore with
-      offices in Annapolis and DC. System4 is based in Frederick. Tri State is in Clarksburg.
-      Bio-One is a national franchise.</p>
+    <p>Clean Method is based in Northern Virginia and runs town pages across Ohio and Georgia
+      too. Green Apple runs out of Baltimore with offices in Annapolis and DC. System4 is in
+      Frederick. Tri State is in Clarksburg. Bio-One is a national franchise.</p>
     <p><strong>You are at 121 Talbott St, Rockville.</strong> You are the local one, and not a
-      single page on your website says so. That is a real, defensible advantage that costs
-      nothing to claim and cannot be copied.</p>
+      single page on your website says so. That is real, defensible, free, and it cannot be
+      copied.</p>
   </div>
 
   <div class="town">
     <div class="townh"><span class="tn">Rockville</span><span class="td">Your base, 0 mi, 9 competitors</span></div>
     <div class="townb">
       <div class="comp"><div class="compn"><a href="https://cleanmethod.com/near-me/maryland/rockville/" target="_blank" rel="noopener">Clean Method</a></div>
-        <div class="compw">The strongest site in the market, 500 pages and complete data for
-          Google. <b>Weakness: they are not local.</b> Northern Virginia based, with town pages
-          across Ohio and Georgia too. Their Rockville page is a template. Yours would be
-          written by someone who works here.</div></div>
+        <div class="compw">Strongest site here. 500 pages, 3,900 ranking terms, complete data for
+          Google, 152 AI citations. <b>Weakness: not local.</b> Northern Virginia based, and
+          their Rockville page is one of hundreds of location templates. Yours would be written
+          by someone who works here.</div></div>
       <div class="comp"><div class="compn"><a href="https://amrusclean.com/" target="_blank" rel="noopener">AMR US Commercial Cleaning</a></div>
         <div class="compw">On Parklawn Drive, trading since 2001, genuinely local.
-          <b>Weakness: only six pages in their sitemap, no enquiry form on the homepage, and no
-          star rating published for Google.</b> Established but barely present online.</div></div>
+          <b>Weakness: six pages in their whole sitemap, no enquiry form on the homepage, no star
+          rating published for Google.</b> Established, but barely present online. The most
+          beatable of the local firms.</div></div>
       <div class="comp"><div class="compn"><a href="https://pmgcleans.com/" target="_blank" rel="noopener">Pro Maintenance Group</a></div>
         <div class="compw">On Rockville Pike, covers Rockville through Germantown.
           <b>Weakness: very small social presence, around 40 Facebook followers.</b></div></div>
@@ -610,12 +846,11 @@ ul.tight li b{color:var(--ink)}
   <div class="town">
     <div class="townh"><span class="tn">North Bethesda</span><span class="td">3 mi</span></div>
     <div class="townb">
-      <div class="comp"><div class="compn">Same Rockville firms, plus Green Apple</div>
-        <div class="compw">Heavy concentration of medical and professional offices around Pike
-          and Rose and the Rockville Pike corridor. <b>Weakness across the board: none of them
-          lead with infection control credentials.</b> You hold GBAC and ISSA CMI. In a
-          neighbourhood full of medical practices, that is the entire pitch and nobody is making
-          it.</div></div>
+      <div class="comp"><div class="compn">The Rockville firms, plus Green Apple</div>
+        <div class="compw">Dense with medical and professional offices around Pike and Rose and
+          the Rockville Pike corridor. <b>Weakness across all of them: not one leads with
+          infection control credentials.</b> You hold GBAC and ISSA CMI. In a neighbourhood full
+          of medical practices that is the entire pitch, and nobody is making it.</div></div>
     </div>
   </div>
 
@@ -624,25 +859,25 @@ ul.tight li b{color:var(--ink)}
     <div class="townb">
       <div class="comp"><div class="compn">Bio-One of Gaithersburg</div>
         <div class="compw">Your closest direct competitor on specialty work, six miles away,
-          24/7. <b>Weakness: it is a national franchise, and their Facebook page carries zero
-          reviews.</b> Their trust rests on the Bio-One brand rather than a local operator with
-          a name and a face. Yours would be the opposite.</div></div>
+          24/7. <b>Weakness: a national franchise, and their Facebook page carries zero
+          reviews.</b> Their trust rests on the Bio-One brand rather than a named local operator
+          with a face and a story. Yours would be the opposite.</div></div>
       <div class="comp"><div class="compn">Pro Maintenance Group</div>
-        <div class="compw">Lists Gaithersburg in coverage. <b>Weakness: same thin online
-          presence as in Rockville.</b> The I-270 biotech corridor is here, full of lab and life
-          sciences facilities, and nobody is targeting them on infection control.</div></div>
+        <div class="compw">Lists Gaithersburg in coverage. <b>Weakness: same thin online presence
+          as in Rockville.</b> The I-270 biotech corridor is here, full of lab and life sciences
+          facilities, and nobody is targeting them on infection control.</div></div>
     </div>
   </div>
 
   <div class="town">
     <div class="townh"><span class="tn">Bethesda</span><span class="td">8 mi</span></div>
     <div class="townb">
-      <div class="comp"><div class="compn">Green Apple Cleaning, Clean Method, AMR US</div>
+      <div class="comp"><div class="compn">Green Apple, Clean Method, AMR US</div>
         <div class="compw">Very high density of medical and professional practices, plus NIH and
-          Walter Reed nearby. <b>Weakness: Green Apple is a Baltimore operation covering
-          Bethesda from a distance, and it mixes residential with commercial, which weakens it
-          for a serious facility buyer.</b> A dedicated Bethesda page led by medical facility
-          cleaning would have very little standing in its way.</div></div>
+          Walter Reed nearby. <b>Weakness: Green Apple is a Baltimore operation covering Bethesda
+          from a distance, and it mixes residential with commercial, which weakens it badly for
+          a serious facility buyer.</b> A dedicated Bethesda page led by medical facility
+          cleaning has very little standing in its way.</div></div>
     </div>
   </div>
 
@@ -650,32 +885,32 @@ ul.tight li b{color:var(--ink)}
     <div class="townh"><span class="tn">Silver Spring</span><span class="td">10 mi</span></div>
     <div class="townb">
       <div class="comp"><div class="compn">Stratus Clean, Foreman Pro, Green Apple, AMR US</div>
-        <div class="compw">The most crowded of the towns, and the furthest from your base.
+        <div class="compw">The most crowded town and the furthest from your base.
           <b>Weakness: Stratus and Foreman Pro are regional operators running location
-          templates.</b> Realistically this is a month six target, not a month one target. We
-          would build the closer towns first.</div></div>
+          templates.</b> Realistically a month six target, not month one. We build the closer
+          towns first.</div></div>
       <div class="comp"><div class="compn"><a href="https://crimeclean-up.com/location/crime-scene-cleanup-maryland-rockville/" target="_blank" rel="noopener">Crime Scene Clean Up</a></div>
-        <div class="compw">Runs separate trauma cleanup pages for Rockville, Silver Spring and
-          Montgomery Village. <b>Weakness: they are a national brand with thin local content.</b>
-          Worth opening the link, because that page structure is exactly what we would build for
-          you, done properly.</div></div>
+        <div class="compw">Runs separate trauma pages for Rockville, Silver Spring and Montgomery
+          Village. <b>Weakness: a national brand with thin local content.</b> Worth opening,
+          because that page structure is exactly what we would build for you, done
+          properly.</div></div>
     </div>
   </div>
 
   <div class="town">
-    <div class="townh"><span class="tn">Specialty work, region wide</span><span class="td">Biohazard, trauma, hoarding, sewage</span></div>
+    <div class="townh"><span class="tn">Specialty work</span><span class="td">Region wide, no town boundaries</span></div>
     <div class="townb">
       <div class="comp"><div class="compn"><a href="https://www.tristaterestores.com/biohazard-covid19-disinfection/" target="_blank" rel="noopener">Tri State Restorations</a></div>
-        <div class="compw">The largest specialty site in the region, around 618 pages, trading
-          since 2007. <b>Weakness: they are a restoration company first. Biohazard is one line
-          among water, mould and fire.</b> For you it is a core service. You can out-specialise
-          them on depth of content, because they will never write ten pages about
-          it.</div></div>
+        <div class="compw">Largest specialty site in the region. 618 pages, 877 ranking terms,
+          trading since 2007. <b>Weakness: a restoration company first. Biohazard is one line
+          among water, mould and fire.</b> For you it is core. You can out-specialise them on
+          depth, because they will never write ten pages about it. Note also that their traffic
+          and rankings are both falling, which means the position is not
+          unassailable.</div></div>
       <div class="comp"><div class="compn">SI Restoration, Crime Scene Inc, Bio-One of DC, Paul Davis, Purofirst</div>
-        <div class="compw">The rest of the specialty field. <b>Weakness: with the exception of
-          Crime Scene Inc, all of them are general restoration firms where trauma work is a
-          secondary line.</b> This is the thinnest, highest margin part of the market and it is
-          where we would start.</div></div>
+        <div class="compw">The rest of the field. <b>Weakness: with the exception of Crime Scene
+          Inc, all are general restoration firms where trauma work is a secondary line.</b> This
+          is the thinnest, highest margin part of the market, and it is where we start.</div></div>
     </div>
   </div>
 </section>
@@ -684,42 +919,42 @@ ul.tight li b{color:var(--ink)}
 
 <div class="close">
   <div class="wrap">
-    <div class="shead"><div class="sno" style="color:#7CC0E6">06</div><h2>Where we would start</h2></div>
-    <p class="sdek">Four things, in this order, because each one unlocks the next.</p>
+    <div class="shead"><div class="sno">07</div><h2>Where we start</h2></div>
+    <p class="sdek">Four phases, in this order, because each one unlocks the next.</p>
     <div class="steps">
-      <div class="step"><div class="sn">WEEK 1</div><div class="st">Stop the bleeding</div>
-        <div class="sp">Federal logos removed. Images compressed, homepage under 1 MB. Headings
-          and page titles fixed. Location data added so Google knows where you are. Call
-          tracking installed.</div></div>
       <div class="step"><div class="sn">WEEK 1</div><div class="st">Claim the map</div>
         <div class="sp">Create and verify the Google Business Profile, build it out completely,
-          and start the review routine with your existing clients. This starts first because
-          verification takes the longest.</div></div>
+          and start the review routine with clients you already have. First, because verification
+          takes the longest and everything waits on it.</div></div>
+      <div class="step"><div class="sn">WEEK 1</div><div class="st">Stop the bleeding</div>
+        <div class="sp">Federal logos removed. Images compressed, homepage under 1 MB. Headings
+          and titles fixed. Location data added so Google knows where you are. Call tracking
+          installed so month two runs on real numbers.</div></div>
       <div class="step"><div class="sn">WEEKS 2 TO 6</div><div class="st">Build the pages</div>
-        <div class="sp">Ten service pages and four town pages. Biohazard, trauma and unattended
-          death first, because that is the thinnest competition and the highest margin
-          work.</div></div>
+        <div class="sp">Service pages and town pages. Biohazard, trauma and unattended death
+          first, because that is the thinnest competition, the highest margin, and the fastest
+          to rank.</div></div>
       <div class="step"><div class="sn">WEEKS 6 TO 8</div><div class="st">Prove it</div>
-        <div class="sp">Citations, the Chamber listing repaired, duplicate Facebook merged, and
-          a report showing exactly what moved, measured against the numbers on page one of this
-          document.</div></div>
+        <div class="sp">Citations cleaned, Chamber listing repaired, duplicate Facebook page
+          merged, blog started. A report measuring exactly what moved against the numbers on
+          page one of this document.</div></div>
     </div>
   </div>
 </div>
 
 <div class="wrap">
   <div class="foot">
-    <p><b>How this was compiled.</b> Your website was crawled directly on 22 August 2026: page
-      weights, image sizes, heading structure, page titles, descriptions, structured data,
-      forms and links were all read from the live site. Competitor sites and sitemaps were
-      crawled the same way on the same day. Search visibility figures come from Semrush. Google
-      Business Profile findings are inferred from the signals listed in section 04, since we do
-      not yet have access to the account.</p>
-    <p><b>What we could not check without your access.</b> Google Business Profile insights,
-      Google Search Console, Google Analytics, your actual lead volume, close rate and average
-      job value. Those replace every estimate in this document in week one.</p>
-    <p>Prepared by [Your Agency Name]. Figures cited for call benchmarks and job values are
-      published industry averages, referenced here for scale and not as a forecast of your
-      results.</p>
+    <p><b>How this was compiled.</b> blackopscleaningco.com was crawled directly on 22 August
+      2026. Page weights, image file sizes, heading structure, titles, descriptions, structured
+      data, forms and links were all read from the live site. Competitor websites and sitemaps
+      were crawled the same way. Search visibility, authority scores, referring domains,
+      backlinks and AI citation figures come from Semrush, pulled 23 August 2026.</p>
+    <p><b>What could not be checked without your access.</b> Google Business Profile insights,
+      Google Search Console, Google Analytics, and your real lead volume, close rate and average
+      job value. Every estimate in this document is replaced by your own numbers in week one.</p>
+    <p><b>On the figures used for scale.</b> Call benchmarks and job values are published
+      industry averages, referenced to show the size of the opportunity. They are not a forecast
+      of your results, and no ranking or revenue outcome is being promised on any timeline.</p>
+    <p style="margin-top:16px"><b>Prepared by Hassan.</b> 23 August 2026.</p>
   </div>
 </div>
