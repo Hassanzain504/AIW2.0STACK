@@ -171,3 +171,45 @@ compete on organic content and reputation across the whole region rather than to
    per-town page structure recommended in the 14-page plan.
 4. **Confirm the GBP question directly**, per section 3, before finalizing any pricing or
    timeline. It is the single fact that most changes the shape of the first month of work.
+
+---
+
+## 7. Ticket size, by service line
+
+Not the client's actual numbers, since those need dashboard and invoice access. These are
+published national and regional market ranges, useful for scoping the offer and for the "what
+does this pay for itself" conversation, until the client's own numbers replace them.
+
+**Confirm real numbers with the client in week 1: their actual average job value, close rate,
+and contract length per service line. Use those instead of this table the moment they exist.**
+
+| Service line | Typical ticket size | Deal type | Notes |
+|---|---|---|---|
+| Commercial janitorial contract | **$700 to $2,800 / month**, recurring | Recurring monthly contract | Priced mostly per square foot, roughly $0.05 to $0.35/sqft depending on space type and frequency. A 5,000 to 10,000 sqft office lands around $1,000 to $1,500/month. This recurs for as long as the contract holds, so lifetime value is the monthly figure times contract length, often 1 to 3+ years. |
+| Medical / healthcare facility cleaning | **Above standard office rate**, recurring | Recurring monthly contract | Infection-control protocols and GBAC-level service command a premium over general office cleaning. No single published figure found; price at a premium to the janitorial range above and confirm against the client's own quotes. |
+| Government / federal facility contract | **Highly variable, often the largest single deal type available** | Contract, can be multi-year | No standard range exists publicly, contract value depends entirely on facility size and scope. What matters here is not a typical figure but that a single federal janitorial contract can dwarf every other service line combined. This is why the SDVOSB/SAM.gov angle in the offer document is the single highest-ceiling item on the list. |
+| Biohazard cleanup (general) | **$1,500 to $25,000+**, national average **~$4,000** | One-off job | Wide range because severity varies enormously. |
+| Unattended death cleanup | **$2,000 to $7,000**, commonly cited $2,000 to $5,000 | One-off job | Billed partly hourly at $200 to $300/hr, driven mainly by how long decomposition progressed before discovery. |
+| Crime scene / trauma cleanup | **$1,500 to $10,000+** | One-off job | Overlaps with biohazard pricing above, severity-driven. |
+| Hoarding cleanup | **$2,750 to $25,000**, national average **~$7,500** | One-off job | Priced by volume of material and labor hours, not just square footage. |
+| Sewage backup / decontamination (commercial) | **$7 to $15 per sq ft**, jobs commonly **$2,000 to $15,000+** | One-off, sometimes insurance-paid | Commercial jobs run larger than residential due to affected area size. |
+
+### What this means for the pitch
+
+- **One biohazard, trauma, or unattended death job (roughly $2,000 to $7,000 on average)
+  covers the entire Foundation Sprint price outright**, whether quoted at the first-client rate
+  ($1,800 + $800 = $2,600 flat) or the standard rate ($3,800 + $1,400 = $5,200 flat). This is
+  the concrete version of the break-even argument from the earlier offer document, now with
+  real market numbers behind it rather than a general claim.
+- **One mid-size janitorial contract** ($1,000 to $1,500/month) covers roughly two-thirds to a
+  full month of the retainer on its own, and then keeps paying monthly for as long as the
+  contract runs, on top of everything else it brings in.
+- **The government contracting angle is the outsized one.** A single facility contract there
+  can be worth more than every other service line's annual total combined, which is the
+  argument for treating the government-facility page and capability statement as a distinct,
+  separately priced upsell rather than folding it quietly into the base SEO scope.
+- Use this table to build the three qualifying questions from the earlier offer conversation
+  (average contract value, average specialty job value, close rate) as **verification against
+  a real range**, not as numbers pulled from nothing. If the client's actual numbers land well
+  outside these ranges in either direction, that itself is worth knowing before finalizing
+  scope or price.
