@@ -151,12 +151,14 @@ code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--car
 .bph .bpq.ok{border-color:var(--good-line);background:var(--good-bg);color:var(--good)}
 .bpb{padding:15px 18px}
 ol.secs{margin:0;padding-left:0;list-style:none;counter-reset:s}
-ol.secs li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;gap:11px;
-  padding:8px 0;border-bottom:1px dashed var(--line);font-size:15px}
+ol.secs li{counter-increment:s;position:relative;
+  padding:8px 0 8px 40px;border-bottom:1px dashed var(--line);
+  font-size:15px;line-height:1.55}
 ol.secs li:last-child{border-bottom:none}
 ol.secs li::before{content:counter(s,decimal-leading-zero);
+  position:absolute;left:0;top:12px;
   font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;
-  color:var(--accent);padding-top:4px}
+  color:var(--accent)}
 ol.secs li b{font-weight:600}
 ol.secs li span{color:var(--ink2)}
 .seelive{display:inline-flex;align-items:center;gap:8px;margin-top:12px;
