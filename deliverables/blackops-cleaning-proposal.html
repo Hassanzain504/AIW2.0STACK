@@ -1,0 +1,512 @@
+<title>Black Ops Rebuild Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F2F2F0; --card:#FFFFFF; --card2:#E9E9E6; --card3:#DEDEDA;
+  --line:#D4D4CF; --line2:#B2B2AC;
+  --ink:#14171A; --ink2:#4A5157; --ink3:#787F86;
+  --accent:#0E637F; --accent2:#1682A6; --accent-bg:#DCEDF3;
+  --bad:#A6362A; --bad-bg:#F7E2DE; --bad-line:#DBA69C;
+  --good:#1A6B4C; --good-bg:#DCEEE4; --good-line:#8FC5AA;
+  --warn:#8F5D0D; --warn-bg:#F5E7CC; --warn-line:#D1B06E;
+  --band:#14171A; --bandink:#F2F2F0;
+  --shade:0 1px 2px rgba(20,23,26,.05), 0 12px 34px -24px rgba(20,23,26,.45);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C0F11; --card:#14181B; --card2:#1C2226; --card3:#252C31;
+    --line:#282F34; --line2:#3E474E;
+    --ink:#E7EAEC; --ink2:#A0ABB2; --ink3:#6F7B83;
+    --accent:#55B4D4; --accent2:#7ACAE4; --accent-bg:#0F2C38;
+    --bad:#EB8B76; --bad-bg:#2C1611; --bad-line:#69352A;
+    --good:#52C193; --good-bg:#0E281E; --good-line:#2A6147;
+    --warn:#DDA64C; --warn-bg:#2A2110; --warn-line:#675020;
+    --band:#05080A; --bandink:#E7EAEC;
+    --shade:0 1px 2px rgba(0,0,0,.55), 0 12px 34px -24px rgba(0,0,0,.95);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C0F11; --card:#14181B; --card2:#1C2226; --card3:#252C31;
+  --line:#282F34; --line2:#3E474E;
+  --ink:#E7EAEC; --ink2:#A0ABB2; --ink3:#6F7B83;
+  --accent:#55B4D4; --accent2:#7ACAE4; --accent-bg:#0F2C38;
+  --bad:#EB8B76; --bad-bg:#2C1611; --bad-line:#69352A;
+  --good:#52C193; --good-bg:#0E281E; --good-line:#2A6147;
+  --warn:#DDA64C; --warn-bg:#2A2110; --warn-line:#675020;
+  --band:#05080A; --bandink:#E7EAEC;
+  --shade:0 1px 2px rgba(0,0,0,.55), 0 12px 34px -24px rgba(0,0,0,.95);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1010px;margin:0 auto;padding:0 22px}
+
+.mast{background:var(--band);color:var(--bandink)}
+.mast .wrap{padding:30px 22px 34px}
+.lockup{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;
+  padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.16)}
+.mark{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;
+  letter-spacing:.13em;text-transform:uppercase;line-height:1}
+.mark span{color:#55B4D4}
+.lockup .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.6;font-weight:600;text-align:right}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.17em;
+  text-transform:uppercase;color:#55B4D4;font-weight:600;margin-top:26px}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(38px,7vw,66px);line-height:.96;letter-spacing:-.012em;
+  margin:12px 0 0;text-transform:uppercase;text-wrap:balance}
+.lede{font-size:17.5px;color:rgba(231,234,236,.72);max-width:64ch;margin:18px 0 0}
+.prep{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:16px 30px}
+.prep div span{display:block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  letter-spacing:.14em;text-transform:uppercase;opacity:.5;font-weight:600;margin-bottom:4px}
+.prep div b{font-weight:600;font-size:15px}
+
+/* price block */
+.priceband{background:var(--card);border-bottom:1px solid var(--line)}
+.pb{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;
+  background:var(--line)}
+.pbi{background:var(--card);padding:26px 22px}
+.pbi .plab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600}
+.pbi .pval{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:52px;line-height:1;margin-top:10px;font-variant-numeric:tabular-nums;
+  letter-spacing:-.015em}
+.pbi.hero .pval{color:var(--accent)}
+.pbi .pnote{font-size:13.5px;color:var(--ink2);margin-top:9px;line-height:1.45}
+
+section{padding:52px 0 6px}
+.shead{display:flex;gap:15px;align-items:baseline}
+.sno{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12.5px;
+  color:var(--accent);letter-spacing:.11em;padding-top:7px;flex-shrink:0}
+h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(27px,4.2vw,40px);line-height:1.02;margin:0;text-transform:uppercase;
+  letter-spacing:-.006em;text-wrap:balance}
+.sdek{color:var(--ink2);font-size:16.5px;max-width:66ch;margin:8px 0 24px 43px}
+@media(max-width:640px){.sdek{margin-left:0}}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:22px;
+  text-transform:uppercase;letter-spacing:.012em;margin:34px 0 12px;
+  padding-bottom:7px;border-bottom:2px solid var(--ink)}
+h4.sub{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:17px;
+  text-transform:uppercase;letter-spacing:.03em;color:var(--accent);margin:24px 0 8px}
+
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--card);
+  box-shadow:var(--shade)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:12px 14px;border-bottom:2px solid var(--line2);background:var(--card2);white-space:nowrap}
+th.r,td.r{text-align:right}
+td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.lab{font-weight:500}
+tr.total td{background:var(--card2);font-weight:700;border-top:2px solid var(--line2);
+  font-size:16px}
+tr.total td.num{color:var(--accent)}
+tr.us td{background:var(--good-bg)}
+tr.us td.lab{color:var(--good);font-weight:700}
+td.no{color:var(--bad);font-weight:600} td.yes{color:var(--good);font-weight:600}
+.cond{font-size:12.5px;color:var(--ink3);font-style:italic}
+
+.call{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:3px;padding:20px 22px;margin:22px 0;box-shadow:var(--shade)}
+.call.red{border-left-color:var(--bad)}
+.call.green{border-left-color:var(--good)}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;
+  text-transform:uppercase;margin:0 0 9px;letter-spacing:.012em}
+.call p{margin:0 0 10px;font-size:15.5px;color:var(--ink2)}
+.call p:last-child{margin-bottom:0}
+.call strong{color:var(--ink)}
+.tiny{font-size:13px;color:var(--ink3)}
+
+.model{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;margin:18px 0}
+.mstep{background:var(--card);padding:16px 15px}
+.mstep .mv{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:30px;
+  line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.mstep .mk{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink3);margin-top:7px;font-weight:600}
+.mstep .mn{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.45}
+.mstep:last-child .mv{color:var(--good)}
+
+ul.tight{margin:10px 0 0;padding-left:20px}
+ul.tight li{margin-bottom:7px;font-size:15px;color:var(--ink2)}
+ul.tight li b{color:var(--ink);font-weight:600}
+
+ol.secs{margin:0;padding-left:0;list-style:none;counter-reset:s}
+ol.secs li{counter-increment:s;position:relative;padding:8px 0 8px 40px;
+  border-bottom:1px dashed var(--line);font-size:15px;line-height:1.55}
+ol.secs li:last-child{border-bottom:none}
+ol.secs li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:12px;
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;color:var(--accent)}
+ol.secs li b{font-weight:600} ol.secs li span{color:var(--ink2)}
+
+.close{background:var(--band);color:var(--bandink);margin-top:56px;padding:46px 0 50px}
+.close h2{color:var(--bandink)} .close .sno{color:#55B4D4}
+.close .sdek{color:rgba(231,234,236,.66)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);
+  border-radius:3px;overflow:hidden;margin-top:6px}
+.step{background:var(--band);padding:18px}
+.step .sn{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;
+  color:#55B4D4;font-weight:600}
+.step .st{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  text-transform:uppercase;margin-top:7px}
+.step .sp{font-size:13.5px;opacity:.68;margin-top:6px;line-height:1.5}
+.foot{padding:26px 0 46px;font-size:13px;color:var(--ink3)}
+.foot b{color:var(--ink2)}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="lockup">
+      <div class="mark">Black<span>&nbsp;Ops</span>&nbsp;Cleaning</div>
+      <div class="meta">Rebuild Proposal<br>23 August 2026</div>
+    </div>
+    <div class="kicker">Website &middot; Google Maps &middot; Reviews &middot; Citations</div>
+    <h1>Scope and<br>investment</h1>
+    <p class="lede">A single fixed price for the whole rebuild. No monthly commitment attached
+      to it, no hourly billing, and no surprises. This document sets out exactly what is
+      delivered, what it costs, and every reason the number is what it is.</p>
+    <div class="prep">
+      <div><span>Prepared for</span><b>Amilcar Ayala</b></div>
+      <div><span>Company</span><b>Black Ops Cleaning Company LLC</b></div>
+      <div><span>Prepared by</span><b>Hassan</b></div>
+      <div><span>Valid until</span><b>23 September 2026</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="priceband">
+  <div class="wrap"><div class="pb">
+    <div class="pbi hero"><div class="plab">Total, fixed</div><div class="pval">$3,500</div>
+      <div class="pnote">One payment schedule, one scope, one delivery date. Not a retainer.</div></div>
+    <div class="pbi"><div class="plab">Delivered in</div><div class="pval">8 wks</div>
+      <div class="pnote">Week one starts the day access is handed over.</div></div>
+    <div class="pbi"><div class="plab">You pay to start</div><div class="pval">$1,750</div>
+      <div class="pnote">Half up front, half on completion.</div></div>
+  </div></div>
+</div>
+
+<div class="wrap">
+
+<section>
+  <div class="shead"><div class="sno">01</div><h2>What you get for it</h2></div>
+  <p class="sdek">Every deliverable, with the working hours behind it. Nothing here is padding
+    and nothing is left to interpretation.</p>
+
+  <h4 class="sub">Website</h4>
+  <div class="tw"><table>
+    <thead><tr><th>Deliverable</th><th class="r">Hours</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">All 15 technical faults from the audit, fixed. Images compressed to WebP, homepage under 1 MB, Core Web Vitals green on mobile, headings and titles rewritten, federal agency logos removed, business data added so Google can read your location.</td><td class="num r">22</td></tr>
+      <tr><td class="lab">10 service pages, written and built. Biohazard, crime scene and trauma, unattended death, sewage decontamination, hoarding, emergency response, commercial janitorial, medical facility, government facility, disinfection.</td><td class="num r">33</td></tr>
+      <tr><td class="lab">4 town pages, written and built. Rockville, North Bethesda, Gaithersburg, Bethesda. Each with a real job, a real photograph and real local detail.</td><td class="num r">10</td></tr>
+      <tr><td class="lab">Structured data across the site so Google and AI engines can read your business, your services and your answers.</td><td class="num r">included</td></tr>
+      <tr><td class="lab">Qualifying enquiry form: service, facility type, square footage, frequency, timeline.</td><td class="num r">included</td></tr>
+      <tr><td class="lab">Call tracking and conversion tracking installed, so every lead is attributed to a source.</td><td class="num r">included</td></tr>
+    </tbody>
+  </table></div>
+
+  <h4 class="sub">Google Maps</h4>
+  <div class="tw"><table>
+    <thead><tr><th>Deliverable</th><th class="r">Hours</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Google Business Profile built out completely: category research against the current top three, service area, all services written as separate items with descriptions, Products section, business description, attributes, hours, 20 photographs, Q&amp;A seeded and answered.</td><td class="num r">16</td></tr>
+      <tr><td class="lab">Duplicate Facebook page merged. Broken Chamber of Commerce listing repaired.</td><td class="num r">included</td></tr>
+      <tr><td class="lab"><span class="cond">Conditional:</span> profile created and driven through verification, if no profile currently exists. Verification is slow and fiddly and is charged separately at <b>$300</b>.</td><td class="num r">+3</td></tr>
+    </tbody>
+  </table></div>
+
+  <h4 class="sub">Review system</h4>
+  <div class="tw"><table>
+    <thead><tr><th>Deliverable</th><th class="r">Hours</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Competitor review counts pulled per keyword and per town, so your target is a real number rather than a guess.</td><td class="num r">6.5</td></tr>
+      <tr><td class="lab">Direct review link, shortened, plus a QR code for the van and for invoices.</td><td class="num r">included</td></tr>
+      <tr><td class="lab">The ask process written: what the technician says on site, the text message that follows within the hour, the single reminder at day three.</td><td class="num r">included</td></tr>
+      <tr><td class="lab">Response templates for five, three and one star reviews, and the first month of replies handled for you.</td><td class="num r">included</td></tr>
+      <tr><td class="lab">Facebook, BBB and Yelp review channels opened alongside Google.</td><td class="num r">included</td></tr>
+    </tbody>
+  </table></div>
+
+  <h4 class="sub">Citations</h4>
+  <div class="tw"><table>
+    <thead><tr><th>Deliverable</th><th class="r">Hours</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">30 to 40 listings built with identical business details throughout. Includes Yelp, Bing Places, Apple Business Connect, LinkedIn, Nextdoor, Manta, the data aggregators, plus the veteran and industry directories you qualify for and your competitors do not.</td><td class="num r">12.5</td></tr>
+      <tr><td class="lab">Existing listings audited, duplicates removed, the unclaimed Pegbo profile claimed.</td><td class="num r">included</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="tw" style="margin-top:22px"><table>
+    <thead><tr><th>Summary</th><th class="r">Hours</th><th class="r">Price</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Website: fixes, 10 service pages, 4 town pages</td><td class="num r">65</td><td class="num r">$2,200</td></tr>
+      <tr><td class="lab">Google Maps profile build</td><td class="num r">16</td><td class="num r">$500</td></tr>
+      <tr><td class="lab">Review system</td><td class="num r">6.5</td><td class="num r">$300</td></tr>
+      <tr><td class="lab">Citations, 30 to 40 listings</td><td class="num r">12.5</td><td class="num r">$500</td></tr>
+      <tr class="total"><td>Total</td><td class="num r">100</td><td class="num r">$3,500</td></tr>
+      <tr><td class="lab cond">If a Google Business Profile has to be created and verified from scratch</td><td class="num r">+3</td><td class="num r">+$300</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">02</div><h2>Justification one: the hourly rate</h2></div>
+  <p class="sdek">The simplest test. Divide the price by the work.</p>
+
+  <div class="model">
+    <div class="mstep"><div class="mv">100</div><div class="mk">Hours of work</div>
+      <div class="mn">Itemised in section 01, task by task.</div></div>
+    <div class="mstep"><div class="mv">$3,500</div><div class="mk">Fixed price</div>
+      <div class="mn">Whether it takes 100 hours or 130. The overrun is mine.</div></div>
+    <div class="mstep"><div class="mv">$35</div><div class="mk">Effective hourly rate</div>
+      <div class="mn">What you are actually paying per hour of work.</div></div>
+    <div class="mstep"><div class="mv">$35 to $250</div><div class="mk">Market hourly range</div>
+      <div class="mn">Published range for local SEO work in the United States.</div></div>
+  </div>
+
+  <div class="call">
+    <h4>You are buying at the very bottom of the market range</h4>
+    <p>Published hourly rates for this kind of work in the US run from <strong>$35 to $250 an
+      hour</strong>. At $3,500 for 100 hours you are paying <strong>$35</strong>, the floor of
+      that range, for work scoped by someone who has already crawled your site and your
+      competitors' sites line by line.</p>
+    <p>And because the price is fixed rather than hourly, if the work runs long, that is my
+      problem and not your invoice.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">03</div><h2>Justification two: what the market charges</h2></div>
+  <p class="sdek">Compared like for like against published 2026 US pricing.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>Route</th><th>Typical cost</th><th>What you actually get</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">US agency, website only (10 to 15 pages)</td><td class="num">$4,000 to $15,000</td><td>The website. Google Maps, reviews and citations are quoted separately on top.</td></tr>
+      <tr><td class="lab">US agency, one-off SEO project</td><td class="num">$5,000 to $30,000</td><td>The search work. The website build is separate again.</td></tr>
+      <tr><td class="lab">US agency, local SEO retainer</td><td class="num">$800 to $1,500 per month</td><td>Ongoing only. Nothing built up front, and the meter never stops.</td></tr>
+      <tr><td class="lab">Hire a marketer in-house</td><td class="num">$55,000+ per year</td><td>One person, full time, who still has to be taught this specific trade.</td></tr>
+      <tr><td class="lab">Cheap freelancer</td><td class="num">$500 to $1,000</td><td>A Google profile filled in and a handful of directory submissions. No pages, no strategy, and usually no idea who your competitors are.</td></tr>
+      <tr><td class="lab">Do it yourself</td><td class="num">100 hours of your time</td><td>Time taken from selling and running jobs, which is where your hours earn the most.</td></tr>
+      <tr class="us"><td class="lab">This proposal</td><td class="num">$3,500 one off</td><td>Website rebuild, 14 pages, Google Maps profile, review system, 30 to 40 citations. All four, one price.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call green">
+    <h4>The comparison that matters</h4>
+    <p>The bottom of the US range <strong>for the website alone</strong>, at this page count, is
+      <strong>$4,000</strong>. This proposal delivers the website <strong>plus</strong> the
+      Google Maps build, <strong>plus</strong> the review system, <strong>plus</strong> 30 to 40
+      citations, for <strong>$3,500</strong>.</p>
+    <p>You are getting four pieces of work for less than the cheapest price of one of them.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">04</div><h2>Justification three: cost per page</h2></div>
+  <p class="sdek">A different way to cut the same number.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>Measure</th><th class="r">Figure</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Pages written and built</td><td class="num r">14</td></tr>
+      <tr><td class="lab">Total price divided across those pages</td><td class="num r">$250 each</td></tr>
+      <tr><td class="lab">Market rate to add a page to an existing site</td><td class="num r">$50 to $200</td></tr>
+      <tr><td class="lab">Market rate for a written, researched, SEO-built service page</td><td class="num r">$150 to $400</td></tr>
+      <tr class="total"><td>What the Maps build, review system and citations then cost you</td><td class="num r">Effectively nothing</td></tr>
+    </tbody>
+  </table></div>
+
+  <p style="color:var(--ink2);font-size:15.5px;max-width:66ch">At $250 a page you are inside the
+    normal band for a properly researched and written service page. Every page here is written
+    against a keyword target, given its own structured data, its own FAQ and its own pricing
+    guidance. The Google Maps profile, the review system and the 30 to 40 citations sit on top
+    of that at no meaningful extra cost.</p>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">05</div><h2>Justification four: when it pays for itself</h2></div>
+  <p class="sdek">Using the conservative model from the audit, and your own service values.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>If the first job is</th><th class="r">Typical value</th><th>Pays this back in</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">A biohazard cleanup</td><td class="num r">$4,000 average</td><td class="yes">One job</td></tr>
+      <tr><td class="lab">An unattended death cleanup</td><td class="num r">$2,000 to $7,000</td><td class="yes">One job</td></tr>
+      <tr><td class="lab">A hoarding cleanup</td><td class="num r">$7,500 average</td><td class="yes">One job, twice over</td></tr>
+      <tr><td class="lab">A sewage decontamination</td><td class="num r">$2,000 to $15,000</td><td class="yes">One job</td></tr>
+      <tr><td class="lab">A janitorial contract</td><td class="num r">$1,000 to $1,500 per month</td><td class="yes">Under 4 months, then it keeps paying</td></tr>
+      <tr><td class="lab">A medical facility contract</td><td class="num r">Premium on the above</td><td class="yes">Under 4 months, then it keeps paying</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call green">
+    <h4>One job. That is the whole break-even.</h4>
+    <p>There is no service line in your business where this costs more than a single job. On the
+      specialty side, one call pays for all of it outright. On the janitorial side, one contract
+      clears it in under four months and then carries on paying every month for the life of the
+      contract.</p>
+    <p>A janitorial contract at $1,250 a month held for two years is <strong>$30,000</strong>.
+      This proposal is <strong>$3,500</strong>, once.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">06</div><h2>Justification five: the cost of waiting</h2></div>
+  <p class="sdek">Doing nothing is also a decision with a price attached.</p>
+
+  <div class="call red">
+    <h4>Right now, every one of these is running against you</h4>
+    <ul class="tight">
+      <li><b>You are not on Google Maps.</b> Every local search shows a competitor's listing and
+        not yours. That is happening today, and every day, at no cost to them.</li>
+      <li><b>You rank for nothing.</b> Zero search terms. Your competitors hold 877, 1,400 and
+        3,900.</li>
+      <li><b>You are cited by no AI engine.</b> Zero across ChatGPT, Google AI Overviews, Google
+        AI Mode and Gemini. One competitor has 152 pages cited.</li>
+      <li><b>Your review count stays at zero.</b> Reviews compound, which means the gap widens
+        every month rather than staying still.</li>
+      <li><b>Federal agency logos are still on your homepage,</b> while you bid for federal
+        work.</li>
+    </ul>
+    <p style="margin-top:14px">On the audit's own conservative model, that is roughly
+      <strong>one job a month</strong> going elsewhere. Waiting a quarter to decide is not a
+      neutral choice. It is the price of this proposal, again, in work that went to somebody
+      else.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">07</div><h2>What is not included</h2></div>
+  <p class="sdek">Stated plainly, so the scope is unambiguous on both sides.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>Not in this price</th><th>Why, and what it would cost</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Monthly management after delivery</td><td>Optional, from month three, $950 per month. Covers 2 new pages a month, Google profile management, review handling, ongoing citations and monthly reporting. Entirely separate from this proposal and not required to accept it.</td></tr>
+      <tr><td class="lab">Google Ads or Local Services Ads</td><td>Kept separate deliberately, so the organic result stays measurable.</td></tr>
+      <tr><td class="lab">Professional photography</td><td>Your crew photographing jobs is free and works better than a shoot. If you want a photographer, that is a separate quote.</td></tr>
+      <tr><td class="lab">Government contracting page and capability statement PDF</td><td>A distinct project, $700 to $1,200. Worth doing given you are already registered in SAM.gov, but it is not part of this scope.</td></tr>
+      <tr><td class="lab">The remaining 8 town pages and 3 service pages</td><td>$165 to $250 each. This proposal covers the 14 highest-value pages. The rest are best built gradually.</td></tr>
+      <tr><td class="lab">Third-party costs</td><td>Call tracking runs roughly $30 to $50 a month, paid directly by you to the provider. Any paid directory listings, such as BBB, are your choice and your cost.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">08</div><h2>What I need from you</h2></div>
+  <p class="sdek">Two of these decide whether the work reaches its full value. Neither can be
+    bought.</p>
+  <ol class="secs">
+    <li><b>Account access in week one.</b> <span>Google Business Profile, Search Console,
+      Analytics, hosting, DNS and the website admin.</span></li>
+    <li><b>Job photographs, five per completed job, weekly.</b> <span>This is what replaces the
+      stock photography permanently and feeds the town pages, the service pages and the Google
+      profile. Nothing else fixes it.</span></li>
+    <li><b>The review calls.</b> <span>I build the system, write the scripts and handle every
+      reply. The first twenty reviews have to come from you personally calling clients you have
+      already served. Business to business reviews come from a phone call, not an
+      automation.</span></li>
+    <li><b>The 24/7 decision, in week one.</b> <span>Every biohazard competitor in this market
+      advertises it. If you will not answer at 3am, I will not build the emergency pages,
+      because they would rank and convert at nothing.</span></li>
+    <li><b>Licence and insurance numbers, and your SAM.gov details.</b> <span>Needed for the
+      trust bar and for the government-facing content.</span></li>
+    <li><b>Replies to drafts within three working days.</b> <span>The eight week timeline
+      assumes this.</span></li>
+  </ol>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">09</div><h2>Terms and the guarantee</h2></div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Item</th><th>Terms</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Total</td><td class="num">$3,500 fixed, plus $300 only if a Google Business Profile must be created and verified</td></tr>
+      <tr><td class="lab">Payment</td><td>50 percent to start, 50 percent on completion</td></tr>
+      <tr><td class="lab">Timeline</td><td>8 weeks from the day access is handed over</td></tr>
+      <tr><td class="lab">Revisions</td><td>Two rounds per page, included</td></tr>
+      <tr><td class="lab">Ownership</td><td>Every account, page and asset is yours. Registered in your name, handed over in full, no lock-in.</td></tr>
+      <tr><td class="lab">Ongoing commitment</td><td>None. The monthly retainer is optional and discussed only after delivery.</td></tr>
+      <tr><td class="lab">Price validity</td><td>30 days from the date of this document</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call green">
+    <h4>The guarantee</h4>
+    <p>At day 60, if <strong>all three</strong> of these are not true, you do not pay the second
+      half:</p>
+    <ul class="tight">
+      <li>Your homepage loads in <b>under 2 seconds on mobile</b></li>
+      <li>Your Google Business Profile is <b>100 percent complete</b></li>
+      <li>All <b>14 pages are live</b></li>
+    </ul>
+    <p style="margin-top:14px">Every one of those is entirely in my hands, which is exactly why
+      I am willing to guarantee it. What I will not guarantee is a ranking position, a number of
+      leads or a revenue figure, because those depend on Google's timing and on the reviews and
+      photographs only you can supply. Anyone who guarantees those is guessing with your
+      money.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">10</div><h2>Why this price and not more</h2></div>
+  <p class="sdek">Worth being straight about, because it will not stay here.</p>
+
+  <div class="call">
+    <h4>This is an introductory rate, and it is a trade</h4>
+    <p>$3,500 for 100 hours is below my standard rate. The standard price for this exact scope
+      is <strong>$6,000</strong>, which is still under what a US agency charges for the website
+      on its own.</p>
+    <p>I am pricing it here because I want a documented case study in this specific trade, and
+      your business is close to an ideal one for it: real certifications, a genuine specialty
+      line, a strong founder story, and almost nothing done online yet, which means the
+      before-and-after will be unusually clear.</p>
+    <p><strong>In exchange, written into the agreement:</strong></p>
+    <ul class="tight">
+      <li>A written case study using your results and your numbers</li>
+      <li>A short video testimonial once you can see the difference</li>
+      <li>Two introductions to other business owners</li>
+    </ul>
+    <p style="margin-top:14px">That trade is worth roughly the $2,500 difference to me, which is
+      why the discount exists and why it is not open ended. It applies to this engagement, at
+      this scope, within the 30 day validity on this document.</p>
+  </div>
+</section>
+
+</div>
+
+<div class="close">
+  <div class="wrap">
+    <div class="shead"><div class="sno">11</div><h2>To start</h2></div>
+    <p class="sdek">Four steps, and the first two can happen the same day.</p>
+    <div class="steps">
+      <div class="step"><div class="sn">STEP 1</div><div class="st">Say yes</div>
+        <div class="sp">Confirm the scope in this document and the 24/7 decision. Nothing else
+          needs deciding today.</div></div>
+      <div class="step"><div class="sn">STEP 2</div><div class="st">Hand over access</div>
+        <div class="sp">Google, hosting, DNS, website admin. The eight week clock starts
+          here, not before.</div></div>
+      <div class="step"><div class="sn">STEP 3</div><div class="st">First payment</div>
+        <div class="sp">$1,750. Work begins the same week, starting with the Google profile,
+          because verification takes the longest.</div></div>
+      <div class="step"><div class="sn">STEP 4</div><div class="st">Week one review call</div>
+        <div class="sp">I walk you through what has already been fixed, and we set the review
+          routine up with your crew.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="foot">
+    <p><b>Prepared by Hassan.</b> 23 August 2026. Valid until 23 September 2026.</p>
+  </div>
+</div>
