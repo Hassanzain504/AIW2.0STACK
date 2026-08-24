@@ -93,7 +93,14 @@ tr.total td.num{color:var(--accent)}
   text-transform:uppercase;color:var(--ink3);font-weight:600}
 .sigblk .nm{font-weight:600;font-size:15px;margin-top:4px}
 .sigblk .rl{font-size:13.5px;color:var(--ink2)}
-.foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
+.issued{margin:30px 0 0;max-width:300px;border-top:1px solid var(--line2);padding-top:10px}
+.issued .sigline{height:44px;border-bottom:1px solid var(--line2);margin-bottom:8px;
+  display:flex;align-items:flex-end;padding-bottom:6px;font-size:20px;font-weight:600;color:var(--ink)}
+.issued .k{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600}
+.issued .nm{font-weight:600;font-size:15px;margin-top:4px}
+.issued .rl{font-size:13.5px;color:var(--ink2);margin-top:6px}
+.foot{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);
   font-size:12.5px;color:var(--ink3)}
 @media print{
   body{background:#fff;color:#000;font-size:11.5pt}
@@ -315,9 +322,16 @@ tr.total td.num{color:var(--accent)}
     verification takes the longest and everything else waits on it.</p>
 </div>
 
+<div class="issued">
+  <div class="sigline signed">Hassan Ali Zain</div>
+  <div class="k">Prepared by</div>
+  <div class="nm">Hassan Ali Zain</div>
+  <div class="rl">Date: <b>24/08/2026</b></div>
+</div>
+
 <div class="foot">
-  <p>Black Ops Cleaning Company LLC and Hassan Ali Zain. Prepared at the start of the
-    engagement. The terms in section 6 are reproduced in the signed agreement.</p>
+  <p>Black Ops Cleaning Company LLC and Hassan Ali Zain. Prepared 24 August 2026 at the start of
+    the engagement. The terms in section 6 are reproduced in the signed agreement.</p>
 </div>
 
 </div>
