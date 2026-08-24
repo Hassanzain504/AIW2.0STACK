@@ -1,0 +1,323 @@
+<title>Black Ops Onboarding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#FFFFFF; --card:#FFFFFF; --card2:#F2F2F0; --card3:#E7E7E3;
+  --line:#D4D4CF; --line2:#AFAFA8;
+  --ink:#14171A; --ink2:#4A5157; --ink3:#787F86;
+  --accent:#0E637F; --accent-bg:#E4F0F5;
+  --good:#1A6B4C; --good-bg:#E1F0E8;
+  --band:#14171A; --bandink:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C0F11; --card:#14181B; --card2:#1C2226; --card3:#252C31;
+    --line:#282F34; --line2:#3E474E;
+    --ink:#E7EAEC; --ink2:#A0ABB2; --ink3:#6F7B83;
+    --accent:#55B4D4; --accent-bg:#0F2C38;
+    --good:#52C193; --good-bg:#0E281E;
+    --band:#05080A; --bandink:#E7EAEC;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C0F11; --card:#14181B; --card2:#1C2226; --card3:#252C31;
+  --line:#282F34; --line2:#3E474E;
+  --ink:#E7EAEC; --ink2:#A0ABB2; --ink3:#6F7B83;
+  --accent:#55B4D4; --accent-bg:#0F2C38;
+  --good:#52C193; --good-bg:#0E281E;
+  --band:#05080A; --bandink:#E7EAEC;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.sheet{max-width:820px;margin:0 auto;padding:0 30px 60px}
+.mast{background:var(--band);color:var(--bandink);margin-bottom:34px}
+.mast .in{max-width:820px;margin:0 auto;padding:26px 30px 30px}
+.lock{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;
+  padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.18)}
+.mark{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:17px;
+  letter-spacing:.13em;text-transform:uppercase;line-height:1}
+.mark span{color:#55B4D4}
+.lock .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.62;font-weight:600;text-align:right}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(30px,5.2vw,46px);line-height:1;letter-spacing:-.012em;
+  margin:20px 0 0;text-transform:uppercase}
+.sub{font-size:16px;color:rgba(231,234,236,.72);margin:12px 0 0;max-width:62ch}
+h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
+  text-transform:uppercase;letter-spacing:.012em;margin:34px 0 12px;
+  padding-bottom:6px;border-bottom:2px solid var(--ink)}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:16px;
+  text-transform:uppercase;letter-spacing:.03em;color:var(--accent);margin:22px 0 8px}
+p{margin:0 0 12px} p:last-child{margin-bottom:0}
+ul,ol{margin:10px 0 14px;padding-left:22px}
+li{margin-bottom:7px}
+b,strong{font-weight:600;color:var(--ink)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:3px;margin:14px 0}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:460px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:11px 13px;border-bottom:2px solid var(--line2);background:var(--card2);white-space:nowrap}
+th.r,td.r{text-align:right}
+td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.lab{font-weight:500}
+tr.total td{background:var(--card2);font-weight:700;font-size:16.5px;border-top:2px solid var(--line2)}
+tr.total td.num{color:var(--accent)}
+.box{background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:3px;padding:16px 18px;margin:16px 0}
+.box.good{border-left-color:var(--good);background:var(--good-bg)}
+.box h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:16px;
+  text-transform:uppercase;margin:0 0 7px;letter-spacing:.02em}
+.box p{font-size:14.5px;color:var(--ink2)}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px 30px;margin:16px 0}
+.pair .k{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;margin-bottom:5px}
+.pair .v{font-size:15px;line-height:1.5}
+.pair .v b{display:block;font-weight:600;margin-bottom:2px}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:13.5px;letter-spacing:.02em}
+.clause{margin:0 0 18px}
+.clause .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent);
+  font-weight:600;letter-spacing:.06em}
+.clause h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:17px;
+  text-transform:uppercase;margin:3px 0 7px;letter-spacing:.015em}
+.clause p,.clause li{font-size:14.5px;color:var(--ink2)}
+.sign{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:34px;margin:26px 0 0}
+.sigblk{border-top:1px solid var(--line2);padding-top:10px}
+.sigline{height:46px;border-bottom:1px solid var(--line2);margin-bottom:8px}
+.sigblk .k{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600}
+.sigblk .nm{font-weight:600;font-size:15px;margin-top:4px}
+.sigblk .rl{font-size:13.5px;color:var(--ink2)}
+.foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--ink3)}
+@media print{
+  body{background:#fff;color:#000;font-size:11.5pt}
+  .mast{background:#000 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h2{page-break-after:avoid} .clause,.box,.tw{page-break-inside:avoid}
+  .sheet{padding:0 0 20px} .mast .in{padding:18px 0 20px}
+}
+</style>
+
+<header class="mast">
+  <div class="in">
+    <div class="lock">
+      <div class="mark">Black<span>&nbsp;Ops</span>&nbsp;Cleaning</div>
+      <div class="meta">Onboarding<br>Project start</div>
+    </div>
+    <h1>Welcome, and<br>what happens now</h1>
+    <p class="sub">Everything you need to know for the next thirty days, in one document. What
+      I will be doing, what I need from you, and the terms we are working under.</p>
+  </div>
+</header>
+
+<div class="sheet">
+
+<div class="pair">
+  <div><div class="k">Client</div><div class="v"><b>Black Ops Cleaning Company LLC</b>
+    Amilcar Ayala<br>121 Talbott St, Rockville, MD 20852</div></div>
+  <div><div class="k">Delivered by</div><div class="v"><b>Hassan Ali Zain</b>
+    Website, Google Maps and local search</div></div>
+  <div><div class="k">Engagement</div><div class="v"><b>Website rebuild, 57 pages,
+    Google Business Profile, review system, citations</b></div></div>
+  <div><div class="k">Total</div><div class="v"><b>$3,300</b>
+    50 percent to start, 50 percent on completion</div></div>
+</div>
+
+<h2>1. What happens in the next thirty days</h2>
+
+<div class="tw"><table>
+  <thead><tr><th>Stage</th><th class="r">Days</th><th>What gets done</th></tr></thead>
+  <tbody>
+    <tr><td class="lab">First engagement</td><td class="num r">1 to 10</td><td>Access taken and
+      a full baseline captured, so we can measure everything against it later. Every technical
+      fault fixed: images compressed, headings and page titles rewritten, the federal agency
+      logos removed, business data added so Google can read your location, call tracking
+      installed. Google Business Profile built and submitted for verification. Review system
+      built and the routine set up with your crew.</td></tr>
+    <tr><td class="lab">Second engagement</td><td class="num r">11 to 19</td><td>The ten priority
+      service pages written and built. Biohazard, crime scene, unattended death, sewage,
+      hoarding and emergency response first, because that is the thinnest competition and the
+      highest margin work.</td></tr>
+    <tr><td class="lab">Third engagement</td><td class="num r">20 to 30</td><td>The four priority
+      town pages built. Citations created and verified, duplicates cleared, the Chamber of
+      Commerce listing repaired. Everything handed over with logins, and a walkthrough of what
+      moved.</td></tr>
+    <tr><td class="lab">Rolling release</td><td class="num r">After 30</td><td>The remaining 43
+      pages go live at two to three a week until all 57 are published. Included in the price.
+      Nothing further to approve or pay.</td></tr>
+  </tbody>
+</table></div>
+
+<div class="box">
+  <h4>Why the pages go live gradually</h4>
+  <p>Google treats a website that publishes fifty-seven pages in one month as spam. The same
+    fifty-seven pages, released two or three a week, read as a business that is growing. Same
+    work, same price, better result.</p>
+</div>
+
+<h2>2. What I need from you</h2>
+
+<h3>In the first week</h3>
+<ul>
+  <li><b>Account access.</b> Google Business Profile, Google Search Console, Google Analytics,
+    website admin, hosting, and domain or DNS. If you are not sure who holds these, tell me
+    early. Tracking them down can take several days on its own.</li>
+  <li><b>Licence and insurance numbers,</b> and your SAM.gov details including UEI, CAGE code
+    and the NAICS codes you are registered under.</li>
+  <li><b>Two decisions.</b> Whether you will answer the phone 24/7, and confirmation that you
+    are commercial and specialty rather than residential. Both change what gets built.</li>
+  <li><b>A business email inbox I can reach.</b> Verification links for the Google profile and
+    every directory listing arrive there.</li>
+  <li><b>Someone who will answer verification calls.</b> Several platforms verify by automated
+    call or text to your listed number. If nobody picks up, the listing does not go live.</li>
+</ul>
+
+<h3>Every week, for as long as we work together</h3>
+<ul>
+  <li><b>Five job photographs.</b> Real work, from your crew, on their phones. This is what
+    replaces the stock photography permanently and it is what unlocks each new town page. A town
+    page without a real job and a real photo from that town will not rank, so this directly
+    controls how fast the remaining pages can be built.</li>
+</ul>
+
+<h3>Starting in week one, and this one is only yours</h3>
+<ul>
+  <li><b>The review calls.</b> Business to business reviews come from a phone call, not an
+    automation. The first twenty need to come from you personally, calling clients you have
+    already served. I build the system, write every script and template, and handle every reply.
+    The calls are yours, and they are the single biggest factor in how fast the Google Maps
+    listing moves.</li>
+</ul>
+
+<h2>3. How we work together</h2>
+<ul>
+  <li><b>Updates.</b> A short written update at the end of each engagement stage, so you always
+    know what has been done and what is next.</li>
+  <li><b>Drafts.</b> Page drafts come to you for review. Two rounds of revisions per page are
+    included.</li>
+  <li><b>Turnaround.</b> Please come back on drafts within three working days. The thirty day
+    schedule assumes that.</li>
+  <li><b>Questions.</b> Email or message any time. I will answer within one working day.</li>
+  <li><b>Handover.</b> At the end, you receive every login, every account in your own name, and
+    a written record of everything built and every listing created.</li>
+</ul>
+
+<h2>4. What you will be able to see</h2>
+<p>Before anything changes, I record a baseline: your current rankings, your current visibility,
+  your review counts, and your competitors' figures. At the end of the thirty days you get the
+  same measurements again, side by side.</p>
+<p>Call tracking is installed in the first week, which means from month two onwards you will be
+  able to see, for the first time, exactly where each enquiry came from.</p>
+
+<h2>5. Timing expectations, honestly</h2>
+<ul>
+  <li><b>Technical and speed fixes</b> show up within days.</li>
+  <li><b>Google Business Profile</b> improvements typically start moving in three to eight weeks.
+    A brand new profile has to clear verification first, which can take time and is not in
+    anyone's control but Google's.</li>
+  <li><b>New pages</b> take three to six months to mature in search results.</li>
+  <li><b>Reviews</b> compound. They are slow at first and then they are the thing that carries
+    everything else.</li>
+</ul>
+<p>I will not promise you a ranking position, a number of leads, or a revenue figure. Those
+  depend on Google's timing and on the reviews and photographs only you can supply. What I do
+  guarantee is set out in the terms below.</p>
+
+<h2>6. Terms and conditions</h2>
+
+<div class="clause"><div class="n">6.1</div><h4>Scope</h4>
+<p>The work covers: rebuilding blackopscleaningco.com and correcting the technical faults
+  identified in the audit; writing and building 57 pages, of which 14 go live within the thirty
+  days and the remaining 43 are released on a rolling schedule; building and optimising the
+  Google Business Profile; building the review generation system; and creating 30 to 40
+  citations. Anything not listed here is outside this agreement.</p></div>
+
+<div class="clause"><div class="n">6.2</div><h4>Fees and payment</h4>
+<p>The total fee is <b>$3,300 USD</b>, fixed. Fifty percent ($1,650) is payable to begin work.
+  The remaining fifty percent ($1,650) is payable on completion of the thirty day schedule.
+  The fee does not change if the work takes longer than estimated.</p>
+<p>Any bank charges or transfer fees are payable by the client in addition to the fee.</p></div>
+
+<div class="clause"><div class="n">6.3</div><h4>Timeline</h4>
+<p>Thirty days, in three stages, beginning on the day account access is handed over and the
+  first payment is received, whichever is later. Delays caused by late access, late approvals,
+  or missing client-supplied material extend the schedule by the length of the delay.</p></div>
+
+<div class="clause"><div class="n">6.4</div><h4>Client obligations</h4>
+<p>The client agrees to provide account access, licence and insurance details, five job
+  photographs per week, and responses to drafts within three working days. The client
+  acknowledges that review generation requires the client to personally contact past customers,
+  and that results depend materially on this. Where these are not provided, affected deliverables
+  are paused rather than cancelled, and the schedule extends accordingly.</p></div>
+
+<div class="clause"><div class="n">6.5</div><h4>Delivery guarantee</h4>
+<p>At day 30, if all three of the following are not true, the second payment is not due:
+  the homepage loads in under two seconds on mobile; the Google Business Profile is complete;
+  and the 14 priority pages are live. This guarantee does not apply where a delay is caused by
+  the client not meeting clause 6.4, or by Google verification timelines.</p></div>
+
+<div class="clause"><div class="n">6.6</div><h4>No performance guarantee</h4>
+<p>No guarantee is given as to search rankings, map pack position, traffic volume, number of
+  enquiries, or revenue. Search engines are third parties whose algorithms and timing are
+  outside the control of either party. Any figures discussed are industry benchmarks or
+  estimates for illustration and are not a forecast of results.</p></div>
+
+<div class="clause"><div class="n">6.7</div><h4>Not included</h4>
+<p>Paid advertising including Google Ads and Local Services Ads; professional photography;
+  the government contracting page and capability statement; ongoing monthly management after
+  the engagement ends; and third party costs such as call tracking subscriptions, paid directory
+  listings, hosting, and domain renewals. These are available separately and quoted
+  separately.</p></div>
+
+<div class="clause"><div class="n">6.8</div><h4>Ownership</h4>
+<p>On receipt of full payment, all work produced, all accounts created, and all content written
+  belong to the client. Every account is registered in the client's name. There is no lock-in
+  and no ongoing dependency.</p></div>
+
+<div class="clause"><div class="n">6.9</div><h4>Confidentiality</h4>
+<p>Both parties will keep confidential any non-public business information shared during the
+  engagement. Login credentials will be handled securely and returned or deleted on
+  completion.</p></div>
+
+<div class="clause"><div class="n">6.10</div><h4>Case study and testimonial</h4>
+<p>The fee reflects an introductory rate. In exchange, the client agrees to provide a written
+  case study using the project results, a short video testimonial once results are visible, and
+  two introductions to other business owners. No confidential figures will be published without
+  the client's written approval.</p></div>
+
+<div class="clause"><div class="n">6.11</div><h4>Revisions</h4>
+<p>Two rounds of revisions per page are included. Additional rounds, or changes that alter the
+  agreed scope, are quoted separately before any work begins.</p></div>
+
+<div class="clause"><div class="n">6.12</div><h4>Termination</h4>
+<p>Either party may end the engagement with seven days written notice. Work completed up to that
+  point is payable on a pro rata basis. The first payment is non-refundable once work has begun.
+  All accounts and completed work are handed over regardless.</p></div>
+
+<div class="clause"><div class="n">6.13</div><h4>Limitation of liability</h4>
+<p>Liability under this agreement is limited to the total fees paid. Neither party is liable for
+  indirect or consequential loss, including lost profits or lost business opportunity.</p></div>
+
+<div class="clause"><div class="n">6.14</div><h4>Third party platforms</h4>
+<p>The work depends on platforms operated by third parties, including Google, Meta, and various
+  directories. Suspensions, policy changes, verification delays, and outages on those platforms
+  are outside the control of either party and are not a breach of this agreement.</p></div>
+
+<div class="box good">
+  <h4>Ready to start</h4>
+  <p>Send the account access listed in section 2, and the first payment using the details on the
+    invoice. Work begins the same week, starting with the Google Business Profile, because
+    verification takes the longest and everything else waits on it.</p>
+</div>
+
+<div class="foot">
+  <p>Black Ops Cleaning Company LLC and Hassan Ali Zain. Prepared at the start of the
+    engagement. The terms in section 6 are reproduced in the signed agreement.</p>
+</div>
+
+</div>

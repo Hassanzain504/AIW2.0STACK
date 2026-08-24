@@ -1,0 +1,351 @@
+<title>Services Agreement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#FFFFFF; --card:#FFFFFF; --card2:#F2F2F0; --card3:#E7E7E3;
+  --line:#D4D4CF; --line2:#AFAFA8;
+  --ink:#14171A; --ink2:#4A5157; --ink3:#787F86;
+  --accent:#0E637F; --accent-bg:#E4F0F5;
+  --good:#1A6B4C; --good-bg:#E1F0E8;
+  --band:#14171A; --bandink:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C0F11; --card:#14181B; --card2:#1C2226; --card3:#252C31;
+    --line:#282F34; --line2:#3E474E;
+    --ink:#E7EAEC; --ink2:#A0ABB2; --ink3:#6F7B83;
+    --accent:#55B4D4; --accent-bg:#0F2C38;
+    --good:#52C193; --good-bg:#0E281E;
+    --band:#05080A; --bandink:#E7EAEC;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C0F11; --card:#14181B; --card2:#1C2226; --card3:#252C31;
+  --line:#282F34; --line2:#3E474E;
+  --ink:#E7EAEC; --ink2:#A0ABB2; --ink3:#6F7B83;
+  --accent:#55B4D4; --accent-bg:#0F2C38;
+  --good:#52C193; --good-bg:#0E281E;
+  --band:#05080A; --bandink:#E7EAEC;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.sheet{max-width:820px;margin:0 auto;padding:0 30px 60px}
+.mast{background:var(--band);color:var(--bandink);margin-bottom:34px}
+.mast .in{max-width:820px;margin:0 auto;padding:26px 30px 30px}
+.lock{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;
+  padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.18)}
+.mark{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:17px;
+  letter-spacing:.13em;text-transform:uppercase;line-height:1}
+.mark span{color:#55B4D4}
+.lock .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.62;font-weight:600;text-align:right}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(30px,5.2vw,46px);line-height:1;letter-spacing:-.012em;
+  margin:20px 0 0;text-transform:uppercase}
+.sub{font-size:16px;color:rgba(231,234,236,.72);margin:12px 0 0;max-width:62ch}
+h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
+  text-transform:uppercase;letter-spacing:.012em;margin:34px 0 12px;
+  padding-bottom:6px;border-bottom:2px solid var(--ink)}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:16px;
+  text-transform:uppercase;letter-spacing:.03em;color:var(--accent);margin:22px 0 8px}
+p{margin:0 0 12px} p:last-child{margin-bottom:0}
+ul,ol{margin:10px 0 14px;padding-left:22px}
+li{margin-bottom:7px}
+b,strong{font-weight:600;color:var(--ink)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:3px;margin:14px 0}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:460px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:11px 13px;border-bottom:2px solid var(--line2);background:var(--card2);white-space:nowrap}
+th.r,td.r{text-align:right}
+td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.lab{font-weight:500}
+tr.total td{background:var(--card2);font-weight:700;font-size:16.5px;border-top:2px solid var(--line2)}
+tr.total td.num{color:var(--accent)}
+.box{background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:3px;padding:16px 18px;margin:16px 0}
+.box.good{border-left-color:var(--good);background:var(--good-bg)}
+.box h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:16px;
+  text-transform:uppercase;margin:0 0 7px;letter-spacing:.02em}
+.box p{font-size:14.5px;color:var(--ink2)}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px 30px;margin:16px 0}
+.pair .k{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;margin-bottom:5px}
+.pair .v{font-size:15px;line-height:1.5}
+.pair .v b{display:block;font-weight:600;margin-bottom:2px}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:13.5px;letter-spacing:.02em}
+.clause{margin:0 0 18px}
+.clause .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent);
+  font-weight:600;letter-spacing:.06em}
+.clause h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:17px;
+  text-transform:uppercase;margin:3px 0 7px;letter-spacing:.015em}
+.clause p,.clause li{font-size:14.5px;color:var(--ink2)}
+.sign{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:34px;margin:26px 0 0}
+.sigblk{border-top:1px solid var(--line2);padding-top:10px}
+.sigline{height:46px;border-bottom:1px solid var(--line2);margin-bottom:8px}
+.sigblk .k{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600}
+.sigblk .nm{font-weight:600;font-size:15px;margin-top:4px}
+.sigblk .rl{font-size:13.5px;color:var(--ink2)}
+.foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--ink3)}
+@media print{
+  body{background:#fff;color:#000;font-size:11.5pt}
+  .mast{background:#000 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h2{page-break-after:avoid} .clause,.box,.tw{page-break-inside:avoid}
+  .sheet{padding:0 0 20px} .mast .in{padding:18px 0 20px}
+}
+.fill{display:inline-block;min-width:170px;border-bottom:1px solid var(--line2);
+  height:1.2em;vertical-align:baseline}
+</style>
+
+<header class="mast">
+  <div class="in">
+    <div class="lock">
+      <div class="mark">Services<span>&nbsp;Agreement</span></div>
+      <div class="meta">Ref BOC-001<br>23 August 2026</div>
+    </div>
+    <h1>Services<br>agreement</h1>
+    <p class="sub">Between Hassan Ali Zain and Black Ops Cleaning Company LLC, for the website
+      rebuild, Google Business Profile, review system and citation work described below.</p>
+  </div>
+</header>
+
+<div class="sheet">
+
+<h2>Parties</h2>
+<div class="pair">
+  <div><div class="k">The Provider</div><div class="v"><b>Hassan Ali Zain</b>
+    Website, Google Maps and local search<br>
+    Referred to below as "the Provider"</div></div>
+  <div><div class="k">The Client</div><div class="v"><b>Black Ops Cleaning Company LLC</b>
+    Amilcar Ayala<br>121 Talbott St, Rockville, MD 20852, United States<br>
+    Referred to below as "the Client"</div></div>
+  <div><div class="k">Agreement date</div><div class="v mono">23 August 2026</div></div>
+  <div><div class="k">Reference</div><div class="v mono">BOC-001</div></div>
+</div>
+
+<h2>1. Scope of work</h2>
+
+<div class="clause"><div class="n">1.1</div><h4>The website</h4>
+<p>The Provider will correct every technical fault identified in the audit of
+  blackopscleaningco.com, including compressing and converting images, bringing Core Web Vitals
+  to green on mobile, adding a main heading to every page, rewriting page titles and
+  descriptions, removing the CDC, EPA and OSHA agency logos, adding structured business data,
+  rebuilding the enquiry form to qualify commercial leads, and installing call tracking and
+  conversion tracking.</p></div>
+
+<div class="clause"><div class="n">1.2</div><h4>The pages</h4>
+<p>The Provider will write and build <b>57 pages</b>: 13 service pages, 17 town pages, 19 pages
+  combining a service with a town, and 8 supporting pages. Fourteen priority pages will be live
+  within the thirty day schedule. The remaining 43 will be released on a rolling schedule of two
+  to three per week until all 57 are published, at no additional cost.</p>
+<p>The Client acknowledges that town pages require a genuine completed job in that town, a
+  photograph from it, and a local detail, and that pages for towns where the Client has not
+  worked will be deferred until such a job exists.</p></div>
+
+<div class="clause"><div class="n">1.3</div><h4>Google Business Profile</h4>
+<p>The Provider will create or rebuild and fully optimise the Client's Google Business Profile,
+  including category research, service area configuration, all services written as separate
+  items with descriptions, the Products section, business description, attributes, hours,
+  twenty photographs, and seeded questions and answers. The Provider will also merge the
+  duplicate Facebook page and repair the Chamber of Commerce listing.</p></div>
+
+<div class="clause"><div class="n">1.4</div><h4>Review system</h4>
+<p>The Provider will build a review generation system: a competitor benchmark establishing the
+  Client's real review target, a direct review link and QR code, a written technician script,
+  an SMS sequence with one reminder, response templates for positive and negative reviews, and
+  the handling of all review replies for the first month.</p></div>
+
+<div class="clause"><div class="n">1.5</div><h4>Citations</h4>
+<p>The Provider will create between 30 and 40 business listings with identical details
+  throughout, audit existing listings, remove duplicates, and claim unclaimed profiles.</p></div>
+
+<h2>2. Fees and payment</h2>
+
+<div class="clause"><div class="n">2.1</div><h4>Fee</h4>
+<p>The total fee is <b>three thousand three hundred United States dollars ($3,300 USD)</b>,
+  fixed. The fee does not change if the work requires more hours than estimated.</p></div>
+
+<div class="clause"><div class="n">2.2</div><h4>Schedule</h4>
+<p>Fifty percent ($1,650) is payable on signing this agreement, to begin work. The remaining
+  fifty percent ($1,650) is payable on completion of the thirty day schedule.</p></div>
+
+<div class="clause"><div class="n">2.3</div><h4>Method and charges</h4>
+<p>Payment is by bank transfer to the account detailed on invoice BOC-001. All bank charges,
+  intermediary fees and currency conversion costs are payable by the Client in addition to the
+  fee. The Client should quote the reference BOC-001 on each transfer.</p></div>
+
+<div class="clause"><div class="n">2.4</div><h4>Late payment</h4>
+<p>Where the second payment remains outstanding more than fourteen days after it falls due, the
+  Provider may pause the rolling release of remaining pages until payment is received. Work
+  already delivered is not withdrawn.</p></div>
+
+<h2>3. Timeline</h2>
+
+<div class="clause"><div class="n">3.1</div><h4>Duration</h4>
+<p>Thirty days, in three stages: days 1 to 10, days 11 to 19, and days 20 to 30. The rolling
+  release of the remaining pages continues after day 30 until all 57 are published.</p></div>
+
+<div class="clause"><div class="n">3.2</div><h4>Start date</h4>
+<p>The thirty day period begins on the later of: the date the first payment is received, or the
+  date full account access is handed over.</p></div>
+
+<div class="clause"><div class="n">3.3</div><h4>Delays</h4>
+<p>Delays caused by late account access, late approval of drafts, missing photographs, or any
+  other client-supplied material extend the schedule by the length of the delay. Delays caused
+  by third party platform verification, including Google Business Profile verification, extend
+  the schedule and are not a breach by either party.</p></div>
+
+<h2>4. Client obligations</h2>
+
+<div class="clause"><div class="n">4.1</div><h4>Access and information</h4>
+<p>The Client will provide, within the first week: access to the Google Business Profile, Google
+  Search Console, Google Analytics, website administration, hosting, and domain or DNS; licence
+  and insurance numbers; SAM.gov details; a business email inbox the Provider can reach; and a
+  telephone number that will be answered for automated verification calls.</p></div>
+
+<div class="clause"><div class="n">4.2</div><h4>Photographs</h4>
+<p>The Client will supply a minimum of five photographs of completed work each week. The Client
+  acknowledges that these are required to replace stock photography and to enable town pages,
+  and that the rate at which remaining pages can be published depends on them.</p></div>
+
+<div class="clause"><div class="n">4.3</div><h4>Reviews</h4>
+<p>The Client acknowledges that business to business reviews cannot be generated by the Provider
+  and must come from the Client personally contacting past and current customers. The Client
+  agrees to make these approaches. The Client acknowledges that Google Maps visibility depends
+  materially on review volume and frequency, and that failure to generate reviews will limit
+  results regardless of the Provider's work.</p></div>
+
+<div class="clause"><div class="n">4.4</div><h4>Decisions</h4>
+<p>The Client will confirm, within the first week: whether the business will answer telephone
+  calls twenty-four hours a day, and whether the business positions itself as commercial and
+  specialty or also residential. Emergency response pages will not be built where the Client
+  does not commit to twenty-four hour telephone cover.</p></div>
+
+<div class="clause"><div class="n">4.5</div><h4>Approvals</h4>
+<p>The Client will respond to drafts within three working days.</p></div>
+
+<h2>5. Guarantees and disclaimers</h2>
+
+<div class="clause"><div class="n">5.1</div><h4>Delivery guarantee</h4>
+<p>At day 30, if all three of the following are not true, the second payment of $1,650 is not
+  due and the Provider waives it:</p>
+<ul>
+  <li>The Client's homepage loads in under two seconds on a mobile connection</li>
+  <li>The Client's Google Business Profile is complete</li>
+  <li>All fourteen priority pages are live</li>
+</ul>
+<p>This guarantee does not apply where the failure is caused by the Client not meeting its
+  obligations under clause 4, or by Google verification timelines outside the Provider's
+  control.</p></div>
+
+<div class="clause"><div class="n">5.2</div><h4>No performance guarantee</h4>
+<p>The Provider gives <b>no guarantee</b> as to search engine rankings, Google Maps position,
+  traffic volume, number of enquiries, conversion rate, or revenue. Search engines are operated
+  by third parties whose algorithms, policies and timing are outside the control of either
+  party. Any figures discussed in proposals, audits or meetings are published industry
+  benchmarks or illustrative estimates and do not constitute a forecast, representation or
+  warranty of results.</p></div>
+
+<div class="clause"><div class="n">5.3</div><h4>Third party platforms</h4>
+<p>The work depends on platforms operated by third parties including Google, Meta, Yelp and
+  various business directories. Account suspensions, policy changes, verification delays,
+  rejected listings and service outages on those platforms are outside the control of either
+  party and do not constitute a breach of this agreement.</p></div>
+
+<h2>6. Exclusions</h2>
+
+<div class="clause"><div class="n">6.1</div><h4>Not included in the fee</h4>
+<p>The following are outside this agreement and are quoted separately if required: paid
+  advertising including Google Ads and Local Services Ads; professional photography; the
+  government contracting page and capability statement; ongoing monthly management after this
+  engagement; and third party costs including call tracking subscriptions, paid directory
+  memberships, hosting and domain renewals.</p></div>
+
+<div class="clause"><div class="n">6.2</div><h4>Revisions</h4>
+<p>Two rounds of revisions per page are included. Further rounds, or changes that alter the
+  agreed scope, are quoted separately and begin only on the Client's written approval.</p></div>
+
+<h2>7. Ownership and confidentiality</h2>
+
+<div class="clause"><div class="n">7.1</div><h4>Ownership</h4>
+<p>On receipt of full payment, all work produced under this agreement, all content written, and
+  all accounts and listings created belong to the Client. All accounts are registered in the
+  Client's name. The Provider retains no ongoing control and imposes no lock-in.</p></div>
+
+<div class="clause"><div class="n">7.2</div><h4>Credentials</h4>
+<p>The Provider will handle all login credentials securely and will return or delete them on
+  completion of the engagement at the Client's request.</p></div>
+
+<div class="clause"><div class="n">7.3</div><h4>Confidentiality</h4>
+<p>Each party will keep confidential any non-public business, financial or operational
+  information disclosed by the other during this engagement, and will not disclose it to any
+  third party without written consent, except where required by law.</p></div>
+
+<div class="clause"><div class="n">7.4</div><h4>Case study and testimonial</h4>
+<p>The fee reflects an introductory rate. In consideration of that reduced fee, the Client
+  agrees to provide: a written case study using the project results; a short video testimonial
+  once results are visible; and two introductions to other business owners. The Provider will
+  not publish confidential financial figures without the Client's written approval.</p></div>
+
+<h2>8. General</h2>
+
+<div class="clause"><div class="n">8.1</div><h4>Termination</h4>
+<p>Either party may terminate this agreement on seven days written notice. Work completed to the
+  date of termination is payable on a pro rata basis. The first payment is non-refundable once
+  work has begun. All completed work, accounts and credentials are handed to the Client
+  regardless of the reason for termination.</p></div>
+
+<div class="clause"><div class="n">8.2</div><h4>Limitation of liability</h4>
+<p>The total liability of either party under this agreement is limited to the total fees paid.
+  Neither party is liable for indirect, incidental or consequential loss, including lost
+  profits, lost business or lost opportunity.</p></div>
+
+<div class="clause"><div class="n">8.3</div><h4>Independent contractor</h4>
+<p>The Provider is an independent contractor. Nothing in this agreement creates an employment
+  relationship, partnership, or joint venture between the parties.</p></div>
+
+<div class="clause"><div class="n">8.4</div><h4>Entire agreement</h4>
+<p>This document, together with invoice BOC-001, forms the entire agreement between the parties
+  and supersedes any prior discussion, proposal or representation. Any variation must be agreed
+  in writing by both parties.</p></div>
+
+<div class="clause"><div class="n">8.5</div><h4>Governing law</h4>
+<p>This agreement is governed by the laws of <span class="fill"></span>. Any dispute will first
+  be addressed by good faith discussion between the parties before any formal proceedings are
+  commenced.</p></div>
+
+<h2>9. Signatures</h2>
+<p>By signing below, both parties confirm they have read, understood and agree to the terms set
+  out in this agreement.</p>
+
+<div class="sign">
+  <div class="sigblk">
+    <div class="sigline"></div>
+    <div class="k">Signature</div>
+    <div class="nm">Amilcar Ayala</div>
+    <div class="rl">For and on behalf of Black Ops Cleaning Company LLC</div>
+    <div class="rl" style="margin-top:10px">Date: <span class="fill"></span></div>
+  </div>
+  <div class="sigblk">
+    <div class="sigline"></div>
+    <div class="k">Signature</div>
+    <div class="nm">Hassan Ali Zain</div>
+    <div class="rl">The Provider</div>
+    <div class="rl" style="margin-top:10px">Date: <span class="fill"></span></div>
+  </div>
+</div>
+
+<div class="foot">
+  <p>Services agreement, reference BOC-001, dated 23 August 2026, between Hassan Ali Zain and
+    Black Ops Cleaning Company LLC.</p>
+</div>
+
+</div>
