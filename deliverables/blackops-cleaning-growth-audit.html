@@ -161,6 +161,21 @@ ol.secs li::before{content:counter(s,decimal-leading-zero);
   color:var(--accent)}
 ol.secs li b{font-weight:600}
 ol.secs li span{color:var(--ink2)}
+/* page list */
+.pl{display:grid;grid-template-columns:repeat(auto-fill,minmax(292px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;margin:14px 0 0}
+.pli{background:var(--card2);padding:9px 12px;display:grid;
+  grid-template-columns:20px 1fr auto;gap:9px;align-items:start}
+.pli .n{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:var(--accent);
+  font-weight:600;padding-top:3px}
+.pli .nm{font-weight:600;font-size:13.5px;line-height:1.3;display:block}
+.pli .u{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  color:var(--ink3);word-break:break-all;margin-top:3px;line-height:1.35}
+.ph{font-family:"IBM Plex Mono",monospace;font-size:8px;font-weight:600;letter-spacing:.09em;
+  padding:2px 5px;border-radius:2px;border:1px solid;white-space:nowrap;margin-top:2px}
+.ph.s{background:var(--good-bg);color:var(--good);border-color:var(--good-line)}
+.ph.p2{background:var(--card3);color:var(--ink2);border-color:var(--line2)}
+.ph.p3{background:var(--card3);color:var(--ink3);border-color:var(--line)}
 .seelive{display:inline-flex;align-items:center;gap:8px;margin-top:12px;
   font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:500;
   color:var(--accent);text-decoration:none;padding:6px 11px;border-radius:2px;
@@ -691,13 +706,32 @@ ul.tight li b{color:var(--ink);font-weight:600}
   </div>
 
   <div class="bp">
-    <div class="bph"><span class="bpn">Service pages</span><span class="bpc">11 pages</span>
+    <div class="bph"><span class="bpn">Service pages</span><span class="bpc">13 pages</span>
       <span class="bpq">You have 1 shared page</span></div>
     <div class="bpb">
-      <p style="margin:0 0 10px;color:var(--ink2);font-size:15px">One page per service. Biohazard,
-        crime scene and trauma, unattended death, sewage decontamination, hoarding, emergency
-        response, commercial janitorial, medical facility, government facility, disinfection and
-        electrostatic, post-construction.</p>
+      <p style="margin:0 0 4px;color:var(--ink2);font-size:15px">One page per service.
+        Ten are built in the sprint, three follow.</p>
+        <div class="pl">
+        <div class="pli"><span class="n">01</span><span><span class="nm">Biohazard Remediation</span><span class="u">/services/biohazard-remediation/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">02</span><span><span class="nm">Crime Scene &amp; Trauma Cleanup</span><span class="u">/services/crime-scene-cleanup/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">03</span><span><span class="nm">Unattended Death Cleanup</span><span class="u">/services/unattended-death-cleanup/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">04</span><span><span class="nm">Sewage Backup &amp; Decontamination</span><span class="u">/services/sewage-backup-cleanup/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">05</span><span><span class="nm">Hoarding Cleanup</span><span class="u">/services/hoarding-cleanup/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">06</span><span><span class="nm">24/7 Emergency Cleaning Response</span><span class="u">/services/emergency-cleaning/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">07</span><span><span class="nm">Commercial Janitorial &amp; Office Cleaning</span><span class="u">/services/commercial-cleaning/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">08</span><span><span class="nm">Medical &amp; Healthcare Facility Cleaning</span><span class="u">/services/medical-facility-cleaning/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">09</span><span><span class="nm">Government &amp; Federal Facility Cleaning</span><span class="u">/services/government-facility-cleaning/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">10</span><span><span class="nm">Disinfection &amp; Infection Control</span><span class="u">/services/disinfection-services/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">11</span><span><span class="nm">Electrostatic Disinfection</span><span class="u">/services/electrostatic-disinfection/</span></span><span class="ph p2">PHASE 2</span></div>
+        <div class="pli"><span class="n">12</span><span><span class="nm">School &amp; Institutional Cleaning</span><span class="u">/services/school-cleaning/</span></span><span class="ph p2">PHASE 2</span></div>
+        <div class="pli"><span class="n">13</span><span><span class="nm">Post-Construction Cleaning</span><span class="u">/services/post-construction-cleaning/</span></span><span class="ph p2">PHASE 2</span></div>
+        </div>
+      <p style="margin:14px 0 0;color:var(--ink2);font-size:14.5px">Carpet extraction, hard floor
+        care and stripping, window cleaning and pressure washing are <b>not</b> separate pages.
+        They go in as sections inside the commercial janitorial page. Split out later only if
+        you want to sell them standalone.</p>
+      <p style="margin:14px 0 6px;color:var(--ink2);font-size:15px"><b>Every one of these pages
+        contains:</b></p>
       <ol class="secs">
         <li><b>H1 naming the service and the area</b></li>
         <li><b>The problem in the customer's own words.</b> <span>The symptoms they are actually
@@ -723,13 +757,33 @@ ul.tight li b{color:var(--ink);font-weight:600}
   </div>
 
   <div class="bp">
-    <div class="bph"><span class="bpn">Town pages</span><span class="bpc">12 pages</span>
+    <div class="bph"><span class="bpn">Town pages</span><span class="bpc">17 pages</span>
       <span class="bpq">You have 0</span></div>
     <div class="bpb">
-      <p style="margin:0 0 10px;color:var(--ink2);font-size:15px">This is how a business ranks
-        beyond the few miles around its own address. Rockville, North Bethesda, Gaithersburg,
-        Bethesda, Potomac, Kensington, Wheaton, Silver Spring, Chevy Chase, Germantown,
-        Washington DC, Arlington. Clean Method has 15 of these. Green Apple has 7.</p>
+      <p style="margin:0 0 4px;color:var(--ink2);font-size:15px">This is how a business
+        ranks beyond the few miles around its own address. Clean Method has 15 of these. Green
+        Apple has 7. You have none. Ordered by distance from Talbott St, nearest first.</p>
+        <div class="pl">
+        <div class="pli"><span class="n">01</span><span><span class="nm">Rockville MD</span><span class="u">/commercial-cleaning-rockville-md/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">02</span><span><span class="nm">North Bethesda MD</span><span class="u">/commercial-cleaning-north-bethesda-md/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">03</span><span><span class="nm">Gaithersburg MD</span><span class="u">/commercial-cleaning-gaithersburg-md/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">04</span><span><span class="nm">Bethesda MD</span><span class="u">/commercial-cleaning-bethesda-md/</span></span><span class="ph s">SPRINT</span></div>
+        <div class="pli"><span class="n">05</span><span><span class="nm">Potomac MD</span><span class="u">/commercial-cleaning-potomac-md/</span></span><span class="ph p2">PHASE 2</span></div>
+        <div class="pli"><span class="n">06</span><span><span class="nm">Kensington MD</span><span class="u">/commercial-cleaning-kensington-md/</span></span><span class="ph p2">PHASE 2</span></div>
+        <div class="pli"><span class="n">07</span><span><span class="nm">Wheaton MD</span><span class="u">/commercial-cleaning-wheaton-md/</span></span><span class="ph p2">PHASE 2</span></div>
+        <div class="pli"><span class="n">08</span><span><span class="nm">Silver Spring MD</span><span class="u">/commercial-cleaning-silver-spring-md/</span></span><span class="ph p2">PHASE 2</span></div>
+        <div class="pli"><span class="n">09</span><span><span class="nm">Chevy Chase MD</span><span class="u">/commercial-cleaning-chevy-chase-md/</span></span><span class="ph p2">PHASE 2</span></div>
+        <div class="pli"><span class="n">10</span><span><span class="nm">Germantown MD</span><span class="u">/commercial-cleaning-germantown-md/</span></span><span class="ph p2">PHASE 2</span></div>
+        <div class="pli"><span class="n">11</span><span><span class="nm">Derwood MD</span><span class="u">/commercial-cleaning-derwood-md/</span></span><span class="ph p2">PHASE 2</span></div>
+        <div class="pli"><span class="n">12</span><span><span class="nm">Olney MD</span><span class="u">/commercial-cleaning-olney-md/</span></span><span class="ph p2">PHASE 2</span></div>
+        <div class="pli"><span class="n">13</span><span><span class="nm">Takoma Park MD</span><span class="u">/commercial-cleaning-takoma-park-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">14</span><span><span class="nm">College Park MD</span><span class="u">/commercial-cleaning-college-park-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">15</span><span><span class="nm">Garrett Park MD</span><span class="u">/commercial-cleaning-garrett-park-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">16</span><span><span class="nm">McLean VA</span><span class="u">/commercial-cleaning-mclean-va/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">17</span><span><span class="nm">Tysons VA</span><span class="u">/commercial-cleaning-tysons-va/</span></span><span class="ph p3">PHASE 3</span></div>
+        </div>
+      <p style="margin:14px 0 6px;color:var(--ink2);font-size:15px"><b>Every one of these pages
+        contains:</b></p>
       <ol class="secs">
         <li><b>H1: the service in that town</b></li>
         <li><b>Drive time and response time from Rockville</b></li>
@@ -858,6 +912,73 @@ ul.tight li b{color:var(--ink);font-weight:600}
           contractor, and looked at more closely for government work.</span></li>
       </ol>
     </div>
+  </div>
+
+  <div class="bp">
+    <div class="bph"><span class="bpn">Service plus town pages</span><span class="bpc">19 pages</span>
+      <span class="bpq">Later, not now</span></div>
+    <div class="bpb">
+      <p style="margin:0 0 4px;color:var(--ink2);font-size:15px">Only the four services worth
+        the most money, and only in the towns where they matter. These are the pages that own a
+        specific search like "biohazard cleanup Bethesda" outright.</p>
+      <div class="pl">
+        <div class="pli"><span class="n">01</span><span><span class="nm">Biohazard Cleanup Rockville MD</span><span class="u">/biohazard-cleanup-rockville-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">02</span><span><span class="nm">Biohazard Cleanup Bethesda MD</span><span class="u">/biohazard-cleanup-bethesda-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">03</span><span><span class="nm">Biohazard Cleanup Silver Spring MD</span><span class="u">/biohazard-cleanup-silver-spring-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">04</span><span><span class="nm">Biohazard Cleanup Gaithersburg MD</span><span class="u">/biohazard-cleanup-gaithersburg-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">05</span><span><span class="nm">Biohazard Cleanup Wheaton MD</span><span class="u">/biohazard-cleanup-wheaton-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">06</span><span><span class="nm">Biohazard Cleanup Washington DC</span><span class="u">/biohazard-cleanup-washington-dc/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">07</span><span><span class="nm">Unattended Death Cleanup Rockville MD</span><span class="u">/unattended-death-cleanup-rockville-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">08</span><span><span class="nm">Unattended Death Cleanup Silver Spring MD</span><span class="u">/unattended-death-cleanup-silver-spring-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">09</span><span><span class="nm">Unattended Death Cleanup Bethesda MD</span><span class="u">/unattended-death-cleanup-bethesda-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">10</span><span><span class="nm">Unattended Death Cleanup Washington DC</span><span class="u">/unattended-death-cleanup-washington-dc/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">11</span><span><span class="nm">Hoarding Cleanup Rockville MD</span><span class="u">/hoarding-cleanup-rockville-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">12</span><span><span class="nm">Hoarding Cleanup Silver Spring MD</span><span class="u">/hoarding-cleanup-silver-spring-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">13</span><span><span class="nm">Hoarding Cleanup Gaithersburg MD</span><span class="u">/hoarding-cleanup-gaithersburg-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">14</span><span><span class="nm">Hoarding Cleanup Wheaton MD</span><span class="u">/hoarding-cleanup-wheaton-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">15</span><span><span class="nm">Medical Office Cleaning Bethesda MD</span><span class="u">/medical-office-cleaning-bethesda-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">16</span><span><span class="nm">Medical Office Cleaning North Bethesda MD</span><span class="u">/medical-office-cleaning-north-bethesda-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">17</span><span><span class="nm">Medical Office Cleaning Rockville MD</span><span class="u">/medical-office-cleaning-rockville-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">18</span><span><span class="nm">Medical Office Cleaning Gaithersburg MD</span><span class="u">/medical-office-cleaning-gaithersburg-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        <div class="pli"><span class="n">19</span><span><span class="nm">Medical Office Cleaning Chevy Chase MD</span><span class="u">/medical-office-cleaning-chevy-chase-md/</span></span><span class="ph p3">PHASE 3</span></div>
+        </div>
+      <p style="margin:14px 0 0;color:var(--ink2);font-size:14.5px"><b>Why these are all
+        Phase 3.</b> A service plus town page only works once the plain service page above it is
+        live and settled. Building
+        <code>/biohazard-cleanup-bethesda-md/</code> before
+        <code>/services/biohazard-remediation/</code> exists gets you two thin pages competing
+        with each other instead of one strong one.</p>
+      <p style="margin:12px 0 0;color:var(--ink2);font-size:14.5px">This is also where most
+        agencies overreach. Eleven services multiplied by seventeen towns is 187 pages. Nearly
+        all of it would be near-identical text, Google treats that as doorway content, and it
+        drags the whole site down. Nineteen, chosen properly, is the right number.</p>
+    </div>
+  </div>
+
+  <h3>The complete page map</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Group</th><th class="r">Pages</th><th>Built when</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Service pages</td><td class="num r">13</td><td>10 in the sprint, 3 in phase 2</td></tr>
+      <tr><td class="lab">Town pages</td><td class="num r">17</td><td>4 in the sprint, 8 in phase 2, 5 in phase 3</td></tr>
+      <tr><td class="lab">Service plus town pages</td><td class="num r">19</td><td>All phase 3</td></tr>
+      <tr><td class="lab">Supporting pages</td><td class="num r">8</td><td>Home in the sprint, the rest across phases 2 and 3</td></tr>
+      <tr class="total"><td>Total, excluding blog</td><td class="num r">57</td><td>Roughly 18 months at 2 pages a month</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call red">
+    <h4>The rule that overrides this entire list</h4>
+    <p><strong>No town page without a real job in that town.</strong> Every one needs a job you
+      actually completed there, a photograph from it, and a detail only someone who works there
+      would know. Without those it fails the swap test, reads as filler, and will not rank.
+      Publishing it anyway makes the site worse.</p>
+    <p>So the honest sequence is: build pages for the towns you have already worked in, and as
+      new jobs land in new towns, those become the next pages. <strong>If you have worked in six
+      towns so far, we build six, not seventeen.</strong> Six real pages beat seventeen invented
+      ones every time.</p>
+    <p>Which is why the photograph routine matters more than it sounds. It is not decoration. It
+      is the raw material that unlocks each new town.</p>
   </div>
 
   <h3>Part two: what has to be true on every page</h3>
