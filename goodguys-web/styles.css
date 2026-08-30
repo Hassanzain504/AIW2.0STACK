@@ -493,3 +493,10 @@ section[id],[id].ba{scroll-margin-top:96px}
 .brand-mark{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:12px;background:var(--ink);color:var(--teal);font-family:var(--fh);font-weight:800;font-size:1.35rem;letter-spacing:1px;flex:none}
 .area-list li a{color:var(--ink);font-weight:600;text-decoration:none}
 .area-list li a:hover{color:var(--limeink);text-decoration:underline}
+
+/* 4-service grid + coming soon */
+.card-grid-4{grid-template-columns:repeat(4,1fr);gap:22px}
+@media (max-width:1000px){.card-grid-4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.card-grid-4{grid-template-columns:1fr}}
+.coming-soon{text-align:center;margin-top:26px;font-family:var(--fh);font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--body);font-size:.95rem}
+.coming-soon strong{color:var(--limeink);font-weight:700}
