@@ -1,0 +1,155 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "town-page.schema.json",
+  "title": "Town page data",
+  "description": "One file per town page, written by Stage 6 into Pipeline Data/copy/pages/towns/{slug}.json. The proof block is required: a town page with no completed local job and no photograph is filler and must not be built.",
+  "type": "object",
+  "required": ["slug", "town", "state", "h1", "meta", "proof", "services", "localContext", "faq", "nearby", "cta"],
+  "additionalProperties": false,
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "town": { "type": "string" },
+    "state": { "type": "string", "description": "Two letter code" },
+    "h1": { "type": "string", "description": "Must name the service and the town." },
+    "meta": {
+      "type": "object",
+      "required": ["title", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string", "maxLength": 60 },
+        "description": { "type": "string", "maxLength": 160 }
+      }
+    },
+    "banner": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "subhead": { "type": "string", "description": "Says something true only about this town. Generic text here is why town pages fail." },
+        "pills": { "type": "array", "items": { "type": "string" }, "maxItems": 4 }
+      }
+    },
+    "proof": {
+      "type": "object",
+      "description": "REQUIRED. The build halts without it. One completed job in this town, with a photograph from it.",
+      "required": ["heading", "job"],
+      "additionalProperties": false,
+      "properties": {
+        "heading": { "type": "string" },
+        "note": { "type": "string" },
+        "job": {
+          "type": "object",
+          "required": ["label", "title", "body", "filename", "alt"],
+          "additionalProperties": false,
+          "properties": {
+            "label": { "type": "string", "description": "e.g. Completed job, March 2026" },
+            "title": { "type": "string" },
+            "body": { "type": "string", "description": "What the problem was, what was done, what the outcome was." },
+            "filename": { "type": "string", "description": "Resolves to /work/{filename}. Must be a real photograph from this town." },
+            "alt": { "type": "string" }
+          }
+        }
+      }
+    },
+    "services": {
+      "type": "object",
+      "description": "Which services are offered here, each linking to its service page. The other half of the internal linking model.",
+      "required": ["heading", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "heading": { "type": "string" },
+        "note": { "type": "string" },
+        "items": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["name", "href", "blurb"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "href": { "type": "string" },
+              "blurb": { "type": "string", "description": "Written for THIS town. Naming local roads, districts or facilities is what separates this from boilerplate." }
+            }
+          }
+        }
+      }
+    },
+    "localContext": {
+      "type": "object",
+      "description": "Specifics that prove the business works here rather than merely lists the town.",
+      "required": ["heading", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "heading": { "type": "string" },
+        "note": { "type": "string" },
+        "items": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["key", "value"],
+            "additionalProperties": false,
+            "properties": { "key": { "type": "string" }, "value": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "reviews": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": { "type": "string" },
+        "filterTag": { "type": "string", "description": "Town tag. Falls back to nearest town when this town has none." }
+      }
+    },
+    "faq": {
+      "type": "object",
+      "description": "Town specific questions. Four is the floor here, not eight: a town page carries less than a service page and padding it is worse than omitting it.",
+      "required": ["heading", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "heading": { "type": "string" },
+        "items": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "required": ["q", "a"],
+            "additionalProperties": false,
+            "properties": { "q": { "type": "string" }, "a": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "nearby": {
+      "type": "object",
+      "required": ["heading", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "heading": { "type": "string" },
+        "items": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["label", "href"],
+            "additionalProperties": false,
+            "properties": { "label": { "type": "string" }, "href": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "cta": {
+      "type": "object",
+      "required": ["heading", "body"],
+      "additionalProperties": false,
+      "properties": {
+        "heading": { "type": "string" },
+        "body": { "type": "string" },
+        "primary": { "type": "string" },
+        "secondary": { "type": "string" }
+      }
+    }
+  }
+}
