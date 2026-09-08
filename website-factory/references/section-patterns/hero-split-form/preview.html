@@ -1,0 +1,390 @@
+<title>Split Form Hero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+/* ───────────────────────────────────────────────────────────────
+   Split-form hero, standalone preview.
+   Every colour below is a token that maps 1:1 to the factory's
+   brand-dna palette keys. Swap the six values in :root and the
+   whole section re-skins for a different client or niche.
+   ─────────────────────────────────────────────────────────────── */
+:root{
+  --primary:#0C2F52;        /* palette.primary */
+  --primary-dark:#071E36;   /* palette.primary_dark */
+  --primary-slate:#1B4772;  /* palette.primary_slate */
+  --accent:#F07E17;         /* palette.accent */
+  --accent-dark:#C9620A;    /* palette.accent_dark */
+  --neutral:#FFFFFF;        /* palette.neutral */
+  --silver:#D7DEE6;         /* palette.silver */
+  --ink:#10161C;            /* palette.ink */
+  --radius:10px;
+  --shade:0 2px 4px rgba(7,30,54,.10), 0 18px 44px -22px rgba(7,30,54,.55);
+}
+*{box-sizing:border-box}
+body{margin:0;background:#EEF1F5;color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.cond{font-family:"Barlow Condensed",Barlow,sans-serif}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+
+/* ── shell ─────────────────────────────────────────────── */
+.hero{position:relative;background:var(--primary-dark);overflow:hidden;isolation:isolate}
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+
+/* ── 1. utility bar ────────────────────────────────────── */
+.util{background:var(--primary-dark);border-bottom:1px solid rgba(255,255,255,.10);
+  position:relative;z-index:4}
+.util .wrap{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;
+  padding-top:9px;padding-bottom:9px;font-size:13.5px;color:rgba(255,255,255,.72)}
+.util b{color:#fff;font-weight:600}
+.util .right{margin-left:auto;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center}
+.util .live{display:inline-flex;align-items:center;gap:7px;font-weight:600;color:#fff}
+.dot{width:7px;height:7px;border-radius:50%;background:#48D18A;
+  box-shadow:0 0 0 3px rgba(72,209,138,.24)}
+.util a.tel{color:#fff;font-weight:700;text-decoration:none;letter-spacing:.01em}
+.util a.tel:hover{color:var(--accent)}
+
+/* ── 2. nav ────────────────────────────────────────────── */
+.nav{position:relative;z-index:4;background:rgba(255,255,255,.97);
+  border-bottom:1px solid rgba(12,47,82,.10)}
+.nav .wrap{display:flex;align-items:center;gap:26px;padding-top:12px;padding-bottom:12px}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
+.logo .mark{width:38px;height:38px;border-radius:8px;background:var(--primary);
+  display:grid;place-items:center;color:#fff;font-weight:700;font-size:17px;
+  font-family:"Barlow Condensed",sans-serif;letter-spacing:.04em}
+.logo .wordmark{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;
+  line-height:1;text-transform:uppercase;letter-spacing:.03em;color:var(--primary)}
+.logo .wordmark span{display:block;font-family:Barlow,sans-serif;font-weight:500;
+  font-size:9.5px;letter-spacing:.16em;color:#7A8794;margin-top:3px}
+.navlinks{display:flex;gap:22px;margin-left:14px}
+.navlinks a{text-decoration:none;font-size:14.5px;font-weight:500;color:#41505E;
+  padding:6px 0;border-bottom:2px solid transparent}
+.navlinks a:hover{color:var(--primary);border-bottom-color:var(--accent)}
+.navcta{margin-left:auto;display:flex;align-items:center;gap:16px}
+.navphone{text-decoration:none;font-weight:700;font-size:15.5px;color:var(--primary);white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  background:var(--accent);color:#fff;text-decoration:none;font-weight:700;
+  font-size:14.5px;letter-spacing:.02em;padding:12px 20px;border:0;border-radius:var(--radius);
+  cursor:pointer;box-shadow:0 2px 0 var(--accent-dark);transition:transform .16s cubic-bezier(.16,1,.3,1),background .16s}
+.btn:hover{background:var(--accent-dark);box-shadow:0 2px 0 var(--accent-dark);transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.burger{display:none;margin-left:auto;background:none;border:1px solid rgba(12,47,82,.2);
+  border-radius:8px;padding:9px 11px;cursor:pointer}
+.burger span{display:block;width:18px;height:2px;background:var(--primary);margin:3px 0}
+
+/* ── 3. photo stage ────────────────────────────────────── */
+.stage{position:absolute;inset:0;z-index:0}
+.stage svg{width:100%;height:100%;display:block;object-fit:cover}
+.scrim{position:absolute;inset:0;z-index:1;
+  background:
+    linear-gradient(97deg, rgba(7,30,54,.96) 0%, rgba(7,30,54,.90) 34%,
+      rgba(7,30,54,.60) 58%, rgba(7,30,54,.18) 78%, rgba(7,30,54,.42) 100%),
+    linear-gradient(to top, rgba(7,30,54,.85) 0%, rgba(7,30,54,0) 42%)}
+.phototag{position:absolute;top:16px;right:18px;z-index:3;font-size:10px;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.62);
+  background:rgba(7,30,54,.55);border:1px solid rgba(255,255,255,.22);
+  padding:5px 9px;border-radius:5px}
+
+/* ── 4. content row ────────────────────────────────────── */
+.body{position:relative;z-index:2;padding-top:52px}
+.row{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.72fr);
+  gap:32px;align-items:end}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;color:#fff;
+  font-size:clamp(38px,5.4vw,66px);line-height:.98;letter-spacing:-.005em;
+  text-transform:uppercase;margin:0;text-wrap:balance;max-width:15ch}
+h1 em{font-style:normal;color:var(--accent)}
+.sub{color:rgba(255,255,255,.80);font-size:17px;max-width:52ch;margin:18px 0 0}
+
+/* proof chips */
+.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));
+  gap:12px;margin:26px 0 0;max-width:620px}
+.chip{display:flex;align-items:center;gap:11px;background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);padding:11px 13px;
+  backdrop-filter:blur(6px)}
+.chip .ico{width:32px;height:32px;flex-shrink:0;border-radius:7px;background:var(--accent);
+  display:grid;place-items:center}
+.chip .ico svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:2.1;
+  stroke-linecap:round;stroke-linejoin:round}
+.chip b{display:block;color:#fff;font-size:14.5px;font-weight:700;line-height:1.2}
+.chip span{display:block;color:rgba(255,255,255,.66);font-size:11.5px;line-height:1.35;margin-top:2px}
+
+/* owner cutout */
+.owner{position:relative;justify-self:end;align-self:end;width:100%;max-width:300px}
+.owner .plate{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);
+  width:104%;height:74%;border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(240,126,23,.34) 0%,rgba(240,126,23,0) 68%);
+  z-index:0}
+.owner figure{position:relative;z-index:1;margin:0}
+.owner svg{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 30px rgba(0,0,0,.42))}
+.ownercard{position:absolute;left:-26px;bottom:26px;z-index:2;background:#fff;
+  border-radius:var(--radius);padding:10px 14px;box-shadow:var(--shade);max-width:196px}
+.ownercard b{display:block;font-size:14px;font-weight:700;line-height:1.2}
+.ownercard span{display:block;font-size:11.5px;color:#5C6975;margin-top:2px;line-height:1.35}
+
+/* ── 5. form bar ───────────────────────────────────────── */
+.formwrap{position:relative;z-index:2;margin-top:34px}
+.formlabel{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:11px}
+.formlabel h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;color:#fff;
+  font-size:26px;text-transform:uppercase;letter-spacing:.01em;margin:0}
+.formlabel p{margin:0;color:rgba(255,255,255,.68);font-size:14px}
+form.bar{background:#fff;border-radius:14px;box-shadow:var(--shade);padding:14px;
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:10px;align-items:end}
+.field label{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:#6B7885;margin-bottom:5px}
+.field input,.field select{width:100%;background:#F4F6F9;border:1px solid #DCE3EA;
+  border-radius:8px;padding:12px 12px;font-size:15px;color:var(--ink);appearance:none}
+.field select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236B7885' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat:no-repeat;background-position:right 11px center;padding-right:34px}
+.field input:focus,.field select:focus{outline:0;border-color:var(--accent);
+  background:#fff;box-shadow:0 0 0 3px rgba(240,126,23,.22)}
+form.bar .btn{height:46px;padding-left:26px;padding-right:26px;white-space:nowrap}
+.privacy{margin:10px 2px 0;font-size:12.5px;color:rgba(255,255,255,.60)}
+.privacy svg{width:12px;height:12px;vertical-align:-1px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* ── 6. badge strip ────────────────────────────────────── */
+.badges{position:relative;z-index:2;margin-top:30px;padding:18px 0 26px;
+  border-top:1px solid rgba(255,255,255,.14);
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
+.badges .lead{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.52)}
+.badge{height:44px;display:flex;align-items:center;gap:9px;padding:0 14px;border-radius:8px;
+  background:rgba(255,255,255,.93);box-shadow:0 1px 2px rgba(0,0,0,.18)}
+.badge svg{width:22px;height:22px;flex-shrink:0}
+.badge b{font-family:"Barlow Condensed",sans-serif;font-size:15px;font-weight:700;
+  line-height:1;text-transform:uppercase;color:var(--primary);letter-spacing:.02em}
+.badge span{display:block;font-size:9px;font-weight:600;letter-spacing:.09em;
+  text-transform:uppercase;color:#7A8794;margin-top:3px}
+
+/* ── 7. marquee ────────────────────────────────────────── */
+.marquee{position:relative;z-index:2;background:var(--accent);overflow:hidden;
+  border-top:2px solid var(--accent-dark)}
+.track{display:flex;gap:0;width:max-content;animation:slide 32s linear infinite}
+.track span{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:15px;
+  letter-spacing:.16em;text-transform:uppercase;color:#fff;padding:11px 26px;
+  display:flex;align-items:center;gap:26px;white-space:nowrap;opacity:.94}
+.track span::after{content:"";width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7)}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── 8. mobile sticky call bar ─────────────────────────── */
+.sticky{display:none;position:fixed;left:0;right:0;bottom:0;z-index:20;
+  background:rgba(7,30,54,.97);border-top:1px solid rgba(255,255,255,.14);
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.sticky a{flex:1;text-align:center;text-decoration:none;font-weight:700;font-size:15px;
+  padding:13px 10px;border-radius:9px}
+.sticky .call{background:#fff;color:var(--primary)}
+.sticky .quote{background:var(--accent);color:#fff}
+
+/* ── responsive ────────────────────────────────────────── */
+@media(max-width:1080px){
+  form.bar{grid-template-columns:repeat(2,minmax(0,1fr))}
+  form.bar .btn{grid-column:1 / -1;width:100%}
+  .owner{max-width:246px}
+}
+@media(max-width:860px){
+  .navlinks,.navphone{display:none}
+  .burger{display:block}
+  .navcta{margin-left:0}
+  .nav .wrap{gap:12px}
+  .row{grid-template-columns:1fr}
+  .owner{display:none}
+  .body{padding-top:36px}
+  h1{max-width:none}
+  .chips{grid-template-columns:1fr 1fr;max-width:none}
+  .sticky{display:flex}
+  body{padding-bottom:72px}
+}
+@media(max-width:520px){
+  .util .right{width:100%;margin-left:0}
+  form.bar{grid-template-columns:1fr}
+  .chips{grid-template-columns:1fr}
+  .badges{gap:10px 14px}
+}
+@media(prefers-reduced-motion:reduce){
+  .track{animation:none}
+  *,*::before,*::after{transition-duration:.01ms !important}
+}
+</style>
+
+<section class="hero">
+
+  <!-- 1. utility bar -->
+  <div class="util"><div class="wrap">
+    <span>Storm damage? <b>We tarp same day.</b></span>
+    <div class="right">
+      <span class="live"><i class="dot"></i>Open now, closes 6:00 PM</span>
+      <span>Marietta and North Metro Atlanta</span>
+      <a class="tel" href="tel:+15551234567">(555) 123 4567</a>
+    </div>
+  </div></div>
+
+  <!-- 2. nav -->
+  <nav class="nav"><div class="wrap">
+    <a class="logo" href="#">
+      <span class="mark">SR</span>
+      <span class="wordmark">Summit Ridge<span>Roofing and Exteriors</span></span>
+    </a>
+    <div class="navlinks">
+      <a href="#">Services</a><a href="#">Past Work</a>
+      <a href="#">Roof Financing</a><a href="#">About Us</a><a href="#">Service Areas</a>
+    </div>
+    <button class="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <div class="navcta">
+      <a class="navphone" href="tel:+15551234567">(555) 123 4567</a>
+      <a class="btn" href="#quote">Get a free quote</a>
+    </div>
+  </div></nav>
+
+  <!-- 3. photo stage: placeholder scene, swapped for the Stage 9 hero render -->
+  <div class="stage" aria-hidden="true">
+    <svg viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2C5C86"/><stop offset="52%" stop-color="#5B87AC"/>
+          <stop offset="100%" stop-color="#C1AD90"/>
+        </linearGradient>
+        <linearGradient id="roofA" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#4A5B6B"/><stop offset="100%" stop-color="#2B3945"/>
+        </linearGradient>
+        <linearGradient id="roofB" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#5E7183"/><stop offset="100%" stop-color="#374956"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="820" fill="url(#sky)"/>
+      <circle cx="1180" cy="182" r="86" fill="#F6E2C0" opacity=".42"/>
+      <path d="M0 596 L214 470 L430 596 L430 820 L0 820 Z" fill="#26333E" opacity=".55"/>
+      <path d="M620 560 L860 392 L1100 560 L1100 820 L620 820 Z" fill="url(#roofB)"/>
+      <path d="M596 566 L860 380 L1124 566 L1088 590 L860 428 L632 590 Z" fill="url(#roofA)"/>
+      <rect x="700" y="612" width="72" height="94" rx="4" fill="#1F2C36" opacity=".72"/>
+      <rect x="948" y="612" width="72" height="94" rx="4" fill="#1F2C36" opacity=".72"/>
+      <path d="M1090 540 L1290 418 L1440 520 L1440 820 L1090 820 Z" fill="#2F3E4B" opacity=".7"/>
+      <rect x="0" y="742" width="1440" height="78" fill="#3A3327" opacity=".62"/>
+      <g opacity=".92">
+        <rect x="292" y="640" width="252" height="86" rx="13" fill="#20313F"/>
+        <rect x="472" y="596" width="132" height="92" rx="13" fill="#26394A"/>
+        <rect x="492" y="614" width="92" height="44" rx="7" fill="#7FA6C4" opacity=".55"/>
+        <circle cx="356" cy="736" r="30" fill="#141C23"/><circle cx="356" cy="736" r="13" fill="#43535F"/>
+        <circle cx="556" cy="736" r="30" fill="#141C23"/><circle cx="556" cy="736" r="13" fill="#43535F"/>
+        <rect x="318" y="662" width="152" height="26" rx="5" fill="#F07E17" opacity=".85"/>
+      </g>
+    </svg>
+  </div>
+  <div class="scrim"></div>
+  <div class="phototag">Placeholder, swap for client photo</div>
+
+  <div class="body"><div class="wrap">
+
+    <!-- 4. headline, chips, owner -->
+    <div class="row">
+      <div>
+        <h1>The roof crew Marietta calls <em>before</em> the next storm</h1>
+        <p class="sub">Full replacements, storm damage repairs and insurance claims across
+          North Metro Atlanta. Free inspection, written quote in 24 hours, no pressure.</p>
+
+        <div class="chips">
+          <div class="chip">
+            <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.4-3 8.3-7 9-4-0.7-7-4.6-7-9V7z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <span><b>37 years</b><span>Serving Cobb County since 1989</span></span>
+          </div>
+          <div class="chip">
+            <span class="ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span><b>Workmanship warranty</b><span>10 years, transferable</span></span>
+          </div>
+          <div class="chip">
+            <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.4l6.1-.9z"/></svg></span>
+            <span><b>4.9 from 214 reviews</b><span>Google and Facebook</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="owner">
+        <div class="plate"></div>
+        <figure>
+          <svg viewBox="0 0 300 380" role="img" aria-label="Placeholder for the owner cutout photo">
+            <defs>
+              <linearGradient id="polo" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#17558C"/><stop offset="100%" stop-color="#0C2F52"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="150" cy="112" rx="52" ry="60" fill="#D9AE8B"/>
+            <path d="M98 104c0-34 22-54 52-54s52 20 52 54c0-6-10-20-30-24-16-3-30 2-44-4-16-7-30 12-30 28z" fill="#3A2C22"/>
+            <rect x="132" y="160" width="36" height="34" rx="14" fill="#C99A78"/>
+            <path d="M150 186c46 0 84 30 92 74l14 120H44l14-120c8-44 46-74 92-74z" fill="url(#polo)"/>
+            <path d="M126 188c8 16 16 24 24 24s16-8 24-24l-24-8z" fill="#0A2643"/>
+            <rect x="176" y="226" width="52" height="15" rx="4" fill="#F07E17" opacity=".9"/>
+            <circle cx="98" cy="252" r="15" fill="#0A2643" opacity=".55"/>
+          </svg>
+        </figure>
+        <div class="ownercard">
+          <b>Marcus Reyes</b>
+          <span>Owner, on every roof inspection himself</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. form bar -->
+    <div class="formwrap" id="quote">
+      <div class="formlabel">
+        <h2>Get your free roof inspection</h2>
+        <p>Takes about 30 seconds. We reply the same working day.</p>
+      </div>
+      <form class="bar" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Sent, we will call you';">
+        <div class="field">
+          <label for="f-service">What do you need</label>
+          <select id="f-service" name="service">
+            <option>Roof replacement</option>
+            <option>Storm or leak repair</option>
+            <option>Insurance claim help</option>
+            <option>Gutters and siding</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" placeholder="Jane Whitfield" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" name="phone" type="tel" placeholder="(555) 123 4567" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="f-zip">Property zip</label>
+          <input id="f-zip" name="zip" type="text" inputmode="numeric" placeholder="30060" autocomplete="postal-code">
+        </div>
+        <button class="btn" type="submit">Get my free quote</button>
+      </form>
+      <p class="privacy">
+        <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        No call centre, no spam. Your details go straight to the owner.
+      </p>
+    </div>
+
+    <!-- 6. badge strip -->
+    <div class="badges">
+      <span class="lead">Certified and insured</span>
+      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="#0C2F52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 4.4-3 8.3-7 9-4-.7-7-4.6-7-9V7z"/></svg><span><b>GAF Master</b><span>Elite contractor</span></span></div>
+      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="#0C2F52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><span><b>BBB A+</b><span>Accredited 2011</span></span></div>
+      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="#0C2F52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V8l8-4 8 4v12"/><path d="M9 20v-6h6v6"/></svg><span><b>Owens Corning</b><span>Preferred</span></span></div>
+      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="#0C2F52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 16.9 6.6 19.8l1-6.1L3.2 9.4l6.1-.9z"/></svg><span><b>Angi</b><span>Super service</span></span></div>
+      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="#0C2F52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h10M7 14h6"/></svg><span><b>GA licence</b><span>RBQ 44 219 08</span></span></div>
+    </div>
+
+  </div></div>
+
+  <!-- 7. marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Summit Ridge Roofing</span><span>Free inspections</span><span>Insurance claims handled</span>
+      <span>10 year workmanship warranty</span><span>Same day tarping</span><span>Financing available</span>
+      <span>Summit Ridge Roofing</span><span>Free inspections</span><span>Insurance claims handled</span>
+      <span>10 year workmanship warranty</span><span>Same day tarping</span><span>Financing available</span>
+    </div>
+  </div>
+</section>
+
+<!-- 8. mobile persistent CTA -->
+<div class="sticky">
+  <a class="call" href="tel:+15551234567">Call now</a>
+  <a class="quote" href="#quote">Free quote</a>
+</div>
