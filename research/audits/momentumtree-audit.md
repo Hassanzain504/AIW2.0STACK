@@ -229,3 +229,107 @@ The asset is real. The delivery layer is what is broken.
   screen and proves Finding 1 without explanation.
 - Confirm with the owner who built and controls the current site before
   describing it as a mistake.
+
+---
+
+## CORRECTION to Finding 1, issued 26 August 2026
+
+The first version of this audit implied the client-side rendering was preventing
+the pages from being indexed. That was wrong and must not be repeated in a
+meeting.
+
+Google does render the site and the pages are in the index with their own unique
+titles. Verified by search:
+
+- `momentumtree.com/tree-service/novi` is indexed as "Tree Service in Novi, MI | Certified Arborists"
+- `momentumtree.com/tree-service/northville` is indexed as "Tree Service in Northville, MI | Certified Arborists | Momentum Tree Experts"
+- `/services/tree-trimming`, `/services/municipal-tree-services`, `/services/tree-risk-assessment`,
+  `/about-us`, `/services`, `/faq`, `/projects`, `/reviews` are all indexed
+
+So the rendering pass is working. The empty raw HTML is still a real weakness, but
+for narrower reasons than first stated:
+
+- Most AI answer engines do not execute JavaScript, so the site is largely absent there
+- There is still no schema, no canonical tag, and soft 404s on every invalid path
+- Rendering is a deferred, budget-limited pass, which slows discovery of new pages
+
+The problem is not indexation. It is ranking.
+
+---
+
+## Finding 7, where the town pages actually rank
+
+Measured 26 August 2026 on live search.
+
+| Query | Momentum position | Ranking above them |
+|---|---|---|
+| tree service Novi MI tree removal arborist | **5** | Owen Tree, Yelp, Lotus Gardenscapes, Clean Cut |
+| tree service Northville MI certified arborist tree removal | **5** | Lotus Gardenscapes, Clean Cut, Get Tree Removal Service, Miller Tree |
+| tree service Ann Arbor MI certified arborist tree removal | **not in top 10** | Davey, LawnStarter, Monster Tree, Yelp, Guardian Tree Experts |
+
+The pattern: they place mid-first-page in the two towns closest to their Novi base
+and disappear entirely further out. Ann Arbor is in their sitemap and in their
+service-area meta, but they do not compete there.
+
+Note for the meeting: Owen Tree Service, which outranks them in Novi, describes
+itself as the first tree care company in the United States to earn TCIA
+accreditation. Momentum's strongest differentiator, the "less than 1% hold TCIA"
+line, is therefore weaker in this specific market than it looks nationally. Do not
+build the pitch on that line without checking it.
+
+Map pack positions were not measured. Doing that properly needs geolocated
+queries per town, which was not possible from this environment. Do not state map
+pack rankings without running those checks.
+
+---
+
+## Finding 8, the Google Ads conversion event has nowhere to go
+
+Severity: high, and directly about money rather than rankings.
+
+The contact form handler in the current build runs:
+
+```js
+await fs.functions.invoke("sendContactForm", t)
+window.gtag("event", "ads_conversion_Form_1")
+```
+
+`ads_conversion_Form_1` is the event name Google Ads generates when a conversion
+action is created, so a Google Ads account exists and ads are presumably running.
+
+There is no Google Ads tag on the site. Checked in both the page source and the
+compiled JS bundle on the live build:
+
+| Looked for | Found |
+|---|---|
+| `AW-` conversion tag | 0 |
+| `send_to` parameter | 0 |
+| `gclid` / conversion linker | 0 |
+| Tag actually loaded | `G-672RBHV8R0`, which is GA4, not Ads |
+
+So the event fires into GA4 and stops there.
+
+The caveat that must be stated: conversions can still reach Google Ads if GA4 is
+linked to the Ads account and this event has been imported as a conversion. That
+is not visible from outside. So the correct framing is a question, not an
+accusation.
+
+If that link is not in place, Google Ads cannot tell which clicks produce form
+submissions, Smart Bidding has no signal to optimise against, and cost per lead
+cannot be calculated. CallRail is installed and handling call attribution, which
+makes the form side an odd gap.
+
+How the owner checks it in about a minute: Google Ads, Goals, Conversions, then
+look at whether the form action has recorded anything in the last thirty days.
+
+---
+
+## Finding 9, no financing and no booking system
+
+The compiled bundle contains no mention of financing or payment plans, and no
+booking or scheduling integration of any kind. No Calendly, Jobber, HousecallPro,
+ServiceTitan or Arborgold. The only conversion path is a form and a phone number.
+
+Removals routinely run into thousands of dollars. On a paid-traffic site with no
+finance messaging, some share of qualified visitors leave on price alone without
+ever asking.
