@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation"
 import { createServerSupabase } from "@/lib/supabase/server"
+import { createAdminSupabase } from "@/lib/supabase/admin"
 import { one } from "@/lib/supabase/rows"
 import { staffUrl } from "@/lib/review/links"
 import SmsOutbox, { type OutboxRow } from "@/components/SmsOutbox"
@@ -25,23 +26,42 @@ export default async function DashboardPage() {
   if (!user) redirect("/dashboard/login")
 
   // Row level security scopes every query below to businesses this user owns.
-  const { data: business } = await supabase
+  const BUSINESS_COLUMNS =
+    "id, name, slug, staff_token, gate_mode, google_review_url, google_place_id"
+
+  let { data: business } = await supabase
     .from("businesses")
-    .select("id, name, slug, staff_token, gate_mode, google_review_url, google_place_id")
+    .select(BUSINESS_COLUMNS)
     .limit(1)
     .maybeSingle()
+
+  // Nothing owned yet. If onboarding recorded this address as the owner, claim
+  // it now. Supabase has already proven the address, because signing in means
+  // opening a link sent to it, so matching on it is safe and it is what keeps
+  // client onboarding free of hand-run SQL.
+  if (!business && user.email) {
+    const admin = createAdminSupabase()
+    const { data: claimed } = await admin
+      .from("businesses")
+      .update({ owner_user_id: user.id })
+      .ilike("owner_email", user.email)
+      .is("owner_user_id", null)
+      .select(BUSINESS_COLUMNS)
+      .maybeSingle()
+
+    if (claimed) business = claimed
+  }
 
   if (!business) {
     return (
       <main className="mx-auto max-w-2xl px-6 py-16">
         <h1 className="text-xl font-semibold">No business linked yet</h1>
         <p className="mt-2 text-sm text-muted">
-          This account is signed in as {user.email} but is not attached to a
-          business. Set owner_user_id on the business row to this user id:
+          This account is signed in as {user.email} but no business lists that
+          address as its owner. Whoever set the client up can add it on the
+          client&apos;s page, and this dashboard will attach itself next time
+          you sign in.
         </p>
-        <code className="mt-3 block break-all rounded-lg bg-surface p-3 text-xs">
-          {user.id}
-        </code>
       </main>
     )
   }

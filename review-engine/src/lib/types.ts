@@ -41,6 +41,7 @@ export interface Business {
   from_email: string | null
   reply_to_email: string | null
   owner_alert_email: string | null
+  owner_email: string | null
   owner_phone: string | null
   postal_address: string | null
   gate_mode: GateMode

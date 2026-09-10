@@ -44,40 +44,31 @@ if you change it later.
 
 ### 4. Add a client
 
-```sql
-insert into public.businesses (
-  slug, name, google_place_id,
-  from_name, from_email, reply_to_email, owner_alert_email,
-  gate_mode, brand_color, timezone
-) values (
-  'apex-roofing', 'Apex Roofing', 'ChIJ_example_place_id',
-  'Apex Roofing', 'reviews@apexroofing.com', 'office@apexroofing.com',
-  'owner@apexroofing.com',
-  'hard_gate', '#1d4ed8', 'America/New_York'
-)
-returning id, slug, staff_token;
-```
+Set `ADMIN_EMAILS` to your own address, sign in at `/dashboard/login`, then
+open `/admin`.
 
-`owner_alert_email` is where low ratings and the daily digest land, so it must
-be an address the owner actually reads.
+Fill in the form and the client is created. You land on their setup page,
+which lists anything still missing, sends a test email through their sender,
+and hands you the two links to pass on:
 
-Set `postal_address` too if the client wants the CAN-SPAM footer. A review
-request after a completed job is defensibly transactional rather than
-commercial, so it is not strictly required, but it costs nothing and removes
-the argument.
+- the crew link, `/s/{staff_token}`, which technicians save to their home
+  screen and use to log finished jobs
+- the walk-up QR, `/j/{slug}`, ready to print for the van or the invoice
 
-Take the `staff_token` from the result. The technician link is
-`https://your-host/s/{staff_token}` and the walk-up QR points at
-`https://your-host/j/{slug}`.
+Two fields decide whether the client actually works. The Google review link,
+because without it a five star customer taps through to nothing. And the owner
+alert email, because low ratings and the daily text reminder both go there.
+The setup page marks both as blocking until they are set.
 
-To let the owner into the dashboard, have them sign in once at
-`/dashboard/login`, then attach their user:
+Put the owner's email in the sign-in field and they attach themselves the
+first time they sign in at `/dashboard/login`. No SQL, no user ids.
 
-```sql
-update public.businesses
-set owner_user_id = (select id from auth.users where email = 'owner@apexroofing.com')
-where slug = 'apex-roofing';
-```
+Send the test email before you leave the page. An unverified Resend domain is
+the most common way a new client sits silently broken, and the test is the
+only thing that catches it on day one.
+
+Settings still change in SQL after creation. The settings screen is not built
+yet.
 
 ### 5. Deploy
 
@@ -85,7 +76,9 @@ where slug = 'apex-roofing';
 vercel --prod
 ```
 
-Add every variable from `.env.example` to the Vercel project first.
+Add every variable from `.env.example` to the Vercel project first, including
+`ADMIN_EMAILS`. Leave that one empty and `/admin` stays shut for everyone,
+which is the intended failure direction.
 
 ---
 

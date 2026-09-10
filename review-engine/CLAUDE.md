@@ -101,6 +101,7 @@ a client is a one column update, by design. Do not remove that seam.
 
 ```
 supabase/migrations/     schema, run in the Supabase SQL editor
+src/app/admin/           the student's own view, where clients are onboarded
 src/lib/review/          create, gate, links, draft, run-followups, business
 src/lib/email/           templates and the Resend sender
 src/lib/sms/             body copy and the sms: deep link builder
@@ -111,6 +112,22 @@ src/app/s/[staffToken]/  technician quick-add
 src/app/dashboard/       owner view, stats, tap-to-send queue, unhappy feed
 src/app/api/             rate, feedback, requests, outbox, cron
 ```
+
+## Three levels of access
+
+Keep these apart. They are not tiers of one login.
+
+| Who | How they are recognised | What they reach |
+|---|---|---|
+| The student, platform admin | Signed in, address listed in `ADMIN_EMAILS` | `/admin`, every client |
+| A client owner | Signed in, `businesses.owner_user_id` matches, claimed on first sign-in via `owner_email` | `/dashboard`, their own business only, through row level security |
+| A technician | Holds the staff link | `/s/{staff_token}`, can create review requests and nothing else |
+| An end customer | Holds a request token | `/r/{token}`, one rating |
+
+`ADMIN_EMAILS` lives in the environment rather than the database on purpose. A
+compromised client owner must not be able to write themselves into the admin
+list. An empty list shuts the admin area for everyone, which is the correct
+direction to fail.
 
 ## Rules for this folder
 
@@ -124,5 +141,9 @@ src/app/api/             rate, feedback, requests, outbox, cron
 - `responses.acknowledged_at` is what the digest counts as outstanding. Any new
   view of unhappy customers must offer a way to clear it, or the count sticks
   and the owner stops reading the digest.
+- Every silent failure gets surfaced in `checkReadiness`. A missing Google
+  link, an unverified sender, an unclaimed owner: none of them throw, so a
+  client can sit broken for a fortnight. If you add another setting that can
+  fail quietly, add a check for it there too.
 - Follow the root operator rules: no em-dashes, no emojis, plain short
   sentences, and nothing is deployed without the student's explicit approval.
