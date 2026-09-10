@@ -2,7 +2,7 @@ import { createAdminSupabase } from "@/lib/supabase/admin"
 import type { Business } from "@/lib/types"
 
 const COLUMNS =
-  "id, owner_user_id, slug, name, google_place_id, google_review_url, from_name, from_email, reply_to_email, owner_alert_email, owner_phone, gate_mode, brand_color, logo_url, timezone, staff_token, followup_1_days, followup_2_days, request_ttl_days, active"
+  "id, owner_user_id, slug, name, google_place_id, google_review_url, from_name, from_email, reply_to_email, owner_alert_email, owner_phone, postal_address, gate_mode, brand_color, logo_url, timezone, staff_token, followup_1_days, followup_2_days, request_ttl_days, active"
 
 export async function getBusinessBySlug(slug: string): Promise<Business | null> {
   const supabase = createAdminSupabase()

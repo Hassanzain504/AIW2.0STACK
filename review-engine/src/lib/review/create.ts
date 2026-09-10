@@ -3,7 +3,7 @@ import { buildCustomerEmail } from "@/lib/email/templates"
 import { buildSmsBody } from "@/lib/sms/templates"
 import { normalisePhone } from "@/lib/sms/link"
 import { reviewUrl, unsubscribeUrl } from "./links"
-import type { Business, MessageKind } from "@/lib/types"
+import type { Business, CustomerMessageKind } from "@/lib/types"
 
 export interface CreateRequestInput {
   business: Business
@@ -169,7 +169,7 @@ export async function createReviewRequest(
     }
   }
 
-  const steps: Array<{ kind: MessageKind; days: number }> = [
+  const steps: Array<{ kind: CustomerMessageKind; days: number }> = [
     { kind: "initial", days: 0 },
     { kind: "followup_1", days: business.followup_1_days },
     { kind: "followup_2", days: business.followup_2_days },
@@ -179,7 +179,7 @@ export async function createReviewRequest(
   const rows: Row[] = []
 
   for (const step of steps) {
-    const kind = step.kind as Exclude<MessageKind, "low_rating_alert">
+    const kind = step.kind
     const scheduledAt = daysFromNow(step.days)
 
     if (rawEmail) {

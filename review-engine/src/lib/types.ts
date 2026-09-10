@@ -23,6 +23,10 @@ export type MessageKind =
   | "followup_1"
   | "followup_2"
   | "low_rating_alert"
+  | "owner_digest"
+
+/** The kinds that actually go to an end customer, as opposed to the owner. */
+export type CustomerMessageKind = "initial" | "followup_1" | "followup_2"
 
 export type ResponseRoute = "google" | "private"
 
@@ -38,6 +42,7 @@ export interface Business {
   reply_to_email: string | null
   owner_alert_email: string | null
   owner_phone: string | null
+  postal_address: string | null
   gate_mode: GateMode
   brand_color: string
   logo_url: string | null

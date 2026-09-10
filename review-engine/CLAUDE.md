@@ -57,6 +57,13 @@ out and cancelling is a status flip rather than a scheduler problem.
 Message statuses: `scheduled` → `ready` (texts only, waiting for a human tap)
 → `sent`, or `cancelled` / `skipped` / `failed`.
 
+The owner digest is in the same table, as `kind = 'owner_digest'`. It is the
+counterweight to tap-to-send: nothing in the ready queue moves without a human,
+so the cron emails any owner with a non-empty queue once a day. Owners with an
+empty queue hear nothing, deliberately. If you ever make texts send
+automatically, delete the digest rather than leaving it to nag about a queue
+that drains itself.
+
 ### Why there is no Twilio
 
 The clients are United States based, where A2P 10DLC registration gates every
@@ -114,5 +121,8 @@ src/app/api/             rate, feedback, requests, outbox, cron
   so tokens stay unguessable and expire.
 - Never send to a contact with `opted_out_at` set or a matching `suppressions`
   row. `createReviewRequest` and `runFollowUps` both check. Keep it that way.
+- `responses.acknowledged_at` is what the digest counts as outstanding. Any new
+  view of unhappy customers must offer a way to clear it, or the count sticks
+  and the owner stops reading the digest.
 - Follow the root operator rules: no em-dashes, no emojis, plain short
   sentences, and nothing is deployed without the student's explicit approval.

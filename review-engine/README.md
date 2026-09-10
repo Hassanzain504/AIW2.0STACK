@@ -58,6 +58,14 @@ insert into public.businesses (
 returning id, slug, staff_token;
 ```
 
+`owner_alert_email` is where low ratings and the daily digest land, so it must
+be an address the owner actually reads.
+
+Set `postal_address` too if the client wants the CAN-SPAM footer. A review
+request after a completed job is defensibly transactional rather than
+commercial, so it is not strictly required, but it costs nothing and removes
+the argument.
+
 Take the `staff_token` from the result. The technician link is
 `https://your-host/s/{staff_token}` and the walk-up QR points at
 `https://your-host/j/{slug}`.
@@ -98,7 +106,13 @@ curl "https://your-host/api/cron/follow-ups?secret=$CRON_SECRET"
 ```
 
 Each run cancels messages whose customer already answered, sends due emails,
-moves due texts into the tap-to-send queue, and expires stale requests.
+moves due texts into the tap-to-send queue, expires stale requests, and emails
+each owner whose text queue is not empty.
+
+That last part matters. Texts do not send by themselves, so without the daily
+nudge the queue just grows and the SMS half of the chain never happens. Owners
+with an empty queue are not emailed, because a daily "nothing to do" message is
+one people stop opening.
 
 ---
 

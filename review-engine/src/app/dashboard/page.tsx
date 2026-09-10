@@ -3,6 +3,7 @@ import { createServerSupabase } from "@/lib/supabase/server"
 import { one } from "@/lib/supabase/rows"
 import { staffUrl } from "@/lib/review/links"
 import SmsOutbox, { type OutboxRow } from "@/components/SmsOutbox"
+import AckButton from "@/components/AckButton"
 
 export const dynamic = "force-dynamic"
 
@@ -64,6 +65,7 @@ export default async function DashboardPage() {
         .select("id, rating, comment, contact_name, contact_phone, created_at")
         .eq("business_id", business.id)
         .eq("routed_to", "private")
+        .is("acknowledged_at", null)
         .order("created_at", { ascending: false })
         .limit(10),
     ])
@@ -139,11 +141,16 @@ export default async function DashboardPage() {
                 <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed">
                   {row.comment || "No comment left."}
                 </p>
+                <div className="mt-3">
+                  <AckButton responseId={row.id} />
+                </div>
               </li>
             ))}
           </ul>
         ) : (
-          <p className="mt-4 text-sm text-muted">Nothing here. Good sign.</p>
+          <p className="mt-4 text-sm text-muted">
+            Nobody waiting on a call back. Good sign.
+          </p>
         )}
       </section>
 

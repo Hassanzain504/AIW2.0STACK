@@ -1,4 +1,4 @@
-import type { Business, MessageKind } from "@/lib/types"
+import type { Business, CustomerMessageKind } from "@/lib/types"
 
 export interface EmailContent {
   subject: string
@@ -29,6 +29,9 @@ function shell(input: {
 }): string {
   const { business, bodyHtml, ctaLabel, ctaUrl, unsubUrl } = input
   const accent = escapeHtml(business.brand_color || "#111827")
+  // CAN-SPAM wants a physical postal address on commercial mail. Rendered only
+  // when the business has supplied one.
+  const address = business.postal_address?.trim() ?? ""
 
   return `<!doctype html>
 <html>
@@ -46,6 +49,7 @@ function shell(input: {
     <tr><td style="padding:0 28px 24px 28px;font-size:12px;line-height:1.5;color:#71717a;border-top:1px solid #f4f4f5;padding-top:16px;">
       Sent by ${escapeHtml(business.name)}.
       <a href="${unsubUrl}" style="color:#71717a;">Stop these emails</a>.
+      ${address ? `<br />${escapeHtml(address)}` : ""}
     </td></tr>
   </table>
 </body>
@@ -58,7 +62,7 @@ function shell(input: {
  */
 export function buildCustomerEmail(input: {
   business: Business
-  kind: Exclude<MessageKind, "low_rating_alert">
+  kind: CustomerMessageKind
   contactName: string | null
   serviceType: string | null
   reviewUrl: string
@@ -69,7 +73,7 @@ export function buildCustomerEmail(input: {
   const work = serviceType?.trim() ? serviceType.trim().toLowerCase() : null
 
   const copy: Record<
-    Exclude<MessageKind, "low_rating_alert">,
+    CustomerMessageKind,
     { subject: string; lines: string[]; cta: string }
   > = {
     initial: {
@@ -115,7 +119,10 @@ export function buildCustomerEmail(input: {
     reviewUrl,
     "",
     `Stop these emails: ${unsubUrl}`,
-  ].join("\n")
+    business.postal_address?.trim() ?? "",
+  ]
+    .filter((line, index, all) => line !== "" || all[index - 1] !== "")
+    .join("\n")
 
   return {
     subject: chosen.subject,
@@ -201,5 +208,69 @@ export function buildOwnerAlertEmail(input: {
     subject: `${rating} star rating from ${name}`,
     html,
     text,
+  }
+}
+
+/**
+ * The daily nudge to the owner.
+ *
+ * Texts in this system leave from the owner's own handset, so nothing sends
+ * until a human taps. Without this email the ready queue quietly grows and the
+ * SMS half of the follow-up chain never happens. It is only sent when there is
+ * something to act on, so an owner with an empty queue hears nothing.
+ */
+export function buildOwnerDigestEmail(input: {
+  business: Business
+  pendingTexts: number
+  unreadFeedback: number
+  dashboardUrl: string
+}): EmailContent {
+  const { business, pendingTexts, unreadFeedback, dashboardUrl } = input
+  const accent = escapeHtml(business.brand_color || "#111827")
+
+  const textLine =
+    pendingTexts === 1
+      ? "1 text is waiting to go out."
+      : `${pendingTexts} texts are waiting to go out.`
+
+  const feedbackLine =
+    unreadFeedback === 1
+      ? "1 unhappy customer has not been called back yet."
+      : `${unreadFeedback} unhappy customers have not been called back yet.`
+
+  const lines = [textLine]
+  if (unreadFeedback > 0) lines.push(feedbackLine)
+  lines.push(
+    "Open the list, tap each one, and your phone sends it from your own number."
+  )
+
+  const bodyHtml = lines
+    .map((line) => `<p style="margin:0 0 12px 0;">${escapeHtml(line)}</p>`)
+    .join("\n      ")
+
+  const html = `<!doctype html>
+<html>
+<body style="margin:0;padding:24px;background:#f4f4f5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#18181b;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:520px;margin:0 auto;background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;">
+    <tr><td style="padding:28px 28px 8px 28px;">
+      <p style="margin:0;font-size:17px;font-weight:700;">Review requests need you</p>
+    </td></tr>
+    <tr><td style="padding:0 28px 8px 28px;font-size:15px;line-height:1.55;">
+      ${bodyHtml}
+    </td></tr>
+    <tr><td style="padding:16px 28px 28px 28px;">
+      <a href="${dashboardUrl}" style="display:inline-block;background:${accent};color:#ffffff;text-decoration:none;padding:13px 26px;border-radius:8px;font-size:15px;font-weight:600;">Open the list</a>
+    </td></tr>
+  </table>
+</body>
+</html>`
+
+  return {
+    subject:
+      pendingTexts === 1
+        ? "1 review text waiting"
+        : `${pendingTexts} review texts waiting`,
+    html,
+    text: [...lines, "", dashboardUrl].join("\n"),
   }
 }

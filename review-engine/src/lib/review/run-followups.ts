@@ -1,5 +1,7 @@
 import { createAdminSupabase } from "@/lib/supabase/admin"
 import { sendEmail } from "@/lib/email/send"
+import { buildOwnerDigestEmail } from "@/lib/email/templates"
+import { APP_URL } from "@/lib/supabase/env"
 import { unsubscribeUrl } from "./links"
 import { getBusinessById } from "./business"
 import type { Business } from "@/lib/types"
@@ -12,6 +14,7 @@ export interface FollowUpRunResult {
   cancelled: number
   skipped: number
   expired: number
+  digestsSent: number
 }
 
 const BATCH_SIZE = 200
@@ -70,6 +73,7 @@ export async function runFollowUps(
     cancelled: 0,
     skipped: 0,
     expired: 0,
+    digestsSent: 0,
   }
 
   let query = supabase
@@ -197,5 +201,92 @@ export async function runFollowUps(
     .select("id")
   result.expired = expired?.length ?? 0
 
+  result.digestsSent = await sendOwnerDigests()
+
   return result
+}
+
+/**
+ * Emails each owner whose tap-to-send queue is not empty.
+ *
+ * This is the piece that makes texts actually happen. Nothing in the queue
+ * sends by itself, so an owner who never opens the dashboard would otherwise
+ * have a follow-up chain that only ever emails. Owners with an empty queue get
+ * nothing, because a daily message that usually says "no action needed" is one
+ * people learn to ignore.
+ *
+ * Returns how many went out.
+ */
+async function sendOwnerDigests(): Promise<number> {
+  const supabase = createAdminSupabase()
+  let sent = 0
+
+  const { data: readyRows } = await supabase
+    .from("messages")
+    .select("business_id")
+    .eq("status", "ready")
+    .limit(2000)
+
+  const counts = new Map<string, number>()
+  for (const row of readyRows ?? []) {
+    counts.set(row.business_id, (counts.get(row.business_id) ?? 0) + 1)
+  }
+
+  // A twenty hour window rather than a calendar day. It survives a manual
+  // re-run or a retried cron without double-sending, and still lets tomorrow's
+  // digest through even if the schedule drifts an hour.
+  const since = new Date(Date.now() - 20 * 60 * 60 * 1000).toISOString()
+
+  for (const [businessId, pendingTexts] of counts) {
+    const business = await getBusinessById(businessId)
+    const alertTo =
+      business?.owner_alert_email?.trim() || business?.reply_to_email?.trim()
+    if (!business || !business.active || !alertTo) continue
+
+    const { data: alreadySent } = await supabase
+      .from("messages")
+      .select("id")
+      .eq("business_id", businessId)
+      .eq("kind", "owner_digest")
+      .gte("sent_at", since)
+      .limit(1)
+    if (alreadySent && alreadySent.length > 0) continue
+
+    const { count: unreadFeedback } = await supabase
+      .from("responses")
+      .select("id", { count: "exact", head: true })
+      .eq("business_id", businessId)
+      .eq("routed_to", "private")
+      .is("acknowledged_at", null)
+
+    const content = buildOwnerDigestEmail({
+      business,
+      pendingTexts,
+      unreadFeedback: unreadFeedback ?? 0,
+      dashboardUrl: `${APP_URL}/dashboard`,
+    })
+
+    const outcome = await sendEmail({ business, to: alertTo, content })
+
+    // Logged either way. The outbox is meant to be the whole record of what
+    // this system tried to send, failures included.
+    await supabase.from("messages").insert({
+      business_id: businessId,
+      channel: "email",
+      kind: "owner_digest",
+      status: outcome.ok ? "sent" : "failed",
+      scheduled_at: new Date().toISOString(),
+      sent_at: outcome.ok ? new Date().toISOString() : null,
+      to_email: alertTo,
+      subject: content.subject,
+      body: content.html,
+      provider_id: outcome.providerId ?? null,
+      error: outcome.error ?? null,
+      attempts: 1,
+    })
+
+    if (outcome.ok) sent++
+  }
+
+  return sent
 }
