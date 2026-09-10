@@ -110,9 +110,9 @@ export default async function DashboardPage() {
     <main className="mx-auto max-w-2xl px-6 py-10">
       <header className="flex items-baseline justify-between gap-4">
         <h1 className="text-xl font-semibold">{business.name}</h1>
-        <span className="text-xs text-muted">
-          {business.gate_mode === "hard_gate" ? "Hard gate" : "Compliant"}
-        </span>
+        <a href="/dashboard/settings" className="shrink-0 text-sm underline">
+          Settings
+        </a>
       </header>
 
       {!googleReady ? (

@@ -21,7 +21,7 @@ export default function TestEmailButton({
     setState("sending")
     setDetail(null)
     try {
-      const res = await fetch(`/api/admin/businesses/${businessId}/test-email`, {
+      const res = await fetch(`/api/businesses/${businessId}/test-email`, {
         method: "POST",
       })
       const data = (await res.json()) as { error?: string; to?: string }

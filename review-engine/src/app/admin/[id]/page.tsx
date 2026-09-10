@@ -34,7 +34,15 @@ export default async function ClientSetupPage({
         All clients
       </Link>
 
-      <h1 className="mt-4 text-xl font-semibold">{business.name}</h1>
+      <div className="mt-4 flex items-baseline justify-between gap-4">
+        <h1 className="text-xl font-semibold">{business.name}</h1>
+        <Link
+          href={`/admin/${business.id}/settings`}
+          className="shrink-0 text-sm underline"
+        >
+          Settings
+        </Link>
+      </div>
       <p className="mt-1 text-sm text-muted">
         {business.gate_mode === "hard_gate" ? "Hard gate" : "Compliant"},{" "}
         reminders on day {business.followup_1_days} and day{" "}
@@ -87,8 +95,11 @@ export default async function ClientSetupPage({
           ))}
         </ul>
         <p className="mt-3 text-xs text-muted">
-          Anything missing is still changed in the database for now. The
-          settings screen is not built yet.
+          Fix anything missing on the{" "}
+          <Link href={`/admin/${business.id}/settings`} className="underline">
+            settings page
+          </Link>
+          .
         </p>
       </section>
 

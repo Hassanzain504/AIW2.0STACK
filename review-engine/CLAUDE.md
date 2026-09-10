@@ -101,7 +101,7 @@ a client is a one column update, by design. Do not remove that seam.
 
 ```
 supabase/migrations/     schema, run in the Supabase SQL editor
-src/app/admin/           the student's own view, where clients are onboarded
+src/app/admin/           the student's own view, onboarding and full settings
 src/lib/review/          create, gate, links, draft, run-followups, business
 src/lib/email/           templates and the Resend sender
 src/lib/sms/             body copy and the sms: deep link builder
@@ -122,7 +122,16 @@ Keep these apart. They are not tiers of one login.
 | The student, platform admin | Signed in, address listed in `ADMIN_EMAILS` | `/admin`, every client |
 | A client owner | Signed in, `businesses.owner_user_id` matches, claimed on first sign-in via `owner_email` | `/dashboard`, their own business only, through row level security |
 | A technician | Holds the staff link | `/s/{staff_token}`, can create review requests and nothing else |
+
 | An end customer | Holds a request token | `/r/{token}`, one rating |
+
+Settings follow the same split. `toBusinessPatch` drops any field the caller's
+role does not own, so an owner posting `gate_mode` has it ignored rather than
+rejected. Four fields are admin only, each for its own reason: the slug because
+changing it kills every printed QR code, the gate mode because it is a legal
+risk call the student carries rather than the client, `owner_email` because it
+decides who can claim the dashboard, and `active` because it stops a paying
+client's system.
 
 `ADMIN_EMAILS` lives in the environment rather than the database on purpose. A
 compromised client owner must not be able to write themselves into the admin

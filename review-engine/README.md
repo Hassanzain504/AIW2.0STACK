@@ -67,8 +67,11 @@ Send the test email before you leave the page. An unverified Resend domain is
 the most common way a new client sits silently broken, and the test is the
 only thing that catches it on day one.
 
-Settings still change in SQL after creation. The settings screen is not built
-yet.
+Everything is editable afterwards. You get the full settings page at
+`/admin/{id}/settings`, and the client gets a narrower one at
+`/dashboard/settings` covering their branding, addresses and how hard to
+chase. Four things stay yours alone: the link name, the rating routing, who
+may claim the dashboard, and whether the client is live at all.
 
 ### 5. Deploy
 
