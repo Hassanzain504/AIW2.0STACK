@@ -55,6 +55,7 @@ The framework is at [research/_framework/Student_Research_System.md](research/_f
 
 - When working inside `website-factory/`, defer to that folder's [CLAUDE.md](website-factory/CLAUDE.md). It has its own 13-stage pipeline.
 - When working inside `content-engine/`, defer to that folder's CLAUDE.md if present.
+- When working inside `review-engine/`, defer to that folder's [CLAUDE.md](review-engine/CLAUDE.md). It is a client-sold review request system and sits outside the 8-module flow.
 - The root only orchestrates handoffs and tailoring. Don't reach inside subfolders for logic; call their commands.
 
 ## Niche scope

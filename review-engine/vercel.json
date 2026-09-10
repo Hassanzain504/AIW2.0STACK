@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "crons": [
+    {
+      "path": "/api/cron/follow-ups",
+      "schedule": "0 15 * * *"
+    }
+  ],
+  "functions": {
+    "src/app/api/cron/follow-ups/route.ts": { "maxDuration": 300 }
+  }
+}
