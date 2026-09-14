@@ -1,0 +1,1285 @@
+<title>Copy Deck Batch Four</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#ECEEF0; --card:#FFFFFF; --card2:#E1E5E8; --card3:#D3D8DC;
+  --line:#CFD5D9; --line2:#AAB2B8;
+  --ink:#14181C; --ink2:#49525A; --ink3:#79838B;
+  --accent:#8C3A2E; --accent2:#AD5344; --accent-bg:#F4E3DF;
+  --slot:#8A5C0C; --slot-bg:#F6E9CE; --slot-line:#D0B06C;
+  --ok:#2C6B4C; --ok-bg:#DEEBE3; --ok-line:#93BBA3;
+  --band:#14181C; --bandink:#ECEEF0;
+  --shade:0 1px 2px rgba(20,24,28,.05), 0 14px 34px -26px rgba(20,24,28,.5);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C0F11; --card:#14181B; --card2:#1B2024; --card3:#242B30;
+    --line:#262D32; --line2:#3C454B; --ink:#E7EAEC; --ink2:#A2ABB2; --ink3:#727C83;
+    --accent:#E08A78; --accent2:#EDA595; --accent-bg:#2B1512;
+    --slot:#D8A44E; --slot-bg:#2A2110; --slot-line:#66501F;
+    --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+    --band:#050708; --bandink:#E7EAEC;
+    --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C0F11; --card:#14181B; --card2:#1B2024; --card3:#242B30;
+  --line:#262D32; --line2:#3C454B; --ink:#E7EAEC; --ink2:#A2ABB2; --ink3:#727C83;
+  --accent:#E08A78; --accent2:#EDA595; --accent-bg:#2B1512;
+  --slot:#D8A44E; --slot-bg:#2A2110; --slot-line:#66501F;
+  --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+  --band:#050708; --bandink:#E7EAEC;
+  --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--card2);
+  padding:1px 5px;border-radius:2px}
+
+.mast{background:var(--band);color:var(--bandink)}
+.mast .wrap{padding:28px 22px 30px}
+.lock{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;
+  padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.16)}
+.mk{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.mk span{color:var(--accent2)}
+.lock .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.55;font-weight:600;text-align:right}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(32px,5.6vw,52px);line-height:.98;letter-spacing:-.012em;
+  margin:21px 0 0;text-transform:uppercase;text-wrap:balance}
+.lede{font-size:17px;color:rgba(231,234,236,.74);max-width:64ch;margin:14px 0 0}
+
+/* page block */
+.page{background:var(--card);border:1px solid var(--line);border-radius:5px;
+  margin:0 0 34px;overflow:hidden;box-shadow:var(--shade)}
+.phead{background:var(--band);color:var(--bandink);padding:20px 24px}
+.phead .kind{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--accent2)}
+.phead h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(24px,3.6vw,33px);line-height:1.04;margin:8px 0 0;text-transform:uppercase;
+  letter-spacing:-.004em}
+.phead .url{font-family:"IBM Plex Mono",monospace;font-size:12px;
+  color:rgba(231,234,236,.62);margin-top:8px;word-break:break-all}
+.pbody{padding:0 24px 26px}
+@media(max-width:560px){.pbody{padding:0 16px 22px}.phead{padding:17px 16px}}
+
+/* seo table */
+.seo{margin:22px 0 0;border:1px solid var(--line);border-radius:4px;overflow:hidden;
+  background:var(--card2)}
+.seo .r{display:grid;grid-template-columns:130px 1fr;gap:0;border-bottom:1px solid var(--line)}
+.seo .r:last-child{border-bottom:none}
+.seo .k{background:var(--card3);padding:9px 12px;font-family:"IBM Plex Mono",monospace;
+  font-size:8.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--ink3);display:flex;align-items:center}
+.seo .v{padding:9px 13px;font-size:14.5px;background:var(--card);line-height:1.5}
+.seo .v .count{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink3);
+  margin-left:7px}
+@media(max-width:560px){.seo .r{grid-template-columns:1fr}.seo .k{padding:7px 12px}}
+
+/* section within a page */
+.sec{margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:none}
+.sn{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
+  text-transform:uppercase;letter-spacing:.016em;margin:6px 0 12px;line-height:1.15}
+.note{font-size:13.5px;color:var(--ink3);margin:0 0 14px;line-height:1.5;
+  padding-left:11px;border-left:2px solid var(--line2)}
+
+/* the actual copy */
+.copy{max-width:68ch}
+.copy h4{font-family:Barlow,sans-serif;font-weight:700;font-size:19px;margin:20px 0 8px;
+  line-height:1.3;color:var(--ink)}
+.copy h5{font-family:Barlow,sans-serif;font-weight:600;font-size:16.5px;margin:16px 0 6px;
+  color:var(--ink)}
+.copy p{margin:0 0 13px;font-size:16.5px;color:var(--ink2)}
+.copy p.big{font-size:18px;color:var(--ink)}
+.copy strong{color:var(--ink);font-weight:600}
+.copy ul,.copy ol{margin:0 0 13px;padding-left:21px}
+.copy li{font-size:16px;color:var(--ink2);margin-bottom:8px;line-height:1.55}
+.copy li strong{color:var(--ink)}
+.h1line{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(25px,3.8vw,34px);line-height:1.05;text-transform:uppercase;
+  letter-spacing:-.004em;color:var(--ink);margin:0 0 10px;max-width:22ch}
+
+/* slot */
+.slot{background:var(--slot-bg);border:1px solid var(--slot-line);border-left:3px solid var(--slot);
+  border-radius:4px;padding:12px 15px;margin:0 0 14px;max-width:68ch}
+.slot .sl{font-family:"IBM Plex Mono",monospace;font-size:8.5px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--slot);display:block;margin-bottom:5px}
+.slot p{margin:0;font-size:14.5px;color:var(--ink2);line-height:1.5}
+.slot p + p{margin-top:7px}
+
+/* faq */
+.faq{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--card);max-width:74ch}
+.faq .q{border-bottom:1px solid var(--line);padding:14px 17px}
+.faq .q:last-child{border-bottom:none}
+.faq .q b{display:block;font-size:16px;font-weight:600;line-height:1.35;color:var(--ink)}
+.faq .q p{margin:7px 0 0;font-size:15.5px;color:var(--ink2);line-height:1.55}
+
+/* links + alt */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--card);margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:10px 13px;border-bottom:2px solid var(--line2);background:var(--card2);white-space:nowrap}
+td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.mn{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink3)}
+td.lab{font-weight:600}
+
+.call{background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:4px;padding:17px 20px;margin:20px 0;max-width:74ch}
+.call.ok{border-left-color:var(--ok);background:var(--ok-bg)}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  text-transform:uppercase;margin:0 0 8px;letter-spacing:.016em}
+.call p{margin:0 0 9px;font-size:15px;color:var(--ink2)}
+.call p:last-child{margin-bottom:0}
+.call strong{color:var(--ink)}
+
+section.doc{padding:44px 0 4px}
+.dhead{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:8px}
+.dno{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12px;
+  color:var(--accent);letter-spacing:.11em;padding-top:7px}
+h2.dh{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(25px,3.8vw,35px);line-height:1.03;margin:0;text-transform:uppercase}
+.ddek{color:var(--ink2);font-size:16.5px;max-width:66ch;margin:0 0 20px 40px}
+@media(max-width:640px){.ddek{margin-left:0}}
+
+.foot{padding:24px 0 44px;font-size:13px;color:var(--ink3)}
+.foot p{margin:0 0 8px;max-width:78ch}
+.foot b{color:var(--ink2)}
+</style>
+<header class="mast">
+  <div class="wrap">
+    <div class="lock">
+      <div class="mk">Black<span>&nbsp;Ops</span>&nbsp;Cleaning</div>
+      <div class="meta">Copy deck, batch four<br>The supporting set</div>
+    </div>
+    <h1>Four pages that<br>sell the company</h1>
+    <p class="lede">Home, About and Team, Contact, and Government Contracting. The thirteen
+      service pages each sell one service. These four sell the business behind them. They are
+      also the four pages where every competitor leans on reviews and job photographs, and Black
+      Ops has neither yet. So they lean on things a buyer can check instead.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="doc">
+  <div class="dhead"><div class="dno">SHIFT</div><h2 class="dh">What changes from the service set</h2></div>
+  <div class="tw"><table>
+    <thead><tr><th>Block</th><th>Service pages</th><th>These four</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Reader</td><td>Someone with one problem, looking for one answer</td>
+        <td>Someone deciding whether to trust the company at all</td></tr>
+      <tr><td class="lab">Search intent</td><td>Service plus place</td><td>Brand, or procurement.
+        Only Government Contracting carries real service intent</td></tr>
+      <tr><td class="lab">Job</td><td>Answer the question and close</td><td>Route, or remove the
+        last reason not to call</td></tr>
+      <tr><td class="lab">Depth on the service</td><td>Everything</td><td>One paragraph, then a
+        link. These pages must not restate a service page</td></tr>
+      <tr><td class="lab">Proof</td><td>Method, certifications, process</td><td>People, address,
+        registrations, and a face</td></tr>
+      <tr><td class="lab">Form</td><td>Short, four fields, low friction</td><td>Contact qualifies.
+        It is the one page where a longer form is correct</td></tr>
+      <tr><td class="lab">Length</td><td>1,700 to 2,200</td><td>600 to 1,800, and Home is the
+        only one near the top of that</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call">
+    <h4>The constraint that shapes all four</h4>
+    <p>Every competitor in the teardown carries Home, About and Contact on social proof. Molly
+      Maid shows 1,079 reviews before you scroll. Bio-One puts the owners and a Google rating
+      badge in the hero. <strong>Black Ops has zero reviews on every platform and no supplied job
+      photographs.</strong></p>
+    <p>Padding around that with adjectives is what a weak site does, and a reader can feel it.
+      The alternative is to substitute things that are verifiable: a real street address with a
+      map, a UEI a buyer can look up, a named owner with a face, a written specification, a
+      licence number, a thirty day exit. <strong>Checkable beats flattering,</strong> and it is
+      the only honest option until the review system fills the slots.</p>
+    <p>So every amber slot in this batch is a real gap with a date on it, not a placeholder to
+      write around. Home ships with the review block built and empty rather than built and
+      invented.</p>
+  </div>
+
+  <div class="call">
+    <h4>The cannibalisation rule for this batch</h4>
+    <p>Two pairs can collide, and both collisions are avoidable.</p>
+    <p><strong>Home against the service pages.</strong> Home does not target
+      <code>commercial cleaning Rockville MD</code>. That belongs to
+      <code>/services/commercial-cleaning/</code> and it is the strongest commercial term on the
+      site. Home targets the company, not the service.</p>
+    <p><strong>Government Contracting against the government facility page.</strong> The service
+      page answers can you clean my federal building. This page answers are you a company I can
+      put on a contract. Different question, different reader, different search. The test: if a
+      block would make sense on the service page, it does not belong here.</p>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">SHARED</div><h2 class="dh">Blocks that render across the site</h2></div>
+
+  <div class="page">
+    <div class="phead"><div class="kind">Shared component</div>
+      <h2>Name, address, phone and hours</h2>
+      <div class="url">Footer on all 57 pages. Full version on Contact.</div></div>
+    <div class="pbody"><div class="sec"><div class="copy">
+      <p>This block does more work than anything else on the site, and it is almost entirely
+        mechanical. It must match the Google Business Profile character for character, because
+        every one of the 41 citation listings copies from the same reference sheet.</p>
+      <h4>The block</h4>
+      <ul>
+        <li><strong>Black Ops Cleaning Company LLC</strong></li>
+        <li>121 Talbott St, Rockville, MD 20852</li>
+        <li>Phone, and the emergency line stated separately</li>
+        <li>Hours</li>
+        <li>Licence number</li>
+      </ul>
+      <p>Suite number, street abbreviation and legal suffix all have to match the listing
+        exactly. A footer that says Street where the listing says St is a mismatch, and forty
+        directory listings copied from the wrong version is a week of refiling.</p>
+      <h4>The two claims, kept apart</h4>
+      <p>The phone is answered 24 hours. The on-site window is separate and it is two hours
+        across Montgomery County. These are two different promises and they are written as two
+        lines, never merged.</p>
+      <p>Never write 24/7 crews standing by. It implies staffed crews waiting, which is not what
+        is being sold, and the first customer who tests it at 3am finds out.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, blocking, the 24 hour decision</span>
+      <p>Hours cannot be written until the client confirms somebody genuinely answers the phone
+        at 3am. An answering service satisfies this. Amilcar personally does not have to.</p>
+      <p><b>This is not only a copy decision.</b> It sets the hours on all 41 citation listings,
+        it decides whether the emergency service page gets built at all, and it changes the
+        banner, the FAQ and the response block on four specialty pages. Do not file a single
+        listing until it is answered.</p></div>
+    <div class="slot"><span class="sl">Slot, licence number</span>
+      <p>Maryland licence or registration number, exactly as issued. Needed here, in the trust
+        bar, on the Legal page and in the capability statement.</p></div></div></div>
+  </div>
+
+  <div class="page">
+    <div class="phead"><div class="kind">Shared component</div>
+      <h2>The emergency route</h2>
+      <div class="url">Home, Contact, and every specialty service page</div></div>
+    <div class="pbody"><div class="sec"><div class="copy">
+      <p>Somebody arriving at 2am after a death in the family is not going to fill in a form, and
+        should never be asked to. Every page that a person in crisis can land on carries a route
+        that bypasses the form entirely.</p>
+      <h4>The copy</h4>
+      <p class="h1line">If this is an emergency, call. Do not use this form.</p>
+      <p>Somebody answers, any hour. Tell them what has happened and they will tell you what
+        happens next and what it costs before anything starts.</p>
+      <p><strong>Call (301) 000 0000</strong></p>
+      <h4>Rules</h4>
+      <ul>
+        <li><strong>Visually distinct from the standard CTA,</strong> and placed above the form,
+          not below it.</li>
+        <li><strong>Phone first, form nowhere.</strong> No email address in this block either.</li>
+        <li><strong>No price, no qualification, no triage questions.</strong> The call is the
+          triage.</li>
+        <li><strong>Tappable on mobile</strong> as a <code>tel:</code> link with call tracking
+          attached.</li>
+      </ul>
+    </div>
+    <p class="note">On the four commercial pages this block does not render. There is no
+      emergency in a janitorial purchase and the block only adds noise.</p>
+    <div class="slot"><span class="sl">Slot, phone number</span>
+      <p>(301) 000 0000 is a placeholder carried from batch one. The real number, and the
+        decision about whether the emergency line is a separate number or the same one, are both
+        outstanding. If it is a separate number it needs its own call tracking and its own row on
+        the citation reference sheet.</p></div></div></div>
+  </div>
+</section>
+
+<!-- ═══════════ PAGE 12 ═══════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Home, the routing page</div>
+    <h2>Home</h2>
+    <div class="url">/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">cleaning company Rockville MD</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">Black Ops Cleaning, veteran owned cleaning company Maryland, commercial and biohazard cleaning Montgomery County</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Black Ops Cleaning | Commercial and Biohazard, Rockville MD<span class="count">59 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Veteran owned cleaning company in Rockville MD. Commercial janitorial, biohazard and trauma cleanup across Montgomery County. Phone answered 24 hours.<span class="count">150 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Commercial and Biohazard Cleaning in Montgomery County</div></div>
+    <div class="r"><div class="k">Role</div><div class="v">Route, do not sell. Home sends a facility manager, a family in crisis and a federal buyer to three different pages without making any of them read the other two.</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">1,200 to 1,800</div></div>
+  </div>
+
+  <p class="note">Home does not target commercial cleaning Rockville MD. That is the service
+    page's term and it is the most valuable commercial phrase on the site. The live site currently
+    has the homepage and the services page competing for it, which is one of the faults in the
+    audit. Fixing it means Home deliberately steps back.</p>
+
+  <div class="call">
+    <h4>Three readers, one page, no compromise</h4>
+    <p>A facility manager comparing three janitorial firms. A family who found the site at 2am. A
+      federal buyer checking the company is real. <strong>They want completely different things
+      and none of them should have to scroll past the other two.</strong></p>
+    <p>That is why the services grid sits at position 04, high, with specialty work at equal
+      visual weight to janitorial. The grid is the fork in the road. Everything above it is common
+      ground, everything below it is reassurance for whoever did not click.</p>
+    <p>The current live site buries the specialty work as a bullet point. That is the highest
+      margin work in the business sitting below the fold on the only page everybody sees.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, utility bar</div>
+    <h3>Utility bar</h3>
+    <div class="copy">
+      <p>Renders above the header on every page, not just this one. One line, always visible.</p>
+      <p><strong>Rockville, MD</strong> &nbsp;&middot;&nbsp; <strong>Phone answered 24 hours,
+        (301) 000 0000</strong> &nbsp;&middot;&nbsp; <strong>Montgomery County and DC</strong></p>
+      <p>On mobile it collapses to the phone number alone, which stays tappable.</p>
+    </div>
+    <p class="note">Bio-One DC puts the 24 hour number in the header before anything else.
+      Checked on their Washington DC crime scene page. It is the first thing on the page and it
+      is the right call for a business that takes crisis work.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, hero</div>
+    <h3>Hero</h3>
+    <div class="copy">
+      <p class="h1line">Commercial and Biohazard Cleaning in Montgomery County</p>
+      <p class="big">Veteran owned, based in Rockville, and the phone is answered any hour. From
+        nightly office janitorial to biohazard and trauma cleanup, handled in house by the same
+        company.</p>
+      <p><strong>Pills:</strong> Veteran owned &middot; GBAC trained &middot; Insured &middot;
+        Based in Rockville</p>
+      <p><strong>Primary CTA:</strong> Book a walkthrough &nbsp;|&nbsp; <strong>Secondary:</strong>
+        Call (301) 000 0000</p>
+      <p>Form is four fields. Name, phone, what you need, and where. Nothing else above the
+        fold.</p>
+    </div>
+    <p class="note">This is the hero-split-form pattern already built at
+      references/section-patterns/hero-split-form/. It reads from the brand-dna shape, so the copy
+      here maps to fields rather than being pasted into markup.</p>
+    <div class="slot"><span class="sl">Slot, blocking the build, hero photograph</span>
+      <p>A real photograph of Black Ops' own work with Amilcar in frame. Not stock. Bio-One leads
+        with Antoine and Torrie Holloman by name and it is the strongest thing on their page.</p>
+      <p><b>No supplied job photographs exist.</b> Until one does, the hero uses the owner
+        headshot on a plain ground rather than a stock cleaning image. A stock photograph on a
+        trust page is worse than no photograph, because the reader has seen it before.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, trust bar</div>
+    <h3>Trust bar</h3>
+    <div class="copy">
+      <p>One line, directly under the hero, before any scrolling. Each item checkable.</p>
+      <p><strong>Veteran owned</strong> &middot; <strong>GBAC trained</strong> &middot;
+        <strong>ISSA member</strong> &middot; <strong>Insured and bonded</strong> &middot;
+        <strong>Licence [slot]</strong> &middot; <strong>SAM.gov registered</strong></p>
+    </div>
+    <div class="slot"><span class="sl">Slot, what is actually held, and at what level</span>
+      <p>GBAC trained, GBAC STAR accredited and ISSA member are three different things. CMI
+        certification is a fourth. Confirm exactly which ones Black Ops holds, for whom, and get
+        the certificate numbers.</p>
+      <p><b>This is the same open item as CIMS and Green Seal on the government pages.</b> Answer
+        it once and it resolves the trust bar, the About page certifications block, the capability
+        statement and two service pages together.</p></div>
+    <div class="slot"><span class="sl">Slot, veteran status wording</span>
+      <p>Reads veteran owned until SBA VetCert completes. Never SDVOSB, never VOSB, never
+        certified veteran owned. Those are certifications with legal meaning.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, services grid</div>
+    <h3>Services grid, the fork in the road</h3>
+    <div class="copy">
+      <h4>What we do</h4>
+      <p>Two columns, equal visual weight, each item linking to its own page.</p>
+      <h5>Commercial and recurring</h5>
+      <ul>
+        <li><strong>Commercial janitorial and office cleaning.</strong> Nightly and weekly
+          contracts to a written specification.</li>
+        <li><strong>Medical and healthcare facility cleaning.</strong> Clinical spaces, to
+          protocol.</li>
+        <li><strong>Government and federal facility cleaning.</strong> NAICS 561720, SAM.gov
+          registered.</li>
+        <li><strong>Disinfection and infection control.</strong> EPA registered products, correct
+          contact time.</li>
+      </ul>
+      <h5>Specialty and emergency</h5>
+      <ul>
+        <li><strong>Biohazard remediation.</strong> In house, not subcontracted.</li>
+        <li><strong>Crime scene and trauma cleanup.</strong> Discreet, unmarked vehicles.</li>
+        <li><strong>Unattended death cleanup.</strong> Two hour on-site response.</li>
+        <li><strong>Sewage backup and decontamination.</strong> Category three water.</li>
+        <li><strong>Hoarding cleanup.</strong> At the household's pace.</li>
+        <li><strong>24/7 emergency cleaning response.</strong> Phone answered any hour.</li>
+      </ul>
+      <p>Three further pages follow in phase two: electrostatic disinfection, school and
+        institutional cleaning, and post-construction cleaning.</p>
+    </div>
+    <p class="note">Citywide Indianapolis runs twelve services each with its own Learn More link
+      and it is the strongest thing on that page. Checked. The improvement over them is giving
+      specialty equal weight rather than listing it last.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 05, reviews</div>
+    <h3>Reviews</h3>
+    <div class="copy">
+      <p>Star rating, total count and three quotes, marked up as AggregateRating so Google can
+        show the rating in search results.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, amber, zero reviews on every platform</span>
+      <p><b>Nothing goes here and nothing is invented.</b> Black Ops currently has no reviews on
+        Google, Facebook or BBB.</p>
+      <p>The block is built, marked up and left rendering nothing until the review system produces
+        real ones. The schema must not emit an AggregateRating with a count of zero, because that
+        is a structured data error rather than an empty block.</p>
+      <p><b>This is the single fastest slot to fill.</b> The review system ships in week one, the
+        QR code goes out with the crew, and the first handful of reviews should land inside the
+        thirty days. Nothing else on this page moves the needle as fast.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 06, why Black Ops</div>
+    <h3>Why Black Ops</h3>
+    <div class="copy">
+      <h4>Five things you can check</h4>
+      <ul>
+        <li><strong>Veteran owned, and federally registered.</strong> UEI PMPPFTB7CCX4, NAICS
+          561720, active in SAM.gov. You can look that up without asking us.</li>
+        <li><strong>Based in Rockville, at 121 Talbott St.</strong> The crew starts the day in
+          Rockville rather than driving in from another county. It is why the on-site window is
+          two hours and not four.</li>
+        <li><strong>Biohazard capable in house.</strong> Most janitorial contractors subcontract
+          this, which adds a delay and a second company to your site. We do not.</li>
+        <li><strong>A written specification before we start.</strong> What gets done, how often,
+          and by whom. A document you can hold us to, not a price for cleaning.</li>
+        <li><strong>Thirty days notice, either side, no penalty.</strong> A contractor who needs a
+          long lock-in to keep a client is telling you something about the service.</li>
+      </ul>
+      <p>Every one of those is checkable, and that is the point. We would rather be checked than
+        believed.</p>
+    </div>
+    <p class="note">This block does the work the reviews block cannot do yet. When reviews arrive
+      it stays, because it answers a different question.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 07, how it works</div>
+    <h3>How it works</h3>
+    <div class="copy">
+      <p>Three steps, with the two audiences split at step one rather than running a single
+        process that fits neither.</p>
+      <h5>If it is a commercial contract</h5>
+      <ol>
+        <li><strong>A walkthrough, under an hour, at no cost.</strong> We walk your building and
+          ask how you actually use the space rather than how the floor plan says you do.</li>
+        <li><strong>A written specification and a price.</strong> Area by area, task by task,
+          frequency by frequency.</li>
+        <li><strong>The same crew, and a name to call.</strong> Monthly written inspections,
+          whether or not anything was wrong.</li>
+      </ol>
+      <h5>If it is an emergency</h5>
+      <ol>
+        <li><strong>You call, and somebody answers.</strong> Any hour.</li>
+        <li><strong>We come, unmarked, within two hours</strong> across Montgomery County, and we
+          tell you what it costs before anything starts.</li>
+        <li><strong>We handle it, and we handle the paperwork.</strong> Including the insurance
+          claim where there is one.</li>
+      </ol>
+    </div>
+    <p class="note">Maid Bright leads with a single hard number, a 95 percent repeat client rate,
+      instead of adjectives. Reported. Black Ops has no equivalent number yet. When the first
+      contracts renew, a retention figure belongs here and it will be stronger than anything
+      written.</p>
+    <div class="slot"><span class="sl">Slot, verify every timescale</span>
+      <p>Under an hour, two hours on site. These are industry norms carried through from batch one
+        and they are not yet the client's measured performance. Confirm each one with Amilcar, and
+        confirm the two hour window holds for the outer towns as well as Rockville.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 08, service area</div>
+    <h3>Service area</h3>
+    <div class="copy">
+      <h4>Where we work</h4>
+      <p>Montgomery County, Maryland, and the DC line. Named places, not a radius on a map.</p>
+      <p><strong>Rockville</strong> &middot; North Bethesda &middot; Bethesda &middot;
+        Gaithersburg &middot; Potomac &middot; Kensington &middot; Derwood &middot; Wheaton
+        &middot; Silver Spring</p>
+      <p>Each name links to its own town page. The map renders alongside, with the Rockville
+        address pinned.</p>
+      <p>We also take work in Prince George's County, Washington DC and Northern Virginia,
+        particularly federal and biohazard callouts.</p>
+    </div>
+    <p class="note">Roto-Rooter's Rockville page names Potomac, Olney, Germantown, Gaithersburg
+      and Clarksburg, right down to Beallsville and Barnesville. Checked. Named towns are what
+      tell a buyer in Bethesda they are covered. A service radius does not.</p>
+    <div class="slot"><span class="sl">Slot, the remaining eight towns</span>
+      <p>The build carries 17 town pages and only nine towns are named anywhere in the working
+        documents so far. The other eight are undecided.</p>
+      <p><b>Do not pad this list to seventeen.</b> Each town named here needs a town page, and
+        each town page needs a real completed job with a photograph or TownPage.jsx refuses to
+        build. Name the towns Black Ops actually works in, and let the list grow as the job
+        photographs arrive.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 09, recent work</div>
+    <h3>Recent work</h3>
+    <div class="copy">
+      <p>Three to six real jobs, town named on each, linking to the full Our Work page.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, amber, no job photographs supplied</span>
+      <p>Real photographs of Black Ops' own work only. No stock, ever.</p>
+      <p><b>Discretion rule.</b> Nothing identifiable from any trauma, crime scene or unattended
+        death job. No addresses, no interiors that could be recognised, no dates precise enough to
+        match a news report. Commercial and post-construction work carries this block on its own
+        until the specialty work can be shown safely, which for some jobs is never.</p>
+      <p>This block and the town pages draw from the same library, which is why collecting
+        photographs is on the week one list rather than the week four one.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 10, meet the team</div>
+    <h3>Meet the team</h3>
+    <div class="copy">
+      <p class="h1line">The company is Amilcar, and the crew he trained</p>
+      <p>Amilcar Ayala served, then started Black Ops Cleaning in Rockville. He still walks most
+        buildings himself before a specification is written, and if something goes wrong twice you
+        get a call from him rather than a form response.</p>
+      <p><strong>Read the full story</strong>, link to /about/.</p>
+    </div>
+    <p class="note">Bio-One DC leads with the owners by name and it is the strongest thing on
+      their page. Better Life Home puts founder Angela Ricketts on the homepage rather than
+      burying her in About. Reported. Both point the same way.</p>
+    <div class="slot"><span class="sl">Slot, the story itself</span>
+      <p>The paragraph above is a frame, not the finished copy. Branch, years served, what he did,
+        and the specific thing that made him start a cleaning company are all unknown. The About
+        page carries the full interview list. Write this paragraph last, from his answers, in his
+        words.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 11, FAQ</div>
+    <h3>FAQ, ten questions</h3>
+    <div class="faq">
+      <div class="q"><b>What areas do you cover?</b>
+        <p>Montgomery County, Maryland, and the DC line. Rockville, North Bethesda, Bethesda,
+          Gaithersburg, Potomac, Kensington, Derwood, Wheaton and Silver Spring. We also take
+          federal and biohazard work in Prince George's County, Washington DC and Northern
+          Virginia.</p></div>
+      <div class="q"><b>Are you available outside business hours?</b>
+        <p>The phone is answered 24 hours. Most of our commercial work is done outside business
+          hours by design, so offices are cleaned when nobody is in them.</p></div>
+      <div class="q"><b>How fast can you get to an emergency?</b>
+        <p>Within two hours across Montgomery County. Rockville, Bethesda and Silver Spring are
+          usually faster, because the crew starts the day in Rockville.</p></div>
+      <div class="q"><b>Do you publish prices?</b>
+        <p>No, and we will explain why rather than hide behind it. Two buildings the same size can
+          differ by a factor of three depending on use, floor type and frequency. Quoting blind
+          means one of us is wrong, and it is usually the customer who finds out. You get a free
+          assessment and a written price before any work starts.</p></div>
+      <div class="q"><b>Are you insured?</b>
+        <p>Yes, general liability and workers compensation, and we will send certificates before
+          we start rather than when you ask. [Slot, limits.]</p></div>
+      <div class="q"><b>Do you subcontract any of the work?</b>
+        <p>No. Janitorial, disinfection and biohazard response are all in house. On a commercial
+          site that means one company on your premises. On a federal site it removes a layer of
+          clearances and a layer of delay.</p></div>
+      <div class="q"><b>What does veteran owned mean here?</b>
+        <p>Amilcar served, and he owns the business. We say veteran owned because that is what is
+          true. We are not going to call ourselves certified veteran owned or SDVOSB until the SBA
+          says we are.</p></div>
+      <div class="q"><b>Can you handle a biohazard job and a cleaning contract?</b>
+        <p>Yes, and a fair number of our commercial clients started with one callout. The two
+          sides of the business share a crew, a standard and a phone number.</p></div>
+      <div class="q"><b>How do I get a quote?</b>
+        <p>Book a walkthrough. It takes under an hour, costs nothing, and you get a written
+          specification and a price. If we are not the right fit for your building we will tell you
+          at the walkthrough rather than in month three.</p></div>
+      <div class="q"><b>How long is the contract?</b>
+        <p>Thirty days notice, either side, no penalty.</p></div>
+    </div>
+    <p class="note">Marked up as FAQPage. This is the block AI answers pull from, and Clean
+      Method's 152 AI citations come from depth like this. Citywide's six questions were the most
+      found on any page in the teardown, so ten here clears every competitor checked.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Blocks 12 and 13, close and footer</div>
+    <h3>Final call to action, then the footer</h3>
+    <div class="copy">
+      <p class="h1line">A walkthrough, a written specification, and a price</p>
+      <p>Under an hour, at no cost, and you keep the specification whether or not you use us.</p>
+      <p><strong>Book a walkthrough</strong> &nbsp;|&nbsp; Call (301) 000 0000</p>
+      <p>Emergency route renders directly above this block, visually separated, per the shared
+        component.</p>
+      <h4>Footer</h4>
+      <p>Name, address and phone identical to the Google listing. Every service and every town
+        linked. Certifications, licence number, UEI, social profiles, and the link to leave a
+        review.</p>
+    </div>
+    <p class="note">Bio-One repeats the emergency hotline at the foot of the page for the reader
+      who scrolled the whole way. Checked. Roto-Rooter's Rockville footer carries a local address
+      and a local number, both matching the listing exactly. Checked.</p>
+  </div>
+
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 13 ═══════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Supporting page, 1 of 7</div>
+    <h2>About and Team</h2>
+    <div class="url">/about/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">about Black Ops Cleaning</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">veteran owned cleaning company Rockville, Amilcar Ayala Black Ops Cleaning</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">About Black Ops Cleaning | Veteran Owned, Rockville MD<span class="count">54 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Black Ops Cleaning was started in Rockville by Amilcar Ayala, a veteran. Meet the owner, the crew, and what our certifications actually mean for you.<span class="count">149 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">The Company Is a Person, and His Name Is Amilcar</div></div>
+    <div class="r"><div class="k">Role</div><div class="v">Turn a company into people. Second most visited page on most local service sites, and the page a buyer checks before a first call.</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">900 to 1,300</div></div>
+  </div>
+
+  <div class="call">
+    <h4>This page cannot be written yet, and that is the finding</h4>
+    <p>Every other page in batches one through four could be written from research, the
+      proposal and the audit. <strong>This one cannot.</strong> Nothing in any working document
+      says which branch Amilcar served in, for how long, what he did, when he founded the company,
+      or what specifically made him start it.</p>
+    <p>Those facts are the entire page. A founder story written without them is the same
+      paragraph about caring and quality that sits on every competitor site, and a reader can tell
+      inside one sentence.</p>
+    <p><strong>So this page ships as a structure and an interview.</strong> The blocks, the
+      order, the certifications explainer and the timeline frame are all below and all correct.
+      The story itself is one conversation with Amilcar, recorded, and then written in his
+      words.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, banner</div>
+    <h3>Banner</h3>
+    <div class="copy">
+      <p class="h1line">The company is a person, and his name is Amilcar</p>
+      <p class="big">Black Ops Cleaning is not a franchise and not a call centre. It is a
+        Rockville company, owned by the man who still walks most of the buildings.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, owner photograph</span>
+      <p>A real headshot of Amilcar Ayala. The citations runbook already lists this as a week one
+        collection item, and the same photograph feeds the Home hero and the Google Business
+        Profile. One shoot covers all three.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, the story</div>
+    <h3>Amilcar's story, in his own voice</h3>
+    <div class="copy">
+      <p>First person throughout. Not written about him, written by him. Three to five short
+        paragraphs, ending on why the company exists.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, blocking, the interview</span>
+      <p>Record the answers rather than taking notes. The phrasing matters more than the facts
+        here, and the good line is almost always something said in passing.</p>
+      <p><b>Service.</b> Which branch, what years, what was the job, and where. Any of it that
+        should stay private, leave out and say nothing rather than blur it.</p>
+      <p><b>The bridge.</b> What happened between leaving service and starting a cleaning company.
+        The gap is usually the most interesting part and it is always the part that gets cut.</p>
+      <p><b>The founding.</b> What year. What was the first job. Who was the first client.</p>
+      <p><b>The specific reason.</b> Not I wanted to build something. The actual moment, the job he
+        saw done badly, the person who needed something nobody would do. One concrete thing.</p>
+      <p><b>The name.</b> Why Black Ops. Somebody asks this on every first call, so answer it on
+        the page.</p>
+      <p><b>The hardest job.</b> What it was, without identifying anyone, and what he learned.</p>
+      <p><b>Why the specialty work.</b> Most cleaning companies will not touch biohazard. Why does
+        this one.</p></div>
+    <p class="note">Write it plain. No mission statement, no values list, no adjectives about how
+      much he cares. Short sentences and one specific detail beat three paragraphs of character description.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, the crew</div>
+    <h3>The crew</h3>
+    <div class="copy">
+      <p>Photographs and first names. What they are trained in. How long they have been here,
+        once that number is worth printing.</p>
+      <p class="big">You get the same people. That is not a slogan, it is the thing facility
+        managers actually buy, and it is why we put faces here rather than a stock team photo.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, crew photographs and consent</span>
+      <p>Real photographs, no stock. <b>Get written consent from each person before publishing a
+        face and a name,</b> and check whether anyone doing trauma or crime scene work would
+        rather not appear at all. That is a reasonable request and it is not a problem. Publish
+        the ones who agree.</p>
+      <p>If the crew is currently one or two people, say so plainly. A small crew is not a
+        weakness on a page that has just promised you get the same people every time.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, certifications explained</div>
+    <h3>What our certifications actually mean</h3>
+    <div class="copy">
+      <p>Most cleaning sites list badges and explain none of them. A buyer comparing three
+        contractors is looking at the same unexplained logos on all three. Explaining them is
+        free, and it is the kind of depth AI answers pull from.</p>
+      <h4>GBAC</h4>
+      <p>The Global Biorisk Advisory Council, a division of ISSA. GBAC training covers how to
+        respond to biological contamination properly, including the parts most people get wrong:
+        contact time, clean to dirty sequencing, and containment. It is the reason we can do
+        infection control in a clinical space and biohazard remediation with the same standard
+        behind both.</p>
+      <p><strong>What it means for you:</strong> the disinfection is done to a method, and the
+        method is written down.</p>
+      <h4>ISSA and CMI</h4>
+      <p>ISSA is the worldwide cleaning industry association. The Cleaning Management Institute is
+        its training arm, and CMI certification is training for individual technicians rather than
+        a rating of the company.</p>
+      <p><strong>What it means for you:</strong> the person in your building was trained to a
+        published standard, not shown around by whoever left last month.</p>
+      <h4>Bloodborne pathogen training</h4>
+      <p>Required under OSHA 29 CFR 1910.1030 for anyone who can reasonably be expected to
+        encounter blood or other potentially infectious material at work. It comes with an
+        exposure control plan, and ours is a document we can show you.</p>
+      <p><strong>What it means for you:</strong> the crew is legally trained for the work, and
+        your liability is not sitting on our shortcut.</p>
+      <h4>SAM.gov registration</h4>
+      <p>Registration in the federal contracting system, UEI PMPPFTB7CCX4, under NAICS 561720.
+        You can look it up without asking us.</p>
+      <p><strong>What it means for you:</strong> if you are a public body, we are already able to
+        be paid by you.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, blocking, confirm what is held</span>
+      <p><b>Do not publish a single one of these until it is confirmed.</b> GBAC trained, GBAC
+        STAR accredited, ISSA member and CMI certified are four different claims. Get the
+        certificate, the number, the holder and the expiry for each.</p>
+      <p><b>CIMS and Green Seal.</b> Still outstanding from batch three, and federal and
+        institutional solicitations name CIMS specifically. If Black Ops does not hold it, this
+        page should not imply that ISSA membership is the same thing.</p>
+      <p>Anything not held comes out. There is no version of this page where an unexplained badge
+        is better than one fewer honest one.</p></div>
+    <p class="note">AspenClean runs a founder video alongside third party certifications.
+      Reported. The certifications do the same job as the founder video: they are both answers to
+      can I trust this company, arriving from different directions.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 05, timeline</div>
+    <h3>Timeline</h3>
+    <div class="copy">
+      <p>Five to seven entries, dated. Founded, first commercial contract, certifications earned,
+        SAM registered, first federal or county work, first specialty capability.</p>
+      <p>A short timeline on a young company is fine. A padded one is not, and a reader counts the
+        gaps.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, every date</span>
+      <p>Not one date in this timeline is known. Founding year, certification dates, SAM
+        registration date and first federal work all come from the interview and from the SAM
+        record.</p>
+      <p>If the honest timeline is three entries, publish three.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 06, close</div>
+    <h3>Close, and the careers link</h3>
+    <div class="copy">
+      <p class="h1line">If you want to talk to the owner, you can</p>
+      <p>Most of our first calls are with Amilcar. Book a walkthrough and he will most likely be
+        the one who walks your building.</p>
+      <p><strong>Book a walkthrough</strong> &nbsp;|&nbsp; Call (301) 000 0000</p>
+      <p><strong>We are hiring.</strong> Good people read this page. Link to /careers/.</p>
+    </div>
+    <p class="note">The careers link belongs on this page specifically. Somebody who reads a
+      founder story to the end is either a buyer or a future employee, and both are worth
+      having.</p>
+  </div>
+
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 14 ═══════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Supporting page, 2 of 7</div>
+    <h2>Contact</h2>
+    <div class="url">/contact/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">contact Black Ops Cleaning</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">cleaning company Rockville MD phone number, commercial cleaning quote Montgomery County</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Contact Black Ops Cleaning | Rockville MD<span class="count">41 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Call us or book a walkthrough. Black Ops Cleaning, 121 Talbott St, Rockville MD 20852. Phone answered 24 hours for biohazard and emergency callouts.<span class="count">148 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Contact Black Ops Cleaning</div></div>
+    <div class="r"><div class="k">Role</div><div class="v">Remove every remaining reason not to make contact. Currently the weakest page on the live site.</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">600 to 900. This page is mostly interface.</div></div>
+  </div>
+
+  <div class="call">
+    <h4>Three routes, chosen by the visitor, not by us</h4>
+    <p>A 2am biohazard caller, a facility manager requesting a quote, and a contracting officer
+      checking a registration all land here. <strong>One form cannot serve all three, and a page
+      that tries makes the emergency caller fill in square footage.</strong></p>
+    <p>So the page opens with three visible routes before any field: call now, book a walkthrough,
+      or the contracting line. The visitor self-selects in about two seconds, which is faster than
+      any triage question could do it.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, the three routes</div>
+    <h3>Banner and routing</h3>
+    <div class="copy">
+      <p class="h1line">Contact Black Ops Cleaning</p>
+      <p class="big">Three ways in. Pick the one that matches why you are here.</p>
+      <h5>Route one, emergency</h5>
+      <p><strong>Call (301) 000 0000.</strong> Somebody answers, any hour. Biohazard, trauma,
+        unattended death, sewage. Do not use the form. On site within two hours across Montgomery
+        County.</p>
+      <h5>Route two, a cleaning contract</h5>
+      <p><strong>Book a walkthrough.</strong> Under an hour, no cost, and you leave with a written
+        specification and a price. Form below.</p>
+      <h5>Route three, government contracting</h5>
+      <p><strong>Contracting officers and primes,</strong> UEI PMPPFTB7CCX4, NAICS 561720. Direct
+        line and capability statement on the government contracting page, because you should not
+        have to go through a general enquiry form.</p>
+    </div>
+    <p class="note">Emergency route renders per the shared component, visually distinct and above
+      the form. It is the one block on this page that must be reachable without scrolling on a
+      phone.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, the qualifying form</div>
+    <h3>The walkthrough form</h3>
+    <div class="copy">
+      <h4>Tell us about the building</h4>
+      <p>Four fields to start. The rest appear once you have started, so nobody is looking at
+        eleven boxes before they have typed anything.</p>
+      <h5>Visible first</h5>
+      <ul>
+        <li><strong>Name</strong></li>
+        <li><strong>Phone</strong></li>
+        <li><strong>What do you need,</strong> a short list: commercial cleaning, medical
+          facility, government facility, biohazard or trauma, disinfection, something else</li>
+        <li><strong>Where is the building,</strong> town</li>
+      </ul>
+      <h5>Then, progressively</h5>
+      <ul>
+        <li><strong>Facility type,</strong> office, medical, laboratory, government, school,
+          industrial, retail, other</li>
+        <li><strong>Approximate square footage</strong></li>
+        <li><strong>How often,</strong> nightly, several times a week, weekly, monthly, one off,
+          not sure yet</li>
+        <li><strong>Do you have a contractor now,</strong> yes and it ends soon, yes and I am
+          comparing, no</li>
+        <li><strong>Email</strong></li>
+        <li><strong>Anything we should know</strong></li>
+      </ul>
+      <p>Not sure yet is a real option on frequency, and it is not a disqualifier. A facility
+        manager who does not yet know what they need is exactly who the walkthrough is for.</p>
+    </div>
+    <div class="call">
+      <h4>This is the one page where a long form is correct</h4>
+      <p>The universal rule on this build is four fields or fewer for a first ask, and it holds
+        everywhere else. <strong>Contact is not a first ask.</strong> Somebody on this page has
+        already decided to make contact, and a qualifying form here saves a phone call on both
+        sides.</p>
+      <p>Progressive disclosure keeps both things true: four fields to begin, the qualifiers after
+        the first keystroke. The audit's finding stands, which is that the current form cannot
+        qualify a commercial enquiry at all.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, what happens next</div>
+    <h3>What happens after you send this</h3>
+    <div class="copy">
+      <ol>
+        <li><strong>You get a call back,</strong> usually the same working day. [Slot, confirm the
+          response time, then hold to it.]</li>
+        <li><strong>We ask three or four questions</strong> and book the walkthrough. If it is
+          clearly not a fit we will say so on that call rather than take an hour of your day.</li>
+        <li><strong>The walkthrough,</strong> under an hour, at your building.</li>
+        <li><strong>A written specification and a price,</strong> sent afterwards. Yours to keep
+          either way.</li>
+      </ol>
+      <p>No sequence of marketing emails. If you do not want to go ahead, tell us once and that is
+        the end of it.</p>
+    </div>
+    <p class="note">Molly Maid runs a chat widget promising a booking in under two minutes next to
+      the phone number on every location page. Reported. Black Ops does not need a widget. It needs
+      a stated response time it can actually meet, which is a promise rather than a feature.</p>
+    <div class="slot"><span class="sl">Slot, blocking, the response time</span>
+      <p>Same working day, within two hours, next morning. Pick one that is true on the worst day
+        of the week, not the best.</p>
+      <p><b>A missed stated response time is worse than no stated response time,</b> because the
+        customer now has a reason to tell somebody. This is the first promise a new enquiry tests,
+        and it is the cheapest one to keep.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, name, address, hours</div>
+    <h3>Where we are</h3>
+    <div class="copy">
+      <p>Full NAP block per the shared component, with an embedded map. There is no map anywhere
+        on the live site today, and for a local business that is a straightforward miss.</p>
+      <ul>
+        <li><strong>Black Ops Cleaning Company LLC</strong></li>
+        <li><strong>121 Talbott St, Rockville, MD 20852</strong></li>
+        <li><strong>Phone,</strong> (301) 000 0000</li>
+        <li><strong>Emergency,</strong> answered 24 hours</li>
+        <li><strong>Hours,</strong> [slot]</li>
+        <li><strong>Licence,</strong> [slot]</li>
+      </ul>
+      <p>Marked up as LocalBusiness, with the address and phone identical to the Google listing
+        character for character.</p>
+      <p>We work across Montgomery County and the DC line, and we also take federal and biohazard
+        work in Prince George's County, Washington DC and Northern Virginia.</p>
+    </div>
+    <p class="note">121 Talbott St is confirmed as fine to publish publicly. Roto-Rooter's
+      Rockville page carries a local address and a local number both matching the listing exactly.
+      Checked. That consistency is what the 41 citation listings are copying.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 05, close</div>
+    <h3>Secondary routes</h3>
+    <div class="copy">
+      <p><strong>Leaving a review.</strong> Link to the capture page at /thanks/. It gives you a
+        public review and a private line to the owner, side by side, and you choose.</p>
+      <p><strong>Looking for work.</strong> Link to /careers/.</p>
+      <p><strong>Press or partnerships.</strong> Same phone, ask for Amilcar.</p>
+    </div>
+    <p class="note">The review link lives here as well as in the footer. Somebody who has just
+      finished a job and wants to say so often goes to the contact page rather than looking for a
+      review link.</p>
+  </div>
+
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 15 ═══════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Supporting page, 3 of 7, and a traffic page</div>
+    <h2>Government Contracting</h2>
+    <div class="url">/government-contracting/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">veteran owned cleaning contractor Maryland</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">NAICS 561720 small business Maryland, janitorial subcontractor Montgomery County, capability statement cleaning contractor DC</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Government Contracting | Black Ops Cleaning, NAICS 561720<span class="count">57 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Capability statement, UEI PMPPFTB7CCX4, NAICS 561720. Veteran owned janitorial small business in Rockville MD. Prime and subcontract work, DC metro.<span class="count">148 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Government Contracting with Black Ops Cleaning</div></div>
+    <div class="r"><div class="k">Role</div><div class="v">The company's procurement dossier. Not a service page. Build early, because it is the only supporting page that is also a traffic page.</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">1,100 to 1,500</div></div>
+  </div>
+
+  <div class="call">
+    <h4>How this differs from the government facility service page</h4>
+    <p>Both pages talk to federal buyers, and they are not the same page.</p>
+    <p><strong>/services/government-facility-cleaning/ answers: can you clean my building.</strong>
+      What the work covers, wage determinations, screening, the AbilityOne list, quality control.
+      It is a service page and it sells the service.</p>
+    <p><strong>This page answers: are you a company I can put on a contract.</strong> Codes,
+      registrations, size, past performance, insurance, bonding, and how to actually buy. It sells
+      the entity.</p>
+    <p>The service page carries a fifteen second capability block so a contracting officer can
+      disqualify fast. <strong>This page is the long version of that block,</strong> and the two
+      link to each other. Everything here that duplicates the service page comes out.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, banner</div>
+    <h3>Banner</h3>
+    <div class="copy">
+      <p class="h1line">Government contracting with Black Ops Cleaning</p>
+      <p class="big">A veteran owned janitorial small business in Rockville, Maryland, registered
+        in SAM.gov under NAICS 561720. Prime and subcontract work across the DC metro area.</p>
+      <p><strong>Pills:</strong> UEI PMPPFTB7CCX4 &middot; NAICS 561720 &middot; Veteran owned
+        &middot; Small business &middot; Rockville MD 20852</p>
+      <p><strong>Primary CTA:</strong> Download the capability statement &nbsp;|&nbsp;
+        <strong>Secondary:</strong> Contracting line, [slot, named person]</p>
+    </div>
+    <p class="note">No cleaning site checked in this market has this page. The closest signal
+      anywhere in the teardown was Bio-One's SDVOSB badge. This is genuinely uncontested, which is
+      why it goes early rather than last.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, the dossier</div>
+    <h3>Capability statement, on the page</h3>
+    <div class="copy">
+      <p>The PDF is what buyers ask for, and it is what gets emailed around an office. Putting the
+        same information on the page is what gets found in the first place, because a PDF behind a
+        form is invisible to search and to AI answers.</p>
+    </div>
+    <div class="tw"><table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td class="lab">Legal name</td><td>Black Ops Cleaning Company LLC</td></tr>
+        <tr><td class="lab">UEI</td><td class="mn">PMPPFTB7CCX4</td></tr>
+        <tr><td class="lab">CAGE code</td><td>Slot</td></tr>
+        <tr><td class="lab">Primary NAICS</td><td class="mn">561720, Janitorial Services</td></tr>
+        <tr><td class="lab">Secondary NAICS</td><td>Slot. 561740 carpet and upholstery cleaning
+          and 562910 remediation services are the obvious candidates, given the biohazard
+          capability. Confirm what is actually registered.</td></tr>
+        <tr><td class="lab">Business size</td><td>Small business. The SBA size standard for
+          561720 is $22 million in average annual receipts.</td></tr>
+        <tr><td class="lab">Socioeconomic status</td><td>Veteran owned. Slot, and this line
+          changes the day SBA certification completes.</td></tr>
+        <tr><td class="lab">SAM.gov</td><td>Registered and active. Slot, expiry date.</td></tr>
+        <tr><td class="lab">Insurance</td><td>Slot, general liability and workers compensation
+          limits.</td></tr>
+        <tr><td class="lab">Bonding capacity</td><td>Slot. If there is none, say none rather than
+          leaving the row out.</td></tr>
+        <tr><td class="lab">Place of performance</td><td>Montgomery County, Prince George's
+          County, Washington DC, Northern Virginia</td></tr>
+        <tr><td class="lab">Business address</td><td>121 Talbott St, Rockville, MD 20852</td></tr>
+        <tr><td class="lab">Point of contact</td><td>Slot, a named person and a direct
+          number</td></tr>
+      </tbody>
+    </table></div>
+    <div class="slot"><span class="sl">Slot, the veteran status wording, again</span>
+      <p>Veteran owned. Not certified veteran owned, not SDVOSB, not VOSB. Those are
+        certifications with legal meaning and this is the single worst page on the site to
+        overstate one, because the reader knows exactly what each term means and can check.</p>
+      <p>The day SBA VetCert completes, this row, the pills and the meta description change. It is
+        a five minute edit and it is worth a calendar reminder.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, how to buy</div>
+    <h3>How to actually contract with us</h3>
+    <div class="copy">
+      <p>Most capability statements stop at the codes and leave the buyer to work out the
+        mechanics. This block is the difference between a page that qualifies us and a page that
+        starts a contract.</p>
+      <h4>Small purchases</h4>
+      <p>For work under the micro-purchase threshold, a government purchase card is usually the
+        fastest route and needs no solicitation. We accept card payment.</p>
+      <h4>Simplified acquisition</h4>
+      <p>Below the simplified acquisition threshold, procurements are generally reserved for small
+        business. We are registered, we quote on RFQs, and we can turn a straightforward janitorial
+        quote around quickly.</p>
+      <h4>Full solicitations</h4>
+      <p>We respond to RFPs and IFBs where the scope fits. If it does not fit, we will tell you
+        during the question period rather than submitting something we cannot perform.</p>
+      <h4>Subcontracting to a prime</h4>
+      <p>We take subcontract work, and for a prime the calculation is usually simple: a small,
+        veteran owned, locally based subcontractor with in house biohazard capability and no
+        subcontracting chain of its own. Ask us about capacity and you will get an answer the same
+        day, not after the submission deadline.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, blocking, the thresholds</span>
+      <p><b>No dollar figure appears in this block and none should be added without verification.</b>
+        The micro-purchase and simplified acquisition thresholds are set in the FAR and they are
+        adjusted for inflation periodically.</p>
+      <p>Verify both against the current FAR before publishing, and then decide whether to print
+        the numbers at all. Describing the mechanism without the figure ages well. A stale number
+        on a page read by contracting officers does not, and it is the kind of error that costs
+        credibility in one glance.</p></div>
+    <div class="slot"><span class="sl">Slot, do we accept purchase cards</span>
+      <p>Confirm with Amilcar. If the answer is no, this is worth fixing, because the purchase
+        card is the easiest way for a federal customer to try a contractor with almost no
+        paperwork. A first card job is the cheapest past performance a small business can
+        buy.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, past performance</div>
+    <h3>Past performance</h3>
+    <div class="copy">
+      <p>Three to six entries. Facility type, scope, square footage, contract length and value
+        band, and a reference contact where the client agrees.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, blocking, and the one that must not be dressed up</span>
+      <p>Nothing here is known. <b>Answer it honestly and specifically.</b></p>
+      <p>If the federal record is empty and the commercial and county record is strong, say exactly
+        that: new to federal prime work, with this commercial record behind it, and here is a
+        reference who will take your call.</p>
+      <p><b>Contracting officers verify past performance.</b> An overstatement here does not cost
+        one contract, it ends the relationship permanently and it can put the registration at risk.
+        There is no version of this page where a vague claim beats a short honest list.</p>
+      <p>Commercial past performance counts. A county or municipal contract counts for a great
+        deal. Say which is which.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 05, capability statement PDF</div>
+    <h3>The download</h3>
+    <div class="copy">
+      <p class="h1line">One page. No form to fill in.</p>
+      <p>The capability statement is what a contracting officer asks for and what gets forwarded
+        inside a buying office. It is one page, it carries the same fields as the table above, and
+        it downloads directly.</p>
+      <p><strong>Download the capability statement, PDF</strong></p>
+      <p>No email gate. Gating it means the version circulating in a buying office is the one
+        somebody screenshotted, and we would rather it was ours.</p>
+    </div>
+    <p class="note">File naming matters more than it looks. BlackOpsCleaning-CapabilityStatement.pdf
+      rather than capability-final-v3.pdf, because the filename survives being forwarded and it is
+      what somebody searches their downloads folder for. Date it inside the document, not in the
+      filename.</p>
+    <div class="slot"><span class="sl">Slot, the PDF itself</span>
+      <p>Produced once every field above is confirmed. It must match this page exactly. Two
+        versions of a capability statement in circulation is a procurement problem, not a
+        marketing one.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 06, direct contact</div>
+    <h3>Contracting line</h3>
+    <div class="copy">
+      <p class="h1line">Primes and contracting officers, call this number</p>
+      <p>Not the general enquiry form. You get a named person, and if we do not have the capacity
+        for what you are building we will tell you straight away.</p>
+      <p><strong>[Slot, name, title, direct number, and a direct email]</strong></p>
+    </div>
+    <p class="note">Primes do not fill in contact forms. Give them a person. This is the same
+      finding as block 05 on the government facility service page, and it is the one thing both
+      pages should repeat.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 11, FAQ</div>
+    <h3>FAQ, eight questions</h3>
+    <div class="faq">
+      <div class="q"><b>What is your UEI and are you active in SAM.gov?</b>
+        <p>UEI PMPPFTB7CCX4, registered and active under NAICS 561720. The full capability
+          statement is on this page as a one page PDF, with no form.</p></div>
+      <div class="q"><b>What is your socioeconomic status?</b>
+        <p>Veteran owned small business. We are not certified veteran owned or SDVOSB, and we will
+          not describe ourselves that way until the SBA does. [Slot, update on certification.]</p></div>
+      <div class="q"><b>Are you a small business under NAICS 561720?</b>
+        <p>Yes. The SBA size standard for 561720 is $22 million in average annual receipts and we
+          are well inside it.</p></div>
+      <div class="q"><b>Do you take subcontract work?</b>
+        <p>Yes, and we are straightforward about capacity. Call the contracting line and you will
+          get an answer the same day rather than after the deadline.</p></div>
+      <div class="q"><b>What is your past performance?</b>
+        <p>[Slot. Answer honestly, and distinguish federal, county and commercial.]</p></div>
+      <div class="q"><b>What insurance and bonding do you carry?</b>
+        <p>[Slot, limits.] Certificates on request, and we would rather send them before you ask.</p></div>
+      <div class="q"><b>Can you meet Service Contract Act wage determinations?</b>
+        <p>Yes, and we price against the determination for the specific location rather than a
+          standard rate. The full explanation is on the government facility cleaning page.</p></div>
+      <div class="q"><b>Do you hold CIMS or Green Seal certification?</b>
+        <p>[Slot, answer honestly. Many federal and institutional solicitations name CIMS
+          specifically. If Black Ops does not hold it, say so and say whether it is being pursued.
+          Do not imply ISSA membership is equivalent, because a contracting officer knows it is
+          not.]</p></div>
+    </div>
+    <p class="note">Note how many answers point at the service page rather than restating it. That
+      is the cannibalisation rule working. Both pages are marked up as FAQPage and they must not
+      carry the same question text, or Google picks one and drops the other.</p>
+  </div>
+
+  </div>
+</div>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">NEXT</div><h2 class="dh">Batch five</h2></div>
+  <p class="ddek">The remaining town pages, then the nineteen service by town pages. Volume work,
+    and the first batch that cannot be written from research alone.</p>
+  <div class="copy">
+    <p>Batch five is where the build gate bites. <code>TownPage.jsx</code> throws at build time
+      when a town has no completed local job with a photograph, which is deliberate and which
+      means <strong>no quantity of writing gets a town page to build.</strong> Sixteen town pages
+      are currently blocked on photographs and job details that only the client can supply.</p>
+    <p>So the order changes. Collect the job library first, see which towns are actually covered,
+      and write town pages for those. The service by town pages need both parents live before they
+      can link up and stay thin, so they follow.</p>
+    <p>The three remaining supporting pages, Reviews, Our Work, Careers and Legal, are structurally
+      simple and almost entirely dependent on slots that are still empty. They are a short batch
+      once the review system and the job library have run for a few weeks.</p>
+  </div>
+  <div class="call">
+    <h4>Verification queue, now nine items</h4>
+    <p>Five carried from batch three, four new in this batch. The first three are blocking more
+      than copy.</p>
+    <ul style="margin-top:4px">
+      <li><strong>The 24 hour decision.</strong> Blocks the hours on all 41 citation listings,
+        the emergency service page, and four specialty pages. Nothing should be filed until it is
+        answered.</li>
+      <li><strong>The phone number.</strong> (301) 000 0000 is a placeholder in every deck, and
+        whether the emergency line is a separate number is undecided.</li>
+      <li><strong>What certifications are actually held.</strong> GBAC trained, GBAC STAR, ISSA
+        member and CMI certified are four claims. Plus CIMS and Green Seal, carried from batch
+        three. One answer resolves the trust bar, the About page, the capability statement and two
+        service pages.</li>
+      <li><strong>The FAR thresholds,</strong> micro-purchase and simplified acquisition, if any
+        figure is printed at all.</li>
+      <li><strong>Past performance,</strong> and the honest split between federal, county and
+        commercial.</li>
+      <li><strong>Maryland victim compensation</strong> line on the crime scene page.</li>
+      <li><strong>Every timescale</strong> across all thirteen pages so far, including the stated
+        response time on Contact.</li>
+      <li><strong>Federal janitorial market figures</strong> on the government facility page,
+        against current SAM.gov or USASpending data.</li>
+      <li><strong>The licence number,</strong> needed in the trust bar, the footer, the Legal page
+        and the capability statement.</li>
+    </ul>
+  </div>
+  <div class="call ok">
+    <h4>What Amilcar needs to supply, in one list</h4>
+    <p>Almost every slot in this batch traces back to one of six things. Collecting them is
+      roughly one conversation, one photo shoot and one folder.</p>
+    <ul style="margin-top:4px">
+      <li><strong>One recorded interview,</strong> for the About page. The questions are in block
+        02 of page 13.</li>
+      <li><strong>A headshot,</strong> which feeds the Home hero, the About page and the Google
+        Business Profile.</li>
+      <li><strong>Crew photographs and consent,</strong> for the About page.</li>
+      <li><strong>Job photographs with towns and dates,</strong> which feed Recent Work, Our Work
+        and every town page in batch five.</li>
+      <li><strong>The document folder,</strong> licence, insurance certificates, certification
+        certificates with numbers and expiry dates, SAM registration expiry, CAGE code.</li>
+      <li><strong>Six operational decisions,</strong> the 24 hour answer, the phone numbers, the
+        response time, purchase card acceptance, the contracting point of contact, and the real
+        town list.</li>
+    </ul>
+    <p>None of it is difficult. All of it is blocking, and it is the difference between thirteen
+      pages of copy and thirteen pages that can ship.</p>
+  </div>
+</section>
+
+</div>
+
+<div class="wrap">
+  <div class="foot">
+    <p><b>Research behind this batch.</b> Page section lists, URLs, word targets and the supporting
+      page briefs from the page blueprint of 10 September 2026. Competitor observations from the
+      teardown of eight US cleaning sites, read page by page on 8 and 10 September 2026: Bio-One
+      DC, Roto-Rooter Rockville, Citywide Indianapolis, Molly Maid, Maid Bright, Better Life Home,
+      AspenClean and NY Elves. Technical faults on the live site, the homepage image weight, the
+      missing H1s, the missing alt text and the homepage against services page keyword conflict,
+      from the growth audit of 23 August 2026. GBAC, ISSA and CMI descriptions from published ISSA
+      material. OSHA Bloodborne Pathogens Standard 29 CFR 1910.1030 and the SBA size standard for
+      NAICS 561720 from published guidance. The review capture page at /thanks/ and the two door
+      flow from the review system document. Citation reference sheet conventions from the citations
+      runbook.</p>
+    <p><b>Slots must be filled with client facts, never invented.</b> This batch has more slots
+      than any previous one, and that is correct rather than a shortfall. Home, About and Contact
+      are the pages that describe the company rather than the work, and the company facts are the
+      ones the research could not reach. <b>The nine verification items above are blocking, not
+      optional,</b> and the first three block work outside the website as well.</p>
+  </div>
+</div>

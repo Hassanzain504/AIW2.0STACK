@@ -21,6 +21,7 @@ strategy and Stage 6 copy.
 | `copy-deck-batch1.html` | Unattended death cleanup, Commercial Cleaning Rockville MD, Biohazard Cleanup Rockville MD. One of each page type. |
 | `copy-deck-batch2.html` | The specialty set: biohazard remediation, crime scene and trauma, hoarding, sewage backup. |
 | `copy-deck-batch3.html` | The commercial set: janitorial, medical facility, government facility, disinfection. |
+| `copy-deck-batch4.html` | The supporting set: Home, About and Team, Contact, and Government Contracting. Carries the consolidated verification queue and the list of what Amilcar still needs to supply. |
 | `review-system.html` | The review engine: QR flow, capture page, text and email sequences, reply templates, pace and channels. |
 
 ## Reading order for someone new
@@ -28,7 +29,7 @@ strategy and Stage 6 copy.
 1. `project-plan.html`, for the state of play and the two routes
 2. `cleaning-teardown.html`, for what the competition actually does
 3. `page-blueprint.html`, for the structure all 57 pages follow
-4. The three copy decks, for the voice and the finished pages
+4. The four copy decks, for the voice and the finished pages
 5. `citations-runbook.html` and `review-system.html`, for workstreams 2 and 3
 
 ## Related code
