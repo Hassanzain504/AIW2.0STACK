@@ -1,0 +1,441 @@
+<title>Black Ops Hero Rework</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#ECEEF0; --card:#FFFFFF; --card2:#E1E5E8; --card3:#D3D8DC;
+  --line:#CFD5D9; --line2:#AAB2B8;
+  --ink:#14181C; --ink2:#49525A; --ink3:#79838B;
+  --accent:#8C3A2E; --accent2:#AD5344; --accent-bg:#F4E3DF;
+  --slot:#8A5C0C; --slot-bg:#F6E9CE; --slot-line:#D0B06C;
+  --ok:#2C6B4C; --ok-bg:#DEEBE3; --ok-line:#93BBA3;
+  --band:#14181C; --bandink:#ECEEF0;
+  --shade:0 1px 2px rgba(20,24,28,.05), 0 14px 34px -26px rgba(20,24,28,.5);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C0F11; --card:#14181B; --card2:#1B2024; --card3:#242B30;
+    --line:#262D32; --line2:#3C454B; --ink:#E7EAEC; --ink2:#A2ABB2; --ink3:#727C83;
+    --accent:#E08A78; --accent2:#EDA595; --accent-bg:#2B1512;
+    --slot:#D8A44E; --slot-bg:#2A2110; --slot-line:#66501F;
+    --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+    --band:#050708; --bandink:#E7EAEC;
+    --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C0F11; --card:#14181B; --card2:#1B2024; --card3:#242B30;
+  --line:#262D32; --line2:#3C454B; --ink:#E7EAEC; --ink2:#A2ABB2; --ink3:#727C83;
+  --accent:#E08A78; --accent2:#EDA595; --accent-bg:#2B1512;
+  --slot:#D8A44E; --slot-bg:#2A2110; --slot-line:#66501F;
+  --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+  --band:#050708; --bandink:#E7EAEC;
+  --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--card2);
+  padding:1px 5px;border-radius:2px}
+
+.mast{background:var(--band);color:var(--bandink)}
+.mast .wrap{padding:28px 22px 30px}
+.lock{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;
+  padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.16)}
+.mk{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.mk span{color:var(--accent2)}
+.lock .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.55;font-weight:600;text-align:right}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(32px,5.6vw,52px);line-height:.98;letter-spacing:-.012em;
+  margin:21px 0 0;text-transform:uppercase;text-wrap:balance}
+.lede{font-size:17px;color:rgba(231,234,236,.74);max-width:64ch;margin:14px 0 0}
+
+/* page block */
+.page{background:var(--card);border:1px solid var(--line);border-radius:5px;
+  margin:0 0 34px;overflow:hidden;box-shadow:var(--shade)}
+.phead{background:var(--band);color:var(--bandink);padding:20px 24px}
+.phead .kind{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--accent2)}
+.phead h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(24px,3.6vw,33px);line-height:1.04;margin:8px 0 0;text-transform:uppercase;
+  letter-spacing:-.004em}
+.phead .url{font-family:"IBM Plex Mono",monospace;font-size:12px;
+  color:rgba(231,234,236,.62);margin-top:8px;word-break:break-all}
+.pbody{padding:0 24px 26px}
+@media(max-width:560px){.pbody{padding:0 16px 22px}.phead{padding:17px 16px}}
+
+/* seo table */
+.seo{margin:22px 0 0;border:1px solid var(--line);border-radius:4px;overflow:hidden;
+  background:var(--card2)}
+.seo .r{display:grid;grid-template-columns:130px 1fr;gap:0;border-bottom:1px solid var(--line)}
+.seo .r:last-child{border-bottom:none}
+.seo .k{background:var(--card3);padding:9px 12px;font-family:"IBM Plex Mono",monospace;
+  font-size:8.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--ink3);display:flex;align-items:center}
+.seo .v{padding:9px 13px;font-size:14.5px;background:var(--card);line-height:1.5}
+.seo .v .count{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink3);
+  margin-left:7px}
+@media(max-width:560px){.seo .r{grid-template-columns:1fr}.seo .k{padding:7px 12px}}
+
+/* section within a page */
+.sec{margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:none}
+.sn{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
+  text-transform:uppercase;letter-spacing:.016em;margin:6px 0 12px;line-height:1.15}
+.note{font-size:13.5px;color:var(--ink3);margin:0 0 14px;line-height:1.5;
+  padding-left:11px;border-left:2px solid var(--line2)}
+
+/* the actual copy */
+.copy{max-width:68ch}
+.copy h4{font-family:Barlow,sans-serif;font-weight:700;font-size:19px;margin:20px 0 8px;
+  line-height:1.3;color:var(--ink)}
+.copy h5{font-family:Barlow,sans-serif;font-weight:600;font-size:16.5px;margin:16px 0 6px;
+  color:var(--ink)}
+.copy p{margin:0 0 13px;font-size:16.5px;color:var(--ink2)}
+.copy p.big{font-size:18px;color:var(--ink)}
+.copy strong{color:var(--ink);font-weight:600}
+.copy ul,.copy ol{margin:0 0 13px;padding-left:21px}
+.copy li{font-size:16px;color:var(--ink2);margin-bottom:8px;line-height:1.55}
+.copy li strong{color:var(--ink)}
+.h1line{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(25px,3.8vw,34px);line-height:1.05;text-transform:uppercase;
+  letter-spacing:-.004em;color:var(--ink);margin:0 0 10px;max-width:22ch}
+
+/* slot */
+.slot{background:var(--slot-bg);border:1px solid var(--slot-line);border-left:3px solid var(--slot);
+  border-radius:4px;padding:12px 15px;margin:0 0 14px;max-width:68ch}
+.slot .sl{font-family:"IBM Plex Mono",monospace;font-size:8.5px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--slot);display:block;margin-bottom:5px}
+.slot p{margin:0;font-size:14.5px;color:var(--ink2);line-height:1.5}
+.slot p + p{margin-top:7px}
+
+/* faq */
+.faq{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--card);max-width:74ch}
+.faq .q{border-bottom:1px solid var(--line);padding:14px 17px}
+.faq .q:last-child{border-bottom:none}
+.faq .q b{display:block;font-size:16px;font-weight:600;line-height:1.35;color:var(--ink)}
+.faq .q p{margin:7px 0 0;font-size:15.5px;color:var(--ink2);line-height:1.55}
+
+/* links + alt */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--card);margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:10px 13px;border-bottom:2px solid var(--line2);background:var(--card2);white-space:nowrap}
+td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.mn{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink3)}
+td.lab{font-weight:600}
+
+.call{background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:4px;padding:17px 20px;margin:20px 0;max-width:74ch}
+.call.ok{border-left-color:var(--ok);background:var(--ok-bg)}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  text-transform:uppercase;margin:0 0 8px;letter-spacing:.016em}
+.call p{margin:0 0 9px;font-size:15px;color:var(--ink2)}
+.call p:last-child{margin-bottom:0}
+.call strong{color:var(--ink)}
+
+section.doc{padding:44px 0 4px}
+.dhead{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:8px}
+.dno{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12px;
+  color:var(--accent);letter-spacing:.11em;padding-top:7px}
+h2.dh{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(25px,3.8vw,35px);line-height:1.03;margin:0;text-transform:uppercase}
+.ddek{color:var(--ink2);font-size:16.5px;max-width:66ch;margin:0 0 20px 40px}
+@media(max-width:640px){.ddek{margin-left:0}}
+
+.foot{padding:24px 0 44px;font-size:13px;color:var(--ink3)}
+.foot p{margin:0 0 8px;max-width:78ch}
+.foot b{color:var(--ink2)}
+</style>
+<style>
+/* neutralised chrome accent, same reason as the palette page */
+:root{--accent:#5A646C;--accent2:#78838B;--accent-bg:#E4E7EA}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --accent:#939DA5;--accent2:#7A848C;--accent-bg:#1E2429}}
+:root[data-theme="dark"]{--accent:#939DA5;--accent2:#7A848C;--accent-bg:#1E2429}
+
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;margin:14px 0 0}
+@media(max-width:820px){.ba{grid-template-columns:1fr}}
+.bax{border:1px solid var(--line);border-radius:5px;overflow:hidden;background:var(--card)}
+.bal{font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:600;letter-spacing:.11em;
+  text-transform:uppercase;padding:7px 11px;background:var(--card3);color:var(--ink3)}
+.bal.no{background:var(--accent-bg);color:var(--bad,#8C3A2E)}
+
+/* proposed palette, applied */
+.bo{--p:#16181a;--pd:#0b0d0e;--ps:#4a4f55;--ac:#a8792c;--acl:#c89a45;--acd:#7e5a1d;
+  --nu:#f2f1ed;--nud:#e0ded7;--si:#eae8e2;--ik:#101214}
+
+.site{background:var(--nu);font-size:14px}
+.utility{background:var(--p);color:#fff;padding:7px 13px;display:flex;gap:10px;
+  align-items:center;flex-wrap:wrap;font-size:11.5px}
+.utility .nm{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:.13em;text-transform:uppercase}
+.utility .rt{margin-left:auto;color:var(--acl);font-weight:600}
+.hero{padding:20px 15px 18px}
+.hero h5{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:23px;
+  line-height:1.04;text-transform:uppercase;color:var(--ik);margin:0 0 9px;text-wrap:balance}
+.hero .sub{color:var(--ps);font-size:14px;line-height:1.5;margin:0 0 13px;max-width:46ch}
+.oldpills{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 13px}
+.oldpills i{font-style:normal;background:var(--si);border:1px solid var(--nud);color:var(--p);
+  font-size:10.5px;padding:4px 9px;border-radius:3px;font-weight:600}
+.btns{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.b1{background:var(--ac);color:var(--p);font-weight:700;font-size:13px;padding:9px 15px;
+  border-radius:3px}
+.b2{color:var(--acd);border:1px solid var(--acd);font-weight:600;font-size:13px;
+  padding:9px 15px;border-radius:3px}
+.trustold{background:var(--nud);padding:8px 13px;color:var(--ps);font-size:11px}
+
+/* the spec strip */
+.spec{background:var(--p);padding:11px 15px;display:flex;flex-wrap:wrap;gap:14px 30px}
+.spec .it{display:flex;flex-direction:column;gap:2px}
+.spec .k{font-size:10.5px;color:#9AA1A8;line-height:1.2}
+.spec .v{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--acl);
+  font-weight:600;letter-spacing:.03em;line-height:1.2}
+.spec .v.slotv{color:#6E757B}
+.trustnew{background:var(--si);padding:11px 15px;display:flex;flex-wrap:wrap;gap:9px 26px;
+  border-top:1px solid var(--nud)}
+.trustnew .c{font-size:12px;color:var(--ps);line-height:1.35}
+.trustnew .c b{display:block;color:var(--ik);font-weight:600;font-size:12.5px}
+
+.where{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0 0}
+@media(max-width:760px){.where{grid-template-columns:1fr}}
+.wcard{border:1px solid var(--line);border-radius:4px;padding:14px 15px;background:var(--card2)}
+.wcard h5{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:16px;
+  text-transform:uppercase;margin:0 0 7px;color:var(--ink);letter-spacing:.016em}
+.wcard p{margin:0 0 8px;font-size:14px;color:var(--ink2);line-height:1.5}
+.wcard p:last-child{margin-bottom:0}
+.wcard code{font-size:11.5px}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="lock">
+      <div class="mk">Black<span>&nbsp;Ops</span>&nbsp;Cleaning</div>
+      <div class="meta">Hero rework<br>Home, one page</div>
+    </div>
+    <h1>The pills, and what<br>the name actually means</h1>
+    <p class="lede">One page reworked, so the change can be judged before it is applied to the
+      other fifty six. Two things move together here: the pill row that reads as generated, and a
+      palette that takes the name and the veteran status seriously without putting the site in
+      camouflage.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="doc">
+  <div class="dhead"><div class="dno">THE NAME</div><h2 class="dh">Black Ops means discretion, not combat</h2></div>
+  <p class="body">Read literally, the name points at tactical gear, camouflage and night vision
+    green. That is the obvious route and it is the wrong one. It would make the hoarding page feel
+    like an intervention and the trauma page feel like a game, and both of those pages are written
+    to do the opposite.</p>
+  <p class="body">But there is a second reading, and it is <strong>already written into every
+    specialty page in the decks</strong>: unmarked vehicles, no company signage on site, neighbours
+    see a plain van, technicians arrive in plain clothing and change on site.</p>
+  <div class="call ok">
+    <h4>That is the identity worth owning</h4>
+    <p><strong>The name is a promise about being invisible.</strong> Not about force. A family
+      calling at 2am wants exactly that, and so does a property manager in a shared building who
+      does not want the whole lobby to know.</p>
+    <p>None of the eight sites in the teardown owns discretion visually. Bio-One mentions it in
+      copy. Nobody builds an identity on it. It is uncontested, it is true, and it comes straight
+      from the service rather than from the name being decorated.</p>
+  </div>
+  <p class="body">The veteran half works the same way. <strong>Service and documentation, not
+    combat.</strong> The visual language of that is insignia and brass, not field camouflage.</p>
+</section>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">PALETTE</div><h2 class="dh">Field black and brass</h2></div>
+  <p class="ddek">This replaces both earlier options. It takes the near-black you wanted for the
+    name, and the brass from option A for the veteran signal.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>Token</th><th>Hex</th><th>Where it goes</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">primary</td><td class="mn">#16181a</td><td>Field black. Header, footer and the spec strip. A band, never the page ground.</td></tr>
+      <tr><td class="lab">primary_dark</td><td class="mn">#0b0d0e</td><td>Footer base, pressed states.</td></tr>
+      <tr><td class="lab">primary_slate</td><td class="mn">#4a4f55</td><td>Gunmetal. Subheads and secondary text on light.</td></tr>
+      <tr><td class="lab">accent</td><td class="mn">#a8792c</td><td>Brass. The primary button, and the values in the spec strip.</td></tr>
+      <tr><td class="lab">accent_light</td><td class="mn">#c89a45</td><td>Brass on black. Spec strip values, the phone number in the header.</td></tr>
+      <tr><td class="lab">accent_dark</td><td class="mn">#7e5a1d</td><td>Brass as text on light. Links, secondary button.</td></tr>
+      <tr><td class="lab">neutral</td><td class="mn">#f2f1ed</td><td>Warm off-white. This is most of the site.</td></tr>
+      <tr><td class="lab">neutral_dim</td><td class="mn">#e0ded7</td><td>Alternating bands, borders.</td></tr>
+      <tr><td class="lab">silver</td><td class="mn">#eae8e2</td><td>Card and form fills, the trust bar.</td></tr>
+      <tr><td class="lab">ink</td><td class="mn">#101214</td><td>Body copy and headings on light.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call">
+    <h4>The rule that keeps this out of cliché territory</h4>
+    <p>A near-black ground with one warm accent is a known generated-page look, and the
+      <code>frontend-design</code> skill names it. This avoids it on two counts, and both are
+      rules rather than taste.</p>
+    <p><strong>Black is punctuation, not the ground.</strong> It appears in the header, the spec
+      strip and the footer. The page itself is warm off-white. The generated version makes the
+      whole page black and lets one accent glow on it.</p>
+    <p><strong>Brass is a metal, not a highlight.</strong> Desaturated and mid-value, so it reads
+      as an insignia rather than as a neon pop. It never glows and it never gradients.</p>
+  </div>
+  <p class="body">All twelve contrast pairings pass WCAG AA, computed not estimated. The tightest
+    is brass on field black at <strong>4.61</strong>, which is the spec strip itself, so that is
+    the one that mattered most.</p>
+</section>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">THE PAGE</div><h2 class="dh">Home, before and after</h2></div>
+  <p class="ddek">Same copy, same facts, same CTAs. Only the structure of the proof changes. Both
+    are rendered in the new palette so the comparison is about structure alone.</p>
+
+  <div class="ba">
+    <div class="bax">
+      <div class="bal no">Before, the pill row</div>
+      <div class="site bo">
+        <div class="utility"><span class="nm">Black Ops</span><span class="rt">(301) 000 0000</span></div>
+        <div class="hero">
+          <h5>Commercial and Biohazard Cleaning in Montgomery County</h5>
+          <p class="sub">Veteran owned, based in Rockville, and the phone is answered any hour.
+            From nightly office janitorial to biohazard and trauma cleanup, handled in house by the
+            same company.</p>
+          <div class="oldpills"><i>Veteran owned</i><i>GBAC trained</i><i>Insured</i><i>Based in Rockville</i></div>
+          <div class="btns"><span class="b1">Book a walkthrough</span><span class="b2">Call us</span></div>
+        </div>
+        <div class="trustold">Veteran owned &middot; GBAC trained &middot; ISSA member &middot;
+          Insured and bonded &middot; Licence &middot; SAM.gov registered</div>
+      </div>
+    </div>
+
+    <div class="bax">
+      <div class="bal">After, the spec strip</div>
+      <div class="site bo">
+        <div class="utility"><span class="nm">Black Ops</span><span class="rt">Answered 24 hours</span></div>
+        <div class="hero">
+          <h5>Commercial and Biohazard Cleaning in Montgomery County</h5>
+          <p class="sub">Veteran owned, based in Rockville, and the phone is answered any hour.
+            From nightly office janitorial to biohazard and trauma cleanup, handled in house by the
+            same company. Our vehicles carry no signage.</p>
+          <div class="btns"><span class="b1">Book a walkthrough</span><span class="b2">Call (301) 000 0000</span></div>
+        </div>
+        <div class="spec">
+          <div class="it"><span class="k">Based in</span><span class="v">Rockville MD 20852</span></div>
+          <div class="it"><span class="k">UEI</span><span class="v">PMPPFTB7CCX4</span></div>
+          <div class="it"><span class="k">NAICS</span><span class="v">561720</span></div>
+          <div class="it"><span class="k">Licence</span><span class="v slotv">slot</span></div>
+        </div>
+        <div class="trustnew">
+          <div class="c"><b>Veteran owned</b>Not SBA certified yet</div>
+          <div class="c"><b>GBAC trained</b>Cert number, slot</div>
+          <div class="c"><b>Insured and bonded</b>Limits, slot</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="note" style="margin-top:14px">The form is omitted from both mocks so the comparison
+    stays on the proof structure. In the real build the hero-split-form pattern puts a four field
+    form to the right of the headline, and neither version changes that.</p>
+</section>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">WHY</div><h2 class="dh">Four kinds of thing, three destinations</h2></div>
+  <p class="body">The middot was the symptom. The actual fault is that a checkable federal
+    registration and an adjective were given <strong>the same visual weight and the same
+    shape</strong>. Once they are separated, the middot has nothing left to join.</p>
+
+  <div class="where">
+    <div class="wcard">
+      <h5>Facts, to the spec strip</h5>
+      <p>Anything a stranger can verify without asking. <code>Rockville MD 20852</code>,
+        <code>PMPPFTB7CCX4</code>, <code>561720</code>, the licence number.</p>
+      <p>Label in plain words, value in mono. The mono is carrying actual codes here, which is the
+        one case where it is information rather than decoration.</p>
+    </div>
+    <div class="wcard">
+      <h5>Promises, to the sentence</h5>
+      <p>Answered 24 hours, unmarked vehicles, we bill your insurer, written price first.</p>
+      <p>These need their context. <strong>Unmarked vehicles as a lone tag means nothing;</strong>
+        as a sentence it says the neighbours will not know. The 24 hour claim also gets its pair
+        back, the phone and the on-site window stated together as batch two requires.</p>
+    </div>
+    <div class="wcard">
+      <h5>Credentials, to the trust bar</h5>
+      <p>GBAC, ISSA, insurance, bonding. Each one keeps its own line with room, and each carries a
+        number underneath once the client supplies it.</p>
+      <p><code>GBAC trained</code> is decoration. <code>GBAC trained, cert 4471</code> is
+        information, and it is the number that makes it unfakeable.</p>
+    </div>
+  </div>
+
+  <div class="call ok">
+    <h4>The side effect worth noticing</h4>
+    <p>The spec strip is <strong>the thing no competitor in this market has.</strong> Not one of
+      the eight sites in the teardown publishes a UEI or a NAICS code anywhere, let alone on the
+      home page. For a federal or county buyer it answers the qualifying question before they
+      scroll.</p>
+    <p>So removing an AI tell also produced the strongest differentiator on the page. That is
+      usually how it goes: the generated pattern was occupying space that a real fact wanted.</p>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">CHECKED</div><h2 class="dh">Self critique against the tell list</h2></div>
+  <p class="ddek">Working through the five traits the skill names, applied to the after version.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Tell</th><th>After version</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Middot meta strings</td><td>Gone from the hero and the trust bar. This is the fix.</td></tr>
+      <tr><td class="lab">Near black with one bright accent</td><td>Avoided by rule. Black is a band, the ground is warm off-white, brass is desaturated.</td></tr>
+      <tr><td class="lab">Identical rounded cards, one shadow on everything</td><td>The trust bar is not cards. No shadows anywhere in the mock.</td></tr>
+      <tr><td class="lab">Tracked out all caps eyebrow above every heading</td><td>None in the site mock. The spec strip labels are plain sentence case.</td></tr>
+      <tr><td class="lab">Monospace for small data labels</td><td>Present, and deliberate. It sets the codes, not the labels. A UEI genuinely is a code.</td></tr>
+      <tr><td class="lab">Numbered markers 01 / 02 / 03</td><td>Not used on the site. The decks use them for render order, which is a real sequence.</td></tr>
+      <tr><td class="lab">Arrow appended to buttons</td><td>None. Buttons say what happens.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="call">
+    <h4>Two things I have not solved here</h4>
+    <p><strong>Type is unresolved on purpose.</strong> The mock uses the same faces as these
+      working documents, which are not the site's faces. The font roster comes from the niche
+      playbook that Module 2D writes, and picking now means picking twice. Type carries a lot of
+      the natural-versus-generated feeling, so this is a real gap, not a detail.</p>
+    <p><strong>The hero still has no photograph.</strong> No palette and no strip fixes that. A
+      real photograph of Amilcar and a real job is worth more than everything on this page
+      combined, and it is the one thing only the client can supply.</p>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">NEXT</div><h2 class="dh">If this is approved</h2></div>
+  <p class="body">The change is 31 middot strings across the four decks, plus the trust bar
+    pattern, plus the <code>hero-split-form</code> component which currently renders pills. Roughly
+    an hour of work, and it should go in before any more pages are written so the new pages are
+    written into the new shape rather than converted afterwards.</p>
+  <p class="body">The palette above also replaces the two options on the palette direction page.
+    That page stays as the record of why red and tactical were ruled out, and it gets a note
+    pointing here.</p>
+</section>
+
+</div>
+
+<div class="wrap">
+  <div class="foot">
+    <p><b>Method.</b> The tell list is from <code>anthropics/skills@frontend-design</code>,
+      installed into this repo. The discretion reading of the name comes from the specialty page
+      copy in batches one and two, specifically the unmarked vehicle and no signage lines. The
+      absence of UEI and NAICS on competitor sites comes from the eight site teardown of 8 and 10
+      September 2026. Contrast ratios computed against the WCAG relative luminance formula.</p>
+    <p><b>These document pages keep the working document chrome</b> so they stay a set with the
+      other five. The rules above apply to the site being built, not to the internal specs
+      describing it.</p>
+  </div>
+</div>
