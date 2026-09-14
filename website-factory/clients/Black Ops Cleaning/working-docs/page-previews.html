@@ -1,0 +1,426 @@
+<title>Black Ops Page Previews</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Field black and brass, the approved direction. Black is punctuation:
+   banner and footer only. The page ground stays warm off-white. Brass is a
+   desaturated metal, never a glow. These values map 1:1 to brand-dna palette
+   keys; the real components hold no literal hex. */
+:root{
+  --p:#16181A; --pd:#0B0D0E; --ps:#4A4F55;
+  --ac:#A8792C; --acl:#C89A45; --acd:#7E5A1D;
+  --nu:#F2F1ED; --nud:#E0DED7; --si:#EAE8E2; --ik:#101214;
+  --line:#DCD9D1; --line2:#B6B1A6; --ink2:#4B545A; --ink3:#7C858B;
+  --amber:#8A5C0C; --amber-bg:#F6E9CE; --amber-line:#D0B06C;
+  --r:8px;
+  --shade:0 1px 2px rgba(20,24,28,.05), 0 14px 34px -26px rgba(20,24,28,.5);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--nud);color:var(--ik);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.cond{font-family:"Barlow Condensed",Barlow,sans-serif}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+
+/* chrome */
+.chrome{background:var(--pd);color:#fff;position:sticky;top:0;z-index:9;
+  border-bottom:1px solid rgba(255,255,255,.12)}
+.chrome .in{max-width:1080px;margin:0 auto;padding:11px 20px;display:flex;
+  align-items:center;gap:14px;flex-wrap:wrap}
+.chrome .lbl{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.tabs{margin-left:auto;display:flex;gap:4px;background:rgba(255,255,255,.08);
+  border-radius:6px;padding:3px}
+.tabs button{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;background:none;border:0;color:rgba(255,255,255,.6);
+  padding:7px 13px;border-radius:4px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ac);color:var(--p)}
+
+.page{max-width:1080px;margin:0 auto;background:var(--nu);box-shadow:var(--shade)}
+
+/* banner */
+.banner{background:var(--p);color:#fff;padding:38px 34px 34px;border-bottom:3px solid var(--ac)}
+.crumb{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:rgba(255,255,255,.5)}
+.crumb a{color:inherit;text-decoration:none}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;margin:14px 0 0;
+  font-size:clamp(30px,4.6vw,50px);line-height:1;text-transform:uppercase;
+  letter-spacing:-.006em;max-width:17ch;text-wrap:balance}
+.bsub{color:rgba(255,255,255,.78);font-size:17px;max-width:56ch;margin:16px 0 0}
+.spec{display:flex;flex-wrap:wrap;gap:15px 32px;margin:24px 0 0;padding:0}
+.spec div{display:flex;flex-direction:column;gap:2px}
+.spec dt{margin:0;font-size:12.5px;line-height:1.2;color:rgba(255,255,255,.55)}
+.spec dd{margin:0;font-family:"IBM Plex Mono",monospace;font-size:13.5px;font-weight:600;
+  line-height:1.2;letter-spacing:.03em;color:var(--acl)}
+.spec dd.empty{color:rgba(255,255,255,.3)}
+.bcta{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;background:var(--ac);color:var(--p);
+  text-decoration:none;font-weight:700;font-size:15px;padding:13px 22px;border-radius:var(--r)}
+.btn.ghost{background:none;color:#fff;border:1px solid rgba(255,255,255,.4)}
+
+/* sections */
+section{padding:34px;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+h2{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;font-size:clamp(22px,3vw,30px);
+  line-height:1.06;text-transform:uppercase;margin:0 0 6px;letter-spacing:.004em}
+.lead{color:var(--ink2);font-size:17px;max-width:70ch;margin:0 0 18px}
+p{margin:0 0 12px;color:var(--ink2)}
+strong{color:var(--ik);font-weight:600}
+
+/* quote cards, irregular by design */
+.voices{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:13px;margin:0}
+.voice{background:#fff;border:1px solid var(--line);border-left:3px solid var(--ac);
+  border-radius:6px;padding:15px 17px}
+.voice p{font-size:15.5px;color:var(--ik);margin:0 0 9px;line-height:1.5}
+.voice cite{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-style:normal;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+
+/* covers grid, 6 cells */
+.covers{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));
+  border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.cov{padding:17px 19px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cov h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:16.5px;
+  text-transform:uppercase;margin:0 0 6px;letter-spacing:.014em}
+.cov p{font-size:14.5px;margin:0;line-height:1.5}
+
+/* process */
+.proc{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.step{display:grid;grid-template-columns:38px 1fr auto;gap:14px;padding:14px 18px;
+  border-bottom:1px solid var(--line);align-items:start}
+.step:last-child{border-bottom:0}
+.step .n{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;
+  color:var(--ac);padding-top:3px}
+.step h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:16.5px;
+  text-transform:uppercase;margin:0 0 3px;letter-spacing:.014em}
+.step p{font-size:14.5px;margin:0;line-height:1.5}
+.step .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink3);
+  background:var(--si);border:1px solid var(--line);border-radius:4px;padding:4px 9px;
+  white-space:nowrap}
+@media(max-width:620px){.step{grid-template-columns:30px 1fr}.step .t{grid-column:2;justify-self:start}}
+
+/* trust bar, one per line with its number */
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:13px 26px}
+.trust div b{display:block;font-size:15px;color:var(--ik)}
+.trust div span{font-size:13.5px;color:var(--ink3)}
+
+/* honest empty states */
+.gate{background:var(--amber-bg);border:1px solid var(--amber-line);border-left:3px solid var(--amber);
+  border-radius:6px;padding:16px 19px}
+.gate .k{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:7px}
+.gate p{font-size:14.5px;margin:0 0 8px;color:#5C4A22}
+.gate p:last-child{margin-bottom:0}
+.gate code{font-family:"IBM Plex Mono",monospace;font-size:12px;background:rgba(0,0,0,.05);
+  padding:1px 5px;border-radius:3px}
+
+/* context table */
+.ctx{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.ctx .row{display:grid;grid-template-columns:168px 1fr;border-bottom:1px solid var(--line)}
+.ctx .row:last-child{border-bottom:0}
+.ctx .k{background:var(--si);padding:11px 15px;font-size:13.5px;color:var(--ink3);font-weight:600}
+.ctx .v{padding:11px 15px;font-size:15px}
+.ctx .v.slot{color:var(--amber);font-family:"IBM Plex Mono",monospace;font-size:12.5px}
+@media(max-width:560px){.ctx .row{grid-template-columns:1fr}.ctx .k{padding:8px 15px}}
+
+/* faq */
+.faq{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.q{padding:15px 18px;border-bottom:1px solid var(--line)}
+.q:last-child{border-bottom:0}
+.q b{display:block;font-size:16px;line-height:1.35;margin-bottom:6px}
+.q p{font-size:15px;margin:0;line-height:1.55}
+
+.links{display:flex;flex-wrap:wrap;gap:9px}
+.links a{text-decoration:none;color:var(--acd);border:1px solid var(--line2);
+  border-radius:5px;padding:8px 13px;font-size:14px;font-weight:600;background:#fff}
+
+.endcta{background:var(--p);color:#fff;padding:34px;text-align:left}
+.endcta h2{color:#fff;margin-bottom:10px}
+.endcta p{color:rgba(255,255,255,.76);max-width:58ch}
+.foot{background:var(--pd);color:rgba(255,255,255,.6);padding:20px 34px;
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.04em}
+
+.note{max-width:1080px;margin:0 auto;padding:16px 20px 30px;font-size:13.5px;color:#5A6066}
+.note b{color:#2E3438}
+</style>
+
+<div class="chrome"><div class="in">
+  <span class="lbl">Black Ops Cleaning &nbsp;/&nbsp; page previews</span>
+  <div class="tabs" role="tablist">
+    <button id="t1" role="tab" aria-selected="true" aria-controls="svc">Service page</button>
+    <button id="t2" role="tab" aria-selected="false" aria-controls="twn">Town page</button>
+  </div>
+</div></div>
+
+<!-- ══════════ SERVICE PAGE ══════════ -->
+<div class="page" id="svc" role="tabpanel" aria-labelledby="t1">
+  <div class="banner">
+    <nav class="crumb"><a href="#">Home</a> / <a href="#">Services</a> / Unattended death cleanup</nav>
+    <h1>Unattended Death Cleanup in Rockville and Montgomery County</h1>
+    <p class="bsub">Discreet, certified biohazard remediation. Unmarked vehicles, no company
+      signage on site, and a written price before any work starts. Where a policy covers the loss,
+      we speak to your adjuster and bill them directly.</p>
+    <dl class="spec">
+      <div><dt>Based in</dt><dd>Rockville MD 20852</dd></div>
+      <div><dt>UEI</dt><dd>PMPPFTB7CCX4</dd></div>
+      <div><dt>NAICS</dt><dd>561720</dd></div>
+      <div><dt>Licence</dt><dd class="empty">slot</dd></div>
+    </dl>
+    <div class="bcta">
+      <a class="btn" href="tel:+13010000000">Call (301) 000 0000</a>
+      <a class="btn ghost" href="#">Request a discreet call back</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>If you are reading this today</h2>
+    <p class="lead">You are dealing with something nobody prepares you for. You do not need to know
+      any of the terminology, and you do not need to have decided anything yet.</p>
+    <p>Most people who call us have just been told by the police or the medical examiner that
+      cleanup is not their job. That comes as a shock. Investigators secure a scene and then leave,
+      and the property is handed back to whoever is responsible for it.</p>
+    <div class="voices">
+      <div class="voice"><p>Will my insurance pay for this?</p><cite>Recurring enquiry</cite></div>
+      <div class="voice"><p>Will anyone be able to tell what happened?</p><cite>Recurring enquiry</cite></div>
+      <div class="voice"><p>Can the property be used again afterwards?</p><cite>Recurring enquiry</cite></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What the work covers</h2>
+    <p class="lead">Everything below is part of a standard remediation. Nothing here is added to
+      the bill later.</p>
+    <div class="covers">
+      <div class="cov"><h3>Assessment and containment</h3><p>The affected area is isolated before
+        anything is touched, with negative air where the contamination warrants it.</p></div>
+      <div class="cov"><h3>Removal of affected material</h3><p>Flooring, subfloor, drywall and
+        furnishings that cannot be safely restored are removed and documented.</p></div>
+      <div class="cov"><h3>Decontamination</h3><p>Hospital grade disinfection of every affected
+        surface, following CDC and EPA disinfection guidance.</p></div>
+      <div class="cov"><h3>Odour remediation at source</h3><p>Treated at the source rather than
+        masked. Masking is why odour comes back three weeks later.</p></div>
+      <div class="cov"><h3>Regulated waste disposal</h3><p>Through a licensed medical waste
+        stream. The manifest is handed to you.</p></div>
+      <div class="cov"><h3>Written clearance</h3><p>Confirmation that the property is safe for
+        occupancy, in writing, on completion.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What happens, and how long each part takes</h2>
+    <div class="proc">
+      <div class="step"><span class="n">01</span><div><h3>Your call</h3><p>We need the address and
+        how to get in. We do not ask you to describe the scene.</p></div><span class="t">10 minutes</span></div>
+      <div class="step"><span class="n">02</span><div><h3>On site assessment</h3><p>Unmarked
+        vehicle. We scope the contamination and give you a written price before any work
+        begins.</p></div><span class="t">Within 2 hours</span></div>
+      <div class="step"><span class="n">03</span><div><h3>Insurance contact</h3><p>Where a policy
+        covers the loss we speak to the adjuster directly and bill them.</p></div><span class="t">Same day</span></div>
+      <div class="step"><span class="n">04</span><div><h3>Remediation</h3><p>Containment, removal,
+        decontamination, odour treatment.</p></div><span class="t">1 to 3 days</span></div>
+      <div class="step"><span class="n">05</span><div><h3>Clearance and handover</h3><p>Written
+        clearance, the disposal manifest, and photographs of the finished work.</p></div><span class="t">On completion</span></div>
+    </div>
+    <div class="gate" style="margin-top:16px"><span class="k">Slot, verify every timescale</span>
+      <p>Two hours and one to three days are industry norms carried from batch one. They are not
+        Black Ops' measured performance yet. A published timescale the crew cannot hit becomes a
+        one star review.</p></div>
+  </section>
+
+  <section>
+    <h2>Why we are allowed to do this work</h2>
+    <div class="trust">
+      <div><b>GBAC trained</b><span>Certificate number, slot</span></div>
+      <div><b>ISSA CMI</b><span>Membership number, slot</span></div>
+      <div><b>OSHA bloodborne compliant</b><span>Exposure control plan on request</span></div>
+      <div><b>Licensed and insured in Maryland</b><span>Licence and limits, slot</span></div>
+      <div><b>Veteran owned</b><span>Not SBA certified yet</span></div>
+      <div><b>SAM.gov registered</b><span>UEI PMPPFTB7CCX4, active</span></div>
+    </div>
+    <p style="margin-top:16px"><strong>One thing we will not do.</strong> We do not display CDC,
+      EPA or OSHA seals to imply those agencies endorse us. They do not endorse anyone. If another
+      company shows you federal seals, ask them what they mean.</p>
+  </section>
+
+  <section>
+    <h2>What families have said</h2>
+    <div class="gate"><span class="k">Empty by design, zero reviews on every platform</span>
+      <p>The block is built and marked up, and it renders nothing until the review system produces
+        real ones. <b>Nothing here may be invented.</b></p>
+      <p>The schema must not emit an <code>AggregateRating</code> with a count of zero. That is a
+        structured data error, not an empty block.</p></div>
+  </section>
+
+  <section>
+    <h2>Questions people actually ask</h2>
+    <div class="faq">
+      <div class="q"><b>Does homeowner insurance cover unattended death cleanup?</b>
+        <p>In most cases yes, because you are claiming for damage to the property. Some policies
+          exclude deaths by suicide unless a rider was bought. Call your adjuster, not your agent,
+          and ask whether the policy covers biohazard remediation and what the limit is.</p></div>
+      <div class="q"><b>Will your vehicle be marked?</b>
+        <p>No. Our response vehicles carry no company signage and our technicians arrive in plain
+          clothing and change on site. Neighbours see a plain van.</p></div>
+      <div class="q"><b>Are you police approved or state certified?</b>
+        <p>There is no such approval or certification to hold in Maryland, and any company claiming
+          one is worth a second look. What matters is GBAC training, OSHA bloodborne pathogen
+          compliance, a licensed disposal route, and being licensed and insured in Maryland.</p></div>
+    </div>
+    <p style="margin-top:12px;font-size:14px;color:var(--ink3)">Ten questions on the real page.
+      Three shown here.</p>
+  </section>
+
+  <section>
+    <h2>Where we cover</h2>
+    <div class="links">
+      <a href="#">Rockville</a><a href="#">Silver Spring</a><a href="#">Bethesda</a>
+      <a href="#">Washington DC</a><a href="#">Biohazard remediation</a><a href="#">Hoarding cleanup</a>
+    </div>
+  </section>
+
+  <div class="endcta">
+    <h2>One call, and you will know where you stand</h2>
+    <p>No obligation. You do not have to describe what happened, and nothing is decided on the
+      phone. We will tell you what is involved, roughly what it costs, and what your insurer is
+      likely to cover.</p>
+    <div class="bcta"><a class="btn" href="tel:+13010000000">Call (301) 000 0000</a>
+      <a class="btn ghost" href="#">Request a discreet call back</a></div>
+  </div>
+  <div class="foot">Black Ops Cleaning Company LLC &nbsp; 121 Talbott St, Rockville, MD 20852 &nbsp; (301) 000 0000</div>
+</div>
+
+<!-- ══════════ TOWN PAGE ══════════ -->
+<div class="page" id="twn" role="tabpanel" aria-labelledby="t2" hidden>
+  <div class="banner">
+    <nav class="crumb"><a href="#">Home</a> / <a href="#">Service areas</a> / Rockville MD</nav>
+    <h1>Commercial Cleaning in Rockville, Maryland</h1>
+    <p class="bsub">Our office is on Talbott Street. Rockville is not a service area we drive to,
+      it is where the crew starts the day.</p>
+    <dl class="spec">
+      <div><dt>Based in</dt><dd>Rockville MD 20852</dd></div>
+      <div><dt>UEI</dt><dd>PMPPFTB7CCX4</dd></div>
+      <div><dt>NAICS</dt><dd>561720</dd></div>
+      <div><dt>Licence</dt><dd class="empty">slot</dd></div>
+    </dl>
+    <div class="bcta">
+      <a class="btn" href="#">Book a Rockville walkthrough</a>
+      <a class="btn ghost" href="tel:+13010000000">Call (301) 000 0000</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>A job we did in Rockville</h2>
+    <div class="gate"><span class="k">Build gate, this page will not compile</span>
+      <p><code>TownPage.jsx</code> throws at build time when a town has no completed local job with
+        a photograph. This is deliberate.</p>
+      <p>A town page without it is filler, Google treats it as filler, and it will not rank. The
+        component refuses rather than rendering a page that cannot work.</p>
+      <p><b>Sixteen of the seventeen town pages sit behind this gate right now.</b> No amount of
+        writing moves them. Only a real job and a photograph from it does.</p></div>
+  </section>
+
+  <section>
+    <h2>Why cleaning in Rockville is not generic office cleaning</h2>
+    <p class="lead">Rockville sits at the centre of the I-270 Biotech Corridor, and that changes
+      what a cleaning contract here actually has to do.</p>
+    <p>Over 120 of Montgomery County's roughly 350 life sciences firms have a Rockville address.
+      More than 10,000 people work in biohealth along the corridor, alongside an estimated 49,000
+      in federal agencies, with NIH and the FDA on the doorstep.</p>
+    <p>What that means in practice is that a large share of the buildings here are not open plan
+      offices. They are labs, GMP manufacturing space, medical suites and federal adjacent
+      facilities, and those come with rules an ordinary janitorial contract does not cover.</p>
+    <div class="covers" style="margin-top:6px">
+      <div class="cov"><h3>Controlled areas</h3><p>Cleaning around a lab is not the same job as
+        cleaning a lab, and the contract has to say which.</p></div>
+      <div class="cov"><h3>Inspection schedules</h3><p>Medical and research facilities run to audit
+        calendars, not to your rota.</p></div>
+      <div class="cov"><h3>Documented infection control</h3><p>A failed inspection costs a practice
+        far more than a cleaning contract.</p></div>
+      <div class="cov"><h3>Background checked crews</h3><p>For federal adjacent buildings, which
+        this corridor is full of.</p></div>
+    </div>
+    <p style="margin-top:14px">Rockville's older stock has the opposite problem. Town Center and
+      the Pike corridor carry buildings from several decades of construction, and a 1980s office
+      fitout does not clean like a 2020s lab building. Both are within ten minutes of us.</p>
+  </section>
+
+  <section>
+    <h2>Local detail</h2>
+    <div class="ctx">
+      <div class="row"><div class="k">Our address</div><div class="v">121 Talbott St, Rockville MD 20852</div></div>
+      <div class="row"><div class="k">Zip codes covered</div><div class="v">20850, 20851, 20852, 20853, 20855</div></div>
+      <div class="row"><div class="k">Areas we work</div><div class="v">Town Center, Rockville Pike, King Farm, Twinbrook, Shady Grove, Fallsgrove</div></div>
+      <div class="row"><div class="k">Crew based</div><div class="v">In Rockville, not dispatched from another county</div></div>
+      <div class="row"><div class="k">Response time</div><div class="v slot">slot, confirm with the client</div></div>
+      <div class="row"><div class="k">Active contracts here</div><div class="v slot">slot, confirm with the client</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Rockville customers</h2>
+    <div class="gate"><span class="k">Empty, filtered to Rockville, falls back to nearest town</span>
+      <p>Empty today. Green Apple's Bethesda page carries 4.5 from 74 reviews on the page itself.
+        That number is the gap, and it closes through the review system, not through anything
+        written here.</p></div>
+  </section>
+
+  <section>
+    <h2>Rockville questions</h2>
+    <div class="faq">
+      <div class="q"><b>Are you actually based in Rockville?</b>
+        <p>Yes, on Talbott Street in 20852. Most companies that rank for Rockville dispatch from
+          Gaithersburg, Silver Spring or further out. It matters most when something goes wrong on
+          a Sunday.</p></div>
+      <div class="q"><b>Do you clean labs, or only the offices around them?</b>
+        <p>We clean office, common and support areas in life sciences buildings, and we work to
+          your protocol for anything controlled. Tell us your access rules at the walkthrough and
+          we will scope to them rather than around them.</p></div>
+      <div class="q"><b>How fast can you reach Shady Grove?</b>
+        <p>Under twenty minutes in normal traffic from Talbott Street.</p></div>
+    </div>
+    <p style="margin-top:12px;font-size:14px;color:var(--ink3)">Six questions on the real page.
+      A town page carries less than a service page, and padding it is worse than omitting it.</p>
+  </section>
+
+  <section>
+    <h2>Nearby towns</h2>
+    <div class="links">
+      <a href="#">North Bethesda</a><a href="#">Bethesda</a><a href="#">Gaithersburg</a>
+      <a href="#">Potomac</a><a href="#">Kensington</a><a href="#">Derwood</a>
+      <a href="#">Wheaton</a><a href="#">Silver Spring</a>
+    </div>
+  </section>
+
+  <div class="endcta">
+    <h2>Walkthrough and written quote, at no cost</h2>
+    <p>We will walk your Rockville site, scope the specification against how you actually use the
+      space, and put a price in writing. If we are not the right fit we will say so.</p>
+    <div class="bcta"><a class="btn" href="#">Book a Rockville walkthrough</a>
+      <a class="btn ghost" href="tel:+13010000000">Call (301) 000 0000</a></div>
+  </div>
+  <div class="foot">Black Ops Cleaning Company LLC &nbsp; 121 Talbott St, Rockville, MD 20852 &nbsp; (301) 000 0000</div>
+</div>
+
+<div class="note">
+  <p><b>What this is.</b> Both page types rendered with Black Ops' own copy from deck batch one, in
+  the approved field black and brass palette, with the spec strip in place of the old pill row.
+  This is the structure from <code>references/page-patterns/</code>, not a new design: those
+  components are what the factory builds from, and 49 of the 57 pages come out of them.</p>
+  <p><b>The amber blocks are real.</b> They are not styling. Zero reviews exist on any platform, no
+  job photographs have been supplied, and the town page genuinely will not compile until one does.
+  Showing them empty is the honest state of the build today.</p>
+</div>
+
+<script>
+const tabs=[["t1","svc"],["t2","twn"]];
+for(const [tid,pid] of tabs){
+  document.getElementById(tid).addEventListener("click",()=>{
+    for(const [t,p] of tabs){
+      const on=t===tid;
+      document.getElementById(t).setAttribute("aria-selected",String(on));
+      document.getElementById(p).hidden=!on;
+    }
+    window.scrollTo({top:0,behavior:"instant"});
+  });
+}
+</script>
