@@ -1,0 +1,478 @@
+<title>Black Ops Palette Direction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#ECEEF0; --card:#FFFFFF; --card2:#E1E5E8; --card3:#D3D8DC;
+  --line:#CFD5D9; --line2:#AAB2B8;
+  --ink:#14181C; --ink2:#49525A; --ink3:#79838B;
+  --chrome:#5A646C; --chrome2:#78838B;
+  --slot:#8A5C0C; --slot-bg:#F6E9CE; --slot-line:#D0B06C;
+  --ok:#2C6B4C; --ok-bg:#DEEBE3; --ok-line:#93BBA3;
+  --bad:#8C3A2E; --bad-bg:#F4E3DF; --bad-line:#D3A79E;
+  --band:#14181C; --bandink:#ECEEF0;
+  --shade:0 1px 2px rgba(20,24,28,.05), 0 14px 34px -26px rgba(20,24,28,.5);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C0F11; --card:#14181B; --card2:#1B2024; --card3:#242B30;
+    --line:#262D32; --line2:#3C454B; --ink:#E7EAEC; --ink2:#A2ABB2; --ink3:#727C83;
+    --chrome:#939DA5; --chrome2:#7A848C;
+    --slot:#D8A44E; --slot-bg:#2A2110; --slot-line:#66501F;
+    --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+    --bad:#E08A78; --bad-bg:#2B1512; --bad-line:#5E2E26;
+    --band:#050708; --bandink:#E7EAEC;
+    --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C0F11; --card:#14181B; --card2:#1B2024; --card3:#242B30;
+  --line:#262D32; --line2:#3C454B; --ink:#E7EAEC; --ink2:#A2ABB2; --ink3:#727C83;
+  --chrome:#939DA5; --chrome2:#7A848C;
+  --slot:#D8A44E; --slot-bg:#2A2110; --slot-line:#66501F;
+  --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+  --bad:#E08A78; --bad-bg:#2B1512; --bad-line:#5E2E26;
+  --band:#050708; --bandink:#E7EAEC;
+  --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding-inline:22px}
+:focus-visible{outline:2px solid var(--chrome);outline-offset:2px}
+code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--card2);
+  padding:1px 5px;border-radius:2px}
+
+.mast{background:var(--band);color:var(--bandink)}
+.mast .wrap{padding-block:28px 30px}
+.lock{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;
+  padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.16)}
+.mk{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.mk span{color:#B9C2C9}
+.lock .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.55;font-weight:600;text-align:right}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(32px,5.6vw,52px);line-height:.98;letter-spacing:-.012em;
+  margin:21px 0 0;text-transform:uppercase;text-wrap:balance}
+.lede{font-size:17px;color:rgba(231,234,236,.74);max-width:64ch;margin:14px 0 0}
+
+section.doc{padding-block:42px 4px}
+.dhead{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:8px}
+.dno{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12px;
+  color:var(--chrome);letter-spacing:.11em;padding-top:7px}
+h2.dh{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(25px,3.8vw,35px);line-height:1.03;margin:0;text-transform:uppercase}
+.ddek{color:var(--ink2);font-size:16.5px;max-width:66ch;margin:0 0 20px 40px}
+@media(max-width:640px){.ddek{margin-left:0}}
+p.body{color:var(--ink2);font-size:16.5px;max-width:68ch}
+p.body strong{color:var(--ink);font-weight:600}
+
+.call{background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--chrome);
+  border-radius:4px;padding:17px 20px;margin:20px 0;max-width:74ch}
+.call.no{border-left-color:var(--bad);background:var(--bad-bg)}
+.call.ok{border-left-color:var(--ok);background:var(--ok-bg)}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  text-transform:uppercase;margin:0 0 8px;letter-spacing:.016em}
+.call p{margin:0 0 9px;font-size:15px;color:var(--ink2)}
+.call p:last-child{margin-bottom:0}
+.call strong{color:var(--ink)}
+
+/* palette block */
+.pal{background:var(--card);border:1px solid var(--line);border-radius:5px;
+  margin:0 0 34px;overflow:hidden;box-shadow:var(--shade)}
+.phead{background:var(--band);color:var(--bandink);padding:20px 24px;
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px}
+.phead .kind{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:#B9C2C9;width:100%}
+.phead h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(24px,3.6vw,32px);line-height:1.04;margin:0;text-transform:uppercase}
+.phead .tag{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:#0C0F11;background:#B9C2C9;padding:3px 9px;border-radius:2px;
+  font-weight:600}
+.pbody{padding:24px}
+@media(max-width:560px){.pbody{padding:16px}.phead{padding:17px 16px}}
+
+/* swatch table */
+.sw{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:4px}
+@media(max-width:900px){.sw{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.sw{grid-template-columns:1fr}}
+.chip{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--card2)}
+.chip .fill{height:62px;display:flex;align-items:flex-end;padding:7px 9px}
+.chip .hex{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;
+  letter-spacing:.04em}
+.chip .meta2{padding:8px 10px 10px}
+.chip .role{font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);display:block}
+.chip .where{font-size:13.5px;color:var(--ink2);line-height:1.4;margin-top:4px;display:block}
+
+h4.sub{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;
+  text-transform:uppercase;letter-spacing:.016em;margin:26px 0 4px;color:var(--ink)}
+p.subnote{font-size:13.5px;color:var(--ink3);margin:0 0 13px;line-height:1.5;
+  padding-left:11px;border-left:2px solid var(--line2);max-width:70ch}
+
+/* mock previews */
+.mocks{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+@media(max-width:760px){.mocks{grid-template-columns:1fr}}
+.mock{border:1px solid var(--line);border-radius:5px;overflow:hidden;
+  background:var(--nu);font-size:14px}
+.mock .mlabel{font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;padding:6px 10px;
+  background:var(--card3);color:var(--ink3)}
+.mbar{background:var(--p);color:#fff;padding:9px 13px;display:flex;align-items:center;gap:10px;
+  flex-wrap:wrap}
+.mbar .lg{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:13px;
+  letter-spacing:.1em;text-transform:uppercase}
+.mbar .ph{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  color:var(--acl)}
+.mhero{padding:16px 13px;background:var(--nu)}
+.mhero .h{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:20px;line-height:1.06;text-transform:uppercase;color:var(--ik);margin:0 0 7px;
+  text-wrap:balance}
+.mhero .s{color:var(--ps);font-size:13.5px;line-height:1.45;margin:0 0 11px}
+.mpills{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.mpills i{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:8.5px;
+  letter-spacing:.08em;text-transform:uppercase;background:var(--si);color:var(--p);
+  border:1px solid var(--nud);padding:3px 7px;border-radius:2px;font-weight:600}
+.mcta{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.mbtn{background:var(--ac);color:var(--p);font-weight:700;font-size:12.5px;
+  padding:8px 14px;border-radius:3px;font-family:Barlow,sans-serif}
+.mbtn.alt{background:transparent;color:var(--acd);border:1px solid var(--acd)}
+.mform{background:var(--si);border:1px solid var(--nud);border-radius:4px;padding:11px;
+  margin-top:13px}
+.mform .ft{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:13px;
+  text-transform:uppercase;color:var(--p);margin-bottom:8px;letter-spacing:.02em}
+.mfield{background:#fff;border:1px solid var(--nud);border-radius:3px;height:24px;
+  margin-bottom:6px}
+.mtrust{background:var(--nud);padding:8px 13px;display:flex;flex-wrap:wrap;gap:4px 12px}
+.mtrust b{font-family:"IBM Plex Mono",monospace;font-size:8.5px;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--ps)}
+.mfoot{background:var(--pd);color:#fff;padding:9px 13px;font-size:10.5px;
+  font-family:"IBM Plex Mono",monospace;letter-spacing:.05em}
+
+/* palettes applied */
+.pal-a{--p:#15293f;--pd:#0d1b2b;--ps:#41505e;--ac:#b58930;--acl:#d6a94e;--acd:#8a6522;
+  --nu:#f4f5f6;--nud:#dfe3e7;--si:#e8ebee;--ik:#111820}
+.pal-c{--p:#1c1f24;--pd:#101216;--ps:#474d56;--ac:#c07a1e;--acl:#e09a3c;--acd:#945c12;
+  --nu:#f5f4f2;--nud:#e2e0dc;--si:#eceae6;--ik:#0e1013}
+
+/* contrast table */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--card);
+  margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:460px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:9px 12px;border-bottom:2px solid var(--line2);background:var(--card2);
+  white-space:nowrap}
+td{padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink2)}
+tr:last-child td{border-bottom:none}
+td.mn{font-family:"IBM Plex Mono",monospace;font-size:12px;
+  font-variant-numeric:tabular-nums;color:var(--ink)}
+td.lab{font-weight:600;color:var(--ink)}
+.pass{color:var(--ok);font-weight:700;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  letter-spacing:.06em}
+.fail{color:var(--bad);font-weight:700;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  letter-spacing:.06em}
+
+.foot{padding-block:26px 46px;font-size:13px;color:var(--ink3)}
+.foot p{margin:0 0 8px;max-width:78ch}
+.foot b{color:var(--ink2)}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="lock">
+      <div class="mk">Black<span>&nbsp;Ops</span>&nbsp;Cleaning</div>
+      <div class="meta">Palette direction<br>Pre Stage 7</div>
+    </div>
+    <h1>Two palettes,<br>and where each colour goes</h1>
+    <p class="lede">One palette has to carry all 57 pages. The same ten colours sit behind a
+      janitorial contract page and behind an unattended death page. That single fact decides
+      almost everything below, and it rules out the two palettes most people would reach for
+      first.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="doc">
+  <div class="dhead"><div class="dno">FIRST</div><h2 class="dh">This is direction, not the final palette</h2></div>
+  <p class="body">The factory derives the real palette in <strong>Stage 7</strong>. The
+    <code>design-synthesis</code> skill reads the client's logo, pulls its dominant colours, and
+    builds the tokens from them. <strong>Black Ops has not supplied a logo yet,</strong> so
+    nothing here is final. When the logo arrives, Stage 7 overwrites this.</p>
+  <p class="body">What this page is for: deciding the direction now, so the logo conversation
+    starts from somewhere rather than from nothing. Both options below are built to the exact ten
+    token slots in <code>references/brand-dna.shape.js</code>, so either one drops straight into
+    <code>brand-dna.json</code>.</p>
+  <div class="call">
+    <h4>Why this page is grey</h4>
+    <p>The other working documents use a brick red accent. This one does not.
+      <strong>A red eyebrow next to a navy swatch tilts the comparison</strong> before you have
+      looked at anything. The chrome here is deliberately neutral so both palettes are judged on
+      their own.</p>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">RULED OUT</div><h2 class="dh">Two obvious choices that do not work</h2></div>
+  <p class="ddek">Worth stating plainly, because both will come up again later and the reasoning
+    should be on record.</p>
+
+  <div class="call no">
+    <h4>Red, however tempting on an emergency service</h4>
+    <p>Red is the reflex for 24 hour response, and on a plumbing site it would be right. Here it
+      is not. <strong>On a biohazard or trauma page, red reads as blood.</strong></p>
+    <p>The copy decks are deliberate about never sensationalising the event. The crime scene page
+      carries an explicit instruction: no urgency language, no sales pressure, no adjectives about
+      what happened. A red palette undoes all of that in the first second, before a word is
+      read.</p>
+  </div>
+
+  <div class="call no">
+    <h4>Tactical black and neon green, because of the name</h4>
+    <p>The name invites a special forces look. The audience forbids it.</p>
+    <p>The hoarding page is read by a son or a daughter who is frightened for a parent, and that
+      page is written so the person living there could read it too without feeling judged.
+      <strong>A tactical palette makes that page feel like an intervention</strong> and makes the
+      trauma page feel like a game. The veteran angle is a real asset, but it is carried by the
+      words and by the registrations, not by the colour scheme.</p>
+  </div>
+
+  <div class="call">
+    <h4>And one that simply failed the maths</h4>
+    <p>Slate with an evergreen accent was tested and dropped. Green signals clean and safe, which
+      fits, but the accent scored <strong>2.2</strong> against the primary used as text on it,
+      well under the 4.5 the schema requires. Every cleaning company in the teardown uses green
+      anyway, so it would have made Black Ops look like its competitors.</p>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">OPTION A</div><h2 class="dh">Navy and brass</h2></div>
+  <p class="ddek">The recommendation. Navy carries the veteran signal honestly, it is the colour
+    of service rather than of tactics, and it stays calm enough for a family reading at two in the
+    morning.</p>
+
+  <div class="pal">
+    <div class="phead">
+      <div class="kind">Option A, recommended</div>
+      <h3>Navy and Brass</h3>
+      <span class="tag">All 10 checks pass</span>
+    </div>
+    <div class="pbody">
+
+      <div class="sw">
+        <div class="chip"><div class="fill" style="background:#15293f"><span class="hex" style="color:#fff">#15293f</span></div>
+          <div class="meta2"><span class="role">primary</span><span class="where">Header, footer and hero grounds. White text sits on it.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#0d1b2b"><span class="hex" style="color:#fff">#0d1b2b</span></div>
+          <div class="meta2"><span class="role">primary_dark</span><span class="where">Deepest band, footer base, pressed state on primary buttons.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#41505e"><span class="hex" style="color:#fff">#41505e</span></div>
+          <div class="meta2"><span class="role">primary_slate</span><span class="where">Secondary body text on light grounds. Subheads, captions.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#b58930"><span class="hex" style="color:#15293f">#b58930</span></div>
+          <div class="meta2"><span class="role">accent</span><span class="where">The primary call to action fill. Navy text on it.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#d6a94e"><span class="hex" style="color:#15293f">#d6a94e</span></div>
+          <div class="meta2"><span class="role">accent_light</span><span class="where">Hover on accent, and the phone number on the dark header.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#8a6522"><span class="hex" style="color:#fff">#8a6522</span></div>
+          <div class="meta2"><span class="role">accent_dark</span><span class="where">Accent used as text on light grounds. Links, secondary buttons.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#f4f5f6"><span class="hex" style="color:#111820">#f4f5f6</span></div>
+          <div class="meta2"><span class="role">neutral</span><span class="where">The page background. Most of the site is this colour.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#dfe3e7"><span class="hex" style="color:#111820">#dfe3e7</span></div>
+          <div class="meta2"><span class="role">neutral_dim</span><span class="where">Alternating section bands, trust bar, card borders.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#e8ebee"><span class="hex" style="color:#111820">#e8ebee</span></div>
+          <div class="meta2"><span class="role">silver</span><span class="where">Card and form field fills, dividers, pill grounds.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#111820"><span class="hex" style="color:#fff">#111820</span></div>
+          <div class="meta2"><span class="role">ink</span><span class="where">Body copy and headings on light grounds.</span></div></div>
+      </div>
+
+      <h4 class="sub">The same palette, both kinds of page</h4>
+      <p class="subnote">This is the real test. A palette that works on the left and fails on the
+        right is the wrong palette, however good it looks in a swatch grid.</p>
+      <div class="mocks">
+        <div class="mock pal-a">
+          <div class="mlabel">Commercial page, facility manager</div>
+          <div class="mbar"><span class="lg">Black Ops</span><span class="ph">(301) 000 0000</span></div>
+          <div class="mhero">
+            <p class="h">Commercial Janitorial in Montgomery County</p>
+            <p class="s">A written specification, the same crew every time, and a name you can
+              call.</p>
+            <div class="mpills"><i>Written spec</i><i>Same crew</i><i>30 day exit</i></div>
+            <div class="mcta"><span class="mbtn">Book a walkthrough</span><span class="mbtn alt">Call us</span></div>
+            <div class="mform"><div class="ft">Tell us about the building</div>
+              <div class="mfield"></div><div class="mfield"></div></div>
+          </div>
+          <div class="mtrust"><b>Veteran owned</b><b>GBAC trained</b><b>Insured</b><b>SAM.gov</b></div>
+          <div class="mfoot">121 Talbott St, Rockville MD 20852</div>
+        </div>
+        <div class="mock pal-a">
+          <div class="mlabel">Specialty page, family at 2am</div>
+          <div class="mbar"><span class="lg">Black Ops</span><span class="ph">Answered 24 hours</span></div>
+          <div class="mhero">
+            <p class="h">Unattended Death Cleanup in Rockville</p>
+            <p class="s">Discreet, certified remediation. Unmarked vehicles, and a written price
+              before any work starts.</p>
+            <div class="mpills"><i>Unmarked</i><i>We bill your insurer</i><i>GBAC trained</i></div>
+            <div class="mcta"><span class="mbtn">Call (301) 000 0000</span><span class="mbtn alt">Discreet call back</span></div>
+          </div>
+          <div class="mtrust"><b>No signage on site</b><b>Written clearance</b><b>Licensed disposal</b></div>
+          <div class="mfoot">121 Talbott St, Rockville MD 20852</div>
+        </div>
+      </div>
+
+      <h4 class="sub">Why it holds</h4>
+      <p class="subnote">Navy is the colour of service, and it is quiet. Brass is the language of
+        insignia rather than of hazard, so it reads as earned rather than as alarming. On the
+        right hand mock the palette gets out of the way, which is exactly what that page needs.
+        Nothing here says emergency, and nothing here says military operation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">OPTION C</div><h2 class="dh">Graphite and amber</h2></div>
+  <p class="ddek">The alternative. Honours the name more directly without turning tactical, and
+    borrows from hazard signage rather than from the military. Pick this if navy feels too
+    corporate.</p>
+
+  <div class="pal">
+    <div class="phead">
+      <div class="kind">Option C, alternative</div>
+      <h3>Graphite and Amber</h3>
+      <span class="tag">All 10 checks pass</span>
+    </div>
+    <div class="pbody">
+
+      <div class="sw">
+        <div class="chip"><div class="fill" style="background:#1c1f24"><span class="hex" style="color:#fff">#1c1f24</span></div>
+          <div class="meta2"><span class="role">primary</span><span class="where">Header, footer and hero grounds. White text sits on it.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#101216"><span class="hex" style="color:#fff">#101216</span></div>
+          <div class="meta2"><span class="role">primary_dark</span><span class="where">Deepest band, footer base, pressed state on primary buttons.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#474d56"><span class="hex" style="color:#fff">#474d56</span></div>
+          <div class="meta2"><span class="role">primary_slate</span><span class="where">Secondary body text on light grounds. Subheads, captions.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#c07a1e"><span class="hex" style="color:#1c1f24">#c07a1e</span></div>
+          <div class="meta2"><span class="role">accent</span><span class="where">The primary call to action fill. Graphite text on it.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#e09a3c"><span class="hex" style="color:#1c1f24">#e09a3c</span></div>
+          <div class="meta2"><span class="role">accent_light</span><span class="where">Hover on accent, and the phone number on the dark header.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#945c12"><span class="hex" style="color:#fff">#945c12</span></div>
+          <div class="meta2"><span class="role">accent_dark</span><span class="where">Accent used as text on light grounds. Links, secondary buttons.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#f5f4f2"><span class="hex" style="color:#0e1013">#f5f4f2</span></div>
+          <div class="meta2"><span class="role">neutral</span><span class="where">The page background. Warmer than option A.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#e2e0dc"><span class="hex" style="color:#0e1013">#e2e0dc</span></div>
+          <div class="meta2"><span class="role">neutral_dim</span><span class="where">Alternating section bands, trust bar, card borders.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#eceae6"><span class="hex" style="color:#0e1013">#eceae6</span></div>
+          <div class="meta2"><span class="role">silver</span><span class="where">Card and form field fills, dividers, pill grounds.</span></div></div>
+        <div class="chip"><div class="fill" style="background:#0e1013"><span class="hex" style="color:#fff">#0e1013</span></div>
+          <div class="meta2"><span class="role">ink</span><span class="where">Body copy and headings on light grounds.</span></div></div>
+      </div>
+
+      <h4 class="sub">The same palette, both kinds of page</h4>
+      <p class="subnote">Identical markup to the option A mocks. Only the ten token values
+        change, which is exactly how the real build works.</p>
+      <div class="mocks">
+        <div class="mock pal-c">
+          <div class="mlabel">Commercial page, facility manager</div>
+          <div class="mbar"><span class="lg">Black Ops</span><span class="ph">(301) 000 0000</span></div>
+          <div class="mhero">
+            <p class="h">Commercial Janitorial in Montgomery County</p>
+            <p class="s">A written specification, the same crew every time, and a name you can
+              call.</p>
+            <div class="mpills"><i>Written spec</i><i>Same crew</i><i>30 day exit</i></div>
+            <div class="mcta"><span class="mbtn">Book a walkthrough</span><span class="mbtn alt">Call us</span></div>
+            <div class="mform"><div class="ft">Tell us about the building</div>
+              <div class="mfield"></div><div class="mfield"></div></div>
+          </div>
+          <div class="mtrust"><b>Veteran owned</b><b>GBAC trained</b><b>Insured</b><b>SAM.gov</b></div>
+          <div class="mfoot">121 Talbott St, Rockville MD 20852</div>
+        </div>
+        <div class="mock pal-c">
+          <div class="mlabel">Specialty page, family at 2am</div>
+          <div class="mbar"><span class="lg">Black Ops</span><span class="ph">Answered 24 hours</span></div>
+          <div class="mhero">
+            <p class="h">Unattended Death Cleanup in Rockville</p>
+            <p class="s">Discreet, certified remediation. Unmarked vehicles, and a written price
+              before any work starts.</p>
+            <div class="mpills"><i>Unmarked</i><i>We bill your insurer</i><i>GBAC trained</i></div>
+            <div class="mcta"><span class="mbtn">Call (301) 000 0000</span><span class="mbtn alt">Discreet call back</span></div>
+          </div>
+          <div class="mtrust"><b>No signage on site</b><b>Written clearance</b><b>Licensed disposal</b></div>
+          <div class="mfoot">121 Talbott St, Rockville MD 20852</div>
+        </div>
+      </div>
+
+      <h4 class="sub">Why it holds, and where it is riskier</h4>
+      <p class="subnote">Amber comes from hazard signage, which is honest for biohazard work and
+        warm rather than alarming. The risk is that graphite plus amber sits closer to the
+        construction and restoration category, so it differentiates less from a disaster
+        restoration firm than navy does. On the specialty mock it is slightly warmer than option
+        A, which some will prefer and some will find too present.</p>
+    </div>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">CHECKED</div><h2 class="dh">Contrast, measured not guessed</h2></div>
+  <p class="ddek">Every pairing the build actually renders, scored against WCAG AA. The schema
+    requires white text on primary to pass, and the primary used as text on the accent to pass.
+    Both options clear every check.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Pairing</th><th>Option A</th><th></th><th>Option C</th><th></th></tr></thead>
+    <tbody>
+      <tr><td class="lab">White on primary</td><td class="mn">14.78</td><td><span class="pass">PASS</span></td><td class="mn">16.52</td><td><span class="pass">PASS</span></td></tr>
+      <tr><td class="lab">White on primary_dark</td><td class="mn">17.37</td><td><span class="pass">PASS</span></td><td class="mn">18.75</td><td><span class="pass">PASS</span></td></tr>
+      <tr><td class="lab">White on primary_slate</td><td class="mn">8.29</td><td><span class="pass">PASS</span></td><td class="mn">8.52</td><td><span class="pass">PASS</span></td></tr>
+      <tr><td class="lab">Primary on accent</td><td class="mn">4.64</td><td><span class="pass">PASS</span></td><td class="mn">4.76</td><td><span class="pass">PASS</span></td></tr>
+      <tr><td class="lab">Primary on accent_light</td><td class="mn">6.79</td><td><span class="pass">PASS</span></td><td class="mn">6.97</td><td><span class="pass">PASS</span></td></tr>
+      <tr><td class="lab">White on accent_dark</td><td class="mn">5.30</td><td><span class="pass">PASS</span></td><td class="mn">5.53</td><td><span class="pass">PASS</span></td></tr>
+      <tr><td class="lab">Accent_dark on neutral</td><td class="mn">4.85</td><td><span class="pass">PASS</span></td><td class="mn">5.03</td><td><span class="pass">PASS</span></td></tr>
+      <tr><td class="lab">Ink on neutral</td><td class="mn">16.37</td><td><span class="pass">PASS</span></td><td class="mn">17.33</td><td><span class="pass">PASS</span></td></tr>
+      <tr><td class="lab">Ink on silver</td><td class="mn">14.93</td><td><span class="pass">PASS</span></td><td class="mn">15.86</td><td><span class="pass">PASS</span></td></tr>
+      <tr><td class="lab">Primary_slate on neutral</td><td class="mn">7.59</td><td><span class="pass">PASS</span></td><td class="mn">7.75</td><td><span class="pass">PASS</span></td></tr>
+      <tr><td class="lab">Rejected green accent</td><td class="mn">2.20</td><td><span class="fail">FAIL</span></td><td class="mn">&mdash;</td><td></td></tr>
+    </tbody>
+  </table></div>
+  <p class="body">The accent in option A needed tuning to get there. The first brass tested
+    scored <strong>4.35</strong>, just under the line, and was brightened from
+    <code>#b0842f</code> to <code>#b58930</code> until it passed. That is the kind of thing worth
+    doing before a palette reaches a component rather than after a QA gate rejects it.</p>
+</section>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">OPEN</div><h2 class="dh">What cannot be decided yet</h2></div>
+  <div class="call">
+    <h4>The logo, which outranks everything on this page</h4>
+    <p>Stage 7 builds the palette from the logo's dominant colours. If Black Ops already has a
+      logo in a particular colour, <strong>that colour wins over both options here.</strong> Get
+      the logo file before spending any more time on this.</p>
+  </div>
+  <div class="call">
+    <h4>The fonts, which are blocked further upstream</h4>
+    <p>The four <code>typography</code> slots are still empty, and they should stay empty for
+      now. <code>design-synthesis</code> picks fonts from a locked roster in the niche playbook,
+      and <strong>Module 2D writes that roster.</strong> It has not run. Choosing a font today
+      means choosing it again later.</p>
+  </div>
+  <div class="call ok">
+    <h4>What you can do now</h4>
+    <p>Pick a direction, A or C, and take it into the logo conversation with the client. A logo
+      designed against a known palette is a much shorter conversation than a logo designed in a
+      vacuum and then fought with.</p>
+  </div>
+</section>
+
+</div>
+
+<div class="wrap">
+  <div class="foot">
+    <p><b>Method.</b> Token names and the ten required slots from
+      <code>website-factory/references/brand-dna.shape.js</code>. The contrast rules, that primary
+      must pass white text and that the accent must pass the primary used as text on it, from the
+      <code>design-synthesis</code> skill's palette synthesis pass. Every ratio above was computed
+      against the WCAG relative luminance formula, not estimated. The reader constraints come from
+      the tone rules written into copy deck batches one and two, specifically the crime scene
+      page's no urgency language rule and the hoarding page's no judgement rule.</p>
+    <p><b>This is pre Stage 7 direction.</b> It is not a locked palette, it has not been near a
+      logo, and the factory will regenerate it properly once one exists.</p>
+  </div>
+</div>

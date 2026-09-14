@@ -22,6 +22,7 @@ strategy and Stage 6 copy.
 | `copy-deck-batch2.html` | The specialty set: biohazard remediation, crime scene and trauma, hoarding, sewage backup. |
 | `copy-deck-batch3.html` | The commercial set: janitorial, medical facility, government facility, disinfection. |
 | `copy-deck-batch4.html` | The supporting set: Home, About and Team, Contact, and Government Contracting. Carries the consolidated verification queue and the list of what Amilcar still needs to supply. |
+| `palette-direction.html` | Two candidate colour palettes, each shown on a commercial page and a specialty page, with every contrast pairing measured. Pre Stage 7 direction only, the factory rebuilds the palette from the logo. |
 | `review-system.html` | The review engine: QR flow, capture page, text and email sequences, reply templates, pace and channels. |
 
 ## Reading order for someone new
@@ -31,6 +32,7 @@ strategy and Stage 6 copy.
 3. `page-blueprint.html`, for the structure all 57 pages follow
 4. The four copy decks, for the voice and the finished pages
 5. `citations-runbook.html` and `review-system.html`, for workstreams 2 and 3
+6. `palette-direction.html`, for the colour direction ahead of Stage 7
 
 ## Related code
 
