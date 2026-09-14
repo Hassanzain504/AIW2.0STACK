@@ -1,0 +1,976 @@
+<title>Copy Deck Batch Three</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#ECEEF0; --card:#FFFFFF; --card2:#E1E5E8; --card3:#D3D8DC;
+  --line:#CFD5D9; --line2:#AAB2B8;
+  --ink:#14181C; --ink2:#49525A; --ink3:#79838B;
+  --accent:#8C3A2E; --accent2:#AD5344; --accent-bg:#F4E3DF;
+  --slot:#8A5C0C; --slot-bg:#F6E9CE; --slot-line:#D0B06C;
+  --ok:#2C6B4C; --ok-bg:#DEEBE3; --ok-line:#93BBA3;
+  --band:#14181C; --bandink:#ECEEF0;
+  --shade:0 1px 2px rgba(20,24,28,.05), 0 14px 34px -26px rgba(20,24,28,.5);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C0F11; --card:#14181B; --card2:#1B2024; --card3:#242B30;
+    --line:#262D32; --line2:#3C454B; --ink:#E7EAEC; --ink2:#A2ABB2; --ink3:#727C83;
+    --accent:#E08A78; --accent2:#EDA595; --accent-bg:#2B1512;
+    --slot:#D8A44E; --slot-bg:#2A2110; --slot-line:#66501F;
+    --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+    --band:#050708; --bandink:#E7EAEC;
+    --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C0F11; --card:#14181B; --card2:#1B2024; --card3:#242B30;
+  --line:#262D32; --line2:#3C454B; --ink:#E7EAEC; --ink2:#A2ABB2; --ink3:#727C83;
+  --accent:#E08A78; --accent2:#EDA595; --accent-bg:#2B1512;
+  --slot:#D8A44E; --slot-bg:#2A2110; --slot-line:#66501F;
+  --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+  --band:#050708; --bandink:#E7EAEC;
+  --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--card2);
+  padding:1px 5px;border-radius:2px}
+
+.mast{background:var(--band);color:var(--bandink)}
+.mast .wrap{padding:28px 22px 30px}
+.lock{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;
+  padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.16)}
+.mk{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.mk span{color:var(--accent2)}
+.lock .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.55;font-weight:600;text-align:right}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(32px,5.6vw,52px);line-height:.98;letter-spacing:-.012em;
+  margin:21px 0 0;text-transform:uppercase;text-wrap:balance}
+.lede{font-size:17px;color:rgba(231,234,236,.74);max-width:64ch;margin:14px 0 0}
+
+/* page block */
+.page{background:var(--card);border:1px solid var(--line);border-radius:5px;
+  margin:0 0 34px;overflow:hidden;box-shadow:var(--shade)}
+.phead{background:var(--band);color:var(--bandink);padding:20px 24px}
+.phead .kind{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--accent2)}
+.phead h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(24px,3.6vw,33px);line-height:1.04;margin:8px 0 0;text-transform:uppercase;
+  letter-spacing:-.004em}
+.phead .url{font-family:"IBM Plex Mono",monospace;font-size:12px;
+  color:rgba(231,234,236,.62);margin-top:8px;word-break:break-all}
+.pbody{padding:0 24px 26px}
+@media(max-width:560px){.pbody{padding:0 16px 22px}.phead{padding:17px 16px}}
+
+/* seo table */
+.seo{margin:22px 0 0;border:1px solid var(--line);border-radius:4px;overflow:hidden;
+  background:var(--card2)}
+.seo .r{display:grid;grid-template-columns:130px 1fr;gap:0;border-bottom:1px solid var(--line)}
+.seo .r:last-child{border-bottom:none}
+.seo .k{background:var(--card3);padding:9px 12px;font-family:"IBM Plex Mono",monospace;
+  font-size:8.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--ink3);display:flex;align-items:center}
+.seo .v{padding:9px 13px;font-size:14.5px;background:var(--card);line-height:1.5}
+.seo .v .count{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink3);
+  margin-left:7px}
+@media(max-width:560px){.seo .r{grid-template-columns:1fr}.seo .k{padding:7px 12px}}
+
+/* section within a page */
+.sec{margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:none}
+.sn{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
+  text-transform:uppercase;letter-spacing:.016em;margin:6px 0 12px;line-height:1.15}
+.note{font-size:13.5px;color:var(--ink3);margin:0 0 14px;line-height:1.5;
+  padding-left:11px;border-left:2px solid var(--line2)}
+
+/* the actual copy */
+.copy{max-width:68ch}
+.copy h4{font-family:Barlow,sans-serif;font-weight:700;font-size:19px;margin:20px 0 8px;
+  line-height:1.3;color:var(--ink)}
+.copy h5{font-family:Barlow,sans-serif;font-weight:600;font-size:16.5px;margin:16px 0 6px;
+  color:var(--ink)}
+.copy p{margin:0 0 13px;font-size:16.5px;color:var(--ink2)}
+.copy p.big{font-size:18px;color:var(--ink)}
+.copy strong{color:var(--ink);font-weight:600}
+.copy ul,.copy ol{margin:0 0 13px;padding-left:21px}
+.copy li{font-size:16px;color:var(--ink2);margin-bottom:8px;line-height:1.55}
+.copy li strong{color:var(--ink)}
+.h1line{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(25px,3.8vw,34px);line-height:1.05;text-transform:uppercase;
+  letter-spacing:-.004em;color:var(--ink);margin:0 0 10px;max-width:22ch}
+
+/* slot */
+.slot{background:var(--slot-bg);border:1px solid var(--slot-line);border-left:3px solid var(--slot);
+  border-radius:4px;padding:12px 15px;margin:0 0 14px;max-width:68ch}
+.slot .sl{font-family:"IBM Plex Mono",monospace;font-size:8.5px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--slot);display:block;margin-bottom:5px}
+.slot p{margin:0;font-size:14.5px;color:var(--ink2);line-height:1.5}
+.slot p + p{margin-top:7px}
+
+/* faq */
+.faq{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--card);max-width:74ch}
+.faq .q{border-bottom:1px solid var(--line);padding:14px 17px}
+.faq .q:last-child{border-bottom:none}
+.faq .q b{display:block;font-size:16px;font-weight:600;line-height:1.35;color:var(--ink)}
+.faq .q p{margin:7px 0 0;font-size:15.5px;color:var(--ink2);line-height:1.55}
+
+/* links + alt */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--card);margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:10px 13px;border-bottom:2px solid var(--line2);background:var(--card2);white-space:nowrap}
+td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.mn{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink3)}
+td.lab{font-weight:600}
+
+.call{background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:4px;padding:17px 20px;margin:20px 0;max-width:74ch}
+.call.ok{border-left-color:var(--ok);background:var(--ok-bg)}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  text-transform:uppercase;margin:0 0 8px;letter-spacing:.016em}
+.call p{margin:0 0 9px;font-size:15px;color:var(--ink2)}
+.call p:last-child{margin-bottom:0}
+.call strong{color:var(--ink)}
+
+section.doc{padding:44px 0 4px}
+.dhead{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:8px}
+.dno{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12px;
+  color:var(--accent);letter-spacing:.11em;padding-top:7px}
+h2.dh{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(25px,3.8vw,35px);line-height:1.03;margin:0;text-transform:uppercase}
+.ddek{color:var(--ink2);font-size:16.5px;max-width:66ch;margin:0 0 20px 40px}
+@media(max-width:640px){.ddek{margin-left:0}}
+
+.foot{padding:24px 0 44px;font-size:13px;color:var(--ink3)}
+.foot p{margin:0 0 8px;max-width:78ch}
+.foot b{color:var(--ink2)}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="lock">
+      <div class="mk">Black<span>&nbsp;Ops</span>&nbsp;Cleaning</div>
+      <div class="meta">Copy deck, batch three<br>The commercial set</div>
+    </div>
+    <h1>Four pages for<br>a different reader</h1>
+    <p class="lede">Janitorial, medical facility, government facility, and disinfection. Nobody
+      reading these is in crisis. They are a facility manager comparing three contracts, and
+      they buy on documentation and consistency rather than on speed. No crisis blocks, no
+      unmarked vehicles, no insurance section.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="doc">
+  <div class="dhead"><div class="dno">SHIFT</div><h2 class="dh">What changes from the specialty set</h2></div>
+  <div class="tw"><table>
+    <thead><tr><th>Block</th><th>Specialty pages</th><th>These four</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Reader</td><td>A person in crisis, reading at 2am</td><td>A facility
+        manager at their desk, with two other quotes open</td></tr>
+      <tr><td class="lab">Crisis process</td><td>Three step version alongside the full one</td>
+        <td class="no">Removed. There is no crisis.</td></tr>
+      <tr><td class="lab">Insurance</td><td>Its own block, the main objection</td>
+        <td class="no">Replaced by the specification and what happens when something goes
+          wrong</td></tr>
+      <tr><td class="lab">Discretion</td><td>Unmarked vehicles, no signage</td><td class="no">Irrelevant.
+        Do not mention it.</td></tr>
+      <tr><td class="lab">Speed</td><td>Two hour response, front and centre</td><td>Matters only
+        for callouts. Consistency is the sell.</td></tr>
+      <tr><td class="lab">Length</td><td>They skim</td><td>They read the whole page. These can
+        run longer.</td></tr>
+      <tr><td class="lab">Proof</td><td>Reviews and discretion</td><td>Documentation, named
+        contacts, and retention</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call">
+    <h4>The one insight behind all four pages</h4>
+    <p>Facility managers do not switch cleaning contractors because the cleaning was bad on day
+      one. <strong>They switch because it got worse around month three,</strong> when the good
+      crew moved to another site and nobody told them.</p>
+    <p>So the thing that wins these contracts is not a promise about quality. It is a written
+      specification, the same crew, a named human to call, and evidence that the last client
+      stayed. Every one of these pages is built around that.</p>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">SHARED</div><h2 class="dh">Blocks that render on all four</h2></div>
+
+  <div class="page">
+    <div class="phead"><div class="kind">Shared component</div>
+      <h2>The specification, and what happens when something goes wrong</h2>
+      <div class="url">Replaces the insurance block on every commercial page</div></div>
+    <div class="pbody"><div class="sec"><div class="copy">
+      <h4>What you are actually buying</h4>
+      <p>A written specification, agreed before we start, that says what gets done, how often,
+        and by whom. Not a price for cleaning. A document you can hold us to.</p>
+      <p>It covers every area of your building, task by task and frequency by frequency. Daily,
+        weekly, monthly and periodic all listed separately, so there is never an argument about
+        whether something was in scope.</p>
+      <h4>The same crew, and a name to call</h4>
+      <p>You get the same people, and you get a name and a mobile number for the person
+        responsible for your building. Not a general office line, and not a ticket portal.</p>
+      <p>When somebody does leave, we tell you before you notice, and the replacement is walked
+        through your building against your specification before their first shift.</p>
+      <h4>When something is wrong</h4>
+      <ul>
+        <li><strong>Tell us and we fix it on the next service,</strong> at no charge.</li>
+        <li><strong>If it is urgent, we come back the same day.</strong></li>
+        <li><strong>If it happens twice, you get a call from Amilcar,</strong> not a form
+          response.</li>
+        <li><strong>Monthly inspections against the specification,</strong> written up and sent
+          to you, whether or not anything was wrong.</li>
+      </ul>
+      <p>We would rather find it before you do. That is what the inspection is for.</p>
+      <h4>Getting out</h4>
+      <p>Thirty days notice, either side, no penalty. A contractor who needs a long lock-in to
+        keep a client is telling you something about the service.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, confirm every promise</span>
+      <p>Same crew, named contact, same day callback, monthly written inspections, thirty day
+        exit. <b>Every one of these is an operational commitment, not copy.</b> Confirm each with
+        Amilcar before this ships. A promise the business cannot keep at scale becomes the
+        complaint that ends the contract.</p></div></div></div>
+  </div>
+
+  <div class="page">
+    <div class="phead"><div class="kind">Shared component</div>
+      <h2>The walkthrough offer</h2><div class="url">Closing CTA on all four</div></div>
+    <div class="pbody"><div class="sec"><div class="copy">
+      <p class="h1line">A walkthrough, a written specification, and a price</p>
+      <p>We walk your building, ask how you actually use the space rather than how the floor plan
+        says you do, and put a specification and a price in writing. It takes under an hour and
+        costs nothing.</p>
+      <p>If we are not the right fit for your building, we will tell you at the walkthrough
+        rather than in month three.</p>
+      <p><strong>Book a walkthrough</strong> &nbsp;|&nbsp; Call (301) 000 0000</p>
+    </div>
+    <p class="note">Form first on all four of these pages. Phone is secondary. That is the
+      reverse of the specialty set.</p></div></div>
+  </div>
+</section>
+
+<!-- ═══════════ PAGE 8 ═══════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Service page, 6 of 13</div>
+    <h2>Commercial Janitorial and Office Cleaning</h2>
+    <div class="url">/services/commercial-cleaning/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">commercial cleaning Rockville MD</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">janitorial services Montgomery County, office cleaning Rockville MD, commercial cleaning company Maryland, nightly office cleaning Bethesda</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Commercial Cleaning Rockville MD | Black Ops Cleaning<span class="count">52 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Commercial janitorial and office cleaning across Montgomery County. Written specification, the same crew every time, and a named contact who answers.<span class="count">148 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Commercial Janitorial and Office Cleaning in Montgomery County</div></div>
+    <div class="r"><div class="k">Role</div><div class="v">The volume page. Recurring revenue, and the parent for carpet, floor care, windows and pressure washing, which are sections here rather than separate pages.</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">1,800 to 2,200</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, banner</div>
+    <h3>Banner</h3>
+    <div class="copy">
+      <p class="h1line">Commercial Janitorial and Office Cleaning in Montgomery County</p>
+      <p class="big">A written specification, the same crew every time, and a name you can call.
+        Based in Rockville, so we are not dispatched from another county.</p>
+      <p><strong>Pills:</strong> Written specification &middot; Same crew &middot; Monthly
+        inspections &middot; 30 day exit</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, the problem</div>
+    <h3>Why you are probably reading this</h3>
+    <div class="copy">
+      <p class="big">Almost nobody looks for a new cleaning contractor because the cleaning was
+        bad from day one. They look because it got worse and nobody told them.</p>
+      <p>The pattern is consistent. The first month is excellent. Around month three the good
+        crew is moved to a bigger site, the replacement was never walked through your building,
+        and standards drift. You raise it, it improves for two weeks, and then it drifts again.
+        Eventually you are the one apologising to your own staff about the washrooms.</p>
+      <p>That is a staffing and management problem wearing a cleaning problem's clothes, and it
+        is why we sell a specification and a named contact rather than a price per square
+        foot.</p>
+      <p>The second reason people call us is that their contractor cannot do something the
+        building now needs. A medical tenant moved in. A lab expanded. There was a sewage
+        incident and the janitorial company was not allowed near it. We handle those in house
+        rather than subcontracting them out.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, what the work covers</div>
+    <h3>What the work covers</h3>
+    <div class="copy">
+      <h5>Nightly and scheduled janitorial</h5>
+      <p>Offices, washrooms, kitchens and break areas, common areas, reception, meeting rooms.
+        Every task and frequency written into the specification.</p>
+      <h5>Day porter service</h5>
+      <p>For buildings where the lobby and washrooms need attention during the working day
+        rather than after it. Common in multi tenant buildings on the Pike and in Town Center.</p>
+      <h5>Carpet care and extraction</h5>
+      <p>Scheduled deep extraction, plus spot response between cycles.</p>
+      <h5>Hard floor care</h5>
+      <p>Stripping, sealing, buffing and burnishing, scheduled so it happens over a weekend
+        rather than in your reception at 10am.</p>
+      <h5>Window cleaning</h5>
+      <p>Interior and accessible exterior on a schedule that matches the building.</p>
+      <h5>Pressure washing</h5>
+      <p>Entrances, walkways, loading areas and car park bays.</p>
+      <h5>Post construction and turnover cleaning</h5>
+      <p>Between tenants, or after a fitout. Rough, final and touch up as separate stages.</p>
+      <h5>Supplies management</h5>
+      <p>Consumables stocked and tracked so you are not the person who discovers the paper towels
+        ran out.</p>
+    </div>
+    <p class="note">Carpet, floor care, windows and pressure washing live here as sections rather
+      than as their own pages. Split them out later only if the client wants to sell them
+      standalone.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, process</div>
+    <h3>How a contract starts</h3>
+    <div class="copy">
+      <ol>
+        <li><strong>A call, about 15 minutes.</strong> Building type, size, current arrangement,
+          and what is not working.</li>
+        <li><strong>A walkthrough, under an hour.</strong> We walk it with you and ask how the
+          space is actually used. Where staff eat, which doors everybody uses, which rooms are
+          never booked, where the complaints come from.</li>
+        <li><strong>A written specification and price, within 3 working days.</strong> Task by
+          task, frequency by frequency, area by area.</li>
+        <li><strong>Start date and crew introduction.</strong> You meet the people who will be in
+          your building before their first shift.</li>
+        <li><strong>First month check in at week 2 and week 4,</strong> then monthly written
+          inspections from there.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Blocks 05 to 07</div>
+    <h3>Specification, credentials, the money question</h3>
+    <p class="note">The specification block and the walkthrough offer render from the shared
+      components. Credentials render from the batch two component, with the commercial items
+      first: ISSA CMI, insured to commercial levels, veteran owned, SAM.gov registered. GBAC
+      still appears, because it is what separates this company from a general janitorial firm
+      when the building has a medical tenant.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 11, FAQ</div>
+    <h3>Questions facility managers ask</h3>
+    <div class="faq">
+      <div class="q"><b>Will it be the same people every time?</b>
+        <p>Yes, and that is the point. Crews are assigned to buildings rather than rotated
+          around them. When somebody does leave, we tell you before you notice and the
+          replacement is walked through your building against your specification before their
+          first shift.</p></div>
+      <div class="q"><b>Who do I call when something is wrong?</b>
+        <p>A named person with a mobile number, not a general office line. If the same issue
+          happens twice you get a call from Amilcar, the owner, rather than a form
+          response.</p></div>
+      <div class="q"><b>Do you work after hours?</b>
+        <p>Yes, and most of our contracts are serviced between 7pm and 5am so nobody is cleaning
+          around your staff. Day porter service is available where the building needs attention
+          during working hours.</p></div>
+      <div class="q"><b>What is in the specification?</b>
+        <p>Every area of the building, every task, and every frequency, split into daily, weekly,
+          monthly and periodic. It exists so there is never an argument about whether something
+          was in scope.</p></div>
+      <div class="q"><b>How do I know the work is being done?</b>
+        <p>Monthly inspections against the specification, written up and sent to you whether or
+          not anything was wrong. We would rather find a problem before you do.</p></div>
+      <div class="q"><b>What is the contract length?</b>
+        <p>Thirty days notice, either side, no penalty. A contractor who needs a long lock-in to
+          keep a client is telling you something about the service.</p></div>
+      <div class="q"><b>Are your staff insured and screened?</b>
+        <p>Yes. General liability and workers compensation, and background checks on every
+          technician. For federal adjacent buildings we can meet higher screening
+          requirements.</p></div>
+      <div class="q"><b>We have a medical or lab tenant in the building. Can you handle that?</b>
+        <p>Yes, and it is a reason to talk to us rather than a general janitorial firm. We are
+          GBAC trained and OSHA bloodborne pathogen compliant, and we work to your tenant's
+          access protocol rather than around it.</p></div>
+      <div class="q"><b>Do you supply the consumables?</b>
+        <p>Yes, stocked and tracked, so nobody in your office is the one who discovers the paper
+          towels ran out.</p></div>
+      <div class="q"><b>What does it cost?</b>
+        <p>We do not publish rates, because two buildings of the same square footage can differ
+          by half depending on how they are used. The walkthrough and the written specification
+          cost nothing.</p></div>
+      <div class="q"><b>How quickly can you start?</b>
+        <p>Slot, confirm with the client. Usually the constraint is your notice period with your
+          current contractor rather than our availability.</p></div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 9 ═══════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Service page, 7 of 13</div>
+    <h2>Medical and Healthcare Facility Cleaning</h2>
+    <div class="url">/services/medical-facility-cleaning/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">medical office cleaning Rockville MD</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">medical facility cleaning Montgomery County, dental office cleaning Rockville, healthcare cleaning Bethesda MD, clinic cleaning services Maryland</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Medical Office Cleaning Rockville MD | Black Ops<span class="count">47 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Medical and dental facility cleaning across Montgomery County. OSHA bloodborne compliant, EPA registered disinfectants, written exposure control plan.<span class="count">150 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Medical and Healthcare Facility Cleaning in Rockville and Montgomery County</div></div>
+    <div class="r"><div class="k">Why this page matters</div><div class="v">Over 120 of Montgomery County's roughly 350 life sciences firms have a Rockville address. This is where the corridor converts.</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">1,900 to 2,300</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, banner</div>
+    <h3>Banner</h3>
+    <div class="copy">
+      <p class="h1line">Medical and Healthcare Facility Cleaning in Rockville and Montgomery County</p>
+      <p class="big">Cleaned to a documented standard, service timed around your inspection
+        schedule, and a written exposure control plan you can put in front of a surveyor.</p>
+      <p><strong>Pills:</strong> OSHA bloodborne compliant &middot; GBAC trained &middot; EPA
+        registered disinfectants &middot; After hours service</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, the problem</div>
+    <h3>The cleaning contract is a compliance exposure</h3>
+    <div class="copy">
+      <p class="big">In a medical practice, whoever cleans your treatment rooms is part of your
+        infection control programme whether their contract says so or not.</p>
+      <p>That is the part most practice managers discover late. A general janitorial firm can
+        clean an office beautifully and still leave you exposed, because the standards that
+        apply here are not cleaning standards. They are OSHA's Bloodborne Pathogens Standard,
+        29 CFR 1910.1030, and CDC infection control guidance.</p>
+      <p>The exposure is not theoretical. <strong>OSHA serious violations carry fines of up to
+        $16,550 each in 2026, and willful or repeat violations can exceed $165,000.</strong>
+        A failed inspection costs more than several years of a cleaning contract, and the
+        cleaning contract is one of the easiest places for a surveyor to find a finding.</p>
+      <p>The second problem is scheduling. Practices run to audit calendars and patient lists,
+        not to a cleaning rota. A contractor who cannot work around your treatment room
+        availability will either disturb patients or skip rooms, and both end up in the same
+        place.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, what the work covers</div>
+    <h3>What the work covers</h3>
+    <div class="copy">
+      <h5>Treatment and exam rooms</h5>
+      <p>High touch surfaces, exam tables, door handles, light switches and equipment surfaces,
+        cleaned in a documented top to bottom, clean to dirty sequence. Not a wipe round.</p>
+      <h5>EPA registered hospital grade disinfectants</h5>
+      <p>Selected for the pathogens your practice actually deals with, and applied for the full
+        contact time the label requires. More on that below, because it is where most
+        contractors quietly fail.</p>
+      <h5>Waiting areas and reception</h5>
+      <p>The highest traffic surfaces in the building and usually the least specified.</p>
+      <h5>Washrooms and sluice areas</h5>
+      <p>Separate equipment, separate cloths, colour coded, so nothing crosses between areas.</p>
+      <h5>Regulated waste handling</h5>
+      <p>Where your contract includes it, through a licensed medical waste stream with the
+        manifest provided.</p>
+      <h5>Terminal cleaning</h5>
+      <p>Full systematic disinfection of a room after a confirmed or suspected infectious case,
+        to a written protocol rather than an improvised one.</p>
+      <h5>Documentation</h5>
+      <p>Cleaning schedules, task records and monthly inspections, in the format your surveyor
+        expects to see.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, the technical differentiator</div>
+    <h3>Contact time, and why most disinfection is not disinfection</h3>
+    <div class="copy">
+      <p class="big">Every EPA registered disinfectant has a contact time on its label. The
+        surface has to stay <strong>visibly wet</strong> for that entire time for the product to
+        do what the label claims.</p>
+      <p>Depending on the product that is anywhere from thirty seconds to ten minutes. In
+        practice, a cleaner working at speed sprays a surface and wipes it within a few seconds,
+        which is cleaning. It is not disinfection, and the label on the bottle they used says so.</p>
+      <p>We train and audit against contact time, and where a surface dries before the time is
+        up, it gets reapplied. It is unglamorous, it is the single largest difference between
+        two contracts that look identical on paper, and it is the question we would ask your
+        current contractor.</p>
+    </div>
+    <p class="note">Genuinely differentiating, technically correct, and checkable. No competitor
+      page in this market explains it. It also positions honestly rather than by claiming a
+      proprietary method.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 05, what to ask any vendor</div>
+    <h3>Four questions worth asking any cleaning vendor, including us</h3>
+    <div class="copy">
+      <ol>
+        <li><strong>Can I see your written exposure control plan?</strong> OSHA requires one. It
+          identifies which tasks carry exposure risk and what controls reduce it. A vendor who
+          cannot produce it on request does not have one.</li>
+        <li><strong>Which disinfectants do you use, and what is the contact time?</strong> If the
+          answer is a brand name with no time attached, ask how they know it worked.</li>
+        <li><strong>How do you keep equipment from crossing between areas?</strong> Colour coded
+          cloths and separate equipment for sluice, washroom and clinical areas.</li>
+        <li><strong>What do your staff know about HIPAA?</strong> Cleaners are in rooms with
+          charts, screens and conversations. Awareness training is not optional and most
+          janitorial contracts never mention it.</li>
+      </ol>
+      <p>We publish these because a practice manager asking them will get better contractors,
+        including if that turns out not to be us.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 11, FAQ</div>
+    <h3>Questions practice managers ask</h3>
+    <div class="faq">
+      <div class="q"><b>Do you have a written exposure control plan?</b>
+        <p>Yes, and we will send it before you sign anything. OSHA's Bloodborne Pathogens
+          Standard requires one, and it should identify the tasks with exposure risk and the
+          controls that reduce them.</p></div>
+      <div class="q"><b>Are your staff trained on bloodborne pathogens?</b>
+        <p>Yes, and it is refreshed annually. Records are available for your file, which is
+          usually what a surveyor asks for.</p></div>
+      <div class="q"><b>Which disinfectants do you use?</b>
+        <p>EPA registered hospital grade products, chosen for your practice type, and applied for
+          the full contact time on the label. We will give you the product list and the safety
+          data sheets for your records.</p></div>
+      <div class="q"><b>Can you work outside patient hours?</b>
+        <p>Yes. Most of our medical work is serviced after 7pm so treatment rooms are never
+          disturbed. Where a practice runs late we work to the actual schedule rather than a
+          standard one.</p></div>
+      <div class="q"><b>What about our inspection or accreditation schedule?</b>
+        <p>Tell us the dates and we build around them. Deep clean and documentation review ahead
+          of a survey rather than after it.</p></div>
+      <div class="q"><b>Do your staff understand patient privacy?</b>
+        <p>Yes. HIPAA awareness training for anyone entering clinical areas. Cleaners are in
+          rooms with charts, screens and conversations, and most janitorial contracts never
+          mention it.</p></div>
+      <div class="q"><b>Can you handle a room after an infectious case?</b>
+        <p>Yes, terminal cleaning to a written protocol. Call us and we schedule it rather than
+          waiting for the next service.</p></div>
+      <div class="q"><b>Do you clean labs?</b>
+        <p>We clean office, common and support areas in life sciences buildings and we work to
+          your protocol for anything controlled. Tell us your access rules at the walkthrough
+          and we scope to them rather than around them.</p></div>
+      <div class="q"><b>What documentation do we get?</b>
+        <p>Cleaning schedules, task records, product list with safety data sheets, training
+          records, and monthly written inspections. That set is what a surveyor asks for.</p></div>
+      <div class="q"><b>What happens if there is a spill involving blood?</b>
+        <p>Immediate response, and it is covered by our biohazard remediation service rather than
+          treated as ordinary cleaning. Same company, no subcontractor, no delay while somebody
+          finds a specialist.</p></div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 10 ═══════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Service page, 8 of 13, and the uncontested one</div>
+    <h2>Government and Federal Facility Cleaning</h2>
+    <div class="url">/services/government-facility-cleaning/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">government facility cleaning Maryland</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">federal building cleaning contractor MD, veteran owned janitorial Maryland, NAICS 561720 contractor, government janitorial Montgomery County</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Government Facility Cleaning Maryland | Black Ops<span class="count">48 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Veteran owned janitorial contractor for federal, county and municipal facilities in Maryland. SAM.gov registered, NAICS 561720, UEI PMPPFTB7CCX4.<span class="count">143 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Government and Federal Facility Cleaning in Maryland</div></div>
+    <div class="r"><div class="k">Note</div><div class="v">Not one cleaning site checked in this market has this page. It is genuinely uncontested, and it is also the page a contracting officer searches for.</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">1,700 to 2,000</div></div>
+  </div>
+
+  <div class="call">
+    <h4>This page has two readers, and it must serve both</h4>
+    <p><strong>A contracting officer or a prime looking for a subcontractor,</strong> who wants
+      codes, registrations, capacity and past performance, fast, in a scannable block.</p>
+    <p><strong>A county or municipal facilities manager,</strong> who is buying much the same
+      way a commercial buyer does but with procurement rules attached.</p>
+    <p>Put the codes block high. The first reader will not scroll for it, and the second reader
+      will not be put off by it.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, banner</div>
+    <h3>Banner</h3>
+    <div class="copy">
+      <p class="h1line">Government and Federal Facility Cleaning in Maryland</p>
+      <p class="big">Veteran owned, SAM.gov registered, and based in Rockville at the centre of
+        the federal corridor. Janitorial services under NAICS 561720.</p>
+      <p><strong>Pills:</strong> UEI PMPPFTB7CCX4 &middot; NAICS 561720 &middot; Veteran owned
+        &middot; Rockville MD 20852</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, the capability block</div>
+    <h3>Capability at a glance</h3>
+    <p class="note">Highest block on the page after the banner. A contracting officer should be
+      able to qualify or disqualify us in fifteen seconds without scrolling.</p>
+    <div class="tw"><table>
+      <tbody>
+        <tr><td class="lab">Legal name</td><td>Black Ops Cleaning Company LLC</td></tr>
+        <tr><td class="lab">UEI</td><td class="mn">PMPPFTB7CCX4</td></tr>
+        <tr><td class="lab">CAGE code</td><td class="mn">Slot</td></tr>
+        <tr><td class="lab">Primary NAICS</td><td class="mn">561720, Janitorial Services</td></tr>
+        <tr><td class="lab">Secondary NAICS</td><td class="mn">Slot, confirm with the client</td></tr>
+        <tr><td class="lab">Business size</td><td>Small business. The size standard for 561720 is
+          $22 million in annual revenue.</td></tr>
+        <tr><td class="lab">Socioeconomic status</td><td>Veteran owned. <span class="mn">Slot,
+          update the moment SBA certification completes</span></td></tr>
+        <tr><td class="lab">SAM.gov registration</td><td class="mn">Slot, active through [date]</td></tr>
+        <tr><td class="lab">Insurance</td><td class="mn">Slot, general liability and workers
+          compensation limits</td></tr>
+        <tr><td class="lab">Bonding capacity</td><td class="mn">Slot</td></tr>
+        <tr><td class="lab">Geographic coverage</td><td>Montgomery County, Prince George's
+          County, Washington DC, Northern Virginia</td></tr>
+        <tr><td class="lab">Capability statement</td><td>Download, one page PDF</td></tr>
+      </tbody>
+    </table></div>
+    <div class="slot"><span class="sl">Slot, wording of the veteran status</span>
+      <p>Until SBA VetCert completes, this reads <b>veteran owned</b>. Not "certified veteran
+        owned", not "SDVOSB", not "VOSB". Those are certifications with legal meaning and
+        claiming one you do not hold on a page aimed at federal buyers is the worst possible
+        place to overstate.</p>
+      <p>The day certification comes through, this row and the pills change. That is a five
+        minute edit and it is worth setting a reminder for.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, the problem</div>
+    <h3>Why federal janitorial is a different purchase</h3>
+    <div class="copy">
+      <p>Cleaning a federal building is not harder than cleaning a commercial one. The
+        difference is everything around the cleaning.</p>
+      <ul>
+        <li><strong>Service Contract Act wage determinations.</strong> Federal service contracts
+          carry a Department of Labor wage determination that varies by geography, and it sets
+          the minimum you can pay the people doing the work. A contractor who has not priced
+          against the right determination will either lose money or cut corners.</li>
+        <li><strong>Background checks and access.</strong> Screening requirements vary by
+          facility and take time. Staffing a contract you have just won is where most small
+          contractors come unstuck.</li>
+        <li><strong>Documentation and reporting</strong> at a level commercial contracts rarely
+          ask for.</li>
+        <li><strong>The AbilityOne Procurement List.</strong> Some federal facilities are
+          reserved for AbilityOne nonprofits and are effectively not biddable by a commercial
+          small business at all. Knowing which before you spend two weeks on a response is
+          worth a great deal.</li>
+      </ul>
+      <p>We are a small business in a market where roughly a third of federal janitorial
+        spending is reserved for small businesses, and we are veteran owned in a category where
+        set-asides narrow the field further. That is the position we compete from, and we are
+        straightforward about it.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, verify the market figures</span>
+      <p>Published sources put FY2025 federal janitorial obligations at roughly $1.79 billion,
+        with around $645 million, about 36 percent, going through small business set-asides.
+        <b>Verify against current SAM.gov or USASpending data before publishing any number.</b>
+        On a page read by contracting officers, a stale figure is worse than no figure.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, what the work covers</div>
+    <h3>What we provide</h3>
+    <div class="copy">
+      <ul>
+        <li><strong>Daily janitorial</strong> to a written performance work statement.</li>
+        <li><strong>Periodic and project work,</strong> floor care, carpet, windows, deep
+          cleaning, priced separately and scheduled around the facility.</li>
+        <li><strong>Infection control and disinfection,</strong> GBAC trained, which matters for
+          any facility with a clinical or laboratory function.</li>
+        <li><strong>Biohazard response in house,</strong> not subcontracted. On a federal site
+          the difference between an in house capability and a subcontractor is a delay and an
+          extra set of clearances.</li>
+        <li><strong>Screened and badged staff</strong> to the facility's requirement.</li>
+        <li><strong>Quality control programme</strong> with documented inspections, in the format
+          the contract requires.</li>
+        <li><strong>Supplies management</strong> where the contract includes it.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 05, working as a subcontractor</div>
+    <h3>Working with primes</h3>
+    <div class="copy">
+      <p>We take subcontract work as well as prime contracts, and for a prime the calculation is
+        usually simple: a small, veteran owned, locally based subcontractor with in house
+        biohazard capability and no subcontracting chain of its own.</p>
+      <p>If you are building a team for a Montgomery County or DC area response, we are quick to
+        get a hold of and we will tell you straight away whether we have the capacity, rather
+        than after the submission deadline.</p>
+      <p><strong>Direct line for contracting officers and primes:</strong> [slot, a real name and
+        number, not the general enquiry form].</p>
+    </div>
+    <p class="note">This block exists because primes do not fill in contact forms. Give them a
+      person.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 11, FAQ</div>
+    <h3>Questions contracting officers and facilities managers ask</h3>
+    <div class="faq">
+      <div class="q"><b>What is your UEI and are you registered in SAM.gov?</b>
+        <p>UEI PMPPFTB7CCX4, registered and active. Our full capability statement is on this page
+          as a one page PDF.</p></div>
+      <div class="q"><b>What is your socioeconomic status?</b>
+        <p>Veteran owned small business. Slot, and this line changes the day SBA certification
+          completes. We will not describe ourselves as certified before we are.</p></div>
+      <div class="q"><b>Have you performed on federal contracts before?</b>
+        <p>Slot, past performance. Answer this honestly. If the answer is that the federal work
+          is new and the county and commercial record is strong, say exactly that. Contracting
+          officers verify past performance and an overstatement here ends the relationship
+          permanently.</p></div>
+      <div class="q"><b>Can you meet Service Contract Act wage determinations?</b>
+        <p>Yes, and we price against the determination for the specific location rather than a
+          standard rate. It is the most common reason a low bid becomes a performance
+          problem.</p></div>
+      <div class="q"><b>How quickly can you staff a new contract?</b>
+        <p>Slot, confirm with the client. Be realistic. Screening timelines, not hiring
+          timelines, are usually the constraint.</p></div>
+      <div class="q"><b>Are your staff background checked?</b>
+        <p>Yes, and we can meet facility specific screening and badging requirements. Tell us the
+          standard at the walkthrough so it is priced and scheduled rather than discovered
+          later.</p></div>
+      <div class="q"><b>Do you subcontract any of the work?</b>
+        <p>No. Janitorial, disinfection and biohazard response are all in house, which removes a
+          layer of clearances and a layer of delay.</p></div>
+      <div class="q"><b>What insurance do you carry?</b>
+        <p>Slot, limits. Federal janitorial contracts commonly require general liability in the
+          one to five million range, and we will provide certificates on request.</p></div>
+      <div class="q"><b>Do you hold CIMS or Green Seal certification?</b>
+        <p>Slot, answer honestly. Many federal and institutional solicitations name CIMS
+          specifically. If Black Ops does not hold it, say so and say whether it is being
+          pursued. Do not imply ISSA membership is the same thing, because a contracting officer
+          will know it is not.</p></div>
+      <div class="q"><b>Do you work as a subcontractor to primes?</b>
+        <p>Yes. Contact [named person] directly rather than through the enquiry form and we will
+          confirm capacity quickly.</p></div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 11 ═══════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Service page, 9 of 13</div>
+    <h2>Disinfection and Infection Control</h2>
+    <div class="url">/services/disinfection-services/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">commercial disinfection services Rockville MD</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">infection control cleaning Montgomery County, office disinfection Rockville, EPA registered disinfectant service Maryland</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Disinfection Services Rockville MD | Black Ops<span class="count">45 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Commercial disinfection across Montgomery County, applied for the full contact time the label requires. GBAC trained, EPA registered products.<span class="count">141 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Disinfection and Infection Control in Rockville and Montgomery County</div></div>
+    <div class="r"><div class="k">Angle</div><div class="v">The honest technical page. It argues against the thing most competitors sell, which is why it converts a sophisticated buyer.</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">1,500 to 1,800</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, banner</div>
+    <h3>Banner</h3>
+    <div class="copy">
+      <p class="h1line">Disinfection and Infection Control in Rockville and Montgomery County</p>
+      <p class="big">Applied for the full contact time the label requires, and documented. Which
+        sounds obvious, and is where most disinfection quietly fails.</p>
+      <p><strong>Pills:</strong> EPA registered products &middot; Contact time audited &middot;
+        GBAC trained &middot; Written protocol</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, the problem</div>
+    <h3>Spraying is not disinfecting</h3>
+    <div class="copy">
+      <p class="big">Every EPA registered disinfectant carries a contact time on its label. The
+        surface has to remain <strong>visibly wet</strong> for that entire period, or the product
+        has not done what the label says it does.</p>
+      <p>Depending on the product that is anywhere from thirty seconds to ten minutes. Now
+        picture a cleaner moving through a building at pace: spray, wipe, move on. That surface
+        was wet for two seconds. It was cleaned, and cleaning has real value, but it was not
+        disinfected, and the label on the bottle is the proof.</p>
+      <p>This is not a rare failure. It is the normal way disinfection is delivered, and it is
+        almost never visible to the person paying for it, because a wiped surface and a
+        disinfected surface look identical.</p>
+      <h4>What we do differently, and it is not exciting</h4>
+      <p>We select the product for the pathogen and the surface, we apply it for the contact
+        time the label requires, and where a surface dries before the time is up we reapply.
+        Our technicians are trained and audited on it, and the protocol is written down so you
+        can read it.</p>
+      <p>That is the whole differentiator. There is no proprietary method, no exclusive chemical
+        and no special equipment. Just the thing the label already asked for.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, the electrostatic question</div>
+    <h3>What we will tell you about electrostatic spraying</h3>
+    <div class="copy">
+      <p class="big">Electrostatic spraying is genuinely useful, and it is oversold.</p>
+      <p>It applies disinfectant efficiently across a large area, and it is a good tool for
+        broad surface coverage. Two things are worth knowing before anyone sells it to you as a
+        complete solution.</p>
+      <ul>
+        <li><strong>Less product applied can mean less time wet.</strong> Efficiency is the
+          selling point, but if the surface does not stay wet for the label's contact time, the
+          efficacy drops with it. EPA labels that permit electrostatic application specify the
+          contact time and the spray distance, and instruct reapplication if the surface dries
+          first.</li>
+        <li><strong>The wrap around effect is weaker than the marketing suggests.</strong> EPA
+          research evaluating electrostatic sprayers found limited ability to wrap around
+          surfaces regardless of the charge applied.</li>
+      </ul>
+      <p>CDC guidance does not recommend fogging, fumigation or wide area spraying as a
+        <em>primary</em> method of surface disinfection unless the product label specifically
+        permits it.</p>
+      <p><strong>So here is our position.</strong> We use electrostatic application where it
+        suits the space and the product label permits it, as a supplement to manual cleaning and
+        disinfection of high touch surfaces. We do not sell it as a replacement for either, and
+        we would be careful with a contractor who does.</p>
+    </div>
+    <p class="note">This block argues against a service the client could upsell. That is exactly
+      why it works on a facility manager who has been pitched electrostatic three times this
+      year. It also sets up the Electrostatic Disinfection page in phase 2 to be honest rather
+      than hype.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, what the work covers</div>
+    <h3>What the work covers</h3>
+    <div class="copy">
+      <ul>
+        <li><strong>High touch surface disinfection</strong> on a scheduled programme: door
+          handles, switches, rails, shared equipment, reception surfaces.</li>
+        <li><strong>Response disinfection</strong> after a confirmed case in the building.</li>
+        <li><strong>Terminal cleaning</strong> of clinical rooms to a written protocol.</li>
+        <li><strong>Electrostatic application</strong> where it suits the space, as a supplement.</li>
+        <li><strong>Product selection and documentation,</strong> with the product list, contact
+          times and safety data sheets provided for your records.</li>
+        <li><strong>Written protocol and training records</strong> for your compliance file.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 11, FAQ</div>
+    <h3>Questions buyers ask</h3>
+    <div class="faq">
+      <div class="q"><b>What is contact time and why does it keep coming up?</b>
+        <p>It is the period a disinfectant must stay on a surface, visibly wet, to achieve what
+          its label claims. It ranges from about thirty seconds to ten minutes by product. If a
+          surface is wiped dry before that time, the surface was cleaned rather than
+          disinfected.</p></div>
+      <div class="q"><b>How would I know whether my current contractor observes it?</b>
+        <p>Ask which product they use and what its contact time is. Then watch a service. If the
+          surface is dry within seconds of application, you have your answer, and it is not a
+          reason to be angry with the cleaner. It is a specification and training issue.</p></div>
+      <div class="q"><b>Is electrostatic spraying better than wiping?</b>
+        <p>It is different, not better. It covers large areas efficiently and is a good
+          supplement. It is not a replacement for manual cleaning and disinfection of high touch
+          surfaces, and CDC guidance does not recommend wide area spraying as a primary method
+          unless the label permits it.</p></div>
+      <div class="q"><b>Which products do you use?</b>
+        <p>EPA registered products selected for your setting. We provide the product list,
+          contact times and safety data sheets for your records.</p></div>
+      <div class="q"><b>Can you respond after a confirmed case in our building?</b>
+        <p>Yes. Call us and we schedule a response disinfection rather than waiting for the next
+          scheduled service.</p></div>
+      <div class="q"><b>Do we need this if we already have a janitorial contract?</b>
+        <p>Often not as a separate service. It is usually better built into the janitorial
+          specification as documented tasks and frequencies, which is cheaper than buying it
+          twice. We will tell you which applies at the walkthrough.</p></div>
+      <div class="q"><b>What documentation do we get?</b>
+        <p>Written protocol, product list with contact times, safety data sheets, training
+          records and inspection records. That set is what an auditor asks for.</p></div>
+      <div class="q"><b>Do you do this for schools and gyms?</b>
+        <p>Yes, and both are scheduling problems as much as cleaning problems. The work has to
+          happen when the building is empty and there is very little window.</p></div>
+      <div class="q"><b>Is fogging something you offer?</b>
+        <p>Only where a product label specifically permits it and the setting suits it. It is not
+          our default and it is not a substitute for surface work.</p></div>
+      <div class="q"><b>What does it cost?</b>
+        <p>We do not publish rates. The walkthrough and the written protocol cost nothing.</p></div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">NEXT</div><h2 class="dh">Batch four</h2></div>
+  <p class="ddek">Home, About and Team, Contact, and Government Contracting. The four supporting
+    pages that carry the most weight.</p>
+  <div class="copy">
+    <p>Home comes now rather than earlier because it routes to service pages that finally exist.
+      Government Contracting is really a second, procurement facing version of the federal
+      facility page, and it is the only supporting page that is also a traffic page.</p>
+  </div>
+  <div class="call">
+    <h4>Verification queue, now four items</h4>
+    <ul class="tight" style="margin-top:4px">
+      <li><strong>Maryland victim compensation</strong> line on the crime scene page</li>
+      <li><strong>Every timescale</strong> across all nine pages so far</li>
+      <li><strong>Federal janitorial market figures</strong> on the government page, against
+        current SAM.gov or USASpending data</li>
+      <li><strong>CIMS and Green Seal.</strong> Does the client hold either? Federal and
+        institutional solicitations name CIMS specifically, and the answer changes both the
+        government page and the janitorial page</li>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<div class="wrap">
+  <div class="foot">
+    <p><b>Research behind this batch.</b> OSHA Bloodborne Pathogens Standard 29 CFR 1910.1030,
+      penalty levels, EPA registered disinfectants, exposure control plan requirements and
+      clean-to-dirty sequencing from published compliance guidance. Contact time and the
+      visibly-wet requirement, electrostatic sprayer efficacy limits and the wrap-around finding,
+      and CDC's position on wide area spraying as a primary method, from published EPA and CDC
+      guidance. NAICS 561720 size standard, Service Contract Act wage determinations, the
+      AbilityOne Procurement List and federal janitorial spending figures from published
+      contracting guidance. Rockville life sciences and corridor figures from Rockville Economic
+      Development. All read on 10 September 2026.</p>
+    <p><b>Slots must be filled with client facts, never invented,</b> and the four verification
+      items above are blocking, not optional.</p>
+  </div>
+</div>

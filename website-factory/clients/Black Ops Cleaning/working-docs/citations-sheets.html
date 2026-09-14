@@ -1,0 +1,605 @@
+<title>Citations Reference And Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F1EFE9; --card:#FFFFFF; --card2:#E7E3DA; --card3:#DAD5C9;
+  --line:#D5D0C4; --line2:#B3ADA0;
+  --ink:#171A1F; --ink2:#4E555E; --ink3:#7F8791;
+  --accent:#2B4470; --accent2:#3C5D96; --accent-bg:#DFE5F0;
+  --ok:#2C6B4C; --ok-bg:#DEEBE3; --ok-line:#93BBA3;
+  --wait:#8A5A11; --wait-bg:#F4E7CC; --wait-line:#D0AF6D;
+  --stop:#9B3527; --stop-bg:#F5E1DC; --stop-line:#D2A094;
+  --band:#171A1F; --bandink:#F1EFE9;
+  --shade:0 1px 2px rgba(23,26,31,.05), 0 14px 34px -26px rgba(23,26,31,.5);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0D0F12; --card:#161A1F; --card2:#1D2229; --card3:#262D35;
+    --line:#282F37; --line2:#3F4852; --ink:#E8EAEE; --ink2:#A2ABB5; --ink3:#727B85;
+    --accent:#7DA2DC; --accent2:#9BB9E8; --accent-bg:#141F33;
+    --ok:#54BC8B; --ok-bg:#0E271C; --ok-line:#2A5C43;
+    --wait:#D8A24E; --wait-bg:#2A2010; --wait-line:#67501F;
+    --stop:#E08874; --stop-bg:#2B1512; --stop-line:#65322A;
+    --band:#05070A; --bandink:#E8EAEE;
+    --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0D0F12; --card:#161A1F; --card2:#1D2229; --card3:#262D35;
+  --line:#282F37; --line2:#3F4852; --ink:#E8EAEE; --ink2:#A2ABB5; --ink3:#727B85;
+  --accent:#7DA2DC; --accent2:#9BB9E8; --accent-bg:#141F33;
+  --ok:#54BC8B; --ok-bg:#0E271C; --ok-line:#2A5C43;
+  --wait:#D8A24E; --wait-bg:#2A2010; --wait-line:#67501F;
+  --stop:#E08874; --stop-bg:#2B1512; --stop-line:#65322A;
+  --band:#05070A; --bandink:#E8EAEE;
+  --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.mast{background:var(--band);color:var(--bandink)}
+.mast .wrap{padding:26px 20px 28px}
+.lock{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;
+  padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.16)}
+.mk{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.mk span{color:var(--accent2)}
+.lock .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.55;font-weight:600;text-align:right}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(31px,5.6vw,50px);line-height:.98;letter-spacing:-.012em;
+  margin:20px 0 0;text-transform:uppercase;text-wrap:balance}
+.lede{font-size:17px;color:rgba(232,234,238,.74);max-width:64ch;margin:14px 0 0}
+
+/* bar */
+.bar{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;
+  padding-top:11px;padding-bottom:11px}
+.tabs{display:flex;gap:5px;background:var(--card2);padding:4px;border-radius:7px}
+.tabs button{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--ink3);background:none;
+  border:0;padding:7px 13px;border-radius:5px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--accent);color:#fff}
+.meter{flex:1;min-width:150px;height:7px;background:var(--card3);border-radius:99px;overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--accent);border-radius:99px;
+  transition:width .3s cubic-bezier(.16,1,.3,1)}
+.stat{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;
+  font-variant-numeric:tabular-nums;color:var(--accent);white-space:nowrap}
+.savenote{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);white-space:nowrap}
+.savenote.on{color:var(--ok)}
+
+section{padding:36px 0 8px}
+h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(23px,3.4vw,32px);line-height:1.04;margin:0 0 6px;text-transform:uppercase;
+  letter-spacing:-.004em}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;
+  text-transform:uppercase;letter-spacing:.016em;margin:30px 0 11px;
+  padding-bottom:6px;border-bottom:2px solid var(--ink)}
+p.body{color:var(--ink2);font-size:15.5px;max-width:68ch;margin:0 0 18px}
+
+/* reference fields */
+.fields{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;
+  overflow:hidden;box-shadow:var(--shade)}
+.f{background:var(--card);padding:13px 15px}
+.f label{display:block;font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.f .in{display:flex;gap:7px;align-items:stretch}
+.f input,.f textarea,.f select{flex:1;min-width:0;background:var(--card2);
+  border:1px solid var(--line2);border-radius:5px;padding:9px 11px;font:inherit;
+  font-size:15px;color:var(--ink);appearance:none}
+.f textarea{min-height:74px;resize:vertical;line-height:1.5}
+.f input:focus,.f textarea:focus,.f select:focus{outline:0;border-color:var(--accent);
+  background:var(--card);box-shadow:0 0 0 3px rgba(60,93,150,.2)}
+.f .cp{background:var(--accent-bg);border:1px solid var(--accent2);border-radius:5px;
+  color:var(--accent);font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;padding:0 9px;cursor:pointer;white-space:nowrap}
+.f .cp:hover{background:var(--accent);color:#fff}
+.f .h{font-size:12.5px;color:var(--ink3);margin-top:6px;line-height:1.45}
+.f.wide{grid-column:1 / -1}
+.f.block b{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:8.5px;
+  font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--stop);
+  background:var(--stop-bg);border:1px solid var(--stop-line);border-radius:2px;
+  padding:2px 6px;margin-top:7px}
+
+/* tracker */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--card);
+  box-shadow:var(--shade)}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:960px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:11px 12px;border-bottom:2px solid var(--line2);background:var(--card2);
+  white-space:nowrap;position:sticky;top:0}
+td{padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+td.nm{font-weight:600;min-width:190px;line-height:1.35}
+td.nm i{display:block;font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);margin-top:3px}
+td.mn{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink3);white-space:nowrap}
+tbody tr.phase-head td{background:var(--card2);padding:9px 12px}
+tbody tr.phase-head b{font-family:"Barlow Condensed",sans-serif;font-size:16px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.02em}
+tbody tr.phase-head span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-left:10px}
+td select,td input{width:100%;background:var(--card2);border:1px solid var(--line2);
+  border-radius:5px;padding:7px 9px;font:inherit;font-size:13.5px;color:var(--ink);appearance:none}
+td select{min-width:112px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+td input:focus,td select:focus{outline:0;border-color:var(--accent);background:var(--card)}
+tr[data-status="live"] td select{background:var(--ok-bg);border-color:var(--ok-line);color:var(--ok)}
+tr[data-status="recorded"] td select{background:var(--ok-bg);border-color:var(--ok);color:var(--ok)}
+tr[data-status="verifying"] td select{background:var(--wait-bg);border-color:var(--wait-line);color:var(--wait)}
+tr[data-status="submitted"] td select{background:var(--accent-bg);border-color:var(--accent2);color:var(--accent)}
+tr[data-status="blocked"] td select{background:var(--stop-bg);border-color:var(--stop-line);color:var(--stop)}
+
+.call{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:4px;padding:17px 19px;margin:20px 0;box-shadow:var(--shade)}
+.call.stop{border-left-color:var(--stop)}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  text-transform:uppercase;margin:0 0 8px;letter-spacing:.016em}
+.call p{margin:0 0 9px;font-size:15px;color:var(--ink2)}
+.call p:last-child{margin-bottom:0}
+.call strong{color:var(--ink)}
+
+.foot{padding:24px 0 44px;font-size:13px;color:var(--ink3)}
+.foot p{margin:0 0 8px;max-width:78ch}
+[hidden]{display:none !important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms !important}}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="lock">
+      <div class="mk">Black<span>&nbsp;Ops</span>&nbsp;Cleaning</div>
+      <div class="meta">Working sheets<br>Citations, workstream 3</div>
+    </div>
+    <h1>Reference sheet<br>and tracker</h1>
+    <p class="lede">Fill the reference sheet once. Every listing copies from it and nobody ever
+      types from memory. The tracker is the handover deliverable: the client owns it, and it is
+      what makes forty listings auditable instead of a claim.</p>
+  </div>
+</header>
+
+<div class="bar"><div class="wrap">
+  <div class="tabs" role="tablist">
+    <button role="tab" id="t-ref" aria-controls="p-ref" aria-selected="true">Reference sheet</button>
+    <button role="tab" id="t-trk" aria-controls="p-trk" aria-selected="false">Tracker</button>
+  </div>
+  <span class="meter"><i id="meterfill"></i></span>
+  <span class="stat" id="statline">0 filled</span>
+  <span class="savenote" id="savenote">Local only</span>
+</div></div>
+
+<div class="wrap">
+
+<!-- ═════════ REFERENCE SHEET ═════════ -->
+<div id="p-ref" role="tabpanel" aria-labelledby="t-ref">
+<section>
+  <h2>The locked reference sheet</h2>
+  <p class="body">Phase 0 of the runbook. Nothing gets filed until every field with a blocker
+    tag is answered. Each field has a copy button, because the whole point is that the same
+    characters land on all forty listings.</p>
+
+  <div class="call stop">
+    <h4>Three fields decide everything else</h4>
+    <p>The legal name, the phone number and the hours go on every listing. Change one after
+      filing and forty listings have to be edited by hand. <strong>Get the client to confirm
+      these three in writing before phase 2 starts.</strong></p>
+  </div>
+
+  <h3>Identity</h3>
+  <div class="fields">
+    <div class="f block"><label for="r-name">Legal name, exactly as it will appear</label>
+      <div class="in"><input id="r-name" data-ref="legalName" value="" placeholder="Black Ops Cleaning Company LLC"><button type="button" class="cp">Copy</button></div>
+      <div class="h">With or without LLC. Pick one and never vary it.</div>
+      <b>Blocks every listing</b></div>
+    <div class="f"><label for="r-short">Short name, for tight fields</label>
+      <div class="in"><input id="r-short" data-ref="shortName" value="" placeholder="Black Ops Cleaning"><button type="button" class="cp">Copy</button></div></div>
+    <div class="f"><label for="r-year">Year started trading</label>
+      <div class="in"><input id="r-year" data-ref="yearFounded" value="" placeholder="2019"><button type="button" class="cp">Copy</button></div>
+      <div class="h">Appears on most listings. Consistency matters more than the number.</div></div>
+    <div class="f"><label for="r-owner">Owner name</label>
+      <div class="in"><input id="r-owner" data-ref="ownerName" value="" placeholder="Amilcar Ayala"><button type="button" class="cp">Copy</button></div></div>
+    <div class="f"><label for="r-title">Owner title</label>
+      <div class="in"><input id="r-title" data-ref="ownerTitle" value="" placeholder="Owner and Founder"><button type="button" class="cp">Copy</button></div></div>
+  </div>
+
+  <h3>Address and contact</h3>
+  <div class="fields">
+    <div class="f block"><label for="r-street">Street</label>
+      <div class="in"><input id="r-street" data-ref="street" value="" placeholder="121 Talbott St"><button type="button" class="cp">Copy</button></div>
+      <div class="h">Write Suite or Ste one way and keep it. This is where drift usually starts.</div>
+      <b>Missing from the website today</b></div>
+    <div class="f"><label for="r-city">City</label>
+      <div class="in"><input id="r-city" data-ref="city" value="" placeholder="Rockville"><button type="button" class="cp">Copy</button></div></div>
+    <div class="f"><label for="r-state">State</label>
+      <div class="in"><input id="r-state" data-ref="stateCode" value="" placeholder="MD"><button type="button" class="cp">Copy</button></div></div>
+    <div class="f"><label for="r-zip">Zip</label>
+      <div class="in"><input id="r-zip" data-ref="zip" value="" placeholder="20852"><button type="button" class="cp">Copy</button></div></div>
+    <div class="f wide"><label for="r-full">Full address, one line, the exact string to paste</label>
+      <div class="in"><input id="r-full" data-ref="addressFull" value="" placeholder="121 Talbott St, Rockville, MD 20852"><button type="button" class="cp">Copy</button></div></div>
+    <div class="f block"><label for="r-listable">Is the address publicly listable</label>
+      <div class="in"><select id="r-listable" data-ref="addressListable">
+        <option value="">Not decided</option><option value="yes">Yes, show it</option>
+        <option value="no">No, service area business</option></select></div>
+      <div class="h">If it is a home address the owner may want it hidden. This changes the Google setup type.</div>
+      <b>Blocks Google Business Profile</b></div>
+    <div class="f block"><label for="r-phone">Phone, one number everywhere</label>
+      <div class="in"><input id="r-phone" data-ref="phone" value="" placeholder="(301) 555 0142"><button type="button" class="cp">Copy</button></div>
+      <div class="h">Call tracking sits behind this number, never in front of it.</div>
+      <b>Blocks every listing</b></div>
+    <div class="f block"><label for="r-email">Email on the company domain</label>
+      <div class="in"><input id="r-email" data-ref="email" value="" placeholder="office@blackopscleaningco.com"><button type="button" class="cp">Copy</button></div>
+      <div class="h">Free mail addresses get rejected by several directories.</div>
+      <b>Blocks LinkedIn, Yelp, verified directories</b></div>
+    <div class="f wide"><label for="r-url">Website URL, one canonical form</label>
+      <div class="in"><input id="r-url" data-ref="url" value="" placeholder="https://blackopscleaningco.com"><button type="button" class="cp">Copy</button></div>
+      <div class="h">Pick https, pick www or no www, then never vary it.</div></div>
+  </div>
+
+  <h3>Hours</h3>
+  <div class="fields">
+    <div class="f block"><label for="r-247">The 24 hour decision</label>
+      <div class="in"><select id="r-247" data-ref="alwaysOpen">
+        <option value="">Not answered</option>
+        <option value="yes">Yes, 24 hours, emergency line answered</option>
+        <option value="no">No, standard hours only</option></select></div>
+      <div class="h">Every biohazard competitor here advertises 24/7. If the answer is no, the emergency pages do not get built either.</div>
+      <b>File nothing until this is answered</b></div>
+    <div class="f"><label for="r-hrs-week">Weekday hours</label>
+      <div class="in"><input id="r-hrs-week" data-ref="hoursWeekday" value="" placeholder="Monday to Friday, 8:00 to 18:00"><button type="button" class="cp">Copy</button></div></div>
+    <div class="f"><label for="r-hrs-sat">Weekend hours</label>
+      <div class="in"><input id="r-hrs-sat" data-ref="hoursWeekend" value="" placeholder="Saturday 9:00 to 14:00, Sunday closed"><button type="button" class="cp">Copy</button></div></div>
+  </div>
+
+  <h3>Categories and description</h3>
+  <div class="fields">
+    <div class="f block"><label for="r-cat1">Primary category</label>
+      <div class="in"><input id="r-cat1" data-ref="categoryPrimary" value="" placeholder="Commercial cleaning service"><button type="button" class="cp">Copy</button></div>
+      <div class="h">Researched against the three businesses ranking above you, not guessed. Strongest single field on a Google profile.</div>
+      <b>Do the research before filling this</b></div>
+    <div class="f wide"><label for="r-cat2">Secondary categories</label>
+      <div class="in"><textarea id="r-cat2" data-ref="categorySecondary" placeholder="Janitorial service&#10;Biohazard cleanup service&#10;Water damage restoration service"></textarea><button type="button" class="cp">Copy</button></div></div>
+    <div class="f wide"><label for="r-d150">Description, short, around 150 characters</label>
+      <div class="in"><textarea id="r-d150" data-ref="desc150" placeholder="Veteran owned commercial and biohazard cleaning in Rockville MD. ISSA and GBAC certified. 24 hour emergency response across Montgomery County."></textarea><button type="button" class="cp">Copy</button></div></div>
+    <div class="f wide"><label for="r-d250">Description, medium, around 250 characters</label>
+      <div class="in"><textarea id="r-d250" data-ref="desc250" placeholder=""></textarea><button type="button" class="cp">Copy</button></div></div>
+    <div class="f wide"><label for="r-d750">Description, long, around 750 characters</label>
+      <div class="in"><textarea id="r-d750" data-ref="desc750" placeholder=""></textarea><button type="button" class="cp">Copy</button></div>
+      <div class="h">Directories cap at different limits. Truncating a long one mid sentence looks careless.</div></div>
+    <div class="f wide"><label for="r-services">All eleven services, one per line</label>
+      <div class="in"><textarea id="r-services" data-ref="services" placeholder="Commercial janitorial and office cleaning&#10;Medical and healthcare facility cleaning&#10;Government and federal facility cleaning&#10;Biohazard remediation&#10;Crime scene and trauma cleanup&#10;Unattended death cleanup&#10;Hoarding cleanup&#10;Sewage backup and decontamination&#10;24/7 emergency cleaning response&#10;Disinfection and infection control&#10;Electrostatic disinfection"></textarea><button type="button" class="cp">Copy</button></div></div>
+    <div class="f wide"><label for="r-areas">Service area towns, one per line</label>
+      <div class="in"><textarea id="r-areas" data-ref="serviceAreas" placeholder="Rockville MD&#10;North Bethesda MD&#10;Bethesda MD&#10;Gaithersburg MD"></textarea><button type="button" class="cp">Copy</button></div>
+      <div class="h">Must be the same list as the town pages on the site.</div></div>
+  </div>
+
+  <h3>Registration and credentials</h3>
+  <div class="fields">
+    <div class="f block"><label for="r-ein">EIN</label>
+      <div class="in"><input id="r-ein" data-ref="ein" value="" placeholder="From the client"><button type="button" class="cp">Copy</button></div>
+      <b>Blocks BBB, aggregators</b></div>
+    <div class="f block"><label for="r-licence">Maryland licence number</label>
+      <div class="in"><input id="r-licence" data-ref="licence" value="" placeholder="From the client"><button type="button" class="cp">Copy</button></div>
+      <b>Blocks BBB, chambers</b></div>
+    <div class="f"><label for="r-uei">SAM.gov UEI</label>
+      <div class="in"><input id="r-uei" data-ref="uei" value="PMPPFTB7CCX4"><button type="button" class="cp">Copy</button></div>
+      <div class="h">Already registered. Confirm it has not lapsed, registration expires annually.</div></div>
+    <div class="f"><label for="r-naics">NAICS codes</label>
+      <div class="in"><input id="r-naics" data-ref="naics" value="561720" placeholder="561720"><button type="button" class="cp">Copy</button></div>
+      <div class="h">Veteran and government directories match buyers against these.</div></div>
+    <div class="f block"><label for="r-issa">ISSA membership number</label>
+      <div class="in"><input id="r-issa" data-ref="issa" value="" placeholder="From the client"><button type="button" class="cp">Copy</button></div>
+      <b>Check the directory first, it may already exist</b></div>
+    <div class="f block"><label for="r-gbac">GBAC certificate number</label>
+      <div class="in"><input id="r-gbac" data-ref="gbac" value="" placeholder="From the client"><button type="button" class="cp">Copy</button></div>
+      <b>Check the directory first, it may already exist</b></div>
+    <div class="f wide block"><label for="r-ins">Insurance carrier and policy numbers</label>
+      <div class="in"><input id="r-ins" data-ref="insurance" value="" placeholder="General liability and workers comp"><button type="button" class="cp">Copy</button></div>
+      <div class="h">Get the certificate as a PDF, not a screenshot.</div>
+      <b>Blocks BBB, RIA, chambers</b></div>
+    <div class="f block"><label for="r-vet">Veteran status wording</label>
+      <div class="in"><select id="r-vet" data-ref="veteranWording">
+        <option value="">Not set</option>
+        <option value="owned">Veteran owned</option>
+        <option value="certified">Certified veteran owned, VOSB</option>
+        <option value="sdvosb">Service disabled veteran owned, SDVOSB</option></select></div>
+      <div class="h">Until SBA certification completes, the honest wording is veteran owned. Do not write certified before it is true.</div>
+      <b>DD-214 required for the veteran directories</b></div>
+    <div class="f"><label for="r-ddform">DD-214 received</label>
+      <div class="in"><select id="r-ddform" data-ref="dd214">
+        <option value="">Not yet</option><option value="yes">Yes, on file</option>
+        <option value="na">Client declined to share</option></select></div></div>
+  </div>
+
+  <h3>Assets and social</h3>
+  <div class="fields">
+    <div class="f"><label for="r-logo">Logo, square, 720 by 720 minimum</label>
+      <div class="in"><input id="r-logo" data-ref="logoSquare" value="" placeholder="File path or link"><button type="button" class="cp">Copy</button></div></div>
+    <div class="f"><label for="r-logoh">Logo, horizontal</label>
+      <div class="in"><input id="r-logoh" data-ref="logoWide" value="" placeholder="File path or link"><button type="button" class="cp">Copy</button></div></div>
+    <div class="f"><label for="r-cover">Cover image, 16 by 9, 1440 by 720 up</label>
+      <div class="in"><input id="r-cover" data-ref="cover" value="" placeholder="A real job, not stock"><button type="button" class="cp">Copy</button></div></div>
+    <div class="f"><label for="r-headshot">Owner headshot</label>
+      <div class="in"><input id="r-headshot" data-ref="headshot" value="" placeholder="Chest up, plain background"><button type="button" class="cp">Copy</button></div></div>
+    <div class="f block"><label for="r-photos">Job photographs collected</label>
+      <div class="in"><input id="r-photos" data-ref="photoCount" value="" placeholder="0 of 20"><button type="button" class="cp">Copy</button></div>
+      <div class="h">Feeds the Google profile, the town pages and the service pages.</div>
+      <b>Blocks the Google photo routine and every town page</b></div>
+    <div class="f"><label for="r-fb">Facebook, after the merge</label>
+      <div class="in"><input id="r-fb" data-ref="facebook" value="" placeholder="One URL, not two"><button type="button" class="cp">Copy</button></div></div>
+    <div class="f"><label for="r-ig">Instagram</label>
+      <div class="in"><input id="r-ig" data-ref="instagram" value=""><button type="button" class="cp">Copy</button></div></div>
+    <div class="f"><label for="r-li">LinkedIn company page</label>
+      <div class="in"><input id="r-li" data-ref="linkedin" value="" placeholder="Created in phase 4"><button type="button" class="cp">Copy</button></div></div>
+    <div class="f wide"><label for="r-google">Google account that owns the listings</label>
+      <div class="in"><input id="r-google" data-ref="googleAccount" value="" placeholder="Business account, registered in the client's name"><button type="button" class="cp">Copy</button></div>
+      <div class="h">Create every account in the client's name from the start. Some directories cannot transfer ownership later.</div></div>
+  </div>
+</section>
+</div>
+
+<!-- ═════════ TRACKER ═════════ -->
+<div id="p-trk" role="tabpanel" aria-labelledby="t-trk" hidden>
+<section>
+  <h2>Listing tracker</h2>
+  <p class="body">One row per listing, ordered by the runbook's filing phases. A listing is not
+    done when it is submitted, it is done when it renders publicly and is recorded here with
+    its account. Check the live URL in a private window: if it needs a login to see, it is not
+    live.</p>
+
+  <div class="tw"><table>
+    <thead><tr>
+      <th>Listing</th><th>Cost</th><th>Verification</th><th>Status</th>
+      <th>Live URL</th><th>Account used</th><th>Notes</th>
+    </tr></thead>
+    <tbody id="trkbody"></tbody>
+  </table></div>
+
+  <div class="call">
+    <h4>At handover this sheet goes to the client</h4>
+    <p>Every account is registered in their name and every login is recorded here. A perfectly
+      built set of listings the client cannot access is not a deliverable. This is what makes
+      the no lock-in promise in the proposal real.</p>
+  </div>
+</section>
+</div>
+
+</div>
+
+<div class="wrap">
+  <div class="foot">
+    <p>Field values are saved into this page itself, so they follow the link on any device and
+      survive a browser reset. Anyone you share the link with can read them, so keep passwords
+      out of it. Record account names here and store passwords in a password manager.</p>
+    <p>Wait times and verification methods are typical rather than quoted. Confirm each at
+      filing time.</p>
+  </div>
+</div>
+
+<script type="application/json" id="state">{"ref":{},"rows":{}}</script>
+<script>
+(function () {
+  'use strict';
+
+  var LISTINGS = [
+    ['PHASE 2', 'Google Business Profile, submit day one'],
+    ['gbp', 'Google Business Profile', 'Free', 'Video or postcard'],
+    ['PHASE 3', 'Repairs, before any new filing'],
+    ['fb-merge', 'Facebook, merge the two pages', 'Free', 'Admin on both'],
+    ['chamber-fix', 'Greater Rockville Chamber, repair', 'Paid already', 'Member login'],
+    ['pegbo', 'Pegbo, claim the listing', 'Free', 'Claim flow'],
+    ['angi-fix', 'Angi, correct details', 'Free', 'Existing login'],
+    ['homeadvisor-fix', 'HomeAdvisor, correct details', 'Free', 'Existing login'],
+    ['maps-fix', 'Website map links, repoint', 'Free', 'Site edit'],
+    ['PHASE 4', 'Tier one core'],
+    ['yelp', 'Yelp', 'Free', 'Phone code'],
+    ['bing', 'Bing Places', 'Free', 'Import from Google'],
+    ['apple', 'Apple Business Connect', 'Free', 'Apple ID'],
+    ['linkedin', 'LinkedIn company page', 'Free', 'Domain email'],
+    ['PHASE 5', 'Aggregators, slow to propagate'],
+    ['dataaxle', 'Data Axle', 'Free or low', 'Submission'],
+    ['localeze', 'Localeze', 'Free or low', 'Submission'],
+    ['PHASE 6', 'Credential gated, the highest value set'],
+    ['vob', 'VeteranOwnedBusiness.com', 'Free', 'DD-214'],
+    ['sdvob', 'SDVOB Directory', 'Free', 'DD-214'],
+    ['buyveteran', 'Buy Veteran', 'Free', 'DD-214'],
+    ['vetcert', 'SBA VetCert, VOSB or SDVOSB', 'Free once certified', 'Full certification'],
+    ['issa', 'ISSA member directory', 'In membership', 'Member login'],
+    ['gbac', 'GBAC directory', 'In membership', 'Certificate number'],
+    ['ria', 'Restoration Industry Association', 'Paid', 'Application plus COI'],
+    ['bbb', 'Better Business Bureau', 'Paid, tiered', 'Human review'],
+    ['mocochamber', 'Montgomery County Chamber', 'Paid', 'Membership'],
+    ['PHASE 7', 'Local and general volume'],
+    ['redi', 'Rockville Economic Development, REDI', 'Free', 'Submission'],
+    ['explorerockville', 'ExploreRockville.org', 'Free or low', 'Submission'],
+    ['visitmoco', 'Visit Montgomery', 'Free or low', 'Submission'],
+    ['nextdoor', 'Nextdoor', 'Free', 'Address verification'],
+    ['thumbtack', 'Thumbtack, list only', 'Free to list', 'Email'],
+    ['manta', 'Manta', 'Free', 'Email'],
+    ['n49', 'n49', 'Free', 'Email'],
+    ['yahoo', 'Yahoo Local', 'Free', 'Email'],
+    ['foursquare', 'Foursquare', 'Free', 'Email'],
+    ['yellowpages', 'Yellow Pages', 'Free', 'Email'],
+    ['superpages', 'Superpages', 'Free', 'Email'],
+    ['hotfrog', 'Hotfrog', 'Free', 'Email'],
+    ['cylex', 'Cylex', 'Free', 'Email'],
+    ['merchantcircle', 'MerchantCircle', 'Free', 'Email'],
+    ['brownbook', 'Brownbook', 'Free', 'Email'],
+    ['cleanerin', 'cleanerin.com', 'Free', 'Email'],
+    ['cleannation', 'thecleannation.com', 'Free', 'Email'],
+    ['usacleaning', 'usacleaningcompany.com', 'Free', 'Email'],
+    ['trustindex', 'TrustIndex', 'Free', 'Email']
+  ];
+
+  var STATUSES = [
+    ['', 'Not started'], ['blocked', 'Blocked'], ['submitted', 'Submitted'],
+    ['verifying', 'Verifying'], ['live', 'Live'], ['recorded', 'Recorded']
+  ];
+
+  var stateEl = document.getElementById('state');
+  var state;
+  try { state = JSON.parse(stateEl.textContent) || {}; } catch (e) { state = {}; }
+  if (!state.ref) state.ref = {};
+  if (!state.rows) state.rows = {};
+
+  var artifactApi = null;
+  var saveNote = document.getElementById('savenote');
+  var publishTimer = null;
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  /* ── build the tracker rows from the listing table + saved state ── */
+  var body = document.getElementById('trkbody');
+  var html = '';
+  LISTINGS.forEach(function (row) {
+    if (row.length === 2) {
+      html += '<tr class="phase-head"><td colspan="7"><b>' + esc(row[0]) +
+        '</b><span>' + esc(row[1]) + '</span></td></tr>';
+      return;
+    }
+    var id = row[0], saved = state.rows[id] || {};
+    var opts = STATUSES.map(function (s) {
+      return '<option value="' + s[0] + '"' +
+        (String(saved.status || '') === s[0] ? ' selected' : '') + '>' + esc(s[1]) + '</option>';
+    }).join('');
+    html += '<tr data-row="' + esc(id) + '" data-status="' + esc(saved.status || '') + '">' +
+      '<td class="nm">' + esc(row[1]) + '</td>' +
+      '<td class="mn">' + esc(row[2]) + '</td>' +
+      '<td class="mn">' + esc(row[3]) + '</td>' +
+      '<td><select data-field="status" aria-label="Status for ' + esc(row[1]) + '">' + opts + '</select></td>' +
+      '<td><input data-field="url" value="' + esc(saved.url) + '" placeholder="Public URL" aria-label="Live URL for ' + esc(row[1]) + '"></td>' +
+      '<td><input data-field="account" value="' + esc(saved.account) + '" placeholder="Email used" aria-label="Account for ' + esc(row[1]) + '"></td>' +
+      '<td><input data-field="notes" value="' + esc(saved.notes) + '" placeholder="" aria-label="Notes for ' + esc(row[1]) + '"></td>' +
+      '</tr>';
+  });
+  body.innerHTML = html;
+
+  /* ── restore reference sheet values ── */
+  var refEls = Array.prototype.slice.call(document.querySelectorAll('[data-ref]'));
+  refEls.forEach(function (el) {
+    var key = el.getAttribute('data-ref');
+    if (Object.prototype.hasOwnProperty.call(state.ref, key)) {
+      el.value = state.ref[key];
+    }
+    syncAttr(el);
+  });
+
+  /* Keep the serialized markup honest: mirror the live value into the
+     attribute so the published document carries it. */
+  function syncAttr(el) {
+    var tag = el.tagName;
+    if (tag === 'TEXTAREA') {
+      el.textContent = el.value;
+    } else if (tag === 'SELECT') {
+      Array.prototype.forEach.call(el.options, function (o) {
+        if (o.value === el.value) o.setAttribute('selected', 'selected');
+        else o.removeAttribute('selected');
+      });
+    } else {
+      el.setAttribute('value', el.value);
+    }
+  }
+
+  function meter() {
+    var refDone = refEls.filter(function (el) { return el.value.trim() !== ''; }).length;
+    var rows = Object.keys(state.rows).filter(function (k) {
+      var s = state.rows[k].status;
+      return s === 'live' || s === 'recorded';
+    }).length;
+    var total = LISTINGS.filter(function (r) { return r.length > 2; }).length;
+    var refPct = refEls.length ? refDone / refEls.length : 0;
+    var rowPct = total ? rows / total : 0;
+    document.getElementById('meterfill').style.width = Math.round(((refPct + rowPct) / 2) * 100) + '%';
+    document.getElementById('statline').textContent =
+      refDone + ' of ' + refEls.length + ' fields, ' + rows + ' of ' + total + ' listings live';
+  }
+
+  function schedulePublish() {
+    if (!artifactApi) return;
+    saveNote.textContent = 'Saving';
+    saveNote.classList.remove('on');
+    clearTimeout(publishTimer);
+    publishTimer = setTimeout(function () {
+      stateEl.textContent = JSON.stringify(state);
+      var doc = '<!doctype html>\n' + document.documentElement.outerHTML;
+      artifactApi.publish(doc).then(function () {
+        saveNote.textContent = 'Saved';
+        saveNote.classList.add('on');
+      }, function () {
+        saveNote.textContent = 'Not saved';
+        saveNote.classList.remove('on');
+      });
+    }, 1400);
+  }
+
+  document.addEventListener('input', function (e) {
+    var el = e.target;
+    if (el.hasAttribute && el.hasAttribute('data-ref')) {
+      state.ref[el.getAttribute('data-ref')] = el.value;
+      syncAttr(el);
+      meter();
+      schedulePublish();
+      return;
+    }
+    var tr = el.closest && el.closest('[data-row]');
+    if (tr && el.hasAttribute('data-field')) {
+      var id = tr.getAttribute('data-row');
+      if (!state.rows[id]) state.rows[id] = {};
+      state.rows[id][el.getAttribute('data-field')] = el.value;
+      if (el.getAttribute('data-field') === 'status') tr.setAttribute('data-status', el.value);
+      syncAttr(el);
+      meter();
+      schedulePublish();
+    }
+  });
+  /* copy buttons */
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest && e.target.closest('.cp');
+    if (!btn) return;
+    var field = btn.parentNode.querySelector('input, textarea');
+    if (!field || !field.value) { btn.textContent = 'Empty'; }
+    else if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(field.value).then(
+        function () { btn.textContent = 'Copied'; },
+        function () { btn.textContent = 'Select it'; }
+      );
+    } else { btn.textContent = 'Select it'; }
+    setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+  });
+
+  /* tabs */
+  var tabs = [document.getElementById('t-ref'), document.getElementById('t-trk')];
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+    });
+  });
+
+  meter();
+
+  /* Light up saving if the viewer can publish. The page works without it. */
+  if (window.claude && typeof window.claude.use === 'function') {
+    window.claude.use('artifact').then(function (api) {
+      if (!api) return;
+      artifactApi = api;
+      saveNote.textContent = 'Saves to this page';
+    }, function () { /* stays local only */ });
+  }
+})();
+</script>

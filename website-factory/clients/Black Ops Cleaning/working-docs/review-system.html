@@ -1,0 +1,672 @@
+<title>The Review Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#F0EFEB; --card:#FFFFFF; --card2:#E6E4DD; --card3:#D8D5CC;
+  --line:#D3D0C7; --line2:#B0ACA1;
+  --ink:#191A18; --ink2:#4E5350; --ink3:#7E837F;
+  --accent:#4A5D2F; --accent2:#6B8544; --accent-bg:#E3EAD7;
+  --ok:#2C6B4C; --ok-bg:#DEEBE3; --ok-line:#93BBA3;
+  --warn:#8A5A11; --warn-bg:#F4E7CC; --warn-line:#D0AF6D;
+  --stop:#9B3527; --stop-bg:#F5E1DC; --stop-line:#D2A094;
+  --band:#191A18; --bandink:#F0EFEB;
+  --shade:0 1px 2px rgba(25,26,24,.05), 0 14px 34px -26px rgba(25,26,24,.5);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0D0E0C; --card:#161814; --card2:#1E211B; --card3:#282C24;
+    --line:#292D26; --line2:#41473C; --ink:#E9EBE7; --ink2:#A5ABA4; --ink3:#757B74;
+    --accent:#A3C46E; --accent2:#BBD68F; --accent-bg:#1C2413;
+    --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+    --warn:#D8A44E; --warn-bg:#2A2110; --warn-line:#66501F;
+    --stop:#E08874; --stop-bg:#2B1512; --stop-line:#64322A;
+    --band:#050604; --bandink:#E9EBE7;
+    --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0D0E0C; --card:#161814; --card2:#1E211B; --card3:#282C24;
+  --line:#292D26; --line2:#41473C; --ink:#E9EBE7; --ink2:#A5ABA4; --ink3:#757B74;
+  --accent:#A3C46E; --accent2:#BBD68F; --accent-bg:#1C2413;
+  --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+  --warn:#D8A44E; --warn-bg:#2A2110; --warn-line:#66501F;
+  --stop:#E08874; --stop-bg:#2B1512; --stop-line:#64322A;
+  --band:#050604; --bandink:#E9EBE7;
+  --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1010px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--card2);
+  padding:1px 5px;border-radius:2px}
+
+.mast{background:var(--band);color:var(--bandink)}
+.mast .wrap{padding:28px 22px 30px}
+.lock{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;
+  padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.16)}
+.mk{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.mk span{color:var(--accent2)}
+.lock .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.55;font-weight:600;text-align:right}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(33px,6vw,56px);line-height:.97;letter-spacing:-.012em;
+  margin:21px 0 0;text-transform:uppercase;text-wrap:balance}
+.lede{font-size:17.5px;color:rgba(233,235,231,.74);max-width:63ch;margin:15px 0 0}
+
+section{padding:46px 0 4px}
+.shead{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.sno{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12px;
+  color:var(--accent);letter-spacing:.11em;padding-top:7px;flex-shrink:0}
+h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(26px,4vw,37px);line-height:1.03;margin:0;text-transform:uppercase;
+  letter-spacing:-.005em;text-wrap:balance}
+.sdek{color:var(--ink2);font-size:16.5px;max-width:65ch;margin:8px 0 20px 40px}
+@media(max-width:640px){.sdek{margin-left:0}}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;
+  text-transform:uppercase;letter-spacing:.016em;margin:28px 0 11px;
+  padding-bottom:6px;border-bottom:2px solid var(--ink)}
+p.body{color:var(--ink2);font-size:15.5px;max-width:67ch;margin:0 0 14px}
+p.body strong{color:var(--ink)}
+
+.call{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:4px;padding:19px 21px;margin:20px 0;box-shadow:var(--shade);max-width:78ch}
+.call.stop{border-left-color:var(--stop);background:var(--stop-bg);border-color:var(--stop-line)}
+.call.ok{border-left-color:var(--ok)}
+.call.warn{border-left-color:var(--warn)}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;
+  text-transform:uppercase;margin:0 0 9px;letter-spacing:.016em}
+.call p{margin:0 0 10px;font-size:15.5px;color:var(--ink2)}
+.call p:last-child{margin-bottom:0}
+.call strong{color:var(--ink)}
+
+/* script blocks */
+.script{background:var(--card);border:1px solid var(--line);border-radius:4px;
+  box-shadow:var(--shade);overflow:hidden;margin:0 0 16px;max-width:78ch}
+.sh2{background:var(--card2);border-bottom:1px solid var(--line);padding:11px 16px;
+  display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.sh2 .when{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--accent);
+  background:var(--accent-bg);border:1px solid var(--accent2);border-radius:3px;padding:3px 8px}
+.sh2 .who{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--ink3)}
+.sh2 button{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+  background:var(--accent-bg);border:1px solid var(--accent2);border-radius:4px;
+  padding:5px 10px;cursor:pointer}
+.sh2 button:hover{background:var(--accent);color:#fff}
+.sbody{padding:16px 18px;font-size:15.5px;color:var(--ink);line-height:1.6;white-space:pre-wrap}
+.snote{padding:0 18px 15px;font-size:13.5px;color:var(--ink3);line-height:1.5}
+
+/* flow */
+.flow{display:flex;flex-direction:column;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:4px;overflow:hidden;box-shadow:var(--shade);max-width:78ch}
+.step{background:var(--card);padding:15px 18px;display:grid;
+  grid-template-columns:34px 1fr auto;gap:15px;align-items:start}
+.step .n{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;
+  color:var(--accent);padding-top:4px}
+.step .t{font-size:15.5px;font-weight:600;line-height:1.35}
+.step .d{font-size:14.5px;color:var(--ink2);margin-top:5px;line-height:1.5}
+.step .tm{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;
+  color:var(--ink3);white-space:nowrap;background:var(--card2);padding:4px 9px;
+  border-radius:3px;margin-top:2px}
+@media(max-width:600px){.step{grid-template-columns:26px 1fr}.step .tm{grid-column:2}}
+
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--card);
+  box-shadow:var(--shade);margin:14px 0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:580px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:12px 14px;border-bottom:2px solid var(--line2);background:var(--card2);white-space:nowrap}
+td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.lab{font-weight:600}
+td.mn{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink3);white-space:nowrap}
+td.no{color:var(--stop);font-weight:600} td.yes{color:var(--ok);font-weight:600}
+
+ul.tight{margin:10px 0 14px;padding-left:20px;max-width:70ch}
+ul.tight li{margin-bottom:8px;font-size:15.5px;color:var(--ink2);line-height:1.55}
+ul.tight li strong{color:var(--ink)}
+
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:16px 0}
+.col{background:var(--card);border:1px solid var(--line);border-radius:4px;
+  padding:17px 19px;box-shadow:var(--shade)}
+.col.y{border-left:4px solid var(--ok)} .col.n{border-left:4px solid var(--stop)}
+.col h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  text-transform:uppercase;margin:0 0 10px;letter-spacing:.016em}
+.col.y h4{color:var(--ok)} .col.n h4{color:var(--stop)}
+.col ul{margin:0;padding-left:18px}
+.col li{font-size:14.5px;color:var(--ink2);margin-bottom:7px;line-height:1.5}
+.col li strong{color:var(--ink)}
+
+.foot{padding:24px 0 44px;font-size:13px;color:var(--ink3)}
+.foot p{margin:0 0 8px;max-width:78ch}
+.foot b{color:var(--ink2)}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="lock">
+      <div class="mk">Black<span>&nbsp;Ops</span>&nbsp;Cleaning</div>
+      <div class="meta">Review engine<br>Workstream 2</div>
+    </div>
+    <h1>From zero reviews<br>to a system</h1>
+    <p class="lede">Black Ops has zero reviews on every platform. Its Rockville competitors have
+      hundreds. This is the routine that closes that gap: a walkthrough, a QR code the technician
+      shows at handover, a capture page that takes name, mobile and email, and a two message
+      follow up that runs on both channels and then stops.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <div class="shead"><div class="sno">01</div><h2>Two rules the whole system is built on</h2></div>
+  <p class="sdek">Everything below follows from these. They are why the capture page has no
+    rating question on it.</p>
+
+  <div class="call stop">
+    <h4>Rule one, never branch on a rating</h4>
+    <p>Do not ask "how did we do, 1 to 5" and send high scorers to Google while low scorers go
+      somewhere private. That is <strong>review gating</strong>. Google bans it and removes
+      <strong>all</strong> of a business's reviews when it catches it, not just the gated ones.
+      The FTC rule on consumer reviews has covered review suppression since 21 October 2024,
+      with civil penalties around $51,744 per violation.</p>
+    <p>Black Ops is SAM.gov registered and bidding for federal work, so an FTC action against
+      them is a contracting problem, not just a marketing one.</p>
+  </div>
+
+  <div class="call ok">
+    <h4>Rule two, fix it on site, then ask everyone the same way</h4>
+    <p>The technician walks the finished job with the customer and asks whether anything is not
+      right. Anything raised gets fixed there. <strong>That twenty second habit prevents more
+      bad reviews than any filtering ever could,</strong> because it catches the problem while
+      the crew is still standing in the room.</p>
+    <p>Then the ask goes out, to everyone, identically. The capture page offers a public review
+      and a private line to the owner side by side, both equally prominent, and the customer
+      picks. Most unhappy customers choose the private one on their own, which is the outcome
+      you wanted. The difference is that they chose it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">02</div><h2>The target number</h2></div>
+  <p class="sdek">Not a round number. The actual count needed to compete in the map pack for
+    each keyword and town.</p>
+  <p class="body">Reviews do two separate jobs. First, review count and how regularly new ones
+    arrive are among the strongest factors in whether Google shows a business in the map block
+    at all. Second, they decide whether anyone calls: three businesses appear in that block and a
+    facility manager compares three star ratings in about four seconds. At zero reviews you lose
+    that comparison every time, even when you rank.</p>
+
+  <h3>How to work it out</h3>
+  <div class="flow">
+    <div class="step"><div class="n">01</div><div><div class="t">Search each keyword and town in
+      an incognito window</div><div class="d">Commercial cleaning Rockville, janitorial services
+      Bethesda, biohazard cleanup Rockville, and so on down the sitemap.</div></div>
+      <span class="tm">1 hour</span></div>
+    <div class="step"><div class="n">02</div><div><div class="t">Record the three businesses in
+      the map block</div><div class="d">Name, review count, star rating, and roughly how recent
+      the newest reviews are.</div></div><span class="tm">Same hour</span></div>
+    <div class="step"><div class="n">03</div><div><div class="t">Take the lowest of the three,
+      not the highest</div><div class="d">You are not trying to beat the leader. You are trying
+      to displace whoever is third.</div></div><span class="tm">Minutes</span></div>
+    <div class="step"><div class="n">04</div><div><div class="t">That number, plus a margin, is
+      the target</div><div class="d">Record it per keyword. Some towns will need thirty. Some
+      will need eight.</div></div><span class="tm">Minutes</span></div>
+  </div>
+  <div class="call warn">
+    <h4>Recency beats total</h4>
+    <p>A new company with thirty real reviews arriving steadily beats a ten year old company with
+      a half built profile and twelve. This is why the routine matters more than any push, and
+      why the target is a monthly rate rather than a finish line.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">03</div><h2>The QR code and the capture page</h2></div>
+  <p class="sdek">One QR code, printed once, that never changes. It points at a page on the
+    client's own site, which means the destination can be edited without reprinting
+    anything.</p>
+
+  <h3>Why the QR points at your own page, not straight at Google</h3>
+  <ul class="tight">
+    <li><strong>You capture the contact.</strong> A QR straight to Google gets you a review or
+      nothing, and you never learn who the customer was. Through your own page you get name,
+      email and phone, which is what makes follow up possible at all.</li>
+    <li><strong>The destination stays editable.</strong> Stickers on a van and blocks on invoices
+      are printed once. If the Google link changes, or you add BBB later, you edit the page
+      rather than reprint the van.</li>
+    <li><strong>You can measure it.</strong> Scans, form completions and click-throughs to Google
+      are all trackable. A direct QR to Google is a black box.</li>
+  </ul>
+
+  <h3>The capture page</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Element</th><th>Spec</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">URL</td><td class="mn">/thanks/</td></tr>
+      <tr><td class="lab">Heading</td><td>Thanks for having us out today</td></tr>
+      <tr><td class="lab">Sub</td><td>Two ways to tell us how it went. Either one helps.</td></tr>
+      <tr><td class="lab">Fields</td><td>Name, mobile, email. Three fields, nothing else. Job
+        reference prefilled from the QR where the crew uses per-job codes.</td></tr>
+      <tr><td class="lab">Consent line</td><td>Under the fields, plain text, ticked by the
+        customer, not pre-ticked</td></tr>
+      <tr><td class="lab">Two buttons</td><td><b>Leave a public review</b> and <b>Tell us
+        privately</b>. Same size, same weight, side by side. Neither is styled as the
+        preferred one.</td></tr>
+      <tr><td class="lab">No rating question</td><td class="no">Never. Not before the buttons,
+        not after, not as a smiley row.</td></tr>
+      <tr><td class="lab">Mobile first</td><td>Every scan is a phone. Design for a thumb, one
+        screen, no scrolling to reach the buttons.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="script">
+    <div class="sh2"><span class="when">Capture page</span><span class="who">Consent line, under the fields</span>
+      <button type="button" class="cp">Copy</button></div>
+    <div class="sbody">Tick to let us send you a follow up about this job by text and email. We will send at most two messages, we will not pass your details to anyone, and you can reply STOP or click unsubscribe at any time.</div>
+    <div class="snote">Not pre-ticked, and the form still submits without it. If they decline,
+      the follow up sequence does not run for them. In the US, marketing texts need prior
+      express written consent, and every marketing email needs a working unsubscribe. This one
+      line covers both and costs you almost nothing in completions.</div>
+  </div>
+
+  <h3>Where the QR goes</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Placement</th><th>Format</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Technician's phone</td><td>Saved image, full brightness</td><td>The
+        primary route. Customer scans it off the screen at handover.</td></tr>
+      <tr><td class="lab">Job folder left on site</td><td>Printed card, QR plus short link</td>
+        <td>For the customer who is not ready in the moment.</td></tr>
+      <tr><td class="lab">Invoice</td><td>QR block plus short link</td><td>Reaches the person who
+        pays, who on commercial jobs is not the person who let you in.</td></tr>
+      <tr><td class="lab">Van</td><td>Rear panel decal</td><td>Low yield, near zero cost, and it
+        signals that the company expects to be reviewed.</td></tr>
+      <tr><td class="lab">Email signature</td><td>Short link, not the QR</td><td>Nobody scans a
+        QR from a screen they are already reading.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call warn">
+    <h4>Print the QR once, and only once</h4>
+    <p>Test every printed QR from three phones before anything goes to a printer. A dead QR on a
+      van panel is expensive, and nobody reports it, they just do not scan.</p>
+    <p>Keep at least 2cm of clear space around it and print it at 2.5cm square or larger. Below
+      that, older phone cameras start failing in poor light, which is most of a technician's
+      working day.</p>
+  </div>
+
+  <div class="call">
+    <h4>Blocked until the Google profile verifies</h4>
+    <p>The capture page can be built now, but the public review button has nowhere to point until
+      the Google Business Profile is verified. That is the one to three week item in the
+      citations runbook. Submit day one.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">04</div><h2>The sequence, on site then text and email</h2></div>
+  <p class="sdek">Residential and one-off work: biohazard, hoarding, sewage, emergency. The
+    technician runs the on site part. Everything after that is automatic.</p>
+
+  <div class="flow">
+    <div class="step"><div class="n">01</div><div><div class="t">Walkthrough and fix</div>
+      <div class="d">Technician walks the finished job with the customer and asks what is not
+        right. Anything raised gets fixed there and then.</div></div><span class="tm">2 minutes</span></div>
+    <div class="step"><div class="n">02</div><div><div class="t">QR scan, on the technician's
+      phone</div><div class="d">Customer scans, fills in name, mobile and email, ticks consent.
+      Technician does not take the phone or fill it in for them.</div></div><span class="tm">60 seconds</span></div>
+    <div class="step"><div class="n">03</div><div><div class="t">Customer picks a door, or does
+      not</div><div class="d">Public review or private line, both on screen. Plenty will do
+      neither in the moment, which is what the follow up is for.</div></div><span class="tm">On the spot</span></div>
+    <div class="step"><div class="n">04</div><div><div class="t">Text and email, within the hour</div>
+      <div class="d">Both channels, same content, both links.</div></div><span class="tm">1 hour</span></div>
+    <div class="step"><div class="n">05</div><div><div class="t">One reminder, day three</div>
+      <div class="d">Only to people who have not clicked either link. Then it stops
+        permanently.</div></div><span class="tm">Day 3</span></div>
+  </div>
+
+  <h3>The scripts</h3>
+
+  <div class="script">
+    <div class="sh2"><span class="when">Step 1 and 2, on site</span><span class="who">Technician, at completion</span>
+      <button type="button" class="cp">Copy</button></div>
+    <div class="sbody">Before I go, can I walk through it with you? I want to make sure there is nothing you are not happy with while I am still here and can put it right.
+
+[Walk the area. Fix anything raised, there and then.]
+
+Thanks for trusting us with this. One last thing, and it takes about a minute. If you scan this code it lets you tell us how it went, and it means I can send you the paperwork properly.
+
+[Hold up the phone with the QR. Do not take their phone. Do not fill it in for them.]
+
+There are two buttons at the bottom. One posts a public review, the other goes straight to Amilcar privately. Whichever suits you, or neither. No pressure at all.</div>
+    <div class="snote">The technician names both buttons out loud. That is not a formality, it is
+      the thing that makes the private door real rather than decorative, and it is what stops an
+      unhappy customer feeling they have been steered.</div>
+  </div>
+
+  <div class="script">
+    <div class="sh2"><span class="when">Step 2 fallback</span><span class="who">If the customer will not scan</span>
+      <button type="button" class="cp">Copy</button></div>
+    <div class="sbody">No problem at all. Can I take a mobile and an email and send you the link instead? It is the same thing, you can do it whenever suits.
+
+[Write name, mobile and email on the job sheet. Read the consent line out loud and note that they agreed. Enter it into the capture page yourself before you leave the site.]</div>
+    <div class="snote">Consent has to be recorded either way. If the technician enters the
+      details, the job sheet is the record that the customer agreed to be contacted, so it gets
+      photographed and filed like any other job document.</div>
+  </div>
+
+  <div class="script">
+    <div class="sh2"><span class="when">Step 4, hour one</span><span class="who">Text message</span>
+      <button type="button" class="cp">Copy</button></div>
+    <div class="sbody">Hi [name], [tech] from Black Ops Cleaning. Thanks again for today.
+
+Two ways to tell us how it went, whichever suits:
+
+Public review: [short link]
+Privately, straight to Amilcar: [owner number]
+
+Either is genuinely useful. Reply STOP to hear nothing further.</div>
+    <div class="snote">Both routes, equal prominence, no branching, no rating question. STOP
+      handling is required on US marketing texts and it must actually work, not just appear in
+      the message.</div>
+  </div>
+
+  <div class="script">
+    <div class="sh2"><span class="when">Step 4, hour one</span><span class="who">Email, same hour</span>
+      <button type="button" class="cp">Copy</button></div>
+    <div class="sbody">Subject: Thanks for having us out today, [name]
+
+Hi [name],
+
+Thanks for trusting us with the [service] at [property] today. [Tech] has closed the job out and your paperwork is attached: the scope we agreed, the disposal manifest, and the written clearance.
+
+If you have two minutes, it would help us a great deal to hear how it went. Two ways, whichever you prefer:
+
+Leave a public review: [short link]
+Tell us privately: reply to this email, or call Amilcar directly on [owner number]
+
+If something was not right, the second one is the faster route to getting it fixed, and I would genuinely rather hear it from you.
+
+Thanks again,
+Amilcar Ayala
+Owner, Black Ops Cleaning Company
+[phone] | [email]
+
+Unsubscribe: [link]</div>
+    <div class="snote">The email carries the documentation, which is why people open it. The
+      review ask rides along rather than being the reason for the message, and that alone lifts
+      response. Unsubscribe link is required on every marketing email in the US.</div>
+  </div>
+
+  <div class="script">
+    <div class="sh2"><span class="when">Step 5, day three</span><span class="who">Text, then stop</span>
+      <button type="button" class="cp">Copy</button></div>
+    <div class="sbody">Hi [name], [tech] from Black Ops. Just once more in case it got buried: [short link]
+
+If you would rather not, no problem, and I will not message again. Reply STOP to opt out of everything.</div>
+    <div class="snote">Only to people who clicked neither link. One reminder, then it stops
+      permanently. Chasing a third time costs more goodwill than the review is worth.</div>
+  </div>
+
+  <div class="script">
+    <div class="sh2"><span class="when">Step 5, day three</span><span class="who">Email, then stop</span>
+      <button type="button" class="cp">Copy</button></div>
+    <div class="sbody">Subject: One more time, and then I will leave you alone
+
+Hi [name],
+
+Just once more in case the last one got buried.
+
+Public review: [short link]
+Or reply to this email if there is anything you would rather tell me directly.
+
+Either way this is the last you will hear from me about it.
+
+Amilcar
+
+Unsubscribe: [link]</div>
+    <div class="snote">Saying it is the last message and then meaning it is worth more than the
+      review. People remember which companies stopped when they said they would.</div>
+  </div>
+
+  <h3>Suppression rules, which matter more than the scripts</h3>
+  <ul class="tight">
+    <li><strong>Clicked either link, stop the sequence.</strong> Nothing is more irritating than
+      being chased for something you already did.</li>
+    <li><strong>Replied privately, stop the sequence</strong> and route it to Amilcar the same
+      day. Someone who has just told you a problem must not receive a review request two days
+      later.</li>
+    <li><strong>Replied STOP or unsubscribed, stop everything,</strong> across both channels, not
+      just the one they used.</li>
+    <li><strong>No consent ticked, no sequence.</strong> The job still closes normally, they just
+      do not get the follow up.</li>
+    <li><strong>Never contact the same customer about a second job</strong> until at least ninety
+      days have passed.</li>
+  </ul>
+
+  <div class="call warn">
+    <h4>The specialty exception</h4>
+    <p>On trauma, unattended death and crime scene work, <strong>the QR is not produced and the
+      sequence does not run.</strong> Many families will not want to be publicly connected to
+      the job, and an automated review request two days after a death is the worst message this
+      business could send.</p>
+    <p>The rule for the crew: on those jobs, the paperwork email goes out with no review ask in
+      it. If the family has been open and warm throughout, the technician may ask in person,
+      once, gently, and never by text or automation. If there is any doubt, do not ask. That
+      work builds through referrals from funeral directors, property managers and estate
+      solicitors instead, which is slower and worth more.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">05</div><h2>The commercial track, which only Amilcar can do</h2></div>
+  <p class="sdek">Business to business reviews do not come from an automation. They come from a
+    phone call. This is the part of the engagement that cannot be delegated.</p>
+  <p class="body">A janitorial contract has no moment of completion. Nobody feels a rush of
+    gratitude on a Tuesday because the bins were emptied again. So the text sequence above does
+    nothing here, and the first twenty commercial reviews have to come from the owner personally
+    calling clients he has already served.</p>
+
+  <div class="script">
+    <div class="sh2"><span class="when">Owner call</span><span class="who">Amilcar, to an existing client</span>
+      <button type="button" class="cp">Copy</button></div>
+    <div class="sbody">Hi [name], it's Amilcar from Black Ops. Nothing wrong, this is not a problem call.
+
+Two things. First, is there anything about how we are servicing your building that you would change? I would rather hear it from you than assume.
+
+[Listen. Write it down. Fix whatever comes up, and tell them when it is fixed.]
+
+Second, a favour. We are building up our Google profile and reviews from facility managers carry more weight than anything I could write myself. If you would be willing to leave a couple of lines, I will text you the link now. And if you would rather not, that is genuinely fine and it changes nothing.</div>
+    <div class="snote">The service question comes first and it is real. It surfaces problems
+      before they become churn, and it means the ask is not the only reason for the call.</div>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Rule</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Five calls a week, not twenty in one day</td><td>Reviews that arrive in
+        a burst read as bought, and Google filters them</td></tr>
+      <tr><td class="lab">Call, do not email</td><td>A facility manager ignores the email and
+        takes the call</td></tr>
+      <tr><td class="lab">Text the link during the call</td><td>While you are still on the phone
+        and it is top of mind</td></tr>
+      <tr><td class="lab">Never offer anything in return</td><td>Sentiment-conditioned incentives
+        are prohibited under the FTC rule</td></tr>
+      <tr><td class="lab">Log every call</td><td>Who was asked, when, what they said about the
+        service. That log is worth more than the reviews</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">06</div><h2>Replies, to every review</h2></div>
+  <p class="sdek">Within 24 hours, naming the service and the town, because those replies are
+    indexed too. Templates are starting points, not scripts to paste verbatim.</p>
+
+  <div class="script">
+    <div class="sh2"><span class="when">Five star</span><span class="who">Reply within 24 hours</span>
+      <button type="button" class="cp">Copy</button></div>
+    <div class="sbody">Thank you [name]. It was a pleasure working with you on the [service] at your [property type] in [town]. If anything comes up down the line, you know where we are.
+
+Amilcar, Black Ops Cleaning</div>
+    <div class="snote">Naming the service and the town in the reply is a free relevance signal on
+      a page Google already reads. Vary the wording, never paste the same reply twice.</div>
+  </div>
+
+  <div class="script">
+    <div class="sh2"><span class="when">Three star</span><span class="who">Reply within 24 hours</span>
+      <button type="button" class="cp">Copy</button></div>
+    <div class="sbody">Thank you for taking the time, [name], and for being straight with me about [the specific issue]. You are right that [acknowledge it plainly].
+
+Here is what we have changed since: [the actual change].
+
+If you would give us another go on the [service], I will handle the scheduling personally. Either way, thank you for telling us.
+
+Amilcar, Black Ops Cleaning</div>
+    <div class="snote">A three star with a specific complaint is the most useful review the
+      business will get. Answer the complaint, not the rating.</div>
+  </div>
+
+  <div class="script">
+    <div class="sh2"><span class="when">One star</span><span class="who">Reply within 24 hours</span>
+      <button type="button" class="cp">Copy</button></div>
+    <div class="sbody">[Name], I am sorry. This is not the standard we hold ourselves to and I am not going to argue with you in public about it.
+
+I would like to understand what happened and put it right. My direct number is [owner number] and I will pick up.
+
+Amilcar, owner, Black Ops Cleaning</div>
+    <div class="snote">Short, no defensiveness, no version of events, and it moves the
+      conversation off a public page. Every prospective customer who reads that thread is judging
+      the reply, not the review.</div>
+  </div>
+
+  <div class="call stop">
+    <h4>Three things never to do in a reply</h4>
+    <p><strong>Never dispute the facts in public.</strong> Even when you are right, you look
+      worse than the complaint did.</p>
+    <p><strong>Never mention anything about the job that identifies the customer,</strong>
+      particularly on trauma, biohazard or hoarding work. That is a privacy failure and on a
+      health related job it can be a serious one.</p>
+    <p><strong>Never threaten legal action to get a review removed.</strong> Unfounded legal
+      threats to suppress a review are specifically prohibited under the FTC rule.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">07</div><h2>Pace, channels and what to measure</h2></div>
+
+  <h3>Pace</h3>
+  <ul class="tight">
+    <li><strong>Five to ten a month reads as real.</strong> Forty in one week reads as bought,
+      and Google filters it.</li>
+    <li><strong>Steady beats sudden, permanently.</strong> Recency is a ranking factor, so a
+      business that stops for three months goes backwards even if the total is high.</li>
+    <li><strong>Never stop once the target is hit.</strong> The target is a rate, not a
+      finish line.</li>
+  </ul>
+
+  <h3>Channels, in order</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Channel</th><th>Solicit</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Google Business Profile</td><td class="yes">Yes</td><td>The one that
+        decides map pack placement. Everything else is secondary.</td></tr>
+      <tr><td class="lab">Facebook</td><td class="yes">Yes</td><td>Only after the two duplicate
+        pages are merged. Reviews split across duplicates are wasted.</td></tr>
+      <tr><td class="lab">BBB</td><td class="yes">Yes</td><td>Carries weight with commercial and
+        government buyers specifically.</td></tr>
+      <tr><td class="lab">Yelp</td><td class="no">Never</td><td>Yelp filters solicited reviews
+        aggressively and it can affect the listing. Claim it, keep it accurate, leave it
+        alone.</td></tr>
+      <tr><td class="lab">Industry directories</td><td class="yes">Where offered</td><td>ISSA,
+        GBAC and the veteran directories, once those listings exist.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>What to measure, monthly</h3>
+  <ul class="tight">
+    <li><strong>New reviews per platform,</strong> against the target rate</li>
+    <li><strong>Ask rate.</strong> Jobs completed versus asks sent. If that gap is wide the
+      routine is not running, whatever the review count says</li>
+    <li><strong>Scan rate.</strong> Jobs completed versus QR scans. Under half means the
+      technicians are skipping step 2, and that is a coaching problem not a copy problem</li>
+    <li><strong>Capture rate.</strong> Scans versus completed forms. Under seventy percent means
+      the form is asking too much or the consent line is scaring people</li>
+    <li><strong>Conversion.</strong> Asks sent versus reviews received. Under ten percent means
+      the ask is landing wrong or landing late</li>
+    <li><strong>Reply time.</strong> Every review answered inside 24 hours, no exceptions</li>
+    <li><strong>Map pack position</strong> for the target keywords, which is the number all of
+      this actually moves</li>
+  </ul>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">08</div><h2>Who does what in month one</h2></div>
+  <div class="tw"><table>
+    <thead><tr><th>Task</th><th>Owner</th><th>When</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Google Business Profile submitted and verified</td><td>You</td><td class="mn">Day 1, then 1 to 3 weeks</td></tr>
+      <tr><td class="lab">Capture page built at /thanks/</td><td>You</td><td class="mn">Week 1</td></tr>
+      <tr><td class="lab">Review link, short link, QR code generated and tested on 3 phones</td><td>You</td><td class="mn">Day profile verifies</td></tr>
+      <tr><td class="lab">Text and email sequences built, with suppression rules</td><td>You</td><td class="mn">Week 2</td></tr>
+      <tr><td class="lab">Target numbers researched per keyword and town</td><td>You</td><td class="mn">Week 1</td></tr>
+      <tr><td class="lab">Scripts handed over and walked through with the crew</td><td>You, with Amilcar</td><td class="mn">Week 1 call</td></tr>
+      <tr><td class="lab">QR saved to every technician's phone</td><td>Client</td><td class="mn">Week 2</td></tr>
+      <tr><td class="lab">QR printed on job folders, invoices and the van</td><td>Client</td><td class="mn">Week 3</td></tr>
+      <tr><td class="lab">The walkthrough habit built into every job close</td><td>Crew</td><td class="mn">Week 2 onward</td></tr>
+      <tr><td class="lab">The first 20 commercial calls</td><td class="lab">Amilcar, personally</td><td class="mn">Weeks 2 to 6</td></tr>
+      <tr><td class="lab">Every reply written and posted</td><td>You</td><td class="mn">Month 1, then handed over</td></tr>
+      <tr><td class="lab">Duplicate Facebook pages merged</td><td>You</td><td class="mn">Week 1</td></tr>
+      <tr><td class="lab">Reviews page built and marked up</td><td>You</td><td class="mn">With the site build</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call">
+    <h4>The honest bottleneck</h4>
+    <p>Everything on this page except the twenty calls can be built and run for the client. The
+      calls decide how fast this moves, and they are the client's. Raise it at the week one call,
+      not in week four when the review count is still at three.</p>
+  </div>
+</section>
+
+</div>
+
+<div class="wrap">
+  <div class="foot">
+    <p><b>Compliance sources.</b> Google's review policy on discouraging negative reviews and
+      selectively soliciting positive ones. The FTC Rule on the Use of Consumer Reviews and
+      Testimonials, 16 CFR Part 465, enforceable from 21 October 2024, covering review
+      suppression, sentiment-conditioned incentives and unfounded legal threats. Penalty figures
+      and the Fashion Nova action as reported in published summaries, read on 10 September 2026.
+      <b>This is a summary for planning, not legal advice.</b> Before the routine goes live,
+      have the client's attorney confirm it against their own circumstances. The consent line
+      and the STOP and unsubscribe handling exist because US marketing texts require prior
+      express written consent and marketing emails require a working unsubscribe. Confirm the
+      exact wording with the client's attorney before the sequence goes live.</p>
+    <p><b>Nothing is sent, posted or published without approval.</b> Scripts are drafts for the
+      client to make their own, in their own voice.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest && e.target.closest('.cp');
+    if (!btn) return;
+    var body = btn.closest('.script').querySelector('.sbody');
+    var text = body ? body.textContent : '';
+    var done = function(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy'; }, 1700); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function(){ btn.textContent = 'Select it'; });
+    } else { btn.textContent = 'Select it'; }
+  });
+})();
+</script>

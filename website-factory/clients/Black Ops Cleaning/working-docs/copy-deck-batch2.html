@@ -1,0 +1,1075 @@
+<title>Copy Deck Batch Two</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#ECEEF0; --card:#FFFFFF; --card2:#E1E5E8; --card3:#D3D8DC;
+  --line:#CFD5D9; --line2:#AAB2B8;
+  --ink:#14181C; --ink2:#49525A; --ink3:#79838B;
+  --accent:#8C3A2E; --accent2:#AD5344; --accent-bg:#F4E3DF;
+  --slot:#8A5C0C; --slot-bg:#F6E9CE; --slot-line:#D0B06C;
+  --ok:#2C6B4C; --ok-bg:#DEEBE3; --ok-line:#93BBA3;
+  --band:#14181C; --bandink:#ECEEF0;
+  --shade:0 1px 2px rgba(20,24,28,.05), 0 14px 34px -26px rgba(20,24,28,.5);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C0F11; --card:#14181B; --card2:#1B2024; --card3:#242B30;
+    --line:#262D32; --line2:#3C454B; --ink:#E7EAEC; --ink2:#A2ABB2; --ink3:#727C83;
+    --accent:#E08A78; --accent2:#EDA595; --accent-bg:#2B1512;
+    --slot:#D8A44E; --slot-bg:#2A2110; --slot-line:#66501F;
+    --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+    --band:#050708; --bandink:#E7EAEC;
+    --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C0F11; --card:#14181B; --card2:#1B2024; --card3:#242B30;
+  --line:#262D32; --line2:#3C454B; --ink:#E7EAEC; --ink2:#A2ABB2; --ink3:#727C83;
+  --accent:#E08A78; --accent2:#EDA595; --accent-bg:#2B1512;
+  --slot:#D8A44E; --slot-bg:#2A2110; --slot-line:#66501F;
+  --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+  --band:#050708; --bandink:#E7EAEC;
+  --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--card2);
+  padding:1px 5px;border-radius:2px}
+
+.mast{background:var(--band);color:var(--bandink)}
+.mast .wrap{padding:28px 22px 30px}
+.lock{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;
+  padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.16)}
+.mk{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.mk span{color:var(--accent2)}
+.lock .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.55;font-weight:600;text-align:right}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(32px,5.6vw,52px);line-height:.98;letter-spacing:-.012em;
+  margin:21px 0 0;text-transform:uppercase;text-wrap:balance}
+.lede{font-size:17px;color:rgba(231,234,236,.74);max-width:64ch;margin:14px 0 0}
+
+/* page block */
+.page{background:var(--card);border:1px solid var(--line);border-radius:5px;
+  margin:0 0 34px;overflow:hidden;box-shadow:var(--shade)}
+.phead{background:var(--band);color:var(--bandink);padding:20px 24px}
+.phead .kind{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--accent2)}
+.phead h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(24px,3.6vw,33px);line-height:1.04;margin:8px 0 0;text-transform:uppercase;
+  letter-spacing:-.004em}
+.phead .url{font-family:"IBM Plex Mono",monospace;font-size:12px;
+  color:rgba(231,234,236,.62);margin-top:8px;word-break:break-all}
+.pbody{padding:0 24px 26px}
+@media(max-width:560px){.pbody{padding:0 16px 22px}.phead{padding:17px 16px}}
+
+/* seo table */
+.seo{margin:22px 0 0;border:1px solid var(--line);border-radius:4px;overflow:hidden;
+  background:var(--card2)}
+.seo .r{display:grid;grid-template-columns:130px 1fr;gap:0;border-bottom:1px solid var(--line)}
+.seo .r:last-child{border-bottom:none}
+.seo .k{background:var(--card3);padding:9px 12px;font-family:"IBM Plex Mono",monospace;
+  font-size:8.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--ink3);display:flex;align-items:center}
+.seo .v{padding:9px 13px;font-size:14.5px;background:var(--card);line-height:1.5}
+.seo .v .count{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink3);
+  margin-left:7px}
+@media(max-width:560px){.seo .r{grid-template-columns:1fr}.seo .k{padding:7px 12px}}
+
+/* section within a page */
+.sec{margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:none}
+.sn{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
+  text-transform:uppercase;letter-spacing:.016em;margin:6px 0 12px;line-height:1.15}
+.note{font-size:13.5px;color:var(--ink3);margin:0 0 14px;line-height:1.5;
+  padding-left:11px;border-left:2px solid var(--line2)}
+
+/* the actual copy */
+.copy{max-width:68ch}
+.copy h4{font-family:Barlow,sans-serif;font-weight:700;font-size:19px;margin:20px 0 8px;
+  line-height:1.3;color:var(--ink)}
+.copy h5{font-family:Barlow,sans-serif;font-weight:600;font-size:16.5px;margin:16px 0 6px;
+  color:var(--ink)}
+.copy p{margin:0 0 13px;font-size:16.5px;color:var(--ink2)}
+.copy p.big{font-size:18px;color:var(--ink)}
+.copy strong{color:var(--ink);font-weight:600}
+.copy ul,.copy ol{margin:0 0 13px;padding-left:21px}
+.copy li{font-size:16px;color:var(--ink2);margin-bottom:8px;line-height:1.55}
+.copy li strong{color:var(--ink)}
+.h1line{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(25px,3.8vw,34px);line-height:1.05;text-transform:uppercase;
+  letter-spacing:-.004em;color:var(--ink);margin:0 0 10px;max-width:22ch}
+
+/* slot */
+.slot{background:var(--slot-bg);border:1px solid var(--slot-line);border-left:3px solid var(--slot);
+  border-radius:4px;padding:12px 15px;margin:0 0 14px;max-width:68ch}
+.slot .sl{font-family:"IBM Plex Mono",monospace;font-size:8.5px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--slot);display:block;margin-bottom:5px}
+.slot p{margin:0;font-size:14.5px;color:var(--ink2);line-height:1.5}
+.slot p + p{margin-top:7px}
+
+/* faq */
+.faq{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--card);max-width:74ch}
+.faq .q{border-bottom:1px solid var(--line);padding:14px 17px}
+.faq .q:last-child{border-bottom:none}
+.faq .q b{display:block;font-size:16px;font-weight:600;line-height:1.35;color:var(--ink)}
+.faq .q p{margin:7px 0 0;font-size:15.5px;color:var(--ink2);line-height:1.55}
+
+/* links + alt */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--card);margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:10px 13px;border-bottom:2px solid var(--line2);background:var(--card2);white-space:nowrap}
+td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.mn{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink3)}
+td.lab{font-weight:600}
+
+.call{background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:4px;padding:17px 20px;margin:20px 0;max-width:74ch}
+.call.ok{border-left-color:var(--ok);background:var(--ok-bg)}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  text-transform:uppercase;margin:0 0 8px;letter-spacing:.016em}
+.call p{margin:0 0 9px;font-size:15px;color:var(--ink2)}
+.call p:last-child{margin-bottom:0}
+.call strong{color:var(--ink)}
+
+section.doc{padding:44px 0 4px}
+.dhead{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:8px}
+.dno{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12px;
+  color:var(--accent);letter-spacing:.11em;padding-top:7px}
+h2.dh{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(25px,3.8vw,35px);line-height:1.03;margin:0;text-transform:uppercase}
+.ddek{color:var(--ink2);font-size:16.5px;max-width:66ch;margin:0 0 20px 40px}
+@media(max-width:640px){.ddek{margin-left:0}}
+
+.foot{padding:24px 0 44px;font-size:13px;color:var(--ink3)}
+.foot p{margin:0 0 8px;max-width:78ch}
+.foot b{color:var(--ink2)}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="lock">
+      <div class="mk">Black<span>&nbsp;Ops</span>&nbsp;Cleaning</div>
+      <div class="meta">Copy deck, batch two<br>The specialty set</div>
+    </div>
+    <h1>Four pages where<br>the money is</h1>
+    <p class="lede">Biohazard remediation, crime scene and trauma, hoarding, and sewage backup.
+      The thinnest competition and the highest margin work on the site. Each one is written for
+      a different reader in a different state of mind, and the insurance answer is different on
+      every single page.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="doc">
+  <div class="dhead"><div class="dno">DECISION</div><h2 class="dh">The 24 hour question, decided</h2></div>
+  <p class="ddek">You asked me to make this call. Here it is, with the reasoning, and the one
+    thing that has to be true for it to ship.</p>
+
+  <div class="call">
+    <h4>The call: answer the phone 24 hours, state the on-site window separately</h4>
+    <p><strong>Do not write "24/7 crews standing by".</strong> Write "we answer 24 hours" and
+      then give the on-site response window as its own honest number.</p>
+    <p>Those are two different promises and every competitor blurs them. Blurring them is how a
+      small operator ends up with a one star review that says nobody came.</p>
+  </div>
+
+  <h3 style="margin-top:26px">Why this way</h3>
+  <div class="copy">
+    <p><strong>Not answering is not an option.</strong> The audit found the site sells emergency
+      cleaning and sewage decontamination while listing hours of Monday to Friday, 9 to 5. Every
+      biohazard competitor in this market advertises around the clock availability. These calls
+      do not arrive on Tuesday at 11am. They arrive at 2am, and they go to whoever picks up.
+      A 9 to 5 listing on an emergency service is not caution, it is a leak.</p>
+    <p><strong>But over-promising is worse than under-promising.</strong> A one man veteran
+      owned operation cannot credibly claim crews standing by. The first time somebody calls at
+      3am and gets voicemail, that is a review, and reviews are the thing this whole engagement
+      is trying to build.</p>
+    <p><strong>The honest version is also the stronger one.</strong> "We answer 24 hours, and we
+      are usually on site within two hours" is a specific, checkable claim. "24/7 emergency
+      response" is a phrase every competitor uses and nobody reads. Specific beats loud.</p>
+  </div>
+
+  <div class="call ok">
+    <h4>The one thing that has to be true</h4>
+    <p><strong>Somebody genuinely answers.</strong> That does not have to be Amilcar at 3am. An
+      answering service that takes the address and pages him satisfies the promise, costs very
+      little, and is what most operators this size actually run.</p>
+    <p>If the answer is a hard no, tell me and I will rewrite these four pages: every
+      availability claim comes out, the emergency response service page does not get built, and
+      the specialty pages lead on the written-price-first promise instead of on speed. That is
+      a weaker position against Bio-One and PuroClean, but it is honest, and I would rather ship
+      that than a promise the crew cannot keep.</p>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">SHARED</div><h2 class="dh">Blocks that render identically</h2></div>
+  <p class="ddek">Written once here, built as components, reused on all four pages. This is not a
+    shortcut, it is how the factory builds them, and it means a change gets made in one place
+    rather than four.</p>
+
+  <div class="page">
+    <div class="phead"><div class="kind">Shared component</div>
+      <h2>Credentials</h2><div class="url">Renders on every specialty service page</div></div>
+    <div class="pbody">
+      <div class="sec"><div class="copy">
+        <h4>Why we are allowed to do this work</h4>
+        <p>This is not general cleaning, and the difference is not marketing. It is training,
+          insurance and a licensed disposal route.</p>
+        <ul>
+          <li><strong>GBAC trained.</strong> The Global Biorisk Advisory Council, now a division
+            of ISSA. This is the standard facility managers look for when they need certified
+            infection control.</li>
+          <li><strong>ISSA CMI.</strong> The Cleaning Management Institute, the industry's
+            training body.</li>
+          <li><strong>OSHA bloodborne pathogen compliant.</strong> Not a certificate anyone
+            issues, a standard every technician is trained against.</li>
+          <li><strong>Licensed and insured in Maryland,</strong> general liability and workers
+            compensation.</li>
+          <li><strong>Veteran owned and federally registered.</strong> SAM.gov UEI
+            PMPPFTB7CCX4.</li>
+        </ul>
+        <h5>One thing we will not do</h5>
+        <p>We do not display CDC, EPA or OSHA seals to imply those agencies endorse us. They do
+          not endorse anyone. We follow CDC and EPA disinfection guidance and our technicians are
+          trained to the OSHA bloodborne pathogen standard. Those are facts, and they are worth
+          more than a logo. If another company shows you federal seals, ask them what they mean.</p>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="phead"><div class="kind">Shared component</div>
+      <h2>The money question</h2><div class="url">Replaces the pricing block on every page</div></div>
+    <div class="pbody">
+      <div class="sec"><div class="copy">
+        <h4>What this costs, and how you find out</h4>
+        <p>We do not publish prices for this work, because the range is too wide to be useful.
+          Two jobs that sound the same on the phone can differ by a factor of ten once we see
+          them, and quoting either one blind would be guessing.</p>
+        <p>What we do instead is simple. We come out, assess the property, and give you a
+          <strong>written price before any work starts</strong>. That visit costs nothing and
+          puts you under no obligation.</p>
+        <p>The number will not change once the job is underway, unless we find something behind
+          a wall that nobody could have seen. If that happens we stop, show you, and re-quote
+          before continuing.</p>
+      </div>
+      <p class="note">This turns the absence of pricing into a trust statement rather than a
+        gap. It only works if the crew actually honours it, so confirm the free assessment and
+        the written-price-first promise with the client before this ships.</p></div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="phead"><div class="kind">Shared component</div>
+      <h2>Availability line</h2><div class="url">Banner and FAQ on every specialty page</div></div>
+    <div class="pbody">
+      <div class="sec"><div class="copy">
+        <p><strong>Banner pill:</strong> Answered 24 hours</p>
+        <p><strong>Banner subhead fragment:</strong> "We answer at any hour, and we are usually
+          on site within two hours."</p>
+        <p><strong>FAQ answer:</strong> "Our phone is answered 24 hours a day, including
+          weekends and holidays. On site, we are usually with you within two hours anywhere in
+          Montgomery County, and faster in Rockville, Bethesda and Silver Spring because we are
+          based on Talbott Street rather than driving in from another county."</p>
+      </div>
+      <p class="note">Two claims, stated separately. Never merge them into one.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PAGE 4 ═══════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Service page, 2 of 13, the specialty hub</div>
+    <h2>Biohazard Remediation</h2>
+    <div class="url">/services/biohazard-remediation/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">biohazard remediation Rockville MD</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">biohazard cleanup Montgomery County, biohazard cleaning company Maryland, blood cleanup Rockville, commercial biohazard cleanup MD</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Biohazard Remediation Rockville MD | Black Ops<span class="count">45 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">GBAC trained biohazard remediation across Rockville and Montgomery County. Answered 24 hours, unmarked vehicles, written price before work starts.<span class="count">145 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Biohazard Remediation in Rockville and Montgomery County</div></div>
+    <div class="r"><div class="k">Role</div><div class="v">Hub page. The other four specialty pages link up to this one.</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">1,600 to 2,000</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, banner</div>
+    <h3>Banner</h3>
+    <div class="copy">
+      <p class="h1line">Biohazard Remediation in Rockville and Montgomery County</p>
+      <p class="big">Blood, bodily fluids, sharps and contamination, removed and decontaminated
+        to a documented standard. We answer at any hour and we are usually on site within two
+        hours.</p>
+      <p><strong>Pills:</strong> Answered 24 hours &middot; GBAC trained &middot; Unmarked
+        vehicles &middot; Veteran owned</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, the problem</div>
+    <h3>What people are usually facing when they call</h3>
+    <div class="copy">
+      <p class="big">Biohazard is a broad word for a narrow problem: something has contaminated
+        a property and it cannot safely be cleaned by whoever normally cleans it.</p>
+      <p>The calls we take fall into two groups, and they need very different handling.</p>
+      <p><strong>Homes and families.</strong> A death, an accident, a medical event, or a
+        property that has been left. The person calling is usually managing something else at
+        the same time and has never arranged anything like this before. They want it dealt with
+        quietly and they want to know who pays.</p>
+      <p><strong>Businesses and facilities.</strong> A sharps incident, a spill in a treatment
+        room, a contaminated washroom, or an event that has to be documented for an inspection.
+        The person calling is a facility manager, and they need paperwork as much as they need
+        cleaning. In Rockville, with the density of labs and medical practices on the I-270
+        corridor, this half of the work is larger than most people assume.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, what the work covers</div>
+    <h3>What the work covers</h3>
+    <div class="copy">
+      <ul>
+        <li><strong>Assessment and containment.</strong> The affected area is isolated before
+          anything is touched, with negative air where the contamination warrants it.</li>
+        <li><strong>Removal of contaminated material.</strong> Porous material that cannot be
+          safely decontaminated is removed and documented rather than cleaned in place.</li>
+        <li><strong>Decontamination.</strong> Hospital grade disinfection of every affected
+          surface, following CDC and EPA disinfection guidance.</li>
+        <li><strong>Sharps and regulated waste.</strong> Collected, transported and disposed of
+          through a licensed medical waste stream, with the manifest handed to you.</li>
+        <li><strong>Odour treatment at source</strong> where it applies.</li>
+        <li><strong>Written clearance</strong> confirming the area is safe to use again.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, process</div>
+    <h3>What happens, and how long each part takes</h3>
+    <div class="copy">
+      <ol>
+        <li><strong>Your call, about 10 minutes.</strong> The address, how to get in, and
+          roughly what has happened. That is all we need to mobilise.</li>
+        <li><strong>On site assessment, within 2 hours.</strong> Unmarked vehicle. We scope the
+          contamination and give you a written price before any work begins.</li>
+        <li><strong>Containment, first hour on site.</strong> Isolating before cleaning is what
+          stops a small problem becoming a whole-building problem.</li>
+        <li><strong>Remediation, half a day to 3 days.</strong> Depends entirely on how far the
+          contamination has travelled.</li>
+        <li><strong>Documentation and clearance, on completion.</strong> Written clearance, the
+          disposal manifest, and photographs.</li>
+      </ol>
+    </div>
+    <div class="slot"><span class="sl">Slot, confirm timescales</span>
+      <p>Two hour response and the half day to three day range must be confirmed against the
+        client's real jobs before publishing.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 05, crisis version</div>
+    <h3>The short version</h3>
+    <div class="copy">
+      <ol>
+        <li><strong>Call.</strong> Give us the address.</li>
+        <li><strong>We come.</strong> Unmarked, usually within two hours, with a written price
+          before we start.</li>
+        <li><strong>We handle it,</strong> including the paperwork and your insurer.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 06, insurance</div>
+    <h3>Who pays for this</h3>
+    <div class="copy">
+      <p><strong>It depends on what caused it, and the answer differs by situation.</strong>
+        That is not a dodge, it is the actual position, and any company that gives you one
+        blanket answer is guessing.</p>
+      <ul>
+        <li><strong>A death, an accident or a crime</strong> is usually covered by property
+          insurance, because you are claiming for damage to the property.</li>
+        <li><strong>A sewage backup</strong> is usually <em>not</em> covered unless a specific
+          endorsement was bought. See the sewage page for the detail.</li>
+        <li><strong>Hoarding</strong> is rarely covered, because it accumulated rather than
+          happened.</li>
+        <li><strong>Commercial incidents</strong> may fall under general liability or may simply
+          be an operating cost. Your broker will know in one call.</li>
+      </ul>
+      <p><strong>Ask the adjuster, not the agent.</strong> The agent sold the policy. The
+        adjuster decides what it pays. Ask two questions: does my policy cover biohazard
+        remediation for this cause, and what is the limit.</p>
+      <p>Where a policy does cover the loss, we speak to the adjuster directly, provide the
+        scope, photographs and documentation, and bill them. Where it does not, we tell you
+        before we start work rather than after.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Blocks 07 to 09</div>
+    <h3>Credentials, the money question, our own work</h3>
+    <p class="note">Credentials and the money question render from the shared components above.
+      Our own work is a photograph slot, same rules as every page: real jobs only, town named,
+      nothing identifiable, and the section is removed rather than filled with stock.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 11, FAQ</div>
+    <h3>Questions people actually ask</h3>
+    <div class="faq">
+      <div class="q"><b>What counts as a biohazard?</b>
+        <p>Blood and bodily fluids, sharps, sewage, decomposition, and anything contaminated by
+          them. The practical test is simpler: if cleaning it would put an untrained person at
+          risk of infection, it is our work rather than a cleaner's.</p></div>
+      <div class="q"><b>Can my regular cleaning company not do this?</b>
+        <p>No, and they should not try. It needs bloodborne pathogen training, the right
+          personal protective equipment, and a licensed medical waste disposal route. Most
+          janitorial contracts specifically exclude it.</p></div>
+      <div class="q"><b>Are you available at night and at weekends?</b>
+        <p>Our phone is answered 24 hours a day, including weekends and holidays. On site, we
+          are usually with you within two hours anywhere in Montgomery County, and faster in
+          Rockville, Bethesda and Silver Spring because we are based on Talbott Street rather
+          than driving in from another county.</p></div>
+      <div class="q"><b>Will your vehicle be marked?</b>
+        <p>No. Our response vehicles carry no company signage.</p></div>
+      <div class="q"><b>Do you work for businesses as well as homes?</b>
+        <p>Yes, and roughly half of this work in Rockville is commercial. Labs, medical
+          practices, dental suites and shared facilities on the I-270 corridor. We document to
+          the standard your inspection needs, not just to your insurer's.</p></div>
+      <div class="q"><b>What paperwork do I get?</b>
+        <p>A written scope before work starts, the regulated waste disposal manifest, written
+          clearance on completion, and photographs throughout. That set is what insurers,
+          inspectors and estate solicitors ask for.</p></div>
+      <div class="q"><b>Is there a certification I should look for?</b>
+        <p>GBAC training and OSHA bloodborne pathogen compliance, plus current Maryland
+          licensing and insurance. There is no state biohazard licence in Maryland, so any
+          company implying one exists is worth a second look.</p></div>
+      <div class="q"><b>How do I know the area is genuinely safe afterwards?</b>
+        <p>We issue written clearance. For commercial work we can arrange third party
+          verification where your protocol requires it.</p></div>
+      <div class="q"><b>Do you remove and replace the flooring and drywall?</b>
+        <p>We remove what has to come out. Rebuilding is a separate trade, and we will tell you
+          honestly what is needed rather than quoting for work we do not do.</p></div>
+      <div class="q"><b>How much does it cost?</b>
+        <p>We do not publish ranges, because two jobs that sound identical on the phone can
+          differ by a factor of ten. We assess at no charge and give you a written price before
+          any work starts.</p></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 12, links</div>
+    <h3>Links out</h3>
+    <div class="tw"><table>
+      <thead><tr><th>Link text</th><th>Target</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td class="lab">Crime scene and trauma cleanup</td><td class="mn">/services/crime-scene-cleanup/</td><td>Child of this hub</td></tr>
+        <tr><td class="lab">Unattended death cleanup</td><td class="mn">/services/unattended-death-cleanup/</td><td>Child</td></tr>
+        <tr><td class="lab">Hoarding cleanup</td><td class="mn">/services/hoarding-cleanup/</td><td>Child</td></tr>
+        <tr><td class="lab">Sewage backup and decontamination</td><td class="mn">/services/sewage-backup-cleanup/</td><td>Child</td></tr>
+        <tr><td class="lab">Biohazard cleanup in Rockville</td><td class="mn">/biohazard-cleanup-rockville-md/</td><td>Service x town</td></tr>
+        <tr><td class="lab">Bethesda, Silver Spring, Gaithersburg, Wheaton, Washington DC</td><td class="mn">/biohazard-cleanup-{town}/</td><td>Service x town, five more</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 5 ═══════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Service page, 3 of 13</div>
+    <h2>Crime Scene and Trauma Cleanup</h2>
+    <div class="url">/services/crime-scene-cleanup/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">crime scene cleanup Rockville MD</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">trauma cleanup Montgomery County, suicide cleanup Rockville MD, blood cleanup Maryland, crime scene cleaning company MD</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Crime Scene Cleanup Rockville MD | Black Ops<span class="count">43 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Crime scene and trauma cleanup in Rockville and Montgomery County. Answered 24 hours, unmarked vehicles, and we speak to your insurer for you.<span class="count">141 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Crime Scene and Trauma Cleanup in Rockville and Montgomery County</div></div>
+    <div class="r"><div class="k">Tone note</div><div class="v">The most careful page on the site. No urgency language, no sales pressure, no adjectives about the event.</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">1,500 to 1,800</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, banner</div>
+    <h3>Banner</h3>
+    <div class="copy">
+      <p class="h1line">Crime Scene and Trauma Cleanup in Rockville and Montgomery County</p>
+      <p class="big">When the investigators leave, the property is handed back. We take it from
+        there, quietly, and we deal with your insurer.</p>
+      <p><strong>Pills:</strong> Answered 24 hours &middot; Unmarked vehicles &middot; GBAC
+        trained &middot; We bill your insurer</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, the problem</div>
+    <h3>The part nobody tells you about</h3>
+    <div class="copy">
+      <p class="big">Police and the medical examiner secure a scene, gather what they need, and
+        then release the property. Cleaning it is not their job and never has been.</p>
+      <p>That comes as a shock to almost everyone. The property is handed back to whoever is
+        responsible for it, and that is usually a family member, a landlord or a building
+        manager who has never had to arrange anything like this and does not know that companies
+        like ours exist. Some people find us because an officer wrote a name down. Most find us
+        by searching at two in the morning.</p>
+      <p>You do not have to describe what happened. When you call, we need the address and how
+        to get in. Everything else we work out when we arrive.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, what the work covers</div>
+    <h3>What the work covers</h3>
+    <div class="copy">
+      <ul>
+        <li><strong>Containment</strong> before anything is touched, so nothing spreads through
+          the rest of the property.</li>
+        <li><strong>Removal of affected material.</strong> Flooring, subfloor, drywall,
+          furnishings. Blood travels into porous material further than it looks, which is why
+          scrubbing a surface is not remediation.</li>
+        <li><strong>Decontamination</strong> of every affected surface to hospital grade.</li>
+        <li><strong>Fingerprint powder, chemical residue and evidence markers,</strong> which
+          investigators leave behind and which most people do not expect.</li>
+        <li><strong>Odour treatment at source.</strong></li>
+        <li><strong>Regulated waste disposal</strong> through a licensed medical waste stream,
+          with the manifest handed to you.</li>
+        <li><strong>Written clearance</strong> confirming the property is safe for occupancy.</li>
+      </ul>
+      <p>We can also arrange for personal effects to be recovered, cleaned where possible, and
+        returned to you rather than disposed of. Ask us at the assessment. People often only
+        think of it later.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, process</div>
+    <h3>What happens, and how long each part takes</h3>
+    <div class="copy">
+      <ol>
+        <li><strong>Your call, about 10 minutes.</strong> Address and access. Nothing else.</li>
+        <li><strong>Confirming the scene is released, before we travel.</strong> We cannot work
+          until investigators have finished, and we will check that for you if you are not
+          sure.</li>
+        <li><strong>On site assessment, within 2 hours of release.</strong> Unmarked vehicle,
+          written price before any work begins.</li>
+        <li><strong>Insurance contact, same day.</strong> We speak to the adjuster and bill them
+          directly.</li>
+        <li><strong>Remediation, 1 to 3 days</strong> for most residential scenes.</li>
+        <li><strong>Clearance and handover.</strong> Written clearance, disposal manifest,
+          photographs.</li>
+      </ol>
+    </div>
+    <p class="note">Step 2 is specific to this page and it is genuinely useful. Families
+      frequently call before the scene is released and nobody has told them that is why nothing
+      can start.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 05, crisis version</div>
+    <h3>The short version</h3>
+    <div class="copy">
+      <ol>
+        <li><strong>Call.</strong> Address only.</li>
+        <li><strong>We check</strong> the scene has been released, then come, unmarked.</li>
+        <li><strong>We handle it.</strong> The property, the paperwork, and your insurer.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 06, insurance</div>
+    <h3>Who pays for this</h3>
+    <div class="copy">
+      <p><strong>In most cases the property insurance does.</strong> A crime or a traumatic
+        event is a sudden occurrence that damaged the property, which is what these policies
+        exist for.</p>
+      <p>Two things are worth knowing before you call your insurer.</p>
+      <ul>
+        <li><strong>Some policies exclude deaths by suicide</strong> unless a specific rider was
+          purchased. If that applies to you we will tell you early rather than late.</li>
+        <li><strong>Maryland, like most states, has a victim compensation route.</strong> Where
+          a violent crime is involved, cleanup costs may be claimable through it even if
+          insurance falls short. We can point you at it. We are not lawyers and we will not
+          pretend to be.</li>
+      </ul>
+      <p><strong>Ask the adjuster, not the agent.</strong> Two questions: does my policy cover
+        biohazard remediation after a crime or a death, and what is the limit. That is enough
+        for us to work with.</p>
+      <p>From there we deal with the adjuster directly and bill them. You are not paying up
+        front and claiming it back.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, verify before publishing</span>
+      <p>The Maryland victim compensation point is a real route in most states but the specific
+        programme name, eligibility and whether it covers cleanup must be <b>verified against
+        the current Maryland programme</b> before this line ships. If it cannot be verified,
+        cut the bullet. Do not publish a benefit a grieving family cannot actually claim.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 11, FAQ</div>
+    <h3>Questions people actually ask</h3>
+    <div class="faq">
+      <div class="q"><b>Do the police clean this up?</b>
+        <p>No. Investigators secure the scene, gather evidence and then release the property.
+          Cleanup is the property owner's responsibility. Nobody tells you that in advance, and
+          it is the single most common surprise for the people who call us.</p></div>
+      <div class="q"><b>When can work start?</b>
+        <p>Once investigators have released the scene. If you are not sure whether that has
+          happened, tell us and we will find out for you.</p></div>
+      <div class="q"><b>Will anyone know what happened here?</b>
+        <p>Not from us. Our vehicles carry no signage, our technicians arrive in plain clothing
+          and change on site, and we do not discuss jobs with neighbours or anyone else.</p></div>
+      <div class="q"><b>Does insurance cover it?</b>
+        <p>Usually yes, because it is sudden damage to the property. Some policies exclude
+          suicide unless a rider was bought. Call your adjuster and ask whether biohazard
+          remediation is covered and what the limit is.</p></div>
+      <div class="q"><b>Can I be there while you work?</b>
+        <p>You can, but most people find it better not to be. We can work from a key handover
+          and send you photographs as we go.</p></div>
+      <div class="q"><b>What happens to personal belongings?</b>
+        <p>Anything that can be safely recovered and cleaned, we return to you. Tell us at the
+          assessment what matters to you, because once material is disposed of as regulated
+          waste it cannot be retrieved.</p></div>
+      <div class="q"><b>Do you clean up fingerprint powder and evidence residue?</b>
+        <p>Yes. Investigators leave it behind and it is part of the job, not an extra.</p></div>
+      <div class="q"><b>Can the property be sold afterwards?</b>
+        <p>Yes. Our written clearance documents the property as remediated, which is what buyers
+          and their lenders want to see. Disclosure rules are a question for your solicitor or
+          estate agent, not for us.</p></div>
+      <div class="q"><b>How fast can you get here?</b>
+        <p>Our phone is answered 24 hours. On site, usually within two hours of the scene being
+          released, anywhere in Montgomery County.</p></div>
+      <div class="q"><b>What does it cost?</b>
+        <p>We do not publish ranges. We assess at no charge and give you a written price before
+          any work starts, and we tell you at that visit what your insurer is likely to
+          cover.</p></div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 6 ═══════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Service page, 4 of 13</div>
+    <h2>Hoarding Cleanup</h2>
+    <div class="url">/services/hoarding-cleanup/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">hoarding cleanup Rockville MD</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">hoarding cleanup Montgomery County, clutter cleanup Rockville, hoarder house cleaning Maryland, estate cleanout Rockville MD</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Hoarding Cleanup Rockville MD | Black Ops Cleaning<span class="count">49 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Hoarding cleanup in Rockville and Montgomery County, done at a pace that works. No judgement, no forced clearouts, nothing thrown away without asking.<span class="count">149 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Hoarding Cleanup in Rockville and Montgomery County</div></div>
+    <div class="r"><div class="k">Reader</div><div class="v">Usually a family member, not the person who lives there. Written so it is safe to read over someone's shoulder.</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">1,600 to 1,900</div></div>
+  </div>
+
+  <div class="call">
+    <h4>The tone rule for this page</h4>
+    <p>Shame sits at the centre of most hoarding situations, and the more judged someone feels,
+      the harder it becomes for them to accept help. <strong>Every sentence uses neutral safety
+      and access language rather than words about mess or cleanliness.</strong> Not "we clear
+      out filthy homes". Rather "a hallway needs a clear path for emergency access".</p>
+    <p>The person who calls is usually a son, a daughter or a landlord. The person who lives
+      there may read this page later. Write it so that both can.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, banner</div>
+    <h3>Banner</h3>
+    <div class="copy">
+      <p class="h1line">Hoarding Cleanup in Rockville and Montgomery County</p>
+      <p class="big">Done at a pace that works, with the person who lives there rather than
+        around them. Nothing is thrown away without asking.</p>
+      <p><strong>Pills:</strong> No forced clearouts &middot; Unmarked vehicles &middot; GBAC
+        trained &middot; Free assessment</p>
+    </div>
+    <p class="note">Note what is absent: no 24 hour pill. This is not an emergency service and
+      framing it as one is exactly the pressure that makes these jobs fail.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, the problem</div>
+    <h3>If you are calling about someone else</h3>
+    <div class="copy">
+      <p class="big">Most people who call us are frightened for someone, not frustrated with
+        them. Usually it is a blocked hallway, a fire risk, a smell that the neighbours have
+        started mentioning, or a visit from the county.</p>
+      <p>Two things are worth saying before anything else.</p>
+      <p><strong>A fast clearout usually makes things worse.</strong> It feels like the obvious
+        answer and it very rarely holds. Removing everything at once, without the person's
+        agreement, tends to end with the property refilling within a year and with the person
+        far less willing to accept help the second time.</p>
+      <p><strong>This is not about mess.</strong> Possessions are usually doing a job for the
+        person keeping them. That is why arguing about the stuff does not work, and why we do
+        not try. We work on safety, access and health, and we let the rest follow.</p>
+      <p>If you are the person living in the property and you found this page yourself, the same
+        applies. We will work at your pace and you decide what stays.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, what the work covers</div>
+    <h3>What the work covers</h3>
+    <div class="copy">
+      <ul>
+        <li><strong>A walkthrough and a written plan,</strong> room by room, agreed before
+          anything is moved.</li>
+        <li><strong>Sorting alongside you,</strong> with keep, donate, dispose decisions made by
+          you, not by us.</li>
+        <li><strong>Recovery of valuables and documents.</strong> Cash, jewellery, deeds,
+          photographs and paperwork turn up in these properties constantly. Everything we find
+          comes back to you.</li>
+        <li><strong>Removal and disposal,</strong> with recycling and donation wherever
+          possible.</li>
+        <li><strong>Biohazard remediation where it is needed.</strong> Animal waste, spoiled
+          food, pest infestation and bathroom contamination are common, and this is where the
+          GBAC training matters.</li>
+        <li><strong>Deep cleaning and odour treatment</strong> once the property is clear.</li>
+        <li><strong>Pest control coordination</strong> where required.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, process</div>
+    <h3>How we work, and how long it takes</h3>
+    <div class="copy">
+      <ol>
+        <li><strong>A phone call, no pressure.</strong> We talk through the situation. Nothing is
+          booked on that call.</li>
+        <li><strong>A walkthrough, about an hour.</strong> We look at access, safety and any
+          biohazard present, and we meet the person living there if they are willing.</li>
+        <li><strong>A written plan and price.</strong> Room by room, in the order that removes
+          risk fastest, usually starting with exits and walkways.</li>
+        <li><strong>The work, 1 day to several weeks.</strong> Paced to what the person can
+          manage. Some jobs run over several visits with gaps between them, and that is a
+          feature rather than a delay.</li>
+        <li><strong>Cleaning, remediation and handover</strong> once the property is clear.</li>
+      </ol>
+      <p>If at any point the person living there wants to stop, we stop. That is not us being
+        difficult. It is the only approach that holds.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 06, insurance</div>
+    <h3>Who pays for this</h3>
+    <div class="copy">
+      <p><strong>Usually not insurance, and we would rather say so plainly.</strong></p>
+      <p>Property policies cover sudden events. Hoarding accumulates over years, so it is
+        normally treated as a maintenance issue rather than a covered loss. There are
+        exceptions: if there is water damage, a pest infestation or biohazard contamination
+        underneath, part of the work may be claimable even when the clearance itself is not.
+        We will tell you which parts those are.</p>
+      <p>The people who usually pay are family members, an estate, or a landlord recovering a
+        property. If it is an estate, the cost normally comes out of it before distribution, and
+        your solicitor will confirm that.</p>
+      <p>We assess at no charge, and we will tell you honestly what is worth claiming and what
+        is not.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 11, FAQ</div>
+    <h3>Questions people actually ask</h3>
+    <div class="faq">
+      <div class="q"><b>My parent will not agree to this. What can I do?</b>
+        <p>Start with a conversation about safety rather than about the property. A blocked exit,
+          a fire risk, a fall risk. Those are things most people will engage with when a
+          judgement about their home is not attached. We are happy to talk to you first without
+          any commitment, and we can join that conversation if it helps.</p></div>
+      <div class="q"><b>Will you throw everything away?</b>
+        <p>No. You decide what stays. We sort alongside you and nothing leaves the property
+          without agreement, unless it is a genuine biohazard, which we will show you first.</p></div>
+      <div class="q"><b>What if you find money or documents?</b>
+        <p>They come back to you. We find cash, jewellery, deeds and photographs in these
+          properties regularly, and recovering them is part of the job.</p></div>
+      <div class="q"><b>Is this covered by insurance?</b>
+        <p>Usually not, because hoarding accumulates rather than happens suddenly. If there is
+          water damage, pest infestation or biohazard contamination underneath, part of the work
+          may be claimable. We will tell you which parts.</p></div>
+      <div class="q"><b>How long does it take?</b>
+        <p>Anything from a day to several weeks. It depends on the size of the property and on
+          what pace the person can manage. We would rather take four visits and have it hold
+          than take one and have it refill.</p></div>
+      <div class="q"><b>Will the neighbours know?</b>
+        <p>Our vehicles carry no company signage. For larger jobs we plan the timing and the
+          removal route with you so it draws as little attention as possible.</p></div>
+      <div class="q"><b>Do you handle animal waste and pests?</b>
+        <p>Yes. Animal waste is a biohazard and we are GBAC trained. Where pest control is
+          needed we coordinate it rather than leaving you to arrange it separately.</p></div>
+      <div class="q"><b>The county has given us a notice. Can you work to a deadline?</b>
+        <p>Yes, and tell us about the notice on the first call. A compliance deadline changes
+          the order we work in, because clearing what the inspector cited comes first.</p></div>
+      <div class="q"><b>Can you do this for a rental property between tenants?</b>
+        <p>Yes. Landlord and property manager work is straightforward, and where the tenant has
+          gone the pacing question does not arise.</p></div>
+      <div class="q"><b>What does it cost?</b>
+        <p>We do not publish ranges, because properties vary too much. The walkthrough and the
+          written plan cost nothing.</p></div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 7 ═══════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Service page, 5 of 13</div>
+    <h2>Sewage Backup and Decontamination</h2>
+    <div class="url">/services/sewage-backup-cleanup/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">sewage backup cleanup Rockville MD</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">sewage cleanup Montgomery County, black water cleanup Maryland, sewage decontamination Rockville, category 3 water damage MD</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Sewage Backup Cleanup Rockville MD | Black Ops<span class="count">45 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Sewage backup cleanup in Rockville and Montgomery County. Category 3 decontamination to IICRC S500, not drying. Answered 24 hours.<span class="count">129 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Sewage Backup and Decontamination in Rockville and Montgomery County</div></div>
+    <div class="r"><div class="k">Angle</div><div class="v">Technical authority. This reader is comparing quotes and one of the other quotes is wrong.</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">1,600 to 1,900</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, banner</div>
+    <h3>Banner</h3>
+    <div class="copy">
+      <p class="h1line">Sewage Backup and Decontamination in Rockville and Montgomery County</p>
+      <p class="big">Sewage is Category 3 water. It cannot be dried out and re-used, and any
+        company telling you otherwise is about to leave contamination in your building.</p>
+      <p><strong>Pills:</strong> Answered 24 hours &middot; IICRC S500 method &middot; GBAC
+        trained &middot; Written price first</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, the problem</div>
+    <h3>The mistake that costs people twice</h3>
+    <div class="copy">
+      <p class="big">Sewage is classified as Category 3 water, which the restoration industry
+        calls black water. It carries E. coli, salmonella, hepatitis A, norovirus, rotavirus and
+        cryptosporidium.</p>
+      <p>Here is what matters, and it is the reason people end up paying for this job twice.
+        <strong>Those pathogens soak into drywall, carpet, insulation and wood within
+        minutes,</strong> and they survive on and inside those materials long after the water
+        has gone. Drying a room does not remove them. It only removes the evidence that they are
+        there.</p>
+      <p>The IICRC S500 standard, which is the industry standard for water damage restoration,
+        does not permit porous materials to be restored after Category 3 contamination. They
+        come out and go to regulated disposal. That is not our preference, it is the standard.</p>
+      <p>If you have a quote in front of you that talks about drying equipment and dehumidifiers
+        without mentioning removing anything, ask the company which category of water they think
+        this is. The answer will tell you a great deal.</p>
+    </div>
+    <p class="note">This block is the whole page. It is technically true, it is checkable, and
+      it directly disqualifies the cheaper quote the reader is holding. No competitor page
+      checked in this market explains it.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, what the work covers</div>
+    <h3>What the work covers</h3>
+    <div class="copy">
+      <ul>
+        <li><strong>Containment and safe extraction</strong> of the contaminated water.</li>
+        <li><strong>Removal of porous materials.</strong> Carpet, underlay, drywall, insulation
+          and affected wood, taken out rather than dried, and disposed of as regulated
+          waste.</li>
+        <li><strong>Cleaning and antimicrobial treatment</strong> of every remaining surface.</li>
+        <li><strong>Structural drying</strong> of what is left, once the contamination is
+          gone.</li>
+        <li><strong>Odour treatment at source.</strong></li>
+        <li><strong>Moisture verification</strong> before we close the walls back up, so nothing
+          is sealed in wet.</li>
+        <li><strong>Documentation</strong> for your insurer, including moisture readings and
+          photographs throughout.</li>
+      </ul>
+      <p>We do not do the rebuild. We will tell you exactly what needs replacing and you can use
+        your own contractor, which is usually cheaper than having a restoration firm do both.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, process</div>
+    <h3>What happens, and how long each part takes</h3>
+    <div class="copy">
+      <ol>
+        <li><strong>Your call, about 10 minutes.</strong> We will tell you how to make the area
+          safe and to keep everyone out of it, including pets.</li>
+        <li><strong>On site, within 2 hours.</strong> Speed genuinely matters here, because the
+          absorption happens in minutes and the damage widens by the hour.</li>
+        <li><strong>Containment and extraction, first few hours.</strong></li>
+        <li><strong>Removal of porous material, day one to two.</strong></li>
+        <li><strong>Cleaning, antimicrobial treatment and drying, 3 to 5 days,</strong> with
+          moisture monitored throughout.</li>
+        <li><strong>Verification and handover.</strong> Final moisture readings, documentation
+          and photographs for the claim.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 05, crisis version</div>
+    <h3>What to do right now, before we arrive</h3>
+    <div class="copy">
+      <ol>
+        <li><strong>Keep everyone out,</strong> including pets. Do not walk through it and then
+          walk through the rest of the house.</li>
+        <li><strong>Do not run the HVAC,</strong> which will move contamination through the
+          building.</li>
+        <li><strong>Photograph it</strong> before anything is touched. Your insurer will want
+          it.</li>
+        <li><strong>Call us.</strong></li>
+      </ol>
+    </div>
+    <p class="note">On this page the crisis block is genuinely useful instructions rather than a
+      shortened process. Different service, different job for the same slot.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 06, insurance</div>
+    <h3>Who pays for this, and why this one is different</h3>
+    <div class="copy">
+      <p class="big"><strong>Most standard homeowner policies do not cover sewer and drain
+        backup.</strong> This is the opposite of what people expect, and it is the single most
+        important thing on this page.</p>
+      <p>Backup cover is usually sold as a separate endorsement or rider. If it was never added
+        to the policy, the cleanup is out of pocket. That is a hard thing to be told and we
+        would rather tell you before we start work than after.</p>
+      <p><strong>Call your adjuster and ask one question:</strong> do I have sewer or water
+        backup coverage on this policy, and what is the limit. The limits on these endorsements
+        are often lower than people assume, so ask for the number as well as the yes or no.</p>
+      <p>Two more things worth knowing:</p>
+      <ul>
+        <li><strong>If the backup came from the municipal main</strong> rather than from inside
+          your property, there may be a claim against the utility or the county. Worth asking
+          about, and worth photographing everything before it is touched.</li>
+        <li><strong>Insurers expect IICRC S500 method</strong> on Category 3 losses. A claim
+          handled to that standard, with documentation, is far less likely to be argued about
+          than one where a company dried the room and hoped.</li>
+      </ul>
+      <p>Where cover exists, we deal with the adjuster and bill them directly.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 11, FAQ</div>
+    <h3>Questions people actually ask</h3>
+    <div class="faq">
+      <div class="q"><b>Can the carpet be saved?</b>
+        <p>No. Carpet and underlay contaminated with Category 3 water are removed and disposed
+          of as regulated waste. IICRC S500 does not permit porous materials to be restored
+          after sewage contamination, and cleaning them in place does not remove the pathogens
+          that have soaked in.</p></div>
+      <div class="q"><b>Another company quoted me half as much and said they would dry it out.
+        Why are you more expensive?</b>
+        <p>Because drying is a different job. Drying removes water. It does not remove E. coli,
+          hepatitis A or norovirus from inside drywall and insulation, and those survive long
+          after the material feels dry. Ask that company which category of water they think this
+          is. If they say Category 3 and still propose drying in place, that is your
+          answer.</p></div>
+      <div class="q"><b>Does my homeowner insurance cover this?</b>
+        <p>Often not. Most standard policies exclude sewer and drain backup unless a separate
+          endorsement was bought. Call your adjuster and ask whether you have backup coverage
+          and what the limit is. We will tell you what we find before we start work.</p></div>
+      <div class="q"><b>Is it safe to stay in the house?</b>
+        <p>Stay out of the affected area entirely, including pets, and do not run the HVAC,
+          which will move contamination through the building. Whether the rest of the property
+          is usable depends on the layout, and we will tell you when we assess.</p></div>
+      <div class="q"><b>How long before we can use the room again?</b>
+        <p>Typically three to five days for cleaning, treatment and drying, then rebuild time on
+          top for anything that had to be removed.</p></div>
+      <div class="q"><b>Will there be a smell afterwards?</b>
+        <p>No, if it is done properly. Odour that lingers means contaminated material was left
+          in place. We treat at source, and we will not close a wall back up over material that
+          should have come out.</p></div>
+      <div class="q"><b>What if it came from the council or utility main?</b>
+        <p>There may be a claim against them. Photograph everything before it is touched and
+          keep the documentation we give you.</p></div>
+      <div class="q"><b>Do you do the rebuild as well?</b>
+        <p>No. We remediate and document, then you can use your own contractor for the rebuild,
+          which is usually cheaper than having one firm do both.</p></div>
+      <div class="q"><b>Do you work on commercial properties?</b>
+        <p>Yes. Restaurants, medical practices and offices, where a backup also brings a
+          compliance and reopening problem alongside the cleaning one.</p></div>
+      <div class="q"><b>How quickly can you get here?</b>
+        <p>Our phone is answered 24 hours and we are usually on site within two hours. On this
+          service, speed genuinely changes the size of the job, because absorption into porous
+          material starts within minutes.</p></div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">NEXT</div><h2 class="dh">Batch three</h2></div>
+  <p class="ddek">The commercial set: janitorial, medical facility, government facility,
+    disinfection and infection control.</p>
+  <div class="copy">
+    <p>Different reader entirely. A facility manager comparing three contracts is not in crisis,
+      is buying on process and documentation rather than on speed, and will read the whole page.
+      No crisis block, no unmarked vehicles, and the insurance block is replaced by a section on
+      contracts, scope and what happens when something goes wrong.</p>
+    <p>The Rockville corridor research carries straight into these four, because the medical
+      facility and government facility pages are where the biotech and federal density in this
+      county actually converts.</p>
+  </div>
+  <div class="call">
+    <h4>Two things still outstanding</h4>
+    <p><strong>The Maryland victim compensation line</strong> on the crime scene page needs
+      verifying against the current programme before that page ships. If it cannot be verified,
+      the bullet comes out.</p>
+    <p><strong>Every timescale in this deck</strong> needs confirming against the client's real
+      jobs. Two hours, one to three days, three to five days. These are industry norms, not
+      Black Ops' measured performance, and a published timescale the crew cannot hit becomes a
+      one star review.</p>
+  </div>
+</section>
+
+</div>
+
+<div class="wrap">
+  <div class="foot">
+    <p><b>Research behind this batch.</b> Category 3 water definition, the pathogen list, the
+      absorption-within-minutes point and the IICRC S500 rule against restoring porous materials
+      from published restoration industry standards guidance. Sewer backup exclusion and the
+      separate endorsement from published US insurance guidance. Hoarding approach, the role of
+      shame, the room-by-room pacing and the neutral safety language from published hoarding
+      support and clinical guidance. Certification detail from ISSA. All read on 10 September
+      2026.</p>
+    <p><b>Nothing here is published without approval,</b> and no review, case study or timescale
+      may be invented to fill a slot.</p>
+  </div>
+</div>

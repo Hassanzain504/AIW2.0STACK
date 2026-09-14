@@ -1,0 +1,532 @@
+<title>Cleaning Site Teardown</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#EDEBE6; --card:#FFFFFF; --card2:#E3E0D8; --card3:#D6D2C8;
+  --line:#D2CEC4; --line2:#AEA99D;
+  --ink:#16181B; --ink2:#4C535A; --ink3:#7C848C;
+  --accent:#1F5F6B; --accent2:#2E8496; --accent-bg:#DAEAED;
+  --good:#2E7150; --good-bg:#DEEAE2; --good-line:#95BCA5;
+  --mixed:#8A6114; --mixed-bg:#F2E8CD; --mixed-line:#CDB374;
+  --poor:#97382A; --poor-bg:#F4E2DE; --poor-line:#CFA095;
+  --band:#16181B; --bandink:#EDEBE6;
+  --shade:0 1px 2px rgba(22,24,27,.05), 0 14px 34px -26px rgba(22,24,27,.5);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C0E10; --card:#15181B; --card2:#1C2124; --card3:#252B2F;
+    --line:#272D31; --line2:#3D454B; --ink:#E7EAEB; --ink2:#A1AAB1; --ink3:#717A81;
+    --accent:#5FB6C6; --accent2:#84CEDB; --accent-bg:#0F2E35;
+    --good:#54BA88; --good-bg:#0E2619; --good-line:#2A5B40;
+    --mixed:#D7A755; --mixed-bg:#2A2110; --mixed-line:#655021;
+    --poor:#DE8674; --poor-bg:#2A1512; --poor-line:#63322A;
+    --band:#050708; --bandink:#E7EAEB;
+    --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C0E10; --card:#15181B; --card2:#1C2124; --card3:#252B2F;
+  --line:#272D31; --line2:#3D454B; --ink:#E7EAEB; --ink2:#A1AAB1; --ink3:#717A81;
+  --accent:#5FB6C6; --accent2:#84CEDB; --accent-bg:#0F2E35;
+  --good:#54BA88; --good-bg:#0E2619; --good-line:#2A5B40;
+  --mixed:#D7A755; --mixed-bg:#2A2110; --mixed-line:#655021;
+  --poor:#DE8674; --poor-bg:#2A1512; --poor-line:#63322A;
+  --band:#050708; --bandink:#E7EAEB;
+  --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a{color:var(--accent)}
+
+.mast{background:var(--band);color:var(--bandink)}
+.mast .wrap{padding:28px 22px 30px}
+.lock{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;
+  padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.16)}
+.mk{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.mk span{color:var(--accent2)}
+.lock .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.55;font-weight:600;text-align:right}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(33px,6vw,56px);line-height:.97;letter-spacing:-.012em;
+  margin:21px 0 0;text-transform:uppercase;text-wrap:balance}
+.lede{font-size:17.5px;color:rgba(231,234,235,.74);max-width:63ch;margin:15px 0 0}
+
+section{padding:48px 0 4px}
+.shead{display:flex;gap:14px;align-items:baseline}
+.sno{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12px;
+  color:var(--accent);letter-spacing:.11em;padding-top:7px;flex-shrink:0}
+h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(26px,4vw,37px);line-height:1.03;margin:0;text-transform:uppercase;
+  letter-spacing:-.005em;text-wrap:balance}
+.sdek{color:var(--ink2);font-size:16.5px;max-width:65ch;margin:8px 0 22px 40px}
+@media(max-width:640px){.sdek{margin-left:0}}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;
+  text-transform:uppercase;letter-spacing:.016em;margin:30px 0 11px;
+  padding-bottom:6px;border-bottom:2px solid var(--ink)}
+p.body{color:var(--ink2);font-size:15.5px;max-width:66ch;margin:0 0 15px}
+
+.verdict{font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:2px;
+  border:1px solid;white-space:nowrap;display:inline-block}
+.verdict.g{background:var(--good-bg);color:var(--good);border-color:var(--good-line)}
+.verdict.m{background:var(--mixed-bg);color:var(--mixed);border-color:var(--mixed-line)}
+.verdict.p{background:var(--poor-bg);color:var(--poor);border-color:var(--poor-line)}
+
+/* site card */
+.site{background:var(--card);border:1px solid var(--line);border-radius:4px;
+  margin-bottom:16px;overflow:hidden;box-shadow:var(--shade)}
+.site.pick{border-color:var(--accent2);border-width:2px}
+.sh2{background:var(--card2);border-bottom:1px solid var(--line);padding:15px 19px;
+  display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline}
+.sh2 .nm{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:23px;
+  text-transform:uppercase;letter-spacing:.014em;line-height:1}
+.sh2 .url{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink3);
+  font-weight:600;word-break:break-all}
+.sh2 .verdict{margin-left:auto}
+.sb{padding:17px 19px}
+.sb p{margin:0 0 11px;font-size:15px;color:var(--ink2)}
+.sb p:last-child{margin-bottom:0}
+.sb strong{color:var(--ink)}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;
+  overflow:hidden;margin:0 0 14px}
+.kvi{background:var(--card);padding:11px 13px}
+.kvi .k{font-family:"IBM Plex Mono",monospace;font-size:8.5px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--ink3)}
+.kvi .v{font-size:14px;color:var(--ink);margin-top:4px;line-height:1.4;font-weight:500}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:6px}
+.col h4{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;margin:0 0 8px}
+.col.win h4{color:var(--good)} .col.lose h4{color:var(--poor)}
+.col ul{margin:0;padding-left:17px}
+.col li{font-size:14.5px;color:var(--ink2);margin-bottom:6px;line-height:1.5}
+.col li b{color:var(--ink);font-weight:600}
+
+/* anatomy list */
+.anat{display:flex;flex-direction:column;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:4px;overflow:hidden;box-shadow:var(--shade)}
+.ar{background:var(--card);padding:12px 16px;display:grid;
+  grid-template-columns:30px 1fr auto;gap:14px;align-items:start}
+.ar .n{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;
+  color:var(--accent);padding-top:3px}
+.ar .t{font-size:15px;font-weight:600;line-height:1.35}
+.ar .d{font-size:13.5px;color:var(--ink2);margin-top:4px;line-height:1.45}
+.ar .have{font-family:"IBM Plex Mono",monospace;font-size:8.5px;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;padding:3px 7px;border-radius:2px;
+  border:1px solid;white-space:nowrap;height:fit-content;margin-top:2px}
+.ar .have.y{background:var(--good-bg);color:var(--good);border-color:var(--good-line)}
+.ar .have.n{background:var(--poor-bg);color:var(--poor);border-color:var(--poor-line)}
+@media(max-width:600px){.ar{grid-template-columns:24px 1fr}.ar .have{grid-column:2;width:fit-content}}
+
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--card);
+  box-shadow:var(--shade)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:640px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:12px 14px;border-bottom:2px solid var(--line2);background:var(--card2);white-space:nowrap}
+td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.lab{font-weight:600}
+td.mn{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink3)}
+
+.call{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:4px;padding:19px 21px;margin:20px 0;box-shadow:var(--shade)}
+.call.good{border-left-color:var(--good)}
+.call.poor{border-left-color:var(--poor)}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;
+  text-transform:uppercase;margin:0 0 9px;letter-spacing:.016em}
+.call p{margin:0 0 10px;font-size:15.5px;color:var(--ink2)}
+.call p:last-child{margin-bottom:0}
+.call strong{color:var(--ink)}
+code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--card2);
+  padding:1px 5px;border-radius:2px}
+
+ul.tight{margin:10px 0 0;padding-left:20px}
+ul.tight li{margin-bottom:7px;font-size:15px;color:var(--ink2)}
+ul.tight li b{color:var(--ink);font-weight:600}
+
+.foot{padding:24px 0 44px;font-size:13px;color:var(--ink3)}
+.foot p{margin:0 0 8px;max-width:78ch}
+.foot b{color:var(--ink2)}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="lock">
+      <div class="mk">Niche<span>&nbsp;capture</span></div>
+      <div class="meta">US cleaning sites<br>Teardown for Module 2D</div>
+    </div>
+    <h1>The bar is<br>lower than expected</h1>
+    <p class="lede">Eight US sites checked page by page, looking specifically at how their town
+      pages, service pages and service plus town pages are built. Two are worth copying. The
+      rest, including three national franchises, publish town pages that are the same paragraph
+      with the city name swapped.</p>
+    <p class="lede">The best complete example is not a cleaning company at all, and it operates
+      in Rockville.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <div class="shead"><div class="sno">01</div><h2>The scoreboard</h2></div>
+  <p class="sdek">Ranked by how good their location pages actually are, which is not the same
+    as how big or how well ranked they are.</p>
+
+  <div class="site pick">
+    <div class="sh2"><span class="nm">Roto-Rooter</span>
+      <span class="url">rotorooter.com/rockvillemd/ and /rockvillemd/drain-cleaning/</span>
+      <span class="verdict g">The complete mesh</span></div>
+    <div class="sb">
+      <div class="kv">
+        <div class="kvi"><div class="k">Layer 1</div><div class="v">/locations/md/</div></div>
+        <div class="kvi"><div class="k">Layer 2</div><div class="v">/rockvillemd/</div></div>
+        <div class="kvi"><div class="k">Layer 3</div><div class="v">/rockvillemd/drain-cleaning/</div></div>
+        <div class="kvi"><div class="k">Maryland towns</div><div class="v">Over 100</div></div>
+      </div>
+      <p>Plumbing, not cleaning, but this is the only site checked that runs <strong>all three
+        layers properly</strong>: a state hub, over a hundred town pages, and a service page
+        underneath each town. It is also <strong>physically in Rockville</strong>, at 30
+        Courthouse Square, with 314 local reviews at 4.9.</p>
+      <div class="split">
+        <div class="col win"><h4>What it gets right</h4>
+          <ul>
+            <li><b>The town page is genuinely unswappable.</b> It explains why Rockville has
+              plumbing problems: clay heavy soil that expands wet and contracts dry, mature
+              street trees causing root intrusion, older neighbourhoods still on cast iron and
+              galvanised lines, Mid-Atlantic summer storms.</li>
+            <li><b>314 local reviews on the town page,</b> named, with technicians named.</li>
+            <li><b>Local address and a named manager,</b> Josh Phillips, on the service plus
+              town page.</li>
+            <li><b>Neighbouring towns named,</b> Potomac, Olney, Germantown, Gaithersburg,
+              Clarksburg, Poolesville, right down to Beallsville and Barnesville.</li>
+            <li><b>Town page links down</b> to every service plus town page beneath it.</li>
+          </ul></div>
+        <div class="col lose"><h4>Where you can beat it</h4>
+          <ul>
+            <li><b>The service plus town page has no reviews.</b> All the proof sits one level
+              up on the town page and never reaches the page that actually gets the search.</li>
+            <li><b>No FAQ on the service plus town page.</b> Same easy win as Bio-One.</li>
+            <li><b>No pricing,</b> only on-site estimates.</li>
+            <li><b>No link back up to the town page.</b> The mesh runs down but not up, which
+              is a real internal linking hole in a site otherwise built for this.</li>
+          </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site pick">
+    <div class="sh2"><span class="nm">Bio-One</span>
+      <span class="url">biooneinc.com/washington-d-c/crime-scene-cleanup/</span>
+      <span class="verdict g">Copy this one</span></div>
+    <div class="sb">
+      <div class="kv">
+        <div class="kvi"><div class="k">Page type</div><div class="v">Service plus city</div></div>
+        <div class="kvi"><div class="k">URL pattern</div><div class="v">/{city}/{service}/</div></div>
+        <div class="kvi"><div class="k">Reviews on page</div><div class="v">5 named, plus rating</div></div>
+        <div class="kvi"><div class="k">FAQ</div><div class="v">2 questions</div></div>
+      </div>
+      <p><strong>This is the exact structure Black Ops needs.</strong> Their nineteen service
+        plus town pages map onto this pattern one to one, and Bio-One is already running it in
+        the same market: Rockville, Montgomery County, Frederick and Washington DC all have
+        pages.</p>
+      <div class="split">
+        <div class="col win"><h4>What it gets right</h4>
+          <ul>
+            <li><b>Owners named on the page.</b> Antoine and Torrie Holloman, with a photo
+              treatment. A person, not a logo.</li>
+            <li><b>Five named reviewers</b> with full names, high on the page, not buried in a
+              carousel at the bottom.</li>
+            <li><b>Two process blocks, not one.</b> A five step version for someone reading
+              carefully, and a three step version for someone panicking.</li>
+            <li><b>Credentials shown as badges,</b> BBB, SDVOSB, an Expertise award. The SDVOSB
+              badge is the same veteran angle Black Ops holds.</li>
+            <li><b>Service area list of 18 named places,</b> not a vague radius.</li>
+            <li><b>Insurance help stated as a benefit,</b> which is the actual objection in this
+              service line.</li>
+          </ul></div>
+        <div class="col lose"><h4>Where you can beat it</h4>
+          <ul>
+            <li><b>Only 2 FAQ questions.</b> Our template floor is 8, and the FAQ block is what
+              AI answers pull from. This is the single easiest place to outrank them.</li>
+            <li><b>No named local job.</b> The page proves the company is real but never proves
+              it worked in that city. Our proof block does exactly that.</li>
+            <li><b>No pricing guidance at all.</b> Publishing ranges stops the visitor phoning
+              three competitors just to get a number.</li>
+            <li><b>Franchise content underneath.</b> Much of the body is corporate copy shared
+              across locations.</li>
+          </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site">
+    <div class="sh2"><span class="nm">Clean Method</span>
+      <span class="url">cleanmethod.com</span>
+      <span class="verdict m">Service pages yes, town pages no</span></div>
+    <div class="sb">
+      <div class="kv">
+        <div class="kvi"><div class="k">Service pages</div><div class="v">19</div></div>
+        <div class="kvi"><div class="k">Location pages</div><div class="v">16, state level</div></div>
+        <div class="kvi"><div class="k">URL pattern</div><div class="v">/near-me/{state}/</div></div>
+        <div class="kvi"><div class="k">From your audit</div><div class="v">152 AI citations</div></div>
+      </div>
+      <p>This is the competitor your own audit measured. Nineteen service pages nested under a
+        hub at <code>/commercial-cleaning-services/</code>, covering janitorial, day porter,
+        construction cleaning, floor and carpet, environmental and disinfecting. That depth is
+        why they get cited 152 times across ChatGPT, AI Overviews, AI Mode and Gemini while
+        Black Ops gets zero.</p>
+      <p><strong>Corrected on 10 September.</strong> An earlier version of this teardown said
+        their location pages were state level only. They are not. The state pages are hubs, and
+        town pages sit beneath them at <code>/near-me/maryland/bethesda/</code> and siblings.</p>
+      <p>The town layer is still open ground, but on quality rather than absence. Their Bethesda
+        page name checks NIH and Walter Reed, then runs the same service copy as every other
+        location: <strong>one generic quote, no Bethesda reviews, no local job, no FAQ.</strong>
+        A town page with real local proof still beats it comfortably.</p>
+    </div>
+  </div>
+
+  <div class="site">
+    <div class="sh2"><span class="nm">City Wide</span>
+      <span class="url">gocitywide.com/indianapolis/</span>
+      <span class="verdict m">Half good</span></div>
+    <div class="sb">
+      <p>The best of the franchise city pages. Real street address, 15 named Central Indiana
+        towns, a six question FAQ, and every one of twelve services linked out individually.
+        That last part is worth copying: the service links are the internal linking mesh.</p>
+      <p>Where it falls down is proof. <strong>One testimonial, no dates, no case study, no
+        named client.</strong> It says the company has solved many problems for clients and then
+        names none of them. Swap Indianapolis for Columbus and the page still reads fine, which
+        is the test it fails.</p>
+    </div>
+  </div>
+
+  <div class="site">
+    <div class="sh2"><span class="nm">Vanguard Cleaning Systems</span>
+      <span class="url">vanguardcleaning.com/cleaning/maryland-baltimore/</span>
+      <span class="verdict p">Do not copy</span></div>
+    <div class="sb">
+      <p>A template with one franchise's details poured into it. Local address and a named
+        contact, then nothing. <strong>No reviews, no testimonials, no case studies, no FAQ,
+        and no sub city pages</strong> despite the page title naming Baltimore, Harford and
+        Frederick. The facility type icons link back to corporate service pages rather than
+        anything local.</p>
+    </div>
+  </div>
+
+  <div class="site">
+    <div class="sh2"><span class="nm">Spaulding Decon</span>
+      <span class="url">spauldingdecon.com/locations/maryland</span>
+      <span class="verdict p">Do not copy</span></div>
+    <div class="sb">
+      <p>The number one ranked crime scene cleaning franchise by Entrepreneur in 2023, and its
+        Maryland page lists <strong>one city</strong>. No reviews, no FAQ, no local proof. There
+        is a We Buy Houses For Cash block halfway down the page, which tells you what the page
+        is really for.</p>
+      <p>Useful as evidence, not as a model: even the category leader is not defending the
+        location layer.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">02</div><h2>The local hook</h2></div>
+  <p class="sdek">Roto-Rooter solves the hardest problem in a town page without needing a case
+    study, and the technique transfers straight to cleaning.</p>
+
+  <p class="body">A town page has to say something true that only applies to that town. Our
+    template answers that with a real local job and a photograph, which is the strongest
+    answer. But that gates every town page on the client supplying photographs, and photographs
+    arrive slowly.</p>
+  <p class="body">Roto-Rooter has a second answer running alongside it: <strong>explain why this
+    town has this problem.</strong> Rockville has clay heavy soil, so pipes shift. It has mature
+    street trees, so roots invade. Its older neighbourhoods still run cast iron and galvanised
+    lines. None of that can be swapped to another city, and none of it needed a client
+    photograph.</p>
+
+  <h3>The cleaning equivalent</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Roto-Rooter uses</th><th>A cleaning page would use</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Clay soil and pipe movement</td>
+        <td>The local building stock. Rockville Town Center is newer glass and open plan;
+          the Pike corridor is 1980s office; Twinbrook is older low rise. Each cleans
+          differently.</td></tr>
+      <tr><td class="lab">Mature street trees and root intrusion</td>
+        <td>The local industry mix. Shady Grove and the I-270 corridor are biotech and
+          medical, which means infection control and after hours access, not general
+          janitorial.</td></tr>
+      <tr><td class="lab">Mid-Atlantic storms and basement flooding</td>
+        <td>The same storms, ending in sewage backup and water damage decontamination, which
+          is a service Black Ops already sells.</td></tr>
+      <tr><td class="lab">Older cast iron and galvanised lines</td>
+        <td>County and state inspection regimes, and what a failed infection control
+          inspection costs a practice in this county.</td></tr>
+      <tr><td class="lab">Named local manager and address</td>
+        <td>121 Talbott St. The crew starts the day in Rockville rather than driving in from
+          another county, which is a real and checkable advantage.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call good">
+    <h4>Change this in the town page schema</h4>
+    <p>Add an optional <code>localHook</code> block: two or three sentences on why this town
+      produces this kind of work, drawn from building stock, industry mix, weather or
+      regulation. It is not a replacement for the required proof job, it is what carries the
+      page in the weeks before a photograph from that town exists.</p>
+    <p>It also unblocks a real scheduling problem. Right now no town page can be built until the
+      client supplies a photograph. With a local hook, the page can be <strong>written and
+      reviewed</strong> while the photograph is still outstanding, and the build gate stays
+      where it is.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">03</div><h2>What this means for the template</h2></div>
+  <p class="sdek">The teardown validates most of what we already built, and flags two things
+    worth changing.</p>
+
+  <h3>Confirmed by the teardown</h3>
+  <div class="anat">
+    <div class="ar"><div class="n">01</div><div>
+      <div class="t">Named owner and face on the page</div>
+      <div class="d">Bio-One leads with the owners by name. Our hero has the owner cutout and
+        name card, so this is already in.</div></div><span class="have y">In template</span></div>
+    <div class="ar"><div class="n">02</div><div>
+      <div class="t">Reviews high on the page, named</div>
+      <div class="d">Bio-One puts five named reviewers directly under the hero. Nobody else
+        does. Our page pattern places reviews before the FAQ, which is close enough.</div></div>
+      <span class="have y">In template</span></div>
+    <div class="ar"><div class="n">03</div><div>
+      <div class="t">Service area named place by place</div>
+      <div class="d">Eighteen named places, not a radius. Our town link pills do this.</div></div>
+      <span class="have y">In template</span></div>
+    <div class="ar"><div class="n">04</div><div>
+      <div class="t">Every service linked individually from the city page</div>
+      <div class="d">City Wide's one real strength. Our town page services block does it, and
+        the schema requires the blurb be written for that town.</div></div>
+      <span class="have y">In template</span></div>
+    <div class="ar"><div class="n">05</div><div>
+      <div class="t">Eight to twelve FAQ questions</div>
+      <div class="d">Bio-One has two. Clean Method's AI citation lead comes from depth. Our
+        floor of eight is the right call and is where the easy win is.</div></div>
+      <span class="have y">In template</span></div>
+    <div class="ar"><div class="n">06</div><div>
+      <div class="t">A real local job with a photograph</div>
+      <div class="d">Not one of the five sites does this. It is the whole differentiator, and
+        our TownPage component refuses to build without it.</div></div>
+      <span class="have y">In template</span></div>
+  </div>
+
+  <h3>Two changes worth making</h3>
+  <div class="anat">
+    <div class="ar"><div class="n">07</div><div>
+      <div class="t">Add a second, shorter process block</div>
+      <div class="d">Bio-One runs a five step process for the careful reader and a three step
+        Call, Respond, Clean version for someone in crisis. For trauma and biohazard pages that
+        is a genuinely good idea. Our process block currently has one mode.</div></div>
+      <span class="have n">Add</span></div>
+    <div class="ar"><div class="n">08</div><div>
+      <div class="t">Make insurance handling its own block, not a bullet</div>
+      <div class="d">Every biohazard site that converts leads with it, because it is the real
+        objection. Ours has it inside the process steps and inside the FAQ. On the highest
+        margin pages it deserves its own surface.</div></div>
+      <span class="have n">Add</span></div>
+  </div>
+
+  <div class="call good">
+    <h4>The finding that matters commercially</h4>
+    <p>Clean Method beats Black Ops on everything, and its location pages are <strong>state
+      level</strong>. Spaulding Decon is a national category leader whose Maryland page lists
+      one city. Vanguard has no local proof at all.</p>
+    <p>So the seventeen town pages and nineteen service plus town pages in the proposal are not
+      competing against good work. They are competing against <strong>boilerplate with the city
+      name swapped in</strong>. A town page carrying one real local job and a photograph is
+      genuinely rare, and that is exactly the page the template refuses to build without.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">04</div><h2>Capture list for Module 2D</h2></div>
+  <p class="sdek">These URLs go into <code>/build-niche-template</code> when it captures and
+    scores the best of niche pool. Two are models, three are counter examples worth scoring low
+    so the generator learns the difference.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>URL</th><th>Capture as</th><th>What to extract</th></tr></thead>
+    <tbody>
+      <tr><td class="mn">rotorooter.com/rockvillemd/</td>
+        <td class="lab">Model, town page</td>
+        <td>The local hook technique, review placement, how a town page links down to its
+          service pages</td></tr>
+      <tr><td class="mn">rotorooter.com/rockvillemd/drain-cleaning/</td>
+        <td class="lab">Model, service plus town</td>
+        <td>Three layer URL shape, named local manager, what it is missing that we add</td></tr>
+      <tr><td class="mn">biooneinc.com/washington-d-c/crime-scene-cleanup/</td>
+        <td class="lab">Model, service plus city</td>
+        <td>Section order, dual process blocks, badge set, review placement, service area list</td></tr>
+      <tr><td class="mn">biooneinc.com/find-a-location/</td>
+        <td class="lab">Model, location hub</td>
+        <td>How a hub links out to city pages without becoming a directory dump</td></tr>
+      <tr><td class="mn">cleanmethod.com/commercial-cleaning-services/janitorial-services/</td>
+        <td class="lab">Model, service page</td>
+        <td>Service page depth, the hub and spoke nesting, the 19 page taxonomy</td></tr>
+      <tr><td class="mn">cleanmethod.com/near-me/maryland/bethesda/</td>
+        <td class="lab">Counter example</td>
+        <td>A town page that exists but carries no local proof, no reviews and no FAQ</td></tr>
+      <tr><td class="mn">greenapplecleaningmd.com/bethesda-md/janitorial-office/</td>
+        <td class="lab">Model, service plus town</td>
+        <td>Reviews on the page itself, named local clients, a real landmark. An audit
+          competitor.</td></tr>
+      <tr><td class="mn">anagocleaning.com/washington-dc/bethesda/janitorial-cleaning-services/</td>
+        <td class="lab">Model, internal linking</td>
+        <td>Thin content but links correctly up, across and out. The wiring to copy.</td></tr>
+      <tr><td class="mn">puroclean.com/rockville-md-purofirst-metropolitan-washington/services/biohazard-cleanup/</td>
+        <td class="lab">Model, specialty service</td>
+        <td>Eight step process, insurance coordination, honest OSHA framing</td></tr>
+      <tr><td class="mn">gocitywide.com/indianapolis/</td>
+        <td class="lab">Mixed</td>
+        <td>The service link mesh, which is good. The single testimonial, which is not.</td></tr>
+      <tr><td class="mn">vanguardcleaning.com/cleaning/maryland-baltimore/</td>
+        <td class="lab">Counter example</td>
+        <td>What a location page looks like with zero proof</td></tr>
+      <tr><td class="mn">spauldingdecon.com/locations/maryland</td>
+        <td class="lab">Counter example</td>
+        <td>Category leader, undefended location layer</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call">
+    <h4>One competitor note that is not about design</h4>
+    <p>Bio-One already runs pages for <strong>Rockville, Montgomery County, Frederick County,
+      Prince George's County and Washington DC</strong>, across crime scene, suicide, blood
+      spill, hoarding, meth lab and mold. They are a direct competitor for Black Ops' highest
+      margin work, they carry an SDVOSB badge, and they are not in your audit.</p>
+    <p>Worth adding to the competitor set before the service pages get written, so the copy is
+      positioned against who is actually there.</p>
+  </div>
+</section>
+
+</div>
+
+<div class="wrap">
+  <div class="foot">
+    <p><b>How this was checked.</b> Each URL was fetched and read on 8 September 2026. The
+      assessment covers page structure, content blocks and internal linking. It does not cover
+      visual design, load speed or mobile rendering, which need a browser and a screenshot pass.
+      Page and review counts are as reported by the sites themselves.</p>
+    <p><b>Not checked.</b> Aftermath Services, PuroClean and ServiceMaster Restore all refused
+      the fetch with a 403, so they are deliberately absent rather than judged. Worth a second
+      look through the Module 2D capture, which uses a real browser.</p>
+    <p><b>Sources.</b> rotorooter.com, biooneinc.com, cleanmethod.com, gocitywide.com,
+      vanguardcleaning.com, spauldingdecon.com. Clean Method's citation and page figures come
+      from the Black Ops growth audit dated 23 August 2026.</p>
+  </div>
+</div>

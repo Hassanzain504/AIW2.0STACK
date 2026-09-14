@@ -1,0 +1,823 @@
+<title>Two Projects, One Clock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#EFEDE8; --card:#FFFFFF; --card2:#E5E3DC; --card3:#D8D5CC;
+  --line:#D2CFC6; --line2:#B0ACA1;
+  --ink:#16191C; --ink2:#4C545B; --ink3:#7E8790;
+  --accent:#2F5D50; --accent2:#41806E; --accent-bg:#DFEAE5;
+  --ok:#2C6E4A; --ok-bg:#DDEBE1; --ok-line:#93BEA3;
+  --wait:#8A5C0C; --wait-bg:#F3E6C9; --wait-line:#CFAF6C;
+  --block:#9E362A; --block-bg:#F5E1DD; --block-line:#D3A096;
+  --band:#191D1B; --bandink:#EFEDE8;
+  --shade:0 1px 2px rgba(22,25,28,.05), 0 14px 34px -26px rgba(22,25,28,.5);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E100F; --card:#171A19; --card2:#1E2321; --card3:#282E2B;
+    --line:#2A302D; --line2:#414947; --ink:#E9EBE8; --ink2:#A4AEAA; --ink3:#727C79;
+    --accent:#63BBA3; --accent2:#83CFBA; --accent-bg:#12312A;
+    --ok:#5BBF89; --ok-bg:#0F2A1C; --ok-line:#2C5F42;
+    --wait:#D9A44F; --wait-bg:#2A2110; --wait-line:#67501F;
+    --block:#E08A78; --block-bg:#2C1512; --block-line:#66332B;
+    --band:#060807; --bandink:#E9EBE8;
+    --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E100F; --card:#171A19; --card2:#1E2321; --card3:#282E2B;
+  --line:#2A302D; --line2:#414947; --ink:#E9EBE8; --ink2:#A4AEAA; --ink3:#727C79;
+  --accent:#63BBA3; --accent2:#83CFBA; --accent-bg:#12312A;
+  --ok:#5BBF89; --ok-bg:#0F2A1C; --ok-line:#2C5F42;
+  --wait:#D9A44F; --wait-bg:#2A2110; --wait-line:#67501F;
+  --block:#E08A78; --block-bg:#2C1512; --block-line:#66332B;
+  --band:#060807; --bandink:#E9EBE8;
+  --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* masthead */
+.mast{background:var(--band);color:var(--bandink)}
+.mast .wrap{padding:30px 22px 32px}
+.lockup{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;
+  padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.15)}
+.mark{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.mark span{color:var(--accent2)}
+.lockup .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.58;font-weight:600;text-align:right}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(36px,6.6vw,62px);line-height:.96;letter-spacing:-.012em;
+  margin:24px 0 0;text-transform:uppercase;text-wrap:balance}
+.lede{font-size:17.5px;color:rgba(233,235,232,.74);max-width:62ch;margin:16px 0 0}
+
+/* clock strip */
+.clock{background:var(--card);border-bottom:1px solid var(--line)}
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.ci{padding:19px 20px;border-left:1px solid var(--line)}
+.ci:first-child{border-left:none}
+.ci .n{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:34px;
+  line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.ci .k{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink3);margin-top:7px;font-weight:600;line-height:1.5}
+.ci.w .n{color:var(--wait)} .ci.b .n{color:var(--block)} .ci.a .n{color:var(--accent)}
+
+/* sections */
+section{padding:50px 0 4px}
+.shead{display:flex;gap:14px;align-items:baseline}
+.sno{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12px;
+  color:var(--accent);letter-spacing:.11em;padding-top:7px;flex-shrink:0}
+h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(26px,4.1vw,38px);line-height:1.02;margin:0;text-transform:uppercase;
+  letter-spacing:-.005em;text-wrap:balance}
+.sdek{color:var(--ink2);font-size:16.5px;max-width:64ch;margin:8px 0 24px 40px}
+@media(max-width:640px){.sdek{margin-left:0}}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
+  text-transform:uppercase;letter-spacing:.014em;margin:32px 0 12px;
+  padding-bottom:7px;border-bottom:2px solid var(--ink)}
+h4.sub{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:16.5px;
+  text-transform:uppercase;letter-spacing:.035em;color:var(--accent);margin:22px 0 8px}
+p.body{color:var(--ink2);font-size:15.5px;max-width:66ch}
+
+/* status chips */
+.chip{display:inline-flex;align-items:center;gap:6px;font-family:"IBM Plex Mono",monospace;
+  font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 7px;border-radius:2px;border:1px solid;white-space:nowrap}
+.chip.done{background:var(--ok-bg);color:var(--ok);border-color:var(--ok-line)}
+.chip.now{background:var(--accent-bg);color:var(--accent);border-color:var(--accent2)}
+.chip.wait{background:var(--wait-bg);color:var(--wait);border-color:var(--wait-line)}
+.chip.blk{background:var(--block-bg);color:var(--block);border-color:var(--block-line)}
+.chip.off{background:var(--card3);color:var(--ink3);border-color:var(--line2)}
+
+/* tables */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--card);
+  box-shadow:var(--shade)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:580px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:12px 14px;border-bottom:2px solid var(--line2);background:var(--card2);white-space:nowrap}
+th.r,td.r{text-align:right}
+td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.lab{font-weight:600}
+td.num,td.mn{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;
+  font-size:12.5px;white-space:nowrap}
+td.mn{color:var(--ink3)}
+tr.hi td{background:var(--accent-bg)}
+
+/* gate ladder */
+.ladder{border:1px solid var(--line);border-radius:3px;overflow:hidden;background:var(--card);
+  box-shadow:var(--shade)}
+.rung{display:grid;grid-template-columns:34px 1fr auto;gap:14px;align-items:start;
+  padding:13px 16px;border-bottom:1px solid var(--line)}
+.rung:last-child{border-bottom:none}
+.rung.on{background:var(--accent-bg)}
+.rung .idx{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;
+  color:var(--accent);padding-top:4px}
+.rung .cmd{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
+  color:var(--ink);display:block}
+.rung .gate{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink3);
+  display:block;margin-top:3px;word-break:break-all}
+.rung .what{font-size:14.5px;color:var(--ink2);margin-top:6px;line-height:1.5}
+.rung .side{display:flex;flex-direction:column;align-items:flex-end;gap:6px;padding-top:2px}
+.rung .est{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink3);
+  font-weight:600;white-space:nowrap}
+@media(max-width:620px){
+  .rung{grid-template-columns:26px 1fr;gap:10px}
+  .rung .side{grid-column:2;flex-direction:row;align-items:center;padding-top:0}
+}
+
+/* callouts */
+.call{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:3px;padding:19px 21px;margin:22px 0;box-shadow:var(--shade)}
+.call.red{border-left-color:var(--block)}
+.call.green{border-left-color:var(--ok)}
+.call.amber{border-left-color:var(--wait)}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19.5px;
+  text-transform:uppercase;margin:0 0 9px;letter-spacing:.014em}
+.call p{margin:0 0 10px;font-size:15.5px;color:var(--ink2)}
+.call p:last-child{margin-bottom:0}
+.call strong{color:var(--ink)}
+.tiny{font-size:13px;color:var(--ink3)}
+code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--card2);
+  padding:1px 5px;border-radius:2px;color:var(--ink)}
+
+/* route compare */
+.routes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:20px 0 0}
+.route{background:var(--card);border:1px solid var(--line);border-radius:3px;
+  padding:19px 20px;box-shadow:var(--shade)}
+.route.pick{border-color:var(--accent2);border-width:2px}
+.route .rh{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.route .rt{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;
+  text-transform:uppercase;letter-spacing:.014em}
+.route p{margin:0 0 10px;font-size:14.5px;color:var(--ink2)}
+.route ul{margin:0;padding-left:18px}
+.route li{font-size:14px;color:var(--ink2);margin-bottom:6px}
+.route li b{color:var(--ink)}
+
+/* timeline */
+.tl{display:flex;flex-direction:column;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:3px;overflow:hidden;box-shadow:var(--shade)}
+.day{background:var(--card);padding:15px 18px;display:grid;
+  grid-template-columns:82px 1fr;gap:16px;align-items:start}
+.day .dr{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;
+  color:var(--accent);letter-spacing:.06em;padding-top:3px;white-space:nowrap}
+.day .dt{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;
+  text-transform:uppercase;letter-spacing:.014em;line-height:1.15}
+.lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:10px}
+.lane{border-left:3px solid var(--line2);padding:2px 0 2px 12px}
+.lane.mach{border-left-color:var(--accent2)}
+.lane.cli{border-left-color:var(--wait)}
+.lane .ln{font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--ink3)}
+.lane p{margin:5px 0 0;font-size:14px;color:var(--ink2);line-height:1.5}
+@media(max-width:560px){.day{grid-template-columns:1fr;gap:8px}}
+
+ul.tight{margin:10px 0 0;padding-left:20px}
+ul.tight li{margin-bottom:7px;font-size:15px;color:var(--ink2)}
+ul.tight li b{color:var(--ink);font-weight:600}
+
+/* sheet */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;
+  box-shadow:var(--shade);margin:14px 0 0}
+.si{background:var(--card);padding:12px 14px}
+.si .sk{font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--ink3)}
+.si .sv{font-size:14.5px;color:var(--ink);margin-top:4px;line-height:1.45;font-weight:500}
+.si .sn{font-size:12.5px;color:var(--ink3);margin-top:4px;line-height:1.45}
+
+/* close */
+.close{background:var(--band);color:var(--bandink);margin-top:54px;padding:44px 0 48px}
+.close h2{color:var(--bandink)} .close .sno{color:var(--accent2)}
+.close .sdek{color:rgba(233,235,232,.66)}
+.asks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);
+  border-radius:3px;overflow:hidden;margin-top:6px}
+.ask{background:var(--band);padding:18px}
+.ask .an{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;
+  color:var(--accent2);font-weight:600}
+.ask .at{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  text-transform:uppercase;margin-top:7px;line-height:1.2}
+.ask .ap{font-size:13.5px;opacity:.7;margin-top:7px;line-height:1.5}
+.foot{padding:24px 0 44px;font-size:13px;color:var(--ink3)}
+.foot p{margin:0 0 8px;max-width:78ch}
+.foot b{color:var(--ink2)}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="lockup">
+      <div class="mark">AIW<span>&nbsp;2.0</span>&nbsp;Stack</div>
+      <div class="meta">Project plan<br>8 September 2026</div>
+    </div>
+    <h1>Two projects,<br>one clock</h1>
+    <p class="lede">You are building a website factory and delivering a paid rebuild at the
+      same time. They are not separate. The factory is the only thing that makes 57 pages in
+      30 days possible, and today it cannot build anything at all. This is the order that
+      fixes that.</p>
+  </div>
+</header>
+
+<div class="clock">
+  <div class="wrap"><div class="cg">
+    <div class="ci w"><div class="n">15</div><div class="k">Days until the Black Ops<br>proposal expires</div></div>
+    <div class="ci b"><div class="n">0<span style="font-size:20px">/17</span></div><div class="k">Stack gates passed</div></div>
+    <div class="ci b"><div class="n">0<span style="font-size:20px">/6</span></div><div class="k">Credentials configured</div></div>
+    <div class="ci a"><div class="n">57</div><div class="k">Pages promised<br>in the proposal</div></div>
+    <div class="ci a"><div class="n">30</div><div class="k">Days from access<br>handover</div></div>
+  </div></div>
+</div>
+
+<div class="wrap">
+
+<section>
+  <div class="shead"><div class="sno">01</div><h2>Where it actually stands</h2></div>
+  <p class="sdek">Read straight off <code>stack-state.json</code> and the repository, not from
+    memory.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>Thing</th><th>State today</th><th>What that means</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Black Ops audit</td><td><span class="chip done">Delivered</span></td>
+        <td>Competitor scoreboard, 15 technical faults, blueprint. Done and sent.</td></tr>
+      <tr><td class="lab">Black Ops proposal</td><td><span class="chip wait">Awaiting decision</span></td>
+        <td>$3,500 fixed, 3 workstreams, 30 days. Dated 23 August, valid until 23 September.</td></tr>
+      <tr><td class="lab">Stack gates</td><td><span class="chip blk">All false</span></td>
+        <td><code>module: not_started</code>. Every gate from <code>setup.complete</code> to
+          <code>engine.contextPasted</code> is false.</td></tr>
+      <tr><td class="lab">Credentials</td><td><span class="chip blk">None set</span></td>
+        <td>Anthropic, Apify, Supabase, Vercel, AssemblyAI, GitHub. All false, so no research
+          actor can run.</td></tr>
+      <tr><td class="lab">Niche templates</td><td><span class="chip blk">Zero</span></td>
+        <td><code>config/template-routes.json</code> has an empty <code>byNiche</code>. There is
+          no default template, by design. The factory cannot build a client site yet.</td></tr>
+      <tr class="hi"><td class="lab">Hero pattern</td><td><span class="chip done">Built today</span></td>
+        <td>Committed to <code>references/section-patterns/hero-split-form/</code>. Component,
+          preview and README. The first real building block.</td></tr>
+      <tr><td class="lab">Content engine</td><td><span class="chip off">Not started</span></td>
+        <td>Your own lead generation, not a client deliverable. Correctly parked until the
+          client work is moving.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call red">
+    <h4>The one thing that matters in that table</h4>
+    <p>The proposal promises <strong>57 pages, each researched, written, built and marked up
+      for Google</strong>. Hand-writing 57 pages of that quality is not a 30 day job. The
+      factory is what makes the number honest.</p>
+    <p>And the factory currently has <strong>no template to build against</strong>. So the
+      stack is not a side project running alongside the client work. It sits directly on the
+      client work's critical path, and it is the part that is furthest behind.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">02</div><h2>The decision that unblocks everything</h2></div>
+  <p class="sdek">Two honest routes. They differ in what the second cleaning client costs you,
+    not in whether Black Ops gets delivered.</p>
+
+  <div class="routes">
+    <div class="route">
+      <div class="rh"><span class="rt">Route A</span><span class="chip off">Hand build</span></div>
+      <p>Build Black Ops by hand now. Formalise the factory afterwards from what you learned.</p>
+      <ul>
+        <li><b>Starts today.</b> No setup, no credentials, no gates.</li>
+        <li><b>57 pages by hand.</b> Realistically you ship the 14 and the rolling 43 slip.</li>
+        <li><b>Nothing is reusable.</b> The next cleaning client costs the same again.</li>
+        <li><b>The stack stays at zero</b> and gets harder to start the busier you get.</li>
+      </ul>
+    </div>
+    <div class="route pick">
+      <div class="rh"><span class="rt">Route B</span><span class="chip now">Recommended</span></div>
+      <p>Run the stack now with the niche already decided. Black Ops is the proof that
+        commercial and specialty cleaning is the niche. Build the template, then let the
+        factory produce the pages.</p>
+      <ul>
+        <li><b>Modules 1 to 2C compress to about a day.</b> You are not discovering a niche,
+          you are recording a decision you already made and can evidence.</li>
+        <li><b>Module 2D is the real work,</b> and it is the thing that pays off forever.</li>
+        <li><b>It runs in parallel</b> with proposal engagement one, which is technical fixes,
+          Google profile and reviews. None of that needs the factory.</li>
+        <li><b>Client two onwards is a data change,</b> not a rebuild.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="call green">
+    <h4>Take Route B, and start it before the client says yes</h4>
+    <p>The 30 day clock starts at access handover, not today. Every day between now and that
+      handover is free time to get the factory to the point where it can build. If the client
+      signs in a week, you want the commercial cleaning template already scaffolded when they
+      do.</p>
+    <p>If they do not sign, you still own a cleaning niche template and the next nine prospects
+      in Montgomery County are the same pitch. Nothing is wasted either way.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">03</div><h2>Workstream A, the machine</h2></div>
+  <p class="sdek">The gate chain, in order, with what each one actually needs from you. Nothing
+    here advances without an explicit slash command.</p>
+
+  <div class="ladder">
+    <div class="rung on">
+      <div class="idx">01</div>
+      <div><span class="cmd">/setup</span><span class="gate">setup.complete</span>
+        <div class="what">Six credentials, each tested live. Apify is the one that gates real
+          work: no Apify key means no niche research, no site capture, no template. Anthropic,
+          Vercel and GitHub matter later. Supabase and AssemblyAI are engine-only, so they can
+          wait.</div></div>
+      <div class="side"><span class="chip now">Do first</span><span class="est">Half a day</span></div>
+    </div>
+    <div class="rung">
+      <div class="idx">02</div>
+      <div><span class="cmd">/setup-agency</span><span class="gate">agency.brandLocked</span>
+        <div class="what">Your own agency profile. The proposal builder injects it into every
+          client proposal. You have already written two client documents by hand, so this
+          captures the voice you have proven rather than inventing one.</div></div>
+      <div class="side"><span class="chip now">Do first</span><span class="est">1 hour</span></div>
+    </div>
+    <div class="rung">
+      <div class="idx">03</div>
+      <div><span class="cmd">/discovery</span><span class="gate">m1.profileLocked</span>
+        <div class="what">Seven section self interview. Run it honestly but fast. You already
+          know the answer it leads to.</div></div>
+      <div class="side"><span class="chip wait">Compress</span><span class="est">1 hour</span></div>
+    </div>
+    <div class="rung">
+      <div class="idx">04</div>
+      <div><span class="cmd">/score-niches</span><span class="gate">m2a.scoresLocked</span>
+        <div class="what">Five candidates on seven factors. Commercial and specialty cleaning
+          scores itself: you hold a live audit proving zero AI citations, zero rankings and 141
+          wasted referring domains in a nine competitor market.</div></div>
+      <div class="side"><span class="chip wait">Compress</span><span class="est">1 hour</span></div>
+    </div>
+    <div class="rung">
+      <div class="idx">05</div>
+      <div><span class="cmd">/research</span><span class="gate">m2b.researchComplete</span>
+        <div class="what">Apify driven deep research on the three finalists, eight sub tasks
+          each. This is the first command that costs money and time. Your Black Ops research
+          already covers a large share of the cleaning finalist.</div></div>
+      <div class="side"><span class="chip wait">Needs Apify</span><span class="est">1 to 2 days</span></div>
+    </div>
+    <div class="rung">
+      <div class="idx">06</div>
+      <div><span class="cmd">/pick-niche</span><span class="gate">m2c.nicheDecided</span>
+        <div class="what">Writes <code>stack-state.json.niche</code>. Everything downstream keys
+          off this string, so pick the slug carefully and do not rename it later.</div></div>
+      <div class="side"><span class="chip wait">Decision</span><span class="est">1 hour</span></div>
+    </div>
+    <div class="rung on">
+      <div class="idx">07</div>
+      <div><span class="cmd">/build-niche-template</span><span class="gate">m2d.templateBuilt</span>
+        <div class="what">The real work, and the highest leverage command in the stack. Captures
+          the top of niche sites, scores them, then generates the entire per niche factory:
+          components, pages, playbook, SOPs, agents, checklists. The hero pattern committed today
+          plugs in here.</div></div>
+      <div class="side"><span class="chip now">The big one</span><span class="est">3 to 4 days</span></div>
+    </div>
+    <div class="rung">
+      <div class="idx">08</div>
+      <div><span class="cmd">/craft-offer</span><span class="gate">m3.offerLocked</span>
+        <div class="what">Positioning, stage check, cold DMs. You are already selling, so this
+          documents an offer that works rather than guessing at one.</div></div>
+      <div class="side"><span class="chip off">After 2D</span><span class="est">Half a day</span></div>
+    </div>
+    <div class="rung">
+      <div class="idx">09</div>
+      <div><span class="cmd">/load-factory-structure</span><span class="gate">m4.factoryStructureLoaded</span>
+        <div class="what">Automatic tree scan. No input needed.</div></div>
+      <div class="side"><span class="chip off">Auto</span><span class="est">Minutes</span></div>
+    </div>
+    <div class="rung">
+      <div class="idx">10</div>
+      <div><span class="cmd">/generate-wf-brief</span><span class="gate">m5.factoryBriefLocked</span>
+        <div class="what">The handoff document the factory tailoring reads.</div></div>
+      <div class="side"><span class="chip off">After 2D</span><span class="est">2 hours</span></div>
+    </div>
+    <div class="rung">
+      <div class="idx">11</div>
+      <div><span class="cmd">/tailor-factory</span><span class="gate">factory.tailored</span>
+        <div class="what">Registers the niche with the factory chrome: trust badges,
+          orientation, copy deck seed.</div></div>
+      <div class="side"><span class="chip off">After 2D</span><span class="est">2 hours</span></div>
+    </div>
+    <div class="rung on">
+      <div class="idx">12</div>
+      <div><span class="cmd">/run-factory</span><span class="gate">factory.deployed</span>
+        <div class="what">Hands off into the factory's own 13 stage pipeline. This is where
+          Black Ops actually gets built: intake, research, assets, strategy, copy deck, brand
+          DNA, hero image, build, personalise, uplift, QA, delivery, deploy.</div></div>
+      <div class="side"><span class="chip now">Client build</span><span class="est">Per client</span></div>
+    </div>
+    <div class="rung">
+      <div class="idx">13</div>
+      <div><span class="cmd">/factory-feedback</span> then <span class="cmd">/refine-template</span>
+        <span class="gate">lessons loop</span>
+        <div class="what">Run both after Black Ops ships. This is how client two costs half of
+          client one.</div></div>
+      <div class="side"><span class="chip off">After ship</span><span class="est">Half a day</span></div>
+    </div>
+    <div class="rung">
+      <div class="idx">14</div>
+      <div><span class="cmd">/load-engine-structure</span> to <span class="cmd">/walk-engine</span>
+        <span class="gate">engine.contextPasted</span>
+        <div class="what">Your own content engine, deployed to your own Vercel project. Pure
+          lead generation for you, never a client deliverable. Park it until Black Ops is
+          shipped.</div></div>
+      <div class="side"><span class="chip off">Park</span><span class="est">Later</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">04</div><h2>Workstream B, the client</h2></div>
+  <p class="sdek">Straight from the proposal. Three engagements inside 30 days, then a rolling
+    release that carries on afterwards at no extra cost.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>Engagement</th><th class="r">Days</th><th>Deliverable</th><th>Needs the factory</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">One</td><td class="num r">1 to 10</td>
+        <td>All 15 technical faults fixed. Images compressed, homepage under 1 MB, headings and
+          titles rewritten, federal agency logos removed, business data added, qualifying form,
+          call tracking. Google Business Profile built and submitted. Review system installed
+          with the crew.</td><td><span class="chip done">No</span></td></tr>
+      <tr><td class="lab">Two</td><td class="num r">11 to 19</td>
+        <td>Ten service pages. Biohazard, trauma and unattended death first, because that is the
+          thinnest competition and the highest margin.</td><td><span class="chip now">Yes</span></td></tr>
+      <tr><td class="lab">Three</td><td class="num r">20 to 30</td>
+        <td>Four town pages. Citations created and verified, duplicates cleared, Chamber listing
+          repaired. Handover with logins and a walkthrough.</td><td><span class="chip now">Partly</span></td></tr>
+      <tr class="hi"><td class="lab">Rolling</td><td class="num r">After 30</td>
+        <td>The remaining 43 pages at two to three a week until all 57 are live. Included.</td>
+        <td><span class="chip now">Yes</span></td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call">
+    <h4>Engagement one buys you the factory build time</h4>
+    <p>Nothing in days 1 to 10 needs a niche template. Technical fixes, the Google profile and
+      the review routine are all hand work on the existing site and on Google's own surfaces.</p>
+    <p>That is a <strong>ten day window</strong> in which Module 2D can run without holding the
+      client up. Miss it and engagement two starts with no template, and the 57 page promise
+      starts slipping in week two.</p>
+  </div>
+
+  <h3>Longest lead items, start these on day one</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Item</th><th>Lead time</th><th>Why it cannot wait</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Google Business Profile verification</td><td class="mn">1 to 3 weeks</td>
+        <td>Video or postcard verification is outside your control. Everything in the Maps
+          workstream sits behind it. Submit on day one, before anything else.</td></tr>
+      <tr><td class="lab">Client job photographs</td><td class="mn">Ongoing, 5 per week</td>
+        <td>A town page without a real local job and a photograph reads as filler and will not
+          rank. Photos are what unlock each new town page, so the shortage compounds.</td></tr>
+      <tr><td class="lab">The first 20 review calls</td><td class="mn">Client dependent</td>
+        <td>Business to business reviews come from the owner phoning past clients. You cannot
+          automate this and it gates the map pack.</td></tr>
+      <tr><td class="lab">SBA VetCert, VOSB or SDVOSB</td><td class="mn">Weeks to months</td>
+        <td>Unlocks the federal buyer directories and the government contracting page. Start the
+          application early, treat the listing as a later win.</td></tr>
+      <tr><td class="lab">BBB and Chamber applications</td><td class="mn">1 to 3 weeks</td>
+        <td>Paid, reviewed by a human, and both ask for insurance and licence documents.</td></tr>
+      <tr><td class="lab">The 24/7 decision</td><td class="mn">Week one</td>
+        <td>If the client will not answer at 3am, the emergency pages do not get built and the
+          sitemap changes. This decision reshapes the page list, so it cannot drift.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">05</div><h2>How the two run together</h2></div>
+  <p class="sdek">The green lane is the factory. The amber lane is the client. Day numbers count
+    from access handover, not from today.</p>
+
+  <div class="tl">
+    <div class="day">
+      <div class="dr">NOW</div>
+      <div>
+        <div class="dt">Before the client signs</div>
+        <div class="lanes">
+          <div class="lane mach"><div class="ln">Machine</div>
+            <p>Run <code>/setup</code> and <code>/setup-agency</code>. Get the Apify key working.
+              Push through discovery, scoring and pick-niche on the evidence you already hold.
+              Target: <code>m2c.nicheDecided</code> true before handover.</p></div>
+          <div class="lane cli"><div class="ln">Client</div>
+            <p>Chase the decision. The proposal expires 23 September. Confirm the 24/7 answer at
+              the same time, since it changes the page list.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="day">
+      <div class="dr">DAY 1 to 10</div>
+      <div>
+        <div class="dt">Engagement one, and the template build</div>
+        <div class="lanes">
+          <div class="lane mach"><div class="ln">Machine</div>
+            <p>Run <code>/build-niche-template</code> for the cleaning niche. This is the whole
+              window and it needs it. Then the fast tail: offer, structure load, brief, tailor.</p></div>
+          <div class="lane cli"><div class="ln">Client</div>
+            <p>Access taken, baseline captured. All 15 faults fixed. Google profile submitted on
+              day one. Review routine set up with the crew. Call tracking live.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="day">
+      <div class="dr">DAY 11 to 19</div>
+      <div>
+        <div class="dt">Engagement two, the factory earns its keep</div>
+        <div class="lanes">
+          <div class="lane mach"><div class="ln">Machine</div>
+            <p><code>/run-factory</code> on Black Ops. The 13 stage pipeline produces the ten
+              service pages: research, strategy, copy deck, brand DNA, hero image, build,
+              personalise, uplift, QA.</p></div>
+          <div class="lane cli"><div class="ln">Client</div>
+            <p>Draft review, two rounds per page. Job photographs arriving weekly. Owner working
+              through the first 20 review calls.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="day">
+      <div class="dr">DAY 20 to 30</div>
+      <div>
+        <div class="dt">Engagement three, and handover</div>
+        <div class="lanes">
+          <div class="lane mach"><div class="ln">Machine</div>
+            <p>Four town pages through the factory. Then <code>/factory-feedback</code> and
+              <code>/refine-template</code> while the run is fresh in memory.</p></div>
+          <div class="lane cli"><div class="ln">Client</div>
+            <p>All 30 to 40 citations built from the locked reference sheet. Duplicate Facebook
+              page merged, Chamber listing repaired, Pegbo claimed. Logins handed over and a
+              walkthrough of what moved.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="day">
+      <div class="dr">AFTER 30</div>
+      <div>
+        <div class="dt">Rolling release, and your own engine</div>
+        <div class="lanes">
+          <div class="lane mach"><div class="ln">Machine</div>
+            <p>Remaining 43 pages at two to three a week. Now, and only now, deploy the content
+              engine for your own inbound leads.</p></div>
+          <div class="lane cli"><div class="ln">Client</div>
+            <p>Weekly photo intake, weekly Google profile posts, review replies. Month two
+              replaces every benchmark number in the audit with the client's real figures.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">06</div><h2>The citations, and what each one asks for</h2></div>
+  <p class="sdek">You asked for this list. It is workstream three of the proposal, priced at
+    $500. Almost all of it is free to file, and the cost is the hour it takes to do it
+    identically every time.</p>
+
+  <h3>Build this reference sheet first, once</h3>
+  <p class="body">Every listing below pulls from the same sheet. The single biggest cause of
+    citation work producing nothing is the details drifting between listings. Write these down
+    once, character for character, and never retype them from memory.</p>
+
+  <div class="sheet">
+    <div class="si"><div class="sk">Legal name</div><div class="sv">Black Ops Cleaning Company LLC</div>
+      <div class="sn">Decide now whether LLC appears. Then it appears everywhere or nowhere.</div></div>
+    <div class="si"><div class="sk">Address</div><div class="sv">121 Talbott St, Rockville, MD 20852</div>
+      <div class="sn">Missing from the website entirely today. Fix that before filing anything.</div></div>
+    <div class="si"><div class="sk">Phone</div><div class="sv">One tracked number</div>
+      <div class="sn">Same number on every listing. Call tracking sits behind it, not in front.</div></div>
+    <div class="si"><div class="sk">Website URL</div><div class="sv">One canonical form</div>
+      <div class="sn">Pick https, pick www or no www, then never vary it.</div></div>
+    <div class="si"><div class="sk">Email</div><div class="sv">On the domain, not free mail</div>
+      <div class="sn">Several directories reject Gmail addresses for business verification.</div></div>
+    <div class="si"><div class="sk">Hours</div><div class="sv">Blocked on the 24/7 decision</div>
+      <div class="sn">Do not file listings until this is answered, or you will refile them all.</div></div>
+    <div class="si"><div class="sk">Categories</div><div class="sv">Primary plus secondaries</div>
+      <div class="sn">Researched against the three businesses currently ranking above you.</div></div>
+    <div class="si"><div class="sk">Description</div><div class="sv">Three lengths</div>
+      <div class="sn">Roughly 150, 250 and 750 characters. Directories cap at different limits.</div></div>
+    <div class="si"><div class="sk">Service list</div><div class="sv">All 11, each described</div>
+      <div class="sn">Commercial through to biohazard. Reused on the Google profile.</div></div>
+    <div class="si"><div class="sk">Service area</div><div class="sv">17 towns</div>
+      <div class="sn">Same list as the town pages, so the site and the listings agree.</div></div>
+    <div class="si"><div class="sk">Logo</div><div class="sv">Square and horizontal</div>
+      <div class="sn">Square at 720 by 720 minimum. Most directories want the square.</div></div>
+    <div class="si"><div class="sk">Cover image</div><div class="sv">16 by 9, 1440 by 720 up</div>
+      <div class="sn">A real job, not stock. Stock is spotted instantly by commercial buyers.</div></div>
+    <div class="si"><div class="sk">Photo set</div><div class="sv">20 or more real jobs</div>
+      <div class="sn">The same set feeds the Google profile and the town pages.</div></div>
+    <div class="si"><div class="sk">Year founded</div><div class="sv">Needed by most</div>
+      <div class="sn">Consistency matters more than the number itself.</div></div>
+    <div class="si"><div class="sk">EIN and MD registration</div><div class="sv">Business documents</div>
+      <div class="sn">Asked for by BBB, chambers and any verified directory.</div></div>
+    <div class="si"><div class="sk">SAM.gov UEI</div><div class="sv">PMPPFTB7CCX4</div>
+      <div class="sn">Already registered. Currently mentioned nowhere on the website.</div></div>
+    <div class="si"><div class="sk">Insurance certificate</div><div class="sv">GL and workers comp</div>
+      <div class="sn">BBB and the Restoration Industry Association both ask for it.</div></div>
+    <div class="si"><div class="sk">Certifications</div><div class="sv">ISSA CMI, GBAC</div>
+      <div class="sn">Membership numbers, not just the names. Both have their own directories.</div></div>
+    <div class="si"><div class="sk">Veteran proof</div><div class="sv">DD-214</div>
+      <div class="sn">Required by the veteran directories, which are your best listings.</div></div>
+    <div class="si"><div class="sk">Owner details</div><div class="sv">Name, title, headshot</div>
+      <div class="sn">Amilcar Ayala. The headshot also feeds the website hero.</div></div>
+  </div>
+
+  <h3>Tier one, file these first</h3>
+  <p class="body">Free, high weight, and every competitor already holds them.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Listing</th><th>Cost</th><th>What it asks for beyond the sheet</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Google Business Profile</td><td class="mn">Free</td>
+        <td>A dedicated Google account, not a personal one. Verification by video call or
+          postcard: for the video be ready to show street signage, the address, equipment and
+          proof you control the premises. This is the single most important listing you own.</td></tr>
+      <tr><td class="lab">Yelp</td><td class="mn">Free</td>
+        <td>Business email and phone verification. Eleven Rockville cleaning companies are
+          already there. Never ask for or incentivise Yelp reviews, they filter aggressively.</td></tr>
+      <tr><td class="lab">Bing Places</td><td class="mn">Free</td>
+        <td>A Microsoft account. It can import straight from Google, so file it after the Google
+          profile is verified and it takes minutes. Feeds Bing and Copilot answers.</td></tr>
+      <tr><td class="lab">Apple Business Connect</td><td class="mn">Free</td>
+        <td>An Apple ID plus business verification. This is what puts you on Apple Maps, which
+          is every iPhone in the county.</td></tr>
+      <tr><td class="lab">LinkedIn company page</td><td class="mn">Free</td>
+        <td>A personal LinkedIn profile as admin, and an email on your own domain to verify.
+          Matters more than usual here because of the government contracting angle.</td></tr>
+      <tr><td class="lab">Data Axle and Localeze</td><td class="mn">Free or low</td>
+        <td>Submission forms only. These are aggregators: they feed hundreds of smaller
+          directories automatically, so they are worth more than the individual sites they
+          populate.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Tier two, the ones competitors cannot copy</h3>
+  <p class="body">This is the part worth the most. These are gated by credentials the client
+    actually holds and the Rockville competition mostly does not.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Listing</th><th>Cost</th><th>What it asks for beyond the sheet</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">VeteranOwnedBusiness.com</td><td class="mn">Free</td>
+        <td>DD-214 or a statement of veteran status, plus your NAICS code. Over 40,000 listings,
+          searchable by state and code.</td></tr>
+      <tr><td class="lab">SDVOB Directory</td><td class="mn">Free</td>
+        <td>Same proof, different buyer audience.</td></tr>
+      <tr><td class="lab">Buy Veteran</td><td class="mn">Free</td>
+        <td>Procurement facing. Veteran proof plus your service and NAICS list.</td></tr>
+      <tr><td class="lab">SBA VetCert directory</td><td class="mn">Free once certified</td>
+        <td>Certification first, and that is the long one: DD-214, ownership and control
+          documents, and for SDVOSB a VA disability rating letter. Weeks to months. This is the
+          list federal buyers actually search.</td></tr>
+      <tr><td class="lab">ISSA member directory</td><td class="mn">In membership</td>
+        <td>Just the member login. Check whether the listing already exists and is simply
+          unpublished. Free win.</td></tr>
+      <tr><td class="lab">GBAC directory</td><td class="mn">In membership</td>
+        <td>Training certificate number. This is the list facility managers search when they
+          need certified infection control.</td></tr>
+      <tr><td class="lab">Restoration Industry Association</td><td class="mn">Paid</td>
+        <td>Membership application, insurance certificate, references. Where insurance adjusters
+          and property managers look for biohazard contractors.</td></tr>
+      <tr><td class="lab">Better Business Bureau</td><td class="mn">Paid, tiered</td>
+        <td>Application reviewed by a person. Licence, insurance and a trading history. Tri State
+          has been accredited since 2008, which is exactly the gap this closes.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Tier three, local and general</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Listing</th><th>Cost</th><th>What it asks for beyond the sheet</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Montgomery County Chamber</td><td class="mn">Paid</td>
+        <td>Membership fee and application. A separate body from the Rockville Chamber, so it is
+          an additional listing, not a duplicate.</td></tr>
+      <tr><td class="lab">Rockville Economic Development, REDI</td><td class="mn">Free</td>
+        <td>City economic development body. A genuine local link, which is rarer and worth more
+          than any general directory.</td></tr>
+      <tr><td class="lab">ExploreRockville.org</td><td class="mn">Free or low</td>
+        <td>Its commercial cleaning category page already ranks in Google.</td></tr>
+      <tr><td class="lab">Visit Montgomery</td><td class="mn">Free or low</td>
+        <td>County business directory. Standard submission.</td></tr>
+      <tr><td class="lab">Nextdoor</td><td class="mn">Free</td>
+        <td>A personal Nextdoor account tied to the address, then address verification.</td></tr>
+      <tr><td class="lab">Thumbtack</td><td class="mn">Free to list</td>
+        <td>Free listing, paid leads. List it, do not buy the leads.</td></tr>
+      <tr><td class="lab">Manta, n49, Yahoo Local</td><td class="mn">Free</td>
+        <td>Sheet details only. Competitor AMR US already holds several of these.</td></tr>
+      <tr><td class="lab">Foursquare, Yellow Pages, Superpages, Hotfrog, Cylex, MerchantCircle, Brownbook</td>
+        <td class="mn">Free</td>
+        <td>The standard directory set. Sheet details only. Low individual value, real value in
+          aggregate consistency.</td></tr>
+      <tr><td class="lab">cleanerin, thecleannation, usacleaningcompany, TrustIndex</td><td class="mn">Free</td>
+        <td>Cleaning industry directories where AMR US already appears.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Repairs, before any new filing</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Existing listing</th><th>Problem</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Facebook</td><td>Two separate pages, both at zero reviews</td>
+        <td>Merge them. Duplicates split reviews and followers and confuse Google.</td></tr>
+      <tr><td class="lab">Greater Rockville Chamber</td><td>Listing page returns an error</td>
+        <td>Contact the Chamber and have it restored. A paid local link currently wasted.</td></tr>
+      <tr><td class="lab">Pegbo</td><td>Unclaimed, still says is this your business</td>
+        <td>Claim it.</td></tr>
+      <tr><td class="lab">Angi and HomeAdvisor</td><td>Homeowner facing, flagged as new, zero reviews</td>
+        <td>Keep, correct the details, do not invest. Wrong buyer.</td></tr>
+      <tr><td class="lab">Website map links</td><td>Resolve to the city of Rockville and the state of Virginia</td>
+        <td>Repoint to the Google Business Profile once it verifies.</td></tr>
+      <tr><td class="lab">SAM.gov</td><td>Registered, mentioned nowhere on the site</td>
+        <td>Surface the UEI on the government contracting page.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call amber">
+    <h4>Two rules that decide whether any of this works</h4>
+    <p><strong>Identical details everywhere, character for character.</strong> Inconsistent name,
+      address or phone actively confuses Google and can do more harm than filing nothing. This is
+      why the reference sheet comes first and why the missing website address gets fixed before a
+      single listing is created.</p>
+    <p><strong>Tier two beats twenty general directories combined.</strong> The veteran and
+      industry listings are relevant, hard for competitors to copy, and point at the exact buyers
+      the client wants. If time runs short, cut tier three, never tier two.</p>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">07</div><h2>What can go wrong, and the answer</h2></div>
+  <div class="tw"><table>
+    <thead><tr><th>Risk</th><th>What it does</th><th>The answer</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Client does not sign by 23 September</td>
+        <td>No clock, no revenue, and the audit work sits idle</td>
+        <td>Route B protects you. The cleaning template still gets built, and the same pitch fits
+          the other eight Montgomery County cleaners in the audit.</td></tr>
+      <tr><td class="lab">Module 2D overruns the ten day window</td>
+        <td>Engagement two starts with no template and the 57 pages slip</td>
+        <td>Start 2D before handover, not on day one. It is the only item on the critical path
+          you fully control.</td></tr>
+      <tr><td class="lab">Google verification fails or stalls</td>
+        <td>The entire Maps workstream stops, and it is the fastest moving part of the offer</td>
+        <td>Submit day one. Have signage, premises proof and equipment ready for the video call
+          before you start it.</td></tr>
+      <tr><td class="lab">Job photographs do not arrive</td>
+        <td>Town pages cannot be built honestly, and the rolling release stalls</td>
+        <td>It is written into the proposal as a client obligation. Raise it at the week one call,
+          not in week three.</td></tr>
+      <tr><td class="lab">Apify costs run away during research</td>
+        <td>Margin on a $3,500 job disappears quietly</td>
+        <td><code>logs/apify-runs.jsonl</code> logs every actor call. Check it after Module 2B,
+          before 2D captures sites.</td></tr>
+      <tr><td class="lab">The 141 referring domains turn out to be purchased</td>
+        <td>A previous supplier's paid links could hold the site back</td>
+        <td>Already flagged as a week one check in the audit. Audit them before building pages on
+          top.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+</div>
+
+<div class="close">
+  <div class="wrap">
+    <div class="shead"><div class="sno">08</div><h2>What I need from you</h2></div>
+    <p class="sdek">Four answers. Everything above assumes them, and I would rather ask than
+      guess.</p>
+    <div class="asks">
+      <div class="ask"><div class="an">ANSWER 1</div><div class="at">Route A or Route B</div>
+        <div class="ap">My recommendation is B. Say the word and I start with
+          <code>/setup</code>.</div></div>
+      <div class="ask"><div class="an">ANSWER 2</div><div class="at">Has Black Ops signed</div>
+        <div class="ap">The repository has no record either way. It changes whether the 30 day
+          clock is running or the countdown to 23 September is.</div></div>
+      <div class="ask"><div class="an">ANSWER 3</div><div class="at">The niche slug</div>
+        <div class="ap">Commercial cleaning, or specialty and biohazard cleaning. It writes into
+          state and everything downstream keys off it, so it is worth one minute now.</div></div>
+      <div class="ask"><div class="an">ANSWER 4</div><div class="at">The 24/7 answer</div>
+        <div class="ap">It changes the page list, the hours on every listing, and whether the
+          emergency pages exist at all.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="foot">
+    <p><b>Sources.</b> Repository state read from <code>stack-state.json</code>,
+      <code>config/template-routes.json</code> and the factory tree on 8 September 2026. Client
+      facts from the Black Ops growth audit and rebuild proposal, both dated 23 August 2026.</p>
+    <p>Costs and lead times for directories are typical rather than quoted. Verify each at filing
+      time. Nothing in this plan gets published, filed or deployed without your explicit approval
+      first.</p>
+  </div>
+</div>

@@ -1,0 +1,887 @@
+<title>Copy Deck Batch One</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#ECEEF0; --card:#FFFFFF; --card2:#E1E5E8; --card3:#D3D8DC;
+  --line:#CFD5D9; --line2:#AAB2B8;
+  --ink:#14181C; --ink2:#49525A; --ink3:#79838B;
+  --accent:#8C3A2E; --accent2:#AD5344; --accent-bg:#F4E3DF;
+  --slot:#8A5C0C; --slot-bg:#F6E9CE; --slot-line:#D0B06C;
+  --ok:#2C6B4C; --ok-bg:#DEEBE3; --ok-line:#93BBA3;
+  --band:#14181C; --bandink:#ECEEF0;
+  --shade:0 1px 2px rgba(20,24,28,.05), 0 14px 34px -26px rgba(20,24,28,.5);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C0F11; --card:#14181B; --card2:#1B2024; --card3:#242B30;
+    --line:#262D32; --line2:#3C454B; --ink:#E7EAEC; --ink2:#A2ABB2; --ink3:#727C83;
+    --accent:#E08A78; --accent2:#EDA595; --accent-bg:#2B1512;
+    --slot:#D8A44E; --slot-bg:#2A2110; --slot-line:#66501F;
+    --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+    --band:#050708; --bandink:#E7EAEC;
+    --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C0F11; --card:#14181B; --card2:#1B2024; --card3:#242B30;
+  --line:#262D32; --line2:#3C454B; --ink:#E7EAEC; --ink2:#A2ABB2; --ink3:#727C83;
+  --accent:#E08A78; --accent2:#EDA595; --accent-bg:#2B1512;
+  --slot:#D8A44E; --slot-bg:#2A2110; --slot-line:#66501F;
+  --ok:#55BC8A; --ok-bg:#0E271B; --ok-line:#2B5C42;
+  --band:#050708; --bandink:#E7EAEC;
+  --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--card2);
+  padding:1px 5px;border-radius:2px}
+
+.mast{background:var(--band);color:var(--bandink)}
+.mast .wrap{padding:28px 22px 30px}
+.lock{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;
+  padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.16)}
+.mk{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.mk span{color:var(--accent2)}
+.lock .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.55;font-weight:600;text-align:right}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(32px,5.6vw,52px);line-height:.98;letter-spacing:-.012em;
+  margin:21px 0 0;text-transform:uppercase;text-wrap:balance}
+.lede{font-size:17px;color:rgba(231,234,236,.74);max-width:64ch;margin:14px 0 0}
+
+/* page block */
+.page{background:var(--card);border:1px solid var(--line);border-radius:5px;
+  margin:0 0 34px;overflow:hidden;box-shadow:var(--shade)}
+.phead{background:var(--band);color:var(--bandink);padding:20px 24px}
+.phead .kind{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--accent2)}
+.phead h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(24px,3.6vw,33px);line-height:1.04;margin:8px 0 0;text-transform:uppercase;
+  letter-spacing:-.004em}
+.phead .url{font-family:"IBM Plex Mono",monospace;font-size:12px;
+  color:rgba(231,234,236,.62);margin-top:8px;word-break:break-all}
+.pbody{padding:0 24px 26px}
+@media(max-width:560px){.pbody{padding:0 16px 22px}.phead{padding:17px 16px}}
+
+/* seo table */
+.seo{margin:22px 0 0;border:1px solid var(--line);border-radius:4px;overflow:hidden;
+  background:var(--card2)}
+.seo .r{display:grid;grid-template-columns:130px 1fr;gap:0;border-bottom:1px solid var(--line)}
+.seo .r:last-child{border-bottom:none}
+.seo .k{background:var(--card3);padding:9px 12px;font-family:"IBM Plex Mono",monospace;
+  font-size:8.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--ink3);display:flex;align-items:center}
+.seo .v{padding:9px 13px;font-size:14.5px;background:var(--card);line-height:1.5}
+.seo .v .count{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink3);
+  margin-left:7px}
+@media(max-width:560px){.seo .r{grid-template-columns:1fr}.seo .k{padding:7px 12px}}
+
+/* section within a page */
+.sec{margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:none}
+.sn{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
+  text-transform:uppercase;letter-spacing:.016em;margin:6px 0 12px;line-height:1.15}
+.note{font-size:13.5px;color:var(--ink3);margin:0 0 14px;line-height:1.5;
+  padding-left:11px;border-left:2px solid var(--line2)}
+
+/* the actual copy */
+.copy{max-width:68ch}
+.copy h4{font-family:Barlow,sans-serif;font-weight:700;font-size:19px;margin:20px 0 8px;
+  line-height:1.3;color:var(--ink)}
+.copy h5{font-family:Barlow,sans-serif;font-weight:600;font-size:16.5px;margin:16px 0 6px;
+  color:var(--ink)}
+.copy p{margin:0 0 13px;font-size:16.5px;color:var(--ink2)}
+.copy p.big{font-size:18px;color:var(--ink)}
+.copy strong{color:var(--ink);font-weight:600}
+.copy ul,.copy ol{margin:0 0 13px;padding-left:21px}
+.copy li{font-size:16px;color:var(--ink2);margin-bottom:8px;line-height:1.55}
+.copy li strong{color:var(--ink)}
+.h1line{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(25px,3.8vw,34px);line-height:1.05;text-transform:uppercase;
+  letter-spacing:-.004em;color:var(--ink);margin:0 0 10px;max-width:22ch}
+
+/* slot */
+.slot{background:var(--slot-bg);border:1px solid var(--slot-line);border-left:3px solid var(--slot);
+  border-radius:4px;padding:12px 15px;margin:0 0 14px;max-width:68ch}
+.slot .sl{font-family:"IBM Plex Mono",monospace;font-size:8.5px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--slot);display:block;margin-bottom:5px}
+.slot p{margin:0;font-size:14.5px;color:var(--ink2);line-height:1.5}
+.slot p + p{margin-top:7px}
+
+/* faq */
+.faq{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--card);max-width:74ch}
+.faq .q{border-bottom:1px solid var(--line);padding:14px 17px}
+.faq .q:last-child{border-bottom:none}
+.faq .q b{display:block;font-size:16px;font-weight:600;line-height:1.35;color:var(--ink)}
+.faq .q p{margin:7px 0 0;font-size:15.5px;color:var(--ink2);line-height:1.55}
+
+/* links + alt */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--card);margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:10px 13px;border-bottom:2px solid var(--line2);background:var(--card2);white-space:nowrap}
+td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.mn{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink3)}
+td.lab{font-weight:600}
+
+.call{background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:4px;padding:17px 20px;margin:20px 0;max-width:74ch}
+.call.ok{border-left-color:var(--ok);background:var(--ok-bg)}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  text-transform:uppercase;margin:0 0 8px;letter-spacing:.016em}
+.call p{margin:0 0 9px;font-size:15px;color:var(--ink2)}
+.call p:last-child{margin-bottom:0}
+.call strong{color:var(--ink)}
+
+section.doc{padding:44px 0 4px}
+.dhead{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:8px}
+.dno{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12px;
+  color:var(--accent);letter-spacing:.11em;padding-top:7px}
+h2.dh{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(25px,3.8vw,35px);line-height:1.03;margin:0;text-transform:uppercase}
+.ddek{color:var(--ink2);font-size:16.5px;max-width:66ch;margin:0 0 20px 40px}
+@media(max-width:640px){.ddek{margin-left:0}}
+
+.foot{padding:24px 0 44px;font-size:13px;color:var(--ink3)}
+.foot p{margin:0 0 8px;max-width:78ch}
+.foot b{color:var(--ink2)}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="lock">
+      <div class="mk">Black<span>&nbsp;Ops</span>&nbsp;Cleaning</div>
+      <div class="meta">Copy deck, batch one<br>3 of 57 pages</div>
+    </div>
+    <h1>Written copy,<br>ready to build</h1>
+    <p class="lede">One page of each type, written in full and optimised for search. These three
+      set the voice and the structure the other fifty four follow. Everything that needs a fact
+      only the client can give is marked as a slot rather than invented.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="doc">
+  <div class="dhead"><div class="dno">HOW TO READ THIS</div></div>
+  <p class="ddek">Each page carries its search metadata first, then the copy block by block in
+    render order, matching the blueprint.</p>
+  <div class="call">
+    <h4>Amber slots are not gaps in the writing</h4>
+    <p>They are the places where a real fact belongs and inventing one would be
+      <strong>fabrication</strong>. Black Ops has zero reviews on every platform today and no job
+      photographs supplied yet, so every review and every case study on this site is a slot until
+      the client fills it. Publishing invented ones would be worse than publishing none.</p>
+    <p>Two more things are still open and both change copy: <strong>the 24 hour decision</strong>
+      and <strong>whether the Talbott Street address is publicly listable</strong>. Where they
+      matter, both options are written out.</p>
+  </div>
+</section>
+
+<!-- ══════════════════ PAGE 1 ══════════════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Service page, 1 of 13</div>
+    <h2>Unattended Death Cleanup</h2>
+    <div class="url">/services/unattended-death-cleanup/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">unattended death cleanup Rockville MD</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">unattended death cleanup Montgomery County, decomposition cleanup Maryland, after death cleanup Rockville, undiscovered death cleanup MD</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Unattended Death Cleanup Rockville MD | Black Ops<span class="count">48 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Discreet unattended death cleanup in Rockville and Montgomery County. Unmarked vehicles, GBAC trained, insurance billed direct. Call any hour.<span class="count">141 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Unattended Death Cleanup in Rockville and Montgomery County</div></div>
+    <div class="r"><div class="k">Schema</div><div class="v">Service, plus FAQPage from block 11</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">1,600 to 2,000</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, banner</div>
+    <h3>Banner</h3>
+    <div class="copy">
+      <p class="h1line">Unattended Death Cleanup in Rockville and Montgomery County</p>
+      <p class="big">Discreet, certified biohazard remediation. Unmarked vehicles, no company
+        signage on site, and a written price before any work starts.</p>
+      <p><strong>Proof pills:</strong> GBAC trained &middot; Veteran owned &middot; Unmarked
+        response &middot; We bill your insurer</p>
+      <p><strong>Primary CTA:</strong> Call (301) 000 0000 &nbsp;|&nbsp;
+        <strong>Secondary CTA:</strong> Request a discreet call back</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, 24 hour decision</span>
+      <p>If yes, the fourth pill becomes <b>Answered 24 hours</b> and the subhead gains
+        <b>at any hour</b>. If no, remove every availability claim from this page and drop the
+        emergency response service page entirely. Do not write 24/7 unless someone genuinely
+        answers at 3am. It is the fastest way to lose a review.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, the problem in their words</div>
+    <h3>If you are reading this today</h3>
+    <p class="note">These are the questions this service is actually asked, drawn from published
+      guidance and search phrasing, not invented testimonials. Replace with verbatim client
+      enquiries once the client has a month of tracked calls.</p>
+    <div class="copy">
+      <p class="big">You are dealing with something nobody prepares you for. You do not need to
+        know any of the terminology, and you do not need to have decided anything yet.</p>
+      <p>Most people who call us have just been told by the police or the medical examiner that
+        cleanup is not their job. That comes as a shock. Investigators secure a scene and then
+        leave, and the property is handed back to whoever is responsible for it, usually a family
+        member or a property manager who has never had to arrange anything like this.</p>
+      <p>These are the three things people ask us first, and none of them is a silly question.</p>
+      <ul>
+        <li><strong>Will my insurance pay for this?</strong> Often, yes. We tell you how to find
+          out in one phone call, and we deal with the adjuster ourselves.</li>
+        <li><strong>Will anyone be able to tell what happened?</strong> No. Our vehicles carry
+          no company signage. Neighbours see a plain van.</li>
+        <li><strong>Can the property be used again afterwards?</strong> Yes, and we give you
+          written clearance saying so. That document is what buyers, insurers and estate
+          solicitors ask to see.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, what the work covers</div>
+    <h3>What the work covers</h3>
+    <div class="copy">
+      <p>Everything below is part of a standard remediation. Nothing here is added to the bill
+        later.</p>
+      <h5>Assessment and containment</h5>
+      <p>The affected area is isolated before anything is touched, with negative air where the
+        contamination warrants it, so nothing spreads through the rest of the property.</p>
+      <h5>Removal of affected material</h5>
+      <p>Flooring, subfloor, drywall, insulation and furnishings that cannot be safely restored
+        are removed and documented. Decomposition travels further than most people expect, which
+        is why the assessment happens before the price.</p>
+      <h5>Decontamination</h5>
+      <p>Hospital grade disinfection of every affected surface, following CDC and EPA
+        disinfection guidance.</p>
+      <h5>Odour remediation at source</h5>
+      <p>Treated at the source rather than masked. Masking is the reason odour comes back three
+        weeks later, and it is the most common complaint about work done cheaply.</p>
+      <h5>Regulated waste disposal</h5>
+      <p>Transported and disposed of through a licensed medical waste stream. The manifest is
+        handed to you.</p>
+      <h5>Written clearance</h5>
+      <p>Confirmation that the property is safe for occupancy, in writing, on completion.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, process with timescales</div>
+    <h3>What happens, and how long each part takes</h3>
+    <div class="copy">
+      <ol>
+        <li><strong>Your call, about 10 minutes.</strong> We need the address and how to get in.
+          We do not ask you to describe the scene.</li>
+        <li><strong>On site assessment, within 2 hours.</strong> Unmarked vehicle. We scope the
+          contamination and give you a written price before any work begins.</li>
+        <li><strong>Insurance contact, same day.</strong> Where a policy covers the loss we speak
+          to the adjuster directly and bill them, so you are not managing it.</li>
+        <li><strong>Remediation, 1 to 3 days.</strong> Containment, removal, decontamination,
+          odour treatment. Most residential jobs finish inside two days.</li>
+        <li><strong>Clearance and handover, on completion.</strong> Written clearance, the
+          disposal manifest, and photographs of the finished work.</li>
+      </ol>
+    </div>
+    <div class="slot"><span class="sl">Slot, confirm timescales</span>
+      <p>The two hour response and the one to three day range are the industry norm for this
+        county. <b>Confirm both against the client's actual jobs before publishing.</b> A
+        published timescale the crew cannot hit becomes a complaint, and it is the kind of
+        detail that ends up in a one star review.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 05, crisis version</div>
+    <h3>If you would rather not read all of that</h3>
+    <div class="copy">
+      <ol>
+        <li><strong>Call.</strong> Tell us the address. Nothing else.</li>
+        <li><strong>We come.</strong> Unmarked, within two hours, and we tell you what it costs
+          before we start.</li>
+        <li><strong>We handle it.</strong> Including your insurer.</li>
+      </ol>
+    </div>
+    <p class="note">Runs alongside block 04, not instead of it. Bio-One's DC page pairs a five
+      step process with a three step one and that pairing is the thing worth copying.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 06, insurance</div>
+    <h3>Who pays for this</h3>
+    <div class="copy">
+      <p class="big">In most cases, the property insurance does. This is the question we are
+        asked before any other, so here is the straight answer.</p>
+      <p>Most homeowner policies treat unattended death remediation as a covered loss, because
+        the damage to the property is what is being claimed for. Coverage is not universal
+        though, and there are two things worth knowing before you call your insurer.</p>
+      <ul>
+        <li><strong>Some policies exclude deaths by suicide</strong> unless a specific rider was
+          bought. If that applies, we will tell you early rather than late.</li>
+        <li><strong>Ask the adjuster, not the agent.</strong> The agent sold the policy. The
+          adjuster is the person who decides what it pays, and they can answer in one call.</li>
+      </ul>
+      <p>Ask them two questions: does my policy cover biohazard remediation after a death, and
+        what is the limit. That is enough for us to work with.</p>
+      <p><strong>What we do from there.</strong> We speak to the adjuster directly, provide the
+        scope, the photographs and the documentation they need, and bill them. You are not paying
+        up front and claiming it back.</p>
+      <p>If the loss is not covered, we tell you that before we start work, not after.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 07, credentials</div>
+    <h3>Why we are allowed to do this work</h3>
+    <div class="copy">
+      <p>Biohazard remediation is not general cleaning, and the difference is not marketing. It
+        is training, insurance and a licensed disposal route.</p>
+      <ul>
+        <li><strong>GBAC trained.</strong> The Global Biorisk Advisory Council, now an ISSA
+          division. This is the standard facility managers look for when they need certified
+          infection control.</li>
+        <li><strong>ISSA CMI.</strong> The Cleaning Management Institute, the industry's
+          training body.</li>
+        <li><strong>OSHA bloodborne pathogen compliant.</strong> Not a certificate anyone
+          issues, a standard every technician is trained against.</li>
+        <li><strong>Licensed and insured in Maryland,</strong> general liability and workers
+          compensation.</li>
+        <li><strong>Veteran owned and federally registered.</strong> SAM.gov UEI PMPPFTB7CCX4.</li>
+      </ul>
+      <h4>One thing we will not do</h4>
+      <p>We do not display CDC, EPA or OSHA seals to imply those agencies endorse us. They do
+        not endorse anyone. We follow CDC and EPA disinfection guidance and our technicians are
+        trained to the OSHA bloodborne pathogen standard. Those are facts, and they are worth
+        more than a logo. If another company shows you federal seals, ask them what they mean.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, licence and insurance numbers</span>
+      <p>Maryland licence number and the ISSA and GBAC membership numbers go in here as plain
+        text. Numbers are checkable. Logos are not.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 08, pricing</div>
+    <h3>Pricing, not published</h3>
+    <div class="call">
+      <h4>Removed on the client's instruction</h4>
+      <p>No price ranges go on this site. That is a legitimate call in this service line, where
+        scope varies enormously and a published range invites the wrong comparison.</p>
+      <p><strong>What replaces it,</strong> so the page still answers the money question rather
+        than dodging it:</p>
+    </div>
+    <div class="copy">
+      <h4>What this costs, and how you find out</h4>
+      <p>We do not publish prices for this work, because the range is too wide to be useful.
+        A single room found early and a property with structural penetration are different jobs
+        by a factor of ten, and quoting either one blind would be guessing.</p>
+      <p>What we do instead is straightforward. We come out, assess the property, and give you a
+        <strong>written price before any work starts</strong>. That visit costs nothing and puts
+        you under no obligation. If your insurance is likely to cover it, we will tell you at
+        that visit rather than after the work.</p>
+      <p>You will never get a number from us that changes once the job is underway, unless we
+        find something behind a wall that nobody could have seen. If that happens we stop, show
+        you, and re-quote before continuing.</p>
+    </div>
+    <p class="note">This wording turns the absence of pricing into a trust statement rather than
+      a gap. The free assessment plus written-price-first promise is the substitute, and it is
+      stronger than a range if the client actually honours it.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 09, our own work</div>
+    <h3>Our own work</h3>
+    <div class="slot"><span class="sl">Slot, three job photographs</span>
+      <p>Three images from completed jobs, town named on each, with captions describing the work
+        rather than the event. Nothing identifiable: no addresses, no personal effects, no
+        interiors that could be recognised.</p>
+      <p><b>Alt text pattern:</b> "Containment barrier in place during unattended death
+        remediation, Rockville MD". Never describe the deceased or the scene.</p>
+      <p><b>This block does not publish empty.</b> If no suitable photographs exist yet, remove
+        the section and link to Our Work instead. A stock photograph here would be the single
+        worst decision on the site.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 10, reviews</div>
+    <h3>What families have said</h3>
+    <div class="slot"><span class="sl">Slot, reviews, currently zero</span>
+      <p>Black Ops has <b>zero reviews on every platform</b> as of the audit. This block cannot
+        be written and must not be invented.</p>
+      <p>Ship the page without it. Add it once the review routine produces its first three, and
+        mark it up so Google can show the rating. For this service line, ask carefully or not at
+        all: many families will not want to be publicly connected to the job.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 11, FAQ</div>
+    <h3>Questions people actually ask</h3>
+    <p class="note">Ten questions. This block is what AI answers pull from, and it is where every
+      competitor in this market is thin. PuroClean's Rockville biohazard page has four. Bio-One's
+      DC page has two.</p>
+    <div class="faq">
+      <div class="q"><b>Does homeowner insurance cover unattended death cleanup?</b>
+        <p>In most cases yes, because you are claiming for damage to the property. Some policies
+          exclude deaths by suicide unless a rider was bought. Call your adjuster, not your
+          agent, and ask whether the policy covers biohazard remediation and what the limit is.
+          We handle the claim from there.</p></div>
+      <div class="q"><b>Will your vehicle be marked?</b>
+        <p>No. Our response vehicles carry no company signage and our technicians arrive in
+          plain clothing and change on site. Neighbours see a plain van.</p></div>
+      <div class="q"><b>How quickly can you get here?</b>
+        <p>Within two hours across Montgomery County. Rockville, Bethesda and Silver Spring are
+          usually faster, because we are based on Talbott Street in Rockville rather than
+          driving in from another county.</p></div>
+      <div class="q"><b>Do I have to be at the property?</b>
+        <p>No. We can work from a key handover or a lockbox and send you photographic
+          documentation as we go. Many of the people who call us live in another state.</p></div>
+      <div class="q"><b>Can the property be lived in or sold afterwards?</b>
+        <p>Yes, and we issue written clearance confirming it. That document is what insurers,
+          buyers and estate solicitors ask to see, and it is included at no extra cost.</p></div>
+      <div class="q"><b>What if the odour comes back?</b>
+        <p>It should not. Odour that returns means the source was masked rather than removed,
+          usually because subfloor or drywall was left in place. We treat at source, and if it
+          recurs on a job we completed we come back at no charge.</p></div>
+      <div class="q"><b>Do I need to tell a buyer what happened here?</b>
+        <p>Maryland disclosure rules are a question for your solicitor or estate agent, not for
+          us. What we can tell you is that our written clearance documents the property as
+          remediated, which is what most buyers and their lenders actually want to see.</p></div>
+      <div class="q"><b>Who is responsible for arranging this, legally?</b>
+        <p>The property owner, or the executor of the estate. Police and the medical examiner
+          secure the scene and then release the property. Cleanup is never their
+          responsibility, which is a surprise to almost everyone who calls us.</p></div>
+      <div class="q"><b>Do you handle the waste paperwork?</b>
+        <p>Yes. Regulated waste goes through a licensed medical waste stream and the manifest is
+          handed to you with the clearance documentation.</p></div>
+      <div class="q"><b>Are you police approved or state certified?</b>
+        <p>There is no such approval or certification to hold in Maryland, and any company
+          claiming one is worth a second look. What matters is GBAC training, OSHA bloodborne
+          pathogen compliance, a licensed disposal route, and being licensed and insured in
+          Maryland. We are all four.</p></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 12, towns</div>
+    <h3>Where we cover</h3>
+    <div class="copy">
+      <p>Every town below has its own page with the work we have done there.</p>
+    </div>
+    <div class="tw"><table>
+      <thead><tr><th>Link text</th><th>Target</th></tr></thead>
+      <tbody>
+        <tr><td class="lab">Unattended death cleanup in Rockville</td><td class="mn">/unattended-death-cleanup-rockville-md/</td></tr>
+        <tr><td class="lab">Unattended death cleanup in Silver Spring</td><td class="mn">/unattended-death-cleanup-silver-spring-md/</td></tr>
+        <tr><td class="lab">Unattended death cleanup in Bethesda</td><td class="mn">/unattended-death-cleanup-bethesda-md/</td></tr>
+        <tr><td class="lab">Unattended death cleanup in Washington DC</td><td class="mn">/unattended-death-cleanup-washington-dc/</td></tr>
+        <tr><td class="lab">Related: biohazard remediation</td><td class="mn">/services/biohazard-remediation/</td></tr>
+        <tr><td class="lab">Related: hoarding cleanup</td><td class="mn">/services/hoarding-cleanup/</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 13, closing CTA</div>
+    <h3>Closing call to action</h3>
+    <div class="copy">
+      <p class="h1line">One call, and you will know where you stand</p>
+      <p>No obligation. You do not have to describe what happened, and nothing is decided on the
+        phone. We will tell you what is involved, roughly what it costs, and what your insurer
+        is likely to cover.</p>
+      <p><strong>Call (301) 000 0000</strong> &nbsp;|&nbsp; Request a discreet call back</p>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════ PAGE 2 ══════════════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Town page, 1 of 17</div>
+    <h2>Commercial Cleaning Rockville MD</h2>
+    <div class="url">/commercial-cleaning-rockville-md/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">commercial cleaning Rockville MD</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">janitorial services Rockville MD, office cleaning Rockville, lab cleaning Rockville MD, medical office cleaning Rockville</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Commercial Cleaning Rockville MD | Black Ops Cleaning<span class="count">52 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Veteran owned commercial cleaning based in Rockville MD, not dispatched from another county. Labs, medical offices and federal facilities. Free walkthrough.<span class="count">156 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Commercial Cleaning in Rockville, Maryland</div></div>
+    <div class="r"><div class="k">Schema</div><div class="v">LocalBusiness with areaServed Rockville</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">900 to 1,100</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, banner</div>
+    <h3>Banner</h3>
+    <div class="copy">
+      <p class="h1line">Commercial Cleaning in Rockville, Maryland</p>
+      <p class="big">Our office is on Talbott Street. Rockville is not a service area we drive
+        to, it is where the crew starts the day.</p>
+      <p><strong>Proof pills:</strong> Based in Rockville 20852 &middot; GBAC trained &middot;
+        Veteran owned &middot; SAM.gov registered</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, address decision</span>
+      <p>If the client does not want 121 Talbott St published, the line becomes <b>Our crew is
+        based in Rockville, not dispatched from another county</b> and the address comes out of
+        the local context block. Everything else on the page still works. Decide before the
+        Google profile is submitted, because it changes the listing type too.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, proof</div>
+    <h3>A job we did in Rockville</h3>
+    <div class="slot"><span class="sl">Slot, required, build fails without it</span>
+      <p>One completed Rockville job with a photograph from it. Write it in three parts: what
+        the problem was, what was done, what the outcome was. Name the facility type and the
+        district, never the client's name without written permission.</p>
+      <p><b>Best candidate for this town:</b> anything in a lab, medical suite or federal
+        adjacent building, because that is what Rockville searches for. A generic office job
+        works but proves less.</p>
+      <p><b>Until this exists,</b> the page can be written and reviewed but not built. That is
+        deliberate, and it is why the five photographs a week matter.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, local hook</div>
+    <h3>Why cleaning in Rockville is not generic office cleaning</h3>
+    <p class="note">The most important block on the page. Every fact below is checkable and none
+      of it survives a find and replace to another town.</p>
+    <div class="copy">
+      <p class="big">Rockville sits at the centre of the I-270 Biotech Corridor, and that changes
+        what a cleaning contract here actually has to do.</p>
+      <p>Over 120 of Montgomery County's roughly 350 life sciences firms have a Rockville
+        address. More than 10,000 people work in biohealth in the private sector along the
+        corridor, alongside an estimated 49,000 in federal agencies, with the National Institutes
+        of Health and the Food and Drug Administration on the doorstep. Rockville supports over
+        73,000 jobs in total, and more than 200 IT companies sit on the same corridor.</p>
+      <p>What that means in practice is that a large share of the buildings here are not open
+        plan offices. They are labs, GMP manufacturing space, medical suites and federal adjacent
+        facilities. Those buildings come with rules an ordinary janitorial contract does not
+        cover:</p>
+      <ul>
+        <li><strong>Controlled areas you do not enter without protocol.</strong> Cleaning around
+          a lab is not the same job as cleaning a lab, and the contract has to say which.</li>
+        <li><strong>Inspection schedules that decide when you can work.</strong> Medical and
+          research facilities run to audit calendars, not to your rota.</li>
+        <li><strong>Documented infection control,</strong> because a failed inspection costs a
+          practice far more than a cleaning contract.</li>
+        <li><strong>Background checked crews</strong> for federal adjacent buildings.</li>
+      </ul>
+      <p>Rockville's older stock has the opposite problem. Town Center and the Pike corridor
+        carry buildings from several decades of construction, and a 1980s office fitout does not
+        clean like a 2020s lab building. Both are within ten minutes of us.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, services here</div>
+    <h3>What we clean in Rockville</h3>
+    <p class="note">Each blurb is written for Rockville. Reusing these on another town page is
+      exactly the failure this block exists to avoid.</p>
+    <div class="copy">
+      <h5>Commercial janitorial and office cleaning</h5>
+      <p>Offices along Rockville Pike, in Town Center and out towards King Farm. Nightly, weekly
+        or scheduled, worked after hours so nobody is cleaning around your staff.
+        <em>Links to /services/commercial-cleaning/</em></p>
+      <h5>Medical and healthcare facility cleaning</h5>
+      <p>Outpatient practices and dental suites near Shady Grove and along the Pike. Documented
+        infection control protocols and service timed around your inspection schedule.
+        <em>Links to /services/medical-facility-cleaning/</em></p>
+      <h5>Government and federal facility cleaning</h5>
+      <p>We are SAM.gov registered and veteran owned, which matters for county and federal
+        buildings in a town with this much federal presence.
+        <em>Links to /services/government-facility-cleaning/</em></p>
+      <h5>Biohazard remediation</h5>
+      <p>Discreet, unmarked response across the 20850, 20851, 20852 and 20853 zip codes.
+        <em>Links to /services/biohazard-remediation/</em></p>
+      <h5>Disinfection and infection control</h5>
+      <p>For the labs, medical suites and shared facilities the corridor is full of.
+        <em>Links to /services/disinfection-services/</em></p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 05, local context</div>
+    <h3>Local detail</h3>
+    <div class="tw"><table>
+      <tbody>
+        <tr><td class="lab">Our address</td><td>121 Talbott St, Rockville MD 20852</td></tr>
+        <tr><td class="lab">Zip codes covered</td><td>20850, 20851, 20852, 20853, 20855</td></tr>
+        <tr><td class="lab">Areas we work</td><td>Town Center, Rockville Pike, King Farm, Twinbrook, Shady Grove, Fallsgrove</td></tr>
+        <tr><td class="lab">Crew based</td><td>In Rockville, not dispatched from another county</td></tr>
+        <tr><td class="lab">Response time</td><td>Slot, confirm with the client</td></tr>
+        <tr><td class="lab">Active contracts here</td><td>Slot, confirm with the client</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 06, reviews</div>
+    <h3>Rockville customers</h3>
+    <div class="slot"><span class="sl">Slot, reviews, currently zero</span>
+      <p>Filtered to Rockville, falling back to the nearest town when empty. Empty today.</p>
+      <p>Green Apple's Bethesda page carries 4.5 from 74 reviews on the page itself. That number
+        is the gap, and it closes through the review routine in workstream two, not through
+        anything written here.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 07, town FAQ</div>
+    <h3>Rockville questions</h3>
+    <div class="faq">
+      <div class="q"><b>Are you actually based in Rockville?</b>
+        <p>Yes, on Talbott Street in 20852. Most companies that rank for Rockville dispatch from
+          Gaithersburg, Silver Spring or further out. It matters most when something goes wrong
+          on a Sunday.</p></div>
+      <div class="q"><b>Do you clean labs, or only the offices around them?</b>
+        <p>We clean office, common and support areas in life sciences buildings, and we work to
+          your protocol for anything controlled. Tell us what your access rules are at the
+          walkthrough and we will scope to them rather than around them.</p></div>
+      <div class="q"><b>Can you work after hours in Town Center?</b>
+        <p>Yes. Most of our Rockville work is serviced outside business hours so offices and
+          treatment rooms are never disturbed.</p></div>
+      <div class="q"><b>Can you handle county or federal buildings here?</b>
+        <p>Yes. We are SAM.gov registered under UEI PMPPFTB7CCX4, veteran owned, and we carry
+          the insurance levels those contracts require.</p></div>
+      <div class="q"><b>How fast can you reach Shady Grove?</b>
+        <p>Under twenty minutes in normal traffic from Talbott Street.</p></div>
+      <div class="q"><b>What does a walkthrough involve?</b>
+        <p>We walk the site, ask how you actually use the space, and put a written specification
+          and price in front of you. It takes under an hour and costs nothing.</p></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Blocks 08 and 09, nearby towns and CTA</div>
+    <h3>Nearby towns, then the close</h3>
+    <div class="copy">
+      <p><strong>Nearby:</strong> North Bethesda, Bethesda, Gaithersburg, Potomac, Kensington,
+        Derwood, Wheaton, Silver Spring. Each links to its own page.</p>
+      <p class="h1line">Walkthrough and written quote, at no cost</p>
+      <p>We will walk your Rockville site, scope the specification against how you actually use
+        the space, and put a price in writing. If we are not the right fit we will say so.</p>
+      <p><strong>Book a Rockville walkthrough</strong> &nbsp;|&nbsp; Call (301) 000 0000</p>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════ PAGE 3 ══════════════════ -->
+<div class="page">
+  <div class="phead">
+    <div class="kind">Service x town, 1 of 19</div>
+    <h2>Biohazard Cleanup Rockville MD</h2>
+    <div class="url">/biohazard-cleanup-rockville-md/</div>
+  </div>
+  <div class="pbody">
+
+  <div class="seo">
+    <div class="r"><div class="k">Primary keyword</div><div class="v">biohazard cleanup Rockville MD</div></div>
+    <div class="r"><div class="k">Secondary</div><div class="v">biohazard cleaning Rockville, trauma cleanup Rockville MD, blood cleanup Rockville</div></div>
+    <div class="r"><div class="k">Title tag</div><div class="v">Biohazard Cleanup Rockville MD | Black Ops Cleaning<span class="count">50 chars</span></div></div>
+    <div class="r"><div class="k">Meta description</div><div class="v">Biohazard cleanup in Rockville MD from a company based on Talbott Street. Unmarked vehicles, GBAC trained, insurance billed direct.<span class="count">130 chars</span></div></div>
+    <div class="r"><div class="k">H1</div><div class="v">Biohazard Cleanup in Rockville, Maryland</div></div>
+    <div class="r"><div class="k">Schema</div><div class="v">Service with areaServed Rockville</div></div>
+    <div class="r"><div class="k">Word target</div><div class="v">600 to 800, deliberately short</div></div>
+  </div>
+
+  <div class="call">
+    <h4>The rule this page is written to</h4>
+    <p>If a paragraph would read identically on <code>/services/biohazard-remediation/</code>,
+      it is not here. It is a link. <strong>This page answers one question only: what is
+      different about biohazard work in Rockville.</strong></p>
+    <p>That is why it is a third the length of the service page. Nineteen pages that each restate
+      the service is how a site splits its own link equity and ranks for nothing.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 01, banner</div>
+    <h3>Banner</h3>
+    <div class="copy">
+      <p class="h1line">Biohazard Cleanup in Rockville, Maryland</p>
+      <p class="big">We are on Talbott Street in 20852. For most Rockville addresses that means
+        we are with you inside an hour, in an unmarked vehicle.</p>
+      <p><strong>Primary CTA:</strong> Call (301) 000 0000 &nbsp;|&nbsp;
+        <strong>Secondary:</strong> Request a discreet call back</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 02, response and access</div>
+    <h3>Getting to you in Rockville</h3>
+    <div class="copy">
+      <p>Our office is at 121 Talbott St, five minutes from Town Center and under twenty from
+        Shady Grove in normal traffic. We are not dispatched from Gaithersburg or Silver Spring,
+        which is where most of the companies ranking for this search actually sit.</p>
+      <p>We cover 20850, 20851, 20852, 20853 and 20855 directly.</p>
+      <p><strong>Access.</strong> We can work from a lockbox, a building manager, a property
+        agent or a family member who lives out of state. You do not have to be there.</p>
+    </div>
+    <div class="slot"><span class="sl">Slot, named local contact</span>
+      <p>Roto-Rooter names its Rockville manager, Josh Phillips, on exactly this kind of page,
+        with the local address. A named person is more convincing than a promise. Ask the client
+        whether they want a crew lead named here.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 03, local job</div>
+    <h3>A biohazard job we did in Rockville</h3>
+    <div class="slot"><span class="sl">Slot, required, build fails without it</span>
+      <p>Must be a <b>biohazard</b> job in <b>Rockville</b>, not the same job used on the town
+        page and not a biohazard job from another town. Where none exists yet, use the nearest
+        genuine equivalent and label it honestly, for example "a similar job in Silver Spring,
+        eight miles away".</p>
+      <p>Nothing identifiable. No address, no personal effects, no recognisable interior.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 04, what is different here</div>
+    <h3>What is different about biohazard work in Rockville</h3>
+    <p class="note">The entire reason this page exists. Three or four paragraphs, no more.</p>
+    <div class="copy">
+      <p><strong>The property mix changes the job.</strong> Rockville runs from garden
+        apartments in Twinbrook to high rise condos in Town Center to detached homes in
+        Fallsgrove, and each one changes how we contain a scene. A condo means shared
+        ventilation, a shared lift and a building manager who has to be told something. A
+        detached home means we can work without anyone on the street knowing.</p>
+      <p><strong>Who calls us here is different too.</strong> In a town this dense with rental
+        and managed property, a large share of these calls come from property managers and
+        estate executors rather than from the family. Both need documentation more than they
+        need reassurance: a scope, a disposal manifest and a written clearance they can put in a
+        file.</p>
+      <p><strong>Shared buildings need a plan before we arrive.</strong> In a managed building
+        we agree the route in, the lift we use and the timing with the manager first, so that
+        equipment is never carried through a lobby at 5pm. That single call is the difference
+        between a discreet job and one the whole building talks about.</p>
+      <p><strong>The corridor adds a category most towns do not have.</strong> With this many
+        labs and medical facilities in Rockville, some of our biohazard calls here are
+        commercial: a sharps incident, a spill in a treatment room, a contamination event that
+        has to be documented for an inspection rather than for an insurer.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 05, reviews</div>
+    <h3>Reviews on this page</h3>
+    <div class="slot"><span class="sl">Slot, reviews, currently zero</span>
+      <p>Rockville reviews, or biohazard reviews from the nearest town.</p>
+      <p><b>Put them on this page, not only on the town page.</b> Roto-Rooter keeps all its proof
+        one level up and its service page carries none, so the page that actually gets the
+        search has nothing on it. That is the mistake to avoid.</p></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 06, FAQ</div>
+    <h3>Rockville biohazard questions</h3>
+    <p class="note">Four questions, and every one of them would read differently in another town.
+      No general biohazard questions here. Those live on the service page.</p>
+    <div class="faq">
+      <div class="q"><b>How fast can you reach a Rockville address?</b>
+        <p>Usually inside an hour from Talbott Street, and under twenty minutes to Town Center,
+          Twinbrook or the Pike in normal traffic.</p></div>
+      <div class="q"><b>I manage a building in Town Center. Can this be done without the other
+        residents noticing?</b>
+        <p>Yes, and it is worth one phone call first. We agree the entry route, the lift and the
+          timing with you before we arrive, so nothing is carried through a shared lobby at a
+          busy hour. Our vehicles carry no signage.</p></div>
+      <div class="q"><b>We are a lab or medical practice on the I-270 corridor. Do you handle
+        commercial biohazard?</b>
+        <p>Yes. Sharps incidents, treatment room spills and contamination events, documented to
+          the standard your inspection needs rather than to an insurer's. We are GBAC trained
+          and OSHA bloodborne pathogen compliant.</p></div>
+      <div class="q"><b>I am the executor and I live out of state. Can you do this without me
+        there?</b>
+        <p>Yes. We work from a lockbox or a key handover, send photographic documentation as we
+          go, and provide the disposal manifest and written clearance for the estate file.</p></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 07, links up</div>
+    <h3>Links up to both parents</h3>
+    <p class="note">The mesh has to run both ways. Roto-Rooter links down but never back up, and
+      that is a real hole in a site otherwise built for this.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Link text</th><th>Target</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td class="lab">The full biohazard remediation process, pricing and FAQ</td><td class="mn">/services/biohazard-remediation/</td><td>Parent service</td></tr>
+        <tr><td class="lab">Everything we do in Rockville</td><td class="mn">/commercial-cleaning-rockville-md/</td><td>Parent town</td></tr>
+        <tr><td class="lab">Unattended death cleanup in Rockville</td><td class="mn">/unattended-death-cleanup-rockville-md/</td><td>Sibling</td></tr>
+        <tr><td class="lab">Hoarding cleanup in Rockville</td><td class="mn">/hoarding-cleanup-rockville-md/</td><td>Sibling</td></tr>
+        <tr><td class="lab">Biohazard cleanup in Bethesda</td><td class="mn">/biohazard-cleanup-bethesda-md/</td><td>Neighbouring town</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="sec">
+    <div class="sn">Block 08, CTA</div>
+    <h3>Closing call to action</h3>
+    <div class="copy">
+      <p class="h1line">Call, and we will be there</p>
+      <p>You do not need to explain anything on the phone. Give us the address and how to get
+        in. Everything else we work out when we arrive.</p>
+      <p><strong>Call (301) 000 0000</strong> &nbsp;|&nbsp; Request a discreet call back</p>
+    </div>
+    <p class="note">Phone first on emergency services. Form first on contract services like
+      janitorial. This is a phone first page.</p>
+  </div>
+
+  </div>
+</div>
+
+<section class="doc">
+  <div class="dhead"><div class="dno">NEXT</div><h2 class="dh">What comes after this batch</h2></div>
+  <p class="ddek">These three set the voice and prove the structure. The remaining fifty four
+    follow the same deck format, in the order the blueprint's build order sets out.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Batch</th><th>Pages</th><th>Why this order</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Two</td><td>Biohazard remediation, crime scene and trauma, hoarding, sewage backup</td><td>The rest of the specialty set. Thinnest competition, highest margin, and they share the insurance and crisis blocks written here.</td></tr>
+      <tr><td class="lab">Three</td><td>Commercial janitorial, medical facility, government facility, disinfection</td><td>The commercial set. Different reader, different tone, no crisis block.</td></tr>
+      <tr><td class="lab">Four</td><td>Home, About, Contact, Government Contracting</td><td>Home last of the core four, because it routes to pages that now exist.</td></tr>
+      <tr><td class="lab">Five</td><td>Bethesda, North Bethesda, Gaithersburg town pages</td><td>The three remaining sprint towns, each needing its own local hook.</td></tr>
+      <tr><td class="lab">Six onward</td><td>The 19 service x town pages</td><td>Written last, because they link up to both parents and stay thin.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="call">
+    <h4>One thing to settle before batch two</h4>
+    <p>The <strong>24 hour decision</strong>. It appears in the banner, the FAQ and the response
+      claims on every specialty page in batch two. Writing them twice because the answer arrived
+      late is avoidable work, and republishing changed hours means editing forty directory
+      listings by hand as well.</p>
+  </div>
+</section>
+
+</div>
+
+<div class="wrap">
+  <div class="foot">
+    <p><b>Research behind this copy.</b> Insurance handling, the adjuster point and the suicide
+      exclusion from published US industry guidance. Cost ranges from published US industry
+      figures for unattended death cleanup. Rockville employment, life sciences and corridor
+      figures from Rockville Economic Development and Montgomery County sources. Certification
+      detail from ISSA. Competitor page structures from PuroClean Rockville, Bio-One DC, Green
+      Apple Bethesda, Clean Method Bethesda and Roto-Rooter Rockville, all read on 10 September
+      2026.</p>
+    <p><b>Nothing here is published without approval.</b> Every amber slot needs a client fact
+      before the page ships, and no review, case study or timescale in this deck may be invented
+      to fill one.</p>
+  </div>
+</div>

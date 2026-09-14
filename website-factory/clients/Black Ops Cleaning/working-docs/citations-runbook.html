@@ -1,0 +1,708 @@
+<title>Citations Runbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#F1EFE9; --card:#FFFFFF; --card2:#E7E3DA; --card3:#DAD5C9;
+  --line:#D5D0C4; --line2:#B3ADA0;
+  --ink:#171A1F; --ink2:#4E555E; --ink3:#7F8791;
+  --accent:#2B4470; --accent2:#3C5D96; --accent-bg:#DFE5F0;
+  --ok:#2C6B4C; --ok-bg:#DEEBE3; --ok-line:#93BBA3;
+  --wait:#8A5A11; --wait-bg:#F4E7CC; --wait-line:#D0AF6D;
+  --stop:#9B3527; --stop-bg:#F5E1DC; --stop-line:#D2A094;
+  --band:#171A1F; --bandink:#F1EFE9;
+  --shade:0 1px 2px rgba(23,26,31,.05), 0 14px 34px -26px rgba(23,26,31,.5);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0D0F12; --card:#161A1F; --card2:#1D2229; --card3:#262D35;
+    --line:#282F37; --line2:#3F4852; --ink:#E8EAEE; --ink2:#A2ABB5; --ink3:#727B85;
+    --accent:#7DA2DC; --accent2:#9BB9E8; --accent-bg:#141F33;
+    --ok:#54BC8B; --ok-bg:#0E271C; --ok-line:#2A5C43;
+    --wait:#D8A24E; --wait-bg:#2A2010; --wait-line:#67501F;
+    --stop:#E08874; --stop-bg:#2B1512; --stop-line:#65322A;
+    --band:#05070A; --bandink:#E8EAEE;
+    --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0D0F12; --card:#161A1F; --card2:#1D2229; --card3:#262D35;
+  --line:#282F37; --line2:#3F4852; --ink:#E8EAEE; --ink2:#A2ABB5; --ink3:#727B85;
+  --accent:#7DA2DC; --accent2:#9BB9E8; --accent-bg:#141F33;
+  --ok:#54BC8B; --ok-bg:#0E271C; --ok-line:#2A5C43;
+  --wait:#D8A24E; --wait-bg:#2A2010; --wait-line:#67501F;
+  --stop:#E08874; --stop-bg:#2B1512; --stop-line:#65322A;
+  --band:#05070A; --bandink:#E8EAEE;
+  --shade:0 1px 2px rgba(0,0,0,.55), 0 14px 34px -26px rgba(0,0,0,.95);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1030px;margin:0 auto;padding:0 22px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.mast{background:var(--band);color:var(--bandink)}
+.mast .wrap{padding:28px 22px 30px}
+.lock{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;
+  padding-bottom:17px;border-bottom:1px solid rgba(255,255,255,.16)}
+.mk{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.mk span{color:var(--accent2)}
+.lock .meta{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.55;font-weight:600;text-align:right}
+h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+  font-size:clamp(34px,6.2vw,58px);line-height:.97;letter-spacing:-.012em;
+  margin:22px 0 0;text-transform:uppercase;text-wrap:balance}
+.lede{font-size:17.5px;color:rgba(232,234,238,.74);max-width:62ch;margin:15px 0 0}
+
+/* progress */
+.prog{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}
+.prog .wrap{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;
+  padding-top:13px;padding-bottom:13px}
+.prog .pl{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--ink3)}
+.bar{flex:1;min-width:170px;height:7px;background:var(--card3);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:99px;
+  transition:width .3s cubic-bezier(.16,1,.3,1)}
+.prog .pc{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
+  font-variant-numeric:tabular-nums;color:var(--accent)}
+.prog button{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);background:none;
+  border:1px solid var(--line2);border-radius:4px;padding:6px 10px;cursor:pointer}
+.prog button:hover{color:var(--ink);border-color:var(--ink3)}
+
+section{padding:48px 0 4px}
+.shead{display:flex;gap:14px;align-items:baseline}
+.sno{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12px;
+  color:var(--accent);letter-spacing:.11em;padding-top:7px;flex-shrink:0}
+h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(26px,4vw,37px);line-height:1.03;margin:0;text-transform:uppercase;
+  letter-spacing:-.005em;text-wrap:balance}
+.sdek{color:var(--ink2);font-size:16.5px;max-width:65ch;margin:8px 0 22px 40px}
+@media(max-width:640px){.sdek{margin-left:0}}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
+  text-transform:uppercase;letter-spacing:.014em;margin:32px 0 12px;
+  padding-bottom:7px;border-bottom:2px solid var(--ink)}
+p.body{color:var(--ink2);font-size:15.5px;max-width:66ch}
+code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--card2);
+  padding:1px 5px;border-radius:2px}
+
+/* checklist */
+.list{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--card);
+  box-shadow:var(--shade)}
+.item{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start;
+  padding:13px 17px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item input{appearance:none;width:19px;height:19px;border:1.5px solid var(--line2);
+  border-radius:4px;background:var(--card);cursor:pointer;margin:2px 0 0;flex-shrink:0;
+  display:grid;place-items:center;transition:background .14s,border-color .14s}
+.item input:checked{background:var(--accent);border-color:var(--accent)}
+.item input:checked::after{content:"";width:5px;height:9px;border:solid #fff;
+  border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.item label{cursor:pointer}
+.item .t{font-size:15.5px;font-weight:600;line-height:1.4;display:block}
+.item .d{font-size:14px;color:var(--ink2);margin-top:4px;line-height:1.5;display:block}
+.item .blocks{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--stop);margin-top:6px;display:block}
+.item input:checked ~ label .t{color:var(--ink3);text-decoration:line-through;
+  text-decoration-thickness:1px}
+.tag{font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;padding:3px 7px;border-radius:2px;border:1px solid;
+  white-space:nowrap;height:fit-content;margin-top:3px}
+.tag.doc{background:var(--stop-bg);color:var(--stop);border-color:var(--stop-line)}
+.tag.acc{background:var(--wait-bg);color:var(--wait);border-color:var(--wait-line)}
+.tag.dec{background:var(--accent-bg);color:var(--accent);border-color:var(--accent2)}
+.tag.you{background:var(--ok-bg);color:var(--ok);border-color:var(--ok-line)}
+@media(max-width:620px){
+  .item{grid-template-columns:auto 1fr}
+  .item .tag{grid-column:2;margin-top:2px;width:fit-content}
+}
+
+/* phase */
+.phase{background:var(--card);border:1px solid var(--line);border-radius:4px;
+  margin-bottom:14px;overflow:hidden;box-shadow:var(--shade)}
+.ph{background:var(--card2);padding:14px 18px;border-bottom:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:8px 15px;align-items:baseline}
+.ph .pn{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;color:var(--accent);
+  letter-spacing:.09em}
+.ph .pt{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
+  text-transform:uppercase;letter-spacing:.014em;line-height:1.1}
+.ph .pw{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--ink3)}
+.pb{padding:16px 18px}
+.pb > p:first-child{margin-top:0}
+.pb p{margin:0 0 11px;font-size:15px;color:var(--ink2)}
+.pb p:last-child{margin-bottom:0}
+.pb .list{margin-top:12px}
+
+/* tables */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--card);
+  box-shadow:var(--shade)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:600px}
+th{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left;
+  padding:12px 14px;border-bottom:2px solid var(--line2);background:var(--card2);white-space:nowrap}
+td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.lab{font-weight:600}
+td.mn{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink3);white-space:nowrap}
+
+/* callouts */
+.call{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:4px;padding:19px 21px;margin:20px 0;box-shadow:var(--shade)}
+.call.stop{border-left-color:var(--stop)}
+.call.ok{border-left-color:var(--ok)}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19.5px;
+  text-transform:uppercase;margin:0 0 9px;letter-spacing:.014em}
+.call p{margin:0 0 10px;font-size:15.5px;color:var(--ink2)}
+.call p:last-child{margin-bottom:0}
+.call strong{color:var(--ink)}
+
+/* message block */
+.msg{background:var(--card);border:1px solid var(--line);border-radius:4px;
+  box-shadow:var(--shade);overflow:hidden;margin-top:14px}
+.msgh{background:var(--card2);border-bottom:1px solid var(--line);padding:11px 17px;
+  display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.msgh .ml{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--ink3)}
+.msgh button{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10px;
+  font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+  background:var(--accent-bg);border:1px solid var(--accent2);border-radius:4px;
+  padding:6px 11px;cursor:pointer}
+.msgb{padding:18px 20px;font-size:15px;color:var(--ink2);white-space:pre-wrap;line-height:1.65}
+
+ul.tight{margin:10px 0 0;padding-left:20px}
+ul.tight li{margin-bottom:7px;font-size:15px;color:var(--ink2)}
+ul.tight li b{color:var(--ink);font-weight:600}
+
+.foot{padding:26px 0 46px;font-size:13px;color:var(--ink3)}
+.foot p{margin:0 0 8px;max-width:78ch}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms !important}}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="lock">
+      <div class="mk">Black<span>&nbsp;Ops</span>&nbsp;Cleaning</div>
+      <div class="meta">Citations runbook<br>Workstream 3</div>
+    </div>
+    <h1>What to collect,<br>and the order to file</h1>
+    <p class="lede">Thirty to forty listings, most of them free. The work is not the filing.
+      The work is collecting one locked set of details first, then never varying it. This is
+      the collection list and the filing order.</p>
+  </div>
+</header>
+
+<div class="prog">
+  <div class="wrap">
+    <span class="pl">Progress</span>
+    <span class="bar"><i id="barfill"></i></span>
+    <span class="pc" id="pcount">0 of 0</span>
+    <button type="button" id="reset">Reset</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section>
+  <div class="shead"><div class="sno">01</div><h2>What you need from the client</h2></div>
+  <p class="sdek">Grouped by how you get it, because that is what decides how long it takes.
+    Tick each as it arrives. Anything marked with a blocker stops specific listings until it
+    lands.</p>
+
+  <h3>Documents only the owner can hand over</h3>
+  <p class="body">These are the slowest items and the ones people forget to ask for early.
+    Request all of them in one message on day one.</p>
+  <div class="list" data-group="docs">
+    <div class="item"><input type="checkbox" id="d1"><label for="d1">
+      <span class="t">DD-214, or a written statement of veteran status</span>
+      <span class="d">Proof of military service. This is the single highest value document in
+        the set, because it unlocks the directories no Rockville competitor can enter.</span>
+      <span class="blocks">Blocks: VeteranOwnedBusiness, SDVOB, Buy Veteran, SBA VetCert</span>
+      </label><span class="tag doc">Document</span></div>
+    <div class="item"><input type="checkbox" id="d2"><label for="d2">
+      <span class="t">Certificate of insurance, general liability and workers compensation</span>
+      <span class="d">Current, in the exact legal entity name. Ask for the PDF, not a
+        screenshot.</span>
+      <span class="blocks">Blocks: BBB, Restoration Industry Association, chambers</span>
+      </label><span class="tag doc">Document</span></div>
+    <div class="item"><input type="checkbox" id="d3"><label for="d3">
+      <span class="t">Maryland business licence number and registration document</span>
+      <span class="d">Also the entity formation document if the trading name differs from the
+        registered name.</span>
+      <span class="blocks">Blocks: BBB, chambers, any verified directory</span>
+      </label><span class="tag doc">Document</span></div>
+    <div class="item"><input type="checkbox" id="d4"><label for="d4">
+      <span class="t">EIN</span>
+      <span class="d">Asked for by BBB and by several aggregators as an entity match.</span>
+      </label><span class="tag doc">Document</span></div>
+    <div class="item"><input type="checkbox" id="d5"><label for="d5">
+      <span class="t">ISSA membership number and GBAC training certificate</span>
+      <span class="d">Not just the logos, the actual numbers. Both bodies run member directories
+        the client already qualifies for and may already be silently listed in.</span>
+      <span class="blocks">Blocks: ISSA directory, GBAC directory</span>
+      </label><span class="tag doc">Document</span></div>
+    <div class="item"><input type="checkbox" id="d6"><label for="d6">
+      <span class="t">SAM.gov login, and confirmation the UEI is current</span>
+      <span class="d">UEI PMPPFTB7CCX4 is already registered. Confirm it has not lapsed, since
+        registration expires annually.</span>
+      </label><span class="tag doc">Document</span></div>
+    <div class="item"><input type="checkbox" id="d7"><label for="d7">
+      <span class="t">VA disability rating letter, only if pursuing SDVOSB</span>
+      <span class="d">Required for service disabled certification, not for plain VOSB. Ask, but
+        do not push. Some owners will not want to share it.</span>
+      <span class="blocks">Blocks: SBA VetCert at SDVOSB level</span>
+      </label><span class="tag doc">Document</span></div>
+    <div class="item"><input type="checkbox" id="d8"><label for="d8">
+      <span class="t">Year the business started trading</span>
+      <span class="d">One number, but it appears on most listings and must match everywhere.</span>
+      </label><span class="tag doc">Document</span></div>
+  </div>
+
+  <h3>Account access you need handed over</h3>
+  <div class="list" data-group="access">
+    <div class="item"><input type="checkbox" id="a1"><label for="a1">
+      <span class="t">A dedicated Google account for the business</span>
+      <span class="d">Not the owner's personal Gmail. If a personal account already owns
+        anything, transfer ownership rather than starting fresh.</span>
+      <span class="blocks">Blocks: Google Business Profile, and therefore Bing import</span>
+      </label><span class="tag acc">Access</span></div>
+    <div class="item"><input type="checkbox" id="a2"><label for="a2">
+      <span class="t">Email on the company domain</span>
+      <span class="d">Several directories reject free mail addresses for business verification,
+        and LinkedIn wants a domain address to verify the page.</span>
+      <span class="blocks">Blocks: LinkedIn, Yelp, several verified directories</span>
+      </label><span class="tag acc">Access</span></div>
+    <div class="item"><input type="checkbox" id="a3"><label for="a3">
+      <span class="t">Both Facebook pages, as admin</span>
+      <span class="d">There are two. You need admin on both to merge them, and a merge cannot be
+        undone, so confirm which one keeps the history first.</span>
+      <span class="blocks">Blocks: the Facebook merge repair</span>
+      </label><span class="tag acc">Access</span></div>
+    <div class="item"><input type="checkbox" id="a4"><label for="a4">
+      <span class="t">Greater Rockville Chamber member login</span>
+      <span class="d">Their listing page currently returns an error. It is a paid membership
+        already being wasted.</span>
+      </label><span class="tag acc">Access</span></div>
+    <div class="item"><input type="checkbox" id="a5"><label for="a5">
+      <span class="t">Existing Angi and HomeAdvisor logins</span>
+      <span class="d">Correct the details, do not invest further. Both are homeowner facing and
+        the client sells to facility managers.</span>
+      </label><span class="tag acc">Access</span></div>
+    <div class="item"><input type="checkbox" id="a6"><label for="a6">
+      <span class="t">Website admin, hosting and DNS</span>
+      <span class="d">Needed before citations, because the address has to exist on the site
+        first. See the stop rule in section 02.</span>
+      <span class="blocks">Blocks: everything, see phase 1</span>
+      </label><span class="tag acc">Access</span></div>
+    <div class="item"><input type="checkbox" id="a7"><label for="a7">
+      <span class="t">Instagram, and LinkedIn personal profile</span>
+      <span class="d">A LinkedIn company page needs a personal profile as its first admin. The
+        owner's, not yours.</span>
+      </label><span class="tag acc">Access</span></div>
+  </div>
+
+  <h3>Decisions the owner has to make</h3>
+  <div class="list" data-group="decisions">
+    <div class="item"><input type="checkbox" id="c1"><label for="c1">
+      <span class="t">24 hours, or not</span>
+      <span class="d">The single most expensive item on this page to get wrong. Hours go on
+        every listing. Change the answer later and every listing has to be refiled by hand.</span>
+      <span class="blocks">Blocks: every listing, do not file before this is answered</span>
+      </label><span class="tag dec">Decision</span></div>
+    <div class="item"><input type="checkbox" id="c2"><label for="c2">
+      <span class="t">Exact legal name, and whether LLC appears</span>
+      <span class="d">Black Ops Cleaning Company LLC, or Black Ops Cleaning Company. Pick one.
+        It then appears identically on all thirty to forty listings.</span>
+      <span class="blocks">Blocks: every listing</span>
+      </label><span class="tag dec">Decision</span></div>
+    <div class="item"><input type="checkbox" id="c3"><label for="c3">
+      <span class="t">One phone number for every listing</span>
+      <span class="d">Call tracking sits behind this number, never in front of it. A different
+        tracking number per directory is the classic way to destroy your own consistency.</span>
+      <span class="blocks">Blocks: every listing</span>
+      </label><span class="tag dec">Decision</span></div>
+    <div class="item"><input type="checkbox" id="c4"><label for="c4">
+      <span class="t">Is the Talbott Street address publicly listable</span>
+      <span class="d">If it is a home address the owner may want it hidden, which changes Google
+        to a service area business and changes several other filings. Ask before filing, not
+        after.</span>
+      <span class="blocks">Blocks: Google Business Profile setup type</span>
+      </label><span class="tag dec">Decision</span></div>
+    <div class="item"><input type="checkbox" id="c5"><label for="c5">
+      <span class="t">Which towns are genuinely served</span>
+      <span class="d">Seventeen are on the sitemap. The service area on the listings and the town
+        pages on the site must be the same list.</span>
+      </label><span class="tag dec">Decision</span></div>
+    <div class="item"><input type="checkbox" id="c6"><label for="c6">
+      <span class="t">Budget approval for the paid ones</span>
+      <span class="d">BBB, Montgomery County Chamber and the Restoration Industry Association are
+        the only ones with real fees. Everything else is free.</span>
+      </label><span class="tag dec">Decision</span></div>
+  </div>
+
+  <h3>Assets, which the owner supplies and you prepare</h3>
+  <div class="list" data-group="assets">
+    <div class="item"><input type="checkbox" id="s1"><label for="s1">
+      <span class="t">Logo, square and horizontal, vector if it exists</span>
+      <span class="d">Square at 720 by 720 minimum. Most directories want the square crop and
+        will mangle a horizontal one.</span>
+      </label><span class="tag you">You prepare</span></div>
+    <div class="item"><input type="checkbox" id="s2"><label for="s2">
+      <span class="t">Twenty or more photographs of real jobs</span>
+      <span class="d">The same set feeds the Google profile, the town pages and the service
+        pages. This is the five a week obligation in the proposal.</span>
+      <span class="blocks">Blocks: Google profile photo routine, and every town page</span>
+      </label><span class="tag doc">Document</span></div>
+    <div class="item"><input type="checkbox" id="s3"><label for="s3">
+      <span class="t">Owner headshot</span>
+      <span class="d">Chest up, plain background. Feeds the website hero and the About page as
+        well as several listings.</span>
+      </label><span class="tag doc">Document</span></div>
+    <div class="item"><input type="checkbox" id="s4"><label for="s4">
+      <span class="t">Business description at three lengths</span>
+      <span class="d">Roughly 150, 250 and 750 characters. Directories cap at different limits
+        and truncating a long one mid sentence looks careless.</span>
+      </label><span class="tag you">You prepare</span></div>
+    <div class="item"><input type="checkbox" id="s5"><label for="s5">
+      <span class="t">All eleven services, each with its own description</span>
+      <span class="d">Reused on the Google profile services section and on the site.</span>
+      </label><span class="tag you">You prepare</span></div>
+    <div class="item"><input type="checkbox" id="s6"><label for="s6">
+      <span class="t">Category research, primary and secondary</span>
+      <span class="d">Researched against the three businesses currently ranking above the client,
+        not guessed. Primary category is the strongest single field on a Google profile.</span>
+      </label><span class="tag you">You prepare</span></div>
+    <div class="item"><input type="checkbox" id="s7"><label for="s7">
+      <span class="t">NAICS codes</span>
+      <span class="d">561720 for janitorial. The veteran and government directories ask for
+        these and match buyers against them.</span>
+      </label><span class="tag you">You prepare</span></div>
+  </div>
+
+  <div class="call">
+    <h4>Ask for all of it in one message</h4>
+    <p>The worst version of this workstream is six separate requests over three weeks, each one
+      stalling a different listing. Send one message on day one, listing everything, and chase
+      the gaps once.</p>
+  </div>
+
+  <div class="msg">
+    <div class="msgh"><span class="ml">Draft, send day one</span>
+      <button type="button" id="copy">Copy</button></div>
+    <div class="msgb" id="msgtext">Hi Amilcar,
+
+To get the directory listings built I need a set of details from you. Most of this is a one time collection, and once I have it I will not need to come back for it again.
+
+Documents:
+1. DD-214 or a written statement of your veteran status
+2. Certificate of insurance, general liability and workers comp, as a PDF
+3. Maryland business licence number and registration document
+4. EIN
+5. ISSA membership number and GBAC training certificate number
+6. Confirmation your SAM.gov registration is current
+7. The year the business started trading
+
+Access, whichever is easiest for you:
+8. A Google account for the business, ideally not your personal one
+9. An email address on your own domain
+10. Admin on both Facebook pages, there are currently two
+11. Your Greater Rockville Chamber member login
+12. Website admin, hosting and DNS
+
+Four decisions I need from you:
+13. Do you want to advertise 24 hour availability, yes or no. This one goes on every listing so I need it before I file anything.
+14. Should the business name read Black Ops Cleaning Company LLC, or without the LLC. Whichever you pick is what appears everywhere.
+15. Is 121 Talbott St fine to publish publicly, or would you rather it stayed hidden
+16. One phone number to use on every listing
+
+And the ongoing one:
+17. Photographs from jobs, around five a week. These feed the listings and the town pages, and they are what replaces the stock images on the site.
+
+If number 13 is the only one you are unsure about, tell me the rest and we will hold that one. Nothing gets filed until it is answered though, because changing hours later means refiling everything by hand.
+
+Hassan</div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">02</div><h2>The filing order</h2></div>
+  <p class="sdek">Eight phases. Each one exists because doing it later would mean redoing
+    earlier work.</p>
+
+  <div class="phase">
+    <div class="ph"><span class="pn">PHASE 0</span><span class="pt">Lock the reference sheet</span>
+      <span class="pw">Half a day</span></div>
+    <div class="pb">
+      <p>Write every field once into a single document. Name, address, phone, URL, email, hours,
+        categories, three descriptions, service list, service area, year founded, logo paths,
+        NAICS, licence, EIN, UEI, ISSA and GBAC numbers.</p>
+      <p><strong>Nothing gets filed until this exists.</strong> Every later phase copies from it
+        and never retypes from memory. This is the entire difference between citation work that
+        compounds and citation work that confuses Google.</p>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph"><span class="pn">PHASE 1</span><span class="pt">Fix the website first</span>
+      <span class="pw">Inside engagement one</span></div>
+    <div class="pb">
+      <p>The address currently appears nowhere on the site, and two map links resolve to the city
+        of Rockville and the state of Virginia rather than to the business.</p>
+      <p>Citations are votes that a business exists at an address. Pointing thirty of them at a
+        site that does not state that address is filing them at half strength. Add the address,
+        the business data Google can read, and correct the map links before phase 2.</p>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph"><span class="pn">PHASE 2</span><span class="pt">Google Business Profile</span>
+      <span class="pw">Day one, then 1 to 3 weeks</span></div>
+    <div class="pb">
+      <p>Submit on day one regardless of what else is unfinished, because verification is the
+        longest lead item in the whole engagement and it is outside your control.</p>
+      <p>Before starting the video verification, have ready: exterior signage or the premises,
+        the address visible, equipment and branded material, and something showing control of
+        the location such as a utility bill or lease. A failed video verification costs days.</p>
+      <p>Once verified, build it out properly: category, service area, all eleven services with
+        descriptions, the products section which almost nobody in this market uses, attributes
+        including veteran owned, twenty photographs, and questions seeded and answered before a
+        competitor answers them.</p>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph"><span class="pn">PHASE 3</span><span class="pt">Repairs, before any new filing</span>
+      <span class="pw">2 to 3 days</span></div>
+    <div class="pb">
+      <p>Merge the two Facebook pages. Confirm first which one keeps the history, because a merge
+        cannot be undone. Get the Chamber listing restored, it is paid for already. Claim the
+        Pegbo listing that still says is this your business. Correct Angi and HomeAdvisor to the
+        locked details.</p>
+      <p>Doing this after new filings means auditing the new ones again for consistency against
+        details you were still fixing.</p>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph"><span class="pn">PHASE 4</span><span class="pt">Tier one core</span>
+      <span class="pw">1 to 2 days plus verification waits</span></div>
+    <div class="pb">
+      <p>Yelp, Bing Places, Apple Business Connect, LinkedIn company page. File Bing after the
+        Google profile verifies, because it imports straight from Google and takes minutes
+        instead of a full manual entry.</p>
+      <p>Never solicit Yelp reviews. Yelp filters solicited reviews aggressively and it can
+        affect the listing itself.</p>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph"><span class="pn">PHASE 5</span><span class="pt">Aggregators</span>
+      <span class="pw">Half a day, weeks to propagate</span></div>
+    <div class="pb">
+      <p>Data Axle and Localeze. These feed hundreds of smaller directories automatically, so
+        they are worth more than the individual sites they populate. File them early because
+        propagation is slow, and file them accurately because a wrong record propagates just as
+        efficiently as a right one.</p>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph"><span class="pn">PHASE 6</span><span class="pt">The credential gated ones</span>
+      <span class="pw">2 days, plus SBA separately</span></div>
+    <div class="pb">
+      <p>This is the phase that produces most of the value. Veteran directories, ISSA, GBAC,
+        Restoration Industry Association, BBB, Montgomery County Chamber.</p>
+      <p>Check the ISSA and GBAC directories first. The client is already a member of both, so
+        the listing may exist and simply be unpublished. That is a free win in ten minutes.</p>
+      <p>Start SBA VetCert now but do not wait on it. Certification takes weeks to months and the
+        directory listing follows it. Treat it as a later win, not a phase 6 deliverable.</p>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph"><span class="pn">PHASE 7</span><span class="pt">Local and general volume</span>
+      <span class="pw">1 day</span></div>
+    <div class="pb">
+      <p>REDI, ExploreRockville, Visit Montgomery, Nextdoor, Thumbtack, Manta, n49, Yahoo Local,
+        then the standard directory set and the cleaning industry directories.</p>
+      <p>The local ones are worth more than the general ones. REDI and ExploreRockville are real
+        local links from bodies Google already trusts. Foursquare and Hotfrog are consistency
+        filler.</p>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph"><span class="pn">PHASE 8</span><span class="pt">Verify and record</span>
+      <span class="pw">Half a day, then monthly</span></div>
+    <div class="pb">
+      <p>A listing is not complete when it is submitted. It is complete when it is live, correct,
+        and recorded. Walk the whole set, confirm each one renders publicly with the exact locked
+        details, and log it.</p>
+      <p>Then search the business name plus Rockville and see what comes back. Anything you did
+        not file, and any duplicate you did not create, is now on your list too.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">03</div><h2>How a listing actually completes</h2></div>
+  <p class="sdek">Submitted is not done. Every listing passes through the same four states, and
+    the verification method decides how long it sits in state two.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>State</th><th>What it means</th><th>How you know</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Submitted</td><td>Form filled from the reference sheet and sent</td>
+        <td>Confirmation email, or a pending status in the dashboard</td></tr>
+      <tr><td class="lab">Verifying</td><td>The directory is confirming you control the business</td>
+        <td>Email link, phone code, postcard, or video call. This is where time goes.</td></tr>
+      <tr><td class="lab">Live</td><td>The listing renders publicly</td>
+        <td>Open it in a private window. If it needs a login to see, it is not live.</td></tr>
+      <tr><td class="lab">Recorded</td><td>URL, login and details logged in the tracking sheet</td>
+        <td>The client owns this sheet at handover. Without it the work is not transferable.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Verification method by listing</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Listing</th><th>Verification</th><th>Typical wait</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Google Business Profile</td><td>Video call or postcard</td><td class="mn">1 to 3 weeks</td></tr>
+      <tr><td class="lab">Yelp</td><td>Phone code to the listed number</td><td class="mn">Minutes</td></tr>
+      <tr><td class="lab">Bing Places</td><td>Import from Google, or phone or postcard</td><td class="mn">Minutes to 2 weeks</td></tr>
+      <tr><td class="lab">Apple Business Connect</td><td>Apple ID plus business verification</td><td class="mn">2 to 7 days</td></tr>
+      <tr><td class="lab">LinkedIn</td><td>Email on the company domain</td><td class="mn">Minutes</td></tr>
+      <tr><td class="lab">Nextdoor</td><td>Address verification</td><td class="mn">Days</td></tr>
+      <tr><td class="lab">Data Axle, Localeze</td><td>Submission, then propagation</td><td class="mn">2 to 8 weeks</td></tr>
+      <tr><td class="lab">BBB</td><td>Human review of licence and insurance</td><td class="mn">1 to 3 weeks</td></tr>
+      <tr><td class="lab">Chambers</td><td>Membership processing</td><td class="mn">1 to 2 weeks</td></tr>
+      <tr><td class="lab">Veteran directories</td><td>Veteran status document</td><td class="mn">Days</td></tr>
+      <tr><td class="lab">ISSA, GBAC</td><td>Member login, may already exist</td><td class="mn">Minutes</td></tr>
+      <tr><td class="lab">SBA VetCert</td><td>Full certification review</td><td class="mn">Weeks to months</td></tr>
+      <tr><td class="lab">General directories</td><td>Email confirmation</td><td class="mn">Minutes</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>The tracking sheet</h3>
+  <p class="body">One row per listing. This is a deliverable, not a working note. The client owns
+    it at handover and it is what makes the work auditable and transferable.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Column</th><th>Why it is there</th></tr></thead>
+    <tbody>
+      <tr><td class="lab">Listing name</td><td>Obvious, but keep it consistent with the phase list</td></tr>
+      <tr><td class="lab">Live URL</td><td>The public page. Blank means not live, whatever the dashboard says.</td></tr>
+      <tr><td class="lab">Account used</td><td>Which email or login owns it. Half the value of the sheet.</td></tr>
+      <tr><td class="lab">State</td><td>Submitted, verifying, live, recorded</td></tr>
+      <tr><td class="lab">Verification method</td><td>So a stalled one can be chased correctly</td></tr>
+      <tr><td class="lab">Date submitted</td><td>Tells you when a postcard is genuinely lost</td></tr>
+      <tr><td class="lab">Date live</td><td>What you report against</td></tr>
+      <tr><td class="lab">Cost</td><td>Free or the fee paid. Client asks at handover.</td></tr>
+      <tr><td class="lab">Renewal date</td><td>Memberships lapse. SAM.gov expires annually.</td></tr>
+      <tr><td class="lab">Notes</td><td>Anything that varied from the reference sheet, and why</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="shead"><div class="sno">04</div><h2>How this goes wrong</h2></div>
+  <p class="sdek">Six failure modes, all of them common, all of them avoidable.</p>
+
+  <div class="call stop">
+    <h4>The details drift</h4>
+    <p>Someone types Suite 200 on one listing and Ste 200 on the next, or uses a different
+      tracking number on three directories. Inconsistent details actively confuse Google and can
+      do more harm than filing nothing at all. <strong>The reference sheet exists to prevent
+      exactly this, and it only works if nobody ever types from memory.</strong></p>
+  </div>
+
+  <ul class="tight">
+    <li><b>Free mail addresses get rejected.</b> Several directories will not verify a Gmail
+      address for a business. Get the domain email before phase 4, not during it.</li>
+    <li><b>You create a duplicate.</b> Always search the directory for an existing listing before
+      creating one. Unclaimed listings are common, and claiming beats creating every time. The
+      client already has an unclaimed Pegbo listing as proof.</li>
+    <li><b>Hours change after filing.</b> If the 24 hour decision arrives late, thirty listings
+      have to be edited by hand. This is why it is a blocker and not a detail.</li>
+    <li><b>The verification postcard goes nowhere.</b> Confirm the address receives post reliably
+      before choosing postcard verification. Prefer video where it is offered.</li>
+    <li><b>Yelp reviews get solicited.</b> Yelp filters solicited reviews and it can affect the
+      listing. Open the channel, then leave it alone.</li>
+    <li><b>Nobody records the logins.</b> A perfectly built set of listings that the client cannot
+      access is not a deliverable. The tracking sheet is the deliverable.</li>
+  </ul>
+
+  <div class="call ok">
+    <h4>If time runs short, cut phase 7, never phase 6</h4>
+    <p>The veteran and industry directories are relevant, hard for competitors to copy, and point
+      at the exact buyers the client wants. Twenty general directories do not come close to
+      matching them. Volume is the part that is safe to drop.</p>
+  </div>
+</section>
+
+</div>
+
+<div class="wrap">
+  <div class="foot">
+    <p>Costs, wait times and verification methods are typical rather than quoted. Confirm each at
+      filing time. Client facts drawn from the Black Ops growth audit and rebuild proposal, both
+      dated 23 August 2026.</p>
+    <p>Ticks on this page are saved in your own browser only. They are not shared and not visible
+      to anyone else.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY = 'blackops-citations-v1';
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('.item input[type=checkbox]'));
+  var fill = document.getElementById('barfill');
+  var count = document.getElementById('pcount');
+
+  function read(){
+    try { return JSON.parse(localStorage.getItem(KEY)) || {}; }
+    catch (e) { return {}; }
+  }
+  function write(state){
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* private mode */ }
+  }
+  function paint(){
+    var done = boxes.filter(function(b){ return b.checked; }).length;
+    var pct = boxes.length ? Math.round((done / boxes.length) * 100) : 0;
+    fill.style.width = pct + '%';
+    count.textContent = done + ' of ' + boxes.length;
+  }
+
+  var saved = read();
+  boxes.forEach(function(box){
+    if (saved[box.id]) box.checked = true;
+    box.addEventListener('change', function(){
+      var state = read();
+      if (box.checked) state[box.id] = 1; else delete state[box.id];
+      write(state);
+      paint();
+    });
+  });
+  paint();
+
+  document.getElementById('reset').addEventListener('click', function(){
+    boxes.forEach(function(b){ b.checked = false; });
+    write({});
+    paint();
+  });
+
+  var copyBtn = document.getElementById('copy');
+  copyBtn.addEventListener('click', function(){
+    var text = document.getElementById('msgtext').textContent;
+    var done = function(){ copyBtn.textContent = 'Copied'; setTimeout(function(){ copyBtn.textContent = 'Copy'; }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function(){ copyBtn.textContent = 'Select it manually'; });
+    } else {
+      copyBtn.textContent = 'Select it manually';
+    }
+  });
+})();
+</script>
