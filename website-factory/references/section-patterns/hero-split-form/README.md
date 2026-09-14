@@ -27,9 +27,19 @@ research points elsewhere gets a different hero.
 4. **Headline.** Condensed uppercase, capped at 15ch, `text-wrap: balance`.
    No eyebrow chip above it: small uppercase wide-tracked labels stacked on a
    display H1 are flagged by `impeccable` as an antipattern.
-5. **Proof chips.** Exactly three, from `copy.heroTrustChips[]`. Each string
-   splits on the first comma into claim plus qualifier, so the copy stays one
-   locked string per chip.
+5. **Spec strip.** The company's own registration marks, read from
+   `registrations.{uei,naicsPrimary}`, `company.licenseNumber` and
+   `address.{city,state,zip}`. Label in plain words, value in mono, because
+   these are genuinely codes. Identical on every page, because it describes
+   the company rather than the page. Only rows carrying a value render, so a
+   client holding none of these gets no strip at all. Never invent a code to
+   fill a row.
+
+   This replaced a row of proof chips. Three identical rounded cards, each
+   with a shield icon, is the generated-page look, and it gave a checkable
+   federal registration the same weight as an adjective. Promises belong in
+   the subheadline where they can carry their context; credentials belong in
+   the trust bar where each has room for its certificate number.
 6. **Owner cutout.** Optional. Only for niches whose `hero-composition.md`
    puts a person in frame. Name card overlaps the photo so the face reads as
    a person, not stock.

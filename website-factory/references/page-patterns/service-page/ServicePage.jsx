@@ -62,7 +62,7 @@ export default function ServicePage({ brand, page }) {
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services/' }, { label: page.name }]}
         h1={page.h1}
         subhead={page.banner?.subhead}
-        pills={page.banner?.pills}
+        brand={brand}
         primary={{ label: `Call ${brand.contact.phone}`, href: brand.contact.phoneTelLink }}
         secondary={{ label: brand.copy.buttonText, href: '#quote' }}
       />

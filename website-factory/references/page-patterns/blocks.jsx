@@ -9,8 +9,24 @@
  * `scripts/inject-theme.mjs` stamps into `:root`.
  */
 
-/** Breadcrumb, H1, subhead, proof pills and the two banner CTAs. */
-export function PageBanner({ crumbs = [], h1, subhead, pills = [], primary, secondary, phoneTelLink }) {
+/** Breadcrumb, H1, subhead, spec strip and the two banner CTAs. */
+export function PageBanner({ crumbs = [], h1, subhead, brand, primary, secondary, phoneTelLink }) {
+  // The company's own registration marks, from brand-dna rather than from page
+  // content, so the strip is identical on every page. Only rows that carry a
+  // value render. Never invent a code to fill one.
+  const reg = brand?.registrations ?? {};
+  const specRows = [
+    {
+      label: 'Based in',
+      value: [brand?.address?.city, brand?.address?.state, brand?.address?.zip]
+        .filter(Boolean)
+        .join(' '),
+    },
+    { label: 'UEI', value: reg.uei },
+    { label: 'NAICS', value: reg.naicsPrimary },
+    { label: 'Licence', value: brand?.company?.licenseNumber },
+  ].filter((row) => Boolean(row.value));
+
   return (
     <header className="border-b-4 border-accent bg-primary-dark py-11 text-white">
       <div className="mx-auto max-w-[1080px] px-6">
@@ -28,14 +44,17 @@ export function PageBanner({ crumbs = [], h1, subhead, pills = [], primary, seco
           {h1}
         </h1>
         {subhead && <p className="mt-4 max-w-[60ch] text-lg text-white/75">{subhead}</p>}
-        {pills.length > 0 && (
-          <ul className="mt-5 flex list-none flex-wrap gap-2.5 p-0">
-            {pills.map((p) => (
-              <li key={p} className="rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-sm font-semibold">
-                {p}
-              </li>
+        {specRows.length > 0 && (
+          <dl className="mt-5 flex flex-wrap gap-x-8 gap-y-4 p-0">
+            {specRows.map(({ label, value }) => (
+              <div key={label} className="flex flex-col gap-0.5">
+                <dt className="text-xs leading-tight text-white/55">{label}</dt>
+                <dd className="m-0 font-mono text-sm font-semibold leading-tight tracking-[0.03em] text-accent-light">
+                  {value}
+                </dd>
+              </div>
             ))}
-          </ul>
+          </dl>
         )}
         <div className="mt-6 flex flex-wrap items-center gap-3">
           {primary && <a href={primary.href} className="rounded-lg bg-accent px-6 py-3.5 font-bold text-white transition-colors hover:bg-accent-dark">{primary.label}</a>}

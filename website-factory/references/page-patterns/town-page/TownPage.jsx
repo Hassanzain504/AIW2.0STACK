@@ -70,7 +70,7 @@ export default function TownPage({ brand, page }) {
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Service areas', href: '/service-areas/' }, { label: `${page.town} ${page.state}` }]}
         h1={page.h1}
         subhead={page.banner?.subhead}
-        pills={page.banner?.pills}
+        brand={brand}
         primary={{ label: page.cta.primary ?? brand.copy.buttonText, href: '#quote' }}
         secondary={{ label: `Call ${brand.contact.phone}`, href: brand.contact.phoneTelLink }}
       />

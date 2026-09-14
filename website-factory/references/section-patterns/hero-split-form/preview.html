@@ -14,6 +14,7 @@
   --primary-dark:#071E36;   /* palette.primary_dark */
   --primary-slate:#1B4772;  /* palette.primary_slate */
   --accent:#F07E17;         /* palette.accent */
+  --accent-light:#F79A46;   /* palette.accent_light */
   --accent-dark:#C9620A;    /* palette.accent_dark */
   --neutral:#FFFFFF;        /* palette.neutral */
   --silver:#D7DEE6;         /* palette.silver */
@@ -97,18 +98,17 @@ h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;color:#fff;
 h1 em{font-style:normal;color:var(--accent)}
 .sub{color:rgba(255,255,255,.80);font-size:17px;max-width:52ch;margin:18px 0 0}
 
-/* proof chips */
-.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));
-  gap:12px;margin:26px 0 0;max-width:620px}
-.chip{display:flex;align-items:center;gap:11px;background:rgba(255,255,255,.10);
-  border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);padding:11px 13px;
-  backdrop-filter:blur(6px)}
-.chip .ico{width:32px;height:32px;flex-shrink:0;border-radius:7px;background:var(--accent);
-  display:grid;place-items:center}
-.chip .ico svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:2.1;
-  stroke-linecap:round;stroke-linejoin:round}
-.chip b{display:block;color:#fff;font-size:14.5px;font-weight:700;line-height:1.2}
-.chip span{display:block;color:rgba(255,255,255,.66);font-size:11.5px;line-height:1.35;margin-top:2px}
+/* spec strip. The company's own registration marks, from brand-dna, so the
+   strip is identical on every page. Label plain, value mono, because these
+   are genuinely codes. This replaced a row of proof chips: three identical
+   rounded cards each carrying a shield icon is the generated-page look, and
+   it gave a checkable federal registration the same weight as an adjective. */
+.spec{display:flex;flex-wrap:wrap;gap:16px 32px;margin:26px 0 0;padding:0}
+.spec div{display:flex;flex-direction:column;gap:2px}
+.spec dt{margin:0;font-size:12.5px;line-height:1.2;color:rgba(255,255,255,.55)}
+.spec dd{margin:0;font-family:"IBM Plex Mono",monospace;font-size:13.5px;
+  font-weight:600;line-height:1.2;letter-spacing:.03em;color:var(--accent-light)}
+.spec dd.empty{color:rgba(255,255,255,.3)}
 
 /* owner cutout */
 .owner{position:relative;justify-self:end;align-self:end;width:100%;max-width:300px}
@@ -191,14 +191,12 @@ form.bar .btn{height:46px;padding-left:26px;padding-right:26px;white-space:nowra
   .owner{display:none}
   .body{padding-top:36px}
   h1{max-width:none}
-  .chips{grid-template-columns:1fr 1fr;max-width:none}
   .sticky{display:flex}
   body{padding-bottom:72px}
 }
 @media(max-width:520px){
   .util .right{width:100%;margin-left:0}
   form.bar{grid-template-columns:1fr}
-  .chips{grid-template-columns:1fr}
   .badges{gap:10px 14px}
 }
 @media(prefers-reduced-motion:reduce){
@@ -282,20 +280,12 @@ form.bar .btn{height:46px;padding-left:26px;padding-right:26px;white-space:nowra
         <p class="sub">Full replacements, storm damage repairs and insurance claims across
           North Metro Atlanta. Free inspection, written quote in 24 hours, no pressure.</p>
 
-        <div class="chips">
-          <div class="chip">
-            <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.4-3 8.3-7 9-4-0.7-7-4.6-7-9V7z"/><path d="M9 12l2 2 4-4"/></svg></span>
-            <span><b>37 years</b><span>Serving Cobb County since 1989</span></span>
-          </div>
-          <div class="chip">
-            <span class="ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
-            <span><b>Workmanship warranty</b><span>10 years, transferable</span></span>
-          </div>
-          <div class="chip">
-            <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.4l6.1-.9z"/></svg></span>
-            <span><b>4.9 from 214 reviews</b><span>Google and Facebook</span></span>
-          </div>
-        </div>
+        <dl class="spec">
+          <div><dt>Based in</dt><dd>Marietta GA 30060</dd></div>
+          <div><dt>UEI</dt><dd class="empty">not held</dd></div>
+          <div><dt>Licence</dt><dd>GA RC-0041882</dd></div>
+          <div><dt>Serving since</dt><dd>1989</dd></div>
+        </dl>
       </div>
 
       <div class="owner">

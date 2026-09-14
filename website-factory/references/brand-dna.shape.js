@@ -42,6 +42,19 @@ export const brandDNAShape = {
     serviceRegion: "__REQUIRED__SERVICE_REGION__",
   },
 
+  // Public registration marks. Every field is optional: most local-service
+  // clients hold none of them, and a client that holds one may not hold the
+  // rest. Components render only the entries that carry a value, so a
+  // business with nothing here simply does not get the block. Never invent a
+  // code to fill a row.
+  registrations: {
+    uei: null,
+    cage: null,
+    naicsPrimary: null,
+    naicsSecondary: [],
+    samRegistered: false,
+  },
+
   contact: {
     phone: "__REQUIRED__PHONE__",
     phoneTelLink: "__REQUIRED__PHONE_TEL_LINK__",

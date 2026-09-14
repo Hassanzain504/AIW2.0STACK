@@ -268,6 +268,39 @@ h2.dh{font-family:"Barlow Condensed",sans-serif;font-weight:700;
 
   <div class="page">
     <div class="phead"><div class="kind">Shared component</div>
+      <h2>The spec strip</h2>
+      <div class="url">Directly below the banner on all 57 pages</div></div>
+    <div class="pbody"><div class="sec"><div class="copy">
+      <p>Four rows, identical on every page, reading from <code>brand-dna</code> rather than from
+        page content. It is the company's own registration marks, so it does not change from one
+        page to the next.</p>
+      <p><strong>Based in</strong>, Rockville MD 20852. <strong>UEI</strong>, PMPPFTB7CCX4.
+        <strong>NAICS</strong>, 561720. <strong>Licence</strong>, slot.</p>
+      <p>Label in plain words, value in mono. The mono is carrying actual codes here, which is the
+        one case where it is information rather than decoration.</p>
+      <h4>Why this replaced the pill row</h4>
+      <p>Every banner used to carry four tags joined by middots. That shape is named as a
+        generated-page tell, but the middot was only the symptom. The fault was giving a checkable
+        federal registration and an adjective <strong>the same weight and the same shape</strong>.</p>
+      <p>Once they are split by kind, the middot has nothing left to join. Facts come here.
+        Promises go into the subhead, where they can carry their context. Credentials go to the
+        trust bar, where each one has room for its certificate number.</p>
+      <h4>The side effect</h4>
+      <p>Not one of the eight sites in the teardown publishes a UEI or a NAICS code anywhere, let
+        alone above the fold. This strip answers a federal or county buyer's qualifying question
+        before they scroll, and it is now the strongest single thing on the page.</p>
+    </div>
+    <p class="note">It renders on the dark band, brass values on field black. On a specialty page
+      read by a grieving family it stays quiet, because it is four short facts rather than a row of
+      claims.</p>
+    <div class="slot"><span class="sl">Slot, the licence number</span>
+      <p>The fourth row is empty until the client supplies the Maryland licence or registration
+        number. Render the row with the label and an empty value rather than hiding it, so the
+        gap is visible to whoever is filling these in.</p></div></div></div>
+  </div>
+
+  <div class="page">
+    <div class="phead"><div class="kind">Shared component</div>
       <h2>The emergency route</h2>
       <div class="url">Home, Contact, and every specialty service page</div></div>
     <div class="pbody"><div class="sec"><div class="copy">
@@ -341,8 +374,10 @@ h2.dh{font-family:"Barlow Condensed",sans-serif;font-weight:700;
     <h3>Utility bar</h3>
     <div class="copy">
       <p>Renders above the header on every page, not just this one. One line, always visible.</p>
-      <p><strong>Rockville, MD</strong> &nbsp;&middot;&nbsp; <strong>Phone answered 24 hours,
-        (301) 000 0000</strong> &nbsp;&middot;&nbsp; <strong>Montgomery County and DC</strong></p>
+      <p><strong>Left,</strong> Rockville, MD. <strong>Centre,</strong> Montgomery County and DC.
+        <strong>Right,</strong> Phone answered 24 hours, (301) 000 0000.</p>
+      <p>Three positions in one thin strip, separated by the layout rather than by punctuation.
+        No dots between them.</p>
       <p>On mobile it collapses to the phone number alone, which stays tappable.</p>
     </div>
     <p class="note">Bio-One DC puts the 24 hour number in the header before anything else.
@@ -357,9 +392,9 @@ h2.dh{font-family:"Barlow Condensed",sans-serif;font-weight:700;
       <p class="h1line">Commercial and Biohazard Cleaning in Montgomery County</p>
       <p class="big">Veteran owned, based in Rockville, and the phone is answered any hour. From
         nightly office janitorial to biohazard and trauma cleanup, handled in house by the same
-        company.</p>
-      <p><strong>Pills:</strong> Veteran owned &middot; GBAC trained &middot; Insured &middot;
-        Based in Rockville</p>
+        company. Our vehicles carry no signage.</p>
+      <p><strong>Below the banner:</strong> the spec strip, then the trust bar carrying
+        veteran owned, GBAC trained and insured. Both are shared components, defined in batch four.</p>
       <p><strong>Primary CTA:</strong> Book a walkthrough &nbsp;|&nbsp; <strong>Secondary:</strong>
         Call (301) 000 0000</p>
       <p>Form is four fields. Name, phone, what you need, and where. Nothing else above the
@@ -381,9 +416,18 @@ h2.dh{font-family:"Barlow Condensed",sans-serif;font-weight:700;
     <h3>Trust bar</h3>
     <div class="copy">
       <p>One line, directly under the hero, before any scrolling. Each item checkable.</p>
-      <p><strong>Veteran owned</strong> &middot; <strong>GBAC trained</strong> &middot;
-        <strong>ISSA member</strong> &middot; <strong>Insured and bonded</strong> &middot;
-        <strong>Licence [slot]</strong> &middot; <strong>SAM.gov registered</strong></p>
+      <p>Six items, each on its own line with room beneath it, not a row joined by dots. The line
+        beneath is what makes each one checkable.</p>
+      <ul>
+        <li><strong>Veteran owned.</strong> Not SBA certified yet.</li>
+        <li><strong>GBAC trained.</strong> Certificate number, slot.</li>
+        <li><strong>ISSA member.</strong> Membership number, slot.</li>
+        <li><strong>Insured and bonded.</strong> Limits, slot.</li>
+        <li><strong>Licensed in Maryland.</strong> Licence number, slot.</li>
+        <li><strong>SAM.gov registered.</strong> UEI PMPPFTB7CCX4, active.</li>
+      </ul>
+      <p>A badge with a number under it is worth more than six badges without. The numbers are
+        what a buyer can check, and checking is the whole point of this block.</p>
     </div>
     <div class="slot"><span class="sl">Slot, what is actually held, and at what level</span>
       <p>GBAC trained, GBAC STAR accredited and ISSA member are three different things. CMI
@@ -514,9 +558,11 @@ h2.dh{font-family:"Barlow Condensed",sans-serif;font-weight:700;
     <div class="copy">
       <h4>Where we work</h4>
       <p>Montgomery County, Maryland, and the DC line. Named places, not a radius on a map.</p>
-      <p><strong>Rockville</strong> &middot; North Bethesda &middot; Bethesda &middot;
-        Gaithersburg &middot; Potomac &middot; Kensington &middot; Derwood &middot; Wheaton
-        &middot; Silver Spring</p>
+      <p>A wrapping list of town links, each one its own target. Rockville first, then North
+        Bethesda, Bethesda, Gaithersburg, Potomac, Kensington, Derwood, Wheaton and Silver
+        Spring.</p>
+      <p>Set as a list that wraps, with the spacing doing the separating. Not a run of names
+        joined by dots, which is the same habit the banner pills had.</p>
       <p>Each name links to its own town page. The map renders alongside, with the Rockville
         address pinned.</p>
       <p>We also take work in Prince George's County, Washington DC and Northern Virginia,
@@ -1013,8 +1059,8 @@ h2.dh{font-family:"Barlow Condensed",sans-serif;font-weight:700;
       <p class="h1line">Government contracting with Black Ops Cleaning</p>
       <p class="big">A veteran owned janitorial small business in Rockville, Maryland, registered
         in SAM.gov under NAICS 561720. Prime and subcontract work across the DC metro area.</p>
-      <p><strong>Pills:</strong> UEI PMPPFTB7CCX4 &middot; NAICS 561720 &middot; Veteran owned
-        &middot; Small business &middot; Rockville MD 20852</p>
+      <p><strong>Below the banner:</strong> the spec strip, then the trust bar carrying
+        veteran owned and small business status. Both are shared components, defined in batch four.</p>
       <p><strong>Primary CTA:</strong> Download the capability statement &nbsp;|&nbsp;
         <strong>Secondary:</strong> Contracting line, [slot, named person]</p>
     </div>

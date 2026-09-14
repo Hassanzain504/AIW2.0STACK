@@ -38,8 +38,16 @@ data change.
 Ordered as the end customer's questions arrive, not as the business would
 like to talk about itself.
 
-1. **Banner.** Breadcrumb, H1 naming the service AND the area, subhead, proof
-   pills, two CTAs. An H1 that is a slogan is an audit failure.
+1. **Banner.** Breadcrumb, H1 naming the service AND the area, subhead, spec
+   strip, two CTAs. An H1 that is a slogan is an audit failure.
+
+   The spec strip carries the company's own registration marks, read from
+   `brand-dna` rather than from the page JSON, so it is identical on all 49
+   pages. Only rows holding a value render. It replaced a row of proof pills:
+   four short claims in identical rounded tags gave a checkable federal
+   registration the same weight as an adjective, and that shape reads as
+   generated. Promises belong in the subhead where they carry their context,
+   credentials in the trust bar where each has room for its number.
 2. **The problem, in their words.** Verbatim phrasing pulled from research,
    each quote carrying its source so it stays traceable. This is the block
    that makes a page feel written for one person.

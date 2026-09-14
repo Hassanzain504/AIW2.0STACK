@@ -23,8 +23,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "subhead": { "type": "string" },
-        "pills": { "type": "array", "items": { "type": "string" }, "maxItems": 4 }
+        "subhead": { "type": "string" }
       }
     },
     "problem": {

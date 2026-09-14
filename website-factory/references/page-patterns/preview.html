@@ -6,15 +6,23 @@
 /* Palette is deliberate for this niche. A person landing on an unattended
    death or trauma cleanup page is grieving or is a property manager under
    pressure. Calm, clinical and discreet converts here. Alarm colours do not.
-   Every value below maps to a brand-dna palette key. */
+   Every value below maps to a brand-dna palette key.
+
+   Field black and brass. The black is punctuation, used for the banner and
+   the footer, never as the page ground, which stays warm off-white. The brass
+   is a desaturated metal rather than a highlight, so it reads as insignia and
+   never glows. Both rules keep this clear of the near-black-plus-one-bright-
+   accent look that reads as generated. These values are a demonstration only:
+   the components hold no literal colours and take the real palette from
+   brand-dna. */
 :root{
-  --primary:#16333F; --primary-dark:#0D2029; --primary-slate:#2A5566;
-  --accent:#2E7D6B; --accent-light:#4A9C89; --accent-dark:#1F5C4E;
-  --paper:#F4F2ED; --card:#FFFFFF; --card2:#EAE7E0;
-  --line:#DCD8D0; --line2:#B9B4A9;
+  --primary:#16181A; --primary-dark:#0B0D0E; --primary-slate:#4A4F55;
+  --accent:#A8792C; --accent-light:#C89A45; --accent-dark:#7E5A1D;
+  --paper:#F2F1ED; --card:#FFFFFF; --card2:#EAE8E2;
+  --line:#E0DED7; --line2:#B6B1A6;
   --ink:#14191C; --ink2:#4B555B; --ink3:#7C868C;
   --alert:#8A4A2B; --alert-bg:#F3E5DC; --alert-line:#D2AE96;
-  --ok:#2E7D6B; --ok-bg:#DFEDE9;
+  --ok:#3F6B4E; --ok-bg:#E3EBE4;
   --shade:0 1px 2px rgba(20,25,28,.05), 0 14px 34px -26px rgba(20,25,28,.5);
   --r:8px;
 }
@@ -79,11 +87,12 @@ h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
   font-size:clamp(33px,5.2vw,54px);line-height:1;letter-spacing:-.006em;
   text-transform:uppercase;margin:14px 0 0;text-wrap:balance;max-width:19ch}
 .bsub{font-size:17.5px;color:rgba(234,241,243,.76);max-width:60ch;margin:16px 0 0}
-.brow{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:7px 14px;
-  font-size:13.5px;font-weight:600;color:#fff}
-.pill .d{width:6px;height:6px;border-radius:50%;background:var(--accent-light)}
+.brow{gap:14px 30px;display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.spec{display:flex;flex-direction:column;gap:2px}
+.spec dt{font-size:12.5px;line-height:1.2;color:rgba(255,255,255,.55);margin:0}
+.spec dd{margin:0;font-family:"IBM Plex Mono",monospace;font-size:13.5px;font-weight:600;
+  line-height:1.2;letter-spacing:.03em;color:var(--accent-light)}
+.spec dd.empty{color:rgba(255,255,255,.3)}
 .bcta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;align-items:center}
 .btn{display:inline-flex;align-items:center;justify-content:center;
   background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:15.5px;
@@ -257,14 +266,14 @@ details .a{padding:0 19px 17px 47px;font-size:15px;color:var(--ink2)}
   <h1>Unattended death cleanup in Rockville and Montgomery County</h1>
   <p class="bsub">Discreet, certified biohazard remediation. Unmarked vehicles, no company
     signage, and we can be on site within two hours of your call.</p>
-  <div class="brow">
-    <span class="pill"><span class="d"></span>Available 24 hours</span>
-    <span class="pill">GBAC trained</span>
-    <span class="pill">Veteran owned</span>
-    <span class="pill">Insurance billed directly</span>
-  </div>
+  <dl class="brow">
+    <div class="spec"><dt>Based in</dt><dd>Rockville MD 20852</dd></div>
+    <div class="spec"><dt>UEI</dt><dd>PMPPFTB7CCX4</dd></div>
+    <div class="spec"><dt>NAICS</dt><dd>561720</dd></div>
+    <div class="spec"><dt>Licence</dt><dd class="empty">slot</dd></div>
+  </dl>
   <div class="bcta">
-    <a class="btn" href="tel:+13015550142">Call (301) 555 0142</a>
+    <a class="btn" href="tel:+13010000000">Call (301) 000 0000</a>
     <a class="btn ghost" href="#quote">Request a discreet call back</a>
   </div>
 </div></div>
@@ -454,7 +463,7 @@ details .a{padding:0 19px 17px 47px;font-size:15px;color:var(--ink2)}
   <p class="sd">No obligation, no scene description required, and nothing is decided on the
     phone. We answer at any hour.</p>
   <div class="bcta">
-    <a class="btn" href="tel:+13015550142">Call (301) 555 0142</a>
+    <a class="btn" href="tel:+13010000000">Call (301) 000 0000</a>
     <a class="btn ghost" href="#">Request a discreet call back</a>
   </div>
 </div></div>
@@ -469,14 +478,15 @@ details .a{padding:0 19px 17px 47px;font-size:15px;color:var(--ink2)}
   <h1>Commercial cleaning in Rockville, Maryland</h1>
   <p class="bsub">Our office is on Talbott Street, so Rockville is not a service area we drive
     to. It is where the crew starts the day.</p>
-  <div class="brow">
-    <span class="pill"><span class="d"></span>Based in Rockville, 20852</span>
-    <span class="pill">14 active contracts in this town</span>
-    <span class="pill">Response under 30 minutes</span>
-  </div>
+  <dl class="brow">
+    <div class="spec"><dt>Based in</dt><dd>Rockville MD 20852</dd></div>
+    <div class="spec"><dt>UEI</dt><dd>PMPPFTB7CCX4</dd></div>
+    <div class="spec"><dt>NAICS</dt><dd>561720</dd></div>
+    <div class="spec"><dt>Licence</dt><dd class="empty">slot</dd></div>
+  </dl>
   <div class="bcta">
     <a class="btn" href="#quote2">Get a Rockville quote</a>
-    <a class="btn ghost" href="tel:+13015550142">Call (301) 555 0142</a>
+    <a class="btn ghost" href="tel:+13010000000">Call (301) 000 0000</a>
   </div>
 </div></div>
 
@@ -590,7 +600,7 @@ details .a{padding:0 19px 17px 47px;font-size:15px;color:var(--ink2)}
     actually use the space, and put a price in writing.</p>
   <div class="bcta">
     <a class="btn" href="#">Book a Rockville walkthrough</a>
-    <a class="btn ghost" href="tel:+13015550142">Call (301) 555 0142</a>
+    <a class="btn ghost" href="tel:+13010000000">Call (301) 000 0000</a>
   </div>
 </div></div>
 

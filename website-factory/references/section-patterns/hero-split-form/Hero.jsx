@@ -19,7 +19,8 @@
  *   reviews.{rating,totalReviewCount}
  *   trust_badges[]            -> /badges/{filename}
  *   copy.hero.{headline,subheadline,imageAlt}
- *   copy.heroTrustChips[]     -> array of strings
+ *   registrations.{uei,cage,naicsPrimary}
+ *   company.licenseNumber, address.{city,state,zip}  -> spec strip rows
  *   copy.{formHeader,formSubtext,submitButton,privacyLine,mobileCallLabel,
  *         availableNow,buttonText}
  *   copy.topBar.cta
@@ -36,16 +37,6 @@
 
 import { useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-
-function ShieldIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1"
-      strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M12 3l7 4v5c0 4.4-3 8.3-7 9-4-.7-7-4.6-7-9V7z" />
-      <path d="M9 12l2 2 4-4" />
-    </svg>
-  );
-}
 
 function LockIcon() {
   return (
@@ -95,6 +86,21 @@ export default function Hero({
         transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
       };
 
+  // Only the marks this client actually holds. No invented codes, and no empty
+  // rows: a business with none of them gets no strip at all.
+  const reg = brand.registrations ?? {};
+  const specRows = [
+    {
+      label: 'Based in',
+      value: [brand.address?.city, brand.address?.state, brand.address?.zip]
+        .filter(Boolean)
+        .join(' '),
+    },
+    { label: 'UEI', value: reg.uei },
+    { label: 'NAICS', value: reg.naicsPrimary },
+    { label: 'Licence', value: brand.company?.licenseNumber },
+  ].filter((row) => Boolean(row.value));
+
   return (
     <section className="relative isolate overflow-hidden bg-primary-dark">
       {/* Photo stage. Stage 9 writes heroImage; Stage 4 writes ownerImage. */}
@@ -140,34 +146,31 @@ export default function Hero({
               {brand.copy.hero.subheadline}
             </p>
 
-            {/* Proof chips. heroTrustChips is an array of plain strings; the
-                first line before a comma reads as the claim, the rest as
-                the qualifier, so copy stays a single locked string. */}
-            <ul className="mt-7 grid max-w-[620px] list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2 lg:grid-cols-3">
-              {brand.copy.heroTrustChips.slice(0, 3).map((chip) => {
-                const [claim, ...rest] = chip.split(', ');
-                return (
-                  <li
-                    key={chip}
-                    className="flex items-center gap-3 rounded-[10px] border border-white/20 bg-white/10 p-3 backdrop-blur-sm"
-                  >
-                    <span className="grid h-8 w-8 shrink-0 place-items-center rounded-[7px] bg-accent text-white">
-                      <ShieldIcon />
-                    </span>
-                    <span>
-                      <b className="block text-[0.9rem] font-bold leading-tight text-white">
-                        {claim}
-                      </b>
-                      {rest.length > 0 && (
-                        <span className="mt-0.5 block text-xs leading-snug text-white/65">
-                          {rest.join(', ')}
-                        </span>
-                      )}
-                    </span>
-                  </li>
-                );
-              })}
-            </ul>
+            {/* Spec strip. The company's own registration marks, read from
+                brand-dna rather than from page content, so it is identical on
+                every page. Only rows that carry a value render, so a client
+                holding none of them gets no strip at all. Label in plain
+                words, value in mono, because these are genuinely codes.
+
+                This replaced a row of proof chips. Four short claims in
+                identical rounded cards, each with a shield icon, is the
+                generated-page look, and it gave a checkable federal
+                registration the same weight as an adjective. Promises moved
+                into the subheadline where they can carry their context, and
+                credentials moved to the trust bar where each has room for its
+                certificate number. */}
+            {specRows.length > 0 && (
+              <dl className="mt-7 flex max-w-[620px] flex-wrap gap-x-8 gap-y-4 p-0">
+                {specRows.map(({ label, value }) => (
+                  <div key={label} className="flex flex-col gap-0.5">
+                    <dt className="text-xs leading-tight text-white/55">{label}</dt>
+                    <dd className="m-0 font-mono text-sm font-semibold leading-tight tracking-[0.03em] text-accent-light">
+                      {value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            )}
           </motion.div>
 
           {/* Owner cutout. Optional: the niche playbook's hero-composition.md
