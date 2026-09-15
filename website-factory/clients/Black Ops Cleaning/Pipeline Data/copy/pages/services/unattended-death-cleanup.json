@@ -1,0 +1,215 @@
+{
+  "slug": "unattended-death-cleanup",
+  "name": "Unattended Death Cleanup",
+  "h1": "Unattended Death Cleanup in Rockville and Montgomery County",
+  "meta": {
+    "title": "Unattended Death Cleanup Rockville MD | Black Ops",
+    "description": "Discreet unattended death cleanup in Rockville and Montgomery County. Unmarked vehicles, GBAC trained, insurance billed direct. Call any hour."
+  },
+  "banner": {
+    "subhead": "Discreet, certified biohazard remediation. Unmarked vehicles, no company signage on site, and a written price before any work starts. Where a policy covers the loss, we speak to your adjuster and bill them directly."
+  },
+  "problem": {
+    "heading": "If you are reading this today",
+    "lead": "You are dealing with something nobody prepares you for. You do not need to know any of the terminology, and you do not need to have decided anything yet.",
+    "voices": [
+      {
+        "quote": "Will my insurance pay for this?",
+        "source": "Recurring enquiry, asked before any other"
+      },
+      {
+        "quote": "Will anyone be able to tell what happened?",
+        "source": "Recurring enquiry, to be replaced with tracked call phrasing"
+      },
+      {
+        "quote": "Can the property be used again afterwards?",
+        "source": "Recurring enquiry, to be replaced with tracked call phrasing"
+      }
+    ]
+  },
+  "includes": {
+    "heading": "What the work covers",
+    "note": "Everything below is part of a standard remediation. Nothing here is added to the bill later.",
+    "items": [
+      {
+        "title": "Assessment and containment",
+        "body": "The affected area is isolated before anything is touched, with negative air where the contamination warrants it, so nothing spreads through the rest of the property."
+      },
+      {
+        "title": "Removal of affected material",
+        "body": "Flooring, subfloor, drywall, insulation and furnishings that cannot be safely restored are removed and documented. Decomposition travels further than most people expect, which is why the assessment happens before the price."
+      },
+      {
+        "title": "Decontamination",
+        "body": "Hospital grade disinfection of every affected surface, following CDC and EPA disinfection guidance."
+      },
+      {
+        "title": "Odour remediation at source",
+        "body": "Treated at the source rather than masked. Masking is the reason odour comes back three weeks later, and it is the most common complaint about work done cheaply."
+      },
+      {
+        "title": "Regulated waste disposal",
+        "body": "Transported and disposed of through a licensed medical waste stream. The manifest is handed to you."
+      },
+      {
+        "title": "Written clearance",
+        "body": "Confirmation that the property is safe for occupancy, in writing, on completion."
+      }
+    ]
+  },
+  "process": {
+    "heading": "What happens, and how long each part takes",
+    "note": "Slot, confirm the two hour response and the one to three day range against the client's actual jobs before publishing.",
+    "steps": [
+      {
+        "title": "Your call",
+        "body": "We need the address and how to get in. We do not ask you to describe the scene.",
+        "timescale": "About 10 minutes"
+      },
+      {
+        "title": "On site assessment",
+        "body": "Unmarked vehicle. We scope the contamination and give you a written price before any work begins.",
+        "timescale": "Within 2 hours"
+      },
+      {
+        "title": "Insurance contact",
+        "body": "Where a policy covers the loss we speak to the adjuster directly and bill them, so you are not managing it.",
+        "timescale": "Same day"
+      },
+      {
+        "title": "Remediation",
+        "body": "Containment, removal, decontamination, odour treatment. Most residential jobs finish inside two days.",
+        "timescale": "1 to 3 days"
+      },
+      {
+        "title": "Clearance and handover",
+        "body": "Written clearance, the disposal manifest, and photographs of the finished work.",
+        "timescale": "On completion"
+      }
+    ]
+  },
+  "credentials": {
+    "heading": "Why we are allowed to do this work",
+    "note": "Biohazard remediation is not general cleaning, and the difference is not marketing. It is training, insurance and a licensed disposal route.",
+    "items": [
+      {
+        "name": "GBAC trained",
+        "detail": "The Global Biorisk Advisory Council, now a division of ISSA. Certificate number, slot."
+      },
+      {
+        "name": "ISSA CMI",
+        "detail": "The Cleaning Management Institute, the industry's training body. Membership number, slot."
+      },
+      {
+        "name": "OSHA bloodborne pathogen compliant",
+        "detail": "Not a certificate anyone issues, a standard every technician is trained against. Written exposure control plan on request."
+      },
+      {
+        "name": "Licensed and insured in Maryland",
+        "detail": "General liability and workers compensation. Licence number and limits, slot."
+      },
+      {
+        "name": "Veteran owned and federally registered",
+        "detail": "SAM.gov UEI PMPPFTB7CCX4. Veteran owned, not SBA certified."
+      }
+    ],
+    "disclaimer": {
+      "heading": "One thing we will not do",
+      "body": "We do not display CDC, EPA or OSHA seals to imply those agencies endorse us. They do not endorse anyone. We follow CDC and EPA disinfection guidance and our technicians are trained to the OSHA bloodborne pathogen standard. Those are facts, and they are worth more than a logo. If another company shows you federal seals, ask them what they mean."
+    }
+  },
+  "pricing": {
+    "heading": "What this costs, and how you find out",
+    "note": "We do not publish prices for this work, because the range is too wide to be useful. A single room found early and a property with structural penetration are different jobs by a factor of ten, and quoting either one blind would be guessing. We come out, assess the property, and give you a written price before any work starts. That visit costs nothing and puts you under no obligation.",
+    "footnote": "You will never get a number from us that changes once the job is underway, unless we find something behind a wall that nobody could have seen. If that happens we stop, show you, and re-quote before continuing."
+  },
+  "faq": {
+    "heading": "Questions people actually ask",
+    "note": "Ten questions. This block is what AI answers pull from, and it is where every competitor in this market is thin.",
+    "items": [
+      {
+        "q": "Does homeowner insurance cover unattended death cleanup?",
+        "a": "In most cases yes, because you are claiming for damage to the property. Some policies exclude deaths by suicide unless a rider was bought. Call your adjuster, not your agent, and ask whether the policy covers biohazard remediation and what the limit is. We handle the claim from there."
+      },
+      {
+        "q": "Will your vehicle be marked?",
+        "a": "No. Our response vehicles carry no company signage and our technicians arrive in plain clothing and change on site. Neighbours see a plain van."
+      },
+      {
+        "q": "How quickly can you get here?",
+        "a": "Within two hours across Montgomery County. Rockville, Bethesda and Silver Spring are usually faster, because we are based on Talbott Street in Rockville rather than driving in from another county."
+      },
+      {
+        "q": "Do I have to be at the property?",
+        "a": "No. We can work from a key handover or a lockbox and send you photographic documentation as we go. Many of the people who call us live in another state."
+      },
+      {
+        "q": "Can the property be lived in or sold afterwards?",
+        "a": "Yes, and we issue written clearance confirming it. That document is what insurers, buyers and estate solicitors ask to see, and it is included at no extra cost."
+      },
+      {
+        "q": "What if the odour comes back?",
+        "a": "It should not. Odour that returns means the source was masked rather than removed, usually because subfloor or drywall was left in place. We treat at source, and if it recurs on a job we completed we come back at no charge."
+      },
+      {
+        "q": "Do I need to tell a buyer what happened here?",
+        "a": "Maryland disclosure rules are a question for your solicitor or estate agent, not for us. What we can tell you is that our written clearance documents the property as remediated, which is what most buyers and their lenders actually want to see."
+      },
+      {
+        "q": "Who is responsible for arranging this, legally?",
+        "a": "The property owner, or the executor of the estate. Police and the medical examiner secure the scene and then release the property. Cleanup is never their responsibility, which is a surprise to almost everyone who calls us."
+      },
+      {
+        "q": "Do you handle the waste paperwork?",
+        "a": "Yes. Regulated waste goes through a licensed medical waste stream and the manifest is handed to you with the clearance documentation."
+      },
+      {
+        "q": "Are you police approved or state certified?",
+        "a": "There is no such approval or certification to hold in Maryland, and any company claiming one is worth a second look. What matters is GBAC training, OSHA bloodborne pathogen compliance, a licensed disposal route, and being licensed and insured in Maryland. We are all four."
+      }
+    ]
+  },
+  "towns": {
+    "heading": "Where we cover",
+    "note": "Every town below has its own page with the work we have done there.",
+    "items": [
+      {
+        "label": "Unattended death cleanup in Rockville",
+        "href": "/unattended-death-cleanup-rockville-md/"
+      },
+      {
+        "label": "Unattended death cleanup in Silver Spring",
+        "href": "/unattended-death-cleanup-silver-spring-md/"
+      },
+      {
+        "label": "Unattended death cleanup in Bethesda",
+        "href": "/unattended-death-cleanup-bethesda-md/"
+      },
+      {
+        "label": "Unattended death cleanup in Washington DC",
+        "href": "/unattended-death-cleanup-washington-dc/"
+      },
+      {
+        "label": "Related: biohazard remediation",
+        "href": "/services/biohazard-remediation/"
+      },
+      {
+        "label": "Related: hoarding cleanup",
+        "href": "/services/hoarding-cleanup/"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "One call, and you will know where you stand",
+    "body": "No obligation. You do not have to describe what happened, and nothing is decided on the phone. We will tell you what is involved, roughly what it costs, and what your insurer is likely to cover.",
+    "form": {
+      "heading": "Request a discreet call back",
+      "body": "We call you. No signage, no questions on the doorstep.",
+      "assurances": [
+        "Unmarked vehicles",
+        "Written price first",
+        "We bill your insurer"
+      ]
+    }
+  }
+}
