@@ -27,6 +27,7 @@ strategy and Stage 6 copy.
 | `page-previews.html` | The service page and the town page rendered with Black Ops' own copy, in the field black and brass palette with the spec strip. Shows the empty states as they actually stand, including the town page build gate. |
 | `page-previews-v2.html` | Second pass at both page types. Newsreader serif display, asymmetric banner with depth, marginalia column, process figures as display type, full-bleed dark bands. Supersedes `page-previews.html`, which stays as the first pass for comparison. |
 | `page-previews-v3.html` | Both page types built to convert. Four-field form above the fold, phone in three places, trust strip, mid-page conversion band, mobile sticky call bar. Back to Barlow Condensed and Barlow. This is the current one; v1 and v2 stay for comparison. |
+| `design-prompts.md` | Paste-ready Claude Design prompts for the eight pages that have no component: Home, Government Contracting and the rest of the supporting set. Carries the palette, type, spec strip, conversion floor and honesty rules in one block. |
 | `review-system.html` | The review engine: QR flow, capture page, text and email sequences, reply templates, pace and channels. |
 
 ## Reading order for someone new
@@ -41,6 +42,8 @@ strategy and Stage 6 copy.
 7. `page-previews.html`, for both page types built out of that decision, then
    `page-previews-v2.html` for the craft pass, then `page-previews-v3.html`,
    which is the current shape and the one to judge
+8. `design-prompts.md`, if you are taking the eight uncovered pages into
+   Claude Design yourself
 
 ## Related code
 
