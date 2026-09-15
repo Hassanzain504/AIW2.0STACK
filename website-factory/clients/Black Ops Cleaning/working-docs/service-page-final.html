@@ -193,9 +193,9 @@ strong{color:var(--ik);font-weight:600}
 .close p{color:rgba(232,230,225,.74);max-width:54ch}
 
 .quote{background:var(--card);border-radius:5px;padding:20px;box-shadow:0 20px 50px -28px rgba(0,0,0,.8)}
-.quote h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:22px;
+.quote h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:22px;line-height:1.06;
   text-transform:uppercase;margin:0;color:var(--ik);letter-spacing:.012em}
-.qs{font-size:14.5px;color:var(--ink3);margin:3px 0 15px}
+.qs{font-size:14.5px;color:#5F686E;margin:3px 0 15px}
 .fld{margin-bottom:11px}
 .fld label{display:block;font-size:13.5px;font-weight:600;color:var(--ps);margin-bottom:4px}
 .fld input,.fld select{width:100%;font:inherit;font-size:16px;padding:11px 12px;
@@ -204,10 +204,10 @@ strong{color:var(--ik);font-weight:600}
 .quote button{width:100%;font:inherit;font-weight:700;font-size:16px;padding:13px 20px;border:0;
   border-radius:5px;background:var(--ac);color:var(--p);cursor:pointer}
 .quote button:hover{background:var(--acl)}
-.priv{font-size:12.5px;color:var(--ink3);margin:10px 0 0;line-height:1.45}
+.priv{font-size:13px;color:#5F686E;margin:10px 0 0;line-height:1.45}
 .qass{display:flex;flex-wrap:wrap;gap:5px 16px;margin:12px 0 0;padding:11px 0 0;
   border-top:1px solid var(--line);list-style:none}
-.qass li{font-size:12.5px;color:var(--ink3)}
+.qass li{font-size:13px;color:#5F686E}
 .qass b{color:var(--ok)}
 
 .foot{background:var(--pd);color:rgba(232,230,225,.5)}
@@ -296,6 +296,35 @@ section[id],.band[id]{scroll-margin-top:50px}
 .freg b{color:rgba(232,230,225,.72);font-weight:600}
 .fslot{color:rgba(232,230,225,.26)}
 .fend{margin:14px 0 0;font-size:13px;color:rgba(232,230,225,.4);max-width:92ch;line-height:1.6}
+/* the close. it was a flat slab with a dead left column and a form whose
+   secondary text measured 4.1 against white, under the 4.5 floor. */
+.close{position:relative;overflow:hidden;border-top:3px solid var(--ac)}
+.close::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(105% 82% at 86% 0%, #23262A 0%, #16181A 52%, #0C0E10 100%)}
+.close .w{position:relative;z-index:1;padding-block:46px 44px}
+.callnow{margin:26px 0 0;max-width:34rem;padding:19px 22px 20px;border-radius:5px;
+  border:1px solid rgba(232,230,225,.17);border-left:3px solid var(--ac);
+  background:rgba(232,230,225,.035)}
+.callnow .cl{display:block;margin-bottom:5px;font-family:"IBM Plex Mono",monospace;
+  font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acl)}
+.cnum{display:inline-block;font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(33px,4.4vw,45px);line-height:1;color:#fff;text-decoration:none;letter-spacing:.012em}
+.cnum:hover{color:var(--acl)}
+.cwhen{margin:10px 0 0;font-size:14.5px;color:rgba(232,230,225,.64);max-width:40ch}
+.rsr{margin:26px 0 0;max-width:37rem;border-top:1px solid rgba(232,230,225,.14)}
+.rsr .r{padding:15px 0;border-bottom:1px solid rgba(232,230,225,.14);
+  display:grid;grid-template-columns:20px 1fr;gap:13px;align-items:start}
+.rsr .r>b{color:var(--acl);font-size:16px;line-height:1.35}
+.rsr h3{margin:0 0 3px;font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:16.5px;text-transform:uppercase;letter-spacing:.02em;color:var(--ondark)}
+.rsr p{margin:0;font-size:15px;line-height:1.5;color:rgba(232,230,225,.66);max-width:48ch}
+.quote{border-top:3px solid var(--ac)}
+.qass{display:grid;gap:8px}
+/* the form sits inside .close and .band, whose `p` rules are on-dark and more
+   specific than .qs/.priv, so the form's own text was inheriting a light colour
+   on a white card. scope it back to the card. */
+.quote p{max-width:none}
+.quote .qs,.quote .priv{color:#5F686E}
 </style>
 <div class="util"><div class="w">
   <span class="live"><span class="dot"></span>Phone answered 24 hours</span>
@@ -401,8 +430,26 @@ section[id],.band[id]{scroll-margin-top:50px}
   <div class="links"><a href="/unattended-death-cleanup-rockville-md/">Unattended death cleanup in Rockville</a><a href="/unattended-death-cleanup-silver-spring-md/">Unattended death cleanup in Silver Spring</a><a href="/unattended-death-cleanup-bethesda-md/">Unattended death cleanup in Bethesda</a><a href="/unattended-death-cleanup-washington-dc/">Unattended death cleanup in Washington DC</a><a href="/services/biohazard-remediation/">Related: biohazard remediation</a><a href="/services/hoarding-cleanup/">Related: hoarding cleanup</a></div>
 </div></section>
 <div class="close"><div class="w">
-  <div><h2>One call, and you will know where you stand</h2><p>No obligation. You do not have to describe what happened, and nothing is decided on the phone. We will tell you what is involved, roughly what it costs, and what your insurer is likely to cover.</p>
-    <div class="hcta"><a class="btn big" href="tel:+13010000000">Call (301) 000 0000</a></div></div>
+  <div>
+    <h2>One call, and you will know where you stand</h2>
+    <p>No obligation. You do not have to describe what happened, and nothing is decided on the phone. We will tell you what is involved, roughly what it costs, and what your insurer is likely to cover.</p>
+    <div class="callnow">
+      <span class="cl">Call now</span>
+      <a class="cnum" href="tel:+13010000000">(301) 000 0000</a>
+      <p class="cwhen">Phone answered 24 hours. On site within 2 hours across Montgomery County.</p>
+    </div>
+    <div class="rsr">
+      <div class="r"><b>&#10003;</b><div>
+        <h3>You do not have to explain anything</h3>
+        <p>We need the address and how to get in. We do not ask you to describe the scene.</p></div></div>
+      <div class="r"><b>&#10003;</b><div>
+        <h3>Nobody sees a company name</h3>
+        <p>Unmarked vehicle, plain clothing, no signage on site. Neighbours see a plain van.</p></div></div>
+      <div class="r"><b>&#10003;</b><div>
+        <h3>You see the price before we start</h3>
+        <p>Written, after the assessment. Where a policy covers the loss we bill your adjuster direct.</p></div></div>
+    </div>
+  </div>
   <form class="quote" id="quote" onsubmit="return false">
         <h3>Request a discreet call back</h3>
         <p class="qs">We call you. No signage, no questions on the doorstep.</p>
@@ -422,7 +469,7 @@ section[id],.band[id]{scroll-margin-top:50px}
         121 Talbott St<br>Rockville, MD 20852
         <a class="ftel" href="tel:+13010000000">(301) 000 0000</a></address>
       <div class="fhrs">
-        <span><b>Phone answered 24 hours.</b> A person, not an answering service.</span>
+        <span><b>Phone answered 24 hours.</b></span>
         <span><b>On site within 2 hours</b> across Montgomery County.</span>
       </div>
     </div>
