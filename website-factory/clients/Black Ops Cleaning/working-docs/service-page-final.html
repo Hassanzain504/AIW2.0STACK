@@ -1,4 +1,10 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Unattended Death Cleanup, Rockville</title>
+<meta name="description" content="Discreet unattended death cleanup in Rockville and Montgomery County. Unmarked vehicles, GBAC trained, insurance billed direct. Call any hour.">
+<link rel="canonical" href="https://blackopscleaning.com/services/unattended-death-cleanup/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@600&display=swap">
@@ -244,6 +250,52 @@ section.dark .voice cite{color:var(--ondark2)}
 .src{background:var(--alt);border-top:1px solid var(--line)}
 .src .w{padding-block:20px 34px;font-size:13.5px;color:var(--ink3)}
 .src b{color:var(--ps)}
+/* section rail. sticks under the fold on a page this long, and keeps the
+   phone on screen the whole way down. */
+.jump{position:sticky;top:0;z-index:40;background:var(--card);
+  border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.jump .w{display:flex;align-items:center;gap:0 22px;padding-block:0;
+  overflow-x:auto;scrollbar-width:none}
+.jump .w::-webkit-scrollbar{display:none}
+.jump a{flex:0 0 auto;text-decoration:none;color:var(--ps);padding-block:12px;
+  font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:14.5px;
+  letter-spacing:.055em;text-transform:uppercase;white-space:nowrap;
+  border-bottom:2px solid transparent;margin-bottom:-1px}
+.jump a:hover{color:var(--ik);border-bottom-color:var(--ac)}
+.jump .jph{margin-left:auto;color:var(--p);font-size:16px;letter-spacing:0;
+  text-transform:none;font-family:Barlow,sans-serif;border-bottom:0}
+.jump .jph b{color:var(--acd)}
+@media(max-width:760px){.jump .jph{display:none}.jump .w{gap:0 18px}}
+/* the rail is sticky, so anchored headings need to clear it. */
+section[id],.band[id]{scroll-margin-top:50px}
+
+/* footer. nap, the service set, the areas, and the registration line that
+   government buyers look for. nothing here that is not already on the site. */
+.foot{background:var(--pd);color:var(--ondark2)}
+.foot .w{padding-block:38px 26px;font-family:inherit;font-size:15px;letter-spacing:0}
+.fx{display:grid;grid-template-columns:minmax(0,1.25fr) repeat(3,minmax(0,1fr));gap:26px 30px}
+@media(max-width:860px){.fx{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.fx{grid-template-columns:1fr}}
+.fx h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:13px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--acl);margin:0 0 12px}
+.fx ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.fx a{color:var(--ondark2);text-decoration:none;font-size:14.5px}
+.fx a:hover{color:var(--ondark)}
+.fnap{font-style:normal;color:var(--ondark2);font-size:14.5px;line-height:1.6}
+.fnap .fco{display:block;font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:17px;letter-spacing:.03em;text-transform:uppercase;color:var(--ondark);margin-bottom:8px}
+.ftel{display:block;margin-top:12px;font-size:21px;font-weight:700;color:#fff;
+  text-decoration:none;font-family:"Barlow Condensed",sans-serif;letter-spacing:.02em}
+.fhrs{margin:12px 0 0;padding:11px 0 0;border-top:1px solid rgba(232,230,225,.13);
+  display:grid;gap:4px;font-size:13.5px;color:rgba(232,230,225,.6)}
+.fhrs b{color:var(--ondark);font-weight:600}
+.freg{margin-top:26px;padding-top:15px;border-top:1px solid rgba(232,230,225,.13);
+  display:flex;flex-wrap:wrap;gap:6px 26px;align-items:baseline;
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.05em;
+  color:rgba(232,230,225,.44)}
+.freg b{color:rgba(232,230,225,.72);font-weight:600}
+.fslot{color:rgba(232,230,225,.26)}
+.fend{margin:14px 0 0;font-size:13px;color:rgba(232,230,225,.4);max-width:92ch;line-height:1.6}
 </style>
 <div class="util"><div class="w">
   <span class="live"><span class="dot"></span>Phone answered 24 hours</span>
@@ -274,17 +326,27 @@ section.dark .voice cite{color:var(--ondark2)}
   <span class="tp"><b>Licensed and insured</b><span>limits, slot</span></span>
   <span class="tp"><b>Veteran owned</b><span>not SBA certified</span></span>
 </div></div>
-<section><div class="w">
+<div class="jump"><div class="w">
+  <a href="#includes">What it covers</a>
+  <a href="#process">What happens</a>
+  <a href="#cost">What it costs</a>
+  <a href="#credentials">Credentials</a>
+  <a href="#work">Our work</a>
+  <a href="#faq">Questions</a>
+  <a href="#areas">Areas</a>
+  <a class="jph" href="tel:+13010000000"><b>Call</b> (301) 000 0000</a>
+</div></div>
+<section id="problem"><div class="w">
   <h2>If you are reading this today</h2>
   <p class="lead">You are dealing with something nobody prepares you for. You do not need to know any of the terminology, and you do not need to have decided anything yet.</p>
   <div class="voices"><div class="voice"><p>Will my insurance pay for this?</p><cite>Recurring enquiry, asked before any other</cite></div><div class="voice"><p>Will anyone be able to tell what happened?</p><cite>Recurring enquiry, to be replaced with tracked call phrasing</cite></div><div class="voice"><p>Can the property be used again afterwards?</p><cite>Recurring enquiry, to be replaced with tracked call phrasing</cite></div></div>
 </div></section>
-<section class="dark"><div class="w">
+<section id="includes" class="dark"><div class="w">
   <h2>What the work covers</h2>
   <p class="lead">Everything below is part of a standard remediation. Nothing here is added to the bill later.</p>
   <div class="covers"><div class="cov"><h3>Assessment and containment</h3><p>The affected area is isolated before anything is touched, with negative air where the contamination warrants it, so nothing spreads through the rest of the property.</p></div><div class="cov"><h3>Removal of affected material</h3><p>Flooring, subfloor, drywall, insulation and furnishings that cannot be safely restored are removed and documented. Decomposition travels further than most people expect, which is why the assessment happens before the price.</p></div><div class="cov"><h3>Decontamination</h3><p>Hospital grade disinfection of every affected surface, following CDC and EPA disinfection guidance.</p></div><div class="cov"><h3>Odour remediation at source</h3><p>Treated at the source rather than masked. Masking is the reason odour comes back three weeks later, and it is the most common complaint about work done cheaply.</p></div><div class="cov"><h3>Regulated waste disposal</h3><p>Transported and disposed of through a licensed medical waste stream. The manifest is handed to you.</p></div><div class="cov"><h3>Written clearance</h3><p>Confirmation that the property is safe for occupancy, in writing, on completion.</p></div></div>
 </div></section>
-<section><div class="w">
+<section id="process"><div class="w">
   <h2>What happens, and how long each part takes</h2>
   <div class="proc"><div class="step"><span class="n">01</span><div><h3>Your call</h3><p>We need the address and how to get in. We do not ask you to describe the scene.</p></div><span class="t">About 10 minutes</span></div><div class="step"><span class="n">02</span><div><h3>On site assessment</h3><p>Unmarked vehicle. We scope the contamination and give you a written price before any work begins.</p></div><span class="t">Within 2 hours</span></div><div class="step"><span class="n">03</span><div><h3>Insurance contact</h3><p>Where a policy covers the loss we speak to the adjuster directly and bill them, so you are not managing it.</p></div><span class="t">Same day</span></div><div class="step"><span class="n">04</span><div><h3>Remediation</h3><p>Containment, removal, decontamination, odour treatment. Most residential jobs finish inside two days.</p></div><span class="t">1 to 3 days</span></div><div class="step"><span class="n">05</span><div><h3>Clearance and handover</h3><p>Written clearance, the disposal manifest, and photographs of the finished work.</p></div><span class="t">On completion</span></div></div>
   <div class="gate"><span class="k">Slot, verify every timescale</span><p>Slot, confirm the two hour response and the one to three day range against the client&#x27;s actual jobs before publishing.</p></div>
@@ -310,30 +372,30 @@ section.dark .voice cite{color:var(--ondark2)}
     <p class="priv">We call from an unlisted number.</p>
   </form>
 </div></div>
-<section><div class="w">
+<section id="cost"><div class="w">
   <h2>What this costs, and how you find out</h2>
   <p class="lead">We do not publish prices for this work, because the range is too wide to be useful. A single room found early and a property with structural penetration are different jobs by a factor of ten, and quoting either one blind would be guessing. We come out, assess the property, and give you a written price before any work starts. That visit costs nothing and puts you under no obligation.</p>
   <p>You will never get a number from us that changes once the job is underway, unless we find something behind a wall that nobody could have seen. If that happens we stop, show you, and re-quote before continuing.</p>
 </div></section>
-<section class="alt"><div class="w">
+<section id="credentials" class="alt"><div class="w">
   <h2>Why we are allowed to do this work</h2>
   <p class="lead">Biohazard remediation is not general cleaning, and the difference is not marketing. It is training, insurance and a licensed disposal route.</p>
   <div class="trust"><div><b>GBAC trained</b><span>The Global Biorisk Advisory Council, now a division of ISSA. Certificate number, slot.</span></div><div><b>ISSA CMI</b><span>The Cleaning Management Institute, the industry&#x27;s training body. Membership number, slot.</span></div><div><b>OSHA bloodborne pathogen compliant</b><span>Not a certificate anyone issues, a standard every technician is trained against. Written exposure control plan on request.</span></div><div><b>Licensed and insured in Maryland</b><span>General liability and workers compensation. Licence number and limits, slot.</span></div><div><b>Veteran owned and federally registered</b><span>SAM.gov UEI PMPPFTB7CCX4. Veteran owned, not SBA certified.</span></div></div>
   <div class="disc"><b>One thing we will not do</b><p>We do not display CDC, EPA or OSHA seals to imply those agencies endorse us. They do not endorse anyone. We follow CDC and EPA disinfection guidance and our technicians are trained to the OSHA bloodborne pathogen standard. Those are facts, and they are worth more than a logo. If another company shows you federal seals, ask them what they mean.</p></div>
 </div></section>
-<section class="dark"><div class="w">
+<section id="work" class="dark"><div class="w">
   <h2>Our own work, and what families have said</h2>
   <div class="shots"><figure class="shot"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 540' preserveAspectRatio='xMidYMid slice'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232A2E31'/%3E%3Cstop offset='.62' stop-color='%231B1F22'/%3E%3Cstop offset='1' stop-color='%23101315'/%3E%3C/linearGradient%3E%3CradialGradient id='g' cx='.32' cy='.3' r='.62'%3E%3Cstop offset='0' stop-color='%23C89A45' stop-opacity='.30'/%3E%3Cstop offset='1' stop-color='%23C89A45' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='540' fill='url(%23a)'/%3E%3Crect width='800' height='540' fill='url(%23g)'/%3E%3Cpath d='M0 356 L800 316 L800 540 L0 540 Z' fill='%23000' opacity='.26'/%3E%3Cpath d='M120 0 L210 356 L330 356 L250 0 Z' fill='%23C89A45' opacity='.09'/%3E%3Crect x='0' y='353' width='800' height='2' fill='%23C89A45' opacity='.22'/%3E%3C/svg%3E" alt="Placeholder, Containment in place, Rockville MD"><figcaption><b>Containment in place, Rockville MD</b><span>Work described, never the event.</span></figcaption></figure><figure class="shot"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 540' preserveAspectRatio='xMidYMid slice'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23262B2F'/%3E%3Cstop offset='.62' stop-color='%23191D20'/%3E%3Cstop offset='1' stop-color='%230E1113'/%3E%3C/linearGradient%3E%3CradialGradient id='g' cx='.32' cy='.3' r='.62'%3E%3Cstop offset='0' stop-color='%23C89A45' stop-opacity='.30'/%3E%3Cstop offset='1' stop-color='%23C89A45' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='540' fill='url(%23a)'/%3E%3Crect width='800' height='540' fill='url(%23g)'/%3E%3Cpath d='M0 313 L800 273 L800 540 L0 540 Z' fill='%23000' opacity='.26'/%3E%3Cpath d='M120 0 L210 313 L330 313 L250 0 Z' fill='%23C89A45' opacity='.09'/%3E%3Crect x='0' y='310' width='800' height='2' fill='%23C89A45' opacity='.22'/%3E%3C/svg%3E" alt="Placeholder, Subfloor removed, Bethesda MD"><figcaption><b>Subfloor removed, Bethesda MD</b><span>Nothing identifiable in frame.</span></figcaption></figure><figure class="shot"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 540' preserveAspectRatio='xMidYMid slice'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2321262A'/%3E%3Cstop offset='.62' stop-color='%2315191C'/%3E%3Cstop offset='1' stop-color='%230B0E10'/%3E%3C/linearGradient%3E%3CradialGradient id='g' cx='.32' cy='.3' r='.62'%3E%3Cstop offset='0' stop-color='%23C89A45' stop-opacity='.30'/%3E%3Cstop offset='1' stop-color='%23C89A45' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='540' fill='url(%23a)'/%3E%3Crect width='800' height='540' fill='url(%23g)'/%3E%3Cpath d='M0 388 L800 348 L800 540 L0 540 Z' fill='%23000' opacity='.26'/%3E%3Cpath d='M120 0 L210 388 L330 388 L250 0 Z' fill='%23C89A45' opacity='.09'/%3E%3Crect x='0' y='385' width='800' height='2' fill='%23C89A45' opacity='.22'/%3E%3C/svg%3E" alt="Placeholder, Cleared and handed back, Rockville MD"><figcaption><b>Cleared and handed back, Rockville MD</b><span>Written clearance issued the same day.</span></figcaption></figure></div>
   <div class="gate"><span class="k">Reviews, absent from the page data by design</span>
     <p>Zero reviews exist on every platform, so the reviews block is omitted from this page's JSON
       entirely. ServicePage guards it anyway, so no AggregateRating is emitted and nothing renders.</p></div>
 </div></section>
-<section class="alt"><div class="w">
+<section id="faq" class="alt"><div class="w">
   <h2>Questions people actually ask</h2>
   <p class="lead">Ten questions. This block is what AI answers pull from, and it is where every competitor in this market is thin.</p>
   <div class="faq"><details class="q" open><summary>Does homeowner insurance cover unattended death cleanup?</summary><p>In most cases yes, because you are claiming for damage to the property. Some policies exclude deaths by suicide unless a rider was bought. Call your adjuster, not your agent, and ask whether the policy covers biohazard remediation and what the limit is. We handle the claim from there.</p></details><details class="q"><summary>Will your vehicle be marked?</summary><p>No. Our response vehicles carry no company signage and our technicians arrive in plain clothing and change on site. Neighbours see a plain van.</p></details><details class="q"><summary>How quickly can you get here?</summary><p>Within two hours across Montgomery County. Rockville, Bethesda and Silver Spring are usually faster, because we are based on Talbott Street in Rockville rather than driving in from another county.</p></details><details class="q"><summary>Do I have to be at the property?</summary><p>No. We can work from a key handover or a lockbox and send you photographic documentation as we go. Many of the people who call us live in another state.</p></details><details class="q"><summary>Can the property be lived in or sold afterwards?</summary><p>Yes, and we issue written clearance confirming it. That document is what insurers, buyers and estate solicitors ask to see, and it is included at no extra cost.</p></details><details class="q"><summary>What if the odour comes back?</summary><p>It should not. Odour that returns means the source was masked rather than removed, usually because subfloor or drywall was left in place. We treat at source, and if it recurs on a job we completed we come back at no charge.</p></details><details class="q"><summary>Do I need to tell a buyer what happened here?</summary><p>Maryland disclosure rules are a question for your solicitor or estate agent, not for us. What we can tell you is that our written clearance documents the property as remediated, which is what most buyers and their lenders actually want to see.</p></details><details class="q"><summary>Who is responsible for arranging this, legally?</summary><p>The property owner, or the executor of the estate. Police and the medical examiner secure the scene and then release the property. Cleanup is never their responsibility, which is a surprise to almost everyone who calls us.</p></details><details class="q"><summary>Do you handle the waste paperwork?</summary><p>Yes. Regulated waste goes through a licensed medical waste stream and the manifest is handed to you with the clearance documentation.</p></details><details class="q"><summary>Are you police approved or state certified?</summary><p>There is no such approval or certification to hold in Maryland, and any company claiming one is worth a second look. What matters is GBAC training, OSHA bloodborne pathogen compliance, a licensed disposal route, and being licensed and insured in Maryland. We are all four.</p></details></div>
 </div></section>
-<section><div class="w">
+<section id="areas"><div class="w">
   <h2>Where we cover</h2>
   <p class="lead">Every town below has its own page with the work we have done there.</p>
   <div class="links"><a href="/unattended-death-cleanup-rockville-md/">Unattended death cleanup in Rockville</a><a href="/unattended-death-cleanup-silver-spring-md/">Unattended death cleanup in Silver Spring</a><a href="/unattended-death-cleanup-bethesda-md/">Unattended death cleanup in Bethesda</a><a href="/unattended-death-cleanup-washington-dc/">Unattended death cleanup in Washington DC</a><a href="/services/biohazard-remediation/">Related: biohazard remediation</a><a href="/services/hoarding-cleanup/">Related: hoarding cleanup</a></div>
@@ -353,8 +415,40 @@ section.dark .voice cite{color:var(--ondark2)}
         <ul class="qass"><li><b>&#10003;</b> Unmarked vehicles</li><li><b>&#10003;</b> Written price first</li><li><b>&#10003;</b> We bill your insurer</li></ul>
       </form>
 </div></div>
-<div class="foot"><div class="w">Black Ops Cleaning Company LLC &nbsp; 121 Talbott St, Rockville, MD 20852 &nbsp; (301) 000 0000</div></div>
+<div class="foot"><div class="w">
+  <div class="fx">
+    <div>
+      <address class="fnap"><span class="fco">Black Ops Cleaning Company LLC</span>
+        121 Talbott St<br>Rockville, MD 20852
+        <a class="ftel" href="tel:+13010000000">(301) 000 0000</a></address>
+      <div class="fhrs">
+        <span><b>Phone answered 24 hours.</b> A person, not an answering service.</span>
+        <span><b>On site within 2 hours</b> across Montgomery County.</span>
+      </div>
+    </div>
+    <div><h4>Services</h4><ul><li><a href="/services/unattended-death-cleanup/">Unattended death cleanup</a></li><li><a href="/services/biohazard-remediation/">Biohazard remediation</a></li><li><a href="/services/crime-scene-cleanup/">Crime scene cleanup</a></li><li><a href="/services/hoarding-cleanup/">Hoarding cleanup</a></li><li><a href="/services/sewage-backup-cleanup/">Sewage backup cleanup</a></li><li><a href="/services/disinfection-services/">Disinfection services</a></li><li><a href="/services/commercial-cleaning/">Commercial cleaning</a></li><li><a href="/services/medical-facility-cleaning/">Medical facility cleaning</a></li><li><a href="/services/government-facility-cleaning/">Government facility cleaning</a></li></ul></div>
+    <div><h4>Where we work</h4><ul><li><a href="/rockville/">Rockville</a></li><li><a href="/bethesda/">Bethesda</a></li><li><a href="/silver-spring/">Silver Spring</a></li><li><a href="/gaithersburg/">Gaithersburg</a></li><li><a href="/potomac/">Potomac</a></li><li><a href="/north-bethesda/">North Bethesda</a></li><li><a href="/kensington/">Kensington</a></li><li><a href="/wheaton/">Wheaton</a></li><li><a href="/derwood/">Derwood</a></li><li><a href="/washington-dc/">Washington DC</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="/about/">About and team</a></li><li><a href="/government/">Government contracting</a></li><li><a href="/service-areas/">Service areas</a></li><li><a href="/contact/">Contact</a></li></ul>
+      <h4 style="margin-top:22px">Emergency</h4>
+      <ul><li><a href="tel:+13010000000">Call (301) 000 0000</a></li>
+      <li><a href="#quote-early">Request a call back</a></li></ul></div>
+  </div>
+  <div class="freg">
+    <span><b>SAM.gov UEI</b> PMPPFTB7CCX4</span>
+    <span><b>NAICS</b> 561720</span>
+    <span><b>MD licence</b> <span class="fslot">slot</span></span>
+    <span><b>Veteran owned</b> not SBA certified</span>
+    <span>GBAC trained &nbsp;/&nbsp; OSHA bloodborne pathogen compliant</span>
+  </div>
+  <p class="fend">We do not display CDC, EPA or OSHA seals. Those agencies do not endorse
+    contractors. We follow their published disinfection guidance and train every technician to
+    the OSHA bloodborne pathogen standard. Copyright 2026 Black Ops Cleaning Company LLC.
+    All rights reserved.</p>
+</div></div>
 <div class="sticky"><a class="c" href="tel:+13010000000">Call now</a><a class="q" href="#quote-early">Get a quote</a></div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blackopscleaning.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://blackopscleaning.com/services/"},{"@type":"ListItem","position":3,"name":"Unattended Death Cleanup","item":"https://blackopscleaning.com/services/unattended-death-cleanup/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Unattended Death Cleanup","name":"Unattended Death Cleanup in Rockville and Montgomery County","description":"Discreet unattended death cleanup in Rockville and Montgomery County. Unmarked vehicles, GBAC trained, insurance billed direct. Call any hour.","provider":{"@type":"LocalBusiness","name":"Black Ops Cleaning Company LLC","telephone":"+1-301-000-0000","address":{"@type":"PostalAddress","streetAddress":"121 Talbott St","addressLocality":"Rockville","addressRegion":"MD","postalCode":"20852","addressCountry":"US"}},"areaServed":[{"@type":"City","name":"Rockville"},{"@type":"City","name":"Bethesda"},{"@type":"City","name":"Silver Spring"},{"@type":"City","name":"Gaithersburg"},{"@type":"City","name":"Potomac"},{"@type":"City","name":"North Bethesda"},{"@type":"City","name":"Kensington"},{"@type":"City","name":"Wheaton"},{"@type":"City","name":"Derwood"},{"@type":"City","name":"Washington DC"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"What the work covers","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Assessment and containment","description":"The affected area is isolated before anything is touched, with negative air where the contamination warrants it, so nothing spreads through the rest of the property."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Removal of affected material","description":"Flooring, subfloor, drywall, insulation and furnishings that cannot be safely restored are removed and documented. Decomposition travels further than most people expect, which is why the assessment happens before the price."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Decontamination","description":"Hospital grade disinfection of every affected surface, following CDC and EPA disinfection guidance."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Odour remediation at source","description":"Treated at the source rather than masked. Masking is the reason odour comes back three weeks later, and it is the most common complaint about work done cheaply."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Regulated waste disposal","description":"Transported and disposed of through a licensed medical waste stream. The manifest is handed to you."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Written clearance","description":"Confirmation that the property is safe for occupancy, in writing, on completion."}}]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does homeowner insurance cover unattended death cleanup?","acceptedAnswer":{"@type":"Answer","text":"In most cases yes, because you are claiming for damage to the property. Some policies exclude deaths by suicide unless a rider was bought. Call your adjuster, not your agent, and ask whether the policy covers biohazard remediation and what the limit is. We handle the claim from there."}},{"@type":"Question","name":"Will your vehicle be marked?","acceptedAnswer":{"@type":"Answer","text":"No. Our response vehicles carry no company signage and our technicians arrive in plain clothing and change on site. Neighbours see a plain van."}},{"@type":"Question","name":"How quickly can you get here?","acceptedAnswer":{"@type":"Answer","text":"Within two hours across Montgomery County. Rockville, Bethesda and Silver Spring are usually faster, because we are based on Talbott Street in Rockville rather than driving in from another county."}},{"@type":"Question","name":"Do I have to be at the property?","acceptedAnswer":{"@type":"Answer","text":"No. We can work from a key handover or a lockbox and send you photographic documentation as we go. Many of the people who call us live in another state."}},{"@type":"Question","name":"Can the property be lived in or sold afterwards?","acceptedAnswer":{"@type":"Answer","text":"Yes, and we issue written clearance confirming it. That document is what insurers, buyers and estate solicitors ask to see, and it is included at no extra cost."}},{"@type":"Question","name":"What if the odour comes back?","acceptedAnswer":{"@type":"Answer","text":"It should not. Odour that returns means the source was masked rather than removed, usually because subfloor or drywall was left in place. We treat at source, and if it recurs on a job we completed we come back at no charge."}},{"@type":"Question","name":"Do I need to tell a buyer what happened here?","acceptedAnswer":{"@type":"Answer","text":"Maryland disclosure rules are a question for your solicitor or estate agent, not for us. What we can tell you is that our written clearance documents the property as remediated, which is what most buyers and their lenders actually want to see."}},{"@type":"Question","name":"Who is responsible for arranging this, legally?","acceptedAnswer":{"@type":"Answer","text":"The property owner, or the executor of the estate. Police and the medical examiner secure the scene and then release the property. Cleanup is never their responsibility, which is a surprise to almost everyone who calls us."}},{"@type":"Question","name":"Do you handle the waste paperwork?","acceptedAnswer":{"@type":"Answer","text":"Yes. Regulated waste goes through a licensed medical waste stream and the manifest is handed to you with the clearance documentation."}},{"@type":"Question","name":"Are you police approved or state certified?","acceptedAnswer":{"@type":"Answer","text":"There is no such approval or certification to hold in Maryland, and any company claiming one is worth a second look. What matters is GBAC training, OSHA bloodborne pathogen compliance, a licensed disposal route, and being licensed and insured in Maryland. We are all four."}}]}</script>
 <div class="src"><div class="w">
   <p><b>Rendered from the page data, not written by hand.</b> Every heading, paragraph, process
     step, timescale, credential and FAQ on this page was generated from
@@ -370,4 +464,15 @@ section.dark .voice cite{color:var(--ondark2)}
     than pure white, which measured 17.8 against the band and read harsh at length; the softened
     value still measures 14.3. Brass never used as text on light, which is why links and the
     outlined button take the darker brass.</p>
+  <p><b>Structured data, generated from the same JSON.</b> Three blocks ship with the page:
+    BreadcrumbList, Service with areaServed and an OfferCatalog built from the six items in
+    <code>includes</code>, and FAQPage carrying all ten questions. The blueprint specifies
+    Service and FAQPage for this page type. No AggregateRating is emitted and no Offer carries a
+    price, because the client has zero reviews and publishes no prices; both would be fabricated.
+    The builder does not emit any of this today, which is a gap on the factory side, not this page.</p>
+  <p><b>The rail and the footer are not page data either.</b> The section rail sticks to the top
+    on the way down and keeps the phone on screen, which is the one thing a page this long
+    otherwise loses. The footer carries the NAP, the service set, the areas, and the registration
+    line government buyers look for. The Maryland licence number is still a slot, and the phone is
+    the placeholder until the tracked number is issued.</p>
 </div></div>
