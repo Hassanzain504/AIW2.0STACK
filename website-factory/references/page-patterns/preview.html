@@ -94,6 +94,28 @@ h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
   line-height:1.2;letter-spacing:.03em;color:var(--accent-light)}
 .spec dd.empty{color:rgba(255,255,255,.3)}
 .bcta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;align-items:center}
+/* quote form. Field set is niche data, so this preview shows a plausible
+   four-field set only to judge the layout. */
+.split{display:grid;gap:34px;align-items:start}
+@media(min-width:900px){.split{grid-template-columns:minmax(0,1.08fr) minmax(320px,.62fr)}}
+.qform{background:#fff;border-radius:var(--r);padding:20px;box-shadow:var(--shade);color:var(--ink)}
+.qform h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
+  text-transform:uppercase;letter-spacing:.012em;margin:0;color:var(--ink)}
+.qform .qs{font-size:14px;color:var(--ink3);margin:3px 0 15px}
+.qf{margin-bottom:10px}
+.qf label{display:block;font-size:13.5px;font-weight:600;color:var(--ink2);margin-bottom:4px}
+.qf input,.qf select{width:100%;font:inherit;font-size:16px;padding:11px 12px;
+  border:1px solid var(--line2);border-radius:4px;background:#fff;color:var(--ink)}
+.qf input:focus,.qf select:focus{border-color:var(--accent);outline:none;
+  box-shadow:0 0 0 3px rgba(46,125,107,.2)}
+.qform button{width:100%;font:inherit;font-weight:700;font-size:16px;padding:13px 20px;
+  border:0;border-radius:var(--r);background:var(--accent);color:#fff;cursor:pointer}
+.qform button:hover{background:var(--accent-dark)}
+.qpriv{font-size:12.5px;color:var(--ink3);margin:10px 0 0;line-height:1.45}
+.qass{display:flex;flex-wrap:wrap;gap:5px 16px;margin:12px 0 0;padding:11px 0 0;
+  border-top:1px solid var(--line);list-style:none}
+.qass li{font-size:12.5px;color:var(--ink3)}
+.qass b{color:var(--ok)}
 .btn{display:inline-flex;align-items:center;justify-content:center;
   background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:15.5px;
   padding:14px 24px;border:0;border-radius:var(--r);cursor:pointer;
@@ -458,14 +480,26 @@ details .a{padding:0 19px 17px 47px;font-size:15px;color:var(--ink2)}
 
 </div>
 
-<div class="endcta" id="quote"><div class="wrap">
-  <h2 class="sh">One call, and you will know where you stand</h2>
-  <p class="sd">No obligation, no scene description required, and nothing is decided on the
-    phone. We answer at any hour.</p>
-  <div class="bcta">
-    <a class="btn" href="tel:+13010000000">Call (301) 000 0000</a>
-    <a class="btn ghost" href="#">Request a discreet call back</a>
+<div class="endcta"><div class="wrap split">
+  <div>
+    <h2 class="sh">One call, and you will know where you stand</h2>
+    <p class="sd">No obligation, no scene description required, and nothing is decided on the
+      phone. We answer at any hour.</p>
+    <div class="bcta">
+      <a class="btn" href="tel:+13010000000">Call (301) 000 0000</a>
+    </div>
   </div>
+  <form class="qform" id="quote" onsubmit="return false">
+    <h3>Request a discreet call back</h3>
+    <p class="qs">We call you. No signage, no questions on the doorstep.</p>
+    <div class="qf"><label for="quote-name">Your name</label><input id="quote-name" type="text"></div>
+    <div class="qf"><label for="quote-phone">Phone</label><input id="quote-phone" type="tel"></div>
+    <div class="qf"><label for="quote-town">Where is the property</label><input id="quote-town" type="text" placeholder="Town or zip"></div>
+    <div class="qf"><label for="quote-when">When can we call</label><select id="quote-when"><option>As soon as possible</option><option>This evening</option><option>Tomorrow morning</option></select></div>
+    <button type="submit">Request a call back</button>
+    <p class="qpriv">Slot, brand-dna copy.privacyLine.</p>
+    <ul class="qass"><li><b>&#10003;</b> Unmarked vehicles</li><li><b>&#10003;</b> Written price first</li><li><b>&#10003;</b> We bill your insurer</li></ul>
+  </form>
 </div></div>
 
 </main>
@@ -473,7 +507,8 @@ details .a{padding:0 19px 17px 47px;font-size:15px;color:var(--ink2)}
 <!-- ══════════════ TOWN PAGE ══════════════ -->
 <main id="p-town" role="tabpanel" aria-labelledby="t-town" hidden>
 
-<div class="banner"><div class="wrap">
+<div class="banner"><div class="wrap split">
+  <div>
   <nav class="crumb"><a href="/">Home</a> / <a href="/service-areas/">Service areas</a> / Rockville MD</nav>
   <h1>Commercial cleaning in Rockville, Maryland</h1>
   <p class="bsub">Our office is on Talbott Street, so Rockville is not a service area we drive
@@ -488,6 +523,18 @@ details .a{padding:0 19px 17px 47px;font-size:15px;color:var(--ink2)}
     <a class="btn" href="#quote2">Get a Rockville quote</a>
     <a class="btn ghost" href="tel:+13010000000">Call (301) 000 0000</a>
   </div>
+  </div>
+  <form class="qform" id="quote2" onsubmit="return false">
+    <h3>Book a walkthrough</h3>
+    <p class="qs">Under an hour. You get a written specification and a price.</p>
+    <div class="qf"><label for="quote2-name">Your name</label><input id="quote2-name" type="text"></div>
+    <div class="qf"><label for="quote2-phone">Phone</label><input id="quote2-phone" type="tel"></div>
+    <div class="qf"><label for="quote2-type">Type of building</label><select id="quote2-type"><option>Office</option><option>Medical or dental</option><option>Laboratory</option><option>Government or municipal</option><option>School</option><option>Other</option></select></div>
+    <div class="qf"><label for="quote2-size">Approximate square footage</label><input id="quote2-size" type="text" placeholder="Rough figure is fine"></div>
+    <button type="submit">Book a walkthrough</button>
+    <p class="qpriv">Slot, brand-dna copy.privacyLine.</p>
+    <ul class="qass"><li><b>&#10003;</b> Written specification</li><li><b>&#10003;</b> Same crew</li><li><b>&#10003;</b> 30 day exit</li></ul>
+  </form>
 </div></div>
 
 <div class="wrap">
@@ -594,7 +641,7 @@ details .a{padding:0 19px 17px 47px;font-size:15px;color:var(--ink2)}
 
 </div>
 
-<div class="endcta" id="quote2"><div class="wrap">
+<div class="endcta"><div class="wrap">
   <h2 class="sh">Walkthrough and written quote, at no cost</h2>
   <p class="sd">We will walk your Rockville site, scope the specification against how you
     actually use the space, and put a price in writing.</p>

@@ -9,8 +9,120 @@
  * `scripts/inject-theme.mjs` stamps into `:root`.
  */
 
+import { useState } from 'react';
+
+/**
+ * Quote form. The universal CRO floor is four fields on a first ask, so the
+ * field list is sliced rather than trusted.
+ *
+ * `fields` is niche data, never hardcoded here: the niche playbook's
+ * `cro-rules.md` decides the field set, and the page component passes it
+ * through exactly as `hero-split-form` does. Each entry is
+ * `{ name, label, type, placeholder, options, inputMode, autoComplete }`.
+ *
+ * Heading, body and assurances are page-level, because an emergency service
+ * asks for a discreet call back and a contract service books a walkthrough.
+ */
+export function QuoteForm({
+  id,
+  heading,
+  body,
+  fields = [],
+  assurances = [],
+  submitLabel,
+  sentLabel,
+  privacyLine,
+  onSubmit,
+}) {
+  const [values, setValues] = useState({});
+  const [status, setStatus] = useState('idle');
+
+  const shown = fields.slice(0, 4);
+  const set = (name) => (event) =>
+    setValues((prev) => ({ ...prev, [name]: event.target.value }));
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    if (status === 'sending') return;
+    setStatus('sending');
+    try {
+      await onSubmit?.(values);
+      setStatus('sent');
+    } catch {
+      setStatus('error');
+    }
+  }
+
+  return (
+    <form id={id} onSubmit={handleSubmit} className="rounded-lg bg-white p-5 shadow-card-lg">
+      {heading && <h2 className="font-heading text-[1.35rem] font-bold uppercase leading-tight tracking-[0.012em] text-ink">{heading}</h2>}
+      {body && <p className="mb-4 mt-0.5 text-[0.9rem] text-ink-3">{body}</p>}
+
+      {shown.map((field) => (
+        <div key={field.name} className="mb-2.5">
+          <label htmlFor={`${id}-${field.name}`} className="mb-1 block text-[0.84rem] font-semibold text-ink-2">
+            {field.label}
+          </label>
+          {field.type === 'select' ? (
+            <select
+              id={`${id}-${field.name}`}
+              name={field.name}
+              value={values[field.name] ?? ''}
+              onChange={set(field.name)}
+              className="w-full rounded border border-line-2 bg-white px-3 py-2.5 text-base text-ink focus:border-accent focus:outline-none focus:ring-[3px] focus:ring-accent/20"
+            >
+              <option value="">{field.placeholder ?? 'Select one'}</option>
+              {(field.options ?? []).map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </select>
+          ) : (
+            <input
+              id={`${id}-${field.name}`}
+              name={field.name}
+              type={field.type ?? 'text'}
+              inputMode={field.inputMode}
+              autoComplete={field.autoComplete}
+              placeholder={field.placeholder}
+              value={values[field.name] ?? ''}
+              onChange={set(field.name)}
+              className="w-full rounded border border-line-2 bg-white px-3 py-2.5 text-base text-ink focus:border-accent focus:outline-none focus:ring-[3px] focus:ring-accent/20"
+            />
+          )}
+        </div>
+      ))}
+
+      <button
+        type="submit"
+        disabled={status === 'sending'}
+        className="w-full rounded-lg bg-accent px-6 py-3.5 font-bold text-white transition-colors hover:bg-accent-dark disabled:opacity-70"
+      >
+        {status === 'sent' ? sentLabel : submitLabel}
+      </button>
+
+      {status === 'error' && (
+        <p role="alert" className="mt-2 text-[0.84rem] text-alert">
+          That did not send. Call us instead and we will take the details on the phone.
+        </p>
+      )}
+
+      {privacyLine && <p className="mt-2.5 text-[0.78rem] leading-snug text-ink-3">{privacyLine}</p>}
+
+      {assurances.length > 0 && (
+        <ul className="mt-3 flex list-none flex-wrap gap-x-4 gap-y-1.5 border-t border-line pt-3 p-0">
+          {assurances.map((item) => (
+            <li key={item} className="text-[0.78rem] text-ink-3">
+              <span aria-hidden="true" className="font-bold text-ok">&#10003;</span> {item}
+            </li>
+          ))}
+        </ul>
+      )}
+    </form>
+  );
+}
+
 /** Breadcrumb, H1, subhead, spec strip and the two banner CTAs. */
-export function PageBanner({ crumbs = [], h1, subhead, brand, primary, secondary, phoneTelLink }) {
+export function PageBanner({ crumbs = [], h1, subhead, brand, primary, secondary, phoneTelLink, form }) {
   // The company's own registration marks, from brand-dna rather than from page
   // content, so the strip is identical on every page. Only rows that carry a
   // value render. Never invent a code to fill one.
@@ -29,7 +141,8 @@ export function PageBanner({ crumbs = [], h1, subhead, brand, primary, secondary
 
   return (
     <header className="border-b-4 border-accent bg-primary-dark py-11 text-white">
-      <div className="mx-auto max-w-[1080px] px-6">
+      <div className="mx-auto grid max-w-[1080px] items-start gap-9 px-6 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.62fr)]">
+      <div className="min-w-0">
         {crumbs.length > 0 && (
           <nav aria-label="Breadcrumb" className="font-mono text-[10.5px] font-semibold uppercase tracking-[0.11em] text-white/50">
             {crumbs.map((c, i) => (
@@ -60,6 +173,12 @@ export function PageBanner({ crumbs = [], h1, subhead, brand, primary, secondary
           {primary && <a href={primary.href} className="rounded-lg bg-accent px-6 py-3.5 font-bold text-white transition-colors hover:bg-accent-dark">{primary.label}</a>}
           {secondary && <a href={secondary.href ?? phoneTelLink} className="rounded-lg border border-white/40 px-6 py-3.5 font-bold text-white transition-colors hover:bg-white/10">{secondary.label}</a>}
         </div>
+      </div>
+      {/* Form in the banner, so a first ask sits above the fold alongside the
+          tel link. Two CTAs above the fold is a universal CRO floor. Pages
+          that lead on the phone, emergency services, pass no form here and
+          keep it to the closing block instead. */}
+      {form && <div className="min-w-0">{form}</div>}
       </div>
     </header>
   );
@@ -174,16 +293,21 @@ export function LinkPills({ items }) {
   );
 }
 
-export function ClosingCta({ heading, body, primary, secondary, phoneTelLink }) {
+export function ClosingCta({ heading, body, primary, secondary, phoneTelLink, form }) {
   return (
     <section className="bg-primary-dark py-11 text-white">
-      <div className="mx-auto max-w-[1080px] px-6">
-        <h2 className="mb-1.5 font-heading text-[clamp(1.56rem,3.6vw,2.19rem)] font-bold uppercase leading-tight text-balance">{heading}</h2>
-        <p className="mb-6 max-w-[66ch] text-[1.03rem] text-white/70">{body}</p>
-        <div className="flex flex-wrap items-center gap-3">
-          {primary && <a href={primary.href} className="rounded-lg bg-accent px-6 py-3.5 font-bold text-white transition-colors hover:bg-accent-dark">{primary.label}</a>}
-          {secondary && <a href={secondary.href ?? phoneTelLink} className="rounded-lg border border-white/40 px-6 py-3.5 font-bold text-white transition-colors hover:bg-white/10">{secondary.label}</a>}
+      <div className={`mx-auto grid max-w-[1080px] items-start gap-9 px-6 ${form ? 'lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.58fr)]' : ''}`}>
+        <div className="min-w-0">
+          <h2 className="mb-1.5 font-heading text-[clamp(1.56rem,3.6vw,2.19rem)] font-bold uppercase leading-tight text-balance">{heading}</h2>
+          <p className="mb-6 max-w-[66ch] text-[1.03rem] text-white/70">{body}</p>
+          <div className="flex flex-wrap items-center gap-3">
+            {primary && <a href={primary.href} className="rounded-lg bg-accent px-6 py-3.5 font-bold text-white transition-colors hover:bg-accent-dark">{primary.label}</a>}
+            {secondary && <a href={secondary.href ?? phoneTelLink} className="rounded-lg border border-white/40 px-6 py-3.5 font-bold text-white transition-colors hover:bg-white/10">{secondary.label}</a>}
+          </div>
         </div>
+        {/* The reader who scrolled the whole way should not have to scroll back
+            up to act. Same four fields, second chance. */}
+        {form && <div className="min-w-0">{form}</div>}
       </div>
     </section>
   );

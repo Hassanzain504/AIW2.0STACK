@@ -17,7 +17,7 @@
 
 import {
   PageBanner, Section, ProcessList, WorkGallery, ReviewGrid,
-  Faq, LinkPills, ClosingCta, Disclaimer,
+  Faq, LinkPills, ClosingCta, Disclaimer, QuoteForm,
 } from '../blocks.jsx';
 
 function serviceJsonLd(brand, page) {
@@ -48,7 +48,7 @@ function serviceJsonLd(brand, page) {
   };
 }
 
-export default function ServicePage({ brand, page }) {
+export default function ServicePage({ brand, page, formFields = [], onSubmit }) {
   const reviews = page.reviews?.filterTag
     ? brand.reviews.items.filter((r) => r.tags?.includes(page.reviews.filterTag))
     : brand.reviews.items;
@@ -156,11 +156,29 @@ export default function ServicePage({ brand, page }) {
         <LinkPills items={page.towns.items} />
       </Section>
 
+      {/* An emergency service leads on the phone, so the banner carries no
+          form and the first ask lives here instead. That split is a niche
+          decision from the copy deck, not a layout preference. */}
       <ClosingCta
         heading={page.cta.heading}
         body={page.cta.body}
         primary={{ label: page.cta.primary ?? `Call ${brand.contact.phone}`, href: brand.contact.phoneTelLink }}
         secondary={{ label: page.cta.secondary ?? brand.copy.buttonText, href: '#quote' }}
+        form={
+          page.cta.form && formFields.length > 0 ? (
+            <QuoteForm
+              id="quote"
+              heading={page.cta.form.heading}
+              body={page.cta.form.body}
+              assurances={page.cta.form.assurances}
+              fields={formFields}
+              submitLabel={brand.copy.submitButton}
+              sentLabel={brand.copy.buttonText}
+              privacyLine={brand.copy.privacyLine}
+              onSubmit={onSubmit}
+            />
+          ) : null
+        }
       />
     </>
   );

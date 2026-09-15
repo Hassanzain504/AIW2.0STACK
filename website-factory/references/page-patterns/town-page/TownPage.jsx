@@ -19,7 +19,7 @@
  */
 
 import {
-  PageBanner, Section, ReviewGrid, Faq, LinkPills, ClosingCta,
+  PageBanner, Section, ReviewGrid, Faq, LinkPills, ClosingCta, QuoteForm,
 } from '../blocks.jsx';
 
 function townJsonLd(brand, page) {
@@ -47,7 +47,7 @@ function townJsonLd(brand, page) {
   };
 }
 
-export default function TownPage({ brand, page }) {
+export default function TownPage({ brand, page, formFields = [], onSubmit }) {
   if (!page.proof?.job?.filename) {
     throw new Error(
       `Town page "${page.slug}" has no proof job photograph. A town page without a ` +
@@ -73,6 +73,21 @@ export default function TownPage({ brand, page }) {
         brand={brand}
         primary={{ label: page.cta.primary ?? brand.copy.buttonText, href: '#quote' }}
         secondary={{ label: `Call ${brand.contact.phone}`, href: brand.contact.phoneTelLink }}
+        form={
+          page.banner?.form && formFields.length > 0 ? (
+            <QuoteForm
+              id="quote"
+              heading={page.banner.form.heading}
+              body={page.banner.form.body}
+              assurances={page.banner.form.assurances}
+              fields={formFields}
+              submitLabel={brand.copy.submitButton}
+              sentLabel={brand.copy.buttonText}
+              privacyLine={brand.copy.privacyLine}
+              onSubmit={onSubmit}
+            />
+          ) : null
+        }
       />
 
       <Section heading={page.proof.heading} note={page.proof.note}>

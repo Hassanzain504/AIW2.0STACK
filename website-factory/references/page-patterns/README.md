@@ -13,11 +13,44 @@ selects them.
 | File | What it is |
 |---|---|
 | `preview.html` | Standalone, tabbed. Both page types with every content slot labelled. Open it to judge structure before wiring data. |
-| `blocks.jsx` | The blocks both pages share: banner, section, process list, gallery, reviews, FAQ, link pills, closing CTA. |
+| `blocks.jsx` | The blocks both pages share: banner, quote form, section, process list, gallery, reviews, FAQ, link pills, closing CTA. |
 | `service-page/ServicePage.jsx` | The service page component. |
 | `service-page/service-page.schema.json` | Its data contract. |
 | `town-page/TownPage.jsx` | The town page component. |
 | `town-page/town-page.schema.json` | Its data contract. |
+
+## The quote form
+
+`QuoteForm` is a shared block. Where it sits is a niche decision, not a
+layout preference, and the two pages differ on purpose:
+
+| Page | Leads on | Form sits |
+|---|---|---|
+| Service, emergency | Phone | The closing block |
+| Town, contract | Form | The banner, above the fold |
+
+That split comes from the copy deck: phone first on emergency services,
+form first on contract services. Someone reading a trauma page at 2am
+should meet a phone number, not a form.
+
+**The field set is never written here.** It comes from the niche playbook's
+`cro-rules.md`, which decides the count, which fields are required and
+whether the phone number is mandatory, and it reaches the component as the
+`formFields` prop exactly as `hero-split-form` receives it. Each entry is
+`{ name, label, type, placeholder, options, inputMode, autoComplete }`. The
+block slices to four regardless, because four fields on a first ask is a
+universal CRO floor and a playbook that asks for six should still not get
+six.
+
+Page-level copy for the form, its heading, its one-line body and up to
+three assurances, lives in the page JSON under `cta.form` (service) or
+`banner.form` (town). Omit that object and no form renders. Button text
+and the privacy line come from `brand.copy`, so they stay consistent
+sitewide.
+
+Assurances are operational commitments, not claims written for the page.
+Confirm each one with the client before it ships: a promise the business
+cannot keep at scale becomes the complaint that ends the contract.
 
 ## Where the data comes from
 
