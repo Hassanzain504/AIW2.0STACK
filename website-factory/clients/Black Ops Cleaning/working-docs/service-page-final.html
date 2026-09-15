@@ -190,6 +190,33 @@ strong{color:var(--ik);font-weight:600}
 .sticky .q{background:rgba(232,230,225,.1);color:var(--ondark);border:1px solid rgba(232,230,225,.28);
   padding:13px 10px}
 @media(max-width:760px){.sticky{display:flex}body{padding-bottom:64px}}
+.hw{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(300px,.64fr);gap:34px;align-items:center}
+@media(max-width:940px){.hw{grid-template-columns:1fr;gap:22px}}
+.hcol{min-width:0}
+.hfig{margin:0;position:relative;border-radius:5px;overflow:hidden;
+  box-shadow:0 26px 60px -30px rgba(0,0,0,.95)}
+.hfig img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.hfig figcaption{position:absolute;left:0;right:0;bottom:0;padding:8px 11px;
+  background:linear-gradient(to top,rgba(8,10,12,.92),rgba(8,10,12,0));
+  font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--acl)}
+.shot{margin:0;border:0;border-radius:4px;overflow:hidden;background:var(--p);
+  min-height:0;display:block;padding:0;text-align:left}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.shot figcaption{padding:11px 13px 13px}
+.shot figcaption b{display:block;font-size:14.5px;color:var(--ondark);font-weight:600}
+.shot figcaption span{font-size:12.5px;color:var(--ondark2)}
+/* more dark in the rhythm. the page was reading as one long light run. */
+section.dark{background:var(--p);border-bottom-color:#25292C}
+section.dark h2{color:#fff}
+section.dark .lead,section.dark p{color:rgba(232,230,225,.76)}
+section.dark strong{color:#fff}
+section.dark .cov{background:#1D2225;border-color:#2A2F33}
+section.dark .cov h3{color:var(--ondark)}
+section.dark .cov p{color:rgba(232,230,225,.7)}
+section.dark .voice{background:#1D2225;border-color:#2A2F33;border-left-color:var(--ac)}
+section.dark .voice p{color:var(--ondark)}
+section.dark .voice cite{color:var(--ondark2)}
 .src{background:var(--alt);border-top:1px solid var(--line)}
 .src .w{padding-block:20px 34px;font-size:13.5px;color:var(--ink3)}
 .src b{color:var(--ps)}
@@ -204,13 +231,17 @@ strong{color:var(--ik);font-weight:600}
   <nav class="nl"><a href="#">Services</a><a href="#">Service areas</a><a href="#">Government</a><a href="#">About</a><a href="#">Contact</a></nav>
   <div class="navcta"><a class="navph" href="tel:+13010000000">(301) 000 0000</a><a class="btn" href="#quote">Get a quote</a></div>
 </div></div>
-<div class="hero"><div class="w">
+<div class="hero"><div class="w hw">
+  <div class="hcol">
   <nav class="crumb"><a href="/">Home</a> / <a href="/services/">Services</a> / Unattended Death Cleanup</nav>
   <h1>Unattended Death Cleanup in Rockville and Montgomery County</h1>
   <p class="hsub">Discreet, certified biohazard remediation. Unmarked vehicles, no company signage on site, and a written price before any work starts. Where a policy covers the loss, we speak to your adjuster and bill them directly.</p>
   <div class="hcta"><a class="btn big" href="tel:+13010000000">Call (301) 000 0000</a>
     <a class="btn ondark" href="#quote">Request a discreet call back</a></div>
   <p class="reassure">You do not have to describe what happened. We need the address and how to get in.</p>
+  </div>
+  <figure class="hfig"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 540' preserveAspectRatio='xMidYMid slice'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2323282D'/%3E%3Cstop offset='.62' stop-color='%23171B1F'/%3E%3Cstop offset='1' stop-color='%230D1012'/%3E%3C/linearGradient%3E%3CradialGradient id='g' cx='.32' cy='.3' r='.62'%3E%3Cstop offset='0' stop-color='%23C89A45' stop-opacity='.30'/%3E%3Cstop offset='1' stop-color='%23C89A45' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='540' fill='url(%23a)'/%3E%3Crect width='800' height='540' fill='url(%23g)'/%3E%3Cpath d='M0 356 L800 316 L800 540 L0 540 Z' fill='%23000' opacity='.26'/%3E%3Cpath d='M120 0 L210 356 L330 356 L250 0 Z' fill='%23C89A45' opacity='.09'/%3E%3Crect x='0' y='353' width='800' height='2' fill='%23C89A45' opacity='.22'/%3E%3C/svg%3E" alt="Placeholder, a remediated interior after handover">
+    <figcaption>Placeholder. Replace with a real job or Amilcar.</figcaption></figure>
 </div></div>
 <dl class="rail"><div class="w"><div class="pair"><dt>Based in</dt><dd class="">Rockville MD 20852</dd></div><div class="pair"><dt>UEI</dt><dd class="">PMPPFTB7CCX4</dd></div><div class="pair"><dt>NAICS</dt><dd class="">561720</dd></div><div class="pair"><dt>Licence</dt><dd class="empty">slot</dd></div></div></dl>
 <div class="tstrip"><div class="w">
@@ -224,7 +255,7 @@ strong{color:var(--ik);font-weight:600}
   <p class="lead">You are dealing with something nobody prepares you for. You do not need to know any of the terminology, and you do not need to have decided anything yet.</p>
   <div class="voices"><div class="voice"><p>Will my insurance pay for this?</p><cite>Recurring enquiry, asked before any other</cite></div><div class="voice"><p>Will anyone be able to tell what happened?</p><cite>Recurring enquiry, to be replaced with tracked call phrasing</cite></div><div class="voice"><p>Can the property be used again afterwards?</p><cite>Recurring enquiry, to be replaced with tracked call phrasing</cite></div></div>
 </div></section>
-<section class="alt"><div class="w">
+<section class="dark"><div class="w">
   <h2>What the work covers</h2>
   <p class="lead">Everything below is part of a standard remediation. Nothing here is added to the bill later.</p>
   <div class="covers"><div class="cov"><h3>Assessment and containment</h3><p>The affected area is isolated before anything is touched, with negative air where the contamination warrants it, so nothing spreads through the rest of the property.</p></div><div class="cov"><h3>Removal of affected material</h3><p>Flooring, subfloor, drywall, insulation and furnishings that cannot be safely restored are removed and documented. Decomposition travels further than most people expect, which is why the assessment happens before the price.</p></div><div class="cov"><h3>Decontamination</h3><p>Hospital grade disinfection of every affected surface, following CDC and EPA disinfection guidance.</p></div><div class="cov"><h3>Odour remediation at source</h3><p>Treated at the source rather than masked. Masking is the reason odour comes back three weeks later, and it is the most common complaint about work done cheaply.</p></div><div class="cov"><h3>Regulated waste disposal</h3><p>Transported and disposed of through a licensed medical waste stream. The manifest is handed to you.</p></div><div class="cov"><h3>Written clearance</h3><p>Confirmation that the property is safe for occupancy, in writing, on completion.</p></div></div>
@@ -251,13 +282,9 @@ strong{color:var(--ik);font-weight:600}
   <div class="trust"><div><b>GBAC trained</b><span>The Global Biorisk Advisory Council, now a division of ISSA. Certificate number, slot.</span></div><div><b>ISSA CMI</b><span>The Cleaning Management Institute, the industry&#x27;s training body. Membership number, slot.</span></div><div><b>OSHA bloodborne pathogen compliant</b><span>Not a certificate anyone issues, a standard every technician is trained against. Written exposure control plan on request.</span></div><div><b>Licensed and insured in Maryland</b><span>General liability and workers compensation. Licence number and limits, slot.</span></div><div><b>Veteran owned and federally registered</b><span>SAM.gov UEI PMPPFTB7CCX4. Veteran owned, not SBA certified.</span></div></div>
   <div class="disc"><b>One thing we will not do</b><p>We do not display CDC, EPA or OSHA seals to imply those agencies endorse us. They do not endorse anyone. We follow CDC and EPA disinfection guidance and our technicians are trained to the OSHA bloodborne pathogen standard. Those are facts, and they are worth more than a logo. If another company shows you federal seals, ask them what they mean.</p></div>
 </div></section>
-<section><div class="w">
+<section class="dark"><div class="w">
   <h2>Our own work, and what families have said</h2>
-  <div class="shots">
-    <div class="shot"><div><span class="k">Job photograph</span><p>Town named, work described rather than the event. Nothing identifiable.</p></div></div>
-    <div class="shot"><div><span class="k">Job photograph</span><p>Containment barrier in place, Rockville MD. Never the scene.</p></div></div>
-    <div class="shot"><div><span class="k">Job photograph</span><p>Section does not render until three exist. No stock, ever.</p></div></div>
-  </div>
+  <div class="shots"><figure class="shot"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 540' preserveAspectRatio='xMidYMid slice'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232A2E31'/%3E%3Cstop offset='.62' stop-color='%231B1F22'/%3E%3Cstop offset='1' stop-color='%23101315'/%3E%3C/linearGradient%3E%3CradialGradient id='g' cx='.32' cy='.3' r='.62'%3E%3Cstop offset='0' stop-color='%23C89A45' stop-opacity='.30'/%3E%3Cstop offset='1' stop-color='%23C89A45' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='540' fill='url(%23a)'/%3E%3Crect width='800' height='540' fill='url(%23g)'/%3E%3Cpath d='M0 356 L800 316 L800 540 L0 540 Z' fill='%23000' opacity='.26'/%3E%3Cpath d='M120 0 L210 356 L330 356 L250 0 Z' fill='%23C89A45' opacity='.09'/%3E%3Crect x='0' y='353' width='800' height='2' fill='%23C89A45' opacity='.22'/%3E%3C/svg%3E" alt="Placeholder, Containment in place, Rockville MD"><figcaption><b>Containment in place, Rockville MD</b><span>Work described, never the event.</span></figcaption></figure><figure class="shot"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 540' preserveAspectRatio='xMidYMid slice'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23262B2F'/%3E%3Cstop offset='.62' stop-color='%23191D20'/%3E%3Cstop offset='1' stop-color='%230E1113'/%3E%3C/linearGradient%3E%3CradialGradient id='g' cx='.32' cy='.3' r='.62'%3E%3Cstop offset='0' stop-color='%23C89A45' stop-opacity='.30'/%3E%3Cstop offset='1' stop-color='%23C89A45' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='540' fill='url(%23a)'/%3E%3Crect width='800' height='540' fill='url(%23g)'/%3E%3Cpath d='M0 313 L800 273 L800 540 L0 540 Z' fill='%23000' opacity='.26'/%3E%3Cpath d='M120 0 L210 313 L330 313 L250 0 Z' fill='%23C89A45' opacity='.09'/%3E%3Crect x='0' y='310' width='800' height='2' fill='%23C89A45' opacity='.22'/%3E%3C/svg%3E" alt="Placeholder, Subfloor removed, Bethesda MD"><figcaption><b>Subfloor removed, Bethesda MD</b><span>Nothing identifiable in frame.</span></figcaption></figure><figure class="shot"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 540' preserveAspectRatio='xMidYMid slice'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2321262A'/%3E%3Cstop offset='.62' stop-color='%2315191C'/%3E%3Cstop offset='1' stop-color='%230B0E10'/%3E%3C/linearGradient%3E%3CradialGradient id='g' cx='.32' cy='.3' r='.62'%3E%3Cstop offset='0' stop-color='%23C89A45' stop-opacity='.30'/%3E%3Cstop offset='1' stop-color='%23C89A45' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='540' fill='url(%23a)'/%3E%3Crect width='800' height='540' fill='url(%23g)'/%3E%3Cpath d='M0 388 L800 348 L800 540 L0 540 Z' fill='%23000' opacity='.26'/%3E%3Cpath d='M120 0 L210 388 L330 388 L250 0 Z' fill='%23C89A45' opacity='.09'/%3E%3Crect x='0' y='385' width='800' height='2' fill='%23C89A45' opacity='.22'/%3E%3C/svg%3E" alt="Placeholder, Cleared and handed back, Rockville MD"><figcaption><b>Cleared and handed back, Rockville MD</b><span>Written clearance issued the same day.</span></figcaption></figure></div>
   <div class="gate"><span class="k">Reviews, absent from the page data by design</span>
     <p>Zero reviews exist on every platform, so the reviews block is omitted from this page's JSON
       entirely. ServicePage guards it anyway, so no AggregateRating is emitted and nothing renders.</p></div>
