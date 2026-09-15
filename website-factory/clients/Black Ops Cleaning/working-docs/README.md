@@ -26,6 +26,7 @@ strategy and Stage 6 copy.
 | `hero-rework.html` | The Home hero before and after, replacing the middot pill row with a spec strip. Carries the field black and brass palette, built on the name and the veteran status, which supersedes the two options in `palette-direction.html`. |
 | `page-previews.html` | The service page and the town page rendered with Black Ops' own copy, in the field black and brass palette with the spec strip. Shows the empty states as they actually stand, including the town page build gate. |
 | `page-previews-v2.html` | Second pass at both page types. Newsreader serif display, asymmetric banner with depth, marginalia column, process figures as display type, full-bleed dark bands. Supersedes `page-previews.html`, which stays as the first pass for comparison. |
+| `page-previews-v3.html` | Both page types built to convert. Four-field form above the fold, phone in three places, trust strip, mid-page conversion band, mobile sticky call bar. Back to Barlow Condensed and Barlow. This is the current one; v1 and v2 stay for comparison. |
 | `review-system.html` | The review engine: QR flow, capture page, text and email sequences, reply templates, pace and channels. |
 
 ## Reading order for someone new
@@ -38,7 +39,8 @@ strategy and Stage 6 copy.
 6. `palette-direction.html`, for the colour direction ahead of Stage 7, then
    `hero-rework.html` for the palette that replaced it and the spec strip pattern
 7. `page-previews.html`, for both page types built out of that decision, then
-   `page-previews-v2.html` for the craft pass over the same two pages
+   `page-previews-v2.html` for the craft pass, then `page-previews-v3.html`,
+   which is the current shape and the one to judge
 
 ## Related code
 
