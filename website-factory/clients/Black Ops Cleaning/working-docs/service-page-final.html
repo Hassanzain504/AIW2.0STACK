@@ -125,9 +125,17 @@ strong{color:var(--ik);font-weight:600}
 @media(max-width:620px){.step{grid-template-columns:30px 1fr}.step .t{grid-column:2}}
 
 .band{background:var(--p);color:var(--ondark);border-bottom:3px solid var(--ac)}
-.band .w{padding-block:34px;display:grid;grid-template-columns:minmax(0,1fr) auto;
-  gap:26px;align-items:center}
-@media(max-width:860px){.band .w{grid-template-columns:1fr;gap:18px}}
+.band .w{padding-block:36px;display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.54fr);
+  gap:32px;align-items:start}
+.orcall{margin-top:14px;font-size:15px}
+.orcall a{color:var(--acl);font-weight:700;text-decoration:none}
+.quote.compact{padding:18px}
+.quote.compact .fld{margin-bottom:9px}
+.bass{list-style:none;margin:20px 0 0;padding:16px 0 0;border-top:1px solid rgba(232,230,225,.16);
+  display:grid;gap:9px;max-width:44ch}
+.bass li{font-size:15px;color:rgba(232,230,225,.78)}
+.bass b{color:var(--acl);margin-right:5px}
+@media(max-width:940px){.band .w{grid-template-columns:1fr;gap:20px}}
 .band h2{color:#fff;margin-bottom:8px}
 .band p{color:rgba(232,230,225,.74);margin:0;max-width:58ch}
 .bandcta{display:flex;gap:10px;flex-wrap:wrap}
@@ -156,9 +164,17 @@ strong{color:var(--ik);font-weight:600}
 .gate p:last-child{margin-bottom:0}
 
 .faq{border-top:1px solid var(--line)}
-.q{padding-block:17px;border-bottom:1px solid var(--line)}
-.q b{display:block;font-size:17.5px;line-height:1.35;margin-bottom:6px;color:var(--ik)}
-.q p{font-size:16.5px;margin:0;max-width:72ch}
+.q{border-bottom:1px solid var(--line)}
+.q>summary{list-style:none;cursor:pointer;padding-block:15px;padding-right:38px;
+  position:relative;font-size:17.5px;line-height:1.35;color:var(--ik);font-weight:600}
+.q>summary::-webkit-details-marker{display:none}
+.q>summary::after{content:"";position:absolute;right:6px;top:50%;width:13px;height:2px;
+  background:var(--acd);transform:translateY(-50%)}
+.q>summary::before{content:"";position:absolute;right:11.5px;top:50%;width:2px;height:13px;
+  background:var(--acd);transform:translateY(-50%);transition:opacity .16s}
+.q[open]>summary::before{opacity:0}
+.q>summary:hover{color:var(--acd)}
+.q p{font-size:16.5px;margin:0 0 16px;max-width:72ch}
 
 .links a{text-decoration:none;color:var(--acd);font-size:15.5px;margin-right:18px;
   border-bottom:1px solid var(--line2);padding-bottom:2px;display:inline-block;margin-bottom:9px}
@@ -273,11 +289,26 @@ section.dark .voice cite{color:var(--ondark2)}
   <div class="proc"><div class="step"><span class="n">01</span><div><h3>Your call</h3><p>We need the address and how to get in. We do not ask you to describe the scene.</p></div><span class="t">About 10 minutes</span></div><div class="step"><span class="n">02</span><div><h3>On site assessment</h3><p>Unmarked vehicle. We scope the contamination and give you a written price before any work begins.</p></div><span class="t">Within 2 hours</span></div><div class="step"><span class="n">03</span><div><h3>Insurance contact</h3><p>Where a policy covers the loss we speak to the adjuster directly and bill them, so you are not managing it.</p></div><span class="t">Same day</span></div><div class="step"><span class="n">04</span><div><h3>Remediation</h3><p>Containment, removal, decontamination, odour treatment. Most residential jobs finish inside two days.</p></div><span class="t">1 to 3 days</span></div><div class="step"><span class="n">05</span><div><h3>Clearance and handover</h3><p>Written clearance, the disposal manifest, and photographs of the finished work.</p></div><span class="t">On completion</span></div></div>
   <div class="gate"><span class="k">Slot, verify every timescale</span><p>Slot, confirm the two hour response and the one to three day range against the client&#x27;s actual jobs before publishing.</p></div>
 </div></section>
-<div class="band"><div class="w">
+<div class="band" id="quote-early"><div class="w">
   <div><h2>Not sure whether your insurance covers it?</h2>
-    <p>Tell us the address and we will tell you on the call, before anyone comes out and before you commit to anything.</p></div>
-  <div class="bandcta"><a class="btn" href="tel:+13010000000">Call (301) 000 0000</a>
-    <a class="btn ondark" href="#quote">Request a call back</a></div>
+    <p>Tell us the address and we will tell you on the call, before anyone comes out and before
+      you commit to anything. Four questions, nothing else.</p>
+    <p class="orcall">Or call <a href="tel:+13010000000">(301) 000 0000</a> and skip the form.</p>
+    <ul class="bass">
+      <li><b>&#10003;</b> We speak to the adjuster, not you</li>
+      <li><b>&#10003;</b> Written price before any work starts</li>
+      <li><b>&#10003;</b> Unmarked vehicle, no signage on site</li>
+    </ul></div>
+  <form class="quote compact" onsubmit="return false">
+    <div class="fld"><label for="e-name">Your name</label><input id="e-name" name="name" type="text"></div>
+    <div class="fld"><label for="e-phone">Phone</label><input id="e-phone" name="phone" type="tel"></div>
+    <div class="fld"><label for="e-town">Where is the property</label><input id="e-town" name="town" type="text" placeholder="Town or zip"></div>
+    <div class="fld"><label for="e-when">When can we call</label>
+      <select id="e-when" name="when"><option>As soon as possible</option><option>Within the hour</option>
+        <option>This evening</option><option>Tomorrow morning</option></select></div>
+    <button type="submit">Request a call back</button>
+    <p class="priv">We call from an unlisted number.</p>
+  </form>
 </div></div>
 <section><div class="w">
   <h2>What this costs, and how you find out</h2>
@@ -300,7 +331,7 @@ section.dark .voice cite{color:var(--ondark2)}
 <section class="alt"><div class="w">
   <h2>Questions people actually ask</h2>
   <p class="lead">Ten questions. This block is what AI answers pull from, and it is where every competitor in this market is thin.</p>
-  <div class="faq"><div class="q"><b>Does homeowner insurance cover unattended death cleanup?</b><p>In most cases yes, because you are claiming for damage to the property. Some policies exclude deaths by suicide unless a rider was bought. Call your adjuster, not your agent, and ask whether the policy covers biohazard remediation and what the limit is. We handle the claim from there.</p></div><div class="q"><b>Will your vehicle be marked?</b><p>No. Our response vehicles carry no company signage and our technicians arrive in plain clothing and change on site. Neighbours see a plain van.</p></div><div class="q"><b>How quickly can you get here?</b><p>Within two hours across Montgomery County. Rockville, Bethesda and Silver Spring are usually faster, because we are based on Talbott Street in Rockville rather than driving in from another county.</p></div><div class="q"><b>Do I have to be at the property?</b><p>No. We can work from a key handover or a lockbox and send you photographic documentation as we go. Many of the people who call us live in another state.</p></div><div class="q"><b>Can the property be lived in or sold afterwards?</b><p>Yes, and we issue written clearance confirming it. That document is what insurers, buyers and estate solicitors ask to see, and it is included at no extra cost.</p></div><div class="q"><b>What if the odour comes back?</b><p>It should not. Odour that returns means the source was masked rather than removed, usually because subfloor or drywall was left in place. We treat at source, and if it recurs on a job we completed we come back at no charge.</p></div><div class="q"><b>Do I need to tell a buyer what happened here?</b><p>Maryland disclosure rules are a question for your solicitor or estate agent, not for us. What we can tell you is that our written clearance documents the property as remediated, which is what most buyers and their lenders actually want to see.</p></div><div class="q"><b>Who is responsible for arranging this, legally?</b><p>The property owner, or the executor of the estate. Police and the medical examiner secure the scene and then release the property. Cleanup is never their responsibility, which is a surprise to almost everyone who calls us.</p></div><div class="q"><b>Do you handle the waste paperwork?</b><p>Yes. Regulated waste goes through a licensed medical waste stream and the manifest is handed to you with the clearance documentation.</p></div><div class="q"><b>Are you police approved or state certified?</b><p>There is no such approval or certification to hold in Maryland, and any company claiming one is worth a second look. What matters is GBAC training, OSHA bloodborne pathogen compliance, a licensed disposal route, and being licensed and insured in Maryland. We are all four.</p></div></div>
+  <div class="faq"><details class="q" open><summary>Does homeowner insurance cover unattended death cleanup?</summary><p>In most cases yes, because you are claiming for damage to the property. Some policies exclude deaths by suicide unless a rider was bought. Call your adjuster, not your agent, and ask whether the policy covers biohazard remediation and what the limit is. We handle the claim from there.</p></details><details class="q"><summary>Will your vehicle be marked?</summary><p>No. Our response vehicles carry no company signage and our technicians arrive in plain clothing and change on site. Neighbours see a plain van.</p></details><details class="q"><summary>How quickly can you get here?</summary><p>Within two hours across Montgomery County. Rockville, Bethesda and Silver Spring are usually faster, because we are based on Talbott Street in Rockville rather than driving in from another county.</p></details><details class="q"><summary>Do I have to be at the property?</summary><p>No. We can work from a key handover or a lockbox and send you photographic documentation as we go. Many of the people who call us live in another state.</p></details><details class="q"><summary>Can the property be lived in or sold afterwards?</summary><p>Yes, and we issue written clearance confirming it. That document is what insurers, buyers and estate solicitors ask to see, and it is included at no extra cost.</p></details><details class="q"><summary>What if the odour comes back?</summary><p>It should not. Odour that returns means the source was masked rather than removed, usually because subfloor or drywall was left in place. We treat at source, and if it recurs on a job we completed we come back at no charge.</p></details><details class="q"><summary>Do I need to tell a buyer what happened here?</summary><p>Maryland disclosure rules are a question for your solicitor or estate agent, not for us. What we can tell you is that our written clearance documents the property as remediated, which is what most buyers and their lenders actually want to see.</p></details><details class="q"><summary>Who is responsible for arranging this, legally?</summary><p>The property owner, or the executor of the estate. Police and the medical examiner secure the scene and then release the property. Cleanup is never their responsibility, which is a surprise to almost everyone who calls us.</p></details><details class="q"><summary>Do you handle the waste paperwork?</summary><p>Yes. Regulated waste goes through a licensed medical waste stream and the manifest is handed to you with the clearance documentation.</p></details><details class="q"><summary>Are you police approved or state certified?</summary><p>There is no such approval or certification to hold in Maryland, and any company claiming one is worth a second look. What matters is GBAC training, OSHA bloodborne pathogen compliance, a licensed disposal route, and being licensed and insured in Maryland. We are all four.</p></details></div>
 </div></section>
 <section><div class="w">
   <h2>Where we cover</h2>
@@ -323,7 +354,7 @@ section.dark .voice cite{color:var(--ondark2)}
       </form>
 </div></div>
 <div class="foot"><div class="w">Black Ops Cleaning Company LLC &nbsp; 121 Talbott St, Rockville, MD 20852 &nbsp; (301) 000 0000</div></div>
-<div class="sticky"><a class="c" href="tel:+13010000000">Call now</a><a class="q" href="#quote">Get a quote</a></div>
+<div class="sticky"><a class="c" href="tel:+13010000000">Call now</a><a class="q" href="#quote-early">Get a quote</a></div>
 <div class="src"><div class="w">
   <p><b>Rendered from the page data, not written by hand.</b> Every heading, paragraph, process
     step, timescale, credential and FAQ on this page was generated from
