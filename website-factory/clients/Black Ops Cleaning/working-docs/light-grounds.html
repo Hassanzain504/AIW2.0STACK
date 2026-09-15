@@ -1,0 +1,224 @@
+<title>Light Ground Options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@600&display=swap">
+<style>
+/* The chrome is a deliberate mid grey. A dark chrome flatters every light
+   ground and a white chrome kills them. Neutral is the only fair ground for
+   judging grounds. */
+:root{
+  --ink:#101214; --slate:#4A4F55; --brass:#A8792C; --brassd:#7E5A1D;
+  --brassl:#C89A45; --dark:#16181A;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#8E8E8B;color:#14161A;
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,sans-serif;font-size:16px;line-height:1.6}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:20px}
+header{padding-block:26px 8px}
+h1{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:clamp(26px,4vw,40px);
+  text-transform:uppercase;margin:0;color:#111;letter-spacing:.004em}
+.lede{color:#2E3033;max-width:62ch;margin:10px 0 0;font-size:16.5px}
+
+h2.sec{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
+  text-transform:uppercase;margin:34px 0 4px;color:#111;letter-spacing:.02em}
+p.seclede{margin:0 0 14px;color:#2E3033;max-width:66ch;font-size:15.5px}
+
+/* seam strip. touching blocks are the only way subtle grounds read */
+.seam{display:flex;border-radius:5px;overflow:hidden;box-shadow:0 10px 30px -18px rgba(0,0,0,.7)}
+.seam div{flex:1;padding:26px 14px 22px;text-align:center}
+.seam .t{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:#6A6E72;display:block;margin-bottom:6px}
+.seam .n{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:17px;
+  text-transform:uppercase;color:#14161A}
+@media(max-width:700px){.seam{flex-wrap:wrap}.seam div{flex:1 1 50%}}
+
+/* realistic samples */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px;margin-top:6px}
+.samp .lab{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:#E8E8E4;margin-bottom:7px}
+.samp .lab b{color:#fff}
+.sheet{border-radius:5px;overflow:hidden;box-shadow:0 12px 34px -20px rgba(0,0,0,.75)}
+.inner{background:var(--bg);padding:20px}
+.samp h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;
+  text-transform:uppercase;margin:0 0 9px;color:var(--ink);letter-spacing:.012em}
+.samp p{margin:0 0 11px;color:var(--slate);font-size:15.5px;line-height:1.55}
+.samp p.sm{font-size:14.5px}
+.samp a{color:var(--brassd);font-weight:600}
+.card{background:var(--card);border-radius:4px;padding:12px 14px;margin:0 0 13px}
+.card b{display:block;font-size:15px;color:var(--ink)}
+.card span{font-size:13.5px;color:var(--slate)}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+.b1{background:var(--brass);color:#16181A;font-weight:700;font-size:14px;padding:10px 15px;border-radius:4px}
+.b2{color:var(--brassd);border:1px solid var(--brassd);font-weight:600;font-size:14px;
+  padding:10px 15px;border-radius:4px}
+.band{background:var(--dark);padding:12px 20px;display:flex;flex-wrap:wrap;gap:4px 22px;align-items:baseline}
+.band .pair{display:inline-flex;flex-direction:column;gap:1px}
+.band .k{font-size:12px;color:rgba(255,255,255,.45)}
+.band .v{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;
+  color:var(--brassl);letter-spacing:.03em;white-space:nowrap}
+.samp .note{font-size:13.5px;color:#EDEDE9;margin:8px 0 0;line-height:1.45}
+
+.call{background:#F4F3EF;border-left:4px solid var(--brass);border-radius:4px;
+  padding:16px 19px;margin:30px 0 40px;max-width:74ch}
+.call h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;
+  text-transform:uppercase;margin:0 0 8px;letter-spacing:.016em;color:#111}
+.call p{margin:0 0 9px;font-size:15px;color:#3A4045}
+.call p:last-child{margin-bottom:0}
+.call b{color:#111}
+</style>
+
+<div class="wrap">
+<header>
+  <h1>Which light for the 49 reading pages</h1>
+  <p class="lede">Service pages run 1,600 to 2,200 words and town pages 700 to 1,100. This is the
+    colour behind all of them. The surround here is deliberately mid grey: a dark surround makes
+    every one of these look bright, and a white surround kills them all.</p>
+</header>
+
+<h2 class="sec">First, the seam test</h2>
+<p class="seclede">These differences are too small to judge one at a time. Touching blocks show
+  them at the edges, which is where the eye actually catches them.</p>
+<div class="seam">
+  <div style="background:#FFFFFF"><span class="t">A</span><span class="n">Pure white</span></div>
+  <div style="background:#F8F7F4"><span class="t">B</span><span class="n">Near white warm</span></div>
+  <div style="background:#F4F3EF"><span class="t">C</span><span class="n">Warm off-white</span></div>
+  <div style="background:#EFEDE6"><span class="t">D</span><span class="n">Warm paper</span></div>
+  <div style="background:#F1F4F5"><span class="t">E</span><span class="n">Cool clinical</span></div>
+</div>
+
+<h2 class="sec">Then the same section, on each</h2>
+<p class="seclede">Real copy, a card, both buttons, a link, and the dark band underneath so the
+  transition is visible too.</p>
+<div class="grid">
+  <div class="samp" style="--bg:#FFFFFF;--card:#F2F2F2">
+    <div class="lab"><b>A</b> Pure white</div>
+    <div class="sheet">
+      <div class="inner">
+        <h3>What the work covers</h3>
+        <p>Everything below is part of a standard remediation. Nothing here is added to the
+          bill later. Flooring, subfloor and drywall that cannot be safely restored are
+          removed and documented.</p>
+        <p class="sm">Decomposition travels further than most people expect, which is why the
+          assessment happens before the price. <a href="#">Read the full process</a>.</p>
+        <div class="card">
+          <b>Written clearance</b>
+          <span>Confirmation that the property is safe for occupancy, in writing.</span>
+        </div>
+        <div class="btns"><span class="b1">Call (301) 000 0000</span><span class="b2">Request a call back</span></div>
+      </div>
+      <div class="band">
+        <span class="pair"><span class="k">Based in</span><span class="v">Rockville MD 20852</span></span>
+        <span class="pair"><span class="k">UEI</span><span class="v">PMPPFTB7CCX4</span></span>
+      </div>
+    </div>
+    <p class="note">Sab se bright. Crisp, magar 1,800 lafz par glare.</p>
+  </div>
+  <div class="samp" style="--bg:#F8F7F4;--card:#EFEDE7">
+    <div class="lab"><b>B</b> Near white warm</div>
+    <div class="sheet">
+      <div class="inner">
+        <h3>What the work covers</h3>
+        <p>Everything below is part of a standard remediation. Nothing here is added to the
+          bill later. Flooring, subfloor and drywall that cannot be safely restored are
+          removed and documented.</p>
+        <p class="sm">Decomposition travels further than most people expect, which is why the
+          assessment happens before the price. <a href="#">Read the full process</a>.</p>
+        <div class="card">
+          <b>Written clearance</b>
+          <span>Confirmation that the property is safe for occupancy, in writing.</span>
+        </div>
+        <div class="btns"><span class="b1">Call (301) 000 0000</span><span class="b2">Request a call back</span></div>
+      </div>
+      <div class="band">
+        <span class="pair"><span class="k">Based in</span><span class="v">Rockville MD 20852</span></span>
+        <span class="pair"><span class="k">UEI</span><span class="v">PMPPFTB7CCX4</span></span>
+      </div>
+    </div>
+    <p class="note">Bilkul halki si garmi. Crisp rehta hai.</p>
+  </div>
+  <div class="samp" style="--bg:#F4F3EF;--card:#EDEBE5">
+    <div class="lab"><b>C</b> Warm off-white</div>
+    <div class="sheet">
+      <div class="inner">
+        <h3>What the work covers</h3>
+        <p>Everything below is part of a standard remediation. Nothing here is added to the
+          bill later. Flooring, subfloor and drywall that cannot be safely restored are
+          removed and documented.</p>
+        <p class="sm">Decomposition travels further than most people expect, which is why the
+          assessment happens before the price. <a href="#">Read the full process</a>.</p>
+        <div class="card">
+          <b>Written clearance</b>
+          <span>Confirmation that the property is safe for occupancy, in writing.</span>
+        </div>
+        <div class="btns"><span class="b1">Call (301) 000 0000</span><span class="b2">Request a call back</span></div>
+      </div>
+      <div class="band">
+        <span class="pair"><span class="k">Based in</span><span class="v">Rockville MD 20852</span></span>
+        <span class="pair"><span class="k">UEI</span><span class="v">PMPPFTB7CCX4</span></span>
+      </div>
+    </div>
+    <p class="note">Meri tajweez. Garam, aaram deh, brass ke saath chalta hai.</p>
+  </div>
+  <div class="samp" style="--bg:#EFEDE6;--card:#E7E4DB">
+    <div class="lab"><b>D</b> Warm paper</div>
+    <div class="sheet">
+      <div class="inner">
+        <h3>What the work covers</h3>
+        <p>Everything below is part of a standard remediation. Nothing here is added to the
+          bill later. Flooring, subfloor and drywall that cannot be safely restored are
+          removed and documented.</p>
+        <p class="sm">Decomposition travels further than most people expect, which is why the
+          assessment happens before the price. <a href="#">Read the full process</a>.</p>
+        <div class="card">
+          <b>Written clearance</b>
+          <span>Confirmation that the property is safe for occupancy, in writing.</span>
+        </div>
+        <div class="btns"><span class="b1">Call (301) 000 0000</span><span class="b2">Request a call back</span></div>
+      </div>
+      <div class="band">
+        <span class="pair"><span class="k">Based in</span><span class="v">Rockville MD 20852</span></span>
+        <span class="pair"><span class="k">UEI</span><span class="v">PMPPFTB7CCX4</span></span>
+      </div>
+    </div>
+    <p class="note">Sab se garam. Cards ghayab hone lagte hain.</p>
+  </div>
+  <div class="samp" style="--bg:#F1F4F5;--card:#E8ECEE">
+    <div class="lab"><b>E</b> Cool clinical</div>
+    <div class="sheet">
+      <div class="inner">
+        <h3>What the work covers</h3>
+        <p>Everything below is part of a standard remediation. Nothing here is added to the
+          bill later. Flooring, subfloor and drywall that cannot be safely restored are
+          removed and documented.</p>
+        <p class="sm">Decomposition travels further than most people expect, which is why the
+          assessment happens before the price. <a href="#">Read the full process</a>.</p>
+        <div class="card">
+          <b>Written clearance</b>
+          <span>Confirmation that the property is safe for occupancy, in writing.</span>
+        </div>
+        <div class="btns"><span class="b1">Call (301) 000 0000</span><span class="b2">Request a call back</span></div>
+      </div>
+      <div class="band">
+        <span class="pair"><span class="k">Based in</span><span class="v">Rockville MD 20852</span></span>
+        <span class="pair"><span class="k">UEI</span><span class="v">PMPPFTB7CCX4</span></span>
+      </div>
+    </div>
+    <p class="note">Thanda. Lab jaisa, magar trauma pages sakht ho jate hain.</p>
+  </div>
+</div>
+
+<div class="call">
+  <h4>What I would pick, and why</h4>
+  <p><b>C, warm off-white.</b> Look at A beside C in the seam strip. A is brighter, and over
+    1,800 words that brightness is the thing that tires the eye. C gives that back without
+    losing any crispness.</p>
+  <p><b>Warm rather than cool,</b> so compare C against E. E reads like a lab. That suits the
+    medical and disinfection pages and it works against the trauma and hoarding ones. The
+    clinical signal is already carried by the words, the protocols and the mono codes. The
+    background does not need to say it twice, and if it does, nothing on the site is warm.</p>
+  <p><b>D is out on evidence, not taste.</b> Look at its card: it has almost disappeared into
+    the ground. It would need a different card fill to survive.</p>
+  <p>One rule the samples make visible: the brass button works on every ground, but brass as
+    <i>text</i> would not. That is why the link and the outlined button use the darker brass.</p>
+</div>
+</div>
