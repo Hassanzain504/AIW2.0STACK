@@ -63,9 +63,9 @@ body{margin:0;background:var(--nu);color:var(--ik);
 .hero{background:var(--p);color:var(--ondark);position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;
   background:radial-gradient(115% 85% at 6% 0%, #23262A 0%, #16181A 48%, #0D0F11 100%)}
-.hero .w{position:relative;z-index:1;padding-block:34px 30px}
+.hero .w{position:relative;z-index:1;padding-block:38px 36px}
 .crumb{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;
-  text-transform:uppercase;color:rgba(232,230,225,.42);margin-bottom:14px}
+  text-transform:uppercase;color:rgba(232,230,225,.58);margin-bottom:15px}
 .crumb a{color:inherit;text-decoration:none}
 h1{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;color:#fff;
   font-size:clamp(32px,4.9vw,58px);line-height:1;text-transform:uppercase;
@@ -74,8 +74,9 @@ h1 .where{display:block;font-size:clamp(17px,2.1vw,25px);line-height:1.12;margin
   color:var(--acl);font-weight:600;letter-spacing:.012em;text-transform:none;max-width:22ch}
 .hsub{color:rgba(232,230,225,.76);font-size:17.5px;line-height:1.55;max-width:58ch;margin:16px 0 0}
 .hcta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:24px 0 0}
-.reassure{font-size:13.5px;color:rgba(232,230,225,.5);margin:12px 0 0}
-.rail{position:relative;z-index:1;background:var(--pd);
+.reassure{font-size:14.5px;line-height:1.5;color:rgba(232,230,225,.72);
+  margin:20px 0 0;padding-left:14px;border-left:2px solid var(--ac);max-width:46ch}
+.rail{margin:0;position:relative;z-index:1;background:var(--pd);
   border-top:1px solid rgba(232,230,225,.13);border-bottom:3px solid var(--ac)}
 .rail .w{display:flex;flex-wrap:wrap;padding-block:0}
 .rail .pair{flex:1 1 160px;padding:13px 24px 15px 0;display:flex;flex-direction:column;gap:2px}
@@ -220,12 +221,12 @@ strong{color:var(--ik);font-weight:600}
 .sticky .q{background:rgba(232,230,225,.1);color:var(--ondark);border:1px solid rgba(232,230,225,.28);
   padding:13px 10px}
 @media(max-width:760px){.sticky{display:flex}body{padding-bottom:64px}}
-.hw{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(300px,.64fr);gap:34px;align-items:center}
+.hw{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(290px,.62fr);gap:34px;align-items:stretch}
 @media(max-width:940px){.hw{grid-template-columns:1fr;gap:22px}}
 .hcol{min-width:0}
 .hfig{margin:0;position:relative;border-radius:5px;overflow:hidden;
   box-shadow:0 26px 60px -30px rgba(0,0,0,.95)}
-.hfig img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.hfig img{display:block;width:100%;height:100%;min-height:370px;object-fit:cover}
 .hfig figcaption{position:absolute;left:0;right:0;bottom:0;padding:8px 11px;
   background:linear-gradient(to top,rgba(8,10,12,.92),rgba(8,10,12,0));
   font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;
@@ -325,6 +326,33 @@ section[id],.band[id]{scroll-margin-top:50px}
    on a white card. scope it back to the card. */
 .quote p{max-width:none}
 .quote .qs,.quote .priv{color:#5F686E}
+/* tablet. the figure was going full width the moment the hero stacked, so at
+   834 it rendered 782x587 and buried the copy under a placeholder. */
+@media(max-width:940px){
+  .hfig{max-width:560px}
+  .hfig img{min-height:0;height:auto;aspect-ratio:16/9}
+}
+/* phone. the utility bar took three stacked lines and the nav took two, so
+   230px of chrome ran before the breadcrumb. the sticky bar already carries
+   both actions, and the two hour claim is stated in the process, the FAQ,
+   the close and the footer. */
+@media(max-width:760px){
+  .util .w{flex-wrap:nowrap;justify-content:space-between;gap:12px}
+  .util .w>span:not(.live){display:none}
+  .util .tel{margin-left:0;white-space:nowrap}
+}
+/* between 860 and 1000 the nav links plus the quote button wrapped the row.
+   the hero carries both calls to action a few hundred pixels below. */
+@media(max-width:1000px){.navcta .btn{display:none}}
+@media(max-width:560px){
+  .nav .w{flex-wrap:nowrap;gap:12px}
+  .navcta{margin-left:auto;width:auto}
+  .navcta .btn,.navph{display:none}
+  .rail .w{display:grid;grid-template-columns:1fr 1fr;padding-block:3px}
+  .rail .pair{padding:11px 14px 12px 0}
+  .hfig{max-width:none}
+  .hfig img{aspect-ratio:16/9}
+}
 </style>
 <div class="util"><div class="w">
   <span class="live"><span class="dot"></span>Phone answered 24 hours</span>
