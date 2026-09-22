@@ -1,0 +1,6 @@
+{
+  "4prc.com":                 {"city": "Houston",  "state": "TX", "source": "own page title: 'Paradox Roofing & Construction | Houston TX Roofer'"},
+  "justroofingusa.com":       {"city": "Columbus", "state": "",   "source": "own page title: 'Columbus Roofing Contractor'; state not stated, left blank on purpose"},
+  "gramex.com":               {"city": "Chicago",  "state": "IL", "source": "own page title: 'Great American Exteriors | Chicago Area'"},
+  "theroofingrevolution.com": {"city": "Denver",   "state": "CO", "source": "own page title: 'The Roofing Revolution | Denver'"}
+}
