@@ -122,6 +122,12 @@ def money(kind):
     }[kind]
 
 def urgency(kind, city, state, read=""):
+    if not city:
+        if kind == "commercial":
+            return ("A facilities lead with a membrane leak does not cold-call at four in the "
+                    "afternoon. He searches once and sends one email to whoever comes up.")
+        return ("Somebody who has decided at nine at night does not wait until morning. They go "
+                "with whoever answers first.")
     if kind == "commercial":
         return (f"A facilities lead in {city} does not cold-call at four in the afternoon. "
                 "He searches once, and he sends one email to whoever comes up.")
@@ -193,6 +199,10 @@ def build(lead, form, enr, sm, idx):
     n_town = s.get('n_town', 0); n_pages = s.get('n_pages', 0)
     junk = [(u, d) for (u, d) in (s.get('junk') or [])
             if dom.replace('www.', '') in u.replace('www.', '')]
+    import resolve_city as _rc
+    if city and dom not in _OVR:            # a hand-checked override is trusted as written
+        if not re.fullmatch(r"[A-Za-z][A-Za-z .'\-]{2,27}", city) or _rc.clean(city) != city:
+            city, state = "", ""
     comp = pick_competitor(city, state, dom, idx)
     own_towns = {(town_from_url(u)[0] or '').lower() for u in (s.get('town') or [])}
     covers_own_city = bool(city) and city.lower() in own_towns
@@ -221,15 +231,11 @@ def build(lead, form, enr, sm, idx):
     if one_item(sl) and not sl.lower().startswith("commercial"):
         return None, facts, "read-back would be a single item, too thin to open on"
     facts["readback_kind"] = "materials" if sl_mats else "services"
-    if not city or not re.fullmatch(r"[A-Za-z][A-Za-z .'\-]{2,27}", city):
-        return None, facts, "could not establish their town"
-    import resolve_city as _rc
-    if _rc.clean(city) != city:
-        return None, facts, "town name did not survive validation"
+    # a town is required only by the angles that name one
     if covers_own_city:
         comp = None
     angles = []
-    if comp:                             angles.append(("competitor_town", 10))
+    if comp and city:                    angles.append(("competitor_town", 10))
     if city and n_town == 0:             angles.append(("no_town", 8))
     if city and 1 <= n_town <= 2 and n_pages >= 25:
                                          angles.append(("thin_town", 7))
@@ -241,6 +247,8 @@ def build(lead, form, enr, sm, idx):
     if covers_own_city and not angles:
         return None, facts, f"they already have a page for {city}, nothing true to criticise"
     if not angles:
+        if not city:
+            return None, facts, "no town and no town-free fault to name"
         return None, facts, "no verified revenue-side fault to name"
 
     kind, read = buyer_read(svcs, co)
@@ -338,7 +346,12 @@ def build(lead, form, enr, sm, idx):
     body = body.replace("\n\n\n\nHassan", "\x00")
     body = re.sub(r'\n{3,}', '\n\n', body)
     body = body.replace("\x00", "\n\n\nHassan")
-    subj = (city or co).strip().lower()
+    if city:
+        subj = city.strip().lower()
+    elif junk:
+        subj = (junk[0][0].rstrip('/').split('/')[-1] or co).strip().lower()
+    else:
+        subj = co.strip().lower()
     subj = re.sub(r'\s+', ' ', subj)
     if not re.fullmatch(r"[a-z][a-z .'\-]{2,40}", subj):
         return None, facts, "could not build a clean subject line"
@@ -421,15 +434,26 @@ def followups(fn, facts, kind, used_angles):
         fixes.append("Put three fields on the homepage - name, phone, what needs looking at.")
     if junk:
         u, _ = junk[0]
-        fixes.append(f"Take {u.split('/')[-1] or u} out of the sitemap or finish it.")
+        slug = u.rstrip('/').split('/')[-1] or u
+        fixes.append(f"Take /{slug} out of the sitemap, or finish the page.")
     if city and not any(city in f for f in fixes):
         fixes.append(f"Give {city} its own page with {city} in the heading.")
-    if not noform:
+    if not city and len(fixes) < 2:
+        fixes.append("Put the town you actually work in on the homepage, in the heading.")
+    if not noform and city:
         fixes.append("Put the form on the town page too, not only on the contact page.")
+    elif not noform:
+        fixes.append("Put a short form on the homepage, not only on the contact page.")
     if len(fixes) < 3:
         fixes.append("Put the phone number and the town in the homepage heading, where the buyer "
-                     "looks first.")
-    fixes = fixes[:3]
+                     "looks first." if city else
+                     "Put the phone number and the work you do in the homepage heading, where the "
+                     "buyer looks first.")
+    seen = set(); uniq = []
+    for f in fixes:                       # never list the same fix twice
+        if f in seen: continue
+        seen.add(f); uniq.append(f)
+    fixes = uniq[:3]
 
     body3 = [f"{fn},", "", "Last one from me, then I will stop appearing in your inbox.", "",
              "Free version, no strings:", ""]

@@ -38,6 +38,8 @@ BAD = {
  "HEADLINE_TECH": lambda b,s: 'headline on the page' in b.lower() or 'page title' in b.lower(),
  "DOUBLE_SPACE": lambda b,s: '  ' in re.sub(r'^ +','',b,flags=re.M),
  "TRAILING_WS": lambda b,s: bool(re.search(r'[ \t]+$',b,re.M)),
+ "DUP_FIX": lambda b,s: (lambda ls: len(ls)!=len(set(ls)))(re.findall(r'^\d\. (.+)$', b, re.M)),
+ "EMPTY_SLOT": lambda b,s: bool(re.search(r'\bin  +\w|for  +\w|page for \.|\bin \.', b)),
  "BANNED": lambda b,s: bool(re.search(r'leverage|synergiz|robust|seamless|game.?changer|cutting.?edge|circle back|touch base|hope this finds',b,re.I)),
 }
 issues=collections.Counter(); ex=collections.defaultdict(list)

@@ -1,4 +1,8 @@
 import json, re, collections
+try:
+    from areacodes import state_of as _ac_state
+except Exception:
+    def _ac_state(p): return ""
 ST = {"alabama":"AL","alaska":"AK","arizona":"AZ","arkansas":"AR","california":"CA","colorado":"CO",
 "connecticut":"CT","delaware":"DE","florida":"FL","georgia":"GA","hawaii":"HI","idaho":"ID",
 "illinois":"IL","indiana":"IN","iowa":"IA","kansas":"KS","kentucky":"KY","louisiana":"LA",
@@ -178,6 +182,8 @@ def resolve(rec):
             top = sorted(counts.items(), key=lambda x: -x[1])
             if len(top) == 1 or top[0][1] >= 2 * top[1][1]:
                 st = top[0][0]
+    if not st:
+        st = _ac_state(rec.get("phone", ""))   # their own phone number settles the state
     return best, st
 if __name__ == "__main__":
     out = {}; got = 0
