@@ -1,6 +1,122 @@
 {
-  "4prc.com":                 {"city": "Houston",  "state": "TX", "source": "own page title: 'Paradox Roofing & Construction | Houston TX Roofer'"},
-  "justroofingusa.com":       {"city": "Columbus", "state": "",   "source": "own page title: 'Columbus Roofing Contractor'; state not stated, left blank on purpose"},
-  "gramex.com":               {"city": "Chicago",  "state": "IL", "source": "own page title: 'Great American Exteriors | Chicago Area'"},
-  "theroofingrevolution.com": {"city": "Denver",   "state": "CO", "source": "own page title: 'The Roofing Revolution | Denver'"}
+  "4prc.com": {
+    "city": "Houston",
+    "state": "TX",
+    "why": "own title: 'Paradox Roofing & Construction | Houston TX Roofer'"
+  },
+  "justroofingusa.com": {
+    "city": "Columbus",
+    "state": "",
+    "why": "own title says Columbus; three states have one, so state left blank on purpose"
+  },
+  "gramex.com": {
+    "city": "Chicago",
+    "state": "IL",
+    "why": "own title: 'Great American Exteriors | Chicago Area'"
+  },
+  "theroofingrevolution.com": {
+    "city": "Denver",
+    "state": "CO",
+    "why": "own title: 'The Roofing Revolution | Denver'"
+  },
+  "jcroofing.com": {
+    "city": "South Sioux City",
+    "state": "NE",
+    "why": "own title: 'GAF Roofing Contractors South Sioux City, Omaha, NE'. 'Siouxland' is a region, not a town"
+  },
+  "bluenail.com": {
+    "city": "Grand Prairie",
+    "state": "TX",
+    "why": "own title: 'Trusted Roofing Company in Grand Prairie'. Resolver had read 'Good Morning' out of prose"
+  },
+  "lbkroofing.com": {
+    "city": "Lubbock",
+    "state": "TX",
+    "why": "own page: 'Serving Lubbock, Amarillo, Wichita Falls and DFW', all Texas"
+  },
+  "hammondremodelingtx.com": {
+    "city": "Austin",
+    "state": "TX",
+    "why": "domain ends tx"
+  },
+  "axiomd7.net": {
+    "city": "Seattle",
+    "state": "WA",
+    "why": "only one Seattle"
+  },
+  "g4roofs.com": {
+    "city": "Fort Worth",
+    "state": "TX",
+    "why": "own title: 'G4 Roofs | Fort Worth'"
+  },
+  "preferredroofingoc.com": {
+    "city": "Newport Beach",
+    "state": "CA",
+    "why": "Newport Beach is in California; domain 'oc' is Orange County. Resolver had said NV"
+  },
+  "mayaseng.com": {
+    "city": "Brooklyn",
+    "state": "NY",
+    "why": "'Downtown Brooklyn' is a neighbourhood label, the town is Brooklyn"
+  },
+  "solomoncontractingstl.com": {
+    "city": "Richmond Heights",
+    "state": "MO",
+    "why": "domain 'stl' is St. Louis; Richmond Heights MO, not MD"
+  },
+  "arkroofingtexas.com": {
+    "city": "The Woodlands",
+    "state": "TX",
+    "why": "the town is The Woodlands"
+  },
+  "jerryssiding.com": {
+    "city": "",
+    "state": "",
+    "why": "resolver said 'Anne Arundel', a county. Title only narrows it to Maryland, no town"
+  },
+  "topa1contracting.com": {
+    "city": "",
+    "state": "",
+    "why": "resolver said 'Polk', a county. Nothing on the page names a town"
+  },
+  "redcedarroofingandsiding.com": {
+    "city": "",
+    "state": "",
+    "why": "resolver said 'Southeastern', a region. No title, no town"
+  },
+  "permianbasinsprayfoam.com": {
+    "city": "",
+    "state": "",
+    "why": "resolver said 'Permian Basin', a region. Also insulation and coatings, not clearly a roofer"
+  },
+  "zenconstructiongroup.com": {
+    "city": "",
+    "state": "",
+    "why": "resolver said 'Miami' but the title gives nothing; Miami FL and Miami OK both exist"
+  },
+  "utahroofingpros.com": {
+    "city": "",
+    "state": "",
+    "why": "resolver said 'Salt Lake'; the town is Salt Lake City and the page does not say so"
+  },
+  "gkontosinc.com": {
+    "city": "",
+    "state": "",
+    "why": "resolver said 'Hudson Valley', a region"
+  },
+  "akccfl.com": {
+    "city": "",
+    "state": "",
+    "why": "resolver said 'Flagler', a county"
+  },
+  "tri-cityroofing.com": {
+    "city": "",
+    "state": "",
+    "why": "resolver said 'East Bay', which is a region, not a town"
+  },
+  "mdroofingpros.com": {
+    "city": "",
+    "state": "",
+    "why": "resolver said 'North Texas', which is a region, not a town"
+  }
 }

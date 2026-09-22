@@ -38,6 +38,15 @@ JUNKWORD = {"average","blog","statewide","storm","damage","specialists","holds",
             "testimonials","gallery","projects","project","financing","warranty","emco"}
 STATENAMES = set(ST.keys()) | {"texas","florida","georgia","ohio","utah","iowa","maine","idaho"}
 STREET_TOKEN = re.compile(r"^(dr|rd|st|ave|blvd|ln|ct|hwy|pkwy|ste|apt|unit|suite|fl)\.?$", re.I)
+TAIL_GENERIC = ("area","areas","region","metro","surrounding","communities","community",
+                "county","and","the","roofing","roofers","customers","residents","homeowners")
+
+def strip_tail(raw):
+    toks = raw.split()
+    while toks and toks[-1].lower().strip(".,") in TAIL_GENERIC:
+        toks.pop()
+    return " ".join(toks)
+
 def clean(city):
     if not city: return ""
     city = city.split("\n")[-1]
@@ -56,6 +65,8 @@ def clean(city):
     # a stray initial such as "H Grand Rapids"
     while len(toks) > 1 and len(toks[0].strip(".")) == 1:
         toks = toks[1:]
+    while len(toks) > 1 and toks[-1].upper().strip(".") in ABBR:
+        toks = toks[:-1]
     if not toks: return ""
     low = {t.lower().strip(".,") for t in toks}
     if low & JUNKWORD: return ""
@@ -82,20 +93,21 @@ def candidates(text):
         c = clean(m.group(1))
         if c: out.append((c, m.group(2), 3))
     for name, ab in ST.items():
-        for m in re.finditer(r"([A-Za-z][A-Za-z .'\-]{2,28}?)[,\s]+" + re.escape(name) + r"\b", text, re.I):
-            c = clean(m.group(1))
+        pat = r"((?:[A-Z][a-zA-Z.'\-]+[ ]){0,2}[A-Z][a-zA-Z.'\-]+)[,\s]+" + name.title() + r"\b"
+        for m in re.finditer(pat, text):
+            c = clean(strip_tail(m.group(1)))
             if c: out.append((c, ab, 2))
     return out
 SERVING = re.compile(
-    r"(?:proudly\s+)?(?:serving|located in|based in|headquartered in)\s+(?:the\s+)?"
-    r"([A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+){0,2})", re.I)
+    r"(?:proudly\s+)?(?:[Ss]erving|SERVING|[Ll]ocated in|[Bb]ased in|[Hh]eadquartered in)\s+"
+    r"(?:the\s+)?((?:[A-Z][a-zA-Z.'\-]+[ ]){0,2}[A-Z][a-zA-Z.'\-]+)")
 
 def serving_hits(text, title):
     """A town named after 'serving' counts only if the page backs it up."""
     out = []
     tl = (title or "").lower()
     for m in SERVING.finditer(text or ""):
-        raw = m.group(1)
+        raw = strip_tail(m.group(1))
         st_inside = ""
         parts = raw.split()
         # "Leavenworth Kansas" -> town Leavenworth, state KS
@@ -119,10 +131,33 @@ def serving_hits(text, title):
             out.append((c, st, 5 if st_inside else (4 if near_state else 3)))
     return out
 
+# "<Name> Roofing" is almost always the brand, not the town. Skybird Roofing,
+# Tiger Roofing, Underdog Roofing. That pattern is deliberately not here.
+TITLE_PATS = [
+    re.compile(r"\bRoof(?:ing|ers?)(?:\s+\w+){0,3}?\s+(?:in|of|serving)\s+"
+               r"([A-Z][a-zA-Z.'\-]+(?:[ ][A-Z][a-zA-Z.'\-]+){0,2})"),
+    re.compile(r"\b(?:in|serving)\s+([A-Z][a-zA-Z.'\-]+(?:[ ][A-Z][a-zA-Z.'\-]+){0,2})\s*[,|]"),
+]
+BRANDY = {"certainteed","gaf","owens","corning","malarkey","tamko","atlas","iko","velux",
+          "premier","quality","trusted","expert","professional","affordable","reliable",
+          "best","top","local","american","national","united","superior","advanced","elite"}
+
+def title_hits(title):
+    """A town printed in the page title is the strongest signal a site gives."""
+    out = []
+    for pat in TITLE_PATS:
+        for m in pat.finditer(title or ""):
+            c = clean(strip_tail(m.group(1)))
+            if not c or len(c) < 4: continue
+            if any(t.lower() in BRANDY for t in c.split()): continue
+            out.append((c, "", 8))
+    return out
+
 def resolve(rec):
     txt = rec.get("snippet") or ""
     if not txt: return "", ""
-    cands = candidates(txt) + serving_hits(txt, rec.get("title",""))
+    cands = (candidates(txt) + serving_hits(txt, rec.get("title",""))
+             + title_hits(rec.get("title","")))
     if not cands: return "", ""
     score = collections.Counter(); st_of = {}
     for c, s, wgt in cands:
@@ -133,7 +168,17 @@ def resolve(rec):
         k = c.lower().replace(" ", "")
         if k in title or k in dom: score[c] += 5
     best, _ = score.most_common(1)[0]
-    return best, st_of.get(best, "")
+    st = st_of.get(best, "")
+    if not st:
+        # the state the page leans on, when one clearly dominates
+        counts = {ab: len(re.findall(r"\b" + re.escape(name) + r"\b", txt, re.I))
+                  for name, ab in ST.items()}
+        counts = {k: v for k, v in counts.items() if v >= 3}
+        if counts:
+            top = sorted(counts.items(), key=lambda x: -x[1])
+            if len(top) == 1 or top[0][1] >= 2 * top[1][1]:
+                st = top[0][0]
+    return best, st
 if __name__ == "__main__":
     out = {}; got = 0
     for l in open("enrich.jsonl"):

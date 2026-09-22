@@ -1,7 +1,7 @@
 """Push the latest copy onto leads that have NOT been emailed yet.
 Leads already contacted are never touched: their sequence is running."""
-import json, os, subprocess
-CID = os.environ.get("INSTANTLY_CAMPAIGN_ID", "e1550c84-ef2f-42a9-9175-42ea109cc67a")
+import json, subprocess
+CID = "e1550c84-ef2f-42a9-9175-42ea109cc67a"
 K = open('/home/user/.secrets/instantly_key').read().strip()
 
 def post(path, body):

@@ -142,14 +142,14 @@ def money_line(kind, state):
     return "One full re-roof is worth more than a year of repairs put together."
 
 def pick_competitor(city, state, dom, idx):
-    if not city: return None
-    hits = idx.get(city.lower()) or []
-    for h in hits:
+    """Only cite a rival in the same state. Bellevue WA is not Bellevue TN,
+    and a citation from the wrong side of the country kills the whole email."""
+    if not city or not state:
+        return None                      # no state, no citation. Never guess.
+    for h in idx.get(city.lower()) or []:
         if h['domain'] == dom: continue
-        if state and h.get('state') and h['state'] != state: continue
+        if h.get('state') != state: continue
         return h
-    for h in hits:
-        if h['domain'] != dom: return h
     return None
 
 def build(lead, form, enr, sm, idx):

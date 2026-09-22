@@ -1,6 +1,6 @@
 """Push any newly-rebuilt leads into the live campaign, skipping ones already there."""
-import json, os, subprocess, os, sys
-CID = os.environ.get("INSTANTLY_CAMPAIGN_ID", "e1550c84-ef2f-42a9-9175-42ea109cc67a")
+import json, subprocess, os, sys
+CID = "e1550c84-ef2f-42a9-9175-42ea109cc67a"
 K = open('/home/user/.secrets/instantly_key').read().strip()
 
 def api(method, path, body=None):
