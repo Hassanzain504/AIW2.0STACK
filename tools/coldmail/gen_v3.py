@@ -65,6 +65,9 @@ def service_line(counts):
     if comm >= 3 and comm >= 2 * max(1, resi):
         if parts: return f"Commercial roofing and {parts[0]}."
         return "Commercial roofing."
+    if resi >= 3 and resi >= 2 * max(1, comm):
+        if parts: return f"Residential roofing and {parts[0]}."
+        return "Residential roofing."
     if comm >= 2 and resi >= 2:
         if parts: return f"Commercial and residential, {parts[0]}."
         return "Commercial and residential."
@@ -179,6 +182,10 @@ def build(lead, form, enr, sm, idx):
                  "re-bath","roto-rooter","roto rooter","roof maxx","power home","erie home")
     if any(x in (co or "").lower() for x in FRANCHISE):
         return None, {"domain": dom}, "franchise or national brand, local businesses only"
+    _t = ((enr.get(dom) or {}).get("title") or "").lower()
+    if any(x in _t for x in ("slot", "gacor", "casino", "poker", "togel", "judi", "betting",
+                             "domain for sale", "buy this domain", "parked")):
+        return None, {"domain": dom}, "domain is parked or hijacked, not their site any more"
     f = form.get(dom, {}); e = enr.get(dom, {}); s = sm.get(dom, {})
     try:
         _RES = json.load(open('cities_resolved.json'))
@@ -226,9 +233,19 @@ def build(lead, form, enr, sm, idx):
         return None, facts, "nothing evidenced to read back"
     def one_item(line):
         return bool(line) and "," not in line and " and " not in line
-    if one_item(sl_mats) and sl_svc and not one_item(sl_svc):
+    strong_mat = [n for n, c in counts.items() if c >= 5 and n in ROOF_MATS]
+    if one_item(sl_mats) and strong_mat:
+        support = [lbl for k, lbl in SVC_READ if counts.get(k, 0) >= 2]
+        if support:
+            sl_mats = f"{strong_mat[0]} and {support[0]}."
+            sl_mats = sl_mats[0].upper() + sl_mats[1:]
+        elif counts.get("commercial", 0) >= 2:
+            sl_mats = f"{strong_mat[0]} and commercial work."
+            sl_mats = sl_mats[0].upper() + sl_mats[1:]
+        sl = sl_mats
+    elif one_item(sl_mats) and sl_svc and not one_item(sl_svc):
         sl = sl_svc                      # prefer the work mix over one lonely material
-    if one_item(sl) and not sl.lower().startswith("commercial"):
+    if one_item(sl) and not sl.lower().startswith(("commercial", "residential")):
         return None, facts, "read-back would be a single item, too thin to open on"
     facts["readback_kind"] = "materials" if sl_mats else "services"
     # a town is required only by the angles that name one
