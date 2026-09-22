@@ -43,6 +43,7 @@ def evidenced(counts):
 
 SVC_READ = [
   ("insurance claims", "insurance work"), ("storm damage", "storm damage"),
+  ("coatings", "roof coatings"),
   ("replacement", "replacement"), ("repair", "repair"), ("maintenance", "maintenance"),
   ("inspection", "inspections"), ("gutters", "gutters"), ("siding", "siding"),
   ("windows", "windows"), ("solar", "solar"),
@@ -56,10 +57,18 @@ def service_line(counts):
                    if counts.get(k, 0) == 1 and lbl not in {l for l, _ in strong}]
     strong.sort(key=lambda x: -x[1])
     parts = [l for l, _ in strong][:4]
-    if len(parts) < 2:
-        both = counts.get("commercial", 0) >= 3 and counts.get("residential", 0) >= 3
-        if both: return "Commercial and residential."
-        return ""
+    if len(parts) >= 2:
+        line = ", ".join(parts[:-1]) + " and " + parts[-1]
+        return line[0].upper() + line[1:] + "."
+    # only when nothing specific is evidenced: fall back to what the site shouts
+    comm = counts.get("commercial", 0); resi = counts.get("residential", 0)
+    if comm >= 3 and comm >= 2 * max(1, resi):
+        if parts: return f"Commercial roofing and {parts[0]}."
+        return "Commercial roofing."
+    if comm >= 2 and resi >= 2:
+        if parts: return f"Commercial and residential, {parts[0]}."
+        return "Commercial and residential."
+    return ""
     line = ", ".join(parts[:-1]) + " and " + parts[-1]
     return line[0].upper() + line[1:] + "."
 
@@ -205,10 +214,12 @@ def build(lead, form, enr, sm, idx):
     sl = sl_mats or sl_svc
     if not sl:
         return None, facts, "nothing evidenced to read back"
-    if sl_mats and sl_mats.count(" ") == 0 and not sl_svc:
-        return None, facts, "read-back would be a single word, too thin to open on"
-    if sl_mats and sl_mats.count(",") == 0 and " and " not in sl_mats and sl_svc:
+    def one_item(line):
+        return bool(line) and "," not in line and " and " not in line
+    if one_item(sl_mats) and sl_svc and not one_item(sl_svc):
         sl = sl_svc                      # prefer the work mix over one lonely material
+    if one_item(sl) and not sl.lower().startswith("commercial"):
+        return None, facts, "read-back would be a single item, too thin to open on"
     facts["readback_kind"] = "materials" if sl_mats else "services"
     if not city or not re.fullmatch(r"[A-Za-z][A-Za-z .'\-]{2,27}", city):
         return None, facts, "could not establish their town"

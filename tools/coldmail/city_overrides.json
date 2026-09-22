@@ -118,5 +118,30 @@
     "city": "",
     "state": "",
     "why": "resolver said 'North Texas', which is a region, not a town"
+  },
+  "btaww.com": {
+    "city": "",
+    "state": "",
+    "why": "resolver said 'Education', which is not a town"
+  },
+  "ckjt.com": {
+    "city": "",
+    "state": "",
+    "why": "resolver said 'South Carolina', a state not a town"
+  },
+  "southernroofing.co": {
+    "city": "Nashville",
+    "state": "TN",
+    "why": "own title: 'Roofing Company Nashville'; Nashville appears 22 times. 'Middle Tennessee' is a region"
+  },
+  "austermillerroofing.com": {
+    "city": "Nashville",
+    "state": "TN",
+    "why": "own title: 'Austermiller Roofing Company - Nashville, TN'"
+  },
+  "dmservicegroup.com": {
+    "city": "",
+    "state": "",
+    "why": "resolver paired Denver with KS; the page names Denver once and Kansas twice, too ambiguous to state"
   }
 }
