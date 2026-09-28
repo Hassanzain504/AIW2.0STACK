@@ -27,7 +27,7 @@ if (res && Array.isArray(res.content) && res.stop_reason !== 'refusal') {
 text = text
   .replace(/https?:\/\/\S+|www\.\S+/gi, '')
   .replace(/\p{Extended_Pictographic}/gu, '')
-  .replace(/\s*[—–]\s*/g, ', ')
+  .replace(/\s*[\u2014\u2013]\s*/g, ', ')
   .replace(/\s+/g, ' ')
   .trim()
   .replace(/^["']+|["']+$/g, '')
