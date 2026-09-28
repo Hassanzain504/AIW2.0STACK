@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "linkedin-browser": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--user-data-dir",
+        ".browser-profiles/linkedin",
+        "--timeout-action",
+        "10000"
+      ]
+    }
+  }
+}

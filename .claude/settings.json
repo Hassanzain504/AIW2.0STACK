@@ -19,13 +19,25 @@
       "Bash(grep:*)",
       "Bash(curl:*)",
       "Bash(jq:*)",
-      "Bash(open:*)"
+      "Bash(open:*)",
+      "mcp__linkedin-browser__browser_navigate",
+      "mcp__linkedin-browser__browser_snapshot",
+      "mcp__linkedin-browser__browser_take_screenshot",
+      "mcp__linkedin-browser__browser_wait_for",
+      "mcp__linkedin-browser__browser_navigate_back",
+      "mcp__linkedin-browser__browser_tabs",
+      "mcp__linkedin-browser__browser_find"
     ],
     "ask": [
       "Bash(rm:*)",
       "Bash(git push:*)",
       "Bash(vercel:remove)",
       "Bash(supabase:db reset)"
+    ],
+    "deny": [
+      "mcp__linkedin-browser__browser_run_code_unsafe",
+      "mcp__linkedin-browser__browser_evaluate",
+      "mcp__linkedin-browser__browser_file_upload"
     ]
   }
 }

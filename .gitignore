@@ -29,3 +29,6 @@ research/02-niche-research/*/raw/
 *.swp
 *.swo
 Thumbs.db
+
+# Browser profiles (login cookies), never commit
+.browser-profiles/
