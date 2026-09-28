@@ -1,0 +1,235 @@
+{
+  "name": "Review Requests 2 - Link Click",
+  "nodes": [
+    {
+      "name": "Link Clicked",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "f53c110f-e4fa-1517-402f-66558ad66579",
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "review",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "8477d265-d8a1-d6a5-16fe-326ed0fec51a"
+    },
+    {
+      "name": "Read Config",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_GOOGLE_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Config"
+        },
+        "options": {}
+      },
+      "alwaysOutputData": true,
+      "id": "10adb63d-7a8d-6798-fb1a-7c752b643101"
+    },
+    {
+      "name": "Check Click",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        0
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "language": "javaScript",
+        "jsCode": "// Shared helpers. build.mjs prepends this file to every Code node.\n\nconst REQUIRED_CONFIG = ['business_name', 'google_review_url', 'twilio_from_number', 'public_base_url', 'timezone'];\n\nconst CONFIG_DEFAULTS = {\n  send_start_hour: '9',\n  send_end_hour: '20',\n  first_delay_hours: '1',\n  followup1_days: '2',\n  followup2_days: '6',\n  stop_on_click: 'TRUE',\n  ai_model: 'claude-opus-5',\n  max_sends_per_run: '20',\n  paused: 'FALSE',\n  test_mode: 'FALSE',\n  owner_phone: '',\n};\n\nconst TRACKER_COLUMNS = [\n  'job_id', 'created_at', 'customer_name', 'phone', 'service', 'technician', 'notes', 'consent',\n  'status', 'step', 'msg1_at', 'msg2_at', 'msg3_at', 'clicked', 'clicked_at', 'reviewed',\n  'opted_out', 'last_message', 'last_error',\n];\n\nfunction truthy(v) {\n  return ['true', 'yes', 'y', '1', 'x'].includes(String(v ?? '').trim().toLowerCase());\n}\n\nfunction readConfig(items) {\n  const cfg = { ...CONFIG_DEFAULTS };\n  for (const it of items) {\n    const key = String(it.json.key ?? '').trim();\n    const value = String(it.json.value ?? '').trim();\n    if (key && value !== '') cfg[key] = value;\n  }\n  const missing = REQUIRED_CONFIG.filter((k) => !cfg[k]);\n  if (missing.length) {\n    throw new Error('Config tab is missing: ' + missing.join(', '));\n  }\n  cfg.public_base_url = cfg.public_base_url.replace(/\\/+$/, '');\n  return cfg;\n}\n\nfunction normPhone(raw) {\n  const d = String(raw ?? '').replace(/\\D/g, '');\n  if (d.length === 10) return '+1' + d;\n  if (d.length === 11 && d[0] === '1') return '+' + d;\n  return '';\n}\n\nfunction toTrackerRow(rec) {\n  const row = {};\n  for (const col of TRACKER_COLUMNS) row[col] = rec[col] ?? '';\n  return row;\n}\n\n// Reads the job id from the tracked link and filters out link-preview bots.\n\nconst cfg = readConfig($('Read Config').all());\nconst wh = $('Link Clicked').first().json;\nconst id = String((wh.query && wh.query.id) || '').trim().toLowerCase();\nconst ua = String((wh.headers && wh.headers['user-agent']) || '').toLowerCase();\n\nconst validId = /^[a-z0-9]{6,20}$/.test(id);\nconst isBot = !ua || /bot|crawler|spider|preview|facebookexternalhit|whatsapp|slack|discord|telegram|skype|curl|wget|python|headless/.test(ua);\n\nreturn [{\n  json: {\n    redirect: cfg.google_review_url,\n    record: validId && !isBot,\n    job_id: validId ? id : '',\n  },\n}];\n"
+      },
+      "id": "88fd4e40-45ad-bb72-7279-c3b1f6798466"
+    },
+    {
+      "name": "Redirect to Google",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        720,
+        0
+      ],
+      "parameters": {
+        "respondWith": "redirect",
+        "redirectURL": "={{ $json.redirect }}",
+        "options": {}
+      },
+      "id": "7fb09089-b3e2-dba0-4182-5a0d0c8e6df5"
+    },
+    {
+      "name": "Real Click?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        960,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "7bd0b9ef-a174-eb6a-f824-d057b7223502",
+              "leftValue": "={{ String($json.record) }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e6a5a19c-c3d9-61ed-b6ff-224011f44edf"
+    },
+    {
+      "name": "Click Row",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1200,
+        0
+      ],
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "language": "javaScript",
+        "jsCode": "// Shared helpers. build.mjs prepends this file to every Code node.\n\nconst REQUIRED_CONFIG = ['business_name', 'google_review_url', 'twilio_from_number', 'public_base_url', 'timezone'];\n\nconst CONFIG_DEFAULTS = {\n  send_start_hour: '9',\n  send_end_hour: '20',\n  first_delay_hours: '1',\n  followup1_days: '2',\n  followup2_days: '6',\n  stop_on_click: 'TRUE',\n  ai_model: 'claude-opus-5',\n  max_sends_per_run: '20',\n  paused: 'FALSE',\n  test_mode: 'FALSE',\n  owner_phone: '',\n};\n\nconst TRACKER_COLUMNS = [\n  'job_id', 'created_at', 'customer_name', 'phone', 'service', 'technician', 'notes', 'consent',\n  'status', 'step', 'msg1_at', 'msg2_at', 'msg3_at', 'clicked', 'clicked_at', 'reviewed',\n  'opted_out', 'last_message', 'last_error',\n];\n\nfunction truthy(v) {\n  return ['true', 'yes', 'y', '1', 'x'].includes(String(v ?? '').trim().toLowerCase());\n}\n\nfunction readConfig(items) {\n  const cfg = { ...CONFIG_DEFAULTS };\n  for (const it of items) {\n    const key = String(it.json.key ?? '').trim();\n    const value = String(it.json.value ?? '').trim();\n    if (key && value !== '') cfg[key] = value;\n  }\n  const missing = REQUIRED_CONFIG.filter((k) => !cfg[k]);\n  if (missing.length) {\n    throw new Error('Config tab is missing: ' + missing.join(', '));\n  }\n  cfg.public_base_url = cfg.public_base_url.replace(/\\/+$/, '');\n  return cfg;\n}\n\nfunction normPhone(raw) {\n  const d = String(raw ?? '').replace(/\\D/g, '');\n  if (d.length === 10) return '+1' + d;\n  if (d.length === 11 && d[0] === '1') return '+' + d;\n  return '';\n}\n\nfunction toTrackerRow(rec) {\n  const row = {};\n  for (const col of TRACKER_COLUMNS) row[col] = rec[col] ?? '';\n  return row;\n}\n\n// Tracker update for a real click.\n\nreturn { json: { job_id: $json.job_id, clicked: 'TRUE', clicked_at: new Date().toISOString() } };\n"
+      },
+      "id": "500cf681-b167-1995-f8aa-d916cb6cd36b"
+    },
+    {
+      "name": "Mark Clicked",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1440,
+        0
+      ],
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_GOOGLE_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Tracker"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "job_id"
+          ],
+          "schema": []
+        },
+        "options": {
+          "cellFormat": "RAW"
+        }
+      },
+      "onError": "continueRegularOutput",
+      "id": "fb012fd8-145e-911c-c779-aab5b22e5c8e"
+    }
+  ],
+  "connections": {
+    "Link Clicked": {
+      "main": [
+        [
+          {
+            "node": "Read Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Config": {
+      "main": [
+        [
+          {
+            "node": "Check Click",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Click": {
+      "main": [
+        [
+          {
+            "node": "Redirect to Google",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redirect to Google": {
+      "main": [
+        [
+          {
+            "node": "Real Click?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Real Click?": {
+      "main": [
+        [
+          {
+            "node": "Click Row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Click Row": {
+      "main": [
+        [
+          {
+            "node": "Mark Clicked",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "active": false
+}
