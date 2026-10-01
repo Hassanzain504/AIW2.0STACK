@@ -54,7 +54,7 @@ In mein se kuch cheezein client se leni hongi.
 
 **Aap ke accounts:**
 - [ ] Hostinger par n8n (VPS, neeche Step 1 dekhein)
-- [ ] Google account (Sheet, Form, aur service account ke liye)
+- [ ] Google account (Sheet ke liye)
 - [ ] Twilio account + Toll-Free number
 - [ ] Anthropic API key (console.anthropic.com)
 
@@ -88,7 +88,7 @@ job_id	created_at	customer_name	phone	service	technician	notes	consent	status	st
 | owner_phone | +15551234567 | Owner ka mobile |
 | send_start_hour | 9 | Is ghante se pehle SMS nahi jayega |
 | send_end_hour | 20 | Is ghante ke baad SMS nahi jayega (20 = raat 8) |
-| first_delay_hours | 1 | Form ke kitne ghante baad pehla SMS |
+| first_delay_hours | 1 | Job completed ke kitne ghante baad pehla SMS |
 | followup1_days | 2 | Pehle SMS ke kitne din baad follow-up 1 |
 | followup2_days | 6 | Pehle SMS ke kitne din baad follow-up 2 |
 | stop_on_click | TRUE | Link click hote hi follow-ups band |
@@ -133,7 +133,7 @@ Client ke estimate, invoice ya booking form par bhi yeh line honi chahiye:
 
 1. twilio.com par account banayein aur balance add karein ($20 kaafi hai, mahinon chalega).
 2. Phone Numbers > Buy a number > **Toll-Free** number lein.
-3. Toll-Free Verification submit karein (Messaging > Regulatory Compliance). Client ki business details, website, opt-in ka tareeqa (form wali checkbox + invoice wali line), aur sample message dein:
+3. Toll-Free Verification submit karein (Messaging > Regulatory Compliance). Client ki business details, website, opt-in ka tareeqa (Jobs tab ka consent column + invoice wali line), aur sample message dein:
    > ABC Roofing: Hi Sarah, thanks for choosing us for your roof repair. Would you share how it went in a quick Google review? https://... Reply STOP to opt out.
 4. Approval mein 1 se 2 hafte lagte hain. Tab tak testing apne verified number par ho sakti hai.
 5. Number ki settings > Messaging > "A message comes in" > Webhook > `https://<public_base_url>/webhook/twilio-inbound` > HTTP POST.
