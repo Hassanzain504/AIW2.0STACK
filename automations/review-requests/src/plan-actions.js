@@ -152,7 +152,7 @@ for (const [id, rec] of tracker) {
         _action: 'send',
         _step: nextStep,
         _to: testMode ? ownerPhone : rec.phone,
-        _from: cfg.twilio_from_number,
+        _from: normPhone(cfg.twilio_from_number) || cfg.twilio_from_number,
         _link: `${cfg.public_base_url}/webhook/review?id=${id}`,
         _business: cfg.business_name,
         _claude_body: claudeBody(rec, nextStep),

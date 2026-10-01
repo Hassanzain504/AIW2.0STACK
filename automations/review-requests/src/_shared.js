@@ -49,12 +49,13 @@ function normPhone(raw) {
 }
 
 // Owner phone may be outside the US (for example during testing), so any
-// E.164 number is accepted here. Customers still need a US number.
+// international number is accepted here. Customers still need a US number.
+// Google Sheets drops a leading "+", so digits alone are accepted too.
 function normOwnerPhone(raw) {
-  const s = String(raw ?? '').trim();
-  const d = s.replace(/\D/g, '');
-  if (s.startsWith('+') && d.length >= 8 && d.length <= 15) return '+' + d;
-  return normPhone(s);
+  const us = normPhone(raw);
+  if (us) return us;
+  const d = String(raw ?? '').replace(/\D/g, '');
+  return d.length >= 8 && d.length <= 15 ? '+' + d : '';
 }
 
 function toTrackerRow(rec) {

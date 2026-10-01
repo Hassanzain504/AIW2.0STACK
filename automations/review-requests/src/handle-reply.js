@@ -29,7 +29,7 @@ if (from && STOP_WORDS.includes(word)) {
       json: {
         _kind: 'forward',
         _to: owner,
-        _from: cfg.twilio_from_number,
+        _from: normPhone(cfg.twilio_from_number) || cfg.twilio_from_number,
         _body: `Customer reply from ${who}, ${body.From}:\n"${text.slice(0, 400)}"`,
       },
     });
