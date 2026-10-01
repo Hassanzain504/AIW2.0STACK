@@ -14,7 +14,9 @@ const uuid = (seed) => {
 const dir = new URL('.', import.meta.url);
 const SHEET_ID = process.env.SHEET_ID || 'YOUR_GOOGLE_SHEET_ID';
 const shared = readFileSync(new URL('src/_shared.js', dir), 'utf8');
-const src = (name) => shared + '\n' + readFileSync(new URL(`src/${name}.js`, dir), 'utf8');
+// These Code nodes use no shared helpers, so they stay short.
+const STANDALONE = ['click-row', 'reply-row', 'build-sms'];
+const src = (name) => (STANDALONE.includes(name) ? '' : shared + '\n') + readFileSync(new URL(`src/${name}.js`, dir), 'utf8');
 
 let x = 0;
 const pos = () => [(x++) * 240, 0];
