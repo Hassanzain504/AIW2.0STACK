@@ -21,7 +21,7 @@ if (from && STOP_WORDS.includes(word)) {
 } else if (from && START_WORDS.includes(word)) {
   for (const r of rows) out.push({ json: { _kind: 'update', job_id: r.job_id, opted_out: 'FALSE', status: 'done' } });
 } else if (text) {
-  const owner = normPhone(cfg.owner_phone);
+  const owner = normOwnerPhone(cfg.owner_phone);
   if (owner) {
     const last = rows[rows.length - 1];
     const who = last ? `${last.customer_name} (${last.service})` : body.From;

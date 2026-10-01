@@ -48,6 +48,15 @@ function normPhone(raw) {
   return '';
 }
 
+// Owner phone may be outside the US (for example during testing), so any
+// E.164 number is accepted here. Customers still need a US number.
+function normOwnerPhone(raw) {
+  const s = String(raw ?? '').trim();
+  const d = s.replace(/\D/g, '');
+  if (s.startsWith('+') && d.length >= 8 && d.length <= 15) return '+' + d;
+  return normPhone(s);
+}
+
 function toTrackerRow(rec) {
   const row = {};
   for (const col of TRACKER_COLUMNS) row[col] = rec[col] ?? '';

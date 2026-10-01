@@ -16,8 +16,8 @@ const followup2Days = Number(cfg.followup2_days);
 const stopOnClick = truthy(cfg.stop_on_click);
 const testMode = truthy(cfg.test_mode);
 const maxSends = Number(cfg.max_sends_per_run) || 20;
-const ownerPhone = normPhone(cfg.owner_phone);
-if (testMode && !ownerPhone) throw new Error('test_mode is on but owner_phone is empty or not a US number');
+const ownerPhone = normOwnerPhone(cfg.owner_phone);
+if (testMode && !ownerPhone) throw new Error('test_mode is on but owner_phone is empty or not a valid number (use +country code)');
 
 function hashId(s) {
   let h1 = 0x811c9dc5;
