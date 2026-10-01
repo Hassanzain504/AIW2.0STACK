@@ -10,6 +10,13 @@
         "--timeout-action",
         "10000"
       ]
+    },
+    "n8n": {
+      "type": "http",
+      "url": "https://hassan1232312.app.n8n.cloud/mcp-server/http",
+      "headers": {
+        "Authorization": "Bearer ${N8N_MCP_TOKEN}"
+      }
     }
   }
 }
