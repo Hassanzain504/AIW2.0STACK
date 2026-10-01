@@ -99,13 +99,13 @@ function workflow(name, nodes, pairs) {
   return { name, nodes, connections: connect(pairs), settings: { executionOrder: 'v1' }, pinData: {}, active: false };
 }
 
-// 1. Hourly: intake new form responses, send first message and follow-ups.
+// 1. Hourly: intake newly completed jobs, send first message and follow-ups.
 x = 0;
 const wf1 = workflow('Review Requests 1 - Hourly Sender', [
   { name: 'Every Hour', type: 'n8n-nodes-base.scheduleTrigger', typeVersion: 1.2, position: pos(),
     parameters: { rule: { interval: [{ field: 'hours', hoursInterval: 1 }] } } },
   sheet('Read Config', 'Config', 'read', readOnce),
-  sheet('Read Form Responses', 'Form Responses 1', 'read', readOnce),
+  sheet('Read Jobs', 'Jobs', 'read', readOnce),
   sheet('Read Tracker', 'Tracker', 'read', readOnce),
   code('Plan Actions', 'plan-actions'),
   ifEquals('Needs Message?', '={{ $json._action }}', 'send'),
@@ -140,8 +140,8 @@ const wf1 = workflow('Review Requests 1 - Hourly Sender', [
   sheet('Save to Tracker', 'Tracker', 'appendOrUpdate'),
 ], [
   ['Every Hour', 'Read Config'],
-  ['Read Config', 'Read Form Responses'],
-  ['Read Form Responses', 'Read Tracker'],
+  ['Read Config', 'Read Jobs'],
+  ['Read Jobs', 'Read Tracker'],
   ['Read Tracker', 'Plan Actions'],
   ['Plan Actions', 'Needs Message?'],
   ['Needs Message?', 'Write Message (Claude)', 0],

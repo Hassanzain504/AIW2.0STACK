@@ -1,20 +1,17 @@
 # Google Review Request Automation (n8n)
 
-Yeh ek local service business (US) ke liye automation hai. Kaam khatam hone par technician ya owner ek Google Form bharta hai. Us ke baad system khud customer ko SMS bhejta hai jis mein Google review ka link hota hai. Agar customer review link nahi kholta to 2 din baad pehla follow-up jata hai aur 6 din baad aakhri follow-up. Is ke baad system ruk jata hai.
+Yeh ek local service business (US) ke liye automation hai. Owner apni jobs Google Sheet ke `Jobs` tab mein likhta hai. Kaam khatam hone par woh us row mein "Job completed" tick karta hai. Us ke baad system khud customer ko SMS bhejta hai jis mein Google review ka link hota hai. Agar customer review link nahi kholta to 2 din baad pehla follow-up jata hai aur 6 din baad aakhri follow-up. Is ke baad system ruk jata hai.
 
 Volume: mahine mein 10 se 30 jobs ke liye design kiya gaya hai.
 
 ## Yeh kaise kaam karta hai
 
 ```
-Google Form (kaam khatam)
-      |
-      v
-Google Sheet  "Form Responses 1"
+Google Sheet "Jobs" tab (owner "Job completed" tick karta hai)
       |
       v   (n8n, har ghante)
 Workflow 1: Hourly Sender
-  - naye form responses "Tracker" tab mein daalta hai
+  - nayi completed jobs "Tracker" tab mein daalta hai
   - Claude se personalized SMS likhwata hai
   - Twilio se SMS bhejta hai (sirf subah 9 se raat 8, client ke time zone mein)
   - Tracker update karta hai
@@ -40,7 +37,7 @@ Message schedule (Config tab se badla ja sakta hai):
 
 | Message | Kab jata hai |
 |---|---|
-| Pehla message | Form bharne ke 1 se 2 ghante baad |
+| Pehla message | Job completed tick hone ke 1 se 2 ghante baad |
 | Follow-up 1 | Pehle message ke 2 din baad, agar link click nahi hua |
 | Follow-up 2 (aakhri) | Pehle message ke 6 din baad, agar link click nahi hua |
 
@@ -103,24 +100,21 @@ Pehli 5 rows zaroori hain. Baaki khali chhod dein to default values lagti hain.
 
 4. Browser ke URL se Sheet ID copy karein: `https://docs.google.com/spreadsheets/d/`**`YEH_WALA_HISSA`**`/edit`
 
-## Step 3: Google Form banayein
+## Step 3: Jobs tab banayein
 
-1. Nayi Google Form banayein, naam: `Job Complete - <Client Name>`.
-2. Yeh sawal isi naam se banayein:
+Sheet mein naya tab banayein, naam **`Jobs`**. A1 mein yeh headers paste karein:
 
-| Sawal | Type | Required |
-|---|---|---|
-| Customer name | Short answer | Haan |
-| Customer mobile number | Short answer | Haan |
-| Service done | Short answer (masalan "roof leak repair") | Haan |
-| Technician name | Short answer | Nahi |
-| Job notes | Paragraph (ek chhoti personal detail, masalan "replaced shingles on north side") | Nahi |
-| Customer agreed to receive texts | Checkbox, ek option: "Yes, customer agreed to receive a text from us" | Haan |
+```
+Job date	Customer name	Customer mobile number	Service done	Technician name	Job notes	Customer agreed to receive texts	Job completed
+```
 
-3. Form > Responses > "Link to Sheets" > **Select existing spreadsheet** > Step 2 wali Sheet select karein. Is se Sheet mein `Form Responses 1` tab ban jayega. Is tab ka naam mat badlein.
-4. Form ka link client ko bhejein. Technician isay phone ki home screen par bookmark kar le.
+- "Customer agreed to receive texts" aur "Job completed" columns ko checkbox banayein: column select karein > Insert > Checkbox.
+- Owner har job ki ek row likhta hai. Kaam khatam hone par **Job completed** tick karta hai. Agle ghante system us customer ko SMS bhej deta hai.
+- Columns ka order zaroori nahi, system headers ke naam se pehchanta hai. Owner ki apni purani sheet ho to us ke headers mein bas yeh lafz hone chahiye: "customer" + "name", "phone" ya "mobile", "service", "complete" (ya "Status" column jis mein "Completed" likha ho).
+- Agar consent ka column na ho to system maan leta hai ke consent invoice ya booking ke waqt liya gaya hai.
+- Ek customer ki ek tareekh par ek hi review request jati hai. Isi liye "Job date" column rakhein.
 
-"Customer agreed" checkbox zaroori hai. US ke TCPA qanoon ke tehat customer ki ijazat ke baghair SMS bhejna risky hai. Jis row mein yeh tick nahi hoga, us ko SMS nahi jayega (status `no_consent`).
+US ke TCPA qanoon ke tehat customer ki ijazat ke baghair SMS bhejna risky hai. Consent column FALSE ho to SMS nahi jayega (status `no_consent`).
 
 Client ke estimate, invoice ya booking form par bhi yeh line honi chahiye:
 > By providing your mobile number, you agree to receive text messages from ABC Roofing about your service. Message and data rates may apply. Reply STOP to opt out.
@@ -167,26 +161,26 @@ Agar AI call fail ho jaye to system ek fixed template message bhej deta hai, taa
 ## Step 8: Test karein
 
 1. Config mein `test_mode` = `TRUE`, `first_delay_hours` = `0`, `followup1_days` = `0`, `followup2_days` = `0` rakhein.
-2. Form bharein, apna ya kisi dost ka naam aur number daal kar.
+2. Jobs tab mein ek test row likhein (apna ya kisi dost ka US number) aur Job completed tick karein.
 3. Workflow 1 kholein > "Execute workflow" dabayein. Owner phone par pehla SMS aana chahiye.
 4. Dobara "Execute workflow" dabayein to follow-up 1 aayega, phir follow-up 2.
 5. SMS ka link kholein. Google review page khulna chahiye aur Tracker mein `clicked` = `TRUE` ho jana chahiye.
 6. SMS ka reply "hello" karein. Yeh owner phone par forward hona chahiye.
-7. Test ke baad **Form Responses 1 aur Tracker dono** se test rows delete kar dein.
+7. Test ke baad **Jobs aur Tracker dono** se test rows delete kar dein.
 8. Config wapas set karein: `test_mode` = `FALSE`, `first_delay_hours` = `1`, `followup1_days` = `2`, `followup2_days` = `6`.
 
 ## Tracker ke status
 
 | status | Matlab |
 |---|---|
-| pending | Form aa gaya, pehla SMS abhi nahi gaya |
+| pending | Job completed ho gayi, pehla SMS abhi nahi gaya |
 | sent_1, sent_2 | Pehla message ya follow-up 1 chala gaya |
 | done | Teeno messages ja chuke, system ruk gaya |
 | clicked | Customer ne review link khola, follow-ups band |
 | reviewed | Owner ne `reviewed` column mein TRUE likha, follow-ups band |
 | opted_out | Customer ne STOP likha, dobara kuch nahi jayega |
 | invalid_phone | Number US ka nahi ya ghalat hai |
-| no_consent | Form mein consent tick nahi tha |
+| no_consent | Jobs tab mein consent tick nahi tha |
 | error | SMS nahi gaya, `last_error` dekhein. Dobara try karne ke liye status `pending` (step 0) ya `sent_1` kar dein |
 
 Owner kisi bhi customer ke `reviewed` column mein `TRUE` likh de to us customer ko follow-ups nahi jayenge.
@@ -206,7 +200,7 @@ Owner kisi bhi customer ke `reviewed` column mein `TRUE` likh de to us customer 
 | SMS (~25 messages) | ~$0.50 |
 | Claude API | ~$0.10 |
 | Hostinger VPS | Jo aap pehle se de rahe hain (ek VPS par kai clients chal sakte hain) |
-| Google Sheet / Form | $0 |
+| Google Sheet | $0 |
 
 ## Developer notes
 

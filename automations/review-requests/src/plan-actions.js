@@ -1,4 +1,4 @@
-// Merges new form responses into the tracker and decides, per job,
+// Merges newly completed jobs into the tracker and decides, per job,
 // whether to send the next message, only save a change, or do nothing.
 
 const cfg = readConfig($('Read Config').all());
@@ -46,17 +46,35 @@ for (const it of $('Read Tracker').all()) {
 
 const changed = new Set();
 
-// New form responses become tracker rows.
-for (const it of $('Read Form Responses').all()) {
+// Jobs the owner marked as completed in the Jobs tab become tracker rows.
+// The Jobs tab is matched by header keywords, so column order does not matter.
+function hasColumn(row, test) {
+  return Object.keys(row).some((k) => test(k.toLowerCase()));
+}
+function yes(v) {
+  const s = String(v ?? '').trim().toLowerCase();
+  return s !== '' && !['false', 'no', 'n', '0'].includes(s);
+}
+const isCompletedCol = (k) => k.includes('complete') || k === 'status';
+const isConsentCol = (k) => k.includes('agree') || k.includes('consent');
+
+for (const it of $('Read Jobs').all()) {
   const r = it.json;
-  const ts = pick(r, (k) => k === 'timestamp');
-  if (!ts) continue;
+  const done = pick(r, isCompletedCol).toLowerCase();
+  if (!(truthy(done) || ['complete', 'completed', 'done', 'finished'].includes(done))) continue;
+
+  const name = pick(r, (k) => k.includes('customer') && k.includes('name'));
   const rawPhone = pick(r, (k) => k.includes('phone') || k.includes('mobile'));
-  const id = hashId(ts + '|' + rawPhone);
+  if (!name && !rawPhone) continue;
+  const service = pick(r, (k) => k.includes('service'));
+  const jobDate = pick(r, (k) => k.includes('date') || k === 'timestamp');
+  // One review request per customer per job date (or per service if there is no date).
+  const id = hashId([name, rawPhone, jobDate || service].join('|').toLowerCase());
   if (tracker.has(id)) continue;
 
   const phone = normPhone(rawPhone);
-  const consent = pick(r, (k) => k.includes('agree') || k.includes('consent')) !== '';
+  // No consent column means the owner collects consent elsewhere (invoice or booking form).
+  const consent = hasColumn(r, isConsentCol) ? yes(pick(r, isConsentCol)) : true;
   let status = 'pending';
   if (!phone) status = 'invalid_phone';
   else if (!consent) status = 'no_consent';
@@ -64,9 +82,9 @@ for (const it of $('Read Form Responses').all()) {
   tracker.set(id, {
     job_id: id,
     created_at: now.toUTC().toISO(),
-    customer_name: pick(r, (k) => k.includes('customer') && k.includes('name')),
+    customer_name: name,
     phone: phone || rawPhone,
-    service: pick(r, (k) => k.includes('service')),
+    service,
     technician: pick(r, (k) => k.includes('technician')),
     notes: pick(r, (k) => k.includes('note')),
     consent: consent ? 'TRUE' : 'FALSE',
