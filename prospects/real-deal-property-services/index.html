@@ -12,22 +12,23 @@
     --ink: #1d1a16;
     --ink-soft: #5b544a;
     --sand: #f4ede1;
-    --sand-2: #eadfcc;
     --white: #ffffff;
     --rust: #c4501c;
     --rust-dark: #a33f12;
     --sage: #3f5a3c;
     --line: #dccfb8;
     --ok: #2f7a3e;
+    --blue: #0a84ff;
     --radius: 12px;
   }
   * { box-sizing: border-box; }
   body { margin: 0; font-family: "Inter", system-ui, sans-serif; color: var(--ink); background: var(--sand); line-height: 1.5; }
   h1, h2, h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; line-height: 1.1; margin: 0 0 .4em; }
-  button, input, select, textarea { font: inherit; }
+  button, input { font: inherit; }
 
-  .demo-shell { display: grid; grid-template-columns: minmax(0, 560px) 380px; gap: 48px; justify-content: center; align-items: start; padding: 32px 20px 60px; }
-  .label-top { grid-column: 1 / -1; text-align: center; font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+  .demo-shell { display: grid; grid-template-columns: minmax(0, 540px) 360px; gap: 44px; justify-content: center; align-items: start; padding: 28px 20px 60px; }
+  .label-top { grid-column: 1 / -1; display: flex; justify-content: center; align-items: center; gap: 14px; font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+  .reset { border: 1px solid var(--line); background: var(--white); border-radius: 999px; padding: 4px 12px; font-size: .75rem; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--ink-soft); cursor: pointer; }
 
   /* Customer page */
   .page { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(60,40,10,.12); }
@@ -35,36 +36,48 @@
   .brand .name { font-family: "Bricolage Grotesque"; font-weight: 800; font-size: 1.1rem; line-height: 1.05; }
   .brand .name small { display: block; font-family: "Inter"; font-weight: 600; font-size: .72rem; color: var(--ink-soft); letter-spacing: .06em; text-transform: uppercase; }
   .brand .call { font-weight: 700; color: var(--rust); text-decoration: none; font-size: .95rem; }
-  .intro { background: var(--sage); color: var(--white); padding: 28px 24px 26px; }
-  .intro h1 { font-size: clamp(1.7rem, 4.5vw, 2.2rem); font-weight: 800; }
+  .intro { background: var(--sage); color: var(--white); padding: 26px 24px 24px; }
+  .intro h1 { font-size: clamp(1.7rem, 4.5vw, 2.15rem); font-weight: 800; }
   .intro p { margin: 0; color: #dfe7dc; }
-  .intro .badges { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 14px; font-size: .9rem; font-weight: 600; color: #f2e9d8; }
+  .intro .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .intro .badges span { background: rgba(255,255,255,.12); border-radius: 999px; padding: 4px 12px; font-size: .85rem; font-weight: 600; color: #f2e9d8; }
 
-  form { padding: 8px 24px 28px; }
-  .step { padding: 22px 0; border-bottom: 1px solid var(--line); }
+  .progress { display: flex; gap: 6px; padding: 16px 24px 0; }
+  .progress i { flex: 1; height: 5px; border-radius: 3px; background: var(--line); transition: background .25s; }
+  .progress i.on { background: var(--rust); }
+
+  form { padding: 4px 24px 26px; }
+  .step { padding: 20px 0; border-bottom: 1px solid var(--line); }
   .step:last-of-type { border-bottom: 0; }
   .step-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
-  .num { width: 30px; height: 30px; border-radius: 50%; background: var(--rust); color: var(--white); display: grid; place-items: center; font-weight: 700; font-size: .95rem; flex: none; }
-  .step h2 { font-size: 1.2rem; margin: 0; }
+  .num { width: 30px; height: 30px; border-radius: 50%; background: var(--rust); color: var(--white); display: grid; place-items: center; font-weight: 700; font-size: .95rem; flex: none; transition: background .2s; }
+  .step.complete .num { background: var(--ok); font-size: 0; }
+  .step.complete .num::after { content: ""; width: 10px; height: 6px; border: solid #fff; border-width: 0 0 2.5px 2.5px; transform: rotate(-45deg) translate(1px, -1px); }
+  .step h2 { font-size: 1.18rem; margin: 0; }
   .hint { font-size: .9rem; color: var(--ink-soft); margin: -6px 0 12px 42px; }
 
   .choices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
   .choice { position: relative; display: block; }
   .choice input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; z-index: 1; }
-  .choice span { display: block; text-align: center; padding: 14px 8px; border: 1.5px solid var(--line); border-radius: 10px; font-weight: 600; cursor: pointer; background: #fdfbf7; font-size: .95rem; }
+  .choice span { display: block; text-align: center; padding: 14px 8px; border: 1.5px solid var(--line); border-radius: 10px; font-weight: 600; background: #fdfbf7; font-size: .95rem; transition: border-color .15s, background .15s; }
   .choice input:checked + span { border-color: var(--rust); background: #fbeee6; color: var(--rust-dark); }
   .choice input:focus-visible + span { outline: 3px solid rgba(196,80,28,.35); }
 
-  .drop { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border: 2px dashed var(--line); border-radius: var(--radius); padding: 26px 16px; text-align: center; cursor: pointer; background: #fdfbf7; }
-  .drop:hover { border-color: var(--rust); }
+  .drop { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border: 2px dashed var(--line); border-radius: var(--radius); padding: 24px 16px; text-align: center; cursor: pointer; background: #fdfbf7; transition: border-color .15s, background .15s; }
+  .drop:hover, .drop.over { border-color: var(--rust); background: #fbeee6; }
   .drop svg { width: 34px; height: 34px; color: var(--rust); }
   .drop strong { font-size: 1.02rem; }
   .drop small { color: var(--ink-soft); }
   .thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 12px; }
-  .thumbs img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; }
+  .thumbs:empty { display: none; }
+  .thumb { position: relative; }
+  .thumb img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; display: block; }
+  .thumb button { position: absolute; top: 4px; right: 4px; width: 22px; height: 22px; border-radius: 50%; border: 0; background: rgba(0,0,0,.65); color: #fff; font-size: 14px; line-height: 1; cursor: pointer; }
+  .err { display: none; color: #b3361f; font-weight: 600; font-size: .9rem; margin-top: 10px; }
+  .err.show { display: block; }
 
   .days { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-  .days .choice span { padding: 10px 4px; line-height: 1.2; }
+  .days .choice span { padding: 9px 4px; line-height: 1.2; }
   .days .choice span b { display: block; font-size: 1.05rem; }
   .days .choice span i { font-style: normal; font-size: .78rem; color: var(--ink-soft); }
   .slots { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
@@ -75,51 +88,85 @@
   .fields input:focus { outline: 3px solid rgba(196,80,28,.3); border-color: var(--rust); }
   .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-  .send { width: 100%; margin-top: 22px; padding: 16px; border: 0; border-radius: var(--radius); background: var(--rust); color: var(--white); font-weight: 700; font-size: 1.1rem; cursor: pointer; }
+  .send { width: 100%; margin-top: 20px; padding: 16px; border: 0; border-radius: var(--radius); background: var(--rust); color: var(--white); font-weight: 700; font-size: 1.1rem; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 10px; }
   .send:hover { background: var(--rust-dark); }
+  .send[disabled] { opacity: .75; cursor: wait; }
+  .spinner { width: 18px; height: 18px; border: 2.5px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 50%; animation: spin .7s linear infinite; display: none; }
+  .send[disabled] .spinner { display: block; }
+  @keyframes spin { to { transform: rotate(360deg); } }
   .after { text-align: center; font-size: .88rem; color: var(--ink-soft); margin: 10px 0 0; }
-  .done { display: none; padding: 40px 24px; text-align: center; }
+
+  /* After send: customer's view */
+  .done { display: none; padding: 30px 24px 30px; }
   .done.show { display: block; }
-  .done svg { width: 54px; height: 54px; color: var(--ok); }
+  .done-head { text-align: center; }
+  .done-head svg { width: 50px; height: 50px; color: var(--ok); }
+  .done-head p { color: var(--ink-soft); margin: 0; }
+  .cust-phone { margin: 24px auto 0; max-width: 360px; border: 1.5px solid var(--line); border-radius: 18px; overflow: hidden; }
+  .cust-phone .cp-head { background: #f8f8fa; border-bottom: 1px solid #e3e3e8; padding: 10px 14px; font-size: .82rem; font-weight: 600; color: #555; display: flex; justify-content: space-between; }
+  .cust-phone .cp-body { background: #fff; padding: 12px; min-height: 120px; display: flex; flex-direction: column; gap: 8px; }
+  .cust-phone .waiting { margin: auto; color: #999; font-size: .88rem; text-align: center; }
+  .yes-btn { align-self: flex-end; border: 0; border-radius: 18px; padding: 9px 18px; background: var(--blue); color: #fff; font-weight: 700; cursor: pointer; }
+  .yes-btn:hover { filter: brightness(1.08); }
 
   /* Owner phone */
-  .phone-col { position: sticky; top: 24px; }
+  .phone-col { position: sticky; top: 20px; }
   .phone-col .cap { text-align: center; font-weight: 700; margin-bottom: 12px; }
-  .phone { background: #111; border-radius: 44px; padding: 12px; box-shadow: 0 30px 60px rgba(0,0,0,.25); }
-  .screen { background: #f2f2f6; border-radius: 34px; height: 700px; overflow: hidden; display: flex; flex-direction: column; }
+  .phone { background: #111; border-radius: 44px; padding: 11px; box-shadow: 0 30px 60px rgba(0,0,0,.25); }
+  .screen { position: relative; background: #f2f2f6; border-radius: 34px; height: 690px; overflow: hidden; display: flex; flex-direction: column; }
   .sbar { display: flex; justify-content: space-between; padding: 14px 26px 6px; font-size: .8rem; font-weight: 600; }
-  .thread-head { text-align: center; padding: 6px 0 12px; border-bottom: 1px solid #ddd; background: #f8f8fa; }
-  .thread-head .av { width: 40px; height: 40px; border-radius: 50%; background: var(--rust); color: #fff; display: grid; place-items: center; margin: 0 auto 4px; font-weight: 700; }
-  .thread-head small { font-size: .78rem; color: #666; }
-  .msgs { flex: 1; overflow-y: auto; padding: 14px 12px; display: flex; flex-direction: column; gap: 8px; }
+  .thread-head { text-align: center; padding: 6px 0 10px; border-bottom: 1px solid #ddd; background: #f8f8fa; }
+  .thread-head .av { width: 40px; height: 40px; border-radius: 50%; background: var(--rust); color: #fff; display: grid; place-items: center; margin: 0 auto 4px; font-weight: 700; font-size: .85rem; }
+  .thread-head small { font-size: .76rem; color: #666; }
+  .msgs { flex: 1; overflow-y: auto; padding: 14px 12px; display: flex; flex-direction: column; gap: 8px; scroll-behavior: smooth; }
   .empty { margin: auto; text-align: center; color: #888; font-size: .9rem; padding: 0 20px; }
-  .bubble { align-self: flex-start; max-width: 88%; background: #e5e5ea; border-radius: 18px; padding: 10px 14px; font-size: .9rem; line-height: 1.4; white-space: pre-line; }
-  .bubble.pics { padding: 4px; background: transparent; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; max-width: 75%; }
-  .bubble.pics img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; }
-  .reply { display: flex; gap: 6px; padding: 10px 12px 18px; flex-wrap: wrap; }
-  .reply[hidden] { display: none; }
-  .reply button { border: 1px solid #c8c8cc; background: #fff; border-radius: 999px; padding: 6px 12px; font-size: .8rem; cursor: pointer; }
-  .bubble.me { align-self: flex-end; background: #0a84ff; color: #fff; }
+  .bubble { align-self: flex-start; max-width: 86%; background: #e5e5ea; border-radius: 18px; padding: 9px 13px; font-size: .88rem; line-height: 1.4; white-space: pre-line; animation: pop .25s ease-out; }
+  .bubble b { font-weight: 700; }
+  .bubble.me { align-self: flex-end; background: var(--blue); color: #fff; }
+  .bubble.pics { padding: 0; background: transparent; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; max-width: 70%; }
+  .bubble.pics img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; display: block; }
+  .bubble.sys { align-self: stretch; max-width: none; background: #e8f3ea; color: #1f4d2a; border: 1px solid #c4e0ca; border-radius: 14px; font-size: .84rem; }
+  .bubble.sys strong { display: block; font-size: .95rem; margin-bottom: 2px; }
+  @keyframes pop { from { transform: translateY(6px) scale(.97); opacity: 0; } to { transform: none; opacity: 1; } }
 
-  @media (max-width: 1000px) {
-    .demo-shell { grid-template-columns: minmax(0, 560px); }
-    .phone-col { position: static; max-width: 380px; margin: 0 auto; width: 100%; }
+  .notif { position: absolute; left: 10px; right: 10px; top: 10px; background: rgba(250,250,252,.97); border-radius: 18px; padding: 11px 13px; box-shadow: 0 10px 30px rgba(0,0,0,.18); display: flex; gap: 10px; align-items: flex-start; transform: translateY(-130%); transition: transform .35s cubic-bezier(.2,.9,.3,1.2); z-index: 5; }
+  .notif.show { transform: translateY(0); }
+  .notif .app { width: 34px; height: 34px; border-radius: 9px; background: var(--rust); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: .8rem; flex: none; }
+  .notif .t { font-size: .8rem; line-height: 1.3; }
+  .notif .t b { display: flex; justify-content: space-between; font-size: .82rem; }
+  .notif .t b span { font-weight: 500; color: #888; }
+
+  .reply { padding: 10px 12px 16px; border-top: 1px solid #ddd; background: #f8f8fa; }
+  .reply[hidden] { display: none; }
+  .reply .rl { font-size: .74rem; font-weight: 700; color: #777; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; display: flex; justify-content: space-between; }
+  .reply .rl span { text-transform: none; letter-spacing: 0; font-weight: 500; }
+  .loads { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .loads button, .ask { border: 1px solid #c8c8cc; background: #fff; border-radius: 12px; padding: 7px 8px; font-size: .8rem; cursor: pointer; text-align: left; line-height: 1.25; }
+  .loads button b { display: block; font-size: .92rem; }
+  .loads button:hover, .ask:hover { border-color: var(--blue); }
+  .ask { width: 100%; margin-top: 6px; text-align: center; }
+
+  @media (max-width: 980px) {
+    .demo-shell { grid-template-columns: minmax(0, 540px); }
+    .phone-col { position: static; max-width: 360px; margin: 0 auto; width: 100%; }
   }
   @media (max-width: 480px) {
-    .demo-shell { padding: 0 0 40px; gap: 32px; }
-    .label-top { padding-top: 14px; }
+    .demo-shell { padding: 0 0 40px; gap: 30px; }
+    .label-top { padding-top: 14px; flex-direction: column; gap: 6px; }
     .page { border-radius: 0; }
     .choices { grid-template-columns: 1fr 1fr; }
     .choices .choice:last-child { grid-column: 1 / -1; }
+    .days .choice:last-child { grid-column: auto; }
     .two { grid-template-columns: 1fr; }
     .phone-col { padding: 0 16px; }
   }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 </style>
 </head>
 <body>
 
 <div class="demo-shell">
-  <div class="label-top">Demo built for Bryan at Real Deal Property Services</div>
+  <div class="label-top">Demo built for Bryan at Real Deal Property Services <button class="reset" type="button" id="reset">Restart demo</button></div>
 
   <!-- What the customer sees -->
   <div class="page">
@@ -130,59 +177,69 @@
     <div class="intro">
       <h1>Snap a photo. Get a price. Pick a day.</h1>
       <p>Junk removal and yard cleanups around Ridgecrest. No waiting around for someone to come look at it.</p>
-      <div class="badges"><span>Quotes come straight to Bryan</span><span>Usually priced the same day</span></div>
+      <div class="badges"><span>Goes straight to Bryan</span><span>Priced by text</span><span>Nothing booked until you say yes</span></div>
     </div>
 
-    <form id="quote" novalidate>
-      <div class="step">
-        <div class="step-head"><span class="num">1</span><h2>What do you need?</h2></div>
-        <div class="choices">
-          <label class="choice"><input type="radio" name="job" value="Junk removal" checked><span>Junk removal</span></label>
-          <label class="choice"><input type="radio" name="job" value="Yard cleanup"><span>Yard cleanup</span></label>
-          <label class="choice"><input type="radio" name="job" value="Junk + yard"><span>Both</span></label>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-head"><span class="num">2</span><h2>Snap a few photos</h2></div>
-        <p class="hint">Stand back so the whole pile fits. 2 or 3 photos is plenty.</p>
-        <label class="drop" for="photos">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
-          <strong>Take or add photos</strong>
-          <small>Opens your camera on a phone</small>
-        </label>
-        <input id="photos" type="file" accept="image/*" multiple hidden>
-        <div class="thumbs" id="thumbs"></div>
-      </div>
-
-      <div class="step">
-        <div class="step-head"><span class="num">3</span><h2>Pick a day</h2></div>
-        <div class="days choices" id="days"></div>
-        <div class="slots choices">
-          <label class="choice"><input type="radio" name="slot" value="Morning" checked><span>Morning</span></label>
-          <label class="choice"><input type="radio" name="slot" value="Afternoon"><span>Afternoon</span></label>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-head"><span class="num">4</span><h2>Where should Bryan text you?</h2></div>
-        <div class="fields">
-          <div class="two">
-            <div><label for="name">Name</label><input id="name" autocomplete="name" placeholder="Maria"></div>
-            <div><label for="phone">Mobile</label><input id="phone" type="tel" autocomplete="tel" placeholder="(760) 555-0142"></div>
+    <div id="formWrap">
+      <div class="progress" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <form id="quote" novalidate>
+        <div class="step" data-step="0">
+          <div class="step-head"><span class="num">1</span><h2>What do you need?</h2></div>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="job" value="Junk removal"><span>Junk removal</span></label>
+            <label class="choice"><input type="radio" name="job" value="Yard cleanup"><span>Yard cleanup</span></label>
+            <label class="choice"><input type="radio" name="job" value="Junk + yard cleanup"><span>Both</span></label>
           </div>
-          <div><label for="addr">Address or cross streets</label><input id="addr" autocomplete="street-address" placeholder="China Lake Blvd and Ridgecrest Blvd"></div>
         </div>
-      </div>
 
-      <button class="send" type="submit">Send to Bryan</button>
-      <p class="after">Bryan texts you a price. Nothing is booked until you say yes.</p>
-    </form>
+        <div class="step" data-step="1">
+          <div class="step-head"><span class="num">2</span><h2>Snap a few photos</h2></div>
+          <p class="hint">Stand back so the whole pile fits. 2 or 3 photos is plenty.</p>
+          <label class="drop" for="photos" id="drop">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+            <strong>Take or add photos</strong>
+            <small>Opens your camera on a phone</small>
+          </label>
+          <input id="photos" type="file" accept="image/*" multiple hidden>
+          <div class="thumbs" id="thumbs"></div>
+          <div class="err" id="photoErr">Add at least one photo so Bryan can price it.</div>
+        </div>
+
+        <div class="step" data-step="2">
+          <div class="step-head"><span class="num">3</span><h2>Pick a day</h2></div>
+          <div class="days choices" id="days"></div>
+          <div class="slots choices">
+            <label class="choice"><input type="radio" name="slot" value="Morning"><span>Morning</span></label>
+            <label class="choice"><input type="radio" name="slot" value="Afternoon"><span>Afternoon</span></label>
+          </div>
+        </div>
+
+        <div class="step" data-step="3">
+          <div class="step-head"><span class="num">4</span><h2>Where should Bryan text you?</h2></div>
+          <div class="fields">
+            <div class="two">
+              <div><label for="name">Name</label><input id="name" autocomplete="given-name" placeholder="Maria"></div>
+              <div><label for="phone">Mobile</label><input id="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(760) 555-0142"></div>
+            </div>
+            <div><label for="addr">Address or cross streets</label><input id="addr" autocomplete="street-address" placeholder="China Lake Blvd and Ridgecrest Blvd"></div>
+          </div>
+        </div>
+
+        <button class="send" type="submit"><span class="spinner"></span><span class="lbl">Send to Bryan</span></button>
+        <p class="after">Takes about a minute. Bryan texts you a price.</p>
+      </form>
+    </div>
 
     <div class="done" id="done">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>
-      <h2>Sent. Bryan has it.</h2>
-      <p>You will get a text with your price, usually the same day.</p>
+      <div class="done-head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>
+        <h2>Sent. Bryan has it.</h2>
+        <p>Watch for a text with your price.</p>
+      </div>
+      <div class="cust-phone">
+        <div class="cp-head"><span><span id="custName">Maria</span>'s phone</span><span>Text message</span></div>
+        <div class="cp-body" id="custMsgs"><div class="waiting">Waiting for Bryan's price...</div></div>
+      </div>
     </div>
   </div>
 
@@ -191,12 +248,22 @@
     <div class="cap">What lands on Bryan's phone</div>
     <div class="phone">
       <div class="screen">
+        <div class="notif" id="notif">
+          <div class="app">RD</div>
+          <div class="t"><b>New quote request <span>now</span></b><span id="notifText"></span></div>
+        </div>
         <div class="sbar"><span id="clock">9:41</span><span>5G</span></div>
-        <div class="thread-head"><div class="av">Q</div><b>New Quote Request</b><br><small>Text message</small></div>
-        <div class="msgs" id="msgs"><div class="empty">Fill in the form and press "Send to Bryan". The request shows up here as one message.</div></div>
+        <div class="thread-head"><div class="av">RD</div><b>Real Deal Quotes</b><br><small>Text message</small></div>
+        <div class="msgs" id="msgs"><div class="empty">Fill in the form and press "Send to Bryan". It shows up here as one text.</div></div>
         <div class="reply" id="reply" hidden>
-          <button type="button" data-msg="Hi {name}, this is Bryan. I can do it for $275. Want me to lock in {day}?">Send price</button>
-          <button type="button" data-msg="Hi {name}, this is Bryan. Can you send one more photo from the side?">Ask for photo</button>
+          <div class="rl">Text a price <span>sample prices</span></div>
+          <div class="loads" id="loads">
+            <button type="button" data-load="1/4 load" data-price="150"><b>1/4 load</b>$150</button>
+            <button type="button" data-load="1/2 load" data-price="275"><b>1/2 load</b>$275</button>
+            <button type="button" data-load="3/4 load" data-price="375"><b>3/4 load</b>$375</button>
+            <button type="button" data-load="Full truck" data-price="475"><b>Full truck</b>$475</button>
+          </div>
+          <button type="button" class="ask" id="ask">Ask for another photo</button>
         </div>
       </div>
     </div>
@@ -204,71 +271,156 @@
 </div>
 
 <script>
+  const $ = id => document.getElementById(id);
+  const form = $('quote');
+  const fmtDay = new Intl.DateTimeFormat('en-US', { weekday: 'short' });
+  const fmtLong = new Intl.DateTimeFormat('en-US', { weekday: 'long' });
+  const now = () => new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  let photos = [];
+  let req = {};
+
   // Next 8 days as pickable chips
-  const daysEl = document.getElementById('days');
-  const fmt = new Intl.DateTimeFormat('en-US', { weekday: 'short' });
   for (let i = 1; i <= 8; i++) {
     const d = new Date(); d.setDate(d.getDate() + i);
     const label = document.createElement('label');
     label.className = 'choice';
-    const val = `${fmt.format(d)} ${d.getMonth() + 1}/${d.getDate()}`;
-    label.innerHTML = `<input type="radio" name="day" value="${val}" ${i === 1 ? 'checked' : ''}><span><i>${fmt.format(d)}</i><b>${d.getDate()}</b></span>`;
-    daysEl.appendChild(label);
+    const val = `${fmtLong.format(d)} ${d.getMonth() + 1}/${d.getDate()}`;
+    label.innerHTML = `<input type="radio" name="day" value="${val}"><span><i>${fmtDay.format(d)}</i><b>${d.getDate()}</b></span>`;
+    $('days').appendChild(label);
   }
 
-  // Photo previews
-  const photos = [];
-  document.getElementById('photos').addEventListener('change', e => {
-    const thumbs = document.getElementById('thumbs');
-    for (const file of [...e.target.files].slice(0, 8 - photos.length)) {
-      const url = URL.createObjectURL(file);
-      photos.push(url);
-      const img = document.createElement('img'); img.src = url; img.alt = 'Uploaded photo';
-      thumbs.appendChild(img);
-    }
+  // Progress bar and step ticks
+  function updateProgress() {
+    const done = [
+      !!form.job.value,
+      photos.length > 0,
+      !!form.day.value && !!form.slot.value,
+      $('name').value.trim() && $('phone').value.replace(/\D/g, '').length >= 10
+    ];
+    document.querySelectorAll('.progress i').forEach((el, i) => el.classList.toggle('on', !!done[i]));
+    document.querySelectorAll('.step').forEach((el, i) => el.classList.toggle('complete', !!done[i]));
+  }
+  form.addEventListener('input', updateProgress);
+  form.addEventListener('change', updateProgress);
+
+  // Phone formatting
+  $('phone').addEventListener('input', e => {
+    const d = e.target.value.replace(/\D/g, '').slice(0, 10);
+    e.target.value = d.length > 6 ? `(${d.slice(0,3)}) ${d.slice(3,6)}-${d.slice(6)}` : d.length > 3 ? `(${d.slice(0,3)}) ${d.slice(3)}` : d;
   });
 
-  const now = () => new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
-  document.getElementById('clock').textContent = now();
+  // Photos: pick, drag and drop, remove
+  function addFiles(files) {
+    for (const file of [...files].filter(f => f.type.startsWith('image/')).slice(0, 8 - photos.length)) {
+      photos.push(URL.createObjectURL(file));
+    }
+    renderThumbs();
+  }
+  function renderThumbs() {
+    $('thumbs').innerHTML = '';
+    photos.forEach((src, i) => {
+      const t = document.createElement('div');
+      t.className = 'thumb';
+      t.innerHTML = `<img src="${src}" alt="Photo ${i + 1}"><button type="button" aria-label="Remove photo">&times;</button>`;
+      t.querySelector('button').onclick = () => { photos.splice(i, 1); renderThumbs(); };
+      $('thumbs').appendChild(t);
+    });
+    if (photos.length) $('photoErr').classList.remove('show');
+    updateProgress();
+  }
+  $('photos').addEventListener('change', e => { addFiles(e.target.files); e.target.value = ''; });
+  const drop = $('drop');
+  ['dragenter', 'dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
+  ['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
+  drop.addEventListener('drop', e => addFiles(e.dataTransfer.files));
 
-  let last = {};
-  document.getElementById('quote').addEventListener('submit', e => {
+  function bubble(parent, text, cls = '') {
+    const b = document.createElement('div');
+    b.className = 'bubble ' + cls;
+    b.innerHTML = text;
+    parent.appendChild(b);
+    parent.scrollTop = parent.scrollHeight;
+    return b;
+  }
+
+  // Customer sends the request
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    const f = e.target;
-    last = {
-      job: f.job.value,
-      day: f.day.value,
-      slot: f.slot.value,
-      name: document.getElementById('name').value.trim() || 'Maria',
-      phone: document.getElementById('phone').value.trim() || '(760) 555-0142',
-      addr: document.getElementById('addr').value.trim() || 'China Lake Blvd and Ridgecrest Blvd'
-    };
-    const msgs = document.getElementById('msgs');
-    msgs.innerHTML = '';
-    const text = document.createElement('div');
-    text.className = 'bubble';
-    text.textContent = `NEW QUOTE: ${last.job}\n${last.name}, ${last.phone}\n${last.addr}\nWants: ${last.day}, ${last.slot}\n${photos.length || 'No'} photo${photos.length === 1 ? '' : 's'} below. Reply to text them a price.`;
-    msgs.appendChild(text);
-    if (photos.length) {
-      const pics = document.createElement('div');
-      pics.className = 'bubble pics';
-      photos.slice(0, 4).forEach(src => { const i = document.createElement('img'); i.src = src; i.alt = ''; pics.appendChild(i); });
-      msgs.appendChild(pics);
+    if (!photos.length) {
+      $('photoErr').classList.add('show');
+      $('drop').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
     }
-    document.getElementById('reply').hidden = false;
-    document.getElementById('clock').textContent = now();
-    f.style.display = 'none';
-    document.getElementById('done').classList.add('show');
+    req = {
+      job: form.job.value || 'Junk removal',
+      day: form.day.value || document.querySelector('input[name=day]').value,
+      slot: form.slot.value || 'Morning',
+      name: $('name').value.trim() || 'Maria',
+      phone: $('phone').value.trim() || '(760) 555-0142',
+      addr: $('addr').value.trim() || 'China Lake Blvd and Ridgecrest Blvd'
+    };
+    const btn = form.querySelector('.send');
+    btn.disabled = true; btn.querySelector('.lbl').textContent = 'Sending';
+    await wait(700);
+
+    $('formWrap').style.display = 'none';
+    $('custName').textContent = req.name;
+    $('done').classList.add('show');
+    $('done').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Notification drops in on Bryan's phone
+    $('clock').textContent = now();
+    $('notifText').textContent = `${req.job} · ${req.name} · ${photos.length} photo${photos.length === 1 ? '' : 's'}`;
+    await wait(500);
+    $('notif').classList.add('show');
+    await wait(1600);
+    $('notif').classList.remove('show');
+
+    const msgs = $('msgs');
+    msgs.innerHTML = '';
+    bubble(msgs, `<b>NEW QUOTE: ${req.job}</b>\n${req.name}, ${req.phone}\n${req.addr}\nWants: ${req.day}, ${req.slot.toLowerCase()}\n${photos.length} photo${photos.length === 1 ? '' : 's'} below.`);
+    const pics = bubble(msgs, '', 'pics');
+    photos.slice(0, 4).forEach(src => { const i = document.createElement('img'); i.src = src; i.alt = ''; pics.appendChild(i); });
+    $('reply').hidden = false;
+    msgs.scrollTop = msgs.scrollHeight;
   });
 
-  document.getElementById('reply').addEventListener('click', e => {
+  // Bryan texts a price
+  $('loads').addEventListener('click', async e => {
     const b = e.target.closest('button'); if (!b) return;
-    const m = document.createElement('div');
-    m.className = 'bubble me';
-    m.textContent = b.dataset.msg.replace('{name}', last.name).replace('{day}', `${last.day} ${last.slot.toLowerCase()}`);
-    document.getElementById('msgs').appendChild(m);
-    document.getElementById('reply').hidden = true;
+    const first = req.name.split(' ')[0];
+    const text = `Hi ${first}, this is Bryan. From your photos that's about a ${b.dataset.load}. I can do it for $${b.dataset.price}, ${req.day} ${req.slot.toLowerCase()}. Reply YES to book.`;
+    $('reply').hidden = true;
+    bubble($('msgs'), text, 'me');
+
+    await wait(900);
+    const cm = $('custMsgs');
+    cm.innerHTML = '';
+    bubble(cm, text);
+    const yes = document.createElement('button');
+    yes.className = 'yes-btn'; yes.type = 'button'; yes.textContent = 'Reply YES';
+    cm.appendChild(yes);
+    yes.onclick = async () => {
+      yes.remove();
+      bubble(cm, 'YES', 'me');
+      await wait(700);
+      $('clock').textContent = now();
+      bubble($('msgs'), 'YES');
+      await wait(500);
+      bubble($('msgs'), `<strong>Booked: ${req.day}, ${req.slot.toLowerCase()}</strong>${req.name} · ${req.addr}\nAdded to your schedule. ${req.name.split(' ')[0]} gets a reminder the day before.\n<b>No site visit. 0 miles driven.</b>`, 'sys');
+      bubble(cm, `You're booked for ${req.day}, ${req.slot.toLowerCase()}. Bryan will text when he's on the way.`);
+    };
   });
+
+  $('ask').addEventListener('click', () => {
+    const first = req.name.split(' ')[0];
+    $('reply').hidden = true;
+    bubble($('msgs'), `Hi ${first}, this is Bryan. Can you send one more photo from the side so I can see how deep the pile is?`, 'me');
+    setTimeout(() => { $('reply').hidden = false; $('ask').remove(); }, 400);
+  });
+
+  $('reset').addEventListener('click', () => location.reload());
 </script>
 </body>
 </html>

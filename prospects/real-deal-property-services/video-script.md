@@ -95,25 +95,34 @@ Kul takreeban 280 alfaaz hain, jo aaram se bolne par 2 minute bante hain.
 
 ---
 
-## STEP 8: Bryan ka phone (1:18 se 1:35)
+## STEP 8: Bryan ka phone (1:18 se 1:32)
 
-**KARO:** Mouse ko right side wale phone par le jaayein. Pehle text message par rukein, phir photos par.
+**KARO:** Right side wale phone par upar se notification girega ("New quote request"). Use dikhayein. Phir mouse text message par rakhein, phir photos par.
 
 **BOLO:**
-> "Now here's your phone. One text. What they need, where, when, and the photos right under it. You glance at the pile and you already know if it's a quarter load or a full truck."
+> "Now here's your phone. You get a notification, and it's one text. What they need, where, when, and the photos right under it. You glance at the pile and you already know your load size."
 
 ---
 
-## STEP 9: Reply (1:35 se 1:48)
+## STEP 9: Price bhejna (1:32 se 1:42)
 
-**KARO:** Phone ke neeche **"Send price"** button par click karein. Neela reply bubble aayega.
+**KARO:** Phone ke neeche load buttons hain. **"1/2 load"** par click karein. Bryan ka neela reply aayega, aur left side par Maria ke phone mein bhi wahi text aayega.
 
 **BOLO:**
-> "You text back a price from your own phone, like any normal text. Nothing's booked until they say yes. No app, no new login, nothing to learn."
+> "You tap your load size and the price goes out by text. These numbers are just samples, you'd set your own. And on the left, that's what Maria sees on her phone."
 
 ---
 
-## STEP 10: Close (1:48 se 2:02)
+## STEP 10: Booking (1:42 se 1:52)
+
+**KARO:** Left side par Maria ke phone mein **"Reply YES"** button par click karein. Right side par green "Booked" card aayega. Mouse "No site visit. 0 miles driven." wali line par rakhein.
+
+**BOLO:**
+> "She says yes, and it's booked. On your schedule, with a reminder for her the day before. No site visit, zero miles driven. No app for you to learn either, it's all just texts."
+
+---
+
+## STEP 11: Close (1:52 se 2:05)
 
 **KARO:** Mouse chhod dein. Camera mein dekhein.
 
@@ -157,5 +166,6 @@ Kul takreeban 280 alfaaz hain, jo aaram se bolne par 2 minute bante hain.
 ## Agar galti ho jaaye
 
 - **Koi lafz bhool gaye:** rukein nahi, apne alfaaz mein bol dein. Natural lagna exact alfaaz se zyada zaroori hai.
-- **Galat button dab gaya:** page refresh karein aur us step se dobara shuru karein. Loom mein shuru ka hissa baad mein kaat sakte hain.
+- **Galat button dab gaya:** page ke top par **"Restart demo"** dabayein aur dobara shuru karein. Loom mein shuru ka hissa baad mein kaat sakte hain.
+- **"Add at least one photo" ka laal message aaya:** aapne photos daale baghair Send dabaya hai. Pehle photos daalein.
 - **Photos upload nahi huin:** dekhein ke files JPG ya PNG hain.
