@@ -31,6 +31,8 @@ Click **Send price**.
 
 "They get your price by text, and nothing is booked until they say yes."
 
+"On your end there is nothing to install. No app, no new login. It comes to the phone you already use, and you reply like any normal text."
+
 ## 1:45 to 2:00. Close
 
 "This one is a demo with your name on it. The real version would sit on its own link you can put on Facebook, Google, or your truck. If it looks useful, I am happy to set it up for you. Let me know what you think."
